@@ -1,0 +1,747 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>MoveSmart • Mobilité urbaine</title>
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+body{
+font-family:'Segoe UI',sans-serif;
+background:#f5f7fb;
+color:#222;
+scroll-behavior:smooth;
+}
+
+/* HEADER */
+
+header{
+position:sticky;
+top:0;
+z-index:1000;
+background:white;
+padding:18px 22px;
+display:flex;
+justify-content:space-between;
+align-items:center;
+box-shadow:0 2px 12px rgba(0,0,0,0.06);
+}
+
+.logo{
+font-size:26px;
+font-weight:700;
+color:#2ac769;
+}
+
+.menu{
+font-size:14px;
+color:#666;
+}
+
+/* HERO */
+
+.hero{
+max-width:1300px;
+margin:auto;
+padding:50px 20px 30px;
+text-align:center;
+}
+
+.hero h1{
+font-size:52px;
+line-height:1.15;
+margin-bottom:18px;
+}
+
+.hero h1 span{
+color:#2ac769;
+}
+
+.hero p{
+max-width:850px;
+margin:auto;
+font-size:19px;
+line-height:1.7;
+color:#666;
+}
+
+/* SEARCH */
+
+.search-box{
+background:white;
+padding:24px;
+border-radius:28px;
+margin-top:35px;
+box-shadow:0 12px 35px rgba(0,0,0,0.06);
+}
+
+.search-title{
+font-size:19px;
+font-weight:600;
+margin-bottom:16px;
+}
+
+.city-input{
+width:100%;
+padding:16px;
+border-radius:14px;
+border:1px solid #ddd;
+font-size:16px;
+margin-bottom:16px;
+}
+
+.city-btn{
+width:100%;
+padding:16px;
+border:none;
+border-radius:14px;
+background:#1b46ff;
+color:white;
+font-size:17px;
+font-weight:600;
+cursor:pointer;
+transition:0.2s;
+}
+
+.city-btn:hover{
+opacity:0.92;
+}
+
+.available{
+margin-top:15px;
+font-size:14px;
+color:#777;
+line-height:1.8;
+}
+
+/* DESTINATIONS */
+
+.destinations{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+gap:20px;
+margin-top:40px;
+}
+
+.destination-card{
+position:relative;
+height:240px;
+border-radius:26px;
+overflow:hidden;
+cursor:pointer;
+box-shadow:0 10px 25px rgba(0,0,0,0.10);
+transition:0.25s;
+}
+
+.destination-card:hover{
+transform:translateY(-4px);
+}
+
+.destination-card img{
+width:100%;
+height:100%;
+object-fit:cover;
+object-position:center;
+display:block;
+}
+
+.destination-overlay{
+position:absolute;
+inset:0;
+background:linear-gradient(to top, rgba(0,0,0,0.65), rgba(0,0,0,0.1));
+display:flex;
+align-items:flex-end;
+padding:20px;
+font-size:28px;
+font-weight:bold;
+color:white;
+}
+
+/* CITY SECTION */
+
+.section{
+display:none;
+max-width:1300px;
+margin:auto;
+padding:40px 20px;
+animation:fadeIn 0.4s ease;
+}
+
+@keyframes fadeIn{
+from{
+opacity:0;
+transform:translateY(10px);
+}
+to{
+opacity:1;
+transform:translateY(0);
+}
+}
+
+.city-hero{
+width:100%;
+height:420px;
+border-radius:30px;
+object-fit:cover;
+object-position:center;
+display:block;
+box-shadow:0 12px 30px rgba(0,0,0,0.12);
+margin-bottom:30px;
+}
+
+.section-title{
+font-size:38px;
+margin-bottom:28px;
+}
+
+/* GRID */
+
+.grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+gap:24px;
+}
+
+.card{
+background:white;
+padding:24px;
+border-radius:24px;
+box-shadow:0 8px 22px rgba(0,0,0,0.05);
+transition:0.2s;
+}
+
+.card:hover{
+transform:translateY(-3px);
+}
+
+.card h3{
+font-size:24px;
+margin-bottom:15px;
+}
+
+.price{
+font-size:19px;
+font-weight:bold;
+color:#1b46ff;
+margin-bottom:14px;
+}
+
+.description{
+font-size:15px;
+line-height:1.7;
+color:#666;
+margin-bottom:18px;
+}
+
+.tags{
+display:flex;
+flex-wrap:wrap;
+gap:8px;
+margin-bottom:18px;
+}
+
+.tag{
+background:#edf1ff;
+color:#1b46ff;
+padding:6px 12px;
+border-radius:999px;
+font-size:12px;
+}
+
+.logo-row{
+display:flex;
+gap:12px;
+align-items:center;
+margin-bottom:18px;
+flex-wrap:wrap;
+}
+
+.logo-row img{
+height:28px;
+background:white;
+padding:4px;
+border-radius:10px;
+box-shadow:0 2px 6px rgba(0,0,0,0.08);
+}
+
+.partners-btn{
+width:100%;
+padding:14px;
+border:none;
+border-radius:12px;
+background:#1b46ff;
+color:white;
+font-size:15px;
+font-weight:600;
+cursor:pointer;
+margin-bottom:12px;
+}
+
+.partners{
+display:none;
+margin-bottom:15px;
+}
+
+.partner-link{
+display:block;
+padding:12px;
+border-radius:10px;
+background:#f0f2f5;
+margin-bottom:8px;
+text-decoration:none;
+color:#222;
+font-size:14px;
+font-weight:500;
+}
+
+.partner-link:hover{
+background:#e5e8eb;
+}
+
+.maps-link{
+display:block;
+margin-top:12px;
+font-size:13px;
+color:#777;
+text-decoration:none;
+}
+
+.maps-link:hover{
+text-decoration:underline;
+}
+
+/* FOOTER */
+
+footer{
+padding:35px;
+text-align:center;
+font-size:13px;
+color:#777;
+line-height:1.8;
+}
+
+/* MOBILE */
+
+@media(max-width:768px){
+
+.hero h1{
+font-size:36px;
+}
+
+.hero p{
+font-size:16px;
+}
+
+.destination-card{
+height:190px;
+}
+
+.city-hero{
+height:240px;
+}
+
+.section-title{
+font-size:30px;
+}
+
+}
+
+</style>
+</head>
+
+<body>
+
+<header>
+
+<div class="logo">
+MoveSmart
+</div>
+
+<div class="menu">
+Mobilité • Voyage • Découverte
+</div>
+
+</header>
+
+<section class="hero">
+
+<h1>
+🌍 Trouvez les meilleures solutions<br>
+pour vous déplacer dans <span>une ville</span>
+</h1>
+
+<p>
+Découvrez les meilleures solutions de mobilité :
+transports publics, vélos, mobilité électrique,
+VTC, train, covoiturage et partenaires locaux
+dans les plus grandes destinations touristiques.
+</p>
+
+<div class="search-box">
+
+<div class="search-title">
+🌆 Quelle est votre ville de destination ?
+</div>
+
+<input
+type="text"
+class="city-input"
+id="cityInput"
+placeholder="Ex : Nantes">
+
+<button class="city-btn" onclick="showCity()">
+Découvrir les transports disponibles
+</button>
+
+<div class="available">
+✅ Nantes disponible<br>
+🔜 Amsterdam • Lisbonne • Barcelone • Paris • Majorque • Londres • Rome
+</div>
+
+</div>
+
+<!-- DESTINATIONS -->
+
+<div class="destinations">
+
+<div class="destination-card" onclick="selectCity('Nantes')">
+<img src="https://i.ibb.co/VcfFs0Bg/Screenshot-20260514-222533-Gmail-2.jpg">
+<div class="destination-overlay">Nantes</div>
+</div>
+
+<div class="destination-card">
+<img src="https://i.ibb.co/pjHbv8YL/Screenshot-20260514-221638-Gmail-3.jpg">
+<div class="destination-overlay">Amsterdam</div>
+</div>
+
+<div class="destination-card">
+<img src="https://i.ibb.co/VYZx1T83/Screenshot-20260514-221629-Gmail-2.jpg">
+<div class="destination-overlay">Lisbonne</div>
+</div>
+
+<div class="destination-card">
+<img src="https://i.ibb.co/pvTMvwBY/Screenshot-20260514-221626-Gmail-2.jpg">
+<div class="destination-overlay">Barcelone</div>
+</div>
+
+<div class="destination-card">
+<img src="https://i.ibb.co/BVhMM2sk/Screenshot-20260514-221622-Gmail-2.jpg">
+<div class="destination-overlay">Paris</div>
+</div>
+
+<div class="destination-card">
+<img src="https://i.ibb.co/3Yyy29tL/Screenshot-20260514-221619-Gmail-3.jpg">
+<div class="destination-overlay">Majorque</div>
+</div>
+
+<div class="destination-card">
+<img src="https://i.ibb.co/fVzT395K/Screenshot-20260514-221611-Gmail-2.jpg">
+<div class="destination-overlay">Londres</div>
+</div>
+
+<div class="destination-card">
+<img src="https://i.ibb.co/9m0bN0nK/Screenshot-20260514-230743-Gmail-2.jpg">
+<div class="destination-overlay">Rome</div>
+</div>
+
+</div>
+
+</section>
+
+<!-- SECTION NANTES -->
+
+<section class="section" id="nantes-section">
+
+<img
+src="https://i.ibb.co/VcfFs0Bg/Screenshot-20260514-222533-Gmail-2.jpg"
+class="city-hero">
+
+<h2 class="section-title">
+Les meilleures solutions à Nantes
+</h2>
+
+<div class="grid">
+
+<div class="card">
+
+<h3>🚇 Transports publics</h3>
+
+<div class="logo-row">
+<img src="https://upload.wikimedia.org/wikipedia/commons/8/8b/Logo_TAN_2023.svg">
+</div>
+
+<div class="price">
+💰 ~2€ le trajet
+</div>
+
+<div class="description">
+Tramway, bus, Busway et Navibus.
+La solution principale pour se déplacer dans Nantes.
+</div>
+
+<div class="tags">
+<div class="tag">Écologique</div>
+<div class="tag">Centre-ville</div>
+<div class="tag">Touriste</div>
+</div>
+
+<button class="partners-btn" onclick="togglePartners('naolib')">
+Voir les solutions disponibles
+</button>
+
+<div class="partners" id="naolib">
+
+<a href="https://naolib.fr"
+target="_blank"
+class="partner-link">
+🚇 Réseau Naolib
+</a>
+
+<a href="https://plan.naolib.fr"
+target="_blank"
+class="partner-link">
+🚢 Horaires Navibus
+</a>
+
+</div>
+
+<a
+href="https://www.google.com/maps/search/tramway+nantes"
+target="_blank"
+class="maps-link">
+Voir les stations sur Google Maps
+</a>
+
+</div>
+
+<div class="card">
+
+<h3>🚲 Location de vélos</h3>
+
+<div class="logo-row">
+<img src="https://upload.wikimedia.org/wikipedia/commons/8/8b/Logo_TAN_2023.svg">
+</div>
+
+<div class="price">
+💰 ~1€ à 15€
+</div>
+
+<div class="description">
+Vélos classiques et électriques disponibles dans toute la ville.
+Idéal pour les déplacements courts et les balades.
+</div>
+
+<div class="tags">
+<div class="tag">Rapide</div>
+<div class="tag">Écologique</div>
+<div class="tag">Centre-ville</div>
+</div>
+
+<button class="partners-btn" onclick="togglePartners('velo')">
+Voir les partenaires
+</button>
+
+<div class="partners" id="velo">
+
+<a href="https://micromob.naolib.fr/map"
+target="_blank"
+class="partner-link">
+🚲 Bicloo
+</a>
+
+<a href="https://www.bikentour.com"
+target="_blank"
+class="partner-link">
+🚴 Bikentour
+</a>
+
+</div>
+
+<a
+href="https://micromob.naolib.fr/map"
+target="_blank"
+class="maps-link">
+Voir les vélos disponibles
+</a>
+
+</div>
+
+<div class="card">
+
+<h3>🛴 Mobilité électrique</h3>
+
+<div class="logo-row">
+<img src="https://upload.wikimedia.org/wikipedia/commons/8/8b/Logo_TAN_2023.svg">
+</div>
+
+<div class="price">
+💰 ~3€ à 10€
+</div>
+
+<div class="description">
+Solutions électriques disponibles dans Nantes.
+Consultez directement les disponibilités.
+</div>
+
+<div class="tags">
+<div class="tag">Flexible</div>
+<div class="tag">Rapide</div>
+<div class="tag">Centre-ville</div>
+</div>
+
+<button class="partners-btn" onclick="togglePartners('trottinettes')">
+Voir les solutions disponibles
+</button>
+
+<div class="partners" id="trottinettes">
+
+<a href="https://micromob.naolib.fr/map"
+target="_blank"
+class="partner-link">
+🛴 Carte micro mobilité Naolib
+</a>
+
+</div>
+
+<a
+href="https://micromob.naolib.fr/map"
+target="_blank"
+class="maps-link">
+Voir les disponibilités
+</a>
+
+</div>
+
+<div class="card">
+
+<h3>🚕 Uber • Bolt • Taxi</h3>
+
+<div class="logo-row">
+
+<img src="https://upload.wikimedia.org/wikipedia/commons/c/cc/Uber_logo_2018.png">
+
+<img src="https://upload.wikimedia.org/wikipedia/commons/0/00/Bolt_logo_black.svg">
+
+</div>
+
+<div class="price">
+💰 ~8€ à 25€
+</div>
+
+<div class="description">
+Solutions rapides et confortables pour les déplacements en ville,
+gare ou aéroport.
+</div>
+
+<div class="tags">
+<div class="tag">Confort</div>
+<div class="tag">Rapide</div>
+<div class="tag">Aéroport</div>
+</div>
+
+<button class="partners-btn" onclick="togglePartners('vtc')">
+Voir les partenaires
+</button>
+
+<div class="partners" id="vtc">
+
+<a href="https://www.uber.com/fr/fr/"
+target="_blank"
+class="partner-link">
+🚕 Uber
+</a>
+
+<a href="https://bolt.eu/fr-fr/"
+target="_blank"
+class="partner-link">
+⚡ Bolt
+</a>
+
+<a href="https://taxis-nantes.com"
+target="_blank"
+class="partner-link">
+🚖 Taxis Nantes
+</a>
+
+<a href="https://www.allocab.com"
+target="_blank"
+class="partner-link">
+🚘 Allocab
+</a>
+
+</div>
+
+<a
+href="https://www.google.com/maps/search/taxi+nantes"
+target="_blank"
+class="maps-link">
+Voir les VTC et taxis sur Google Maps
+</a>
+
+</div>
+
+</div>
+
+</section>
+
+<footer>
+
+MoveSmart • Guide mobilité urbaine<br>
+
+Les marques et logos appartiennent à leurs propriétaires respectifs.
+
+</footer>
+
+<script>
+
+function togglePartners(id){
+
+let el = document.getElementById(id);
+
+if(el.style.display === "block"){
+el.style.display = "none";
+}else{
+el.style.display = "block";
+}
+
+}
+
+function showCity(){
+
+let city = document.getElementById("cityInput").value.toLowerCase();
+
+if(city.includes("nantes")){
+
+let section = document.getElementById("nantes-section");
+
+section.style.display = "block";
+
+section.scrollIntoView({
+behavior:"smooth"
+});
+
+}
+
+}
+
+function selectCity(city){
+
+document.getElementById("cityInput").value = city;
+
+showCity();
+
+}
+
+</script>
+
+</body>
+</html> 
