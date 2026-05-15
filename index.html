@@ -84,6 +84,11 @@ font-weight:600;
 background:#0ea5e9;
 }
 
+.explorer-button{
+padding:10px 14px;
+font-size:0.9rem;
+}
+
 /* HERO */
 
 .hero{
@@ -448,6 +453,8 @@ font-size:2.2rem;
 
 <body>
 
+<!-- NAVBAR -->
+
 <nav class="navbar">
 
 <div class="logo">Vidolta</div>
@@ -468,13 +475,19 @@ Restaurants
 Découvrir
 </a>
 
-<a href="https://www.google.com/maps" target="_blank" class="nav-button">
+<a href="https://www.google.com/maps"
+target="_blank"
+class="nav-button explorer-button">
+
 Explorer
+
 </a>
 
 </div>
 
 </nav>
+
+<!-- HERO -->
 
 <section class="hero">
 
@@ -488,6 +501,8 @@ Explorer
 </div>
 
 </section>
+
+<!-- DESTINATIONS -->
 
 <section class="section">
 
@@ -503,46 +518,6 @@ Explorer
 <div class="city-card" onclick="showCity('paris')">
 <img src="https://i.ibb.co/BVhMM2sk/Screenshot-20260514-221622-Gmail-2.jpg">
 <div class="city-overlay"><h3>Paris</h3></div>
-</div>
-
-</div>
-
-</section>
-
-<!-- MOBILITE -->
-
-<section id="mobilite" class="section">
-
-<h2 class="section-title">Mobilité principale</h2>
-
-<div class="extra-grid">
-
-<div class="extra-card">
-
-<h3>🚇 Naolib</h3>
-
-<p>
-Transports publics et mobilité à Nantes.
-</p>
-
-<a href="https://naolib.fr/fr/velos/micromob-1" target="_blank">
-Explorer
-</a>
-
-</div>
-
-<div class="extra-card">
-
-<h3>🚇 RATP</h3>
-
-<p>
-Métro, RER et mobilité dans Paris.
-</p>
-
-<a href="https://www.ratp.fr" target="_blank">
-Explorer
-</a>
-
 </div>
 
 </div>
@@ -619,7 +594,7 @@ Uber
 
 </div>
 
-<section class="section">
+<section id="restaurants" class="section">
 
 <h2 class="section-title">Restaurants à Nantes</h2>
 
@@ -657,7 +632,7 @@ Explorer
 
 </section>
 
-<section class="section">
+<section id="decouvrir" class="section">
 
 <h2 class="section-title">Découvrir Nantes</h2>
 
@@ -687,6 +662,23 @@ Office de tourisme officiel de Nantes.
 
 <a href="https://www.levoyageanantes.fr" target="_blank">
 Explorer
+</a>
+
+</div>
+
+<div class="extra-card">
+
+<h3>🏛️ Détours en France</h3>
+
+<p>
+Découvre les plus belles destinations et régions françaises.
+</p>
+
+<a href="https://www.detoursenfrance.fr/patrimoine/destinations/regions"
+target="_blank">
+
+Explorer
+
 </a>
 
 </div>
@@ -821,6 +813,23 @@ Office de tourisme officiel de Paris.
 
 <a href="https://parisjetaime.com" target="_blank">
 Explorer
+</a>
+
+</div>
+
+<div class="extra-card">
+
+<h3>🏛️ Détours en France</h3>
+
+<p>
+Découvre les plus belles destinations et régions françaises.
+</p>
+
+<a href="https://www.detoursenfrance.fr/patrimoine/destinations/regions"
+target="_blank">
+
+Explorer
+
 </a>
 
 </div>
