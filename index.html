@@ -6,7 +6,7 @@
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 
-<title>Vidolta — Explore cities smarter</title>
+<title>Vidolta — Te guide partout où tu vas</title>
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -72,21 +72,15 @@ font-weight:500;
 color:#38bdf8;
 }
 
-.nav-button{
-background:#38bdf8;
-padding:12px 18px;
-border-radius:12px;
-color:white !important;
-font-weight:600;
+.explorer-link{
+color:#94a3b8 !important;
+font-size:0.82rem;
+padding:6px 8px;
+transition:0.3s;
 }
 
-.nav-button:hover{
-background:#0ea5e9;
-}
-
-.explorer-button{
-padding:10px 14px;
-font-size:0.9rem;
+.explorer-link:hover{
+color:#38bdf8 !important;
 }
 
 /* HERO */
@@ -104,7 +98,7 @@ margin-bottom:15px;
 
 .hero p{
 color:#cbd5e1;
-font-size:1.2rem;
+font-size:1.25rem;
 margin-bottom:40px;
 }
 
@@ -124,19 +118,19 @@ outline:none;
 font-size:1rem;
 }
 
-.search-container button{
+.discover-button{
 padding:18px 24px;
 border:none;
 border-radius:16px;
-background:#38bdf8;
+background:#6366f1;
 color:white;
 font-weight:600;
 cursor:pointer;
 transition:0.3s;
 }
 
-.search-container button:hover{
-background:#0ea5e9;
+.discover-button:hover{
+background:#4f46e5;
 transform:translateY(-2px);
 }
 
@@ -150,7 +144,7 @@ margin:auto;
 
 .section-title{
 text-align:center;
-font-size:2.3rem;
+font-size:2.5rem;
 margin-bottom:45px;
 }
 
@@ -253,63 +247,42 @@ position:relative;
 overflow:hidden;
 }
 
-.mobility-card::before{
-content:'';
-position:absolute;
-width:180px;
-height:180px;
-background:rgba(56,189,248,0.08);
-border-radius:50%;
-top:-80px;
-right:-80px;
-}
-
 .mobility-card:hover{
 transform:translateY(-6px);
-border-color:rgba(56,189,248,0.5);
+border-color:rgba(99,102,241,0.5);
 }
 
 .mobility-card h3{
 margin-bottom:12px;
 font-size:1.25rem;
-position:relative;
-z-index:2;
 }
 
 .price{
-color:#38bdf8;
+color:#818cf8;
 font-weight:600;
 margin-bottom:15px;
 font-size:1rem;
-position:relative;
-z-index:2;
 }
 
 .mobility-card p{
 color:#cbd5e1;
 line-height:1.7;
 margin-bottom:22px;
-position:relative;
-z-index:2;
 }
-
-/* BUTTONS */
 
 .main-button{
 display:inline-block;
-background:#38bdf8;
+background:#6366f1;
 color:white;
 padding:12px 16px;
 border-radius:12px;
 font-weight:600;
 transition:0.3s;
 margin-bottom:14px;
-position:relative;
-z-index:2;
 }
 
 .main-button:hover{
-background:#0ea5e9;
+background:#4f46e5;
 }
 
 .map-button{
@@ -317,60 +290,13 @@ display:inline-block;
 margin-left:10px;
 color:#94a3b8;
 font-size:0.9rem;
-position:relative;
-z-index:2;
 }
 
 .map-button:hover{
-color:#38bdf8;
+color:#818cf8;
 }
 
-/* DROPDOWN */
-
-.dropdown-button{
-margin-top:10px;
-background:rgba(255,255,255,0.08);
-border:none;
-color:white;
-padding:12px 16px;
-border-radius:12px;
-cursor:pointer;
-width:100%;
-font-weight:600;
-transition:0.3s;
-position:relative;
-z-index:2;
-}
-
-.dropdown-button:hover{
-background:rgba(255,255,255,0.15);
-}
-
-.dropdown-content{
-display:none;
-margin-top:15px;
-position:relative;
-z-index:2;
-}
-
-.partner-link{
-display:flex;
-justify-content:space-between;
-align-items:center;
-background:rgba(255,255,255,0.05);
-padding:12px;
-border-radius:12px;
-margin-bottom:10px;
-color:#cbd5e1;
-transition:0.3s;
-}
-
-.partner-link:hover{
-background:rgba(56,189,248,0.15);
-color:white;
-}
-
-/* EXTRA SECTIONS */
+/* EXTRA */
 
 .extra-grid{
 display:grid;
@@ -389,7 +315,7 @@ border:1px solid rgba(255,255,255,0.05);
 
 .extra-card:hover{
 transform:translateY(-6px);
-border-color:rgba(56,189,248,0.5);
+border-color:rgba(99,102,241,0.5);
 }
 
 .extra-card h3{
@@ -405,14 +331,12 @@ margin-bottom:20px;
 
 .extra-card a{
 display:inline-block;
-background:#38bdf8;
+background:#6366f1;
 padding:12px 18px;
 border-radius:12px;
 color:white;
 font-weight:600;
 }
-
-/* FOOTER */
 
 footer{
 text-align:center;
@@ -434,7 +358,7 @@ display:none;
 }
 
 .hero h1{
-font-size:2.8rem;
+font-size:3rem;
 }
 
 .search-container{
@@ -463,21 +387,13 @@ font-size:2.2rem;
 
 <a href="#">Accueil</a>
 
-<a href="#mobilite">
-Mobilité
-</a>
+<a href="#restaurants">Restaurants</a>
 
-<a href="#restaurants">
-Restaurants
-</a>
-
-<a href="#decouvrir">
-Découvrir
-</a>
+<a href="#decouvrir">Découvrir</a>
 
 <a href="https://www.google.com/maps"
 target="_blank"
-class="nav-button explorer-button">
+class="explorer-link">
 
 Explorer
 
@@ -493,11 +409,21 @@ Explorer
 
 <h1>Vidolta</h1>
 
-<p>Move smarter. Discover more.</p>
+<p>Te guide partout où tu vas</p>
 
 <div class="search-container">
-<input type="text" id="cityInput" placeholder="Rechercher une ville...">
-<button onclick="searchCity()">Explorer</button>
+
+<input type="text"
+id="cityInput"
+placeholder="Rechercher une ville...">
+
+<button class="discover-button"
+onclick="searchCity()">
+
+Découvrir
+
+</button>
+
 </div>
 
 </section>
@@ -510,6 +436,31 @@ Explorer
 
 <div class="cities-grid">
 
+<div class="city-card" onclick="showCity('amsterdam')">
+<img src="https://images.unsplash.com/photo-1512470876302-972faa2aa9a4?q=80&w=1200&auto=format&fit=crop">
+<div class="city-overlay"><h3>Amsterdam</h3></div>
+</div>
+
+<div class="city-card" onclick="showCity('barcelone')">
+<img src="https://images.unsplash.com/photo-1583422409516-2895a77efded?q=80&w=1200&auto=format&fit=crop">
+<div class="city-overlay"><h3>Barcelone</h3></div>
+</div>
+
+<div class="city-card" onclick="showCity('lisbonne')">
+<img src="https://images.unsplash.com/photo-1513735492246-483525079686?q=80&w=1200&auto=format&fit=crop">
+<div class="city-overlay"><h3>Lisbonne</h3></div>
+</div>
+
+<div class="city-card" onclick="showCity('lyon')">
+<img src="https://images.unsplash.com/photo-1566552881560-0be862a7c445?q=80&w=1200&auto=format&fit=crop">
+<div class="city-overlay"><h3>Lyon</h3></div>
+</div>
+
+<div class="city-card" onclick="showCity('marseille')">
+<img src="https://images.unsplash.com/photo-1577083165633-14ebcdb0f658?q=80&w=1200&auto=format&fit=crop">
+<div class="city-overlay"><h3>Marseille</h3></div>
+</div>
+
 <div class="city-card" onclick="showCity('nantes')">
 <img src="https://i.ibb.co/VcfFs0Bg/Screenshot-20260514-222533-Gmail-2.jpg">
 <div class="city-overlay"><h3>Nantes</h3></div>
@@ -520,362 +471,44 @@ Explorer
 <div class="city-overlay"><h3>Paris</h3></div>
 </div>
 
-</div>
-
-</section>
-
-<!-- NANTES -->
-
-<section id="nantes" class="section mobility-section">
-
-<div class="city-banner">
-
-<img src="https://i.ibb.co/VcfFs0Bg/Screenshot-20260514-222533-Gmail-2.jpg">
-
-<div class="banner-overlay">
-<h2>Nantes</h2>
+<div class="city-card" onclick="showCity('rome')">
+<img src="https://images.unsplash.com/photo-1552832230-c0197dd311b5?q=80&w=1200&auto=format&fit=crop">
+<div class="city-overlay"><h3>Rome</h3></div>
 </div>
 
 </div>
-
-<div class="mobility-grid">
-
-<div class="mobility-card">
-
-<h3>🚇 Transport public</h3>
-
-<div class="price">≈ 1,80€ / 1h</div>
-
-<p>
-Explore Nantes avec Naolib.
-</p>
-
-<a href="https://www.naolib.fr" target="_blank" class="main-button">
-Naolib
-</a>
-
-<a href="https://www.google.com/maps/search/tramway+nantes/" target="_blank" class="map-button">
-Carte
-</a>
-
-</div>
-
-<div class="mobility-card">
-
-<h3>🚲 Location vélo</h3>
-
-<div class="price">≈ 3 à 4€ / h</div>
-
-<p>
-Vélos et stations Naolib.
-</p>
-
-<a href="https://naolib.fr/fr/velos/micromob-1" target="_blank" class="main-button">
-Naolib
-</a>
-
-</div>
-
-<div class="mobility-card">
-
-<h3>🚕 Taxi & VTC</h3>
-
-<div class="price">≈ 20€ / 15 km</div>
-
-<p>
-Réserve facilement un taxi à Nantes.
-</p>
-
-<a href="https://www.uber.com" target="_blank" class="main-button">
-Uber
-</a>
-
-</div>
-
-</div>
-
-<section id="restaurants" class="section">
-
-<h2 class="section-title">Restaurants à Nantes</h2>
-
-<div class="extra-grid">
-
-<div class="extra-card">
-
-<h3>🍽️ Tables de Nantes</h3>
-
-<p>
-Découvre les meilleures adresses culinaires.
-</p>
-
-<a href="https://www.lestablesdenantes.fr" target="_blank">
-Explorer
-</a>
-
-</div>
-
-<div class="extra-card">
-
-<h3>⭐ TripAdvisor</h3>
-
-<p>
-Restaurants les mieux notés à Nantes.
-</p>
-
-<a href="https://www.tripadvisor.fr" target="_blank">
-Explorer
-</a>
-
-</div>
-
-</div>
-
-</section>
-
-<section id="decouvrir" class="section">
-
-<h2 class="section-title">Découvrir Nantes</h2>
-
-<div class="extra-grid">
-
-<div class="extra-card">
-
-<h3>🎭 Fnac Spectacles</h3>
-
-<p>
-Concerts et événements à Nantes.
-</p>
-
-<a href="https://www.fnacspectacles.com/city/nantes" target="_blank">
-Explorer
-</a>
-
-</div>
-
-<div class="extra-card">
-
-<h3>🧭 Le Voyage à Nantes</h3>
-
-<p>
-Office de tourisme officiel de Nantes.
-</p>
-
-<a href="https://www.levoyageanantes.fr" target="_blank">
-Explorer
-</a>
-
-</div>
-
-<div class="extra-card">
-
-<h3>🏛️ Détours en France</h3>
-
-<p>
-Découvre les plus belles destinations et régions françaises.
-</p>
-
-<a href="https://www.detoursenfrance.fr/patrimoine/destinations/regions"
-target="_blank">
-
-Explorer
-
-</a>
-
-</div>
-
-</div>
-
-</section>
-
-</section>
-
-<!-- PARIS -->
-
-<section id="paris" class="section mobility-section">
-
-<div class="city-banner">
-
-<img src="https://i.ibb.co/BVhMM2sk/Screenshot-20260514-221622-Gmail-2.jpg">
-
-<div class="banner-overlay">
-<h2>Paris</h2>
-</div>
-
-</div>
-
-<div class="mobility-grid">
-
-<div class="mobility-card">
-
-<h3>🚇 Transport public</h3>
-
-<div class="price">≈ 2,50€ / ticket</div>
-
-<p>
-Explore Paris avec le métro et le RER.
-</p>
-
-<a href="https://www.ratp.fr" target="_blank" class="main-button">
-RATP
-</a>
-
-<a href="https://www.google.com/maps/search/metro+paris/" target="_blank" class="map-button">
-Carte
-</a>
-
-</div>
-
-<div class="mobility-card">
-
-<h3>🚲 Location vélo</h3>
-
-<div class="price">≈ 3 à 5€ / h</div>
-
-<p>
-Déplace-toi avec Vélib’.
-</p>
-
-<a href="https://www.velib-metropole.fr" target="_blank" class="main-button">
-Vélib'
-</a>
-
-</div>
-
-<div class="mobility-card">
-
-<h3>🚕 Taxi & VTC</h3>
-
-<div class="price">≈ 25€ / 15 km</div>
-
-<p>
-Réserve facilement un taxi ou VTC à Paris.
-</p>
-
-<a href="https://www.uber.com" target="_blank" class="main-button">
-Uber
-</a>
-
-</div>
-
-</div>
-
-<section class="section">
-
-<h2 class="section-title">Restaurants à Paris</h2>
-
-<div class="extra-grid">
-
-<div class="extra-card">
-
-<h3>⭐ TripAdvisor</h3>
-
-<p>
-Découvre les meilleurs restaurants à Paris.
-</p>
-
-<a href="https://www.tripadvisor.fr" target="_blank">
-Explorer
-</a>
-
-</div>
-
-</div>
-
-</section>
-
-<section class="section">
-
-<h2 class="section-title">Découvrir Paris</h2>
-
-<div class="extra-grid">
-
-<div class="extra-card">
-
-<h3>🎭 Fnac Spectacles</h3>
-
-<p>
-Concerts et événements à Paris.
-</p>
-
-<a href="https://www.fnacspectacles.com/paris" target="_blank">
-Explorer
-</a>
-
-</div>
-
-<div class="extra-card">
-
-<h3>🗼 Paris je t’aime</h3>
-
-<p>
-Office de tourisme officiel de Paris.
-</p>
-
-<a href="https://parisjetaime.com" target="_blank">
-Explorer
-</a>
-
-</div>
-
-<div class="extra-card">
-
-<h3>🏛️ Détours en France</h3>
-
-<p>
-Découvre les plus belles destinations et régions françaises.
-</p>
-
-<a href="https://www.detoursenfrance.fr/patrimoine/destinations/regions"
-target="_blank">
-
-Explorer
-
-</a>
-
-</div>
-
-</div>
-
-</section>
 
 </section>
 
 <footer>
-© 2026 Vidolta — Explore cities smarter.
+© 2026 Vidolta — Te guide partout où tu vas.
 </footer>
 
 <script>
 
 function showCity(cityId){
 
-document.querySelectorAll('.mobility-section').forEach(section => {
-section.style.display = 'none';
-});
-
-const section = document.getElementById(cityId);
-
-if(section){
-
-section.style.display = 'block';
-
-section.scrollIntoView({
-behavior:'smooth'
-});
-
-}
+alert("La page de " + cityId + " sera bientôt disponible.");
 
 }
 
 function searchCity(){
 
-const input = document.getElementById('cityInput').value.toLowerCase();
+const input =
+document.getElementById('cityInput')
+.value
+.toLowerCase();
 
 if(input.includes('nantes')){
-showCity('nantes');
+alert("Page Nantes disponible.");
 }
 
-if(input.includes('paris')){
-showCity('paris');
+else if(input.includes('paris')){
+alert("Page Paris disponible.");
+}
+
+else{
+alert("Ville bientôt disponible sur Vidolta.");
 }
 
 }
@@ -883,4 +516,5 @@ showCity('paris');
 </script>
 
 </body>
+
 </html> 
