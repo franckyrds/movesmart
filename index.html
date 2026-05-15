@@ -3,7 +3,7 @@
 
 <head>
 
-<meta charset="UTF-8" />
+<meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 
 <title>Vidolta — Explore cities smarter</title>
@@ -16,387 +16,429 @@
 <style>
 
 *{
-  margin:0;
-  padding:0;
-  box-sizing:border-box;
+margin:0;
+padding:0;
+box-sizing:border-box;
 }
 
 html{
-  scroll-behavior:smooth;
+scroll-behavior:smooth;
 }
 
 body{
-  font-family:'Poppins',sans-serif;
-  background:#0f172a;
-  color:white;
+font-family:'Poppins',sans-serif;
+background:#0f172a;
+color:white;
 }
 
 a{
-  text-decoration:none;
+text-decoration:none;
 }
 
 /* NAVBAR */
 
 .navbar{
-  width:100%;
-  padding:20px 40px;
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
-  position:sticky;
-  top:0;
-  z-index:1000;
-  backdrop-filter:blur(12px);
-  background:rgba(15,23,42,0.88);
-  border-bottom:1px solid rgba(255,255,255,0.05);
+width:100%;
+padding:20px 40px;
+display:flex;
+justify-content:space-between;
+align-items:center;
+position:sticky;
+top:0;
+z-index:1000;
+backdrop-filter:blur(12px);
+background:rgba(15,23,42,0.88);
+border-bottom:1px solid rgba(255,255,255,0.05);
 }
 
 .logo{
-  font-size:1.9rem;
-  font-weight:700;
+font-size:1.9rem;
+font-weight:700;
 }
 
 .nav-links{
-  display:flex;
-  gap:24px;
-  align-items:center;
+display:flex;
+gap:24px;
+align-items:center;
 }
 
 .nav-links a{
-  color:#cbd5e1;
-  transition:0.3s;
-  font-weight:500;
+color:#cbd5e1;
+transition:0.3s;
+font-weight:500;
 }
 
 .nav-links a:hover{
-  color:#38bdf8;
+color:#38bdf8;
 }
 
 .nav-button{
-  background:#38bdf8;
-  padding:12px 18px;
-  border-radius:12px;
-  color:white !important;
-  font-weight:600;
+background:#38bdf8;
+padding:12px 18px;
+border-radius:12px;
+color:white !important;
+font-weight:600;
 }
 
 .nav-button:hover{
-  background:#0ea5e9;
+background:#0ea5e9;
 }
 
 /* HERO */
 
 .hero{
-  padding:110px 20px 80px;
-  text-align:center;
-  background:linear-gradient(180deg,#0f172a 0%, #111827 100%);
+padding:110px 20px 80px;
+text-align:center;
+background:linear-gradient(180deg,#0f172a 0%, #111827 100%);
 }
 
 .hero h1{
-  font-size:4rem;
-  margin-bottom:15px;
+font-size:4rem;
+margin-bottom:15px;
 }
 
 .hero p{
-  color:#cbd5e1;
-  font-size:1.2rem;
-  margin-bottom:40px;
+color:#cbd5e1;
+font-size:1.2rem;
+margin-bottom:40px;
 }
 
 .search-container{
-  max-width:550px;
-  margin:auto;
-  display:flex;
-  gap:12px;
+max-width:550px;
+margin:auto;
+display:flex;
+gap:12px;
 }
 
 .search-container input{
-  flex:1;
-  padding:18px;
-  border-radius:16px;
-  border:none;
-  outline:none;
-  font-size:1rem;
+flex:1;
+padding:18px;
+border-radius:16px;
+border:none;
+outline:none;
+font-size:1rem;
 }
 
 .search-container button{
-  padding:18px 24px;
-  border:none;
-  border-radius:16px;
-  background:#38bdf8;
-  color:white;
-  font-weight:600;
-  cursor:pointer;
-  transition:0.3s;
+padding:18px 24px;
+border:none;
+border-radius:16px;
+background:#38bdf8;
+color:white;
+font-weight:600;
+cursor:pointer;
+transition:0.3s;
 }
 
 .search-container button:hover{
-  background:#0ea5e9;
-  transform:translateY(-2px);
+background:#0ea5e9;
+transform:translateY(-2px);
 }
 
 /* SECTION */
 
 .section{
-  padding:70px 20px;
-  max-width:1300px;
-  margin:auto;
+padding:70px 20px;
+max-width:1300px;
+margin:auto;
 }
 
 .section-title{
-  text-align:center;
-  font-size:2.3rem;
-  margin-bottom:45px;
+text-align:center;
+font-size:2.3rem;
+margin-bottom:45px;
 }
 
 /* CITIES */
 
 .cities-grid{
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-  gap:22px;
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:22px;
 }
 
 .city-card{
-  position:relative;
-  height:220px;
-  border-radius:24px;
-  overflow:hidden;
-  cursor:pointer;
-  transition:0.4s;
-  box-shadow:0 10px 30px rgba(0,0,0,0.25);
+position:relative;
+height:220px;
+border-radius:24px;
+overflow:hidden;
+cursor:pointer;
+transition:0.4s;
+box-shadow:0 10px 30px rgba(0,0,0,0.25);
 }
 
 .city-card:hover{
-  transform:translateY(-8px);
-  box-shadow:0 20px 40px rgba(0,0,0,0.35);
+transform:translateY(-8px);
+box-shadow:0 20px 40px rgba(0,0,0,0.35);
 }
 
 .city-card img{
-  width:100%;
-  height:100%;
-  object-fit:cover;
-  transition:0.5s;
+width:100%;
+height:100%;
+object-fit:cover;
+transition:0.5s;
 }
 
 .city-card:hover img{
-  transform:scale(1.08);
+transform:scale(1.08);
 }
 
 .city-overlay{
-  position:absolute;
-  inset:0;
-  background:linear-gradient(to top, rgba(0,0,0,0.85), rgba(0,0,0,0.15));
-  display:flex;
-  align-items:end;
-  padding:22px;
+position:absolute;
+inset:0;
+background:linear-gradient(to top, rgba(0,0,0,0.85), rgba(0,0,0,0.15));
+display:flex;
+align-items:end;
+padding:22px;
 }
 
 .city-overlay h3{
-  font-size:1.4rem;
+font-size:1.4rem;
 }
 
 /* CITY SECTION */
 
 .mobility-section{
-  display:none;
-  padding-top:20px;
+display:none;
+padding-top:20px;
 }
 
 .city-banner{
-  position:relative;
-  height:300px;
-  border-radius:28px;
-  overflow:hidden;
-  margin-bottom:45px;
+position:relative;
+height:300px;
+border-radius:28px;
+overflow:hidden;
+margin-bottom:45px;
 }
 
 .city-banner img{
-  width:100%;
-  height:100%;
-  object-fit:cover;
+width:100%;
+height:100%;
+object-fit:cover;
 }
 
 .banner-overlay{
-  position:absolute;
-  inset:0;
-  background:linear-gradient(to top, rgba(0,0,0,0.85), rgba(0,0,0,0.2));
-  display:flex;
-  align-items:end;
-  padding:35px;
+position:absolute;
+inset:0;
+background:linear-gradient(to top, rgba(0,0,0,0.85), rgba(0,0,0,0.2));
+display:flex;
+align-items:end;
+padding:35px;
 }
 
 .banner-overlay h2{
-  font-size:3rem;
+font-size:3rem;
 }
 
 /* MOBILITY */
 
 .mobility-grid{
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(270px,1fr));
-  gap:24px;
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(270px,1fr));
+gap:24px;
 }
 
 .mobility-card{
-  background:#1e293b;
-  border-radius:24px;
-  padding:26px;
-  border:1px solid rgba(255,255,255,0.05);
-  transition:0.35s;
-  position:relative;
-  overflow:hidden;
+background:#1e293b;
+border-radius:24px;
+padding:26px;
+border:1px solid rgba(255,255,255,0.05);
+transition:0.35s;
+position:relative;
+overflow:hidden;
 }
 
 .mobility-card::before{
-  content:'';
-  position:absolute;
-  width:180px;
-  height:180px;
-  background:rgba(56,189,248,0.08);
-  border-radius:50%;
-  top:-80px;
-  right:-80px;
+content:'';
+position:absolute;
+width:180px;
+height:180px;
+background:rgba(56,189,248,0.08);
+border-radius:50%;
+top:-80px;
+right:-80px;
 }
 
 .mobility-card:hover{
-  transform:translateY(-6px);
-  border-color:rgba(56,189,248,0.5);
+transform:translateY(-6px);
+border-color:rgba(56,189,248,0.5);
 }
 
 .mobility-card h3{
-  margin-bottom:12px;
-  font-size:1.25rem;
-  position:relative;
-  z-index:2;
+margin-bottom:12px;
+font-size:1.25rem;
+position:relative;
+z-index:2;
 }
 
 .price{
-  color:#38bdf8;
-  font-weight:600;
-  margin-bottom:15px;
-  font-size:1rem;
-  position:relative;
-  z-index:2;
+color:#38bdf8;
+font-weight:600;
+margin-bottom:15px;
+font-size:1rem;
+position:relative;
+z-index:2;
 }
 
 .mobility-card p{
-  color:#cbd5e1;
-  line-height:1.7;
-  margin-bottom:22px;
-  position:relative;
-  z-index:2;
+color:#cbd5e1;
+line-height:1.7;
+margin-bottom:22px;
+position:relative;
+z-index:2;
 }
 
 /* BUTTONS */
 
 .main-button{
-  display:inline-block;
-  background:#38bdf8;
-  color:white;
-  padding:12px 16px;
-  border-radius:12px;
-  font-weight:600;
-  transition:0.3s;
-  margin-bottom:14px;
-  position:relative;
-  z-index:2;
+display:inline-block;
+background:#38bdf8;
+color:white;
+padding:12px 16px;
+border-radius:12px;
+font-weight:600;
+transition:0.3s;
+margin-bottom:14px;
+position:relative;
+z-index:2;
 }
 
 .main-button:hover{
-  background:#0ea5e9;
+background:#0ea5e9;
 }
 
 .map-button{
-  display:inline-block;
-  margin-left:10px;
-  color:#94a3b8;
-  font-size:0.9rem;
-  position:relative;
-  z-index:2;
+display:inline-block;
+margin-left:10px;
+color:#94a3b8;
+font-size:0.9rem;
+position:relative;
+z-index:2;
 }
 
 .map-button:hover{
-  color:#38bdf8;
+color:#38bdf8;
 }
 
 /* DROPDOWN */
 
 .dropdown-button{
-  margin-top:10px;
-  background:rgba(255,255,255,0.08);
-  border:none;
-  color:white;
-  padding:12px 16px;
-  border-radius:12px;
-  cursor:pointer;
-  width:100%;
-  font-weight:600;
-  transition:0.3s;
-  position:relative;
-  z-index:2;
+margin-top:10px;
+background:rgba(255,255,255,0.08);
+border:none;
+color:white;
+padding:12px 16px;
+border-radius:12px;
+cursor:pointer;
+width:100%;
+font-weight:600;
+transition:0.3s;
+position:relative;
+z-index:2;
 }
 
 .dropdown-button:hover{
-  background:rgba(255,255,255,0.15);
+background:rgba(255,255,255,0.15);
 }
 
 .dropdown-content{
-  display:none;
-  margin-top:15px;
-  position:relative;
-  z-index:2;
+display:none;
+margin-top:15px;
+position:relative;
+z-index:2;
 }
 
 .partner-link{
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
-  background:rgba(255,255,255,0.05);
-  padding:12px;
-  border-radius:12px;
-  margin-bottom:10px;
-  color:#cbd5e1;
-  transition:0.3s;
+display:flex;
+justify-content:space-between;
+align-items:center;
+background:rgba(255,255,255,0.05);
+padding:12px;
+border-radius:12px;
+margin-bottom:10px;
+color:#cbd5e1;
+transition:0.3s;
 }
 
 .partner-link:hover{
-  background:rgba(56,189,248,0.15);
-  color:white;
+background:rgba(56,189,248,0.15);
+color:white;
+}
+
+/* DISCOVER SECTIONS */
+
+.extra-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+gap:24px;
+margin-top:50px;
+}
+
+.extra-card{
+background:#1e293b;
+border-radius:24px;
+padding:30px;
+transition:0.3s;
+border:1px solid rgba(255,255,255,0.05);
+}
+
+.extra-card:hover{
+transform:translateY(-6px);
+border-color:rgba(56,189,248,0.5);
+}
+
+.extra-card h3{
+margin-bottom:15px;
+font-size:1.4rem;
+}
+
+.extra-card p{
+color:#cbd5e1;
+line-height:1.7;
+margin-bottom:20px;
+}
+
+.extra-card a{
+display:inline-block;
+background:#38bdf8;
+padding:12px 18px;
+border-radius:12px;
+color:white;
+font-weight:600;
 }
 
 /* FOOTER */
 
 footer{
-  text-align:center;
-  padding:60px 20px;
-  color:#94a3b8;
-  font-size:0.95rem;
+text-align:center;
+padding:60px 20px;
+color:#94a3b8;
+font-size:0.95rem;
 }
 
 /* MOBILE */
 
 @media(max-width:900px){
 
-  .navbar{
-    padding:20px;
-  }
+.navbar{
+padding:20px;
+}
 
-  .nav-links{
-    display:none;
-  }
+.nav-links{
+display:none;
+}
 
-  .hero h1{
-    font-size:2.8rem;
-  }
+.hero h1{
+font-size:2.8rem;
+}
 
-  .search-container{
-    flex-direction:column;
-  }
+.search-container{
+flex-direction:column;
+}
 
-  .banner-overlay h2{
-    font-size:2.2rem;
-  }
+.banner-overlay h2{
+font-size:2.2rem;
+}
 
 }
 
@@ -413,11 +455,25 @@ footer{
 <div class="logo">Vidolta</div>
 
 <div class="nav-links">
+
 <a href="#">Accueil</a>
-<a href="#">Mobilité</a>
-<a href="#">Découvrir</a>
-<a href="#">Restaurants</a>
-<a href="#" class="nav-button">Explorer</a>
+
+<a href="https://www.google.com/maps" target="_blank">
+Explorer
+</a>
+
+<a href="#nantes">
+Mobilité
+</a>
+
+<a href="#restaurants">
+Restaurants
+</a>
+
+<a href="#decouvrir" class="nav-button">
+Découvrir
+</a>
+
 </div>
 
 </nav>
@@ -445,42 +501,22 @@ footer{
 
 <div class="cities-grid">
 
-<div class="city-card" onclick="showCity('amsterdam')">
-<img src="https://i.ibb.co/pjHbv8YL/Screenshot-20260514-221638-Gmail-3.jpg">
-<div class="city-overlay"><h3>Amsterdam</h3></div>
-</div>
-
-<div class="city-card" onclick="showCity('barcelona')">
-<img src="https://i.ibb.co/pvTMvwBY/Screenshot-20260514-221626-Gmail-2.jpg">
-<div class="city-overlay"><h3>Barcelone</h3></div>
-</div>
-
-<div class="city-card" onclick="showCity('london')">
-<img src="https://i.ibb.co/fVzT395K/Screenshot-20260514-221611-Gmail-2.jpg">
-<div class="city-overlay"><h3>Londres</h3></div>
-</div>
-
-<div class="city-card" onclick="showCity('lisbon')">
-<img src="https://i.ibb.co/VYZx1T83/Screenshot-20260514-221629-Gmail-2.jpg">
-<div class="city-overlay"><h3>Lisbonne</h3></div>
-</div>
-
-<div class="city-card" onclick="showCity('mallorca')">
-<img src="https://i.ibb.co/3Yyy29tL/Screenshot-20260514-221619-Gmail-3.jpg">
-<div class="city-overlay"><h3>Majorque</h3></div>
-</div>
-
 <div class="city-card" onclick="showCity('nantes')">
 <img src="https://i.ibb.co/VcfFs0Bg/Screenshot-20260514-222533-Gmail-2.jpg">
 <div class="city-overlay"><h3>Nantes</h3></div>
 </div>
 
-<div class="city-card" onclick="showCity('paris')">
+<div class="city-card">
+<img src="https://i.ibb.co/pjHbv8YL/Screenshot-20260514-221638-Gmail-3.jpg">
+<div class="city-overlay"><h3>Amsterdam</h3></div>
+</div>
+
+<div class="city-card">
 <img src="https://i.ibb.co/BVhMM2sk/Screenshot-20260514-221622-Gmail-2.jpg">
 <div class="city-overlay"><h3>Paris</h3></div>
 </div>
 
-<div class="city-card" onclick="showCity('rome')">
+<div class="city-card">
 <img src="https://i.ibb.co/9m0bN0nK/Screenshot-20260514-230743-Gmail-2.jpg">
 <div class="city-overlay"><h3>Rome</h3></div>
 </div>
@@ -559,11 +595,11 @@ Carte
 <div class="price">≈ 3 à 4€ / h</div>
 
 <p>
-Déplace-toi facilement dans Nantes avec les vélos en libre-service.
+Déplace-toi facilement dans Nantes avec les vélos et stations Naolib.
 </p>
 
-<a href="https://bicloo.nantesmetropole.fr" target="_blank" class="main-button">
-Bicloo
+<a href="https://naolib.fr/fr/velos/micromob-1" target="_blank" class="main-button">
+Naolib
 </a>
 
 <a href="https://www.google.com/maps/search/velo+nantes/" target="_blank" class="map-button">
@@ -607,8 +643,8 @@ Carte
 Trottinettes électriques disponibles rapidement dans Nantes.
 </p>
 
-<a href="https://ridedott.com" target="_blank" class="main-button">
-Dott
+<a href="https://naolib.fr/fr/velos/micromob-1" target="_blank" class="main-button">
+Naolib
 </a>
 
 <a href="https://www.google.com/maps/search/trottinette+nantes/" target="_blank" class="map-button">
@@ -621,13 +657,8 @@ Carte
 
 <div class="dropdown-content" id="trott-dropdown">
 
-<a href="https://ridedott.com" target="_blank" class="partner-link">
-<span>Dott</span>
-<span>↗</span>
-</a>
-
-<a href="https://www.li.me" target="_blank" class="partner-link">
-<span>Lime</span>
+<a href="https://naolib.fr/fr/velos/micromob-1" target="_blank" class="partner-link">
+<span>Naolib</span>
 <span>↗</span>
 </a>
 
@@ -649,7 +680,7 @@ Carte
 <div class="price">≈ 20€ / 15 km</div>
 
 <p>
-Réserve facilement un Uber, Bolt ou taxi à Nantes.
+Réserve facilement un taxi ou VTC à Nantes.
 </p>
 
 <a href="https://www.uber.com" target="_blank" class="main-button">
@@ -666,18 +697,13 @@ Carte
 
 <div class="dropdown-content" id="taxi-dropdown">
 
-<a href="https://bolt.eu" target="_blank" class="partner-link">
-<span>Bolt</span>
+<a href="https://www.taxis-nantais.fr" target="_blank" class="partner-link">
+<span>Taxi Nantais</span>
 <span>↗</span>
 </a>
 
-<a href="#" class="partner-link">
-<span>Taxi Nantes</span>
-<span>↗</span>
-</a>
-
-<a href="#" class="partner-link">
-<span>Allo Taxi Nantes</span>
+<a href="https://www.allotaxi.com" target="_blank" class="partner-link">
+<span>Allo Taxi</span>
 <span>↗</span>
 </a>
 
@@ -767,6 +793,86 @@ Carte
 </a>
 
 </div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- RESTAURANTS -->
+
+<section id="restaurants" class="section">
+
+<h2 class="section-title">Restaurants à Nantes</h2>
+
+<div class="extra-grid">
+
+<div class="extra-card">
+
+<h3>🍽️ Tables de Nantes</h3>
+
+<p>
+Découvre les meilleures adresses culinaires et restaurants à Nantes.
+</p>
+
+<a href="https://www.lestablesdenantes.fr" target="_blank">
+Explorer
+</a>
+
+</div>
+
+<div class="extra-card">
+
+<h3>⭐ TripAdvisor</h3>
+
+<p>
+Compare les avis et trouve les restaurants les mieux notés à Nantes.
+</p>
+
+<a href="https://www.tripadvisor.fr" target="_blank">
+Explorer
+</a>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- DECOUVRIR -->
+
+<section id="decouvrir" class="section">
+
+<h2 class="section-title">Découvrir Nantes</h2>
+
+<div class="extra-grid">
+
+<div class="extra-card">
+
+<h3>🎭 Fnac Spectacles</h3>
+
+<p>
+Concerts, spectacles, humour, festivals et événements à Nantes.
+</p>
+
+<a href="https://www.fnacspectacles.com/city/nantes" target="_blank">
+Explorer
+</a>
+
+</div>
+
+<div class="extra-card">
+
+<h3>📅 Nantes Maville</h3>
+
+<p>
+Agenda des événements, sorties et activités à Nantes.
+</p>
+
+<a href="https://nantes.maville.com/sortir/agenda_accueil.php" target="_blank">
+Explorer
+</a>
 
 </div>
 
