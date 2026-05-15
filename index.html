@@ -28,43 +28,99 @@
       color:white;
     }
 
+    a{
+      text-decoration:none;
+    }
+
+    /* NAVBAR */
+
+    .navbar{
+      width:100%;
+      padding:20px 40px;
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      position:sticky;
+      top:0;
+      z-index:1000;
+      backdrop-filter:blur(12px);
+      background:rgba(15,23,42,0.85);
+      border-bottom:1px solid rgba(255,255,255,0.05);
+    }
+
+    .logo{
+      font-size:1.8rem;
+      font-weight:700;
+      color:white;
+    }
+
+    .nav-links{
+      display:flex;
+      gap:25px;
+      align-items:center;
+    }
+
+    .nav-links a{
+      color:#cbd5e1;
+      transition:0.3s;
+      font-weight:500;
+    }
+
+    .nav-links a:hover{
+      color:#38bdf8;
+    }
+
+    .nav-button{
+      background:#38bdf8;
+      padding:12px 18px;
+      border-radius:12px;
+      color:white !important;
+      font-weight:600;
+    }
+
+    .nav-button:hover{
+      background:#0ea5e9;
+    }
+
+    /* HERO */
+
     .hero{
-      padding:80px 20px 60px;
+      padding:100px 20px 70px;
       text-align:center;
       background:linear-gradient(180deg,#0f172a 0%, #111827 100%);
     }
 
     .hero h1{
-      font-size:3rem;
-      margin-bottom:10px;
+      font-size:4rem;
+      margin-bottom:15px;
     }
 
     .hero p{
       color:#cbd5e1;
-      font-size:1.1rem;
-      margin-bottom:35px;
+      font-size:1.2rem;
+      margin-bottom:40px;
     }
 
     .search-container{
-      max-width:500px;
+      max-width:550px;
       margin:auto;
       display:flex;
-      gap:10px;
+      gap:12px;
     }
 
     .search-container input{
       flex:1;
-      padding:16px;
-      border-radius:14px;
+      padding:18px;
+      border-radius:16px;
       border:none;
       outline:none;
       font-size:1rem;
     }
 
     .search-container button{
-      padding:16px 24px;
+      padding:18px 24px;
       border:none;
-      border-radius:14px;
+      border-radius:16px;
       background:#38bdf8;
       color:white;
       font-weight:600;
@@ -75,30 +131,35 @@
     .search-container button:hover{
       background:#0ea5e9;
       transform:translateY(-2px);
+      box-shadow:0 10px 20px rgba(56,189,248,0.3);
     }
 
+    /* SECTION */
+
     .section{
-      padding:60px 20px;
-      max-width:1200px;
+      padding:70px 20px;
+      max-width:1250px;
       margin:auto;
     }
 
     .section-title{
       text-align:center;
-      font-size:2rem;
-      margin-bottom:35px;
+      font-size:2.2rem;
+      margin-bottom:40px;
     }
+
+    /* CITIES */
 
     .cities-grid{
       display:grid;
-      grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-      gap:20px;
+      grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+      gap:24px;
     }
 
     .city-card{
       position:relative;
-      height:260px;
-      border-radius:22px;
+      height:280px;
+      border-radius:24px;
       overflow:hidden;
       cursor:pointer;
       transition:0.4s;
@@ -106,7 +167,8 @@
     }
 
     .city-card:hover{
-      transform:translateY(-5px);
+      transform:translateY(-8px);
+      box-shadow:0 20px 40px rgba(0,0,0,0.35);
     }
 
     .city-card img{
@@ -123,27 +185,29 @@
     .city-overlay{
       position:absolute;
       inset:0;
-      background:linear-gradient(to top, rgba(0,0,0,0.75), rgba(0,0,0,0.15));
+      background:linear-gradient(to top, rgba(0,0,0,0.85), rgba(0,0,0,0.15));
       display:flex;
       align-items:end;
-      padding:20px;
+      padding:22px;
     }
 
     .city-overlay h3{
-      font-size:1.4rem;
+      font-size:1.5rem;
     }
+
+    /* CITY PAGE */
 
     .mobility-section{
       display:none;
-      padding-top:30px;
+      padding-top:20px;
     }
 
     .city-banner{
       position:relative;
-      height:320px;
-      border-radius:24px;
+      height:340px;
+      border-radius:28px;
       overflow:hidden;
-      margin-bottom:40px;
+      margin-bottom:45px;
     }
 
     .city-banner img{
@@ -155,38 +219,56 @@
     .banner-overlay{
       position:absolute;
       inset:0;
-      background:linear-gradient(to top, rgba(0,0,0,0.8), rgba(0,0,0,0.2));
+      background:linear-gradient(to top, rgba(0,0,0,0.85), rgba(0,0,0,0.2));
       display:flex;
       align-items:end;
-      padding:30px;
+      padding:35px;
     }
 
     .banner-overlay h2{
-      font-size:2.5rem;
+      font-size:3rem;
     }
+
+    /* MOBILITY */
 
     .mobility-grid{
       display:grid;
-      grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-      gap:20px;
+      grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+      gap:24px;
     }
 
     .mobility-card{
       background:#1e293b;
-      border-radius:22px;
-      padding:24px;
+      border-radius:24px;
+      padding:26px;
       border:1px solid rgba(255,255,255,0.05);
-      transition:0.3s;
+      transition:0.35s;
+      position:relative;
+      overflow:hidden;
+    }
+
+    .mobility-card::before{
+      content:'';
+      position:absolute;
+      width:180px;
+      height:180px;
+      background:rgba(56,189,248,0.08);
+      border-radius:50%;
+      top:-80px;
+      right:-80px;
     }
 
     .mobility-card:hover{
-      transform:translateY(-5px);
+      transform:translateY(-6px);
       border-color:rgba(56,189,248,0.5);
+      box-shadow:0 15px 30px rgba(0,0,0,0.25);
     }
 
     .mobility-card h3{
-      margin-bottom:10px;
-      font-size:1.2rem;
+      margin-bottom:12px;
+      font-size:1.25rem;
+      position:relative;
+      z-index:2;
     }
 
     .price{
@@ -194,40 +276,72 @@
       font-weight:600;
       margin-bottom:15px;
       font-size:1rem;
+      position:relative;
+      z-index:2;
     }
 
     .mobility-card p{
       color:#cbd5e1;
-      line-height:1.6;
-      margin-bottom:20px;
+      line-height:1.7;
+      margin-bottom:22px;
+      position:relative;
+      z-index:2;
     }
 
-    .mobility-card a{
-      display:inline-block;
-      text-decoration:none;
+    .mobility-buttons{
+      display:flex;
+      gap:10px;
+      flex-wrap:wrap;
+      position:relative;
+      z-index:2;
+    }
+
+    .mobility-buttons a{
       background:#38bdf8;
       color:white;
-      padding:12px 18px;
+      padding:12px 16px;
       border-radius:12px;
       font-weight:600;
       transition:0.3s;
+      font-size:0.95rem;
     }
 
-    .mobility-card a:hover{
+    .mobility-buttons a:hover{
       background:#0ea5e9;
+      transform:translateY(-2px);
     }
+
+    .secondary-button{
+      background:rgba(255,255,255,0.08) !important;
+    }
+
+    .secondary-button:hover{
+      background:rgba(255,255,255,0.15) !important;
+    }
+
+    /* FOOTER */
 
     footer{
       text-align:center;
-      padding:40px 20px;
+      padding:60px 20px;
       color:#94a3b8;
-      font-size:0.9rem;
+      font-size:0.95rem;
     }
 
-    @media(max-width:768px){
+    /* MOBILE */
+
+    @media(max-width:900px){
+
+      .navbar{
+        padding:20px;
+      }
+
+      .nav-links{
+        display:none;
+      }
 
       .hero h1{
-        font-size:2.2rem;
+        font-size:2.8rem;
       }
 
       .search-container{
@@ -235,7 +349,7 @@
       }
 
       .banner-overlay h2{
-        font-size:2rem;
+        font-size:2.2rem;
       }
 
     }
@@ -244,6 +358,24 @@
 </head>
 
 <body>
+
+<!-- NAVBAR -->
+
+<nav class="navbar">
+
+  <div class="logo">Vidolta</div>
+
+  <div class="nav-links">
+    <a href="#">Accueil</a>
+    <a href="#">Mobilité</a>
+    <a href="#">Découvrir</a>
+    <a href="#">Restaurants</a>
+    <a href="#" class="nav-button">Explorer</a>
+  </div>
+
+</nav>
+
+<!-- HERO -->
 
 <section class="hero">
 
@@ -258,81 +390,59 @@
 
 </section>
 
+<!-- CITIES -->
+
 <section class="section">
 
   <h2 class="section-title">Destinations populaires</h2>
 
   <div class="cities-grid">
 
-    <!-- Amsterdam -->
     <div class="city-card" onclick="showCity('amsterdam')">
       <img src="https://i.ibb.co/pjHbv8YL/Screenshot-20260514-221638-Gmail-3.jpg">
-      <div class="city-overlay">
-        <h3>Amsterdam</h3>
-      </div>
+      <div class="city-overlay"><h3>Amsterdam</h3></div>
     </div>
 
-    <!-- Barcelone -->
     <div class="city-card" onclick="showCity('barcelona')">
       <img src="https://i.ibb.co/pvTMvwBY/Screenshot-20260514-221626-Gmail-2.jpg">
-      <div class="city-overlay">
-        <h3>Barcelone</h3>
-      </div>
+      <div class="city-overlay"><h3>Barcelone</h3></div>
     </div>
 
-    <!-- Londres -->
     <div class="city-card" onclick="showCity('london')">
       <img src="https://i.ibb.co/fVzT395K/Screenshot-20260514-221611-Gmail-2.jpg">
-      <div class="city-overlay">
-        <h3>Londres</h3>
-      </div>
+      <div class="city-overlay"><h3>Londres</h3></div>
     </div>
 
-    <!-- Lisbonne -->
     <div class="city-card" onclick="showCity('lisbon')">
       <img src="https://i.ibb.co/VYZx1T83/Screenshot-20260514-221629-Gmail-2.jpg">
-      <div class="city-overlay">
-        <h3>Lisbonne</h3>
-      </div>
+      <div class="city-overlay"><h3>Lisbonne</h3></div>
     </div>
 
-    <!-- Majorque -->
     <div class="city-card" onclick="showCity('mallorca')">
       <img src="https://i.ibb.co/3Yyy29tL/Screenshot-20260514-221619-Gmail-3.jpg">
-      <div class="city-overlay">
-        <h3>Majorque</h3>
-      </div>
+      <div class="city-overlay"><h3>Majorque</h3></div>
     </div>
 
-    <!-- Nantes -->
     <div class="city-card" onclick="showCity('nantes')">
       <img src="https://i.ibb.co/VcfFs0Bg/Screenshot-20260514-222533-Gmail-2.jpg">
-      <div class="city-overlay">
-        <h3>Nantes</h3>
-      </div>
+      <div class="city-overlay"><h3>Nantes</h3></div>
     </div>
 
-    <!-- Paris -->
     <div class="city-card" onclick="showCity('paris')">
       <img src="https://i.ibb.co/BVhMM2sk/Screenshot-20260514-221622-Gmail-2.jpg">
-      <div class="city-overlay">
-        <h3>Paris</h3>
-      </div>
+      <div class="city-overlay"><h3>Paris</h3></div>
     </div>
 
-    <!-- Rome -->
     <div class="city-card" onclick="showCity('rome')">
       <img src="https://i.ibb.co/9m0bN0nK/Screenshot-20260514-230743-Gmail-2.jpg">
-      <div class="city-overlay">
-        <h3>Rome</h3>
-      </div>
+      <div class="city-overlay"><h3>Rome</h3></div>
     </div>
 
   </div>
 
 </section>
 
-<!-- SECTION NANTES -->
+<!-- NANTES -->
 
 <section id="nantes" class="section mobility-section">
 
@@ -348,46 +458,118 @@
 
   <div class="mobility-grid">
 
+    <!-- TRANSPORT -->
+
     <div class="mobility-card">
+
       <h3>🚇 Transport public</h3>
+
       <div class="price">≈ 1,80€ / 1h</div>
-      <p>Explore Nantes avec les tramways, bus et Navibus Naolib.</p>
-      <a href="https://www.naolib.fr" target="_blank">Naolib</a>
+
+      <p>
+        Explore Nantes avec les tramways, bus et Navibus Naolib.
+      </p>
+
+      <div class="mobility-buttons">
+        <a href="https://www.naolib.fr" target="_blank">Naolib</a>
+        <a href="#" class="secondary-button">Voir plus</a>
+      </div>
+
     </div>
 
+    <!-- VELO -->
+
     <div class="mobility-card">
+
       <h3>🚲 Location vélo</h3>
+
       <div class="price">≈ 3 à 4€ / h</div>
-      <p>Déplace-toi facilement dans Nantes avec les vélos Bicloo.</p>
-      <a href="https://micromob.naolib.fr/map" target="_blank">Voir les vélos</a>
+
+      <p>
+        Déplace-toi facilement dans Nantes avec les vélos Bicloo.
+      </p>
+
+      <div class="mobility-buttons">
+        <a href="https://micromob.naolib.fr/map" target="_blank">Bicloo</a>
+        <a href="#" class="secondary-button">Voir plus</a>
+      </div>
+
     </div>
 
+    <!-- TROTTINETTE -->
+
     <div class="mobility-card">
+
       <h3>🛴 Trottinette électrique</h3>
+
       <div class="price">≈ 6€ / h</div>
-      <p>Trottinettes électriques disponibles rapidement en centre-ville.</p>
-      <a href="https://www.dott.com/fr" target="_blank">Voir les trottinettes</a>
+
+      <p>
+        Trottinettes électriques disponibles rapidement en centre-ville.
+      </p>
+
+      <div class="mobility-buttons">
+        <a href="https://www.dott.com/fr" target="_blank">Dott</a>
+        <a href="#" class="secondary-button">Voir plus</a>
+      </div>
+
     </div>
 
+    <!-- TAXI -->
+
     <div class="mobility-card">
+
       <h3>🚕 Taxi & VTC</h3>
+
       <div class="price">≈ 20€ / 15 km</div>
-      <p>Réserve facilement un Uber, Bolt ou taxi à Nantes.</p>
-      <a href="https://www.uber.com" target="_blank">Uber</a>
+
+      <p>
+        Réserve facilement un Uber, Bolt ou taxi à Nantes.
+      </p>
+
+      <div class="mobility-buttons">
+        <a href="https://www.uber.com" target="_blank">Uber</a>
+        <a href="#" class="secondary-button">Voir plus</a>
+      </div>
+
     </div>
 
+    <!-- VOITURE -->
+
     <div class="mobility-card">
+
       <h3>🚗 Location voiture</h3>
+
       <div class="price">≈ 50€ / jour</div>
-      <p>Découvre Nantes et ses alentours en voiture de location.</p>
-      <a href="https://www.rentacar.fr" target="_blank">Louer une voiture</a>
+
+      <p>
+        Découvre Nantes et ses alentours en voiture de location.
+      </p>
+
+      <div class="mobility-buttons">
+        <a href="https://www.rentacar.fr" target="_blank">Rent A Car</a>
+        <a href="#" class="secondary-button">Voir plus</a>
+      </div>
+
     </div>
 
+    <!-- TRAIN -->
+
     <div class="mobility-card">
+
       <h3>🚆 Train</h3>
+
       <div class="price">≈ 60€ Nantes → Paris</div>
-      <p>Voyage facilement entre Nantes, Paris et d'autres villes.</p>
-      <a href="https://www.sncf-connect.com" target="_blank">SNCF Connect</a>
+
+      <p>
+        Voyage facilement entre Nantes, Paris et d'autres villes.
+      </p>
+
+      <div class="mobility-buttons">
+        <a href="https://www.sncf-connect.com" target="_blank">SNCF</a>
+        <a href="#" class="secondary-button">Voir plus</a>
+      </div>
+
     </div>
 
   </div>
