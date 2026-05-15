@@ -6,7 +6,17 @@
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 
-<title>🌍 Vidolta — Te guide partout où tu vas</title>
+<title>Vidolta — Mobilité, restaurants et découvertes urbaines</title>
+
+<meta name="description"
+content="Vidolta te guide partout où tu vas : mobilité, transports, restaurants, activités et découvertes urbaines dans les plus belles villes.">
+
+<meta name="keywords"
+content="voyage, mobilité urbaine, restaurants, tourisme, transport, city guide, paris, lyon, nantes">
+
+<meta name="theme-color" content="#0f172a">
+
+<link rel="icon" href="favicon.ico">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -29,36 +39,42 @@ body{
 font-family:'Poppins',sans-serif;
 background:#0f172a;
 color:white;
+overflow-x:hidden;
 }
 
 a{
 text-decoration:none;
 }
 
+img{
+display:block;
+}
+
 /* NAVBAR */
 
 .navbar{
-width:100%;
-padding:20px 40px;
-display:flex;
-justify-content:space-between;
-align-items:center;
 position:sticky;
 top:0;
 z-index:1000;
-backdrop-filter:blur(12px);
+width:100%;
+padding:18px 40px;
+display:flex;
+justify-content:space-between;
+align-items:center;
 background:rgba(15,23,42,0.88);
+backdrop-filter:blur(14px);
 border-bottom:1px solid rgba(255,255,255,0.05);
 }
 
 .logo{
-font-size:2rem;
+font-size:1.9rem;
 font-weight:700;
+letter-spacing:0.5px;
 }
 
 .nav-links{
 display:flex;
-gap:24px;
+gap:28px;
 align-items:center;
 }
 
@@ -73,98 +89,129 @@ color:#818cf8;
 }
 
 .explorer-link{
-font-size:0.8rem;
+font-size:0.82rem;
 color:#94a3b8 !important;
+}
+
+.mobile-btn{
+display:none;
+font-size:1.6rem;
+cursor:pointer;
 }
 
 /* HERO */
 
 .hero{
-padding:110px 20px 80px;
+padding:120px 20px 90px;
 text-align:center;
-background:linear-gradient(180deg,#0f172a 0%, #111827 100%);
+background:
+radial-gradient(circle at top,#1e293b 0%,#0f172a 55%);
 }
 
 .hero h1{
-font-size:4rem;
-margin-bottom:15px;
+font-size:4.5rem;
+margin-bottom:18px;
 }
 
 .hero-main{
-font-size:1.5rem;
-margin-bottom:8px;
+font-size:1.4rem;
+color:#e2e8f0;
+margin-bottom:10px;
 }
 
 .subtitle-en{
-font-size:0.72rem;
-color:#94a3b8;
-opacity:0.4;
+font-size:0.75rem;
 letter-spacing:1px;
-margin-bottom:40px;
+color:#94a3b8;
+opacity:0.55;
+margin-bottom:45px;
 }
 
 .search-container{
-max-width:560px;
+max-width:620px;
 margin:auto;
 display:flex;
-gap:12px;
+gap:14px;
 }
 
 .search-container input{
 flex:1;
 padding:18px;
-border-radius:16px;
 border:none;
 outline:none;
+border-radius:18px;
 font-size:1rem;
+background:white;
 }
 
 .discover-button{
-padding:18px 24px;
+padding:18px 26px;
 border:none;
-border-radius:16px;
+border-radius:18px;
 background:#6366f1;
 color:white;
 font-weight:600;
 cursor:pointer;
+transition:0.3s;
 }
 
-/* SECTION */
+.discover-button:hover{
+background:#4f46e5;
+transform:translateY(-2px);
+}
+
+.hero-badges{
+margin-top:35px;
+display:flex;
+justify-content:center;
+flex-wrap:wrap;
+gap:14px;
+}
+
+.hero-badges span{
+padding:12px 18px;
+border-radius:999px;
+background:rgba(255,255,255,0.05);
+border:1px solid rgba(255,255,255,0.06);
+color:#cbd5e1;
+font-size:0.92rem;
+}
+
+/* SECTIONS */
 
 .section{
-padding:70px 20px;
+padding:80px 20px;
 max-width:1300px;
 margin:auto;
 }
 
 .section-title{
 text-align:center;
-font-size:2.4rem;
-margin-bottom:45px;
+font-size:2.5rem;
+margin-bottom:50px;
 }
 
-/* DESTINATIONS */
+/* CITY GRID */
 
 .cities-grid{
 display:grid;
-grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-gap:22px;
+grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+gap:24px;
 }
 
 .city-card{
 position:relative;
-height:220px;
-border-radius:24px;
+height:260px;
 overflow:hidden;
+border-radius:28px;
 cursor:pointer;
-transition:0.4s;
-box-shadow:0 10px 30px rgba(0,0,0,0.25);
-backdrop-filter:blur(8px);
-background:rgba(255,255,255,0.03);
+transition:0.45s;
+background:#1e293b;
+box-shadow:0 12px 30px rgba(0,0,0,0.25);
 }
 
 .city-card:hover{
-transform:translateY(-8px) scale(1.01);
+transform:translateY(-8px);
 box-shadow:0 20px 40px rgba(0,0,0,0.35);
 }
 
@@ -172,122 +219,191 @@ box-shadow:0 20px 40px rgba(0,0,0,0.35);
 width:100%;
 height:100%;
 object-fit:cover;
+transition:0.5s;
+}
+
+.city-card:hover img{
+transform:scale(1.06);
 }
 
 .city-overlay{
 position:absolute;
 inset:0;
-background:linear-gradient(to top, rgba(0,0,0,0.85), rgba(0,0,0,0.15));
-display:flex;
-align-items:end;
 padding:22px;
+display:flex;
+align-items:flex-end;
+background:linear-gradient(to top,rgba(0,0,0,0.9),rgba(0,0,0,0.15));
 }
 
 .city-overlay h3{
-font-size:1.4rem;
+font-size:1.5rem;
 }
 
-/* CITY */
+/* FEATURES */
 
-.mobility-section{
-display:none;
-}
-
-.city-banner{
-position:relative;
-height:300px;
-border-radius:28px;
-overflow:hidden;
-margin-bottom:45px;
-}
-
-.city-banner img{
-width:100%;
-height:100%;
-object-fit:cover;
-}
-
-.banner-overlay{
-position:absolute;
-inset:0;
-background:linear-gradient(to top, rgba(0,0,0,0.85), rgba(0,0,0,0.2));
-display:flex;
-align-items:end;
-padding:35px;
-}
-
-.banner-overlay h2{
-font-size:3rem;
-}
-
-/* CARDS */
-
-.mobility-grid,
-.extra-grid{
+.features-grid{
 display:grid;
-grid-template-columns:repeat(auto-fit,minmax(270px,1fr));
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
 gap:24px;
 }
 
-.mobility-card,
-.extra-card{
+.feature-card{
 background:#1e293b;
-border-radius:24px;
-padding:26px;
+padding:30px;
+border-radius:26px;
 border:1px solid rgba(255,255,255,0.05);
+transition:0.35s;
 }
 
-.mobility-card h3,
-.extra-card h3{
-margin-bottom:12px;
+.feature-card:hover{
+transform:translateY(-5px);
+border-color:rgba(99,102,241,0.45);
 }
 
-.price{
-color:#818cf8;
-font-weight:600;
-margin-bottom:15px;
+.feature-card h3{
+margin-bottom:16px;
+font-size:1.3rem;
 }
 
-.mobility-card p,
-.extra-card p{
+.feature-card p{
+line-height:1.8;
 color:#cbd5e1;
-line-height:1.7;
 margin-bottom:22px;
 }
 
-.main-button,
-.extra-card a{
+.feature-card a{
 display:inline-block;
+padding:12px 18px;
 background:#6366f1;
 color:white;
-padding:12px 16px;
 border-radius:12px;
 font-weight:600;
+}
+
+/* CTA */
+
+.cta-box{
+background:linear-gradient(135deg,#312e81,#4338ca);
+padding:50px 30px;
+border-radius:30px;
+text-align:center;
+margin-top:20px;
+}
+
+.cta-box h2{
+font-size:2.4rem;
+margin-bottom:18px;
+}
+
+.cta-box p{
+max-width:700px;
+margin:auto;
+line-height:1.8;
+margin-bottom:30px;
+color:#e2e8f0;
+}
+
+.cta-box a{
+display:inline-block;
+padding:16px 24px;
+background:white;
+color:#111827;
+font-weight:700;
+border-radius:16px;
+}
+
+/* TOAST */
+
+.toast{
+position:fixed;
+bottom:30px;
+left:50%;
+transform:translateX(-50%);
+background:#1e293b;
+padding:14px 20px;
+border-radius:16px;
+opacity:0;
+pointer-events:none;
+transition:0.4s;
+border:1px solid rgba(255,255,255,0.06);
+}
+
+.toast.show{
+opacity:1;
 }
 
 /* FOOTER */
 
 footer{
+padding:70px 20px;
 text-align:center;
-padding:60px 20px;
 color:#94a3b8;
 line-height:2;
+}
+
+.footer-links{
+margin-top:16px;
+display:flex;
+justify-content:center;
+flex-wrap:wrap;
+gap:18px;
+}
+
+.footer-links a{
+color:#94a3b8;
+}
+
+/* ANIMATION */
+
+.fade-up{
+opacity:0;
+transform:translateY(30px);
+transition:0.8s ease;
+}
+
+.fade-up.visible{
+opacity:1;
+transform:translateY(0);
 }
 
 /* MOBILE */
 
 @media(max-width:900px){
 
+.navbar{
+padding:18px 20px;
+}
+
+.mobile-btn{
+display:block;
+}
+
 .nav-links{
 display:none;
+position:absolute;
+top:80px;
+left:20px;
+right:20px;
+background:#111827;
+flex-direction:column;
+padding:25px;
+border-radius:24px;
+}
+
+.nav-links.active{
+display:flex;
 }
 
 .hero h1{
-font-size:3rem;
+font-size:3.2rem;
 }
 
 .search-container{
 flex-direction:column;
+}
+
+.section-title{
+font-size:2rem;
 }
 
 }
@@ -304,19 +420,21 @@ flex-direction:column;
 
 <div class="logo">🌍 Vidolta</div>
 
+<div class="mobile-btn" onclick="toggleMenu()">
+☰
+</div>
+
 <div class="nav-links">
 
-<a href="#">Accueil</a>
-<a href="#">Mobilité</a>
-<a href="#">Restaurants</a>
-<a href="#">Découvrir</a>
+<a href="#destinations">Destinations</a>
+<a href="#mobilite">Mobilité</a>
+<a href="#restaurants">Restaurants</a>
+<a href="#activites">Activités</a>
 
-<a href="https://www.google.com/maps"
+<a href="https://maps.google.com"
 target="_blank"
 class="explorer-link">
-
 Explorer
-
 </a>
 
 </div>
@@ -345,10 +463,17 @@ placeholder="Rechercher une ville...">
 
 <button class="discover-button"
 onclick="searchCity()">
-
 Découvrir
-
 </button>
+
+</div>
+
+<div class="hero-badges fade-up">
+
+<span>🚇 Mobilité urbaine</span>
+<span>🍽️ Restaurants</span>
+<span>🎭 Activités</span>
+<span>🗺️ Explorer les villes</span>
 
 </div>
 
@@ -356,143 +481,335 @@ Découvrir
 
 <!-- DESTINATIONS -->
 
-<section class="section">
+<section class="section" id="destinations">
 
-<h2 class="section-title">
+<h2 class="section-title fade-up">
 Destinations populaires
 </h2>
 
 <div class="cities-grid">
 
-<div class="city-card" onclick="showCity('nantes')">
-<img src="https://i.ibb.co/VcfFs0Bg/Screenshot-20260514-222533-Gmail-2.jpg">
-<div class="city-overlay"><h3>Nantes</h3></div>
-</div>
-
-<div class="city-card" onclick="showCity('paris')">
+<div class="city-card fade-up">
 <img src="https://i.ibb.co/BVhMM2sk/Screenshot-20260514-221622-Gmail-2.jpg">
-<div class="city-overlay"><h3>Paris</h3></div>
+<div class="city-overlay">
+<h3>Paris</h3>
+</div>
 </div>
 
-<div class="city-card" onclick="showCity('lyon')">
+<div class="city-card fade-up">
 <img src="https://i.ibb.co/jvX3dNG0/Screenshot-20260516-000603-Chrome.png">
-<div class="city-overlay"><h3>Lyon</h3></div>
+<div class="city-overlay">
+<h3>Lyon</h3>
+</div>
 </div>
 
-<div class="city-card" onclick="showCity('marseille')">
+<div class="city-card fade-up">
+<img src="https://i.ibb.co/VcfFs0Bg/Screenshot-20260514-222533-Gmail-2.jpg">
+<div class="city-overlay">
+<h3>Nantes</h3>
+</div>
+</div>
+
+<div class="city-card fade-up">
 <img src="https://i.ibb.co/kg1LzsKQ/Screenshot-20260516-002137-Chrome.png">
-<div class="city-overlay"><h3>Marseille</h3></div>
+<div class="city-overlay">
+<h3>Marseille</h3>
+</div>
 </div>
 
-<div class="city-card">
+<div class="city-card fade-up">
 <img src="https://images.unsplash.com/photo-1512470876302-972faa2aa9a4?q=80&w=1200&auto=format&fit=crop">
-<div class="city-overlay"><h3>Amsterdam</h3></div>
+<div class="city-overlay">
+<h3>Amsterdam</h3>
+</div>
 </div>
 
-<div class="city-card">
+<div class="city-card fade-up">
 <img src="https://images.unsplash.com/photo-1583422409516-2895a77efded?q=80&w=1200&auto=format&fit=crop">
-<div class="city-overlay"><h3>Barcelone</h3></div>
+<div class="city-overlay">
+<h3>Barcelone</h3>
 </div>
-
-<div class="city-card">
-<img src="https://images.unsplash.com/photo-1505761671935-60b3a7427bad?q=80&w=1200&auto=format&fit=crop">
-<div class="city-overlay"><h3>Bordeaux</h3></div>
-</div>
-
-<div class="city-card">
-<img src="https://images.unsplash.com/photo-1508057198894-247b23fe5ade?q=80&w=1200&auto=format&fit=crop">
-<div class="city-overlay"><h3>Lille</h3></div>
-</div>
-
-<div class="city-card">
-<img src="https://images.unsplash.com/photo-1513735492246-483525079686?q=80&w=1200&auto=format&fit=crop">
-<div class="city-overlay"><h3>Lisbonne</h3></div>
-</div>
-
-<div class="city-card">
-<img src="https://images.unsplash.com/photo-1502602898657-3e91760cbb34?q=80&w=1200&auto=format&fit=crop">
-<div class="city-overlay"><h3>Nice</h3></div>
-</div>
-
-<div class="city-card">
-<img src="https://images.unsplash.com/photo-1552832230-c0197dd311b5?q=80&w=1200&auto=format&fit=crop">
-<div class="city-overlay"><h3>Rome</h3></div>
-</div>
-
-<div class="city-card">
-<img src="https://images.unsplash.com/photo-1549856922-9986d5f6f7c5?q=80&w=1200&auto=format&fit=crop">
-<div class="city-overlay"><h3>Toulouse</h3></div>
 </div>
 
 </div>
 
 </section>
 
+<!-- MOBILITE -->
+
+<section class="section" id="mobilite">
+
+<h2 class="section-title fade-up">
+Mobilité intelligente
+</h2>
+
+<div class="features-grid">
+
+<div class="feature-card fade-up">
+<h3>🚇 Transports publics</h3>
+<p>
+Compare les meilleures options pour métro, tramway, train et mobilité urbaine.
+</p>
+<a href="https://www.sncf-connect.com" target="_blank">
+Explorer
+</a>
+</div>
+
+<div class="feature-card fade-up">
+<h3>🚲 Mobilité douce</h3>
+<p>
+Découvre les meilleurs services de vélo, trottinettes et déplacements écologiques.
+</p>
+<a href="https://www.velib-metropole.fr" target="_blank">
+Explorer
+</a>
+</div>
+
+<div class="feature-card fade-up">
+<h3>🚕 Taxi & VTC</h3>
+<p>
+Réserve rapidement un VTC ou compare les alternatives selon la ville.
+</p>
+<a href="https://www.uber.com" target="_blank">
+Explorer
+</a>
+</div>
+
+</div>
+
+</section>
+
+<!-- RESTAURANTS -->
+
+<section class="section" id="restaurants">
+
+<h2 class="section-title fade-up">
+Restaurants & bonnes adresses
+</h2>
+
+<div class="features-grid">
+
+<div class="feature-card fade-up">
+<h3>⭐ TripAdvisor</h3>
+<p>
+Découvre les restaurants les mieux notés dans les plus belles villes.
+</p>
+<a href="https://www.tripadvisor.fr" target="_blank">
+Explorer
+</a>
+</div>
+
+<div class="feature-card fade-up">
+<h3>🍽️ TheFork</h3>
+<p>
+Réserve une table rapidement et profite des meilleures offres restaurants.
+</p>
+<a href="https://www.thefork.fr" target="_blank">
+Explorer
+</a>
+</div>
+
+<div class="feature-card fade-up">
+<h3>☕ Cafés & brunchs</h3>
+<p>
+Trouve des lieux tendances pour brunch, café et coworking urbain.
+</p>
+<a href="https://www.google.com/maps" target="_blank">
+Explorer
+</a>
+</div>
+
+</div>
+
+</section>
+
+<!-- ACTIVITES -->
+
+<section class="section" id="activites">
+
+<h2 class="section-title fade-up">
+Découvrir la ville
+</h2>
+
+<div class="features-grid">
+
+<div class="feature-card fade-up">
+<h3>🎭 Événements</h3>
+<p>
+Concerts, festivals et événements urbains dans toute l’Europe.
+</p>
+<a href="https://www.fnacspectacles.com" target="_blank">
+Explorer
+</a>
+</div>
+
+<div class="feature-card fade-up">
+<h3>🧭 Guides & tourisme</h3>
+<p>
+Explore les meilleurs quartiers, monuments et lieux incontournables.
+</p>
+<a href="https://www.getyourguide.fr" target="_blank">
+Explorer
+</a>
+</div>
+
+<div class="feature-card fade-up">
+<h3>🏛️ City experiences</h3>
+<p>
+Découvre des expériences locales et activités uniques.
+</p>
+<a href="https://www.tiqets.com" target="_blank">
+Explorer
+</a>
+</div>
+
+</div>
+
+</section>
+
+<!-- CTA -->
+
+<section class="section">
+
+<div class="cta-box fade-up">
+
+<h2>
+Explore les villes autrement avec Vidolta
+</h2>
+
+<p>
+Mobilité, restaurants, activités et découvertes urbaines réunis sur une seule plateforme moderne et rapide.
+</p>
+
+<a href="#destinations">
+Découvrir les villes
+</a>
+
+</div>
+
+</section>
+
+<!-- TOAST -->
+
+<div class="toast" id="toast">
+Ville bientôt disponible sur Vidolta.
+</div>
+
 <!-- FOOTER -->
 
 <footer>
 
 <p>
-Contact : contact@vidolta.com
+contact@vidolta.com
 </p>
 
 <p>
 © 2026 Vidolta — Te guide partout où tu vas.
 </p>
 
+<div class="footer-links">
+<a href="#">Mentions légales</a>
+<a href="#">Confidentialité</a>
+<a href="#">Contact</a>
+</div>
+
 </footer>
 
 <script>
 
-function showCity(cityId){
-
-document.querySelectorAll('.mobility-section').forEach(section => {
-section.style.display = 'none';
-});
-
-const section = document.getElementById(cityId);
-
-if(section){
-
-section.style.display = 'block';
-
-window.scrollTo({
-top: section.offsetTop - 40,
-behavior:'smooth'
-});
-
-}
-
-}
+/* SEARCH */
 
 function searchCity(){
 
 const input =
-document.getElementById('cityInput')
+document
+.getElementById('cityInput')
 .value
-.toLowerCase();
+.toLowerCase()
+.trim();
 
-if(input.includes('nantes')){
-showCity('nantes');
-}
+const availableCities = [
+'paris',
+'lyon',
+'nantes',
+'marseille',
+'amsterdam',
+'barcelone'
+];
 
-else if(input.includes('paris')){
-showCity('paris');
-}
+if(availableCities.includes(input)){
 
-else if(input.includes('lyon')){
-showCity('lyon');
-}
+window.location.href = input + '.html';
 
-else if(input.includes('marseille')){
-showCity('marseille');
-}
+}else{
 
-else{
-alert("Ville bientôt disponible sur Vidolta.");
-}
+showToast();
 
 }
+
+}
+
+/* ENTER KEY */
+
+document
+.getElementById('cityInput')
+.addEventListener('keypress', function(e){
+
+if(e.key === 'Enter'){
+searchCity();
+}
+
+});
+
+/* TOAST */
+
+function showToast(){
+
+const toast =
+document.getElementById('toast');
+
+toast.classList.add('show');
+
+setTimeout(() => {
+
+toast.classList.remove('show');
+
+},2500);
+
+}
+
+/* MOBILE MENU */
+
+function toggleMenu(){
+
+const nav =
+document.querySelector('.nav-links');
+
+nav.classList.toggle('active');
+
+}
+
+/* SCROLL ANIMATION */
+
+const observer = new IntersectionObserver(entries => {
+
+entries.forEach(entry => {
+
+if(entry.isIntersecting){
+entry.target.classList.add('visible');
+}
+
+});
+
+},{
+threshold:0.15
+});
+
+
+document.querySelectorAll('.fade-up')
+.forEach(el => {
+observer.observe(el);
+});
 
 </script>
 
