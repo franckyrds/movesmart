@@ -448,8 +448,6 @@ font-size:2.2rem;
 
 <body>
 
-<!-- NAVBAR -->
-
 <nav class="navbar">
 
 <div class="logo">Vidolta</div>
@@ -457,10 +455,6 @@ font-size:2.2rem;
 <div class="nav-links">
 
 <a href="#">Accueil</a>
-
-<a href="https://www.google.com/maps" target="_blank">
-Explorer
-</a>
 
 <a href="#mobilite">
 Mobilité
@@ -470,15 +464,17 @@ Mobilité
 Restaurants
 </a>
 
-<a href="#decouvrir" class="nav-button">
+<a href="#decouvrir">
 Découvrir
+</a>
+
+<a href="https://www.google.com/maps" target="_blank" class="nav-button">
+Explorer
 </a>
 
 </div>
 
 </nav>
-
-<!-- HERO -->
 
 <section class="hero">
 
@@ -493,8 +489,6 @@ Découvrir
 
 </section>
 
-<!-- DESTINATIONS -->
-
 <section class="section">
 
 <h2 class="section-title">Destinations populaires</h2>
@@ -506,19 +500,9 @@ Découvrir
 <div class="city-overlay"><h3>Nantes</h3></div>
 </div>
 
-<div class="city-card">
-<img src="https://i.ibb.co/pjHbv8YL/Screenshot-20260514-221638-Gmail-3.jpg">
-<div class="city-overlay"><h3>Amsterdam</h3></div>
-</div>
-
-<div class="city-card">
+<div class="city-card" onclick="showCity('paris')">
 <img src="https://i.ibb.co/BVhMM2sk/Screenshot-20260514-221622-Gmail-2.jpg">
 <div class="city-overlay"><h3>Paris</h3></div>
-</div>
-
-<div class="city-card">
-<img src="https://i.ibb.co/9m0bN0nK/Screenshot-20260514-230743-Gmail-2.jpg">
-<div class="city-overlay"><h3>Rome</h3></div>
 </div>
 
 </div>
@@ -529,7 +513,7 @@ Découvrir
 
 <section id="mobilite" class="section">
 
-<h2 class="section-title">Mobilité à Nantes</h2>
+<h2 class="section-title">Mobilité principale</h2>
 
 <div class="extra-grid">
 
@@ -538,7 +522,7 @@ Découvrir
 <h3>🚇 Naolib</h3>
 
 <p>
-Transports publics, vélos, tramways, bus et mobilité urbaine à Nantes.
+Transports publics et mobilité à Nantes.
 </p>
 
 <a href="https://naolib.fr/fr/velos/micromob-1" target="_blank">
@@ -549,13 +533,13 @@ Explorer
 
 <div class="extra-card">
 
-<h3>🚗 Marguerite</h3>
+<h3>🚇 RATP</h3>
 
 <p>
-Voitures en libre-service pour se déplacer facilement dans Nantes.
+Métro, RER et mobilité dans Paris.
 </p>
 
-<a href="https://www.imarguerite.com" target="_blank">
+<a href="https://www.ratp.fr" target="_blank">
 Explorer
 </a>
 
@@ -581,8 +565,6 @@ Explorer
 
 <div class="mobility-grid">
 
-<!-- TRANSPORT -->
-
 <div class="mobility-card">
 
 <h3>🚇 Transport public</h3>
@@ -590,7 +572,7 @@ Explorer
 <div class="price">≈ 1,80€ / 1h</div>
 
 <p>
-Explore Nantes avec les tramways, bus et Navibus Naolib.
+Explore Nantes avec Naolib.
 </p>
 
 <a href="https://www.naolib.fr" target="_blank" class="main-button">
@@ -601,32 +583,7 @@ Naolib
 Carte
 </a>
 
-<button class="dropdown-button" onclick="toggleDropdown('transport-dropdown')">
-▼ Voir plus
-</button>
-
-<div class="dropdown-content" id="transport-dropdown">
-
-<a href="https://www.naolib.fr" target="_blank" class="partner-link">
-<span>Naolib Tramway</span>
-<span>↗</span>
-</a>
-
-<a href="https://www.naolib.fr" target="_blank" class="partner-link">
-<span>Naolib Bus</span>
-<span>↗</span>
-</a>
-
-<a href="https://www.naolib.fr" target="_blank" class="partner-link">
-<span>Navibus</span>
-<span>↗</span>
-</a>
-
 </div>
-
-</div>
-
-<!-- VELO -->
 
 <div class="mobility-card">
 
@@ -635,77 +592,14 @@ Carte
 <div class="price">≈ 3 à 4€ / h</div>
 
 <p>
-Déplace-toi facilement dans Nantes avec les vélos et stations Naolib.
+Vélos et stations Naolib.
 </p>
 
 <a href="https://naolib.fr/fr/velos/micromob-1" target="_blank" class="main-button">
 Naolib
 </a>
 
-<a href="https://www.google.com/maps/search/velo+nantes/" target="_blank" class="map-button">
-Carte
-</a>
-
-<button class="dropdown-button" onclick="toggleDropdown('velo-dropdown')">
-▼ Voir plus
-</button>
-
-<div class="dropdown-content" id="velo-dropdown">
-
-<a href="https://paulette.bike" target="_blank" class="partner-link">
-<span>Paulette Bike</span>
-<span>↗</span>
-</a>
-
-<a href="https://www.detoursdeloire.com" target="_blank" class="partner-link">
-<span>Détours de Loire</span>
-<span>↗</span>
-</a>
-
 </div>
-
-</div>
-
-<!-- TROTTINETTES -->
-
-<div class="mobility-card">
-
-<h3>🛴 Trottinette électrique</h3>
-
-<div class="price">≈ 6€ / h</div>
-
-<p>
-Trottinettes électriques disponibles rapidement dans Nantes.
-</p>
-
-<a href="https://naolib.fr/fr/velos/micromob-1" target="_blank" class="main-button">
-Naolib
-</a>
-
-<a href="https://www.google.com/maps/search/trottinette+nantes/" target="_blank" class="map-button">
-Carte
-</a>
-
-<button class="dropdown-button" onclick="toggleDropdown('trott-dropdown')">
-▼ Voir plus
-</button>
-
-<div class="dropdown-content" id="trott-dropdown">
-
-<a href="https://naolib.fr/fr/velos/micromob-1"
-target="_blank"
-class="partner-link">
-
-<span>Naolib</span>
-<span>↗</span>
-
-</a>
-
-</div>
-
-</div>
-
-<!-- TAXI -->
 
 <div class="mobility-card">
 
@@ -714,128 +608,18 @@ class="partner-link">
 <div class="price">≈ 20€ / 15 km</div>
 
 <p>
-Réserve facilement un taxi ou VTC à Nantes.
+Réserve facilement un taxi à Nantes.
 </p>
 
 <a href="https://www.uber.com" target="_blank" class="main-button">
 Uber
 </a>
 
-<a href="https://www.google.com/maps/search/taxi+nantes/" target="_blank" class="map-button">
-Carte
-</a>
-
-<button class="dropdown-button" onclick="toggleDropdown('taxi-dropdown')">
-▼ Voir plus
-</button>
-
-<div class="dropdown-content" id="taxi-dropdown">
-
-<a href="https://www.taxis-nantes.com/?gad_source=1&gad_campaignid=11058026135&gclid=Cj0KCQjwiJvQBhCYARIsAMjts3Lp2p3uysc9o8sz2Q8Gf2MdbaBBdWBjuZWwv2r5EiZyYbKgmfUtUa8aAmucEALw_wcB"
-target="_blank"
-class="partner-link">
-
-<span>Taxi Nantes</span>
-<span>↗</span>
-
-</a>
-
 </div>
 
 </div>
 
-<!-- VOITURE -->
-
-<div class="mobility-card">
-
-<h3>🚗 Location voiture</h3>
-
-<div class="price">≈ 50€ / jour</div>
-
-<p>
-Découvre Nantes et ses alentours en voiture de location.
-</p>
-
-<a href="https://www.imarguerite.com" target="_blank" class="main-button">
-Marguerite
-</a>
-
-<a href="https://www.google.com/maps/search/location+voiture+nantes/" target="_blank" class="map-button">
-Carte
-</a>
-
-<button class="dropdown-button" onclick="toggleDropdown('car-dropdown')">
-▼ Voir plus
-</button>
-
-<div class="dropdown-content" id="car-dropdown">
-
-<a href="https://getaround.com" target="_blank" class="partner-link">
-<span>Getaround</span>
-<span>↗</span>
-</a>
-
-<a href="https://www.europcar.fr" target="_blank" class="partner-link">
-<span>Europcar</span>
-<span>↗</span>
-</a>
-
-<a href="https://www.sixt.fr" target="_blank" class="partner-link">
-<span>Sixt</span>
-<span>↗</span>
-</a>
-
-</div>
-
-</div>
-
-<!-- TRAIN -->
-
-<div class="mobility-card">
-
-<h3>🚆 Train</h3>
-
-<div class="price">≈ 60€ Nantes → Paris</div>
-
-<p>
-Voyage facilement entre Nantes, Paris et d'autres villes.
-</p>
-
-<a href="https://www.sncf-connect.com" target="_blank" class="main-button">
-SNCF
-</a>
-
-<a href="https://www.google.com/maps/search/gare+nantes/" target="_blank" class="map-button">
-Carte
-</a>
-
-<button class="dropdown-button" onclick="toggleDropdown('train-dropdown')">
-▼ Voir plus
-</button>
-
-<div class="dropdown-content" id="train-dropdown">
-
-<a href="https://www.thetrainline.com/fr" target="_blank" class="partner-link">
-<span>Trainline</span>
-<span>↗</span>
-</a>
-
-<a href="https://www.omio.fr" target="_blank" class="partner-link">
-<span>Omio</span>
-<span>↗</span>
-</a>
-
-</div>
-
-</div>
-
-</div>
-
-</section>
-
-<!-- RESTAURANTS -->
-
-<section id="restaurants" class="section">
+<section class="section">
 
 <h2 class="section-title">Restaurants à Nantes</h2>
 
@@ -846,7 +630,7 @@ Carte
 <h3>🍽️ Tables de Nantes</h3>
 
 <p>
-Découvre les meilleures adresses culinaires et restaurants à Nantes.
+Découvre les meilleures adresses culinaires.
 </p>
 
 <a href="https://www.lestablesdenantes.fr" target="_blank">
@@ -860,7 +644,7 @@ Explorer
 <h3>⭐ TripAdvisor</h3>
 
 <p>
-Compare les avis et trouve les restaurants les mieux notés à Nantes.
+Restaurants les mieux notés à Nantes.
 </p>
 
 <a href="https://www.tripadvisor.fr" target="_blank">
@@ -873,9 +657,7 @@ Explorer
 
 </section>
 
-<!-- DECOUVRIR -->
-
-<section id="decouvrir" class="section">
+<section class="section">
 
 <h2 class="section-title">Découvrir Nantes</h2>
 
@@ -886,7 +668,7 @@ Explorer
 <h3>🎭 Fnac Spectacles</h3>
 
 <p>
-Concerts, spectacles, humour, festivals et événements à Nantes.
+Concerts et événements à Nantes.
 </p>
 
 <a href="https://www.fnacspectacles.com/city/nantes" target="_blank">
@@ -897,24 +679,10 @@ Explorer
 
 <div class="extra-card">
 
-<h3>📅 Nantes Maville</h3>
-
-<p>
-Agenda des événements, sorties et activités à Nantes.
-</p>
-
-<a href="https://nantes.maville.com/sortir/agenda_accueil.php" target="_blank">
-Explorer
-</a>
-
-</div>
-
-<div class="extra-card">
-
 <h3>🧭 Le Voyage à Nantes</h3>
 
 <p>
-Office de tourisme officiel pour découvrir Nantes et ses expériences.
+Office de tourisme officiel de Nantes.
 </p>
 
 <a href="https://www.levoyageanantes.fr" target="_blank">
@@ -924,6 +692,142 @@ Explorer
 </div>
 
 </div>
+
+</section>
+
+</section>
+
+<!-- PARIS -->
+
+<section id="paris" class="section mobility-section">
+
+<div class="city-banner">
+
+<img src="https://i.ibb.co/BVhMM2sk/Screenshot-20260514-221622-Gmail-2.jpg">
+
+<div class="banner-overlay">
+<h2>Paris</h2>
+</div>
+
+</div>
+
+<div class="mobility-grid">
+
+<div class="mobility-card">
+
+<h3>🚇 Transport public</h3>
+
+<div class="price">≈ 2,50€ / ticket</div>
+
+<p>
+Explore Paris avec le métro et le RER.
+</p>
+
+<a href="https://www.ratp.fr" target="_blank" class="main-button">
+RATP
+</a>
+
+<a href="https://www.google.com/maps/search/metro+paris/" target="_blank" class="map-button">
+Carte
+</a>
+
+</div>
+
+<div class="mobility-card">
+
+<h3>🚲 Location vélo</h3>
+
+<div class="price">≈ 3 à 5€ / h</div>
+
+<p>
+Déplace-toi avec Vélib’.
+</p>
+
+<a href="https://www.velib-metropole.fr" target="_blank" class="main-button">
+Vélib'
+</a>
+
+</div>
+
+<div class="mobility-card">
+
+<h3>🚕 Taxi & VTC</h3>
+
+<div class="price">≈ 25€ / 15 km</div>
+
+<p>
+Réserve facilement un taxi ou VTC à Paris.
+</p>
+
+<a href="https://www.uber.com" target="_blank" class="main-button">
+Uber
+</a>
+
+</div>
+
+</div>
+
+<section class="section">
+
+<h2 class="section-title">Restaurants à Paris</h2>
+
+<div class="extra-grid">
+
+<div class="extra-card">
+
+<h3>⭐ TripAdvisor</h3>
+
+<p>
+Découvre les meilleurs restaurants à Paris.
+</p>
+
+<a href="https://www.tripadvisor.fr" target="_blank">
+Explorer
+</a>
+
+</div>
+
+</div>
+
+</section>
+
+<section class="section">
+
+<h2 class="section-title">Découvrir Paris</h2>
+
+<div class="extra-grid">
+
+<div class="extra-card">
+
+<h3>🎭 Fnac Spectacles</h3>
+
+<p>
+Concerts et événements à Paris.
+</p>
+
+<a href="https://www.fnacspectacles.com/paris" target="_blank">
+Explorer
+</a>
+
+</div>
+
+<div class="extra-card">
+
+<h3>🗼 Paris je t’aime</h3>
+
+<p>
+Office de tourisme officiel de Paris.
+</p>
+
+<a href="https://parisjetaime.com" target="_blank">
+Explorer
+</a>
+
+</div>
+
+</div>
+
+</section>
 
 </section>
 
@@ -961,17 +865,8 @@ if(input.includes('nantes')){
 showCity('nantes');
 }
 
-}
-
-function toggleDropdown(id){
-
-const dropdown = document.getElementById(id);
-
-if(dropdown.style.display === "block"){
-dropdown.style.display = "none";
-}
-else{
-dropdown.style.display = "block";
+if(input.includes('paris')){
+showCity('paris');
 }
 
 }
