@@ -1,0 +1,623 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+<title>Lyon — Vidolta</title>
+
+<meta name="description"
+content="Découvre Lyon avec Vidolta : mobilité, restaurants, activités et découvertes urbaines.">
+
+<meta name="theme-color" content="#0f172a">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+html{
+scroll-behavior:smooth;
+}
+
+body{
+font-family:'Poppins',sans-serif;
+background:#0f172a;
+color:white;
+overflow-x:hidden;
+}
+
+a{
+text-decoration:none;
+}
+
+img{
+display:block;
+}
+
+/* NAVBAR */
+
+.navbar{
+position:sticky;
+top:0;
+z-index:1000;
+width:100%;
+padding:18px 40px;
+display:flex;
+justify-content:space-between;
+align-items:center;
+background:rgba(15,23,42,0.88);
+backdrop-filter:blur(14px);
+border-bottom:1px solid rgba(255,255,255,0.05);
+}
+
+.logo{
+font-size:1.9rem;
+font-weight:700;
+}
+
+.nav-links{
+display:flex;
+gap:28px;
+align-items:center;
+}
+
+.nav-links a{
+color:#cbd5e1;
+font-weight:500;
+transition:0.3s;
+}
+
+.nav-links a:hover{
+color:#818cf8;
+}
+
+.back-link{
+font-size:0.9rem;
+color:#94a3b8 !important;
+}
+
+/* HERO */
+
+.hero{
+position:relative;
+height:78vh;
+display:flex;
+align-items:center;
+justify-content:center;
+text-align:center;
+overflow:hidden;
+}
+
+.hero img{
+position:absolute;
+inset:0;
+width:100%;
+height:100%;
+object-fit:cover;
+filter:brightness(0.45);
+}
+
+.hero-overlay{
+position:relative;
+z-index:2;
+padding:20px;
+}
+
+.hero h1{
+font-size:5rem;
+margin-bottom:18px;
+}
+
+.hero p{
+font-size:1.3rem;
+color:#e2e8f0;
+margin-bottom:14px;
+}
+
+.subtitle{
+font-size:0.8rem;
+letter-spacing:1px;
+opacity:0.55;
+color:#cbd5e1;
+}
+
+/* SECTION */
+
+.section{
+padding:90px 20px;
+max-width:1300px;
+margin:auto;
+}
+
+.section-title{
+text-align:center;
+font-size:2.6rem;
+margin-bottom:55px;
+}
+
+/* GRID */
+
+.grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+gap:26px;
+}
+
+/* CARD */
+
+.card{
+background:#1e293b;
+padding:30px;
+border-radius:28px;
+border:1px solid rgba(255,255,255,0.05);
+transition:0.35s;
+}
+
+.card:hover{
+transform:translateY(-6px);
+border-color:rgba(99,102,241,0.45);
+box-shadow:0 15px 35px rgba(0,0,0,0.25);
+}
+
+.card h3{
+font-size:1.35rem;
+margin-bottom:16px;
+}
+
+.card p{
+line-height:1.8;
+color:#cbd5e1;
+margin-bottom:22px;
+}
+
+.price{
+color:#818cf8;
+font-weight:600;
+margin-bottom:14px;
+}
+
+.card a{
+display:inline-block;
+padding:12px 18px;
+background:#6366f1;
+color:white;
+border-radius:12px;
+font-weight:600;
+transition:0.3s;
+}
+
+.card a:hover{
+background:#4f46e5;
+transform:translateY(-2px);
+}
+
+/* CTA */
+
+.cta{
+background:linear-gradient(135deg,#312e81,#4338ca);
+padding:60px 30px;
+border-radius:32px;
+text-align:center;
+}
+
+.cta h2{
+font-size:2.5rem;
+margin-bottom:18px;
+}
+
+.cta p{
+max-width:700px;
+margin:auto;
+line-height:1.8;
+color:#e2e8f0;
+margin-bottom:30px;
+}
+
+.cta a{
+display:inline-block;
+padding:16px 24px;
+background:white;
+color:#111827;
+font-weight:700;
+border-radius:16px;
+}
+
+/* FOOTER */
+
+footer{
+padding:70px 20px;
+text-align:center;
+color:#94a3b8;
+line-height:2;
+}
+
+/* ANIMATION */
+
+.fade-up{
+opacity:0;
+transform:translateY(30px);
+transition:0.8s ease;
+}
+
+.fade-up.visible{
+opacity:1;
+transform:translateY(0);
+}
+
+/* MOBILE */
+
+@media(max-width:900px){
+
+.navbar{
+padding:18px 20px;
+}
+
+.nav-links{
+display:none;
+}
+
+.hero{
+height:70vh;
+}
+
+.hero h1{
+font-size:3.2rem;
+}
+
+.hero p{
+font-size:1.1rem;
+}
+
+.section-title{
+font-size:2rem;
+}
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+
+<nav class="navbar">
+
+<a href="index.html" class="logo">
+🌍 Vidolta
+</a>
+
+<div class="nav-links">
+
+<a href="index.html">Accueil</a>
+<a href="#mobilite">Mobilité</a>
+<a href="#restaurants">Restaurants</a>
+<a href="#activites">Activités</a>
+
+<a href="index.html"
+class="back-link">
+
+← Retour
+
+</a>
+
+</div>
+
+</nav>
+
+<!-- HERO -->
+
+<section class="hero">
+
+<img
+loading="lazy"
+src="https://i.ibb.co/jvX3dNG0/Screenshot-20260516-000603-Chrome.png">
+
+<div class="hero-overlay">
+
+<h1>Lyon</h1>
+
+<p>
+Explore Lyon autrement avec Vidolta
+</p>
+
+<p class="subtitle">
+Mobilité • Restaurants • Activités • Découvertes urbaines
+</p>
+
+</div>
+
+</section>
+
+<!-- MOBILITE -->
+
+<section class="section" id="mobilite">
+
+<h2 class="section-title fade-up">
+🚇 Mobilité à Lyon
+</h2>
+
+<div class="grid">
+
+<div class="card fade-up">
+
+<h3>🚇 TCL Lyon</h3>
+
+<div class="price">
+≈ 2€ / ticket
+</div>
+
+<p>
+Métro, tramway, bus et funiculaires dans toute la métropole lyonnaise.
+</p>
+
+<a href="https://www.tcl.fr" target="_blank">
+TCL
+</a>
+
+</div>
+
+<div class="card fade-up">
+
+<h3>🚲 Vélo'v</h3>
+
+<div class="price">
+≈ 3 à 5€ / h
+</div>
+
+<p>
+Explore Lyon avec les vélos urbains et mobilités douces.
+</p>
+
+<a href="https://www.tcl.fr/se-deplacer/les-velos-sur-le-reseau-tcl/velov" target="_blank">
+Explorer
+</a>
+
+</div>
+
+<div class="card fade-up">
+
+<h3>🚕 Taxi & VTC</h3>
+
+<div class="price">
+≈ 22€ / 15 km
+</div>
+
+<p>
+Réserve rapidement un taxi ou VTC dans Lyon.
+</p>
+
+<a href="https://www.uber.com" target="_blank">
+Uber
+</a>
+
+</div>
+
+<div class="card fade-up">
+
+<h3>🚗 Location voiture</h3>
+
+<div class="price">
+≈ 55€ / jour
+</div>
+
+<p>
+Autopartage et location voiture dans toute la ville.
+</p>
+
+<a href="https://www.citiz.coop" target="_blank">
+Citiz
+</a>
+
+</div>
+
+<div class="card fade-up">
+
+<h3>🚆 Train SNCF</h3>
+
+<div class="price">
+≈ 45€ Lyon → Paris
+</div>
+
+<p>
+Voyage facilement partout en France.
+</p>
+
+<a href="https://www.sncf-connect.com" target="_blank">
+SNCF
+</a>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- RESTAURANTS -->
+
+<section class="section" id="restaurants">
+
+<h2 class="section-title fade-up">
+🍽️ Restaurants à Lyon
+</h2>
+
+<div class="grid">
+
+<div class="card fade-up">
+
+<h3>⭐ TripAdvisor</h3>
+
+<p>
+Découvre les restaurants les mieux notés de Lyon.
+</p>
+
+<a href="https://www.tripadvisor.fr" target="_blank">
+Explorer
+</a>
+
+</div>
+
+<div class="card fade-up">
+
+<h3>🍴 TheFork</h3>
+
+<p>
+Réserve rapidement les meilleures tables lyonnaises.
+</p>
+
+<a href="https://www.thefork.fr" target="_blank">
+Explorer
+</a>
+
+</div>
+
+<div class="card fade-up">
+
+<h3>🍷 Bouchons lyonnais</h3>
+
+<p>
+Explore les meilleures adresses gastronomiques de Lyon.
+</p>
+
+<a href="https://maps.google.com" target="_blank">
+Explorer
+</a>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ACTIVITES -->
+
+<section class="section" id="activites">
+
+<h2 class="section-title fade-up">
+🎭 Découvrir Lyon
+</h2>
+
+<div class="grid">
+
+<div class="card fade-up">
+
+<h3>🎟️ Fnac Spectacles</h3>
+
+<p>
+Concerts, événements et spectacles à Lyon.
+</p>
+
+<a href="https://www.fnacspectacles.com" target="_blank">
+Explorer
+</a>
+
+</div>
+
+<div class="card fade-up">
+
+<h3>🧭 Office du tourisme</h3>
+
+<p>
+Explore les lieux emblématiques et quartiers incontournables.
+</p>
+
+<a href="https://www.visiterlyon.com" target="_blank">
+Explorer
+</a>
+
+</div>
+
+<div class="card fade-up">
+
+<h3>🏛️ Détours en France</h3>
+
+<p>
+Explore le patrimoine et les régions françaises.
+</p>
+
+<a href="https://www.detoursenfrance.fr/patrimoine/destinations/regions" target="_blank">
+Explorer
+</a>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- CTA -->
+
+<section class="section">
+
+<div class="cta fade-up">
+
+<h2>
+Découvre Lyon autrement
+</h2>
+
+<p>
+Vidolta rassemble mobilité, restaurants et découvertes urbaines sur une seule plateforme moderne et rapide.
+</p>
+
+<a href="index.html">
+Retour à l’accueil
+</a>
+
+</div>
+
+</section>
+
+<!-- FOOTER -->
+
+<footer>
+
+<p>
+contact@vidolta.com
+</p>
+
+<p>
+© 2026 Vidolta — Lyon
+</p>
+
+</footer>
+
+<script>
+
+/* ANIMATION */
+
+const observer = new IntersectionObserver(entries => {
+
+entries.forEach(entry => {
+
+if(entry.isIntersecting){
+entry.target.classList.add('visible');
+}
+
+});
+
+},{
+threshold:0.15
+});
+
+document.querySelectorAll('.fade-up')
+.forEach(el => {
+observer.observe(el);
+});
+
+</script>
+
+</body>
+
+</html> 
