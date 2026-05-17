@@ -818,28 +818,39 @@ contact@vidolta.com
 
 /* SEARCH */
 
+function normalizeText(text){
+return text
+.toLowerCase()
+.normalize("NFD")
+.replace(/[\u0300-\u036f]/g, "");
+}
+
 function searchCity(){
 
-const input =
-document
-.getElementById('cityInput')
-.value
-.toLowerCase()
-.trim();
+const input = normalizeText(
+document.getElementById('cityInput').value.trim()
+);
 
-const availableCities = ['paris','lyon','nantes','marseille','bordeaux','amsterdam','barcelone','rome','athenes']; 
+const availableCities = [
+'paris',
+'lyon',
+'nantes',
+'marseille',
+'bordeaux',
+'amsterdam',
+'barcelone',
+'rome',
+'majorque',
+'athenes'
+];
 
 if(availableCities.includes(input)){
-
 window.location.href = input + '.html';
-
 }else{
-
 showToast();
-
 }
 
-}
+} 
 
 /* ENTER KEY */
 
