@@ -1,22 +1,20 @@
 <!DOCTYPE html>
 <html lang="fr">
-
 <head>
+
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 
 <title>Majorque — Vidolta</title>
 
-<meta name="description"
-content="Découvre Majorque avec Vidolta : plages, mobilité, restaurants, activités, villages méditerranéens et découvertes urbaines.">
+<meta name="description" content="Découvre Majorque avec Vidolta : plages, mobilité, restaurants, activités, villages méditerranéens et découvertes urbaines.">
 
 <meta name="theme-color" content="#0f172a">
 
-<link rel="preconnect" href="https://fonts.googleapis.com/">
-<link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
-rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
 <style>
 
@@ -46,6 +44,7 @@ display:block;
 }
 
 /* NAVBAR */
+
 .navbar{
 position:sticky;
 top:0;
@@ -71,6 +70,7 @@ font-size:2rem;
 cursor:pointer;
 color:white;
 }
+
 .nav-links{
 display:flex;
 gap:28px;
@@ -78,6 +78,7 @@ align-items:center;
 }
 
 /* HERO */
+
 .hero{
 position:relative;
 height:78vh;
@@ -101,11 +102,7 @@ filter:brightness(0.45);
 content:'';
 position:absolute;
 inset:0;
-background:linear-gradient(
-to bottom,
-rgba(15,23,42,0.15),
-rgba(15,23,42,0.72)
-);
+background:linear-gradient(to bottom,rgba(15,23,42,0.15),rgba(15,23,42,0.72));
 z-index:1;
 }
 
@@ -113,7 +110,7 @@ z-index:1;
 position:relative;
 z-index:2;
 padding:20px;
-} 
+}
 
 .hero h1{
 font-size:5rem;
@@ -264,8 +261,40 @@ transform:translateY(0);
 padding:14px 18px;
 }
 
+.mobile-btn{
+display:block;
+}
+
 .nav-links{
 display:none;
+position:absolute;
+top:78px;
+left:20px;
+right:20px;
+background:rgba(15,23,42,0.96);
+backdrop-filter:blur(18px);
+border:1px solid rgba(255,255,255,0.05);
+flex-direction:column;
+padding:24px;
+border-radius:24px;
+gap:18px;
+box-shadow:0 15px 35px rgba(0,0,0,0.35);
+}
+
+.nav-links.active{
+display:flex;
+}
+
+.nav-links a{
+color:#e2e8f0;
+font-weight:500;
+font-size:1.1rem;
+transition:0.3s;
+}
+
+.nav-links a:hover{
+color:#818cf8;
+transform:translateX(2px);
 }
 
 .hero{
@@ -287,7 +316,6 @@ font-size:2rem;
 }
 
 </style>
-
 </head>
 
 <body>
@@ -298,14 +326,14 @@ font-size:2rem;
 
 <a href="index.html" class="logo">🌍 Vidolta</a>
 
-<div class="nav-links">
+<div class="mobile-btn" onclick="toggleMenu()">☰</div>
 
+<div class="nav-links">
 <a href="index.html">Accueil</a>
 <a href="#mobilite">Mobilité</a>
 <a href="#restaurants">Restaurants</a>
 <a href="#activites">Activités</a>
 <a href="index.html" class="back-link">← Retour</a>
-
 </div>
 
 </nav>
@@ -314,19 +342,12 @@ font-size:2rem;
 
 <section class="hero">
 
-<img loading="lazy"
-src="https://i.ibb.co/9H9d4pP1/Screenshot-20260517-130713-Chrome.png"> 
+<img loading="lazy" src="https://i.ibb.co/9H9d4pP1/Screenshot-20260517-130713-Chrome.png">
 
 <div class="hero-overlay">
-
 <h1>Majorque</h1>
-
 <p>Explore Majorque entre plages secrètes, villages méditerranéens et expériences inoubliables.</p>
-
-<p class="subtitle">
-Plages • Sunset • Villages méditerranéens • Dolce vita
-</p>
-
+<p class="subtitle">Plages • Sunset • Villages méditerranéens • Dolce vita</p>
 </div>
 
 </section>
@@ -340,91 +361,48 @@ Plages • Sunset • Villages méditerranéens • Dolce vita
 <div class="grid">
 
 <div class="card fade-up">
-
 <h3>🚍 EMT Palma</h3>
-
 <div class="price">≈ 2€ / ticket</div>
-
-<p>
-Bus et transports publics pour explorer Palma et les alentours.
-</p>
-
+<p>Bus et transports publics pour explorer Palma et les alentours.</p>
 <a href="https://www.emtpalma.cat/" target="_blank">Explorer</a>
-
 </div>
 
 <div class="card fade-up">
-
 <h3>🚲 Bike Rental Palma</h3>
-
 <div class="price">≈ 16€ / jour</div>
-
-<p>
-Location de vélos pour découvrir Palma, les plages et le bord de mer.
-</p>
-
+<p>Location de vélos pour découvrir Palma, les plages et le bord de mer.</p>
 <a href="https://www.callandride.com/" target="_blank">Explorer</a>
-
 </div>
 
 <div class="card fade-up">
-
 <h3>🛵 Cooltra</h3>
-
 <div class="price">≈ 28€ / jour</div>
-
-<p>
-Scooters et mobilité urbaine pour circuler facilement sur l’île.
-</p>
-
+<p>Scooters et mobilité urbaine pour circuler facilement sur l’île.</p>
 <a href="https://www.cooltra.com/" target="_blank">Explorer</a>
-
 </div>
 
 <div class="card fade-up">
-
 <h3>🚕 Taxi & VTC</h3>
-
 <div class="price">≈ 25€ / 15 km</div>
-
-<p>
-Réserve rapidement un taxi ou VTC à Palma et dans les zones touristiques.
-</p>
-
+<p>Réserve rapidement un taxi ou VTC à Palma et dans les zones touristiques.</p>
 <a href="https://www.uber.com/" target="_blank">Uber</a>
-
 </div>
 
 <div class="card fade-up">
-
 <h3>🚗 Location voiture</h3>
-
 <div class="price">≈ 55€ / jour</div>
-
-<p>
-Explore les criques, villages et routes panoramiques de Majorque.
-</p>
-
+<p>Explore les criques, villages et routes panoramiques de Majorque.</p>
 <a href="https://www.sixt.com/" target="_blank">SIXT</a>
-
 </div>
 
 <div class="card fade-up">
-
 <h3>⛵ Excursions bateau</h3>
-
 <div class="price">≈ 45€ / excursion</div>
-
-<p>
-Croisières, catamarans et couchers de soleil autour de l’île.
-</p>
-
+<p>Croisières, catamarans et couchers de soleil autour de l’île.</p>
 <a href="https://www.getyourguide.fr/" target="_blank">Explorer</a>
-
 </div>
 
 </div>
-
 </section>
 
 <!-- RESTAURANTS -->
@@ -436,55 +414,30 @@ Croisières, catamarans et couchers de soleil autour de l’île.
 <div class="grid">
 
 <div class="card fade-up">
-
 <h3>⭐ TripAdvisor</h3>
-
-<p>
-Découvre les restaurants les mieux notés de Majorque.
-</p>
-
+<p>Découvre les restaurants les mieux notés de Majorque.</p>
 <a href="https://www.tripadvisor.fr/" target="_blank">Explorer</a>
-
 </div>
 
 <div class="card fade-up">
-
 <h3>🍴 TheFork</h3>
-
-<p>
-Réserve rapidement les meilleures tables de Palma et des Baléares.
-</p>
-
+<p>Réserve rapidement les meilleures tables de Palma et des Baléares.</p>
 <a href="https://www.thefork.es/" target="_blank">Explorer</a>
-
 </div>
 
 <div class="card fade-up">
-
 <h3>🍷 El Camino</h3>
-
-<p>
-Un des restaurants tapas les plus emblématiques de Palma.
-</p>
-
+<p>Un des restaurants tapas les plus emblématiques de Palma.</p>
 <a href="https://elcaminomallorca.com/" target="_blank">Explorer</a>
-
 </div>
 
 <div class="card fade-up">
-
 <h3>🌅 Beach clubs & rooftops</h3>
-
-<p>
-Découvre les plus beaux rooftops, sunsets et restaurants face à la mer.
-</p>
-
+<p>Découvre les plus beaux rooftops, sunsets et restaurants face à la mer.</p>
 <a href="https://maps.google.com/" target="_blank">Explorer</a>
-
 </div>
 
 </div>
-
 </section>
 
 <!-- ACTIVITES -->
@@ -496,55 +449,30 @@ Découvre les plus beaux rooftops, sunsets et restaurants face à la mer.
 <div class="grid">
 
 <div class="card fade-up">
-
 <h3>🧭 GetYourGuide</h3>
-
-<p>
-Réserve des excursions bateau, grottes, couchers de soleil et expériences incontournables à Majorque.
-</p>
-
+<p>Réserve des excursions bateau, grottes, couchers de soleil et expériences incontournables à Majorque.</p>
 <a href="TON-LIEN-AFFILIE" target="_blank">Explorer</a>
-
 </div>
 
 <div class="card fade-up">
-
 <h3>🏝️ Cala d'Or & plages</h3>
-
-<p>
-Explore les plus belles plages et criques paradisiaques de Majorque.
-</p>
-
+<p>Explore les plus belles plages et criques paradisiaques de Majorque.</p>
 <a href="https://www.mallorca.com/" target="_blank">Explorer</a>
-
 </div>
 
 <div class="card fade-up">
-
 <h3>⛰️ Serra de Tramuntana</h3>
-
-<p>
-Découvre les villages méditerranéens et routes panoramiques incontournables.
-</p>
-
+<p>Découvre les villages méditerranéens et routes panoramiques incontournables.</p>
 <a href="https://www.infomallorca.net/" target="_blank">Explorer</a>
-
 </div>
 
 <div class="card fade-up">
-
 <h3>🎟️ Tiqets</h3>
-
-<p>
-Réserve facilement aquariums, excursions et activités à Majorque.
-</p>
-
+<p>Réserve facilement aquariums, excursions et activités à Majorque.</p>
 <a href="https://www.tiqets.com/" target="_blank">Explorer</a>
-
 </div>
 
 </div>
-
 </section>
 
 <!-- CTA -->
@@ -552,15 +480,9 @@ Réserve facilement aquariums, excursions et activités à Majorque.
 <section class="section">
 
 <div class="cta fade-up">
-
 <h2>Découvre Majorque autrement</h2>
-
-<p>
-Vidolta rassemble plages, mobilité, restaurants et découvertes méditerranéennes sur une seule plateforme moderne et rapide.
-</p>
-
+<p>Vidolta rassemble plages, mobilité, restaurants et découvertes méditerranéennes sur une seule plateforme moderne et rapide.</p>
 <a href="index.html">Retour à l’accueil</a>
-
 </div>
 
 </section>
@@ -568,39 +490,32 @@ Vidolta rassemble plages, mobilité, restaurants et découvertes méditerranéen
 <!-- FOOTER -->
 
 <footer>
-
 <p>contact@vidolta.com</p>
-
 <p>© 2026 Vidolta — Majorque</p>
-
 </footer>
 
 <script>
 
+function toggleMenu(){
+const nav = document.querySelector('.nav-links');
+nav.classList.toggle('active');
+}
+
 /* ANIMATION */
 
 const observer = new IntersectionObserver(entries => {
-
 entries.forEach(entry => {
-
 if(entry.isIntersecting){
-
 entry.target.classList.add('visible');
-
 }
-
 });
-
 },{threshold:0.15});
 
 document.querySelectorAll('.fade-up').forEach(el => {
-
 observer.observe(el);
-
 });
 
 </script>
 
 </body>
-
 </html> 
