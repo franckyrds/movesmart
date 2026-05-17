@@ -76,7 +76,7 @@ display:flex;
 gap:28px;
 align-items:center;
 }
-  
+
 /* HERO */
 .hero{
 position:relative;
@@ -313,12 +313,11 @@ font-size:2rem;
 <!-- NAVBAR -->
 
 <nav class="navbar">
+<a href="index.html" class="logo">🌍 Vidolta</a>
 
-<a href="index.html" class="logo">
-🌍 Vidolta
-</a>
+<div class="mobile-btn" onclick="toggleMenu()">☰</div>
 
-<div class="nav-links">
+<div class="nav-links"> 
 
 <a href="index.html">Accueil</a>
 <a href="#mobilite">Mobilité</a>
@@ -667,6 +666,11 @@ contact@vidolta.com
 </footer>
 
 <script>
+
+function toggleMenu(){
+const nav = document.querySelector('.nav-links');
+nav.classList.toggle('active');
+} 
 
 /* ANIMATION */
 
