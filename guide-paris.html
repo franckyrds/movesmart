@@ -1,0 +1,621 @@
+# guide-paris.html
+
+```html
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Guide de Paris — Vidolta</title>
+<meta name="description" content="Guide complet de Paris avec Vidolta : histoire, monuments, mobilité, restaurants, quartiers incontournables et conseils pour découvrir la capitale autrement.">
+<meta name="theme-color" content="#0f172a">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+html{
+scroll-behavior:smooth;
+}
+
+body{
+font-family:'Poppins',sans-serif;
+background:#0f172a;
+color:white;
+overflow-x:hidden;
+}
+
+a{
+text-decoration:none;
+}
+
+img{
+display:block;
+max-width:100%;
+}
+
+/* NAVBAR */
+
+.navbar{
+position:sticky;
+top:0;
+z-index:1000;
+width:100%;
+padding:16px 24px;
+display:flex;
+justify-content:space-between;
+align-items:center;
+background:rgba(15,23,42,0.88);
+backdrop-filter:blur(14px);
+border-bottom:1px solid rgba(255,255,255,0.05);
+}
+
+.logo{
+font-size:1.7rem;
+font-weight:700;
+color:#818cf8;
+}
+
+.nav-links{
+display:flex;
+gap:24px;
+align-items:center;
+}
+
+.nav-links a{
+color:#cbd5e1;
+transition:0.3s;
+}
+
+.nav-links a:hover{
+color:#818cf8;
+}
+
+/* HERO */
+
+.hero{
+position:relative;
+height:90vh;
+display:flex;
+align-items:center;
+justify-content:center;
+text-align:center;
+overflow:hidden;
+}
+
+.hero img{
+position:absolute;
+inset:0;
+width:100%;
+height:100%;
+object-fit:cover;
+filter:brightness(0.45);
+}
+
+.hero::after{
+content:'';
+position:absolute;
+inset:0;
+background:linear-gradient(to bottom,rgba(15,23,42,0.2),rgba(15,23,42,0.85));
+}
+
+.hero-content{
+position:relative;
+z-index:2;
+padding:20px;
+max-width:900px;
+}
+
+.hero h1{
+font-size:5rem;
+margin-bottom:18px;
+}
+
+.hero p{
+font-size:1.3rem;
+line-height:1.8;
+color:#e2e8f0;
+}
+
+/* SECTIONS */
+
+.section{
+padding:90px 20px;
+max-width:1200px;
+margin:auto;
+}
+
+.section-title{
+font-size:2.7rem;
+margin-bottom:50px;
+text-align:center;
+}
+
+.story{
+background:#1e293b;
+padding:40px;
+border-radius:32px;
+line-height:2;
+color:#cbd5e1;
+font-size:1.05rem;
+border:1px solid rgba(255,255,255,0.05);
+}
+
+.story p{
+margin-bottom:28px;
+}
+
+/* MONUMENTS */
+
+.monument-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+gap:30px;
+}
+
+.monument-card{
+background:#1e293b;
+border-radius:30px;
+overflow:hidden;
+border:1px solid rgba(255,255,255,0.05);
+transition:0.35s;
+}
+
+.monument-card:hover{
+transform:translateY(-6px);
+box-shadow:0 15px 35px rgba(0,0,0,0.35);
+}
+
+.monument-card img{
+width:100%;
+height:260px;
+object-fit:cover;
+}
+
+.monument-content{
+padding:28px;
+}
+
+.monument-content h3{
+font-size:1.5rem;
+margin-bottom:16px;
+}
+
+.monument-content p{
+line-height:1.8;
+color:#cbd5e1;
+margin-bottom:20px;
+}
+
+.monument-content a{
+display:inline-block;
+padding:12px 18px;
+background:#6366f1;
+color:white;
+border-radius:14px;
+font-weight:600;
+}
+
+/* MOBILITE */
+
+.transport-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+gap:24px;
+}
+
+.transport-card{
+background:#1e293b;
+padding:30px;
+border-radius:26px;
+border:1px solid rgba(255,255,255,0.05);
+}
+
+.transport-card h3{
+margin-bottom:14px;
+font-size:1.3rem;
+}
+
+.transport-card p{
+line-height:1.8;
+color:#cbd5e1;
+margin-bottom:18px;
+}
+
+.transport-card a{
+display:inline-block;
+padding:12px 18px;
+background:#6366f1;
+color:white;
+border-radius:14px;
+font-weight:600;
+}
+
+/* FAQ */
+
+.faq{
+background:#1e293b;
+padding:35px;
+border-radius:30px;
+border:1px solid rgba(255,255,255,0.05);
+}
+
+.faq-item{
+margin-bottom:28px;
+}
+
+.faq-item h3{
+margin-bottom:12px;
+color:#ffffff;
+}
+
+.faq-item p{
+line-height:1.8;
+color:#cbd5e1;
+}
+
+/* CTA */
+
+.cta{
+background:linear-gradient(135deg,#312e81,#4338ca);
+padding:60px 30px;
+border-radius:32px;
+text-align:center;
+}
+
+.cta h2{
+font-size:2.5rem;
+margin-bottom:20px;
+}
+
+.cta p{
+max-width:700px;
+margin:auto;
+line-height:1.8;
+margin-bottom:30px;
+color:#e2e8f0;
+}
+
+.cta a{
+display:inline-block;
+padding:16px 24px;
+background:white;
+color:#111827;
+font-weight:700;
+border-radius:18px;
+}
+
+/* FOOTER */
+
+footer{
+padding:70px 20px;
+text-align:center;
+color:#94a3b8;
+line-height:2;
+}
+
+footer a{
+color:#cbd5e1;
+}
+
+/* BACK TO TOP */
+
+.back-to-top{
+position:fixed;
+bottom:25px;
+right:25px;
+width:52px;
+height:52px;
+border:none;
+border-radius:50%;
+background:#6366f1;
+color:white;
+font-size:1.4rem;
+cursor:pointer;
+display:flex;
+align-items:center;
+justify-content:center;
+opacity:0;
+pointer-events:none;
+transition:0.3s;
+box-shadow:0 10px 25px rgba(0,0,0,0.35);
+}
+
+.back-to-top.show{
+opacity:1;
+pointer-events:auto;
+}
+
+/* MOBILE */
+
+@media(max-width:900px){
+
+.hero{
+height:75vh;
+}
+
+.hero h1{
+font-size:3rem;
+}
+
+.hero p{
+font-size:1.05rem;
+}
+
+.section-title{
+font-size:2rem;
+}
+
+.nav-links{
+display:none;
+}
+
+.story{
+padding:28px;
+}
+
+}
+</style>
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+
+<nav class="navbar">
+<div class="logo">🌍 Vidolta</div>
+<div class="nav-links">
+<a href="index.html">Accueil</a>
+<a href="#histoire">Histoire</a>
+<a href="#monuments">Monuments</a>
+<a href="#mobilite">Mobilité</a>
+</div>
+</nav>
+
+<!-- HERO -->
+
+<section class="hero">
+<img src="https://images.unsplash.com/photo-1431274172761-fca41d930114?q=80&w=1600&auto=format&fit=crop" alt="Paris">
+
+<div class="hero-content">
+<h1>Guide de Paris</h1>
+<p>
+Explore Paris autrement avec Vidolta : monuments emblématiques, mobilité intelligente, quartiers historiques, gastronomie et découvertes urbaines.
+</p>
+</div>
+</section>
+
+<!-- HISTOIRE -->
+
+<section class="section" id="histoire">
+<h2 class="section-title">📖 L’histoire de Paris</h2>
+
+<div class="story">
+
+<p>
+Au fil des siècles, Paris s’est construite comme une ville de passage, de rencontres et de découvertes, où chaque rue semble raconter une histoire différente. Bien avant les grands boulevards et les monuments emblématiques, la ville n’était qu’un petit village installé sur une île au milieu de la Seine, un lieu stratégique choisi pour le commerce et les échanges. Les premiers habitants y vivaient déjà au rythme du fleuve, utilisant ses eaux pour voyager, transporter des marchandises et relier les différents quartiers qui formeraient plus tard la capitale française.
+</p>
+
+<p>
+Au Moyen Âge, Paris grandit rapidement autour de ses marchés, de ses ponts et de ses universités. Les voyageurs arrivaient à cheval, en charrette ou par bateau, découvrant une ville animée où se mélangeaient artisans, étudiants, marchands et artistes. Les rues étaient étroites, vivantes et parfois bruyantes, mais elles donnaient déjà à Paris ce caractère unique que l’on retrouve encore aujourd’hui. Les grandes cathédrales s’élevaient lentement vers le ciel tandis que les places publiques devenaient des lieux de rassemblement incontournables.
+</p>
+
+<p>
+Avec le temps, Paris s’imposa comme l’un des plus grands centres culturels d’Europe. Les rois transformèrent progressivement la ville en une capitale prestigieuse, faisant construire palais, jardins et monuments majestueux. Les quais de Seine se développèrent, les ponts se multiplièrent et les premiers grands axes facilitèrent la circulation entre les différents quartiers. Chaque époque laissa son empreinte, créant ce mélange architectural fascinant qui permet aujourd’hui de passer d’une rue médiévale à une avenue haussmannienne en quelques minutes seulement.
+</p>
+
+<p>
+Au XIXe siècle, la ville connut une transformation spectaculaire sous l’impulsion du baron Haussmann. De larges avenues furent percées pour fluidifier les déplacements et moderniser la capitale. Les grands boulevards, les cafés, les passages couverts et les parcs publics donnèrent naissance au Paris que le monde entier imagine encore aujourd’hui. Les habitants commencèrent à se déplacer plus facilement grâce aux omnibus puis au métro, inauguré à l’occasion de l’Exposition universelle de 1900. Ce réseau souterrain révolutionna la mobilité parisienne et permit à des millions de voyageurs de traverser rapidement la ville.
+</p>
+
+<p>
+Aujourd’hui, Paris continue d’évoluer tout en conservant son âme historique. Les visiteurs peuvent parcourir la ville à pied, à vélo, en métro, en bateau ou en trottinette électrique, découvrant à chaque trajet une nouvelle facette de la capitale. Certains préfèrent longer les quais de Seine au coucher du soleil, tandis que d’autres choisissent les petites rues de Montmartre, les jardins du Luxembourg ou les grandes avenues illuminées autour des Champs-Élysées.
+</p>
+
+<p>
+Ce qui rend Paris si particulière, c’est cette capacité à mêler patrimoine historique et modernité. Une simple promenade peut conduire d’un marché traditionnel à un musée contemporain, d’une boulangerie centenaire à une terrasse branchée, ou d’un monument mondialement connu à une petite ruelle paisible cachée derrière un boulevard animé. Chaque déplacement devient alors une véritable découverte.
+</p>
+
+<p>
+Paris n’est pas seulement une ville à visiter ; c’est une ville à vivre lentement, en prenant le temps d’observer son architecture, ses cafés, ses ponts et l’énergie de ses quartiers. Derrière chaque station de métro, chaque façade et chaque place se cache un morceau de son histoire. C’est cette richesse qui transforme chaque trajet en expérience et qui donne envie d’explorer encore davantage la capitale française.
+</p>
+
+<p>
+Que l’on découvre Paris pour la première fois ou que l’on y revienne régulièrement, la ville offre toujours quelque chose de nouveau à admirer. Entre histoire, culture, gastronomie et mobilité moderne, elle reste l’une des destinations les plus fascinantes au monde, une ville où chaque itinéraire peut devenir un souvenir inoubliable.
+</p>
+
+</div>
+</section>
+
+<!-- MONUMENTS -->
+
+<section class="section" id="monuments">
+<h2 class="section-title">🏛️ Les incontournables de Paris</h2>
+
+<div class="monument-grid">
+
+<div class="monument-card">
+<img src="https://i.ibb.co/jv7B450y/tour-eiffel.jpg" alt="Tour Eiffel">
+<div class="monument-content">
+<h3>🗼 Tour Eiffel</h3>
+<p>
+Symbole mondial de Paris, la Tour Eiffel domine la capitale depuis 1889 et offre l’une des plus belles vues sur la ville.
+</p>
+<a href="https://www.tiqets.com/">Réserver</a>
+</div>
+</div>
+
+<div class="monument-card">
+<img src="https://i.ibb.co/Hp3mzj9L/montmartre.jpg" alt="Montmartre">
+<div class="monument-content">
+<h3>🎨 Montmartre & Sacré-Cœur</h3>
+<p>
+Quartier emblématique de Paris, Montmartre séduit par ses ruelles, ses artistes et sa vue exceptionnelle sur la capitale.
+</p>
+<a href="https://www.getyourguide.fr/">Explorer</a>
+</div>
+</div>
+
+<div class="monument-card">
+<img src="https://i.ibb.co/B2mNcHBg/pantheon.jpg" alt="Panthéon">
+<div class="monument-content">
+<h3>🏛️ Panthéon</h3>
+<p>
+Le Panthéon rend hommage aux grandes figures françaises et domine le quartier historique du Quartier Latin.
+</p>
+<a href="https://www.tiqets.com/">Visiter</a>
+</div>
+</div>
+
+<div class="monument-card">
+<img src="https://i.ibb.co/VckgHFRb/metro-paris.jpg" alt="Métro parisien">
+<div class="monument-content">
+<h3>🚇 Métro parisien</h3>
+<p>
+Le métro parisien fait partie intégrante de l’identité de la ville et permet de rejoindre rapidement tous les quartiers.
+</p>
+<a href="https://www.ratp.fr/">RATP</a>
+</div>
+</div>
+
+</div>
+</section>
+
+<!-- MOBILITE -->
+
+<section class="section" id="mobilite">
+<h2 class="section-title">🚇 Se déplacer facilement à Paris</h2>
+
+<div class="transport-grid">
+
+<div class="transport-card">
+<h3>🚇 Métro & RER</h3>
+<p>
+Le moyen le plus rapide pour explorer Paris reste le métro. Avec plus de 300 stations, il permet de rejoindre facilement les principaux monuments.
+</p>
+<a href="https://www.ratp.fr/">Explorer</a>
+</div>
+
+<div class="transport-card">
+<h3>🚲 Vélib’</h3>
+<p>
+Les vélos Vélib’ permettent de découvrir Paris autrement, notamment le long des quais de Seine et des grands boulevards.
+</p>
+<a href="https://www.velib-metropole.fr/">Explorer</a>
+</div>
+
+<div class="transport-card">
+<h3>🚕 Taxi & VTC</h3>
+<p>
+Uber et les taxis restent très pratiques pour les déplacements nocturnes ou les trajets vers les aéroports.
+</p>
+<a href="https://www.uber.com/">Uber</a>
+</div>
+
+<div class="transport-card">
+<h3>⛴️ Seine & croisières</h3>
+<p>
+Les bateaux-mouches permettent d’admirer Paris depuis la Seine avec une vue unique sur les monuments.
+</p>
+<a href="https://www.getyourguide.fr/">Réserver</a>
+</div>
+
+</div>
+</section>
+
+<!-- FAQ -->
+
+<section class="section">
+<h2 class="section-title">❓ FAQ Paris</h2>
+
+<div class="faq">
+
+<div class="faq-item">
+<h3>Combien de jours faut-il pour visiter Paris ?</h3>
+<p>
+Trois à cinq jours permettent de découvrir les principaux monuments, quartiers et musées de la capitale.
+</p>
+</div>
+
+<div class="faq-item">
+<h3>Quel est le meilleur moyen de se déplacer à Paris ?</h3>
+<p>
+Le métro reste le moyen le plus rapide et économique pour visiter Paris. Vélib’ est également idéal pour découvrir les quais et les quartiers historiques.
+</p>
+</div>
+
+<div class="faq-item">
+<h3>Quel quartier choisir à Paris ?</h3>
+<p>
+Le Marais, Saint-Germain-des-Prés, Montmartre et le Quartier Latin figurent parmi les quartiers les plus appréciés des visiteurs.
+</p>
+</div>
+
+<div class="faq-item">
+<h3>Quel budget prévoir pour Paris ?</h3>
+<p>
+Paris peut s’adapter à différents budgets, mais il est conseillé de prévoir un budget transport, restauration et activités selon la durée du séjour.
+</p>
+</div>
+
+</div>
+</section>
+
+<!-- CTA -->
+
+<section class="section">
+<div class="cta">
+<h2>Découvre Paris autrement avec Vidolta</h2>
+<p>
+Mobilité, monuments, restaurants, expériences et découvertes urbaines réunis sur une seule plateforme moderne et rapide.
+</p>
+<a href="paris.html">Retour à Paris</a>
+</div>
+</section>
+
+<!-- FOOTER -->
+
+<footer>
+<p><a href="about.html">À propos de Vidolta</a></p>
+<p>contact@vidolta.com</p>
+<p>© 2026 Vidolta — Paris</p>
+</footer>
+
+<!-- BACK TO TOP -->
+
+<button class="back-to-top" id="backToTop">
+↑
+</button>
+
+<script>
+
+const backToTop = document.getElementById('backToTop');
+
+window.addEventListener('scroll', () => {
+
+if(window.scrollY > 400){
+backToTop.classList.add('show');
+}else{
+backToTop.classList.remove('show');
+}
+
+});
+
+backToTop.addEventListener('click', () => {
+window.scrollTo({
+top:0,
+behavior:'smooth'
+});
+});
+
+</script>
+
+</body>
+</html>
+```
