@@ -814,14 +814,14 @@ Ville bientôt disponible sur Vidolta.
 <!-- FOOTER -->
 
 <footer>
-<p><a href="about.html">À propos de Vidolta</
-a></p>
-  
-<p>contact@vidolta.com</p>
 
 <p>
-© 2026 Vidolta — Te guide partout où tu vas.
+<a href="about.html">À propos de Vidolta</a>
 </p>
+
+<p>contact@vidolta.com</p>
+
+<p>© 2026 Vidolta — Te guide partout où tu vas.</p>
 
 <div class="footer-links">
 <a href="mentions-legales.html">Mentions légales</a>
@@ -834,19 +834,15 @@ a></p>
 <script>
 
 /* SEARCH */
-
 function normalizeText(text){
-return text
-.toLowerCase()
-.normalize("NFD")
-.replace(/[\u0300-\u036f]/g, "");
+return
+text.toLowerCase().normalize("NFD").replace(/
+[\u0300-\u036f]/g, "");
 }
 
 function searchCity(){
-
 const input = normalizeText(
-document.getElementById('cityInput').value.trim()
-);
+document.getElementById('cityInput').value.trim());
 
 const availableCities = [
 'paris',
@@ -866,7 +862,6 @@ window.location.href = input + '.html';
 }else{
 showToast();
 }
-
 } 
 
 /* ENTER KEY */
