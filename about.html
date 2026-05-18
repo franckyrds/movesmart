@@ -255,6 +255,35 @@ opacity:1;
 transform:translateY(0);
 }
 
+/* BACK TO TOP */
+
+.back-to-top{
+position:fixed;
+bottom:25px;
+right:25px;
+width:52px;
+height:52px;
+border:none;
+border-radius:50%;
+background:#6366f1;
+color:white;
+font-size:1.4rem;
+cursor:pointer;
+display:flex;
+align-items:center;
+justify-content:center;
+opacity:0;
+pointer-events:none;
+transition:0.3s;
+z-index:999;
+box-shadow:0 10px 25px rgba(0,0,0,0.35);
+}
+
+.back-to-top.show{
+opacity:1;
+pointer-events:auto;
+}
+
 /* MOBILE */
 
 @media(max-width:900px){
@@ -454,6 +483,10 @@ dans une expérience moderne pensée pour les voyageurs et les explorateurs urba
 
 </footer>
 
+<button class="back-to-top" id="backToTop">
+↑
+</button>
+
 <script>
 
 function toggleMenu(){
@@ -477,6 +510,29 @@ entry.target.classList.add('visible');
 
 document.querySelectorAll('.fade-up').forEach(el => {
 observer.observe(el);
+});
+
+/* BACK TO TOP */
+
+const backToTop = document.getElementById('backToTop');
+
+window.addEventListener('scroll', () => {
+
+if(window.scrollY > 400){
+backToTop.classList.add('show');
+}else{
+backToTop.classList.remove('show');
+}
+
+});
+
+backToTop.addEventListener('click', () => {
+
+window.scrollTo({
+top:0,
+behavior:'smooth'
+});
+
 });
 
 </script>
