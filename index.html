@@ -835,9 +835,7 @@ Ville bientôt disponible sur Vidolta.
 
 /* SEARCH */
 function normalizeText(text){
-return
-text.toLowerCase().normalize("NFD").replace(/
-[\u0300-\u036f]/g, "");
+return text.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "");
 }
 
 function searchCity(){
