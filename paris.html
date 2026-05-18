@@ -384,7 +384,40 @@ transition:0.8s ease;
 opacity:1;
 transform:translateY(0);
 }
+/* BACK TO TOP */
 
+.back-to-top{
+position:fixed;
+bottom:24px;
+right:24px;
+width:52px;
+height:52px;
+border:none;
+border-radius:50%;
+background:#6366f1;
+color:white;
+font-size:1.4rem;
+cursor:pointer;
+display:flex;
+align-items:center;
+justify-content:center;
+box-shadow:0 10px 25px rgba(0,0,0,0.3);
+opacity:0;
+pointer-events:none;
+transition:0.35s;
+z-index:999;
+}
+
+.back-to-top.show{
+opacity:1;
+pointer-events:auto;
+}
+
+.back-to-top:hover{
+transform:translateY(-3px);
+background:#4f46e5;
+}
+  
 /* MOBILE */
 
 @media(max-width:900px){
