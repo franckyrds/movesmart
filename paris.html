@@ -975,7 +975,15 @@ Contact
 
 </footer>
 
+<!-- BACK TO TOP BUTTON -->
+
+<button class="back-to-top" id="backToTop">
+↑
+</button>
+
 <script>
+
+/* MENU MOBILE */
 
 function toggleMenu(){
 const nav = document.querySelector('.nav-links');
@@ -1001,6 +1009,29 @@ threshold:0.15
 document.querySelectorAll('.fade-up')
 .forEach(el => {
 observer.observe(el);
+});
+
+/* BACK TO TOP */
+
+const backToTop = document.getElementById('backToTop');
+
+window.addEventListener('scroll', () => {
+
+if(window.scrollY > 400){
+backToTop.classList.add('show');
+}else{
+backToTop.classList.remove('show');
+}
+
+});
+
+backToTop.addEventListener('click', () => {
+
+window.scrollTo({
+top:0,
+behavior:'smooth'
+});
+
 });
 
 </script>
