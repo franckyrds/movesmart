@@ -1,15 +1,22 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
 <title>Vidolta — Mobilité, restaurants et découvertes urbaines</title>
-<meta name="description" content="Vidolta te guide partout où tu vas : mobilité, restaurants, activités et découvertes urbaines dans les plus belles villes.">
+
+<meta name="description"
+content="Vidolta te guide partout où tu vas : mobilité, restaurants, activités et découvertes urbaines dans les plus belles villes.">
+
 <meta name="theme-color" content="#060b1f">
+
 <link rel="icon" href="favicon.ico">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 
 <style>
@@ -34,12 +41,16 @@ scroll-behavior:smooth;
 
 body{
 font-family:'Poppins',sans-serif;
+
 background:
 radial-gradient(circle at top right,rgba(124,92,255,0.20),transparent 30%),
 radial-gradient(circle at top left,rgba(91,140,255,0.15),transparent 25%),
 linear-gradient(to bottom,#081120 0%,#050816 100%);
+
 color:var(--text);
+
 overflow-x:hidden;
+
 padding-bottom:95px;
 }
 
@@ -58,20 +69,21 @@ position:sticky;
 top:0;
 z-index:1000;
 
-padding:18px 22px;
+padding:14px 18px;
 
 display:flex;
 justify-content:space-between;
 align-items:center;
 
 background:rgba(5,8,22,0.72);
+
 backdrop-filter:blur(18px);
 
 border-bottom:1px solid rgba(255,255,255,0.04);
 }
 
 .logo{
-font-size:1.8rem;
+font-size:1.65rem;
 font-weight:800;
 }
 
@@ -118,19 +130,47 @@ align-items:center;
 
 .hero::before{
 content:"";
+
 position:absolute;
+
 width:520px;
 height:520px;
+
 background:#7c5cff;
+
 filter:blur(140px);
+
 opacity:0.18;
+
 top:-140px;
 right:-140px;
+
+border-radius:50%;
+}
+
+.hero::after{
+content:"";
+
+position:absolute;
+
+width:320px;
+height:320px;
+
+background:#2563eb;
+
+filter:blur(120px);
+
+opacity:0.10;
+
+left:-100px;
+bottom:-100px;
+
 border-radius:50%;
 }
 
 .hero-container{
 max-width:1280px;
+
 margin:auto;
 
 position:relative;
@@ -138,35 +178,50 @@ z-index:2;
 
 display:grid;
 grid-template-columns:1.1fr 0.9fr;
+
 gap:40px;
+
 align-items:center;
 }
 
 .hero-left h1{
 font-size:5.7rem;
+
 line-height:0.98;
+
 margin-bottom:24px;
+
 max-width:720px;
+
+text-shadow:0 8px 30px rgba(0,0,0,0.25);
 }
 
 .hero-left h1 span{
 background:linear-gradient(90deg,#8b5cf6,#60a5fa);
+
 -webkit-background-clip:text;
 -webkit-text-fill-color:transparent;
 }
 
 .hero-text{
 font-size:1.15rem;
+
 line-height:1.9;
+
 max-width:620px;
+
 color:#dbe4f0;
+
 margin-bottom:10px;
 }
 
 .hero-sub{
 font-size:0.85rem;
+
 letter-spacing:2px;
+
 color:#7f8ca6;
+
 margin-bottom:34px;
 }
 
@@ -174,7 +229,9 @@ margin-bottom:34px;
 
 .search-box{
 display:flex;
+
 gap:16px;
+
 margin-bottom:34px;
 }
 
@@ -185,7 +242,9 @@ position:relative;
 
 .search-wrapper input{
 width:100%;
+
 height:74px;
+
 padding:0 24px 0 62px;
 
 border:none;
@@ -200,6 +259,7 @@ backdrop-filter:blur(18px);
 border:1px solid rgba(255,255,255,0.08);
 
 color:white;
+
 font-size:1rem;
 }
 
@@ -209,9 +269,12 @@ color:#94a3b8;
 
 .search-icon{
 position:absolute;
+
 left:22px;
 top:50%;
+
 transform:translateY(-50%);
+
 font-size:1.2rem;
 }
 
@@ -225,7 +288,9 @@ border-radius:28px;
 background:linear-gradient(135deg,#8b5cf6,#5b8cff);
 
 color:white;
+
 font-weight:700;
+
 font-size:1rem;
 
 cursor:pointer;
@@ -243,12 +308,18 @@ transform:translateY(-4px) scale(1.02);
 
 .category-grid{
 display:grid;
+
 grid-template-columns:repeat(2,1fr);
+
 gap:22px;
 }
 
 .category-card{
-background:linear-gradient(135deg,rgba(18,26,52,0.92),rgba(12,18,38,0.88));
+background:linear-gradient(
+135deg,
+rgba(18,26,52,0.92),
+rgba(12,18,38,0.88)
+);
 
 border:1px solid rgba(255,255,255,0.06);
 
@@ -265,15 +336,19 @@ box-shadow:0 12px 35px rgba(0,0,0,0.24);
 transition:0.4s;
 
 position:relative;
+
 overflow:hidden;
 
 display:flex;
+
 gap:18px;
+
 align-items:center;
 }
 
 .category-card:hover{
 transform:translateY(-8px) scale(1.02);
+
 border-color:rgba(124,92,255,0.34);
 }
 
@@ -301,7 +376,9 @@ margin-bottom:6px;
 
 .category-card p{
 font-size:0.92rem;
+
 line-height:1.6;
+
 color:#94a3b8;
 }
 
@@ -309,16 +386,21 @@ color:#94a3b8;
 
 .hero-right{
 position:relative;
+
 display:flex;
 justify-content:center;
 }
 
 .orbit1{
 position:absolute;
+
 width:520px;
 height:520px;
+
 border-radius:50%;
+
 border:2px dashed rgba(124,92,255,0.18);
+
 animation:rotateOrbit 30s linear infinite;
 }
 
@@ -335,15 +417,19 @@ filter:drop-shadow(0 30px 80px rgba(91,140,255,0.35));
 }
 
 @keyframes float{
+
 0%,100%{
 transform:translateY(0px);
 }
+
 50%{
 transform:translateY(-18px);
 }
+
 }
 
 @keyframes rotateOrbit{
+
 from{
 transform:rotate(0deg);
 }
@@ -351,20 +437,25 @@ transform:rotate(0deg);
 to{
 transform:rotate(360deg);
 }
+
 }
 
 /* SECTION */
 
 .section{
 max-width:1300px;
+
 margin:auto;
+
 padding:90px 22px;
 }
 
 .section-header{
 display:flex;
+
 justify-content:space-between;
 align-items:center;
+
 margin-bottom:40px;
 }
 
@@ -375,9 +466,13 @@ line-height:1.1;
 
 .section-header a{
 color:#cbd5e1;
+
 background:rgba(255,255,255,0.06);
+
 padding:14px 20px;
+
 border-radius:18px;
+
 border:1px solid rgba(255,255,255,0.06);
 }
 
@@ -385,10 +480,15 @@ border:1px solid rgba(255,255,255,0.06);
 
 .destinations-grid{
 display:flex;
+
 gap:22px;
+
 overflow-x:auto;
+
 scroll-snap-type:x mandatory;
+
 padding-bottom:12px;
+
 scrollbar-width:none;
 }
 
@@ -412,7 +512,11 @@ cursor:pointer;
 
 flex-shrink:0;
 
-box-shadow:0 18px 40px rgba(0,0,0,0.26);
+border:1px solid rgba(255,255,255,0.08);
+
+box-shadow:
+0 18px 40px rgba(0,0,0,0.26),
+inset 0 1px 0 rgba(255,255,255,0.04);
 
 transition:0.4s;
 }
@@ -424,7 +528,9 @@ transform:translateY(-10px);
 .destination-card img{
 width:100%;
 height:100%;
+
 object-fit:cover;
+
 transition:0.7s;
 }
 
@@ -434,15 +540,21 @@ transform:scale(1.10);
 
 .destination-overlay{
 position:absolute;
+
 inset:0;
 
 padding:28px;
 
 display:flex;
+
 flex-direction:column;
 justify-content:flex-end;
 
-background:linear-gradient(to top,rgba(0,0,0,0.90),rgba(0,0,0,0.15));
+background:linear-gradient(
+to top,
+rgba(0,0,0,0.90),
+rgba(0,0,0,0.15)
+);
 }
 
 .destination-overlay h3{
@@ -465,7 +577,11 @@ border-radius:42px;
 
 text-align:center;
 
-background:linear-gradient(135deg,rgba(124,92,255,0.22),rgba(91,140,255,0.16));
+background:linear-gradient(
+135deg,
+rgba(124,92,255,0.22),
+rgba(91,140,255,0.16)
+);
 
 backdrop-filter:blur(24px);
 
@@ -479,19 +595,29 @@ margin-bottom:20px;
 
 .cta-box p{
 max-width:760px;
+
 margin:auto;
+
 line-height:1.9;
+
 color:#dbe4f0;
+
 margin-bottom:34px;
 }
 
 .cta-box a{
 display:inline-block;
+
 padding:18px 30px;
+
 border-radius:18px;
+
 background:white;
+
 color:#111827;
+
 font-weight:700;
+
 transition:0.3s;
 }
 
@@ -503,16 +629,22 @@ transform:translateY(-3px);
 
 footer{
 padding:80px 22px;
+
 text-align:center;
+
 line-height:2;
+
 color:#94a3b8;
 }
 
 .footer-links{
 margin-top:18px;
+
 display:flex;
 justify-content:center;
+
 flex-wrap:wrap;
+
 gap:18px;
 }
 
@@ -524,8 +656,10 @@ color:#cbd5e1;
 
 .toast{
 position:fixed;
+
 bottom:100px;
 left:50%;
+
 transform:translateX(-50%);
 
 padding:16px 22px;
@@ -537,7 +671,9 @@ background:rgba(17,24,39,0.95);
 border:1px solid rgba(255,255,255,0.06);
 
 opacity:0;
+
 pointer-events:none;
+
 transition:0.4s;
 
 z-index:9999;
@@ -551,12 +687,15 @@ opacity:1;
 
 .fade-up{
 opacity:0;
+
 transform:translateY(35px);
+
 transition:0.8s ease;
 }
 
 .fade-up.visible{
 opacity:1;
+
 transform:translateY(0);
 }
 
@@ -564,6 +703,7 @@ transform:translateY(0);
 
 .bottom-nav{
 position:fixed;
+
 bottom:0;
 left:0;
 right:0;
@@ -579,14 +719,20 @@ border-top:1px solid rgba(255,255,255,0.06);
 z-index:9999;
 
 display:flex;
+
 justify-content:space-around;
 align-items:center;
+
+box-shadow:0 -10px 30px rgba(0,0,0,0.35);
 }
 
 .bottom-nav a{
 display:flex;
+
 flex-direction:column;
+
 align-items:center;
+
 gap:5px;
 
 font-size:0.82rem;
@@ -602,6 +748,8 @@ font-size:1.45rem;
 
 .bottom-nav a.active{
 color:white;
+
+transform:translateY(-3px);
 }
 
 .bottom-nav a.active span{
@@ -610,37 +758,7 @@ color:#8b5cf6;
 
 /* MOBILE */
 
-@media(max-width:980px){
-
-.hero-container{
-grid-template-columns:1fr;
-}
-
-.hero-right{
-order:-1;
-margin-bottom:10px;
-}
-
-.hero-left h1{
-font-size:3.7rem;
-}
-
-.planet{
-width:300px;
-}
-
-.orbit1{
-width:340px;
-height:340px;
-}
-
-.search-box{
-flex-direction:column;
-}
-
-.discover-button{
-height:68px;
-}
+@media(max-width:700px){
 
 .mobile-btn{
 display:block;
@@ -650,6 +768,7 @@ display:block;
 display:none;
 
 position:absolute;
+
 top:78px;
 left:20px;
 right:20px;
@@ -661,54 +780,154 @@ padding:26px;
 border-radius:26px;
 
 flex-direction:column;
+
+z-index:999;
 }
 
 .nav-links.active{
 display:flex;
 }
 
+.hero{
+min-height:auto;
+
+padding:20px 18px 30px;
 }
 
-@media(max-width:700px){
+.hero-container{
+display:flex;
 
-.hero{
-padding-top:40px;
-min-height:auto;
+flex-direction:column;
+
+gap:20px;
+}
+
+.hero-right{
+order:-1;
+
+margin-bottom:0;
+}
+
+.hero-left{
+margin-top:-10px;
 }
 
 .hero-left h1{
-font-size:3.1rem;
+font-size:3.4rem;
+
+line-height:0.95;
+
+max-width:100%;
 }
 
 .hero-text{
 font-size:1rem;
+
+line-height:1.8;
+
+margin-top:18px;
+}
+
+.hero-sub{
+font-size:0.78rem;
+
+margin-top:14px;
+}
+
+.planet{
+width:190px;
+}
+
+.orbit1{
+width:240px;
+height:240px;
+}
+
+.search-box{
+margin-top:28px;
+
+flex-direction:column;
+}
+
+.search-wrapper input{
+height:68px;
+
+font-size:0.96rem;
+}
+
+.discover-button{
+height:68px;
+width:100%;
 }
 
 .category-grid{
-grid-template-columns:1fr;
+grid-template-columns:1fr 1fr;
+
+gap:14px;
+}
+
+.category-card{
+padding:18px;
+
+min-height:110px;
+
+border-radius:26px;
+}
+
+.category-icon{
+width:58px;
+height:58px;
+
+font-size:1.5rem;
+}
+
+.category-card h3{
+font-size:1rem;
+}
+
+.category-card p{
+font-size:0.78rem;
+
+line-height:1.4;
 }
 
 .section{
-padding:70px 18px;
+padding:55px 18px;
 }
 
 .section-header{
-flex-direction:column;
-align-items:flex-start;
-gap:18px;
+flex-direction:row;
+
+align-items:center;
 }
 
 .section-header h2{
-font-size:2rem;
+font-size:2.2rem;
 }
 
 .destination-card{
-min-width:250px;
-height:310px;
+min-width:220px;
+height:290px;
+}
+
+.destination-overlay h3{
+font-size:1.6rem;
+}
+
+.cta-box{
+padding:50px 20px;
 }
 
 .cta-box h2{
-font-size:2.2rem;
+font-size:2rem;
+}
+
+.bottom-nav{
+height:74px;
+}
+
+.bottom-nav span{
+font-size:1.3rem;
 }
 
 }
@@ -733,7 +952,12 @@ font-size:2.2rem;
 <a href="#">Mobilité</a>
 <a href="#">Restaurants</a>
 <a href="#">Activités</a>
-<a href="https://maps.google.com" target="_blank" class="explorer-link">Explorer</a>
+
+<a href="https://maps.google.com"
+target="_blank"
+class="explorer-link">
+Explorer
+</a>
 </div>
 
 </nav>
@@ -745,11 +969,14 @@ font-size:2.2rem;
 <div class="hero-left fade-up">
 
 <h1>
-Te guide partout où <span>tu vas</span>
+Te guide partout où
+<span>tu vas</span>
 </h1>
 
 <p class="hero-text">
-Découvre les meilleures villes, restaurants, activités et solutions de mobilité urbaine.
+Découvre les meilleures villes,
+restaurants, activités et solutions
+de mobilité urbaine.
 </p>
 
 <p class="hero-sub">
@@ -760,10 +987,16 @@ MOVE SMARTER. DISCOVER MORE.
 
 <div class="search-wrapper">
 <span class="search-icon">🔍</span>
-<input type="text" id="cityInput" placeholder="Rechercher une ville...">
+
+<input
+type="text"
+id="cityInput"
+placeholder="Rechercher une ville...">
 </div>
 
-<button class="discover-button" onclick="searchCity()">
+<button
+class="discover-button"
+onclick="searchCity()">
 Découvrir →
 </button>
 
@@ -808,188 +1041,19 @@ Découvrir →
 </div>
 
 <div class="hero-right fade-up">
+
 <div class="orbit1"></div>
-<img class="planet" src="https://i.ibb.co/qL6z7g2/globe.png" alt="Vidolta Globe">
-</div>
 
-</div>
+<img
+class="planet"
+src="https://i.ibb.co/6yssL30/globe-premium.png"
+alt="Vidolta Globe">
 
-</section>
-
-<section class="section" id="destinations">
-
-<div class="section-header fade-up">
-<h2>Destinations populaires</h2>
-<a href="#">Voir tout →</a>
-</div>
-
-<div class="destinations-grid">
-
-<div class="destination-card fade-up" onclick="window.location.href='paris.html'">
-<img src="https://i.ibb.co/BVhMM2sk/Screenshot-20260514-221622-Gmail-2.jpg">
-<div class="destination-overlay">
-<h3>Paris</h3>
-<p>France</p>
-</div>
-</div>
-
-<div class="destination-card fade-up" onclick="window.location.href='rome.html'">
-<img src="https://i.ibb.co/gZ6L8GRz/Screenshot-20260517-033159-Chrome.png">
-<div class="destination-overlay">
-<h3>Rome</h3>
-<p>Italie</p>
-</div>
-</div>
-
-<div class="destination-card fade-up" onclick="window.location.href='barcelone.html'">
-<img src="https://images.unsplash.com/photo-1583422409516-2895a77efded?q=80&w=1200&auto=format&fit=crop">
-<div class="destination-overlay">
-<h3>Barcelone</h3>
-<p>Espagne</p>
-</div>
-</div>
-
-<div class="destination-card fade-up" onclick="window.location.href='marrakech.html'">
-<img src="https://images.unsplash.com/photo-1597212618440-806262de4f6b?q=80&w=1200&auto=format&fit=crop">
-<div class="destination-overlay">
-<h3>Marrakech</h3>
-<p>Maroc</p>
-</div>
 </div>
 
 </div>
 
 </section>
-
-<section class="section">
-
-<div class="cta-box fade-up">
-
-<h2>
-Explore les villes autrement avec Vidolta
-</h2>
-
-<p>
-Mobilité, restaurants, activités et découvertes urbaines réunis sur une plateforme moderne pensée pour le mobile.
-</p>
-
-<a href="#destinations">
-Découvrir les villes
-</a>
-
-</div>
-
-</section>
-
-<div class="toast" id="toast">
-Ville bientôt disponible sur Vidolta.
-</div>
-
-<footer>
-
-<p>
-© 2026 Vidolta — Te guide partout où tu vas.
-</p>
-
-<div class="footer-links">
-<a href="mentions-legales.html">Mentions légales</a>
-<a href="confidentialite.html">Confidentialité</a>
-<a href="contact.html">Contact</a>
-</div>
-
-</footer>
-
-<div class="bottom-nav">
-
-<a href="#" class="active">
-<span>🏠</span>
-<p>Accueil</p>
-</a>
-
-<a href="#">
-<span>❤️</span>
-<p>Favoris</p>
-</a>
-
-<a href="#">
-<span>🧭</span>
-<p>Explorer</p>
-</a>
-
-<a href="#">
-<span>👤</span>
-<p>Profil</p>
-</a>
-
-</div>
-
-<script>
-
-function normalizeText(text){
-return text
-.toLowerCase()
-.normalize("NFD")
-.replace(/[\u0300-\u036f]/g, "");
-}
-
-function searchCity(){
-
-const input = normalizeText(
-document.getElementById('cityInput').value.trim()
-);
-
-const availableCities = [
-'paris',
-'rome',
-'barcelone',
-'marrakech',
-'lyon',
-'nantes',
-'marseille',
-'bordeaux',
-'amsterdam',
-'majorque',
-'athenes'
-];
-
-if(availableCities.includes(input)){
-window.location.href = input + '.html';
-}else{
-showToast();
-}
-
-}
-
-function showToast(){
-
-const toast = document.getElementById('toast');
-
-toast.classList.add('show');
-
-setTimeout(() => {
-toast.classList.remove('show');
-},2500);
-
-}
-
-function toggleMenu(){
-const nav = document.querySelector('.nav-links');
-nav.classList.toggle('active');
-}
-
-const observer = new IntersectionObserver(entries => {
-entries.forEach(entry => {
-if(entry.isIntersecting){
-entry.target.classList.add('visible');
-}
-});
-},{threshold:0.15});
-
-document.querySelectorAll('.fade-up').forEach(el => {
-observer.observe(el);
-});
-
-</script>
 
 </body>
 </html> 
