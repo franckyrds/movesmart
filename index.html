@@ -108,9 +108,10 @@ cursor:pointer;
 /* HERO */
 
 .hero{
-padding:55px 22px 40px;
+padding:0;
 position:relative;
 overflow:hidden;
+background:#060b1f;
 }
 
 .hero::before{
@@ -616,8 +617,17 @@ z-index:999;
 display:flex;
 }
 
-.hero{
-padding:20px 18px 28px;
+.hero-left{
+background:linear-gradient(
+180deg,
+#060b1f 0%,
+#0b1230 100%
+);
+
+padding:26px 18px 30px;
+
+border-bottom-left-radius:32px;
+border-bottom-right-radius:32px;
 }
 
 .hero-left h1{
@@ -638,7 +648,7 @@ line-height:1.6;
 
 .hero-sub{
 font-size:0.72rem;
-margin-bottom:24px;
+margin-bottom:18px;
 }
 
 .search-wrapper input{
