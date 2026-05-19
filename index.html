@@ -1055,5 +1055,228 @@ alt="Vidolta Globe">
 
 </section>
 
+<!-- DESTINATIONS -->
+
+<section class="section" id="destinations">
+
+<div class="section-header fade-up">
+<h2>Destinations populaires</h2>
+<a href="#">Voir tout →</a>
+</div>
+
+<div class="destinations-grid">
+
+<div class="destination-card fade-up"
+onclick="window.location.href='paris.html'">
+
+<img src="https://i.ibb.co/BVhMM2sk/Screenshot-20260514-221622-Gmail-2.jpg">
+
+<div class="destination-overlay">
+<h3>Paris</h3>
+<p>France</p>
+</div>
+
+</div>
+
+<div class="destination-card fade-up"
+onclick="window.location.href='rome.html'">
+
+<img src="https://i.ibb.co/gZ6L8GRz/Screenshot-20260517-033159-Chrome.png">
+
+<div class="destination-overlay">
+<h3>Rome</h3>
+<p>Italie</p>
+</div>
+
+</div>
+
+<div class="destination-card fade-up"
+onclick="window.location.href='barcelone.html'">
+
+<img src="https://images.unsplash.com/photo-1583422409516-2895a77efded?q=80&w=1200&auto=format&fit=crop">
+
+<div class="destination-overlay">
+<h3>Barcelone</h3>
+<p>Espagne</p>
+</div>
+
+</div>
+
+<div class="destination-card fade-up"
+onclick="window.location.href='marrakech.html'">
+
+<img src="https://images.unsplash.com/photo-1597212618440-806262de4f6b?q=80&w=1200&auto=format&fit=crop">
+
+<div class="destination-overlay">
+<h3>Marrakech</h3>
+<p>Maroc</p>
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- CTA -->
+
+<section class="section">
+
+<div class="cta-box fade-up">
+
+<h2>
+Explore les villes autrement avec Vidolta
+</h2>
+
+<p>
+Mobilité, restaurants, activités et découvertes urbaines réunis sur une plateforme moderne pensée pour le mobile.
+</p>
+
+<a href="#destinations">
+Découvrir les villes
+</a>
+
+</div>
+
+</section>
+
+<!-- TOAST -->
+
+<div class="toast" id="toast">
+Ville bientôt disponible sur Vidolta.
+</div>
+
+<!-- FOOTER -->
+
+<footer>
+
+<p>
+© 2026 Vidolta — Te guide partout où tu vas.
+</p>
+
+<div class="footer-links">
+
+<a href="mentions-legales.html">
+Mentions légales
+</a>
+
+<a href="confidentialite.html">
+Confidentialité
+</a>
+
+<a href="contact.html">
+Contact
+</a>
+
+</div>
+
+</footer>
+
+<!-- BOTTOM NAV -->
+
+<div class="bottom-nav">
+
+<a href="#" class="active">
+<span>🏠</span>
+<p>Accueil</p>
+</a>
+
+<a href="#">
+<span>❤️</span>
+<p>Favoris</p>
+</a>
+
+<a href="#">
+<span>🧭</span>
+<p>Explorer</p>
+</a>
+
+<a href="#">
+<span>👤</span>
+<p>Profil</p>
+</a>
+
+</div>
+
+<script>
+
+function normalizeText(text){
+return text
+.toLowerCase()
+.normalize("NFD")
+.replace(/[\u0300-\u036f]/g, "");
+}
+
+function searchCity(){
+
+const input = normalizeText(
+document.getElementById('cityInput').value.trim()
+);
+
+const availableCities = [
+'paris',
+'rome',
+'barcelone',
+'marrakech',
+'lyon',
+'nantes',
+'marseille',
+'bordeaux',
+'amsterdam',
+'majorque',
+'athenes'
+];
+
+if(availableCities.includes(input)){
+window.location.href = input + '.html';
+}else{
+showToast();
+}
+
+}
+
+function showToast(){
+
+const toast = document.getElementById('toast');
+
+toast.classList.add('show');
+
+setTimeout(() => {
+toast.classList.remove('show');
+},2500);
+
+}
+
+function toggleMenu(){
+
+const nav = document.querySelector('.nav-links');
+
+nav.classList.toggle('active');
+
+}
+
+const observer = new IntersectionObserver(entries => {
+
+entries.forEach(entry => {
+
+if(entry.isIntersecting){
+entry.target.classList.add('visible');
+}
+
+});
+
+},{
+threshold:0.15
+});
+
+document.querySelectorAll('.fade-up').forEach(el => {
+observer.observe(el);
+});
+
+</script>
+
+</body>
+</html> 
+
 </body>
 </html> 
