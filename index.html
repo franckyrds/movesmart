@@ -759,7 +759,6 @@ color:#8b5cf6;
 }
 
 /* MOBILE */
-
 @media(max-width:700px){
 
 .mobile-btn{
@@ -768,21 +767,14 @@ display:block;
 
 .nav-links{
 display:none;
-
 position:absolute;
-
 top:78px;
 left:20px;
 right:20px;
-
 background:#111827;
-
 padding:26px;
-
 border-radius:26px;
-
 flex-direction:column;
-
 z-index:999;
 }
 
@@ -790,393 +782,197 @@ z-index:999;
 display:flex;
 }
 
+/* HERO */
+
 .hero{
 min-height:auto;
-
-padding:20px 18px 30px;
+padding:18px 18px 24px;
 }
 
 .hero-container{
-display:flex;
-
-flex-direction:column;
-
-gap:20px;
-}
-
-.hero-right{
-order:-1;
-
-margin-bottom:0;
+display:grid;
+grid-template-columns:1fr 170px;
+gap:12px;
+align-items:start;
 }
 
 .hero-left{
-margin-top:-10px;
+margin-top:8px;
 }
+
+.hero-right{
+display:flex;
+justify-content:flex-end;
+align-items:flex-start;
+margin-top:10px;
+}
+
+/* TITRE */
 
 .hero-left h1{
-font-size:3.4rem;
-
-line-height:0.95;
-
+font-size:3.15rem;
+line-height:0.92;
 max-width:100%;
+margin-bottom:14px;
+letter-spacing:-2px;
 }
 
+.hero-left h1 span{
+display:block;
+margin-top:4px;
+}
+
+/* TEXTE */
+
 .hero-text{
-font-size:1rem;
-
-line-height:1.8;
-
-margin-top:18px;
+font-size:0.98rem;
+line-height:1.6;
+margin-top:6px;
+max-width:95%;
 }
 
 .hero-sub{
-font-size:0.78rem;
+font-size:0.74rem;
+margin-top:12px;
+margin-bottom:24px;
+letter-spacing:1.5px;
+}
 
-margin-top:14px;
+/* GLOBE */
+
+.orbit1{
+display:none;
 }
 
 .planet{
-width:190px;
+width:165px;
+animation:none;
+filter:drop-shadow(0 12px 40px rgba(91,140,255,0.35));
 }
 
-.orbit1{
-width:240px;
-height:240px;
-}
+/* SEARCH */
 
 .search-box{
-margin-top:28px;
-
+margin-top:20px;
 flex-direction:column;
-}
-
-.search-wrapper input{
-height:68px;
-
-font-size:0.96rem;
-}
-
-.discover-button{
-height:68px;
-width:100%;
-}
-
-.category-grid{
-grid-template-columns:1fr 1fr;
-
 gap:14px;
 }
 
+.search-wrapper input{
+height:66px;
+font-size:0.95rem;
+border-radius:24px;
+}
+
+.discover-button{
+height:66px;
+width:100%;
+border-radius:24px;
+}
+
+/* CATEGORIES */
+
+.category-grid{
+grid-template-columns:1fr 1fr;
+gap:14px;
+margin-top:4px;
+}
+
 .category-card{
-padding:18px;
-
-min-height:110px;
-
-border-radius:26px;
+padding:16px;
+min-height:108px;
+border-radius:24px;
+gap:14px;
 }
 
 .category-icon{
-width:58px;
-height:58px;
-
-font-size:1.5rem;
+width:54px;
+height:54px;
+font-size:1.4rem;
+border-radius:18px;
 }
 
 .category-card h3{
-font-size:1rem;
+font-size:0.98rem;
+line-height:1.1;
 }
 
 .category-card p{
-font-size:0.78rem;
-
-line-height:1.4;
+font-size:0.76rem;
+line-height:1.35;
+margin-top:4px;
 }
 
+/* SECTION */
+
 .section{
-padding:55px 18px;
+padding:42px 18px;
 }
 
 .section-header{
 flex-direction:row;
-
 align-items:center;
+margin-bottom:22px;
 }
 
 .section-header h2{
-font-size:2.2rem;
+font-size:2rem;
+line-height:1;
+}
+
+/* DESTINATIONS */
+
+.destinations-grid{
+gap:14px;
 }
 
 .destination-card{
-min-width:220px;
-height:290px;
+min-width:170px;
+height:240px;
+border-radius:26px;
+}
+
+.destination-overlay{
+padding:18px;
 }
 
 .destination-overlay h3{
-font-size:1.6rem;
+font-size:1.45rem;
+margin-bottom:2px;
 }
 
+.destination-overlay p{
+font-size:0.82rem;
+}
+
+/* CTA */
+
 .cta-box{
-padding:50px 20px;
+padding:42px 20px;
+border-radius:32px;
 }
 
 .cta-box h2{
-font-size:2rem;
+font-size:1.9rem;
+line-height:1.1;
 }
+
+.cta-box p{
+font-size:0.95rem;
+line-height:1.7;
+}
+
+/* BOTTOM NAV */
 
 .bottom-nav{
 height:74px;
 }
 
 .bottom-nav span{
-font-size:1.3rem;
+font-size:1.25rem;
 }
 
 }
-
-</style>
-</head>
-
-<body>
-
-<nav class="navbar">
-
-<div class="logo">
-🌍 Vidolta
-</div>
-
-<div class="mobile-btn" onclick="toggleMenu()">
-☰
-</div>
-
-<div class="nav-links">
-<a href="#destinations">Destinations</a>
-<a href="#">Mobilité</a>
-<a href="#">Restaurants</a>
-<a href="#">Activités</a>
-
-<a href="https://maps.google.com"
-target="_blank"
-class="explorer-link">
-Explorer
-</a>
-</div>
-
-</nav>
-
-<section class="hero">
-
-<div class="hero-container">
-
-<div class="hero-left fade-up">
-
-<h1>
-Te guide partout où
-<span>tu vas</span>
-</h1>
-
-<p class="hero-text">
-Découvre les meilleures villes,
-restaurants, activités et solutions
-de mobilité urbaine.
-</p>
-
-<p class="hero-sub">
-MOVE SMARTER. DISCOVER MORE.
-</p>
-
-<div class="search-box">
-
-<div class="search-wrapper">
-<span class="search-icon">🔍</span>
-
-<input
-type="text"
-id="cityInput"
-placeholder="Rechercher une ville...">
-</div>
-
-<button
-class="discover-button"
-onclick="searchCity()">
-Découvrir →
-</button>
-
-</div>
-
-<div class="category-grid">
-
-<div class="category-card fade-up">
-<div class="category-icon">🚇</div>
-<div>
-<h3>Mobilité urbaine</h3>
-<p>Déplace-toi facilement dans chaque ville.</p>
-</div>
-</div>
-
-<div class="category-card fade-up">
-<div class="category-icon">🍽️</div>
-<div>
-<h3>Restaurants</h3>
-<p>Les meilleures adresses et expériences.</p>
-</div>
-</div>
-
-<div class="category-card fade-up">
-<div class="category-icon">🎭</div>
-<div>
-<h3>Activités</h3>
-<p>Sorties, loisirs et expériences locales.</p>
-</div>
-</div>
-
-<div class="category-card fade-up">
-<div class="category-icon">🗺️</div>
-<div>
-<h3>Explorer les villes</h3>
-<p>Découvre les lieux incontournables.</p>
-</div>
-</div>
-
-</div>
-
-</div>
-
-<div class="hero-right fade-up">
-
-<div class="orbit1"></div>
-
-<img
-class="planet"
-src="https://i.ibb.co/6yssL30/globe-premium.png"
-alt="Vidolta Globe">
-
-</div>
-
-</div>
-
-</section>
-
-<!-- DESTINATIONS -->
-
-<section class="section" id="destinations">
-
-<div class="section-header fade-up">
-<h2>Destinations populaires</h2>
-<a href="#">Voir tout →</a>
-</div>
-
-<div class="destinations-grid">
-
-<div class="destination-card fade-up"
-onclick="window.location.href='paris.html'">
-
-<img src="https://i.ibb.co/BVhMM2sk/Screenshot-20260514-221622-Gmail-2.jpg">
-
-<div class="destination-overlay">
-<h3>Paris</h3>
-<p>France</p>
-</div>
-
-</div>
-
-<div class="destination-card fade-up"
-onclick="window.location.href='rome.html'">
-
-<img src="https://i.ibb.co/gZ6L8GRz/Screenshot-20260517-033159-Chrome.png">
-
-<div class="destination-overlay">
-<h3>Rome</h3>
-<p>Italie</p>
-</div>
-
-</div>
-
-<div class="destination-card fade-up"
-onclick="window.location.href='barcelone.html'">
-
-<img src="https://images.unsplash.com/photo-1583422409516-2895a77efded?q=80&w=1200&auto=format&fit=crop">
-
-<div class="destination-overlay">
-<h3>Barcelone</h3>
-<p>Espagne</p>
-</div>
-
-</div>
-
-<div class="destination-card fade-up"
-onclick="window.location.href='marrakech.html'">
-
-<img src="https://images.unsplash.com/photo-1597212618440-806262de4f6b?q=80&w=1200&auto=format&fit=crop">
-
-<div class="destination-overlay">
-<h3>Marrakech</h3>
-<p>Maroc</p>
-</div>
-
-</div>
-
-</div>
-
-</section>
-
-<!-- CTA -->
-
-<section class="section">
-
-<div class="cta-box fade-up">
-
-<h2>
-Explore les villes autrement avec Vidolta
-</h2>
-
-<p>
-Mobilité, restaurants, activités et découvertes urbaines réunis sur une plateforme moderne pensée pour le mobile.
-</p>
-
-<a href="#destinations">
-Découvrir les villes
-</a>
-
-</div>
-
-</section>
-
-<!-- TOAST -->
-
-<div class="toast" id="toast">
-Ville bientôt disponible sur Vidolta.
-</div>
-
-<!-- FOOTER -->
-
-<footer>
-
-<p>
-© 2026 Vidolta — Te guide partout où tu vas.
-</p>
-
-<div class="footer-links">
-
-<a href="mentions-legales.html">
-Mentions légales
-</a>
-
-<a href="confidentialite.html">
-Confidentialité
-</a>
-
-<a href="contact.html">
-Contact
-</a>
-
-</div>
-
-</footer>
-
-<!-- BOTTOM NAV -->
-
-<div class="bottom-nav">
 
 <a href="#" class="active">
 <span>🏠</span>
