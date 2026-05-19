@@ -755,181 +755,194 @@ display:flex;
 
 .hero{
 min-height:auto;
-padding:18px 18px 24px;
+padding:14px 18px 24px;
 }
 
 .hero-container{
 display:grid;
-grid-template-columns:1fr 170px;
-gap:12px;
+grid-template-columns:1fr 145px;
+gap:8px;
 align-items:start;
 }
 
+/* TEXTE */
+
 .hero-left{
-margin-top:8px;
+margin-top:6px;
 }
+
+.hero-left h1{
+font-size:2.9rem;
+line-height:0.9;
+letter-spacing:-2px;
+margin-bottom:14px;
+}
+
+.hero-left h1 span{
+display:block;
+margin-top:2px;
+}
+
+.hero-text{
+font-size:0.9rem;
+line-height:1.55;
+max-width:95%;
+margin-top:4px;
+}
+
+.hero-sub{
+font-size:0.72rem;
+letter-spacing:1.4px;
+margin-top:10px;
+margin-bottom:22px;
+}
+
+/* GLOBE */
 
 .hero-right{
 display:flex;
 justify-content:flex-end;
 align-items:flex-start;
-margin-top:10px;
+margin-top:4px;
 }
 
-/* TITRE */
-
-.hero-left h1{
-font-size:3.15rem;
-line-height:0.92;
-max-width:100%;
-margin-bottom:14px;
-letter-spacing:-2px;
+.orbit1{
+display:none;
 }
-
-/* TEXTE */
-
-.hero-text{
-font-size:0.98rem;
-line-height:1.6;
-margin-top:6px;
-max-width:95%;
-}
-
-.hero-sub{
-font-size:0.74rem;
-margin-top:12px;
-margin-bottom:24px;
-letter-spacing:1.5px;
-}
-
-/* GLOBE */
 
 .planet{
-width:165px;
-animation:none;
-filter:drop-shadow(0 12px 40px rgba(91,140,255,0.35));
+width:140px;
+height:140px;
+object-fit:cover;
+border-radius:50%;
+filter:drop-shadow(0 10px 30px rgba(91,140,255,0.35));
 }
 
 /* SEARCH */
 
 .search-box{
-margin-top:20px;
+margin-top:14px;
 flex-direction:column;
-gap:14px;
+gap:12px;
 }
 
 .search-wrapper input{
-height:66px;
-font-size:0.95rem;
-border-radius:24px;
+height:62px;
+font-size:0.92rem;
+border-radius:22px;
+padding-left:56px;
 }
 
 .discover-button{
-height:66px;
+height:62px;
 width:100%;
-border-radius:24px;
+border-radius:22px;
+font-size:1rem;
 }
 
 /* CATEGORIES */
 
 .category-grid{
 grid-template-columns:1fr 1fr;
-gap:14px;
-margin-top:4px;
+gap:12px;
+margin-top:2px;
 }
 
 .category-card{
-padding:16px;
-min-height:108px;
-border-radius:24px;
-gap:14px;
+padding:14px;
+min-height:96px;
+border-radius:22px;
+gap:12px;
+align-items:center;
 }
 
 .category-icon{
-width:54px;
-height:54px;
-font-size:1.4rem;
-border-radius:18px;
+width:46px;
+height:46px;
+font-size:1.15rem;
+border-radius:16px;
 }
 
 .category-card h3{
-font-size:0.98rem;
-line-height:1.1;
+font-size:0.9rem;
+line-height:1.05;
+margin-bottom:2px;
 }
 
 .category-card p{
-font-size:0.76rem;
-line-height:1.35;
-margin-top:4px;
+font-size:0.7rem;
+line-height:1.25;
 }
 
 /* SECTION */
 
 .section{
-padding:42px 18px;
+padding:38px 18px;
 }
 
 .section-header{
-flex-direction:row;
-align-items:center;
-margin-bottom:22px;
+margin-bottom:20px;
 }
 
 .section-header h2{
-font-size:2rem;
+font-size:1.8rem;
 line-height:1;
 }
 
 /* DESTINATIONS */
 
 .destinations-grid{
-gap:14px;
+gap:12px;
 }
 
 .destination-card{
-min-width:170px;
-height:240px;
-border-radius:26px;
+min-width:155px;
+height:215px;
+border-radius:24px;
 }
 
 .destination-overlay{
-padding:18px;
+padding:16px;
 }
 
 .destination-overlay h3{
-font-size:1.45rem;
+font-size:1.2rem;
 margin-bottom:2px;
 }
 
 .destination-overlay p{
-font-size:0.82rem;
+font-size:0.75rem;
 }
 
 /* CTA */
 
 .cta-box{
-padding:42px 20px;
-border-radius:32px;
+padding:36px 18px;
+border-radius:28px;
 }
 
 .cta-box h2{
-font-size:1.9rem;
+font-size:1.7rem;
 line-height:1.1;
 }
 
 .cta-box p{
-font-size:0.95rem;
-line-height:1.7;
+font-size:0.9rem;
+line-height:1.6;
 }
 
 /* BOTTOM NAV */
 
 .bottom-nav{
-height:74px;
+height:72px;
 }
 
 .bottom-nav span{
-font-size:1.25rem;
+font-size:1.15rem;
+}
+
+.bottom-nav a{
+font-size:0.74rem;
 }
 
 }
@@ -1052,7 +1065,7 @@ Découvrir →
 
 <img
 class="planet"
-src="https://i.ibb.co/6yssL30/globe-premium.png"
+src="https://images.unsplash.com/photo-1521295121783-8a321d551ad2?q=80&w=800&auto=format&fit=crop"
 alt="Vidolta Globe"
 >
 
