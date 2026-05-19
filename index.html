@@ -759,16 +759,18 @@ padding:14px 18px 24px;
 }
 
 .hero-container{
-display:grid;
-grid-template-columns:1fr 125px;
-gap:8px;
-align-items:start;
-}
+display:flex;
+align-items:flex-start;
+justify-content:space-between;
+gap:12px;
+} 
 
 /* TEXTE */
 
 .hero-left{
 margin-top:6px;
+flex:1;
+min-width:0;
 }
 
 .hero-left h1{
@@ -801,11 +803,15 @@ margin-bottom:22px;
 /* GLOBE */
 
 .hero-right{
+width:115px;
+flex-shrink:0;
+
 display:flex;
 justify-content:flex-end;
 align-items:flex-start;
-margin-top:4px;
-}
+
+margin-top:8px;
+} 
 
 .orbit1{
 display:none;
@@ -861,11 +867,20 @@ margin-top:2px;
 
 .category-card{
 padding:14px;
-min-height:96px;
+min-height:110px;
 border-radius:22px;
-gap:12px;
+gap:10px;
 align-items:center;
+overflow:hidden;
 }
+
+.category-card div{
+min-width:0;
+}
+
+.category-card h3{
+word-break:break-word;
+} 
 
 .category-icon{
 width:46px;
