@@ -199,6 +199,8 @@ text-shadow:0 8px 30px rgba(0,0,0,0.25);
 }
 
 .hero-left h1 span{
+display:block;
+
 background:linear-gradient(90deg,#8b5cf6,#60a5fa);
 
 -webkit-background-clip:text;
@@ -394,52 +396,17 @@ justify-content:center;
 }
 
 .orbit1{
-position:absolute;
-
-width:520px;
-height:520px;
-
-border-radius:50%;
-
-border:2px dashed rgba(124,92,255,0.18);
-
-animation:rotateOrbit 30s linear infinite;
+display:none;
 }
 
 .planet{
-width:470px;
+width:430px;
 max-width:100%;
 
 position:relative;
 z-index:2;
 
-animation:float 6s ease-in-out infinite;
-
 filter:drop-shadow(0 30px 80px rgba(91,140,255,0.35));
-}
-
-@keyframes float{
-
-0%,100%{
-transform:translateY(0px);
-}
-
-50%{
-transform:translateY(-18px);
-}
-
-}
-
-@keyframes rotateOrbit{
-
-from{
-transform:rotate(0deg);
-}
-
-to{
-transform:rotate(360deg);
-}
-
 }
 
 /* SECTION */
@@ -483,7 +450,7 @@ border:1px solid rgba(255,255,255,0.06);
 .destinations-grid{
 display:flex;
 
-gap:22px;
+gap:16px;
 
 overflow-x:auto;
 
@@ -499,12 +466,12 @@ display:none;
 }
 
 .destination-card{
-min-width:290px;
-height:360px;
+min-width:230px;
+height:300px;
 
 scroll-snap-align:start;
 
-border-radius:34px;
+border-radius:28px;
 
 overflow:hidden;
 
@@ -537,7 +504,7 @@ transition:0.7s;
 }
 
 .destination-card:hover img{
-transform:scale(1.10);
+transform:scale(1.08);
 }
 
 .destination-overlay{
@@ -545,7 +512,7 @@ position:absolute;
 
 inset:0;
 
-padding:28px;
+padding:22px;
 
 display:flex;
 
@@ -560,12 +527,13 @@ rgba(0,0,0,0.15)
 }
 
 .destination-overlay h3{
-font-size:2.1rem;
-margin-bottom:6px;
+font-size:1.7rem;
+margin-bottom:4px;
 }
 
 .destination-overlay p{
 color:#d1d5db;
+font-size:0.9rem;
 }
 
 /* CTA */
@@ -759,6 +727,7 @@ color:#8b5cf6;
 }
 
 /* MOBILE */
+
 @media(max-width:700px){
 
 .mobile-btn{
@@ -817,11 +786,6 @@ margin-bottom:14px;
 letter-spacing:-2px;
 }
 
-.hero-left h1 span{
-display:block;
-margin-top:4px;
-}
-
 /* TEXTE */
 
 .hero-text{
@@ -839,10 +803,6 @@ letter-spacing:1.5px;
 }
 
 /* GLOBE */
-
-.orbit1{
-display:none;
-}
 
 .planet{
 width:165px;
@@ -978,6 +938,254 @@ font-size:1.25rem;
 </head>
 
 <body>
+
+<!-- NAVBAR -->
+
+<nav class="navbar">
+
+<div class="logo">
+🌍 Vidolta
+</div>
+
+<div class="mobile-btn" onclick="toggleMenu()">
+☰
+</div>
+
+<div class="nav-links">
+<a href="#destinations">Destinations</a>
+<a href="#">Mobilité</a>
+<a href="#">Restaurants</a>
+<a href="#">Activités</a>
+
+<a href="https://maps.google.com"
+target="_blank"
+class="explorer-link">
+Explorer
+</a>
+</div>
+
+</nav>
+
+<!-- HERO -->
+
+<section class="hero">
+
+<div class="hero-container">
+
+<div class="hero-left fade-up">
+
+<h1>
+Te guide partout où
+<span>tu vas</span>
+</h1>
+
+<p class="hero-text">
+Découvre les meilleures villes, restaurants,
+activités et solutions de mobilité urbaine.
+</p>
+
+<p class="hero-sub">
+MOVE SMARTER. DISCOVER MORE.
+</p>
+
+<div class="search-box">
+
+<div class="search-wrapper">
+<span class="search-icon">🔍</span>
+
+<input
+type="text"
+id="cityInput"
+placeholder="Rechercher une ville..."
+>
+</div>
+
+<button class="discover-button"
+onclick="searchCity()">
+Découvrir →
+</button>
+
+</div>
+
+<div class="category-grid">
+
+<div class="category-card fade-up">
+<div class="category-icon">🚇</div>
+
+<div>
+<h3>Mobilité urbaine</h3>
+<p>Déplace-toi facilement dans chaque ville.</p>
+</div>
+</div>
+
+<div class="category-card fade-up">
+<div class="category-icon">🍽️</div>
+
+<div>
+<h3>Restaurants</h3>
+<p>Les meilleures adresses et expériences.</p>
+</div>
+</div>
+
+<div class="category-card fade-up">
+<div class="category-icon">🎭</div>
+
+<div>
+<h3>Activités</h3>
+<p>Sorties, loisirs et expériences locales.</p>
+</div>
+</div>
+
+<div class="category-card fade-up">
+<div class="category-icon">🗺️</div>
+
+<div>
+<h3>Explorer les villes</h3>
+<p>Découvre les lieux incontournables.</p>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="hero-right fade-up">
+
+<img
+class="planet"
+src="https://i.ibb.co/6yssL30/globe-premium.png"
+alt="Vidolta Globe"
+>
+
+</div>
+
+</div>
+</section>
+
+<!-- DESTINATIONS -->
+
+<section class="section" id="destinations">
+
+<div class="section-header fade-up">
+<h2>Destinations populaires</h2>
+<a href="#">Voir tout →</a>
+</div>
+
+<div class="destinations-grid">
+
+<div class="destination-card fade-up"
+onclick="window.location.href='paris.html'">
+
+<img
+src="https://i.ibb.co/BVhMM2sk/Screenshot-20260514-221622-Gmail-2.jpg"
+alt="Paris"
+>
+
+<div class="destination-overlay">
+<h3>Paris</h3>
+<p>France</p>
+</div>
+
+</div>
+
+<div class="destination-card fade-up"
+onclick="window.location.href='rome.html'">
+
+<img
+src="https://i.ibb.co/gZ6L8GRz/Screenshot-20260517-033159-Chrome.png"
+alt="Rome"
+>
+
+<div class="destination-overlay">
+<h3>Rome</h3>
+<p>Italie</p>
+</div>
+
+</div>
+
+<div class="destination-card fade-up"
+onclick="window.location.href='barcelone.html'">
+
+<img
+src="https://images.unsplash.com/photo-1583422409516-2895a77efded?q=80&w=1200&auto=format&fit=crop"
+alt="Barcelone"
+>
+
+<div class="destination-overlay">
+<h3>Barcelone</h3>
+<p>Espagne</p>
+</div>
+
+</div>
+
+<div class="destination-card fade-up"
+onclick="window.location.href='marrakech.html'">
+
+<img
+src="https://images.unsplash.com/photo-1597212618440-806262de4f6b?q=80&w=1200&auto=format&fit=crop"
+alt="Marrakech"
+>
+
+<div class="destination-overlay">
+<h3>Marrakech</h3>
+<p>Maroc</p>
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- CTA -->
+
+<section class="section">
+
+<div class="cta-box fade-up">
+
+<h2>
+Explore les villes autrement avec Vidolta
+</h2>
+
+<p>
+Mobilité, restaurants, activités et découvertes
+urbaines réunis sur une plateforme moderne pensée
+pour le mobile.
+</p>
+
+<a href="#destinations">
+Découvrir les villes
+</a>
+
+</div>
+
+</section>
+
+<!-- TOAST -->
+
+<div class="toast" id="toast">
+Ville bientôt disponible sur Vidolta.
+</div>
+
+<!-- FOOTER -->
+
+<footer>
+
+<p>
+© 2026 Vidolta — Te guide partout où tu vas.
+</p>
+
+<div class="footer-links">
+<a href="mentions-legales.html">Mentions légales</a>
+<a href="confidentialite.html">Confidentialité</a>
+<a href="contact.html">Contact</a>
+</div>
+
+</footer>
+
+<!-- BOTTOM NAV -->
+
+<div class="bottom-nav">
+
 <a href="#" class="active">
 <span>🏠</span>
 <p>Accueil</p>
@@ -997,6 +1205,7 @@ font-size:1.25rem;
 <span>👤</span>
 <p>Profil</p>
 </a>
+
 </div>
 
 <script>
