@@ -348,6 +348,16 @@ border-radius:18px;
 border:1px solid rgba(255,255,255,0.06);
 }
 
+.section-header a{
+color:#cbd5e1;
+background:rgba(255,255,255,0.06);
+padding:14px 20px;
+border-radius:18px;
+border:1px solid rgba(255,255,255,0.06);
+}
+
+
+
 /* DESTINATIONS */
 
 .destinations-grid{
@@ -872,6 +882,18 @@ Voir tout →
 </a>
 </div>
 
+<div class="slider-controls">
+
+<button class="slider-btn" onclick="scrollDestinations(-320)">
+←
+</button>
+
+<button class="slider-btn" onclick="scrollDestinations(320)">
+→
+</button>
+
+</div>
+  
 <div class="destinations-grid">
 
 <div class="destination-card fade-up"
@@ -1175,6 +1197,17 @@ threshold:0.15
 document.querySelectorAll('.fade-up').forEach(el => {
 observer.observe(el);
 });
+
+function scrollDestinations(distance){
+
+const slider = document.querySelector('.destinations-grid');
+
+slider.scrollBy({
+left:distance,
+behavior:'smooth'
+});
+
+}
 
 </script>
 
