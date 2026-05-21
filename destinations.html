@@ -1,0 +1,792 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+<title>Destinations — Vidolta</title>
+
+<meta name="description"
+content="Explore les plus belles destinations avec Vidolta : capitales européennes, villes bord de mer, escapades montagne et découvertes urbaines.">
+
+<meta name="theme-color" content="#060b1f">
+
+<link rel="icon" href="favicon.ico">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+:root{
+--bg:#050816;
+--primary:#7c5cff;
+--primary2:#5b8cff;
+--text:#ffffff;
+--muted:#94a3b8;
+}
+
+html{
+scroll-behavior:smooth;
+}
+
+body{
+font-family:'Poppins',sans-serif;
+
+background:
+radial-gradient(circle at top right,rgba(124,92,255,0.18),transparent 30%),
+radial-gradient(circle at top left,rgba(91,140,255,0.14),transparent 25%),
+linear-gradient(to bottom,#081120 0%,#050816 100%);
+
+color:var(--text);
+
+overflow-x:hidden;
+
+padding-bottom:95px;
+}
+
+a{
+text-decoration:none;
+color:inherit;
+}
+
+img{
+display:block;
+}
+
+/* NAVBAR */
+
+.navbar{
+position:sticky;
+top:0;
+z-index:1000;
+
+padding:10px 16px;
+
+display:flex;
+justify-content:space-between;
+align-items:center;
+
+background:rgba(5,8,22,0.72);
+
+backdrop-filter:blur(18px);
+
+border-bottom:1px solid rgba(255,255,255,0.04);
+}
+
+.logo{
+font-size:1.65rem;
+font-weight:800;
+}
+
+.nav-links{
+display:flex;
+gap:28px;
+align-items:center;
+}
+
+.nav-links a{
+color:#cbd5e1;
+font-size:0.95rem;
+transition:0.3s;
+}
+
+.nav-links a:hover{
+color:white;
+}
+
+.mobile-btn{
+display:none;
+font-size:2rem;
+cursor:pointer;
+}
+
+/* HERO */
+
+.hero{
+padding:34px 22px 10px;
+position:relative;
+overflow:hidden;
+}
+
+.hero::before{
+content:"";
+position:absolute;
+
+width:520px;
+height:520px;
+
+background:#7c5cff;
+
+filter:blur(140px);
+
+opacity:0.16;
+
+top:-160px;
+right:-160px;
+
+border-radius:50%;
+}
+
+.hero-container{
+max-width:1280px;
+margin:auto;
+position:relative;
+z-index:2;
+}
+
+.hero h1{
+font-size:4.8rem;
+line-height:0.92;
+letter-spacing:-4px;
+
+margin-bottom:18px;
+}
+
+.hero h1 span{
+background:linear-gradient(90deg,#8b5cf6,#60a5fa);
+
+-webkit-background-clip:text;
+-webkit-text-fill-color:transparent;
+}
+
+.hero p{
+max-width:720px;
+
+font-size:1.08rem;
+line-height:1.85;
+
+color:#dbe4f0;
+}
+
+/* SECTION */
+
+.section{
+max-width:1300px;
+margin:auto;
+padding:40px 22px;
+}
+
+.section-header{
+display:flex;
+justify-content:space-between;
+align-items:center;
+
+margin-bottom:26px;
+}
+
+.section-header h2{
+font-size:2.2rem;
+line-height:1;
+}
+
+/* DESTINATION GRID */
+
+.destinations-grid{
+display:grid;
+grid-template-columns:repeat(4,minmax(0,1fr));
+gap:20px;
+}
+
+.destination-card{
+height:290px;
+
+border-radius:30px;
+
+overflow:hidden;
+
+position:relative;
+
+cursor:pointer;
+
+border:1px solid rgba(255,255,255,0.08);
+
+background:#111827;
+
+box-shadow:
+0 18px 40px rgba(0,0,0,0.26),
+inset 0 1px 0 rgba(255,255,255,0.04);
+
+transition:0.35s;
+}
+
+.destination-card:hover{
+transform:translateY(-8px);
+}
+
+.destination-card img{
+width:100%;
+height:100%;
+object-fit:cover;
+transition:0.6s;
+}
+
+.destination-card:hover img{
+transform:scale(1.06);
+}
+
+.destination-overlay{
+position:absolute;
+inset:0;
+
+padding:22px;
+
+display:flex;
+flex-direction:column;
+justify-content:flex-end;
+
+background:
+linear-gradient(
+to top,
+rgba(0,0,0,0.90),
+rgba(0,0,0,0.18)
+);
+}
+
+.destination-overlay h3{
+font-size:1.65rem;
+margin-bottom:4px;
+}
+
+.destination-overlay p{
+font-size:0.88rem;
+color:#d1d5db;
+}
+
+/* CATEGORY TAG */
+
+.category-tag{
+display:inline-flex;
+align-items:center;
+
+padding:10px 16px;
+
+border-radius:18px;
+
+background:rgba(255,255,255,0.06);
+
+border:1px solid rgba(255,255,255,0.06);
+
+color:#dbe4f0;
+
+font-size:0.84rem;
+font-weight:600;
+}
+
+/* FOOTER */
+
+footer{
+padding:70px 22px;
+text-align:center;
+line-height:2;
+color:#94a3b8;
+}
+
+.footer-links{
+margin-top:18px;
+display:flex;
+justify-content:center;
+flex-wrap:wrap;
+gap:18px;
+}
+
+.footer-links a{
+color:#cbd5e1;
+}
+
+/* ANIMATION */
+
+.fade-up{
+opacity:0;
+transform:translateY(35px);
+transition:0.8s ease;
+}
+
+.fade-up.visible{
+opacity:1;
+transform:translateY(0);
+}
+
+/* BOTTOM NAV */
+
+.bottom-nav{
+position:fixed;
+
+bottom:0;
+left:0;
+right:0;
+
+height:84px;
+
+background:rgba(6,10,24,0.92);
+
+backdrop-filter:blur(20px);
+
+border-top:1px solid rgba(255,255,255,0.06);
+
+z-index:9999;
+
+display:flex;
+justify-content:space-around;
+align-items:center;
+
+box-shadow:0 -10px 30px rgba(0,0,0,0.35);
+}
+
+.bottom-nav a{
+display:flex;
+flex-direction:column;
+align-items:center;
+gap:5px;
+
+font-size:0.82rem;
+
+color:#94a3b8;
+
+transition:0.3s;
+}
+
+.bottom-nav span{
+font-size:1.35rem;
+}
+
+.bottom-nav a.active{
+color:white;
+}
+
+.bottom-nav a.active span{
+color:#8b5cf6;
+}
+
+/* MOBILE */
+
+@media(max-width:900px){
+
+.mobile-btn{
+display:block;
+}
+
+.nav-links{
+display:none;
+
+position:absolute;
+
+top:78px;
+left:20px;
+right:20px;
+
+background:#111827;
+
+padding:22px;
+
+border-radius:26px;
+
+flex-direction:column;
+
+z-index:999;
+}
+
+.nav-links.active{
+display:flex;
+}
+
+.hero{
+padding:18px 18px 0;
+}
+
+.hero h1{
+font-size:2.4rem;
+line-height:1;
+letter-spacing:-1.5px;
+margin-bottom:12px;
+}
+
+.hero p{
+font-size:0.92rem;
+line-height:1.6;
+}
+
+.section{
+padding:28px 18px;
+}
+
+.section-header{
+margin-bottom:20px;
+}
+
+.section-header h2{
+font-size:1.8rem;
+}
+
+.destinations-grid{
+grid-template-columns:repeat(2,minmax(0,1fr));
+gap:14px;
+}
+
+.destination-card{
+height:220px;
+border-radius:24px;
+}
+
+.destination-overlay{
+padding:16px;
+}
+
+.destination-overlay h3{
+font-size:1.2rem;
+}
+
+.destination-overlay p{
+font-size:0.76rem;
+}
+
+.bottom-nav{
+height:74px;
+}
+
+.bottom-nav span{
+font-size:1.2rem;
+}
+
+.bottom-nav a{
+font-size:0.72rem;
+}
+
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+
+<nav class="navbar">
+
+<div class="logo">🌍 Vidolta</div>
+
+<div class="mobile-btn" onclick="toggleMenu()">☰</div>
+
+<div class="nav-links">
+
+<a href="index.html">
+Accueil
+</a>
+
+<a href="#">
+Mobilité
+</a>
+
+<a href="#">
+Restaurants
+</a>
+
+<a href="#">
+Activités
+</a>
+
+</div>
+
+</nav>
+
+<!-- HERO -->
+
+<section class="hero">
+
+<div class="hero-container fade-up">
+
+<h1>
+Explore les <span>destinations</span>
+</h1>
+
+<p>
+Capitales européennes, villes bord de mer,
+escapades culturelles et découvertes urbaines.
+Trouve l’ambiance parfaite pour ton prochain voyage.
+</p>
+
+</div>
+
+</section>
+
+<!-- EUROPE -->
+
+<section class="section fade-up">
+
+<div class="section-header">
+<h2>🌍 Europe</h2>
+
+<div class="category-tag">
+Capitales & city-break
+</div>
+</div>
+
+<div class="destinations-grid">
+
+<a class="destination-card" href="paris.html">
+
+<img
+src="https://i.ibb.co/BVhMM2sk/Screenshot-20260514-221622-Gmail-2.jpg"
+alt="Paris">
+
+<div class="destination-overlay">
+<h3>Paris</h3>
+<p>France</p>
+</div>
+
+</a>
+
+<a class="destination-card" href="rome.html">
+
+<img
+src="https://i.ibb.co/gZ6L8GRz/Screenshot-20260517-033159-Chrome.png"
+alt="Rome">
+
+<div class="destination-overlay">
+<h3>Rome</h3>
+<p>Italie</p>
+</div>
+
+</a>
+
+<a class="destination-card" href="amsterdam.html">
+
+<img
+src="https://images.unsplash.com/photo-1512470876302-972faa2aa9a4?q=80&w=1200&auto=format&fit=crop"
+alt="Amsterdam">
+
+<div class="destination-overlay">
+<h3>Amsterdam</h3>
+<p>Pays-Bas</p>
+</div>
+
+</a>
+
+<a class="destination-card" href="athenes.html">
+
+<img
+src="https://i.ibb.co/cSk07tMV/Screenshot-20260517-132108-Chrome.png"
+alt="Athènes">
+
+<div class="destination-overlay">
+<h3>Athènes</h3>
+<p>Grèce</p>
+</div>
+
+</a>
+
+</div>
+
+</section>
+
+<!-- BORD DE MER -->
+
+<section class="section fade-up">
+
+<div class="section-header">
+<h2>🏖️ Bord de mer</h2>
+
+<div class="category-tag">
+Soleil & détente
+</div>
+</div>
+
+<div class="destinations-grid">
+
+<a class="destination-card" href="barcelone.html">
+
+<img
+src="https://images.unsplash.com/photo-1583422409516-2895a77efded?q=80&w=1200&auto=format&fit=crop"
+alt="Barcelone">
+
+<div class="destination-overlay">
+<h3>Barcelone</h3>
+<p>Espagne</p>
+</div>
+
+</a>
+
+<a class="destination-card" href="majorque.html">
+
+<img
+src="https://i.ibb.co/9H9d4pP1/Screenshot-20260517-130713-Chrome.png"
+alt="Majorque">
+
+<div class="destination-overlay">
+<h3>Majorque</h3>
+<p>Espagne</p>
+</div>
+
+</a>
+
+<a class="destination-card" href="marrakech.html">
+
+<img
+src="https://images.unsplash.com/photo-1597212618440-806262de4f6b?q=80&w=1200&auto=format&fit=crop"
+alt="Marrakech">
+
+<div class="destination-overlay">
+<h3>Marrakech</h3>
+<p>Maroc</p>
+</div>
+
+</a>
+
+</div>
+
+</section>
+
+<!-- FRANCE -->
+
+<section class="section fade-up">
+
+<div class="section-header">
+<h2>🇫🇷 France</h2>
+
+<div class="category-tag">
+Culture & gastronomie
+</div>
+</div>
+
+<div class="destinations-grid">
+
+<a class="destination-card" href="lyon.html">
+
+<img
+src="https://i.ibb.co/jvX3dNG0/Screenshot-20260516-000603-Chrome.png"
+alt="Lyon">
+
+<div class="destination-overlay">
+<h3>Lyon</h3>
+<p>France</p>
+</div>
+
+</a>
+
+<a class="destination-card" href="bordeaux.html">
+
+<img
+src="https://i.ibb.co/d4vcqT8c/Screenshot-20260516-233028-Chrome.png"
+alt="Bordeaux">
+
+<div class="destination-overlay">
+<h3>Bordeaux</h3>
+<p>France</p>
+</div>
+
+</a>
+
+<a class="destination-card" href="nantes.html">
+
+<img
+src="https://i.ibb.co/VcfFs0Bg/Screenshot-20260514-222533-Gmail-2.jpg"
+alt="Nantes">
+
+<div class="destination-overlay">
+<h3>Nantes</h3>
+<p>France</p>
+</div>
+
+</a>
+
+</div>
+
+</section>
+
+<!-- FOOTER -->
+
+<footer>
+
+<p>
+© 2026 Vidolta — Te guide partout où tu vas.
+</p>
+
+<div class="footer-links">
+
+<a href="about.html">
+À propos
+</a>
+
+<a href="mentions-legales.html">
+Mentions légales
+</a>
+
+<a href="confidentialite.html">
+Confidentialité
+</a>
+
+<a href="contact.html">
+Contact
+</a>
+
+</div>
+
+</footer>
+
+<!-- BOTTOM NAV -->
+
+<div class="bottom-nav">
+
+<a href="index.html">
+<span>🏠</span>
+<p>Accueil</p>
+</a>
+
+<a href="#" class="active">
+<span>🧭</span>
+<p>Destinations</p>
+</a>
+
+<a href="#">
+<span>❤️</span>
+<p>Favoris</p>
+</a>
+
+<a href="#">
+<span>👤</span>
+<p>Profil</p>
+</a>
+
+</div>
+
+<script>
+
+function toggleMenu(){
+
+const nav = document.querySelector('.nav-links');
+
+nav.classList.toggle('active');
+
+}
+
+const observer = new IntersectionObserver(entries => {
+
+entries.forEach(entry => {
+
+if(entry.isIntersecting){
+entry.target.classList.add('visible');
+}
+
+});
+
+},{
+threshold:0.15
+});
+
+document.querySelectorAll('.fade-up').forEach(el => {
+observer.observe(el);
+});
+
+</script>
+
+</body>
+</html>
