@@ -1,0 +1,581 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+<title>Carte Tokyo — Vidolta</title>
+
+<meta name="description"
+content="Carte simplifiée du réseau ferroviaire et des quartiers incontournables de Tokyo avec Vidolta.">
+
+<meta name="theme-color" content="#050816">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+:root{
+--bg:#050816;
+--primary:#7c5cff;
+--primary2:#5b8cff;
+--text:#ffffff;
+--muted:#94a3b8;
+}
+
+html{
+scroll-behavior:smooth;
+}
+
+body{
+font-family:'Poppins',sans-serif;
+
+background:
+radial-gradient(circle at top right,rgba(124,92,255,0.18),transparent 30%),
+radial-gradient(circle at top left,rgba(91,140,255,0.14),transparent 25%),
+linear-gradient(to bottom,#081120 0%,#050816 100%);
+
+color:var(--text);
+
+overflow-x:hidden;
+}
+
+/* NAVBAR */
+
+.navbar{
+position:sticky;
+top:0;
+z-index:1000;
+
+padding:10px 16px;
+
+display:flex;
+justify-content:space-between;
+align-items:center;
+
+background:rgba(5,8,22,0.72);
+
+backdrop-filter:blur(18px);
+
+border-bottom:1px solid rgba(255,255,255,0.04);
+}
+
+.logo{
+font-size:1.65rem;
+font-weight:800;
+color:white;
+text-decoration:none;
+}
+
+.nav-links{
+display:flex;
+gap:28px;
+align-items:center;
+}
+
+.nav-links a{
+color:#cbd5e1;
+font-size:0.95rem;
+text-decoration:none;
+transition:0.3s;
+}
+
+.nav-links a:hover{
+color:white;
+}
+
+.mobile-btn{
+display:none;
+font-size:2rem;
+cursor:pointer;
+color:white;
+}
+
+/* HERO */
+
+.hero{
+padding:60px 20px 30px;
+text-align:center;
+}
+
+.hero h1{
+font-size:4rem;
+line-height:0.95;
+letter-spacing:-3px;
+
+margin-bottom:18px;
+}
+
+.hero h1 span{
+background:linear-gradient(90deg,#8b5cf6,#60a5fa);
+
+-webkit-background-clip:text;
+-webkit-text-fill-color:transparent;
+}
+
+.hero p{
+max-width:760px;
+margin:auto;
+
+font-size:1.05rem;
+line-height:1.9;
+
+color:#dbe4f0;
+}
+
+/* MAP */
+
+.map-section{
+max-width:1450px;
+margin:auto;
+
+padding:10px 20px 80px;
+}
+
+.map-wrapper{
+position:relative;
+
+border-radius:34px;
+
+overflow:hidden;
+
+border:1px solid rgba(255,255,255,0.06);
+
+box-shadow:
+0 18px 45px rgba(0,0,0,0.32),
+inset 0 1px 0 rgba(255,255,255,0.03);
+
+background:#0f172a;
+}
+
+.map-wrapper img{
+width:100%;
+display:block;
+}
+
+/* INFO GRID */
+
+.info-grid{
+max-width:1300px;
+margin:auto;
+
+padding:0 20px 90px;
+
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+
+gap:24px;
+}
+
+.info-card{
+background:
+linear-gradient(
+135deg,
+rgba(18,26,52,0.92),
+rgba(12,18,38,0.88)
+);
+
+padding:28px;
+
+border-radius:28px;
+
+border:1px solid rgba(255,255,255,0.05);
+
+box-shadow:0 12px 35px rgba(0,0,0,0.24);
+
+transition:0.35s;
+}
+
+.info-card:hover{
+transform:translateY(-5px);
+
+border-color:rgba(99,102,241,0.4);
+}
+
+.info-card h3{
+font-size:1.2rem;
+margin-bottom:14px;
+}
+
+.info-card p{
+line-height:1.8;
+color:#cbd5e1;
+}
+
+/* CTA */
+
+.cta{
+max-width:1200px;
+margin:0 auto 90px;
+
+padding:0 20px;
+}
+
+.cta-box{
+background:
+linear-gradient(
+135deg,
+rgba(124,92,255,0.22),
+rgba(91,140,255,0.16)
+);
+
+padding:60px 30px;
+
+border-radius:34px;
+
+text-align:center;
+
+backdrop-filter:blur(24px);
+
+border:1px solid rgba(255,255,255,0.08);
+}
+
+.cta-box h2{
+font-size:2.5rem;
+margin-bottom:18px;
+}
+
+.cta-box p{
+max-width:720px;
+margin:auto;
+
+line-height:1.9;
+
+color:#e2e8f0;
+
+margin-bottom:30px;
+}
+
+.cta-box a{
+display:inline-flex;
+align-items:center;
+justify-content:center;
+
+height:52px;
+
+padding:0 24px;
+
+border-radius:18px;
+
+background:white;
+
+color:#111827;
+
+font-weight:700;
+
+text-decoration:none;
+
+transition:0.3s;
+}
+
+.cta-box a:hover{
+transform:translateY(-2px);
+}
+
+/* FOOTER */
+
+footer{
+padding:70px 20px;
+text-align:center;
+color:#94a3b8;
+line-height:2;
+}
+
+.footer-links{
+margin-top:18px;
+
+display:flex;
+justify-content:center;
+flex-wrap:wrap;
+
+gap:18px;
+}
+
+.footer-links a{
+color:#cbd5e1;
+text-decoration:none;
+}
+
+/* MOBILE */
+
+@media(max-width:900px){
+
+.mobile-btn{
+display:block;
+}
+
+.nav-links{
+display:none;
+
+position:absolute;
+
+top:78px;
+left:20px;
+right:20px;
+
+background:#111827;
+
+padding:22px;
+
+border-radius:26px;
+
+flex-direction:column;
+
+z-index:999;
+}
+
+.nav-links.active{
+display:flex;
+}
+
+.hero{
+padding:40px 18px 24px;
+}
+
+.hero h1{
+font-size:2.8rem;
+letter-spacing:-2px;
+}
+
+.hero p{
+font-size:0.95rem;
+line-height:1.8;
+}
+
+.map-section{
+padding:0 18px 60px;
+}
+
+.map-wrapper{
+border-radius:26px;
+}
+
+.info-grid{
+padding:0 18px 70px;
+gap:18px;
+}
+
+.info-card{
+padding:22px;
+border-radius:24px;
+}
+
+.cta{
+padding:0 18px;
+margin-bottom:70px;
+}
+
+.cta-box{
+padding:40px 22px;
+border-radius:28px;
+}
+
+.cta-box h2{
+font-size:2rem;
+}
+
+.cta-box p{
+font-size:0.95rem;
+line-height:1.8;
+}
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+
+<nav class="navbar">
+
+<a href="index.html" class="logo">
+🌍 Vidolta
+</a>
+
+<div class="mobile-btn" onclick="toggleMenu()">
+☰
+</div>
+
+<div class="nav-links">
+
+<a href="index.html">
+Accueil
+</a>
+
+<a href="tokyo.html">
+Tokyo
+</a>
+
+<a href="destinations.html">
+Destinations
+</a>
+
+</div>
+
+</nav>
+
+<!-- HERO -->
+
+<section class="hero">
+
+<h1>
+Carte <span>Tokyo</span>
+</h1>
+
+<p>
+Une version simplifiée et visuelle du réseau essentiel de Tokyo
+pour comprendre rapidement les quartiers incontournables
+et les principales connexions ferroviaires.
+</p>
+
+</section>
+
+<!-- MAP -->
+
+<section class="map-section">
+
+<div class="map-wrapper">
+
+<img
+src="tokyo-map.png"
+alt="Carte simplifiée du réseau Tokyo Vidolta">
+
+</div>
+
+</section>
+
+<!-- INFO -->
+
+<section class="info-grid">
+
+<div class="info-card">
+
+<h3>
+🚇 JR Yamanote Line
+</h3>
+
+<p>
+La ligne circulaire principale de Tokyo relie les quartiers les plus importants comme Shibuya, Shinjuku, Ueno et Tokyo Station.
+</p>
+
+</div>
+
+<div class="info-card">
+
+<h3>
+📍 Quartiers essentiels
+</h3>
+
+<p>
+Shibuya pour l’ambiance jeune, Ginza pour le luxe, Akihabara pour la culture pop et Asakusa pour les temples traditionnels.
+</p>
+
+</div>
+
+<div class="info-card">
+
+<h3>
+📶 Voyager facilement
+</h3>
+
+<p>
+Une carte Suica ou Pasmo permet d’utiliser facilement les trains, métros et transports japonais dans toute la ville.
+</p>
+
+</div>
+
+<div class="info-card">
+
+<h3>
+🚄 Connexions Japon
+</h3>
+
+<p>
+Depuis Tokyo Station, le Shinkansen permet de rejoindre Kyoto, Osaka ou le Mont Fuji rapidement.
+</p>
+
+</div>
+
+</section>
+
+<!-- CTA -->
+
+<section class="cta">
+
+<div class="cta-box">
+
+<h2>
+Explorer Tokyo autrement
+</h2>
+
+<p>
+Vidolta simplifie les grandes villes grâce à des guides visuels,
+des conseils mobilité et des expériences pensées pour le mobile.
+</p>
+
+<a href="tokyo.html">
+Retour à Tokyo →
+</a>
+
+</div>
+
+</section>
+
+<!-- FOOTER -->
+
+<footer>
+
+<p>
+© 2026 Vidolta — Tokyo Map
+</p>
+
+<div class="footer-links">
+
+<a href="about.html">
+À propos
+</a>
+
+<a href="mentions-legales.html">
+Mentions légales
+</a>
+
+<a href="confidentialite.html">
+Confidentialité
+</a>
+
+<a href="contact.html">
+Contact
+</a>
+
+</div>
+
+</footer>
+
+<script>
+
+function toggleMenu(){
+
+const nav = document.querySelector('.nav-links');
+
+nav.classList.toggle('active');
+
+}
+
+</script>
+
+</body>
+</html>
