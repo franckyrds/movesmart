@@ -2,13 +2,14 @@
 <html lang="fr">
 
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 
 <title>Destinations — Vidolta</title>
 
 <meta name="description"
-content="Explore les plus belles destinations avec Vidolta : capitales européennes, villes bord de mer, escapades montagne et découvertes urbaines.">
+content="Explore les plus belles destinations avec Vidolta : Paris, Londres, Tokyo, New York, Prague, Rome, Séoul, Barcelone et bien plus encore.">
 
 <meta name="theme-color" content="#060b1f">
 
@@ -113,7 +114,7 @@ cursor:pointer;
 /* HERO */
 
 .hero{
-padding:34px 22px 10px;
+padding:34px 22px 12px;
 position:relative;
 overflow:hidden;
 }
@@ -145,7 +146,7 @@ z-index:2;
 }
 
 .hero h1{
-font-size:4.8rem;
+font-size:5rem;
 line-height:0.92;
 letter-spacing:-4px;
 
@@ -160,12 +161,35 @@ background:linear-gradient(90deg,#8b5cf6,#60a5fa);
 }
 
 .hero p{
-max-width:720px;
+max-width:760px;
 
 font-size:1.08rem;
 line-height:1.85;
 
 color:#dbe4f0;
+
+margin-bottom:22px;
+}
+
+.hero-tags{
+display:flex;
+flex-wrap:wrap;
+gap:12px;
+}
+
+.hero-tag{
+padding:12px 18px;
+
+border-radius:18px;
+
+background:rgba(255,255,255,0.06);
+
+border:1px solid rgba(255,255,255,0.06);
+
+color:#dbe4f0;
+
+font-size:0.85rem;
+font-weight:600;
 }
 
 /* SECTION */
@@ -173,7 +197,7 @@ color:#dbe4f0;
 .section{
 max-width:1300px;
 margin:auto;
-padding:40px 22px;
+padding:34px 22px;
 }
 
 .section-header{
@@ -181,7 +205,9 @@ display:flex;
 justify-content:space-between;
 align-items:center;
 
-margin-bottom:26px;
+margin-bottom:24px;
+gap:16px;
+flex-wrap:wrap;
 }
 
 .section-header h2{
@@ -189,13 +215,35 @@ font-size:2.2rem;
 line-height:1;
 }
 
+/* CATEGORY TAG */
+
+.category-tag{
+display:inline-flex;
+align-items:center;
+
+padding:10px 16px;
+
+border-radius:18px;
+
+background:rgba(255,255,255,0.06);
+
+border:1px solid rgba(255,255,255,0.06);
+
+color:#dbe4f0;
+
+font-size:0.84rem;
+font-weight:600;
+}
+
 /* DESTINATION GRID */
 
 .destinations-grid{
 display:grid;
-grid-template-columns:repeat(4,minmax(0,1fr));
-gap:20px;
+grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+gap:18px;
 }
+
+/* CARD */
 
 .destination-card{
 height:290px;
@@ -226,7 +274,9 @@ transform:translateY(-8px);
 .destination-card img{
 width:100%;
 height:100%;
+
 object-fit:cover;
+
 transition:0.6s;
 }
 
@@ -247,39 +297,61 @@ justify-content:flex-end;
 background:
 linear-gradient(
 to top,
-rgba(0,0,0,0.90),
+rgba(0,0,0,0.92),
 rgba(0,0,0,0.18)
 );
 }
 
 .destination-overlay h3{
-font-size:1.65rem;
+font-size:1.7rem;
 margin-bottom:4px;
 }
 
 .destination-overlay p{
-font-size:0.88rem;
+font-size:0.9rem;
 color:#d1d5db;
 }
 
-/* CATEGORY TAG */
+/* TRENDING */
 
-.category-tag{
-display:inline-flex;
-align-items:center;
+.trending-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:18px;
+}
 
-padding:10px 16px;
+.trending-card{
+padding:24px;
 
-border-radius:18px;
+border-radius:28px;
 
-background:rgba(255,255,255,0.06);
+background:
+linear-gradient(
+135deg,
+rgba(18,26,52,0.92),
+rgba(12,18,38,0.88)
+);
 
-border:1px solid rgba(255,255,255,0.06);
+border:1px solid rgba(255,255,255,0.05);
 
-color:#dbe4f0;
+transition:0.35s;
+}
 
-font-size:0.84rem;
-font-weight:600;
+.trending-card:hover{
+transform:translateY(-5px);
+
+border-color:rgba(124,92,255,0.35);
+}
+
+.trending-card h3{
+font-size:1.3rem;
+margin-bottom:10px;
+}
+
+.trending-card p{
+line-height:1.7;
+color:#cbd5e1;
+font-size:0.94rem;
 }
 
 /* FOOTER */
@@ -400,19 +472,28 @@ display:flex;
 }
 
 .hero{
-padding:18px 18px 0;
+padding:20px 18px 0;
 }
 
 .hero h1{
-font-size:2.4rem;
+font-size:2.7rem;
 line-height:1;
-letter-spacing:-1.5px;
+letter-spacing:-2px;
 margin-bottom:12px;
 }
 
 .hero p{
-font-size:0.92rem;
-line-height:1.6;
+font-size:0.94rem;
+line-height:1.65;
+}
+
+.hero-tags{
+gap:10px;
+}
+
+.hero-tag{
+padding:10px 14px;
+font-size:0.76rem;
 }
 
 .section{
@@ -464,6 +545,7 @@ font-size:0.72rem;
 }
 
 </style>
+
 </head>
 
 <body>
@@ -478,21 +560,10 @@ font-size:0.72rem;
 
 <div class="nav-links">
 
-<a href="index.html">
-Accueil
-</a>
-
-<a href="#">
-Mobilité
-</a>
-
-<a href="#">
-Restaurants
-</a>
-
-<a href="#">
-Activités
-</a>
+<a href="index.html">Accueil</a>
+<a href="#">Mobilité</a>
+<a href="#">Restaurants</a>
+<a href="#">Activités</a>
 
 </div>
 
@@ -505,14 +576,83 @@ Activités
 <div class="hero-container fade-up">
 
 <h1>
-Explore les <span>destinations</span>
+Explore le <span>monde</span>
 </h1>
 
 <p>
-Capitales européennes, villes bord de mer,
-escapades culturelles et découvertes urbaines.
-Trouve l’ambiance parfaite pour ton prochain voyage.
+Capitales européennes,
+métropoles iconiques,
+destinations soleil,
+rooftops,
+culture,
+mobilité et expériences premium.
+Découvre le monde avec Vidolta.
 </p>
+
+<div class="hero-tags">
+
+<div class="hero-tag">🔥 Tokyo</div>
+<div class="hero-tag">🗽 New York</div>
+<div class="hero-tag">🎄 Prague</div>
+<div class="hero-tag">🏜️ Marrakech</div>
+<div class="hero-tag">🌃 Londres</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- TENDANCES -->
+
+<section class="section fade-up">
+
+<div class="section-header">
+
+<h2>🔥 Destinations populaires</h2>
+
+<div class="category-tag">
+Tendances Vidolta
+</div>
+
+</div>
+
+<div class="trending-grid">
+
+<div class="trending-card">
+<h3>Tokyo</h3>
+<p>
+Métropole futuriste,
+nightlife,
+quartiers lumineux et culture japonaise unique.
+</p>
+</div>
+
+<div class="trending-card">
+<h3>Prague</h3>
+<p>
+Architecture gothique,
+tramways historiques et ambiance magique en Europe.
+</p>
+</div>
+
+<div class="trending-card">
+<h3>Marrakech</h3>
+<p>
+Souks,
+rooftops,
+désert et lumières marocaines uniques.
+</p>
+</div>
+
+<div class="trending-card">
+<h3>New York</h3>
+<p>
+NBA,
+Times Square,
+Central Park et énergie américaine iconique.
+</p>
+</div>
 
 </div>
 
@@ -523,204 +663,151 @@ Trouve l’ambiance parfaite pour ton prochain voyage.
 <section class="section fade-up">
 
 <div class="section-header">
+
 <h2>🌍 Europe</h2>
 
 <div class="category-tag">
 Capitales & city-break
 </div>
+
 </div>
 
 <div class="destinations-grid">
 
 <a class="destination-card" href="paris.html">
-
-<img
-src="https://i.ibb.co/BVhMM2sk/Screenshot-20260514-221622-Gmail-2.jpg"
-alt="Paris">
-
+<img src="images/paris.png" alt="Paris">
 <div class="destination-overlay">
 <h3>Paris</h3>
 <p>France</p>
 </div>
+</a>
 
+<a class="destination-card" href="londres.html">
+<img src="images/londres.png" alt="Londres">
+<div class="destination-overlay">
+<h3>Londres</h3>
+<p>Royaume-Uni</p>
+</div>
 </a>
 
 <a class="destination-card" href="rome.html">
-
-<img
-src="https://i.ibb.co/gZ6L8GRz/Screenshot-20260517-033159-Chrome.png"
-alt="Rome">
-
+<img src="images/rome.png" alt="Rome">
 <div class="destination-overlay">
 <h3>Rome</h3>
 <p>Italie</p>
 </div>
+</a>
 
+<a class="destination-card" href="prague.html">
+<img src="images/prague.png" alt="Prague">
+<div class="destination-overlay">
+<h3>Prague</h3>
+<p>République tchèque</p>
+</div>
 </a>
 
 <a class="destination-card" href="munich.html">
-
-<img
-src="https://images.unsplash.com/photo-1595867818082-083862f3d630?q=80&w=1600&auto=format&fit=crop"
-alt="Munich">
-
+<img src="images/munich.png" alt="Munich">
 <div class="destination-overlay">
 <h3>Munich</h3>
 <p>Allemagne</p>
 </div>
-
 </a>
-
-<a class="destination-card" href="amsterdam.html">
-
-<img
-src="https://images.unsplash.com/photo-1512470876302-972faa2aa9a4?q=80&w=1200&auto=format&fit=crop"
-alt="Amsterdam">
-
-<div class="destination-overlay">
-<h3>Amsterdam</h3>
-<p>Pays-Bas</p>
-</div>
-
-</a>
-
-<a class="destination-card" href="athenes.html">
-
-<img
-src="https://i.ibb.co/cSk07tMV/Screenshot-20260517-132108-Chrome.png"
-alt="Athènes">
-
-<div class="destination-overlay">
-<h3>Athènes</h3>
-<p>Grèce</p>
-</div>
-
-</a>
-
-</div>
-
-</section>
-
-<!-- BORD DE MER -->
-
-<section class="section fade-up">
-
-<div class="section-header">
-<h2>🏖️ Bord de mer</h2>
-
-<div class="category-tag">
-Soleil & détente
-</div>
-</div>
-
-<div class="destinations-grid">
 
 <a class="destination-card" href="barcelone.html">
-
-<img
-src="https://images.unsplash.com/photo-1583422409516-2895a77efded?q=80&w=1200&auto=format&fit=crop"
-alt="Barcelone">
-
+<img src="images/barcelone.png" alt="Barcelone">
 <div class="destination-overlay">
 <h3>Barcelone</h3>
 <p>Espagne</p>
 </div>
-
 </a>
 
-<a class="destination-card" href="majorque.html">
-
-<img
-src="https://i.ibb.co/9H9d4pP1/Screenshot-20260517-130713-Chrome.png"
-alt="Majorque">
-
+<a class="destination-card" href="istanbul.html">
+<img src="images/istanbul.png" alt="Istanbul">
 <div class="destination-overlay">
-<h3>Majorque</h3>
-<p>Espagne</p>
+<h3>Istanbul</h3>
+<p>Turquie</p>
 </div>
-
-</a>
-
-<a class="destination-card" href="marrakech.html">
-
-<img
-src="https://images.unsplash.com/photo-1597212618440-806262de4f6b?q=80&w=1200&auto=format&fit=crop"
-alt="Marrakech">
-
-<div class="destination-overlay">
-<h3>Marrakech</h3>
-<p>Maroc</p>
-</div>
-
 </a>
 
 </div>
 
 </section>
 
-<!-- ASIE -->
-
-<section class="section fade-up">
-
-...
-    
-</section>
-
-<!-- FRANCE -->
-
-<section class="section fade-up">
-
-<!-- FRANCE -->
+<!-- GRANDES METROPOLES -->
 
 <section class="section fade-up">
 
 <div class="section-header">
-<h2>🇫🇷 France</h2>
+
+<h2>🌃 Grandes métropoles</h2>
 
 <div class="category-tag">
-Culture & gastronomie
+Skyline & nightlife
 </div>
+
 </div>
 
 <div class="destinations-grid">
 
-<a class="destination-card" href="lyon.html">
-
-<img
-src="https://i.ibb.co/jvX3dNG0/Screenshot-20260516-000603-Chrome.png"
-alt="Lyon">
-
+<a class="destination-card" href="new-york.html">
+<img src="images/new-york.png" alt="New York">
 <div class="destination-overlay">
-<h3>Lyon</h3>
-<p>France</p>
+<h3>New York</h3>
+<p>États-Unis</p>
 </div>
-
 </a>
 
-<a class="destination-card" href="bordeaux.html">
-
-<img
-src="https://i.ibb.co/d4vcqT8c/Screenshot-20260516-233028-Chrome.png"
-alt="Bordeaux">
-
+<a class="destination-card" href="tokyo.html">
+<img src="images/tokyo.png" alt="Tokyo">
 <div class="destination-overlay">
-<h3>Bordeaux</h3>
-<p>France</p>
+<h3>Tokyo</h3>
+<p>Japon</p>
 </div>
-
 </a>
 
-<a class="destination-card" href="nantes.html">
-
-<img
-src="https://i.ibb.co/VcfFs0Bg/Screenshot-20260514-222533-Gmail-2.jpg"
-alt="Nantes">
-
+<a class="destination-card" href="seoul.html">
+<img src="images/seoul.png" alt="Séoul">
 <div class="destination-overlay">
-<h3>Nantes</h3>
-<p>France</p>
+<h3>Séoul</h3>
+<p>Corée du Sud</p>
+</div>
+</a>
+
 </div>
 
+</section>
+
+<!-- EXPERIENCES -->
+
+<section class="section fade-up">
+
+<div class="section-header">
+
+<h2>🏜️ Expériences & soleil</h2>
+
+<div class="category-tag">
+Rooftops & découvertes
+</div>
+
+</div>
+
+<div class="destinations-grid">
+
+<a class="destination-card" href="marrakech.html">
+<img src="images/marrakech.png" alt="Marrakech">
+<div class="destination-overlay">
+<h3>Marrakech</h3>
+<p>Maroc</p>
+</div>
+</a>
+
+<a class="destination-card" href="majorque.html">
+<img src="images/majorque.png" alt="Majorque">
+<div class="destination-overlay">
+<h3>Majorque</h3>
+<p>Espagne</p>
+</div>
 </a>
 
 </div>
@@ -737,21 +824,10 @@ alt="Nantes">
 
 <div class="footer-links">
 
-<a href="about.html">
-À propos
-</a>
-
-<a href="mentions-legales.html">
-Mentions légales
-</a>
-
-<a href="confidentialite.html">
-Confidentialité
-</a>
-
-<a href="contact.html">
-Contact
-</a>
+<a href="about.html">À propos</a>
+<a href="mentions-legales.html">Mentions légales</a>
+<a href="confidentialite.html">Confidentialité</a>
+<a href="contact.html">Contact</a>
 
 </div>
 
@@ -814,4 +890,5 @@ observer.observe(el);
 </script>
 
 </body>
+
 </html>
