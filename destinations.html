@@ -52,7 +52,6 @@ color:var(--text);
 
 overflow-x:hidden;
 
-padding-bottom:95px;
 }
 
 a{
@@ -379,57 +378,6 @@ opacity:1;
 transform:translateY(0);
 }
 
-/* BOTTOM NAV */
-
-.bottom-nav{
-position:fixed;
-
-bottom:0;
-left:0;
-right:0;
-
-height:84px;
-
-background:rgba(6,10,24,0.92);
-
-backdrop-filter:blur(20px);
-
-border-top:1px solid rgba(255,255,255,0.06);
-
-z-index:9999;
-
-display:flex;
-justify-content:space-around;
-align-items:center;
-
-box-shadow:0 -10px 30px rgba(0,0,0,0.35);
-}
-
-.bottom-nav a{
-display:flex;
-flex-direction:column;
-align-items:center;
-gap:5px;
-
-font-size:0.82rem;
-
-color:#94a3b8;
-
-transition:0.3s;
-}
-
-.bottom-nav span{
-font-size:1.35rem;
-}
-
-.bottom-nav a.active{
-color:white;
-}
-
-.bottom-nav a.active span{
-color:#8b5cf6;
-}
-
 /* MOBILE */
 
 @media(max-width:900px){
@@ -529,18 +477,6 @@ font-size:1.2rem;
 
 .destination-overlay p{
 font-size:0.76rem;
-}
-
-.bottom-nav{
-height:74px;
-}
-
-.bottom-nav span{
-font-size:1.2rem;
-}
-
-.bottom-nav a{
-font-size:0.72rem;
 }
 
 }
@@ -891,32 +827,6 @@ Désert & culture
 </div>
 
 </footer>
-
-<!-- BOTTOM NAV -->
-
-<div class="bottom-nav">
-
-<a href="index.html">
-<span>🏠</span>
-<p>Accueil</p>
-</a>
-
-<a href="#" class="active">
-<span>🧭</span>
-<p>Destinations</p>
-</a>
-
-<a href="#">
-<span>❤️</span>
-<p>Favoris</p>
-</a>
-
-<a href="#">
-<span>👤</span>
-<p>Profil</p>
-</a>
-
-</div>
 
 <script>
 
