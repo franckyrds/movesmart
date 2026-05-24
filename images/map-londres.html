@@ -1,0 +1,544 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Carte Londres — Vidolta</title>
+
+<meta name="theme-color" content="#060b1f">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+body{
+font-family:'Poppins',sans-serif;
+
+background:
+radial-gradient(circle at top right,rgba(124,92,255,0.18),transparent 30%),
+radial-gradient(circle at top left,rgba(91,140,255,0.14),transparent 25%),
+linear-gradient(to bottom,#081120 0%,#050816 100%);
+
+color:white;
+
+overflow-x:hidden;
+}
+
+/* NAVBAR */
+
+.navbar{
+position:sticky;
+top:0;
+z-index:1000;
+
+padding:12px 18px;
+
+display:flex;
+justify-content:space-between;
+align-items:center;
+
+background:rgba(5,8,22,0.72);
+
+backdrop-filter:blur(18px);
+
+border-bottom:1px solid rgba(255,255,255,0.04);
+}
+
+.logo{
+font-size:1.6rem;
+font-weight:800;
+}
+
+.back-link{
+padding:12px 18px;
+
+border-radius:16px;
+
+background:rgba(255,255,255,0.06);
+
+border:1px solid rgba(255,255,255,0.06);
+
+color:#dbe4f0;
+
+text-decoration:none;
+
+font-size:0.9rem;
+font-weight:600;
+
+transition:0.3s;
+}
+
+.back-link:hover{
+transform:translateY(-2px);
+background:rgba(124,92,255,0.18);
+}
+
+/* HERO */
+
+.hero{
+padding:90px 20px 40px;
+text-align:center;
+}
+
+.hero h1{
+font-size:4.5rem;
+line-height:0.95;
+letter-spacing:-3px;
+
+margin-bottom:18px;
+}
+
+.hero h1 span{
+background:linear-gradient(90deg,#8b5cf6,#60a5fa);
+
+-webkit-background-clip:text;
+-webkit-text-fill-color:transparent;
+}
+
+.hero p{
+max-width:760px;
+margin:auto;
+
+line-height:1.9;
+
+font-size:1.08rem;
+
+color:#dbe4f0;
+}
+
+/* MAP */
+
+.map-section{
+max-width:1400px;
+margin:auto;
+padding:20px;
+}
+
+.map-container{
+position:relative;
+
+overflow:hidden;
+
+border-radius:36px;
+
+border:1px solid rgba(255,255,255,0.06);
+
+box-shadow:0 18px 45px rgba(0,0,0,0.32);
+}
+
+.map-container img{
+width:100%;
+display:block;
+
+filter:brightness(0.92);
+}
+
+/* TAGS */
+
+.map-tag{
+position:absolute;
+
+padding:12px 18px;
+
+border-radius:18px;
+
+background:rgba(8,15,35,0.82);
+
+backdrop-filter:blur(18px);
+
+border:1px solid rgba(255,255,255,0.08);
+
+box-shadow:0 10px 25px rgba(0,0,0,0.28);
+
+font-size:0.88rem;
+font-weight:600;
+
+color:white;
+}
+
+/* POSITIONS */
+
+.tag-soho{
+top:38%;
+left:42%;
+}
+
+.tag-camden{
+top:22%;
+left:38%;
+}
+
+.tag-canary{
+top:45%;
+right:18%;
+}
+
+.tag-westminster{
+bottom:24%;
+left:42%;
+}
+
+.tag-shoreditch{
+top:28%;
+right:28%;
+}
+
+.tag-heathrow{
+bottom:14%;
+left:12%;
+}
+
+.tag-elizabeth{
+top:58%;
+left:30%;
+}
+
+/* INFO */
+
+.info-grid{
+max-width:1300px;
+
+margin:auto;
+
+padding:60px 20px 90px;
+
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+
+gap:24px;
+}
+
+.info-card{
+background:
+linear-gradient(
+135deg,
+rgba(18,26,52,0.92),
+rgba(12,18,38,0.88)
+);
+
+padding:30px;
+
+border-radius:28px;
+
+border:1px solid rgba(255,255,255,0.05);
+
+box-shadow:0 12px 35px rgba(0,0,0,0.24);
+
+transition:0.35s;
+}
+
+.info-card:hover{
+transform:translateY(-6px);
+
+border-color:rgba(99,102,241,0.4);
+}
+
+.info-card h3{
+font-size:1.25rem;
+margin-bottom:14px;
+}
+
+.info-card p{
+line-height:1.8;
+color:#cbd5e1;
+}
+
+/* CTA */
+
+.cta{
+max-width:1200px;
+
+margin:0 auto 90px;
+
+padding:60px 28px;
+
+border-radius:36px;
+
+text-align:center;
+
+background:
+linear-gradient(
+135deg,
+rgba(124,92,255,0.22),
+rgba(91,140,255,0.16)
+);
+
+backdrop-filter:blur(24px);
+
+border:1px solid rgba(255,255,255,0.08);
+}
+
+.cta h2{
+font-size:2.6rem;
+margin-bottom:18px;
+}
+
+.cta p{
+max-width:760px;
+margin:auto;
+
+line-height:1.9;
+
+color:#dbe4f0;
+
+margin-bottom:30px;
+}
+
+.cta a{
+display:inline-block;
+
+padding:16px 26px;
+
+border-radius:18px;
+
+background:white;
+
+color:#111827;
+
+font-weight:700;
+
+text-decoration:none;
+
+transition:0.3s;
+}
+
+.cta a:hover{
+transform:translateY(-3px);
+}
+
+/* FOOTER */
+
+footer{
+padding:50px 20px 80px;
+
+text-align:center;
+
+color:#94a3b8;
+
+line-height:2;
+}
+
+/* MOBILE */
+
+@media(max-width:900px){
+
+.hero{
+padding:70px 18px 28px;
+}
+
+.hero h1{
+font-size:2.8rem;
+letter-spacing:-2px;
+}
+
+.hero p{
+font-size:0.96rem;
+line-height:1.7;
+}
+
+.map-container{
+border-radius:28px;
+}
+
+.map-tag{
+font-size:0.72rem;
+padding:10px 12px;
+}
+
+.info-grid{
+padding:50px 18px 70px;
+gap:18px;
+}
+
+.info-card{
+padding:24px;
+border-radius:24px;
+}
+
+.cta{
+margin:0 18px 70px;
+padding:42px 20px;
+border-radius:28px;
+}
+
+.cta h2{
+font-size:2rem;
+}
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+
+<nav class="navbar">
+
+<div class="logo">
+🌍 Vidolta
+</div>
+
+<a href="londres.html" class="back-link">
+← Retour Londres
+</a>
+
+</nav>
+
+<!-- HERO -->
+
+<section class="hero">
+
+<h1>
+<span>Mind the Gap</span>
+</h1>
+
+<p>
+Découvre les quartiers incontournables,
+les lignes emblématiques du Tube londonien
+et les zones essentielles pour explorer Londres facilement.
+</p>
+
+</section>
+
+<!-- MAP -->
+
+<section class="map-section">
+
+<div class="map-container">
+
+<img
+src="images/london-map.png"
+alt="Carte Londres">
+
+<div class="map-tag tag-soho">
+🍸 Soho
+</div>
+
+<div class="map-tag tag-camden">
+🎸 Camden
+</div>
+
+<div class="map-tag tag-canary">
+🏙️ Canary Wharf
+</div>
+
+<div class="map-tag tag-westminster">
+🏛️ Westminster
+</div>
+
+<div class="map-tag tag-shoreditch">
+🎨 Shoreditch
+</div>
+
+<div class="map-tag tag-heathrow">
+✈️ Heathrow
+</div>
+
+<div class="map-tag tag-elizabeth">
+🚇 Elizabeth Line
+</div>
+
+</div>
+
+</section>
+
+<!-- INFO -->
+
+<section class="info-grid">
+
+<div class="info-card">
+
+<h3>
+🚇 Le Tube londonien
+</h3>
+
+<p>
+Le métro de Londres est l’un des réseaux urbains les plus célèbres au monde avec plus de 270 stations.
+</p>
+
+</div>
+
+<div class="info-card">
+
+<h3>
+🚌 Les bus rouges
+</h3>
+
+<p>
+Les célèbres double-deckers permettent de découvrir Londres autrement tout en profitant de la ville.
+</p>
+
+</div>
+
+<div class="info-card">
+
+<h3>
+📍 Les meilleurs quartiers
+</h3>
+
+<p>
+Soho, Shoreditch, Camden et Westminster offrent des ambiances totalement différentes.
+</p>
+
+</div>
+
+<div class="info-card">
+
+<h3>
+✈️ Rejoindre le centre
+</h3>
+
+<p>
+L’Elizabeth Line et Heathrow Express relient rapidement l’aéroport au centre-ville.
+</p>
+
+</div>
+
+</section>
+
+<!-- CTA -->
+
+<section class="cta">
+
+<h2>
+Explorer Londres autrement
+</h2>
+
+<p>
+Vidolta t’aide à comprendre les villes rapidement grâce à une expérience pensée pour le mobile et les déplacements urbains.
+</p>
+
+<a href="londres.html">
+Retour à Londres
+</a>
+
+</section>
+
+<!-- FOOTER -->
+
+<footer>
+
+<p>
+© 2026 Vidolta — Carte Londres
+</p>
+
+</footer>
+
+</body>
+
+</html>
