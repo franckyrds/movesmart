@@ -47,7 +47,6 @@ radial-gradient(circle at top left,rgba(91,140,255,0.14),transparent 25%),
 linear-gradient(to bottom,#081120 0%,#050816 100%);
 color:var(--text);
 overflow-x:hidden;
-padding-bottom:95px;
 }
 
 a{
@@ -616,57 +615,6 @@ opacity:1;
 transform:translateY(0);
 }
 
-/* BOTTOM NAV */
-
-.bottom-nav{
-position:fixed;
-
-bottom:0;
-left:0;
-right:0;
-
-height:84px;
-
-background:rgba(6,10,24,0.92);
-
-backdrop-filter:blur(20px);
-
-border-top:1px solid rgba(255,255,255,0.06);
-
-z-index:9999;
-
-display:flex;
-justify-content:space-around;
-align-items:center;
-
-box-shadow:0 -10px 30px rgba(0,0,0,0.35);
-}
-
-.bottom-nav a{
-display:flex;
-flex-direction:column;
-align-items:center;
-gap:5px;
-
-font-size:0.82rem;
-
-color:#94a3b8;
-
-transition:0.3s;
-}
-
-.bottom-nav span{
-font-size:1.35rem;
-}
-
-.bottom-nav a.active{
-color:white;
-}
-
-.bottom-nav a.active span{
-color:#8b5cf6;
-}
-
 /* MOBILE */
 
 @media(max-width:700px){
@@ -805,18 +753,6 @@ font-size:1.8rem;
 .cta-box p{
 font-size:0.92rem;
 line-height:1.7;
-}
-
-.bottom-nav{
-height:74px;
-}
-
-.bottom-nav span{
-font-size:1.2rem;
-}
-
-.bottom-nav a{
-font-size:0.72rem;
 }
 
 }
@@ -1099,19 +1035,6 @@ alt="Amsterdam">
 
 </div>
 
-<div class="destination-card fade-up"
-onclick="window.location.href='prague.html'">
-
-<img
-src="images/prague.png"
-alt="Prague">
-
-<div class="destination-overlay">
-<h3>Prague</h3>
-<p>Tchequie</p>
-</div>
-
-</div>
   
 <div class="destination-card fade-up"
 onclick="window.location.href='istanbul.html'">
@@ -1285,32 +1208,6 @@ Contact
 </div>
 
 </footer>
-
-<!-- BOTTOM NAV -->
-
-<div class="bottom-nav">
-
-<a href="#" class="active">
-<span>🏠</span>
-<p>Accueil</p>
-</a>
-
-<a href="#">
-<span>❤️</span>
-<p>Favoris</p>
-</a>
-
-<a href="#">
-<span>🧭</span>
-<p>Explorer</p>
-</a>
-
-<a href="#">
-<span>👤</span>
-<p>Profil</p>
-</a>
-
-</div>
 
 <script>
 
