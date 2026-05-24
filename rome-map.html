@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Carte de Rome • Vidolta</title>
+
+  <style>
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+    }
+
+    body{
+      background:#07111f;
+      font-family:Inter,sans-serif;
+      color:white;
+      overflow-x:hidden;
+    }
+
+    .map-section{
+      position:relative;
+      width:100%;
+      min-height:100vh;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      padding:60px 20px;
+    }
+
+    .map-container{
+      position:relative;
+      width:100%;
+      max-width:1500px;
+      border-radius:28px;
+      overflow:hidden;
+      box-shadow:
+      0 20px 60px rgba(0,0,0,0.45);
+    }
+
+    .map-container img{
+      width:100%;
+      display:block;
+      object-fit:cover;
+    }
+
+    .map-overlay{
+      position:absolute;
+      inset:0;
+      background:
+      linear-gradient(
+      to bottom,
+      rgba(4,10,20,0.10),
+      rgba(4,10,20,0.18)
+      );
+      pointer-events:none;
+    }
+
+    .floating-card{
+      position:absolute;
+      bottom:40px;
+      right:40px;
+      backdrop-filter:blur(14px);
+      background:rgba(9,18,35,0.72);
+      border:1px solid rgba(255,255,255,0.08);
+      padding:26px;
+      border-radius:22px;
+      max-width:320px;
+      box-shadow:
+      0 10px 30px rgba(0,0,0,0.35);
+    }
+
+    .floating-card h2{
+      font-size:1.7rem;
+      margin-bottom:12px;
+      font-weight:700;
+    }
+
+    .floating-card p{
+      color:rgba(255,255,255,0.75);
+      line-height:1.7;
+      font-size:0.96rem;
+    }
+
+    .badge{
+      display:inline-flex;
+      align-items:center;
+      gap:8px;
+      padding:8px 14px;
+      border-radius:999px;
+      background:rgba(255,255,255,0.08);
+      margin-bottom:16px;
+      font-size:0.85rem;
+      color:#f8d08a;
+      border:1px solid rgba(255,255,255,0.08);
+    }
+
+    .top-title{
+      position:absolute;
+      top:40px;
+      left:40px;
+      z-index:2;
+    }
+
+    .top-title h1{
+      font-size:3.2rem;
+      font-weight:800;
+      letter-spacing:-2px;
+    }
+
+    .top-title span{
+      color:#d8a14a;
+    }
+
+    .top-title p{
+      margin-top:10px;
+      color:rgba(255,255,255,0.7);
+      font-size:1rem;
+    }
+
+    @media(max-width:900px){
+
+      .map-section{
+        padding:20px;
+      }
+
+      .top-title{
+        position:relative;
+        top:auto;
+        left:auto;
+        margin-bottom:20px;
+      }
+
+      .top-title h1{
+        font-size:2.4rem;
+      }
+
+      .floating-card{
+        position:relative;
+        right:auto;
+        bottom:auto;
+        margin:20px;
+        max-width:none;
+      }
+
+      .map-container{
+        border-radius:24px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+<section class="map-section">
+
+  <div class="map-container">
+
+    <div class="top-title">
+      <h1>Rome <span>Map</span></h1>
+      <p>Explore les monuments incontournables de la ville éternelle</p>
+    </div>
+
+    <img src="images/rome-map.png" alt="Carte de Rome">
+
+    <div class="map-overlay"></div>
+
+    <div class="floating-card">
+      <div class="badge">
+        ✨ Guide Vidolta
+      </div>
+
+      <h2>Rome en un regard</h2>
+
+      <p>
+        Découvre les lieux emblématiques de Rome :
+        Colisée, Vatican, Fontaine de Trévi,
+        Place Navone et les plus beaux quartiers
+        historiques à explorer à pied.
+      </p>
+    </div>
+
+  </div>
+
+</section>
+
+</body>
+</html>
