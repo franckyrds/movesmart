@@ -464,14 +464,42 @@ object-position:center;
 transition:0.6s;
 }
 
+/* Ajustements spécifiques */
+
 .london-img{
-transform:scale(1.08);
+transform:scale(1.04);
 }
+
+.city-rio{
+transform:scale(0.92);
+}
+
+.city-montreal{
+transform:scale(0.93);
+}
+
+.city-nantes{
+transform:scale(0.90);
+}
+
+.city-athenes{
+transform:scale(0.92);
+}
+
+.city-bordeaux{
+transform:scale(0.91);
+}
+
+.city-majorque{
+transform:scale(0.90);
+}
+
+/* Hover */
 
 .destination-card:hover img{
-transform:scale(1.10);
+transform:scale(1.02);
 }
-
+  
 .destination-overlay{
 position:absolute;
 inset:0;
@@ -944,6 +972,7 @@ alt="New York">
 onclick="window.location.href='rio.html'">
 
 <img
+class="city-rio"
 src="images/rio.png"
 alt="Rio">
 
@@ -1014,9 +1043,10 @@ alt="Barcelone">
 onclick="window.location.href='montreal.html'">
 
 <img
+class="city-montreal"
 src="images/montreal.png"
 alt="Montreal">
-
+  
 <div class="destination-overlay">
 <h3>Montréal</h3>
 <p>Canada</p>
@@ -1042,6 +1072,7 @@ alt="Marrakech">
 onclick="window.location.href='nantes.html'">
 
 <img
+class="city-nantes"
 src="https://i.ibb.co/VcfFs0Bg/Screenshot-20260514-222533-Gmail-2.jpg"
 alt="Nantes">
 
