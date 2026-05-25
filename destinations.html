@@ -63,6 +63,49 @@ img{
 display:block;
 }
 
+.scroll-top{
+position:fixed;
+right:22px;
+bottom:22px;
+
+width:52px;
+height:52px;
+
+border-radius:18px;
+
+display:flex;
+align-items:center;
+justify-content:center;
+
+background:
+linear-gradient(135deg,#8b5cf6,#5b8cff);
+
+color:white;
+
+font-size:1.4rem;
+font-weight:700;
+
+cursor:pointer;
+
+box-shadow:0 10px 30px rgba(124,92,255,0.35);
+
+z-index:999;
+
+opacity:0;
+pointer-events:none;
+
+transition:0.35s;
+}
+
+.scroll-top.show{
+opacity:1;
+pointer-events:auto;
+}
+
+.scroll-top:hover{
+transform:translateY(-3px);
+}
+  
 /* NAVBAR */
 
 .navbar{
@@ -867,6 +910,12 @@ Désert & culture
 
 </footer>
 
+<!-- SCROLL TOP -->
+
+<div class="scroll-top" onclick="scrollToTop()">
+↑
+</div>
+
 <script>
 
 function toggleMenu(){
@@ -893,6 +942,25 @@ threshold:0.15
 
 document.querySelectorAll('.fade-up').forEach(el => {
 observer.observe(el);
+});
+
+function scrollToTop(){
+window.scrollTo({
+top:0,
+behavior:'smooth'
+});
+}
+
+const scrollTopBtn = document.querySelector('.scroll-top');
+
+window.addEventListener('scroll', () => {
+
+if(window.scrollY > 400){
+scrollTopBtn.classList.add('show');
+}else{
+scrollTopBtn.classList.remove('show');
+}
+
 });
 
 </script>
