@@ -1071,10 +1071,41 @@ const availableCities = [
 'athenes'
 ];
 
-if(availableCities.includes(input)){
-window.location.href = input + '.html';
+const cityPages = {
+  paris: 'paris.html',
+  rome: 'rome.html',
+  londres: 'londres.html',
+  london: 'londres.html',
+  tokyo: 'tokyo.html',
+  munich: 'munich.html',
+  istanbul: 'istanbul.html',
+  'palma de majorque': 'majorque.html',
+  majorque: 'majorque.html',
+  palma: 'majorque.html',
+  prague: 'prague.html',
+  vienne: 'vienne.html',
+  seoul: 'seoul.html',
+  'new york': 'new-york.html',
+  'new-york': 'new-york.html',
+  newyork: 'new-york.html',
+  nyc: 'new-york.html',
+  'rio de janeiro': 'rio.html',
+  rio: 'rio.html',
+  barcelone: 'barcelone.html',
+  montreal: 'montreal.html',
+  marrakech: 'marrakech.html',
+  lyon: 'lyon.html',
+  nantes: 'nantes.html',
+  marseille: 'marseille.html',
+  bordeaux: 'bordeaux.html',
+  amsterdam: 'amsterdam.html',
+  athenes: 'athenes.html'
+};
+
+if(cityPages[input]){
+  window.location.href = cityPages[input];
 }else{
-showToast();
+  showToast();
 }
 
 }
