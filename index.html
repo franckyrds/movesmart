@@ -303,35 +303,53 @@ font-size:1.8rem;
 line-height:1;
 }
 
-.section-header a{
+.view-all-btn{
 display:flex;
 align-items:center;
-justify-content:center;
+gap:10px;
 
-height:42px;
+padding:12px 18px;
 
-padding:0 18px;
+border-radius:18px;
 
-border-radius:14px;
+background:
+linear-gradient(
+135deg,
+rgba(255,255,255,0.06),
+rgba(255,255,255,0.03)
+);
 
-background:rgba(255,255,255,0.05);
-
-border:1px solid rgba(255,255,255,0.05);
+border:1px solid rgba(255,255,255,0.08);
 
 backdrop-filter:blur(18px);
 
-color:#dbe4f0;
+color:#e2e8f0;
 
-font-size:0.84rem;
+font-size:0.88rem;
 font-weight:600;
 
-transition:0.3s;
+transition:0.35s;
 }
 
-.section-header a:hover{
+.view-all-btn span{
+transition:0.35s;
+}
+
+.view-all-btn:hover{
 transform:translateY(-2px);
-background:rgba(124,92,255,0.16);
-border-color:rgba(124,92,255,0.28);
+
+background:
+linear-gradient(
+135deg,
+rgba(124,92,255,0.18),
+rgba(91,140,255,0.14)
+);
+
+border-color:rgba(124,92,255,0.25);
+}
+
+.view-all-btn:hover span{
+transform:translateX(3px);
 }
   
 /* SLIDER BUTTONS */
@@ -799,8 +817,9 @@ Découvrir →
 <div class="section-header fade-up">
 <h2>Destinations populaires</h2>
 
-<a href="destinations.html">
-Voir tout →
+<a href="destinations.html" class="view-all-btn">
+Explorer toutes les destinations
+<span>→</span>
 </a>
 </div>
 
@@ -836,7 +855,6 @@ alt="Paris">
 onclick="window.location.href='londres.html'">
 
 <img
-class="london-img"
 src="images/londres.png"
 alt="Londres">
 
@@ -862,10 +880,23 @@ alt="New York">
 </div>
 
 <div class="destination-card fade-up"
+onclick="window.location.href='tokyo.html'">
+
+<img
+src="images/tokyo.png"
+alt="Tokyo">
+
+<div class="destination-overlay">
+<h3>Tokyo</h3>
+<p>Japon</p>
+</div>
+
+</div>
+
+<div class="destination-card fade-up"
 onclick="window.location.href='rio.html'">
 
 <img
-class="city-rio"
 src="images/rio.png"
 alt="Rio">
 
@@ -891,20 +922,6 @@ alt="Rome">
 </div>
 
 <div class="destination-card fade-up"
-onclick="window.location.href='tokyo.html'">
-
-<img
-src="images/tokyo.png"
-alt="Tokyo">
-
-<div class="destination-overlay">
-<h3>Tokyo</h3>
-<p>Japon</p>
-</div>
-
-</div>
-
-<div class="destination-card fade-up"
 onclick="window.location.href='barcelone.html'">
 
 <img
@@ -918,35 +935,6 @@ alt="Barcelone">
 
 </div>
 
-<div class="destination-card fade-up"
-onclick="window.location.href='montreal.html'">
-
-<img
-class="city-montreal"
-src="images/montreal.png"
-alt="Montreal">
-  
-<div class="destination-overlay">
-<h3>Montréal</h3>
-<p>Canada</p>
-</div>
-
-</div>
-  
-<div class="destination-card fade-up"
-onclick="window.location.href='marrakech.html'">
-
-<img
-src="images/marrakech.png"
-alt="Marrakech">
-
-<div class="destination-overlay">
-<h3>Marrakech</h3>
-<p>Maroc</p>
-</div>
-
-</div>
-  
 <div class="destination-card fade-up"
 onclick="window.location.href='istanbul.html'">
 
@@ -971,6 +959,36 @@ alt="Séoul">
 <div class="destination-overlay">
 <h3>Séoul</h3>
 <p>Corée du Sud</p>
+</div>
+
+</div>
+
+<div class="destination-card fade-up"
+onclick="window.location.href='montreal.html'">
+
+<img
+src="images/montreal.png"
+alt="Montreal">
+  
+<div class="destination-overlay">
+<h3>Montréal</h3>
+<p>Canada</p>
+</div>
+
+</div>
+  
+<div class="destination-card fade-up"
+onclick="window.location.href='marrakech.html'">
+
+<img
+src="images/marrakech.png"
+alt="Marrakech">
+
+<div class="destination-overlay">
+<h3>Marrakech</h3>
+<p>Maroc</p>
+</div>
+
 </div>
 
 </div>
