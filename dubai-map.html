@@ -1,0 +1,665 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+<title>Carte de Dubai — Vidolta</title>
+
+<meta name="description"
+content="Explore Dubai avec la carte immersive Vidolta : métro, Burj Khalifa, Palm Jumeirah, Marina, désert et quartiers incontournables.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+body{
+font-family:'Poppins',sans-serif;
+
+background:
+radial-gradient(circle at top right,rgba(251,146,60,0.15),transparent 30%),
+radial-gradient(circle at top left,rgba(236,72,153,0.12),transparent 25%),
+linear-gradient(to bottom,#04101f 0%,#050816 100%);
+
+color:white;
+
+overflow-x:hidden;
+}
+
+img{
+display:block;
+}
+
+a{
+text-decoration:none;
+color:inherit;
+}
+
+/* NAVBAR */
+
+.navbar{
+position:sticky;
+top:0;
+z-index:1000;
+
+display:flex;
+justify-content:space-between;
+align-items:center;
+
+padding:12px 20px;
+
+background:rgba(5,8,22,0.75);
+
+backdrop-filter:blur(18px);
+
+border-bottom:1px solid rgba(255,255,255,0.05);
+}
+
+.logo{
+display:inline-flex;
+align-items:center;
+
+font-size:1.65rem;
+font-weight:800;
+
+color:white;
+}
+
+.nav-links{
+display:flex;
+gap:24px;
+align-items:center;
+}
+
+.nav-links a{
+color:#d1d5db;
+transition:0.3s;
+}
+
+.nav-links a:hover{
+color:white;
+}
+
+/* HERO */
+
+.hero{
+padding:70px 20px 30px;
+text-align:center;
+}
+
+.hero h1{
+font-size:4.8rem;
+line-height:0.95;
+letter-spacing:-3px;
+
+margin-bottom:18px;
+}
+
+.hero h1 span{
+background:linear-gradient(90deg,#fb923c,#ec4899);
+
+-webkit-background-clip:text;
+-webkit-text-fill-color:transparent;
+}
+
+.hero p{
+max-width:900px;
+margin:auto;
+
+font-size:1.12rem;
+line-height:1.8;
+
+color:#dbe4f0;
+}
+
+/* MAP */
+
+.map-wrapper{
+max-width:1500px;
+margin:auto;
+
+padding:10px 20px 70px;
+
+display:grid;
+grid-template-columns:300px 1fr 280px;
+gap:20px;
+}
+
+/* SIDE PANELS */
+
+.side-panel{
+background:
+linear-gradient(
+135deg,
+rgba(16,23,42,0.96),
+rgba(10,14,28,0.94)
+);
+
+border-radius:28px;
+
+padding:28px;
+
+border:1px solid rgba(255,255,255,0.06);
+
+box-shadow:0 12px 35px rgba(0,0,0,0.3);
+
+height:fit-content;
+}
+
+.side-panel h2{
+font-size:1.5rem;
+margin-bottom:18px;
+}
+
+.side-panel h3{
+font-size:1.05rem;
+margin-bottom:12px;
+color:#fb923c;
+}
+
+.side-panel ul{
+list-style:none;
+display:grid;
+gap:14px;
+}
+
+.side-panel li{
+line-height:1.6;
+color:#d1d5db;
+font-size:0.95rem;
+}
+
+/* MAP CONTAINER */
+
+.map-container{
+position:relative;
+
+overflow:hidden;
+
+border-radius:34px;
+
+border:1px solid rgba(255,255,255,0.06);
+
+box-shadow:0 20px 45px rgba(0,0,0,0.35);
+
+background:#09111f;
+}
+
+.map-container img{
+width:100%;
+height:100%;
+
+min-height:850px;
+
+object-fit:cover;
+
+filter:saturate(1.05);
+}
+
+/* MARKERS */
+
+.marker{
+position:absolute;
+
+padding:10px 14px;
+
+background:rgba(5,8,22,0.92);
+
+border:1px solid rgba(255,255,255,0.08);
+
+border-radius:16px;
+
+font-size:0.82rem;
+font-weight:600;
+
+backdrop-filter:blur(10px);
+
+box-shadow:0 8px 18px rgba(0,0,0,0.25);
+}
+
+/* POSITIONS */
+
+.burj{
+top:46%;
+left:47%;
+}
+
+.marina{
+top:33%;
+left:28%;
+}
+
+.palm{
+top:12%;
+left:25%;
+}
+
+.mall{
+top:58%;
+left:57%;
+}
+
+.airport{
+top:62%;
+left:76%;
+}
+
+.desert{
+top:18%;
+left:72%;
+}
+
+.jbr{
+top:38%;
+left:18%;
+}
+
+.old{
+top:44%;
+left:70%;
+}
+
+/* BOTTOM CARDS */
+
+.bottom-grid{
+position:absolute;
+
+left:20px;
+right:20px;
+bottom:20px;
+
+display:grid;
+grid-template-columns:repeat(4,1fr);
+gap:14px;
+}
+
+.bottom-card{
+background:
+linear-gradient(
+135deg,
+rgba(15,23,42,0.95),
+rgba(10,14,28,0.94)
+);
+
+padding:18px;
+
+border-radius:22px;
+
+border:1px solid rgba(255,255,255,0.06);
+
+backdrop-filter:blur(14px);
+}
+
+.bottom-card h4{
+margin-bottom:10px;
+font-size:1rem;
+}
+
+.bottom-card p{
+font-size:0.88rem;
+line-height:1.6;
+color:#d1d5db;
+}
+
+/* INFO TAGS */
+
+.tag{
+display:inline-flex;
+align-items:center;
+
+padding:8px 14px;
+
+border-radius:999px;
+
+background:rgba(255,255,255,0.08);
+
+border:1px solid rgba(255,255,255,0.06);
+
+font-size:0.82rem;
+
+margin:6px 6px 0 0;
+}
+
+/* FOOTER */
+
+.footer{
+text-align:center;
+padding:40px 20px 60px;
+color:#94a3b8;
+}
+
+/* MOBILE */
+
+@media(max-width:1200px){
+
+.map-wrapper{
+grid-template-columns:1fr;
+}
+
+.side-panel{
+order:2;
+}
+
+.map-container{
+order:1;
+}
+
+}
+
+@media(max-width:900px){
+
+.hero{
+padding-top:50px;
+}
+
+.hero h1{
+font-size:3rem;
+letter-spacing:-2px;
+}
+
+.hero p{
+font-size:1rem;
+line-height:1.7;
+}
+
+.map-container img{
+min-height:650px;
+}
+
+.bottom-grid{
+grid-template-columns:1fr;
+position:relative;
+bottom:auto;
+left:auto;
+right:auto;
+padding:20px;
+}
+
+.marker{
+font-size:0.72rem;
+padding:8px 12px;
+}
+
+.side-panel{
+padding:22px;
+}
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<nav class="navbar">
+
+<a href="./index.html" class="logo">
+🌍 Vidolta
+</a>
+
+<div class="nav-links">
+
+<a href="dubai.html">Guide</a>
+<a href="destinations.html">Destinations</a>
+<a href="./index.html">Accueil</a>
+
+</div>
+
+</nav>
+
+<section class="hero">
+
+<h1>
+Carte de <span>Dubai</span>
+</h1>
+
+<p>
+Explore Downtown Dubai, Palm Jumeirah, Marina, désert,
+métro et expériences iconiques avec la carte immersive Vidolta.
+</p>
+
+</section>
+
+<section class="map-wrapper">
+
+<!-- LEFT -->
+
+<div class="side-panel">
+
+<h2>
+🌆 Dubai Highlights
+</h2>
+
+<ul>
+
+<li>
+🏙️ Burj Khalifa — plus haute tour du monde
+</li>
+
+<li>
+🌴 Palm Jumeirah — île artificielle iconique
+</li>
+
+<li>
+🛥️ Dubai Marina — skyline & yachts
+</li>
+
+<li>
+🏖️ JBR Beach — plage lifestyle
+</li>
+
+<li>
+🐪 Desert Safari — dunes & sunset
+</li>
+
+<li>
+🛍️ Dubai Mall — shopping & fontaines
+</li>
+
+<li>
+🏨 Atlantis The Palm — resort emblématique
+</li>
+
+</ul>
+
+<h3 style="margin-top:28px;">
+Transports
+</h3>
+
+<div class="tag">
+🚇 Metro Red Line
+</div>
+
+<div class="tag">
+🚕 Careem
+</div>
+
+<div class="tag">
+✈️ DXB Airport
+</div>
+
+<div class="tag">
+🛥️ Marina
+</div>
+
+</div>
+
+<!-- CENTER -->
+
+<div class="map-container">
+
+<img
+src="images/dubai-map.png"
+alt="Carte Dubai">
+
+<div class="marker burj">
+🏙️ Burj Khalifa
+</div>
+
+<div class="marker marina">
+🛥️ Dubai Marina
+</div>
+
+<div class="marker palm">
+🌴 Palm Jumeirah
+</div>
+
+<div class="marker mall">
+🛍️ Dubai Mall
+</div>
+
+<div class="marker airport">
+✈️ DXB Airport
+</div>
+
+<div class="marker desert">
+🐪 Desert Safari
+</div>
+
+<div class="marker jbr">
+🏖️ JBR Beach
+</div>
+
+<div class="marker old">
+🕌 Old Dubai
+</div>
+
+<div class="bottom-grid">
+
+<div class="bottom-card">
+
+<h4>
+🚇 Explorer facilement
+</h4>
+
+<p>
+Le Dubai Metro relie rapidement Downtown, Marina et l’aéroport.
+</p>
+
+</div>
+
+<div class="bottom-card">
+
+<h4>
+🌇 Skyline futuriste
+</h4>
+
+<p>
+Dubai mélange architecture moderne, luxe et lifestyle urbain.
+</p>
+
+</div>
+
+<div class="bottom-card">
+
+<h4>
+🏖️ Beach clubs
+</h4>
+
+<p>
+Palm Jumeirah et JBR offrent certaines des plages les plus iconiques.
+</p>
+
+</div>
+
+<div class="bottom-card">
+
+<h4>
+🍽️ Goûter Dubai
+</h4>
+
+<p>
+Rooftops, cuisines du monde et restaurants premium partout dans la ville.
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+<!-- RIGHT -->
+
+<div class="side-panel">
+
+<h2>
+ℹ️ Infos pratiques
+</h2>
+
+<ul>
+
+<li>
+☀️ Meilleure période : novembre → avril
+</li>
+
+<li>
+💳 Monnaie : Dirham AED
+</li>
+
+<li>
+🕓 Décalage : UTC +4
+</li>
+
+<li>
+🔌 Prise : Type G
+</li>
+
+<li>
+📶 eSIM fortement recommandée
+</li>
+
+<li>
+🚕 Taxi très utilisé à Dubai
+</li>
+
+<li>
+🌡️ Été très chaud
+</li>
+
+</ul>
+
+<h3 style="margin-top:28px;">
+Temps moyens
+</h3>
+
+<div class="tag">
+✈️ Aéroport → Downtown : 15 min
+</div>
+
+<div class="tag">
+🌴 Palm → Marina : 20 min
+</div>
+
+<div class="tag">
+🐪 Desert Safari : 45 min
+</div>
+
+<div class="tag">
+🏖️ JBR → Downtown : 25 min
+</div>
+
+</div>
+
+</section>
+
+<div class="footer">
+
+© 2026 Vidolta — Carte de Dubai
+
+</div>
+
+</body>
+
+</html>
