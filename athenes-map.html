@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Carte d’Athènes — Vidolta</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+body{
+font-family:'Poppins',sans-serif;
+
+background:
+radial-gradient(circle at top right,rgba(0,170,255,0.16),transparent 30%),
+radial-gradient(circle at top left,rgba(255,184,77,0.12),transparent 24%),
+linear-gradient(to bottom,#081320 0%,#09111f 100%);
+
+color:white;
+
+min-height:100vh;
+
+padding:40px 20px;
+}
+
+/* HEADER */
+
+.map-header{
+max-width:1200px;
+margin:auto auto 40px;
+
+text-align:center;
+}
+
+.map-header h1{
+font-size:3.6rem;
+margin-bottom:16px;
+
+letter-spacing:-2px;
+}
+
+.map-header h1 span{
+background:linear-gradient(90deg,#38bdf8,#fbbf24);
+
+-webkit-background-clip:text;
+-webkit-text-fill-color:transparent;
+}
+
+.map-header p{
+max-width:860px;
+margin:auto;
+
+line-height:1.8;
+
+color:#cbd5e1;
+
+font-size:1.05rem;
+}
+
+/* MAP */
+
+.map-container{
+max-width:1400px;
+margin:auto;
+}
+
+.map-card{
+position:relative;
+
+overflow:hidden;
+
+border-radius:34px;
+
+border:1px solid rgba(255,255,255,0.06);
+
+box-shadow:0 20px 45px rgba(0,0,0,0.35);
+
+background:#0f172a;
+}
+
+.map-card img{
+width:100%;
+display:block;
+}
+
+/* GRID */
+
+.info-grid{
+max-width:1400px;
+
+margin:40px auto 0;
+
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+
+gap:20px;
+}
+
+.info-card{
+background:
+linear-gradient(
+135deg,
+rgba(14,24,45,0.92),
+rgba(8,15,30,0.88)
+);
+
+padding:26px;
+
+border-radius:26px;
+
+border:1px solid rgba(255,255,255,0.05);
+
+box-shadow:0 12px 35px rgba(0,0,0,0.24);
+
+transition:0.35s;
+}
+
+.info-card:hover{
+transform:translateY(-6px);
+
+border-color:rgba(56,189,248,0.45);
+}
+
+.info-card h3{
+font-size:1.2rem;
+margin-bottom:14px;
+}
+
+.info-card p{
+line-height:1.7;
+color:#cbd5e1;
+font-size:0.96rem;
+}
+
+/* CTA */
+
+.bottom-cta{
+max-width:1200px;
+
+margin:50px auto 0;
+
+padding:40px;
+
+border-radius:30px;
+
+background:
+linear-gradient(
+135deg,
+rgba(56,189,248,0.18),
+rgba(251,191,36,0.14)
+);
+
+border:1px solid rgba(255,255,255,0.05);
+
+text-align:center;
+}
+
+.bottom-cta h2{
+font-size:2rem;
+margin-bottom:16px;
+}
+
+.bottom-cta p{
+max-width:800px;
+margin:auto auto 24px;
+
+line-height:1.8;
+
+color:#dbe4f0;
+}
+
+.bottom-cta a{
+display:inline-block;
+
+padding:14px 22px;
+
+background:white;
+
+color:#111827;
+
+border-radius:14px;
+
+font-weight:700;
+
+text-decoration:none;
+
+transition:0.3s;
+}
+
+.bottom-cta a:hover{
+transform:translateY(-2px);
+}
+
+/* MOBILE */
+
+@media(max-width:900px){
+
+body{
+padding:24px 16px;
+}
+
+.map-header h1{
+font-size:2.5rem;
+}
+
+.map-header p{
+font-size:0.96rem;
+line-height:1.7;
+}
+
+.map-card{
+border-radius:24px;
+}
+
+.bottom-cta{
+padding:28px;
+}
+
+.bottom-cta h2{
+font-size:1.6rem;
+}
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<!-- HEADER -->
+
+<section class="map-header">
+
+<h1>
+Carte d’<span>Athènes</span>
+</h1>
+
+<p>
+Retrouve les lignes principales du métro athénien,
+les monuments antiques incontournables,
+les quartiers emblématiques,
+les ports,
+les zones animées
+et les lieux majeurs de la capitale grecque.
+</p>
+
+</section>
+
+<!-- MAP -->
+
+<section class="map-container">
+
+<div class="map-card">
+
+<img
+src="images/athenes-map.png"
+alt="Carte Athènes">
+
+</div>
+
+</section>
+
+<!-- INFORMATIONS -->
+
+<section class="info-grid">
+
+<div class="info-card">
+
+<h3>
+🚇 Métro d’Athènes
+</h3>
+
+<p>
+Le réseau permet de rejoindre rapidement
+le centre historique,
+l’aéroport,
+Le Pirée
+et les principaux quartiers touristiques.
+</p>
+
+</div>
+
+<div class="info-card">
+
+<h3>
+🏛️ Monuments iconiques
+</h3>
+
+<p>
+Acropole,
+Parthénon,
+Temple de Zeus,
+Agora antique
+et stade panathénaïque font partie des lieux majeurs.
+</p>
+
+</div>
+
+<div class="info-card">
+
+<h3>
+🌊 Quartiers & ambiance
+</h3>
+
+<p>
+Pláka,
+Monastiráki,
+Psyrí
+et la Riviera athénienne offrent
+une atmosphère méditerranéenne unique.
+</p>
+
+</div>
+
+<div class="info-card">
+
+<h3>
+🌅 Athènes de nuit
+</h3>
+
+<p>
+Rooftops avec vue sur l’Acropole,
+bars cachés,
+tavernes grecques
+et soirées estivales rythment la ville.
+</p>
+
+</div>
+
+</section>
+
+<!-- CTA -->
+
+<section class="bottom-cta">
+
+<h2>
+Explorer Athènes avec Vidolta
+</h2>
+
+<p>
+Découvre les meilleures activités,
+restaurants,
+quartiers,
+expériences locales
+et incontournables d’Athènes.
+</p>
+
+<a href="athenes.html">
+Retour au guide Athènes →
+</a>
+
+</section>
+
+</body>
+
+</html>
