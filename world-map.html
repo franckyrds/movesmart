@@ -520,6 +520,10 @@ const globe = Globe()
 
 (document.getElementById('globeViz'))
 
+.width(window.innerWidth)
+  
+.height(window.innerHeight)
+  
 .globeImageUrl('https://unpkg.com/three-globe/example/img/earth-night.jpg')
 
 .bumpImageUrl('https://unpkg.com/three-globe/example/img/earth-topology.png')
@@ -534,7 +538,7 @@ const globe = Globe()
 
 .pointAltitude(0.02)
 
-.pointRadius(0.18)
+.pointRadius(0.45)
 
 .pointColor(() => '#8b5cf6')
 
