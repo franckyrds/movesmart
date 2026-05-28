@@ -1,0 +1,666 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Explorer le monde — Vidolta</title>
+
+<meta name="description"
+content="Explore les villes disponibles sur Vidolta à travers une carte immersive mondiale moderne et interactive.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+:root{
+--bg:#050816;
+--primary:#8b5cf6;
+--primary2:#5b8cff;
+--text:#ffffff;
+--muted:#94a3b8;
+}
+
+html{
+scroll-behavior:smooth;
+}
+
+body{
+font-family:'Poppins',sans-serif;
+background:
+radial-gradient(circle at top right,rgba(124,92,255,0.18),transparent 30%),
+radial-gradient(circle at top left,rgba(91,140,255,0.14),transparent 25%),
+linear-gradient(to bottom,#050816 0%,#09111f 100%);
+color:white;
+overflow:hidden;
+}
+
+/* MAP */
+
+.world-map{
+position:relative;
+width:100%;
+height:100vh;
+overflow:hidden;
+}
+
+/* BACKGROUND */
+
+.world-background{
+position:absolute;
+inset:0;
+
+background:
+url('images/world-map.png')
+center center / cover no-repeat;
+
+opacity:0.42;
+filter:
+brightness(0.55)
+contrast(1.1);
+
+}
+
+/* OVERLAY */
+
+.world-overlay{
+position:absolute;
+inset:0;
+
+background:
+radial-gradient(circle at center,transparent 30%,rgba(5,8,22,0.92) 100%);
+}
+
+/* TITLE */
+
+.map-header{
+position:absolute;
+top:50px;
+left:50px;
+z-index:20;
+max-width:620px;
+}
+
+.map-header h1{
+font-size:5rem;
+line-height:0.92;
+letter-spacing:-4px;
+margin-bottom:20px;
+}
+
+.map-header h1 span{
+background:linear-gradient(90deg,#8b5cf6,#60a5fa);
+
+-webkit-background-clip:text;
+-webkit-text-fill-color:transparent;
+}
+
+.map-header p{
+font-size:1.05rem;
+line-height:1.9;
+color:#dbe4f0;
+}
+
+/* NAVBAR */
+
+.top-nav{
+position:absolute;
+top:30px;
+right:40px;
+z-index:20;
+}
+
+.top-nav a{
+padding:14px 22px;
+
+border-radius:18px;
+
+background:
+linear-gradient(
+135deg,
+rgba(255,255,255,0.08),
+rgba(255,255,255,0.03)
+);
+
+backdrop-filter:blur(18px);
+
+border:1px solid rgba(255,255,255,0.06);
+
+color:white;
+
+font-weight:600;
+
+text-decoration:none;
+
+transition:0.3s;
+}
+
+.top-nav a:hover{
+transform:translateY(-3px);
+
+background:
+linear-gradient(
+135deg,
+rgba(124,92,255,0.25),
+rgba(91,140,255,0.18)
+);
+}
+
+/* CITY POINT */
+
+.city-point{
+position:absolute;
+
+width:16px;
+height:16px;
+
+border-radius:50%;
+
+background:#8b5cf6;
+
+box-shadow:
+0 0 0 10px rgba(139,92,246,0.12),
+0 0 24px rgba(139,92,246,0.95);
+
+cursor:pointer;
+
+transition:0.35s;
+
+z-index:10;
+}
+
+.city-point::after{
+content:'';
+
+position:absolute;
+inset:-8px;
+
+border-radius:50%;
+
+border:1px solid rgba(139,92,246,0.28);
+
+animation:pulse 3s infinite;
+}
+
+.city-point:hover{
+transform:scale(1.3);
+}
+
+/* TOOLTIP */
+
+.city-tooltip{
+position:absolute;
+
+bottom:28px;
+left:50%;
+
+transform:translateX(-50%);
+
+padding:14px 18px;
+
+border-radius:18px;
+
+background:rgba(15,23,42,0.95);
+
+backdrop-filter:blur(18px);
+
+border:1px solid rgba(255,255,255,0.06);
+
+white-space:nowrap;
+
+opacity:0;
+pointer-events:none;
+
+transition:0.3s;
+}
+
+.city-tooltip h3{
+font-size:0.92rem;
+margin-bottom:4px;
+}
+
+.city-tooltip p{
+font-size:0.75rem;
+color:#cbd5e1;
+}
+
+.city-point:hover .city-tooltip{
+opacity:1;
+}
+
+/* PULSE */
+
+@keyframes pulse{
+
+0%{
+transform:scale(0.8);
+opacity:1;
+}
+
+100%{
+transform:scale(2);
+opacity:0;
+}
+
+}
+
+/* POSITIONS */
+
+/* EUROPE */
+
+.paris{
+top:33%;
+left:48%;
+}
+
+.londres{
+top:29%;
+left:46%;
+}
+
+.amsterdam{
+top:28%;
+left:50%;
+}
+
+.munich{
+top:34%;
+left:53%;
+}
+
+.prague{
+top:32%;
+left:55%;
+}
+
+.rome{
+top:40%;
+left:53%;
+}
+
+.barcelone{
+top:40%;
+left:46%;
+}
+
+.majorque{
+top:44%;
+left:48%;
+}
+
+.athenes{
+top:45%;
+left:58%;
+}
+
+.istanbul{
+top:40%;
+left:61%;
+}
+
+.marrakech{
+top:50%;
+left:43%;
+}
+
+/* AMÉRIQUE */
+
+.newyork{
+top:36%;
+left:26%;
+}
+
+.montreal{
+top:30%;
+left:24%;
+}
+
+.rio{
+top:70%;
+left:33%;
+}
+
+/* ASIE */
+
+.dubai{
+top:47%;
+left:66%;
+}
+
+.seoul{
+top:36%;
+left:84%;
+}
+
+.tokyo{
+top:39%;
+left:89%;
+}
+
+/* FRANCE */
+
+.nantes{
+top:34%;
+left:45%;
+}
+
+.bordeaux{
+top:39%;
+left:44%;
+}
+
+.marseille{
+top:43%;
+left:49%;
+}
+
+/* MOBILE */
+
+@media(max-width:900px){
+
+body{
+overflow:auto;
+}
+
+.world-map{
+height:1200px;
+}
+
+.map-header{
+top:40px;
+left:24px;
+right:24px;
+max-width:100%;
+}
+
+.map-header h1{
+font-size:2.8rem;
+letter-spacing:-2px;
+}
+
+.map-header p{
+font-size:0.92rem;
+line-height:1.7;
+}
+
+.top-nav{
+top:24px;
+right:24px;
+}
+
+.city-tooltip{
+display:none;
+}
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<section class="world-map">
+
+<div class="world-background"></div>
+
+<div class="world-overlay"></div>
+
+<!-- NAV -->
+
+<div class="top-nav">
+<a href="index.html">
+← Retour à Vidolta
+</a>
+</div>
+
+<!-- HEADER -->
+
+<div class="map-header">
+
+<h1>
+Explorer le <span>monde</span>
+</h1>
+
+<p>
+Découvre les villes disponibles sur Vidolta à travers une carte immersive moderne pensée pour l’exploration urbaine.
+</p>
+
+</div>
+
+<!-- PARIS -->
+
+<a href="paris.html" class="city-point paris">
+
+<div class="city-tooltip">
+<h3>Paris</h3>
+<p>France</p>
+</div>
+
+</a>
+
+<!-- LONDRES -->
+
+<a href="londres.html" class="city-point londres">
+
+<div class="city-tooltip">
+<h3>Londres</h3>
+<p>Royaume-Uni</p>
+</div>
+
+</a>
+
+<!-- MARRAKECH -->
+
+<a href="marrakech.html" class="city-point marrakech">
+
+<div class="city-tooltip">
+<h3>Marrakech</h3>
+<p>Maroc</p>
+</div>
+
+</a>
+
+<!-- PRAGUE -->
+
+<a href="prague.html" class="city-point prague">
+
+<div class="city-tooltip">
+<h3>Prague</h3>
+<p>République tchèque</p>
+</div>
+
+</a>
+
+<!-- ATHENES -->
+
+<a href="athenes.html" class="city-point athenes">
+
+<div class="city-tooltip">
+<h3>Athènes</h3>
+<p>Grèce</p>
+</div>
+
+</a>
+
+<!-- NEW YORK -->
+
+<a href="new-york.html" class="city-point newyork">
+
+<div class="city-tooltip">
+<h3>New York</h3>
+<p>États-Unis</p>
+</div>
+
+</a>
+
+<!-- MONTREAL -->
+
+<a href="montreal.html" class="city-point montreal">
+
+<div class="city-tooltip">
+<h3>Montréal</h3>
+<p>Canada</p>
+</div>
+
+</a>
+
+<!-- BARCELONE -->
+
+<a href="barcelone.html" class="city-point barcelone">
+
+<div class="city-tooltip">
+<h3>Barcelone</h3>
+<p>Espagne</p>
+</div>
+
+</a>
+
+<!-- MAJORQUE -->
+
+<a href="majorque.html" class="city-point majorque">
+
+<div class="city-tooltip">
+<h3>Palma de Majorque</h3>
+<p>Espagne</p>
+</div>
+
+</a>
+
+<!-- ROME -->
+
+<a href="rome.html" class="city-point rome">
+
+<div class="city-tooltip">
+<h3>Rome</h3>
+<p>Italie</p>
+</div>
+
+</a>
+
+<!-- SEOUL -->
+
+<a href="seoul.html" class="city-point seoul">
+
+<div class="city-tooltip">
+<h3>Séoul</h3>
+<p>Corée du Sud</p>
+</div>
+
+</a>
+
+<!-- TOKYO -->
+
+<a href="tokyo.html" class="city-point tokyo">
+
+<div class="city-tooltip">
+<h3>Tokyo</h3>
+<p>Japon</p>
+</div>
+
+</a>
+
+<!-- DUBAI -->
+
+<a href="dubai.html" class="city-point dubai">
+
+<div class="city-tooltip">
+<h3>Dubaï</h3>
+<p>Émirats arabes unis</p>
+</div>
+
+</a>
+
+<!-- AMSTERDAM -->
+
+<a href="amsterdam.html" class="city-point amsterdam">
+
+<div class="city-tooltip">
+<h3>Amsterdam</h3>
+<p>Pays-Bas</p>
+</div>
+
+</a>
+
+<!-- MUNICH -->
+
+<a href="munich.html" class="city-point munich">
+
+<div class="city-tooltip">
+<h3>Munich</h3>
+<p>Allemagne</p>
+</div>
+
+</a>
+
+<!-- ISTANBUL -->
+
+<a href="istanbul.html" class="city-point istanbul">
+
+<div class="city-tooltip">
+<h3>Istanbul</h3>
+<p>Turquie</p>
+</div>
+
+</a>
+
+<!-- RIO -->
+
+<a href="rio.html" class="city-point rio">
+
+<div class="city-tooltip">
+<h3>Rio de Janeiro</h3>
+<p>Brésil</p>
+</div>
+
+</a>
+
+<!-- NANTES -->
+
+<a href="nantes.html" class="city-point nantes">
+
+<div class="city-tooltip">
+<h3>Nantes</h3>
+<p>France</p>
+</div>
+
+</a>
+
+<!-- BORDEAUX -->
+
+<a href="bordeaux.html" class="city-point bordeaux">
+
+<div class="city-tooltip">
+<h3>Bordeaux</h3>
+<p>France</p>
+</div>
+
+</a>
+
+<!-- MARSEILLE -->
+
+<a href="marseille.html" class="city-point marseille">
+
+<div class="city-tooltip">
+<h3>Marseille</h3>
+<p>France</p>
+</div>
+
+</a>
+
+</section>
+
+</body>
+
+</html>
