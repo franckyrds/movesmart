@@ -533,7 +533,7 @@ const globe = Globe()
 
 .pointAltitude(0.02)
 
-.pointRadius(0.18)
+.pointRadius(0.55)
 
 .pointColor(() => '#8b5cf6')
 
@@ -557,9 +557,24 @@ window.location.href = d.page;
 
 /* AUTO ROTATION */
 
-globe.controls().autoRotate = true;
-globe.controls().autoRotateSpeed = 0.45;
+const controls = globe.controls();
 
+controls.autoRotate = true;
+
+controls.autoRotateSpeed = 0.12;
+
+controls.enableZoom = true;
+
+controls.enablePan = false;
+
+controls.minDistance = 140;
+
+controls.maxDistance = 320;
+
+controls.rotateSpeed = 0.85;
+
+controls.zoomSpeed = 0.9;
+  
 /* ATMOSPHERE */
 
 globe.atmosphereColor('#5b8cff');
@@ -570,7 +585,7 @@ globe.atmosphereAltitude(0.22);
 globe.pointOfView({
 lat:20,
 lng:10,
-altitude:2.2
+altitude:1.45
 });
 
 </script>
