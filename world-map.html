@@ -6,12 +6,22 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>World Map — Vidolta</title>
+<title>Explorer le monde — Vidolta</title>
+
+<meta
+name="description"
+content="Explore les destinations Vidolta à travers un globe immersif moderne et premium."
+>
+
+<meta name="theme-color" content="#060b1f">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<link
+href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+rel="stylesheet"
+>
 
 <script src="https://unpkg.com/three"></script>
 <script src="https://unpkg.com/globe.gl"></script>
@@ -24,6 +34,18 @@ padding:0;
 box-sizing:border-box;
 }
 
+:root{
+--bg:#050816;
+--primary:#7c5cff;
+--primary2:#5b8cff;
+--text:#ffffff;
+--muted:#94a3b8;
+}
+
+html{
+scroll-behavior:smooth;
+}
+
 body{
 font-family:'Poppins',sans-serif;
 
@@ -32,17 +54,16 @@ radial-gradient(circle at top right,rgba(124,92,255,0.18),transparent 30%),
 radial-gradient(circle at top left,rgba(91,140,255,0.14),transparent 25%),
 linear-gradient(to bottom,#0b1426 0%,#09111f 100%);
 
-overflow:hidden;
+color:white;
+
+overflow-x:hidden;
 }
 
 /* NAVBAR */
 
 .navbar{
-position:fixed;
+position:sticky;
 top:0;
-left:0;
-right:0;
-
 z-index:1000;
 
 padding:10px 16px;
@@ -59,68 +80,35 @@ border-bottom:1px solid rgba(255,255,255,0.04);
 }
 
 .logo{
+display:inline-flex;
+align-items:center;
+
 font-size:1.65rem;
 font-weight:800;
+
 color:white;
+
 text-decoration:none;
 }
 
 .nav-links{
 display:flex;
 gap:28px;
+align-items:center;
 }
 
 .nav-links a{
 color:#cbd5e1;
-text-decoration:none;
 font-size:0.95rem;
+transition:0.3s;
+text-decoration:none;
 }
 
-<section class="hero-map">
-
-<div class="hero-container">
-
-<div class="hero-left">
-
-<p class="hero-sub">
-MOVE SMARTER. DISCOVER MORE.
-</p>
-
-<h1>
-Explore le monde <span>autrement</span>
-</h1>
-
-<p class="hero-text">
-Choisis une destination immersive Vidolta à travers le globe interactif.
-</p>
-
-</div>
-
-</div>
-
-</section>
-
-<section class="section">
-
-<div class="globe-wrapper">
-
-<div id="globeViz"></div>
-
-</div>
-
-</section>
-  
-/* GLOBE */
-
-#globeViz{
-position:fixed;
-inset:0;
-z-index:1;
+.nav-links a:hover{
+color:white;
 }
 
-canvas{
-display:block;
-}
+/* HERO */
 
 .hero-map{
 padding-top:40px;
@@ -169,11 +157,15 @@ color:#7f8ca6;
 margin-bottom:18px;
 }
 
+/* SECTION */
+
 .section{
 max-width:1300px;
 margin:auto;
 padding:0 22px 60px;
 }
+
+/* GLOBE */
 
 .globe-wrapper{
 position:relative;
@@ -207,11 +199,38 @@ inset:0;
 z-index:1;
 }
 
+canvas{
+display:block;
+}
+
+/* MOBILE */
+
+@media(max-width:900px){
+
+.hero-left h1{
+font-size:2.9rem;
+letter-spacing:-2px;
+}
+
+.hero-text{
+font-size:0.92rem;
+line-height:1.7;
+}
+
+.globe-wrapper{
+height:520px;
+border-radius:28px;
+}
+
+}
+
 </style>
 
 </head>
 
 <body>
+
+<!-- NAVBAR -->
 
 <nav class="navbar">
 
@@ -233,7 +252,47 @@ Destinations
 
 </nav>
 
+<!-- HERO -->
+
+<section class="hero-map">
+
+<div class="hero-container">
+
+<div class="hero-left">
+
+<p class="hero-sub">
+MOVE SMARTER. DISCOVER MORE.
+</p>
+
+<h1>
+Explore le monde <span>autrement</span>
+</h1>
+
+<p class="hero-text">
+Choisis une destination immersive Vidolta à travers le globe interactif.
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- GLOBE -->
+
+<section class="section">
+
+<div class="globe-wrapper">
+
+<div id="globeViz"></div>
+
+</div>
+
+</section>
+
 <script>
+
+/* DESTINATIONS */
 
 const cities = [
 
@@ -265,13 +324,15 @@ window.addEventListener('load', () => {
 const globe = Globe()
 (document.getElementById('globeViz'))
 
-.globeImageUrl('https://raw.githubusercontent.com/vasturiano/three-globe/master/example/img/earth-blue-marble.jpg')
+.globeImageUrl(
+'https://raw.githubusercontent.com/vasturiano/three-globe/master/example/img/earth-blue-marble.jpg'
+)
 
 .backgroundColor('rgba(0,0,0,0)')
 
-.width(window.innerWidth)
+.width(document.querySelector('.globe-wrapper').offsetWidth)
 
-.height(window.innerHeight)
+.height(document.querySelector('.globe-wrapper').offsetHeight)
 
 .pointsData(cities)
 
@@ -281,13 +342,28 @@ const globe = Globe()
 
 .pointAltitude(0.02)
 
-.pointRadius(0.32)
+.pointRadius(0.24)
 
 .pointColor(() => '#8b5cf6')
 
 .atmosphereColor('#5b8cff')
 
 .atmosphereAltitude(0.16)
+
+.pointLabel(d => `
+<div style="
+font-family:Poppins;
+padding:8px 12px;
+border-radius:14px;
+background:rgba(15,23,42,0.92);
+color:white;
+font-size:13px;
+border:1px solid rgba(255,255,255,0.08);
+backdrop-filter:blur(14px);
+">
+${d.name}
+</div>
+`)
 
 .onPointClick(d => {
 window.location.href = d.page;
@@ -299,13 +375,23 @@ lng:10,
 altitude:1.95
 });
 
-globe.controls().autoRotate = false;
-  
+const controls = globe.controls();
+
+controls.autoRotate = false;
+
+controls.enableZoom = true;
+
+controls.enablePan = false;
+
+controls.rotateSpeed = 0.8;
+
+controls.zoomSpeed = 0.8;
+
 window.addEventListener('resize', () => {
 
 globe
-.width(window.innerWidth)
-.height(window.innerHeight);
+.width(document.querySelector('.globe-wrapper').offsetWidth)
+.height(document.querySelector('.globe-wrapper').offsetHeight);
 
 });
 
