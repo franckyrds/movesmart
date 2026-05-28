@@ -336,6 +336,8 @@ const globe = Globe()
 
 .pointsData(cities)
 
+.pointsMerge(true)
+
 .pointLat(d => d.lat)
 
 .pointLng(d => d.lng)
@@ -343,6 +345,8 @@ const globe = Globe()
 .pointAltitude(0)
 
 .pointRadius(0.12)
+
+.pointResolution(18)
 
 .pointColor(() => '#8b5cf6')
 
