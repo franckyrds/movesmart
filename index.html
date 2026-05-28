@@ -326,41 +326,41 @@ transform:translateX(3px);
   
 /* SLIDER BUTTONS */
 
-.slider-controls{
-display:flex;
-justify-content:flex-end;
-gap:12px;
-margin-bottom:10px;
-}
-
 .slider-btn{
-width:42px;
-height:42px;
+width:44px;
+height:44px;
+
+display:flex;
+align-items:center;
+justify-content:center;
 
 border:none;
-border-radius:16px;
+border-radius:14px;
 
-background:rgba(255,255,255,0.06);
+background:rgba(255,255,255,0.05);
 
-color:white;
-
-.slider-btn{
-font-size:1rem;
-font-weight:400;
-}
-
-cursor:pointer;
+border:1px solid rgba(255,255,255,0.08);
 
 backdrop-filter:blur(18px);
 
-border:1px solid rgba(255,255,255,0.06);
+color:#e2e8f0;
 
-transition:0.3s;
+font-size:1rem;
+font-weight:400;
+
+cursor:pointer;
+
+transition:all .3s ease;
 }
 
 .slider-btn:hover{
 transform:translateY(-2px);
-background:rgba(124,92,255,0.18);
+
+background:rgba(124,92,255,0.14);
+
+border-color:rgba(124,92,255,0.22);
+
+color:white;
 }
 
 /* DESTINATIONS */
@@ -800,11 +800,11 @@ Explorer toutes les destinations
 <div class="slider-controls">
 
 <button class="slider-btn" onclick="scrollDestinations(-320)">
-←
+‹
 </button>
 
 <button class="slider-btn" onclick="scrollDestinations(320)">
-→
+›
 </button>
 
 </div>
