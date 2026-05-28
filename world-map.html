@@ -533,7 +533,7 @@ const globe = Globe()
 
 .pointAltitude(0.02)
 
-.pointRadius(0.55)
+.pointRadius(isMobile ? 0.38 : 0.55)
 
 .pointColor(() => '#8b5cf6')
 
@@ -582,10 +582,12 @@ globe.atmosphereAltitude(0.22);
 
 /* INITIAL POSITION */
 
+const isMobile = window.innerWidth < 768;
+  
 globe.pointOfView({
 lat:20,
 lng:10,
-altitude:1.45
+altitude:isMobile ? 1.9 : 1.45
 });
 
 </script>
