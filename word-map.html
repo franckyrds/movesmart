@@ -1,0 +1,580 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>World Map — Vidolta</title>
+
+<meta name="description"
+content="Explore les villes du monde avec Vidolta à travers un globe interactif immersif moderne et premium.">
+
+<meta name="theme-color" content="#060b1f">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+<!-- GLOBE.GL -->
+
+<script src="//unpkg.com/three"></script>
+<script src="//unpkg.com/globe.gl"></script>
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+:root{
+--bg:#050816;
+--primary:#7c5cff;
+--primary2:#5b8cff;
+--text:#ffffff;
+--muted:#94a3b8;
+}
+
+html{
+scroll-behavior:smooth;
+}
+
+body{
+font-family:'Poppins',sans-serif;
+
+background:
+radial-gradient(circle at top right,rgba(124,92,255,0.18),transparent 30%),
+radial-gradient(circle at top left,rgba(91,140,255,0.14),transparent 25%),
+linear-gradient(to bottom,#050816 0%,#09111f 100%);
+
+color:white;
+
+overflow:hidden;
+}
+
+/* SPACE BACKGROUND */
+
+.space-bg{
+position:fixed;
+inset:0;
+
+background:
+radial-gradient(circle at 20% 20%,rgba(91,140,255,0.12),transparent 18%),
+radial-gradient(circle at 80% 10%,rgba(124,92,255,0.16),transparent 22%),
+radial-gradient(circle at 50% 80%,rgba(91,140,255,0.10),transparent 20%);
+
+z-index:-2;
+}
+
+/* GLOBE */
+
+#globeViz{
+width:100vw;
+height:100vh;
+}
+
+/* NAVBAR */
+
+.navbar{
+position:absolute;
+top:20px;
+left:20px;
+right:20px;
+
+z-index:100;
+
+display:flex;
+justify-content:space-between;
+align-items:center;
+
+padding:16px 22px;
+
+border-radius:24px;
+
+background:rgba(5,8,22,0.62);
+
+backdrop-filter:blur(18px);
+
+border:1px solid rgba(255,255,255,0.06);
+}
+
+.logo{
+font-size:1.6rem;
+font-weight:800;
+color:white;
+text-decoration:none;
+}
+
+.nav-btn{
+padding:14px 22px;
+
+border-radius:18px;
+
+background:
+linear-gradient(
+135deg,
+rgba(255,255,255,0.08),
+rgba(255,255,255,0.04)
+);
+
+border:1px solid rgba(255,255,255,0.06);
+
+backdrop-filter:blur(18px);
+
+color:white;
+
+font-weight:600;
+
+text-decoration:none;
+
+transition:0.35s;
+}
+
+.nav-btn:hover{
+transform:translateY(-3px);
+
+background:
+linear-gradient(
+135deg,
+rgba(124,92,255,0.22),
+rgba(91,140,255,0.16)
+);
+}
+
+/* HERO PANEL */
+
+.hero-panel{
+position:absolute;
+
+left:50px;
+bottom:50px;
+
+z-index:100;
+
+max-width:650px;
+}
+
+.hero-panel small{
+display:block;
+
+letter-spacing:2px;
+
+color:#7f8ca6;
+
+font-size:0.8rem;
+
+margin-bottom:16px;
+}
+
+.hero-panel h1{
+font-size:5rem;
+line-height:0.92;
+letter-spacing:-4px;
+
+margin-bottom:24px;
+
+text-shadow:0 10px 40px rgba(0,0,0,0.35);
+}
+
+.hero-panel h1 span{
+background:linear-gradient(90deg,#8b5cf6,#60a5fa);
+
+-webkit-background-clip:text;
+-webkit-text-fill-color:transparent;
+}
+
+.hero-panel p{
+font-size:1.08rem;
+line-height:1.9;
+
+color:#dbe4f0;
+
+max-width:620px;
+}
+
+/* INFO CARD */
+
+.info-card{
+position:absolute;
+
+right:40px;
+bottom:40px;
+
+z-index:100;
+
+width:320px;
+
+padding:24px;
+
+border-radius:28px;
+
+background:
+linear-gradient(
+135deg,
+rgba(255,255,255,0.08),
+rgba(255,255,255,0.03)
+);
+
+backdrop-filter:blur(20px);
+
+border:1px solid rgba(255,255,255,0.06);
+
+box-shadow:
+0 20px 50px rgba(0,0,0,0.35);
+}
+
+.info-card h3{
+font-size:1.2rem;
+margin-bottom:12px;
+}
+
+.info-card p{
+font-size:0.92rem;
+line-height:1.7;
+color:#dbe4f0;
+margin-bottom:18px;
+}
+
+.info-card ul{
+list-style:none;
+display:flex;
+flex-wrap:wrap;
+gap:10px;
+}
+
+.info-card li{
+padding:10px 14px;
+
+border-radius:14px;
+
+background:rgba(255,255,255,0.06);
+
+font-size:0.82rem;
+
+color:#dbe4f0;
+}
+
+/* MOBILE */
+
+@media(max-width:900px){
+
+.hero-panel{
+left:24px;
+right:24px;
+bottom:34px;
+max-width:100%;
+}
+
+.hero-panel h1{
+font-size:2.9rem;
+letter-spacing:-2px;
+}
+
+.hero-panel p{
+font-size:0.92rem;
+line-height:1.7;
+}
+
+.info-card{
+display:none;
+}
+
+.navbar{
+padding:14px 18px;
+}
+
+.logo{
+font-size:1.2rem;
+}
+
+.nav-btn{
+padding:12px 16px;
+font-size:0.82rem;
+}
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="space-bg"></div>
+
+<!-- NAVBAR -->
+
+<nav class="navbar">
+
+<a href="index.html" class="logo">
+🌍 Vidolta
+</a>
+
+<a href="index.html" class="nav-btn">
+← Retour à l’accueil
+</a>
+
+</nav>
+
+<!-- GLOBE -->
+
+<div id="globeViz"></div>
+
+<!-- HERO -->
+
+<div class="hero-panel">
+
+<small>
+MOVE SMARTER. DISCOVER MORE.
+</small>
+
+<h1>
+Explorer le <span>monde</span>
+</h1>
+
+<p>
+Découvre les villes disponibles sur Vidolta à travers un globe immersif moderne pensé pour l’exploration urbaine premium.
+</p>
+
+</div>
+
+<!-- INFO CARD -->
+
+<div class="info-card">
+
+<h3>
+Destinations disponibles
+</h3>
+
+<p>
+Explore les villes déjà disponibles sur Vidolta et découvre de nouvelles expériences urbaines immersives.
+</p>
+
+<ul>
+<li>Paris</li>
+<li>Tokyo</li>
+<li>Rio</li>
+<li>Londres</li>
+<li>Séoul</li>
+<li>Dubaï</li>
+</ul>
+
+</div>
+
+<script>
+
+/* VILLES */
+
+const cities = [
+
+{
+name:'Paris',
+lat:48.8566,
+lng:2.3522,
+page:'paris.html'
+},
+
+{
+name:'Londres',
+lat:51.5072,
+lng:-0.1276,
+page:'londres.html'
+},
+
+{
+name:'Marrakech',
+lat:31.6295,
+lng:-7.9811,
+page:'marrakech.html'
+},
+
+{
+name:'Prague',
+lat:50.0755,
+lng:14.4378,
+page:'prague.html'
+},
+
+{
+name:'Athènes',
+lat:37.9838,
+lng:23.7275,
+page:'athenes.html'
+},
+
+{
+name:'New York',
+lat:40.7128,
+lng:-74.0060,
+page:'new-york.html'
+},
+
+{
+name:'Montréal',
+lat:45.5019,
+lng:-73.5674,
+page:'montreal.html'
+},
+
+{
+name:'Barcelone',
+lat:41.3874,
+lng:2.1686,
+page:'barcelone.html'
+},
+
+{
+name:'Palma',
+lat:39.5696,
+lng:2.6502,
+page:'majorque.html'
+},
+
+{
+name:'Rome',
+lat:41.9028,
+lng:12.4964,
+page:'rome.html'
+},
+
+{
+name:'Séoul',
+lat:37.5665,
+lng:126.9780,
+page:'seoul.html'
+},
+
+{
+name:'Tokyo',
+lat:35.6762,
+lng:139.6503,
+page:'tokyo.html'
+},
+
+{
+name:'Dubaï',
+lat:25.2048,
+lng:55.2708,
+page:'dubai.html'
+},
+
+{
+name:'Amsterdam',
+lat:52.3676,
+lng:4.9041,
+page:'amsterdam.html'
+},
+
+{
+name:'Munich',
+lat:48.1351,
+lng:11.5820,
+page:'munich.html'
+},
+
+{
+name:'Istanbul',
+lat:41.0082,
+lng:28.9784,
+page:'istanbul.html'
+},
+
+{
+name:'Rio',
+lat:-22.9068,
+lng:-43.1729,
+page:'rio.html'
+},
+
+{
+name:'Nantes',
+lat:47.2184,
+lng:-1.5536,
+page:'nantes.html'
+},
+
+{
+name:'Bordeaux',
+lat:44.8378,
+lng:-0.5792,
+page:'bordeaux.html'
+},
+
+{
+name:'Marseille',
+lat:43.2965,
+lng:5.3698,
+page:'marseille.html'
+}
+
+];
+
+/* GLOBE */
+
+const globe = Globe()
+
+(document.getElementById('globeViz'))
+
+.globeImageUrl('https://unpkg.com/three-globe/example/img/earth-night.jpg')
+
+.bumpImageUrl('https://unpkg.com/three-globe/example/img/earth-topology.png')
+
+.backgroundColor('rgba(0,0,0,0)')
+
+.pointsData(cities)
+
+.pointLat(d => d.lat)
+
+.pointLng(d => d.lng)
+
+.pointAltitude(0.02)
+
+.pointRadius(0.18)
+
+.pointColor(() => '#8b5cf6')
+
+.pointLabel(d => `
+<div style="
+font-family:Poppins;
+padding:10px 14px;
+border-radius:14px;
+background:rgba(15,23,42,0.95);
+color:white;
+font-size:14px;
+backdrop-filter:blur(18px);
+">
+${d.name}
+</div>
+`)
+
+.onPointClick(d => {
+window.location.href = d.page;
+});
+
+/* AUTO ROTATION */
+
+globe.controls().autoRotate = true;
+globe.controls().autoRotateSpeed = 0.45;
+
+/* ATMOSPHERE */
+
+globe.atmosphereColor('#5b8cff');
+globe.atmosphereAltitude(0.22);
+
+/* INITIAL VIEW */
+
+globe.pointOfView({
+lat:20,
+lng:10,
+altitude:2.2
+});
+
+</script>
+
+</body>
+
+</html>
