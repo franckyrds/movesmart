@@ -18,10 +18,10 @@ content="Explore les villes du monde avec Vidolta à travers un globe interactif
 
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 
-<!-- GLOBE.GL -->
+<!-- GLOBE -->
 
-<script src="//unpkg.com/three"></script>
-<script src="//unpkg.com/globe.gl"></script>
+<script src="https://unpkg.com/three@0.154.0/build/three.min.js"></script>
+<script src="https://unpkg.com/globe.gl"></script>
 
 <style>
 
@@ -145,7 +145,7 @@ rgba(91,140,255,0.16)
 );
 }
 
-/* HERO TEXT */
+/* HERO PANEL */
 
 .hero-panel{
 position:absolute;
@@ -156,6 +156,18 @@ bottom:50px;
 z-index:100;
 
 max-width:650px;
+}
+
+.hero-panel small{
+display:block;
+
+letter-spacing:2px;
+
+color:#7f8ca6;
+
+font-size:0.8rem;
+
+margin-bottom:16px;
 }
 
 .hero-panel h1{
@@ -181,22 +193,10 @@ line-height:1.9;
 
 color:#dbe4f0;
 
-margin-bottom:28px;
-
 max-width:620px;
 }
 
-.hero-panel small{
-display:block;
-
-letter-spacing:2px;
-
-color:#7f8ca6;
-
-font-size:0.8rem;
-}
-
-/* FLOATING CARD */
+/* INFO CARD */
 
 .info-card{
 position:absolute;
@@ -258,6 +258,91 @@ font-size:0.82rem;
 color:#dbe4f0;
 }
 
+/* CITY PANEL */
+
+.city-panel{
+position:absolute;
+
+top:50%;
+left:50%;
+
+transform:
+translate(-50%,-50%)
+scale(0.9);
+
+z-index:300;
+
+width:320px;
+
+padding:28px;
+
+border-radius:30px;
+
+background:
+linear-gradient(
+135deg,
+rgba(255,255,255,0.08),
+rgba(255,255,255,0.03)
+);
+
+backdrop-filter:blur(22px);
+
+border:1px solid rgba(255,255,255,0.08);
+
+box-shadow:
+0 20px 60px rgba(0,0,0,0.35);
+
+opacity:0;
+
+pointer-events:none;
+
+transition:0.35s;
+}
+
+.city-panel.active{
+opacity:1;
+
+pointer-events:auto;
+
+transform:
+translate(-50%,-50%)
+scale(1);
+}
+
+.city-panel h3{
+font-size:2rem;
+margin-bottom:6px;
+}
+
+.city-panel p{
+color:#cbd5e1;
+margin-bottom:22px;
+}
+
+.city-panel a{
+display:inline-flex;
+align-items:center;
+justify-content:center;
+
+padding:14px 22px;
+
+border-radius:18px;
+
+background:white;
+
+color:#111827;
+
+font-weight:700;
+
+transition:0.3s;
+
+text-decoration:none;
+}
+
+.city-panel a:hover{
+transform:translateY(-3px);
+}
+
 /* MOBILE */
 
 @media(max-width:900px){
@@ -294,6 +379,15 @@ font-size:1.2rem;
 .nav-btn{
 padding:12px 16px;
 font-size:0.82rem;
+}
+
+.city-panel{
+width:90%;
+padding:24px;
+}
+
+.city-panel h3{
+font-size:1.7rem;
 }
 
 }
@@ -342,7 +436,7 @@ Découvre les villes disponibles sur Vidolta à travers un globe immersif modern
 
 </div>
 
-<!-- CARD -->
+<!-- INFO CARD -->
 
 <div class="info-card">
 
@@ -365,6 +459,24 @@ Explore les villes déjà disponibles sur Vidolta et découvre de nouvelles exp�
 
 </div>
 
+<!-- CITY PANEL -->
+
+<div class="city-panel" id="cityPanel">
+
+<h3 id="cityName">
+Ville
+</h3>
+
+<p id="cityCountry">
+Pays
+</p>
+
+<a id="cityLink" href="#">
+Explorer la ville →
+</a>
+
+</div>
+
 <script>
 
 /* VILLES */
@@ -373,6 +485,7 @@ const cities = [
 
 {
 name:'Paris',
+country:'France',
 lat:48.8566,
 lng:2.3522,
 page:'paris.html'
@@ -380,6 +493,7 @@ page:'paris.html'
 
 {
 name:'Londres',
+country:'Royaume-Uni',
 lat:51.5072,
 lng:-0.1276,
 page:'londres.html'
@@ -387,6 +501,7 @@ page:'londres.html'
 
 {
 name:'Marrakech',
+country:'Maroc',
 lat:31.6295,
 lng:-7.9811,
 page:'marrakech.html'
@@ -394,6 +509,7 @@ page:'marrakech.html'
 
 {
 name:'Prague',
+country:'République tchèque',
 lat:50.0755,
 lng:14.4378,
 page:'prague.html'
@@ -401,6 +517,7 @@ page:'prague.html'
 
 {
 name:'Athènes',
+country:'Grèce',
 lat:37.9838,
 lng:23.7275,
 page:'athenes.html'
@@ -408,6 +525,7 @@ page:'athenes.html'
 
 {
 name:'New York',
+country:'États-Unis',
 lat:40.7128,
 lng:-74.0060,
 page:'new-york.html'
@@ -415,6 +533,7 @@ page:'new-york.html'
 
 {
 name:'Montréal',
+country:'Canada',
 lat:45.5019,
 lng:-73.5674,
 page:'montreal.html'
@@ -422,6 +541,7 @@ page:'montreal.html'
 
 {
 name:'Barcelone',
+country:'Espagne',
 lat:41.3874,
 lng:2.1686,
 page:'barcelone.html'
@@ -429,6 +549,7 @@ page:'barcelone.html'
 
 {
 name:'Palma',
+country:'Espagne',
 lat:39.5696,
 lng:2.6502,
 page:'majorque.html'
@@ -436,6 +557,7 @@ page:'majorque.html'
 
 {
 name:'Rome',
+country:'Italie',
 lat:41.9028,
 lng:12.4964,
 page:'rome.html'
@@ -443,6 +565,7 @@ page:'rome.html'
 
 {
 name:'Séoul',
+country:'Corée du Sud',
 lat:37.5665,
 lng:126.9780,
 page:'seoul.html'
@@ -450,6 +573,7 @@ page:'seoul.html'
 
 {
 name:'Tokyo',
+country:'Japon',
 lat:35.6762,
 lng:139.6503,
 page:'tokyo.html'
@@ -457,6 +581,7 @@ page:'tokyo.html'
 
 {
 name:'Dubaï',
+country:'Émirats arabes unis',
 lat:25.2048,
 lng:55.2708,
 page:'dubai.html'
@@ -464,6 +589,7 @@ page:'dubai.html'
 
 {
 name:'Amsterdam',
+country:'Pays-Bas',
 lat:52.3676,
 lng:4.9041,
 page:'amsterdam.html'
@@ -471,6 +597,7 @@ page:'amsterdam.html'
 
 {
 name:'Munich',
+country:'Allemagne',
 lat:48.1351,
 lng:11.5820,
 page:'munich.html'
@@ -478,6 +605,7 @@ page:'munich.html'
 
 {
 name:'Istanbul',
+country:'Turquie',
 lat:41.0082,
 lng:28.9784,
 page:'istanbul.html'
@@ -485,6 +613,7 @@ page:'istanbul.html'
 
 {
 name:'Rio',
+country:'Brésil',
 lat:-22.9068,
 lng:-43.1729,
 page:'rio.html'
@@ -492,6 +621,7 @@ page:'rio.html'
 
 {
 name:'Nantes',
+country:'France',
 lat:47.2184,
 lng:-1.5536,
 page:'nantes.html'
@@ -499,6 +629,7 @@ page:'nantes.html'
 
 {
 name:'Bordeaux',
+country:'France',
 lat:44.8378,
 lng:-0.5792,
 page:'bordeaux.html'
@@ -506,6 +637,7 @@ page:'bordeaux.html'
 
 {
 name:'Marseille',
+country:'France',
 lat:43.2965,
 lng:5.3698,
 page:'marseille.html'
@@ -513,13 +645,21 @@ page:'marseille.html'
 
 ];
 
+/* MOBILE */
+
+const isMobile = window.innerWidth < 768;
+
 /* GLOBE */
 
 const globe = Globe()
 
 (document.getElementById('globeViz'))
 
-.globeImageUrl('https://unpkg.com/three-globe/example/img/earth-night.jpg')
+.width(window.innerWidth)
+
+.height(window.innerHeight)
+
+.globeImageUrl('https://unpkg.com/three-globe/example/img/earth-blue-marble.jpg')
 
 .bumpImageUrl('https://unpkg.com/three-globe/example/img/earth-topology.png')
 
@@ -546,16 +686,30 @@ background:rgba(15,23,42,0.95);
 color:white;
 font-size:14px;
 backdrop-filter:blur(18px);
+border:1px solid rgba(255,255,255,0.08);
 ">
 ${d.name}
 </div>
 `)
 
 .onPointClick(d => {
-window.location.href = d.page;
+
+const panel = document.getElementById('cityPanel');
+
+document.getElementById('cityName')
+.innerText = d.name;
+
+document.getElementById('cityCountry')
+.innerText = d.country;
+
+document.getElementById('cityLink')
+.href = d.page;
+
+panel.classList.add('active');
+
 });
 
-/* AUTO ROTATION */
+/* CONTROLS */
 
 const controls = globe.controls();
 
@@ -574,20 +728,44 @@ controls.maxDistance = 320;
 controls.rotateSpeed = 0.85;
 
 controls.zoomSpeed = 0.9;
-  
+
 /* ATMOSPHERE */
 
-globe.atmosphereColor('#5b8cff');
-globe.atmosphereAltitude(0.22);
+globe.atmosphereColor('#6ea8ff');
 
-/* INITIAL POSITION */
+globe.atmosphereAltitude(0.28);
 
-const isMobile = window.innerWidth < 768;
-  
+/* INITIAL VIEW */
+
 globe.pointOfView({
 lat:20,
 lng:10,
 altitude:isMobile ? 1.9 : 1.45
+});
+
+/* RESPONSIVE */
+
+window.addEventListener('resize', () => {
+
+globe
+.width(window.innerWidth)
+.height(window.innerHeight);
+
+});
+
+/* CLOSE PANEL */
+
+window.addEventListener('click', e => {
+
+const panel = document.getElementById('cityPanel');
+
+if(
+!e.target.closest('.city-panel') &&
+!e.target.closest('canvas')
+){
+panel.classList.remove('active');
+}
+
 });
 
 </script>
