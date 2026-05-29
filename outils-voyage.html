@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Outils Voyage | Vidolta</title>
+
+<meta name="description"
+content="Préparez votre voyage avec les outils Vidolta : fuseaux horaires, convertisseur de devises et outils pratiques pour explorer le monde.">
+
+<meta name="theme-color" content="#060b1f">
+
+<link rel="icon" href="favicon.ico">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+<style>
+
+/* COLLER ICI LE STYLE DE INDEX.HTML */
+
+/* AJOUTS SPECIFIQUES */
+
+.tool-card{
+padding:40px;
+border-radius:30px;
+
+background:
+linear-gradient(
+135deg,
+rgba(124,92,255,0.16),
+rgba(91,140,255,0.10)
+);
+
+border:1px solid rgba(255,255,255,0.08);
+
+backdrop-filter:blur(20px);
+
+text-align:center;
+}
+
+.tool-card h2{
+font-size:2rem;
+margin-bottom:18px;
+}
+
+.tool-card p{
+max-width:800px;
+margin:auto;
+line-height:1.8;
+color:#dbe4f0;
+}
+
+.world-map{
+width:100%;
+border-radius:26px;
+margin-top:30px;
+box-shadow:
+0 20px 50px rgba(0,0,0,0.35);
+}
+
+.coming-soon{
+margin-top:40px;
+padding:28px;
+
+border-radius:24px;
+
+background:
+rgba(255,255,255,0.05);
+
+border:1px solid rgba(255,255,255,0.08);
+}
+
+.coming-soon h3{
+margin-bottom:10px;
+font-size:1.4rem;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+
+<nav class="navbar">
+
+<a href="index.html" class="logo">
+🌍 Vidolta
+</a>
+
+<div class="mobile-btn" onclick="toggleMenu()">
+☰
+</div>
+
+<div class="nav-links">
+
+<a href="index.html">
+Accueil
+</a>
+
+<a href="destinations.html">
+Destinations
+</a>
+
+<a href="world-map.html"
+class="explorer-link">
+🌍 Explorer le monde
+</a>
+
+<a href="outils-voyage.html"
+class="explorer-link">
+🛠️ Outils Voyage
+</a>
+
+</div>
+
+</nav>
+
+<!-- HERO -->
+
+<section class="hero">
+
+<div class="hero-container">
+
+<div class="hero-left fade-up">
+
+<h1>
+🛠️ <span>Outils Voyage</span>
+</h1>
+
+<p class="hero-text">
+Préparez vos voyages grâce à des outils simples, rapides et utiles pour explorer le monde plus sereinement.
+</p>
+
+<p class="hero-sub">
+TRAVEL SMARTER.
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- FUSEAUX HORAIRES -->
+
+<section class="section fade-up">
+
+<div class="tool-card">
+
+<h2>
+🌍 Carte mondiale des fuseaux horaires
+</h2>
+
+<p>
+Visualisez rapidement les principaux fuseaux horaires et les décalages entre les grandes destinations internationales.
+</p>
+
+<img
+src="images/world-timezones.webp"
+alt="Carte mondiale des fuseaux horaires"
+class="world-map">
+
+</div>
+
+</section>
+
+<!-- CONVERTISSEUR -->
+
+<section class="section fade-up">
+
+<div class="tool-card">
+
+<h2>
+💱 Convertisseur de devises
+</h2>
+
+<p>
+Le convertisseur de devises Vidolta sera prochainement disponible afin de vous aider à préparer vos voyages partout dans le monde.
+</p>
+
+<div class="coming-soon">
+
+<h3>
+Bientôt disponible
+</h3>
+
+<p>
+Conversion instantanée entre les principales devises mondiales avec mise à jour automatique des taux.
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- CTA -->
+
+<section class="section fade-up">
+
+<div class="cta-box">
+
+<h2>
+Explorez les plus belles destinations
+</h2>
+
+<p>
+Découvrez nos guides urbains modernes, expériences locales et conseils pratiques pour préparer chaque voyage.
+</p>
+
+<a href="destinations.html">
+Découvrir les destinations
+</a>
+
+</div>
+
+</section>
+
+<!-- FOOTER -->
+
+<footer>
+
+<p>
+© 2026 Vidolta — Te guide partout où tu vas.
+</p>
+
+<div class="footer-links">
+
+<a href="about.html">
+À propos
+</a>
+
+<a href="mentions-legales.html">
+Mentions légales
+</a>
+
+<a href="confidentialite.html">
+Confidentialité
+</a>
+
+<a href="contact.html">
+Contact
+</a>
+
+</div>
+
+</footer>
+
+<script>
+
+function toggleMenu(){
+
+const nav =
+document.querySelector('.nav-links');
+
+nav.classList.toggle('active');
+
+}
+
+const observer =
+new IntersectionObserver(entries=>{
+
+entries.forEach(entry=>{
+
+if(entry.isIntersecting){
+entry.target.classList.add('visible');
+}
+
+});
+
+},{
+threshold:0.15
+});
+
+document
+.querySelectorAll('.fade-up')
+.forEach(el=>observer.observe(el));
+
+</script>
+
+</body>
+</html>
