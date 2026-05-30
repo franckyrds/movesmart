@@ -706,7 +706,9 @@ function toggleMenu(){
 const nav =
 document.querySelector('.nav-links');
 
+if(nav){
 nav.classList.toggle('active');
+}
 
 }
 
@@ -740,53 +742,29 @@ document.getElementById('fromCurrency').value;
 const to =
 document.getElementById('toCurrency').value;
 
-try{
-
-const response =
-await fetch(
-`https://api.frankfurter.app/latest?amount=${amount}&from=${from}&to=${to}`
-);
-
-const data =
-await response.json();
+if(from === to){
 
 document.getElementById('result').innerHTML =
-`${amount} ${from} = ${data.rates[to].toFixed(2)} ${to}`;
+`${amount} ${to}`;
 
-}catch(error){
-
-document.getElementById('result').innerHTML =
-"Erreur de conversion";
+return;
 
 }
 
-}
-
-async function convertCurrency(){
-
-const amount =
-document.getElementById('amount').value;
-
-const from =
-document.getElementById('fromCurrency').value;
-
-const to =
-document.getElementById('toCurrency').value;
-
 try{
 
-const response =
-await fetch(
+const response = await fetch(
 `https://api.frankfurter.app/latest?amount=${amount}&from=${from}&to=${to}`
 );
 
-const data =
-await response.json();
+const data = await response.json();
 
 document.getElementById('result').innerHTML =
-`${amount} ${from} = ${data.rates[to].toFixed(2)} ${to}`;
+`${amount} ${from} = ${Number(data.rates[to]).toFixed(2)} ${to}`;
 
 }catch(error){
+
+console.error(error);
 
 document.getElementById('result').innerHTML =
 "Erreur de conversion";
