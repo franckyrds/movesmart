@@ -463,6 +463,89 @@ font-size:0.85rem;
 color:#d1d5db;
 }
 
+/* COUPE DU MONDE */
+
+.cta{
+position:relative;
+
+overflow:hidden;
+
+border-radius:32px;
+
+min-height:420px;
+
+display:flex;
+align-items:center;
+justify-content:center;
+
+text-align:center;
+}
+
+.cta img{
+position:absolute;
+inset:0;
+
+width:100%;
+height:100%;
+
+object-fit:cover;
+
+filter:brightness(0.72);
+}
+
+.cta::after{
+content:'';
+
+position:absolute;
+inset:0;
+
+background:
+linear-gradient(
+to bottom,
+rgba(5,8,22,0.2),
+rgba(5,8,22,0.55)
+);
+}
+
+.cta-content{
+position:relative;
+z-index:2;
+
+padding:40px;
+
+max-width:850px;
+}
+
+.cta-content h2{
+font-size:2.6rem;
+margin-bottom:18px;
+}
+
+.cta-content p{
+line-height:1.9;
+color:#e2e8f0;
+margin-bottom:28px;
+}
+
+.cta-content a{
+display:inline-block;
+
+padding:16px 28px;
+
+border-radius:18px;
+
+background:white;
+color:#111827;
+
+font-weight:700;
+
+transition:0.3s;
+}
+
+.cta-content a:hover{
+transform:translateY(-3px);
+}
+  
 /* CTA */
 
 .cta-box{
@@ -815,7 +898,13 @@ Découvrir →
 
 <section class="section fade-up">
 
-<div class="cta-box">
+<div class="cta">
+
+<img
+src="images/coupe-du-monde-2026.webp"
+alt="Coupe du Monde 2026">
+
+<div class="cta-content">
 
 <h2>
 ⚽ Coupe du Monde 2026
@@ -831,6 +920,8 @@ Découvrez les billets, les stades, les villes hôtes et les conseils pour vivre
 <a href="coupe-du-monde-2026.html">
 Découvrir le guide →
 </a>
+
+</div>
 
 </div>
 
