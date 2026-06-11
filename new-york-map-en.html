@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Carte de New York — Vidolta</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+body{
+font-family:'Poppins',sans-serif;
+
+background:
+radial-gradient(circle at top right,rgba(124,92,255,0.18),transparent 30%),
+radial-gradient(circle at top left,rgba(91,140,255,0.14),transparent 25%),
+linear-gradient(to bottom,#0b1426 0%,#09111f 100%);
+
+color:white;
+
+min-height:100vh;
+
+padding:40px 20px;
+}
+
+/* HEADER */
+
+.map-header{
+max-width:1200px;
+margin:auto auto 40px;
+
+text-align:center;
+}
+
+.map-header h1{
+font-size:3.6rem;
+margin-bottom:16px;
+
+letter-spacing:-2px;
+}
+
+.map-header h1 span{
+background:linear-gradient(90deg,#8b5cf6,#60a5fa);
+
+-webkit-background-clip:text;
+-webkit-text-fill-color:transparent;
+}
+
+.map-header p{
+max-width:850px;
+margin:auto;
+
+line-height:1.8;
+
+color:#cbd5e1;
+
+font-size:1.05rem;
+}
+
+/* MAP */
+
+.map-container{
+max-width:1400px;
+margin:auto;
+}
+
+.map-card{
+position:relative;
+
+overflow:hidden;
+
+border-radius:34px;
+
+border:1px solid rgba(255,255,255,0.06);
+
+box-shadow:0 20px 45px rgba(0,0,0,0.35);
+
+background:#0f172a;
+}
+
+.map-card img{
+width:100%;
+display:block;
+}
+
+/* GRID */
+
+.info-grid{
+max-width:1400px;
+
+margin:40px auto 0;
+
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+
+gap:20px;
+}
+
+.info-card{
+background:
+linear-gradient(
+135deg,
+rgba(18,26,52,0.92),
+rgba(12,18,38,0.88)
+);
+
+padding:26px;
+
+border-radius:26px;
+
+border:1px solid rgba(255,255,255,0.05);
+
+box-shadow:0 12px 35px rgba(0,0,0,0.24);
+
+transition:0.35s;
+}
+
+.info-card:hover{
+transform:translateY(-6px);
+
+border-color:rgba(99,102,241,0.4);
+}
+
+.info-card h3{
+font-size:1.2rem;
+margin-bottom:14px;
+}
+
+.info-card p{
+line-height:1.7;
+color:#cbd5e1;
+font-size:0.96rem;
+}
+
+/* CTA */
+
+.bottom-cta{
+max-width:1200px;
+
+margin:50px auto 0;
+
+padding:40px;
+
+border-radius:30px;
+
+background:
+linear-gradient(
+135deg,
+rgba(99,102,241,0.22),
+rgba(59,130,246,0.16)
+);
+
+border:1px solid rgba(255,255,255,0.05);
+
+text-align:center;
+}
+
+.bottom-cta h2{
+font-size:2rem;
+margin-bottom:16px;
+}
+
+.bottom-cta p{
+max-width:800px;
+margin:auto auto 24px;
+
+line-height:1.8;
+
+color:#dbe4f0;
+}
+
+.bottom-cta a{
+display:inline-block;
+
+padding:14px 22px;
+
+background:white;
+
+color:#111827;
+
+border-radius:14px;
+
+font-weight:700;
+
+transition:0.3s;
+}
+
+.bottom-cta a:hover{
+transform:translateY(-2px);
+}
+
+/* MOBILE */
+
+@media(max-width:900px){
+
+body{
+padding:24px 16px;
+}
+
+.map-header h1{
+font-size:2.5rem;
+}
+
+.map-header p{
+font-size:0.96rem;
+line-height:1.7;
+}
+
+.map-card{
+border-radius:24px;
+}
+
+.bottom-cta{
+padding:28px;
+}
+
+.bottom-cta h2{
+font-size:1.6rem;
+}
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<!-- HEADER -->
+
+<section class="map-header">
+
+<h1>
+Map of <span>New York</span>
+</h1>
+
+<p>
+Explore Manhattan, Brooklyn, Queens,
+the main New York City subway lines,
+Times Square, Central Park and the city's most iconic landmarks.
+</p>
+
+</section>
+
+<!-- MAP -->
+
+<section class="map-container">
+
+<div class="map-card">
+
+<img
+src="images/new-york-map-en.webp"
+alt="Map of New York">
+
+</div>
+
+</section>
+
+<!-- INFORMATION -->
+
+<section class="info-grid">
+
+<div class="info-card">
+
+<h3>
+🚇 NYC Subway
+</h3>
+
+<p>
+The New York City Subway operates 24/7
+and provides quick access to Manhattan,
+Brooklyn, Queens and the Bronx.
+</p>
+
+</div>
+
+<div class="info-card">
+
+<h3>
+🗽 Must-See Neighborhoods & Landmarks
+</h3>
+
+<p>
+Times Square,
+Central Park,
+Brooklyn Bridge,
+Wall Street,
+SoHo and Williamsburg are among the city's top attractions.
+</p>
+
+</div>
+
+<div class="info-card">
+
+<h3>
+🏀 Sports & Events
+</h3>
+
+<p>
+NBA games,
+the Yankees,
+Broadway shows
+and major American events keep the city vibrant year-round.
+</p>
+
+</div>
+
+<div class="info-card">
+
+<h3>
+🌃 New York at Night
+</h3>
+
+<p>
+Rooftop bars,
+Times Square,
+Broadway
+and the Manhattan skyline create an atmosphere unlike anywhere else in the world.
+</p>
+
+</div>
+
+</section>
+
+<!-- CTA -->
+
+<section class="bottom-cta">
+
+<h2>
+Explore New York with Vidolta
+</h2>
+
+<p>
+Discover the best activities,
+sporting events,
+rooftops and must-have experiences in New York City.
+</p>
+
+<a href="new-york-en.html">
+Back to the New York Guide →
+</a>
+
+</section>
+
+</body>
+
+</html>
