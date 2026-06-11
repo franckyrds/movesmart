@@ -869,6 +869,7 @@ font-size:2rem;
 
 <a href="index-en.html" class="logo">🌍 Vidolta</a>
 
+<div class="mobile-btn" onclick="toggleMenu()">☰</div>
 <div class="nav-links">
 <a href="#tickets">🎟️ Tickets</a>
 <a href="#schedule">📅 Schedule</a>
@@ -1345,6 +1346,18 @@ rel="noopener sponsored">
 }
 ]
 }
+</script>
+
+<script>
+
+function toggleMenu(){
+
+const nav = document.querySelector('.nav-links');
+
+nav.classList.toggle('active');
+
+}
+
 </script>
 
 </body>
