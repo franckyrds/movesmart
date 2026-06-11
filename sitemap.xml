@@ -9,6 +9,10 @@
 <url>
 <loc>https://www.vidolta.com/coupe-du-monde-2026.html</loc>
 </url>
+
+<url>
+<loc>https://www.vidolta.com/world-cup-2026.html</loc>
+</url>
   
 <url><loc>https://www.vidolta.com/paris.html</loc></url> <url><loc>https://www.vidolta.com/paris-map.html</loc></url> <url><loc>https://www.vidolta.com/guide-paris.html</loc></url>
 
@@ -46,4 +50,32 @@
 
 <url><loc>https://www.vidolta.com/bordeaux.html</loc></url> <url><loc>https://www.vidolta.com/lyon.html</loc></url> <url><loc>https://www.vidolta.com/marseille.html</loc></url> <url><loc>https://www.vidolta.com/nantes.html</loc></url>
 
+<url>
+  <loc>https://www.vidolta.com/about-en.html</loc>
+</url>
+
+<url>
+  <loc>https://www.vidolta.com/legal-notice.html</loc>
+</url>
+
+<url>
+  <loc>https://www.vidolta.com/privacy-policy.html</loc>
+</url>
+
+<url>
+  <loc>https://www.vidolta.com/contact-en.html</loc>
+</url>
+
+<url>
+  <loc>https://www.vidolta.com/destinations-en.html</loc>
+</url>
+
+<url>
+  <loc>https://www.vidolta.com/paris-en.html</loc>
+</url>
+
+<url>
+  <loc>https://www.vidolta.com/new-york-en.html</loc>
+</url>
+  
 </urlset>
