@@ -836,9 +836,11 @@ font-size:2rem;
 <body>
 
 <nav class="navbar">
+  
 <a href="index.html" class="logo">🌍 Vidolta</a>
 
 <div class="mobile-btn" onclick="toggleMenu()">☰</div>
+  
 <div class="nav-links">
 <a href="#billets">🎟️ Billets</a>
 <a href="#calendrier">📅 Calendrier</a>
@@ -1158,5 +1160,17 @@ et découvrez les villes hôtes du plus grand événement sportif au monde.
 <p>© 2026 Vidolta — Coupe du Monde 2026</p>
 </footer>
 
+<script>
+
+function toggleMenu(){
+
+const nav = document.querySelector('.nav-links');
+
+nav.classList.toggle('active');
+
+}
+
+</script>
+  
 </body>
 </html>
