@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
 
 <meta charset="UTF-8">
@@ -12,18 +11,138 @@
 content="Explore New York's best photo spots and iconic filming locations from Friends, Sex and the City, Gossip Girl, Spider-Man and Ghostbusters.">
 
 <link rel="canonical"
-href="https://vidolta.com/new-york-photo-map-en.html">
+href="https://vidolta.com/new-york-map2-en.html">
 
 <link rel="alternate" hreflang="fr"
-href="https://vidolta.com/new-york-photo-map.html">
+href="https://vidolta.com/new-york-map2.html">
 
 <link rel="alternate" hreflang="en"
-href="https://vidolta.com/new-york-photo-map-en.html">
+href="https://vidolta.com/new-york-map2-en.html">
 
 <link rel="alternate" hreflang="x-default"
-href="https://vidolta.com/new-york-photo-map.html">
-
+href="https://vidolta.com/new-york-map2.html">
+  
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+body{
+font-family:'Poppins',sans-serif;
+background:#081120;
+color:white;
+}
+
+.hero{
+position:relative;
+}
+
+.hero img{
+width:100%;
+display:block;
+}
+
+.marker{
+
+position:absolute;
+
+width:48px;
+height:48px;
+
+border-radius:50%;
+
+display:flex;
+align-items:center;
+justify-content:center;
+
+font-size:22px;
+font-weight:700;
+
+cursor:pointer;
+
+box-shadow:0 8px 25px rgba(0,0,0,0.4);
+
+transition:.3s;
+}
+
+.marker:hover{
+transform:scale(1.12);
+}
+
+.photo{
+background:#8b5cf6;
+}
+
+.cinema{
+background:#ef4444;
+}
+
+.popup{
+
+display:none;
+
+position:absolute;
+
+background:#0f172a;
+
+padding:18px;
+
+border-radius:18px;
+
+width:280px;
+
+box-shadow:0 15px 40px rgba(0,0,0,.5);
+
+z-index:100;
+}
+
+.popup h3{
+margin-bottom:10px;
+}
+
+.popup p{
+font-size:.92rem;
+line-height:1.7;
+color:#cbd5e1;
+}
+
+.marker:hover .popup{
+display:block;
+}
+
+.back{
+position:fixed;
+top:20px;
+left:20px;
+
+padding:12px 18px;
+
+background:#111827;
+
+border-radius:12px;
+
+text-decoration:none;
+color:white;
+
+z-index:999;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<a class="back" href="new-york-en.html">
+← Back to New York
+</a>
+
+<section class="hero">
 
 <img
 src="images/new-york-map2-en.webp"
