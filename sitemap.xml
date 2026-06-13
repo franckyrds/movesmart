@@ -16,11 +16,11 @@
 <loc>https://www.vidolta.com/world-cup-2026.html</loc>
 </url>
   
-<url><loc>https://www.vidolta.com/paris.html</loc></url> <url><loc>https://www.vidolta.com/paris-map.html</loc></url> <url><loc>https://www.vidolta.com/guide-paris.html</loc></url>
+<url><loc>https://www.vidolta.com/paris.html</loc></url> <url><loc>https://www.vidolta.com/paris-map.html</loc></url>
 
 <url><loc>https://www.vidolta.com/londres.html</loc></url> <url><loc>https://www.vidolta.com/londres-map.html</loc></url>
 
-<url><loc>https://www.vidolta.com/rome.html</loc></url> <url><loc>https://www.vidolta.com/rome-map.html</loc></url> <url><loc>https://www.vidolta.com/guide-rome.html</loc></url>
+<url><loc>https://www.vidolta.com/rome.html</loc></url> <url><loc>https://www.vidolta.com/rome-map.html</loc></url>
 
 <url><loc>https://www.vidolta.com/amsterdam.html</loc></url> <url><loc>https://www.vidolta.com/amsterdam-map.html</loc></url>
 
@@ -108,6 +108,10 @@
 
 <url>
   <loc>https://www.vidolta.com/world-map-en.html</loc>
+</url>
+
+<url>
+  <loc>https://www.vidolta.com/dubai-map-en.html</loc>
 </url>
   
 </urlset>
