@@ -1,0 +1,887 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+<title>L'histoire de Vidolta | Voyages, expériences et souvenirs</title>
+
+<meta name="description" content="Découvrez l'histoire de Vidolta, née d'une passion pour la découverte, les voyages, les événements et les expériences qui créent des souvenirs inoubliables.">
+
+<meta name="theme-color" content="#0f172a">
+
+<link rel="canonical" href="https://www.vidolta.com/notre-histoire.html">
+
+<meta property="og:title" content="L'histoire de Vidolta | Voyages, expériences et souvenirs">
+
+<meta property="og:description" content="Découvrez l'histoire de Vidolta, née d'une passion pour la découverte, les voyages, les événements et les expériences qui créent des souvenirs inoubliables.">
+
+<meta property="og:url" content="https://www.vidolta.com/notre-histoire.html">
+
+<meta property="og:image" content="https://www.vidolta.com/images/notre-histoire.webp">
+
+<meta property="og:type" content="website">
+
+<meta property="og:site_name" content="Vidolta">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+html{
+scroll-behavior:smooth;
+}
+
+body{
+font-family:'Poppins',sans-serif;
+background:
+radial-gradient(circle at top right,rgba(124,92,255,0.18),transparent 30%),
+radial-gradient(circle at top left,rgba(91,140,255,0.14),transparent 25%),
+linear-gradient(to bottom,#0b1426 0%,#09111f 100%);
+color:white;
+overflow-x:hidden;
+}
+
+a{
+text-decoration:none;
+}
+
+img{
+display:block;
+}
+
+/* NAVBAR */
+
+.navbar{
+position:sticky;
+top:0;
+z-index:1000;
+width:100%;
+padding:10px 16px;
+display:flex;
+justify-content:space-between;
+align-items:center;
+background:rgba(5,8,22,0.72);
+backdrop-filter:blur(14px);
+border-bottom:1px solid rgba(255,255,255,0.05);
+}
+
+.logo{
+font-size:1.6rem;
+font-weight:700;
+color:white;
+}
+
+.mobile-btn{
+display:none;
+font-size:2rem;
+cursor:pointer;
+color:white;
+}
+
+.nav-links{
+display:flex;
+gap:28px;
+align-items:center;
+}
+
+.nav-links a{
+color:#e2e8f0;
+font-weight:500;
+transition:0.3s;
+}
+
+.nav-links a:hover{
+color:#818cf8;
+}
+
+/* HERO */
+
+.hero{
+position:relative;
+background:#060b1f;
+min-height:420px;
+
+padding:120px 20px 70px;
+
+display:flex;
+align-items:center;
+justify-content:center;
+text-align:center;
+overflow:hidden;
+}
+
+.hero img{
+position:absolute;
+inset:0;
+width:100%;
+height:100%;
+object-fit:cover;
+filter:brightness(0.72);
+}
+
+.hero::after{
+content:'';
+position:absolute;
+inset:0;
+background:
+linear-gradient(
+to bottom,
+rgba(6,11,31,0.18),
+rgba(6,11,31,0.58)
+);
+z-index:1;
+}
+
+.hero-overlay{
+position:relative;
+z-index:2;
+padding:20px;
+max-width:900px;
+}
+
+.hero h1{
+font-size:3.8rem;
+line-height:0.92;
+letter-spacing:-2px;
+margin-bottom:20px;
+}
+
+.hero p{
+font-size:1.2rem;
+line-height:1.8;
+color:#e2e8f0;
+}
+
+.subtitle{
+margin-top:18px;
+font-size:0.85rem;
+letter-spacing:1px;
+opacity:0.6;
+color:#cbd5e1;
+}
+
+/* SECTION */
+
+.section{
+padding:68px 20px;
+max-width:1200px;
+margin:auto;
+}
+
+.section-title{
+text-align:center;
+font-size:2.5rem;
+margin-bottom:36px;
+}
+
+/* GRID */
+
+.grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+gap:26px;
+}
+
+/* CARD */
+
+.card{
+background:
+linear-gradient(
+135deg,
+rgba(18,26,52,0.92),
+rgba(12,18,38,0.88)
+);
+
+padding:34px;
+
+border-radius:28px;
+
+border:1px solid rgba(255,255,255,0.05);
+
+box-shadow:0 12px 35px rgba(0,0,0,0.24);
+
+transition:0.35s;
+}
+
+.card:hover{
+transform:translateY(-6px);
+border-color:rgba(99,102,241,0.45);
+box-shadow:0 15px 35px rgba(0,0,0,0.25);
+}
+
+.card h3{
+font-size:1.4rem;
+margin-bottom:18px;
+}
+
+.card p{
+line-height:1.9;
+color:#cbd5e1;
+}
+
+/* STORY CONTENT */
+
+.story{
+max-width:900px;
+margin:auto;
+}
+
+.story p{
+font-size:1.08rem;
+line-height:2;
+color:#cbd5e1;
+margin-bottom:22px;
+}
+
+.story h2{
+font-size:2.2rem;
+margin-bottom:26px;
+color:white;
+}
+
+.quote{
+max-width:900px;
+margin:50px auto;
+padding:36px;
+border-radius:28px;
+
+background:
+linear-gradient(
+135deg,
+rgba(18,26,52,0.92),
+rgba(12,18,38,0.88)
+);
+
+border-left:4px solid #818cf8;
+
+box-shadow:0 12px 35px rgba(0,0,0,0.24);
+
+font-size:1.25rem;
+line-height:2;
+font-style:italic;
+color:#e2e8f0;
+}
+
+.signature{
+text-align:center;
+margin-top:50px;
+color:#cbd5e1;
+line-height:2;
+font-size:1.08rem;
+}
+
+/* CTA */
+
+.cta{
+background:
+linear-gradient(
+135deg,
+rgba(124,92,255,0.22),
+rgba(91,140,255,0.16)
+);
+padding:52px 26px;
+border-radius:32px;
+text-align:center;
+backdrop-filter:blur(24px);
+border:1px solid rgba(255,255,255,0.08);
+}
+
+.cta h2{
+font-size:2.5rem;
+margin-bottom:20px;
+}
+
+.cta p{
+max-width:750px;
+margin:auto;
+line-height:1.9;
+color:#e2e8f0;
+margin-bottom:32px;
+}
+
+.cta a{
+display:inline-block;
+padding:16px 24px;
+background:white;
+color:#111827;
+font-weight:700;
+border-radius:16px;
+transition:0.3s;
+}
+
+.cta a:hover{
+transform:translateY(-2px);
+}
+
+/* FOOTER */
+
+footer{
+padding:70px 20px;
+text-align:center;
+color:#94a3b8;
+line-height:2;
+}
+
+.footer-links{
+margin-top:18px;
+display:flex;
+justify-content:center;
+flex-wrap:wrap;
+gap:18px;
+}
+
+.footer-links a{
+color:#cbd5e1;
+}
+
+/* ANIMATION */
+
+.fade-up{
+opacity:0;
+transform:translateY(30px);
+transition:0.8s ease;
+}
+
+.fade-up.visible{
+opacity:1;
+transform:translateY(0);
+}
+
+/* BACK TO TOP */
+
+.back-to-top{
+position:fixed;
+bottom:25px;
+right:25px;
+width:52px;
+height:52px;
+border:none;
+border-radius:50%;
+background:#6366f1;
+color:white;
+font-size:1.4rem;
+cursor:pointer;
+display:flex;
+align-items:center;
+justify-content:center;
+opacity:0;
+pointer-events:none;
+transition:0.3s;
+z-index:999;
+box-shadow:0 10px 25px rgba(0,0,0,0.35);
+}
+
+.back-to-top.show{
+opacity:1;
+pointer-events:auto;
+}
+
+/* MOBILE */
+
+@media(max-width:900px){
+
+.navbar{
+padding:10px 16px;
+}
+
+.mobile-btn{
+display:block;
+}
+
+.nav-links{
+display:none;
+position:absolute;
+top:78px;
+left:20px;
+right:20px;
+background:rgba(15,23,42,0.96);
+backdrop-filter:blur(18px);
+border:1px solid rgba(255,255,255,0.05);
+flex-direction:column;
+padding:24px;
+border-radius:24px;
+gap:18px;
+box-shadow:0 15px 35px rgba(0,0,0,0.35);
+}
+
+.nav-links.active{
+display:flex;
+}
+
+.nav-links a{
+font-size:1.1rem;
+}
+
+.hero{
+height:44vh;
+min-height:380px;
+padding:78px 18px 24px;
+}
+.section{
+padding:52px 18px;
+}
+
+.section-title{
+margin-bottom:28px;
+}
+
+.hero h1{
+font-size:2.45rem;
+line-height:0.95;
+}
+
+.hero p{
+font-size:1.05rem;
+}
+
+.section-title{
+font-size:2rem;
+}
+
+}
+
+</style>
+
+</head>
+  
+<body>
+
+<!-- NAVBAR -->
+
+<nav class="navbar">
+
+<a href="index.html" class="logo">🌍 Vidolta</a>
+
+<div class="mobile-btn" onclick="toggleMenu()">☰</div>
+
+<div class="nav-links">
+<a href="index.html">Accueil</a>
+<a href="#origine">Origine</a>
+<a href="#villes">Villes</a>
+<a href="#souvenirs">Souvenirs</a>
+<a href="#pourquoi">Pourquoi</a>
+</div>
+
+</nav>
+
+<!-- HERO -->
+
+<section class="hero">
+
+<img loading="lazy" src="images/notre-histoire.webp" alt="L'histoire de Vidolta">
+
+<div class="hero-overlay">
+
+<h1>L'histoire de Vidolta</h1>
+
+<p>
+Voyages, expériences, événements et souvenirs : l'histoire d'une passion devenue un guide pour découvrir le monde autrement.
+</p>
+
+<p class="subtitle">
+One Day In Your Life
+</p>
+  
+</div>
+
+</section>
+
+<!-- ORIGINE -->
+
+<section class="section story" id="origine">
+
+<h2 class="fade-up">One Day In Your Life</h2>
+
+<p class="fade-up">
+Parfois, une simple journée suffit pour commencer une aventure que l'on n'avait pas prévue.
+</p>
+
+<p class="fade-up">
+Vidolta est né simplement.
+</p>
+
+<p class="fade-up">
+D'abord comme une idée parmi d'autres, puis comme une envie de construire quelque chose qui puisse durer dans le temps.
+</p>
+
+<p class="fade-up">
+Au fil des jours, des pages, des destinations et des découvertes, cette idée a grandi jusqu'à devenir bien plus qu'un simple projet.
+</p>
+
+<p class="fade-up">
+Aujourd'hui, Vidolta est le reflet d'une passion : celle de découvrir le monde, de vivre des expériences uniques et de créer des souvenirs qui nous accompagnent toute une vie.
+</p>
+
+</section>
+
+<!-- PASSION -->
+
+<section class="section story">
+
+<h2 class="fade-up">De la passion naît l'amour, de l'amour naît la vie</h2>
+
+<p class="fade-up">
+Tout a commencé par une passion : celle de découvrir.
+</p>
+
+<p class="fade-up">
+Découvrir de nouvelles villes.
+</p>
+
+<p class="fade-up">
+Découvrir de nouveaux horizons.
+</p>
+
+<p class="fade-up">
+Découvrir des cultures, des paysages, des histoires et des lieux qui marquent l'imaginaire.
+</p>
+
+<p class="fade-up">
+Au fil du temps, cette passion est devenue un véritable amour du voyage, de l'aventure et des émotions que seule la découverte peut offrir.
+</p>
+
+<p class="fade-up">
+Et de cet amour est née Vidolta.
+</p>
+
+</section>
+
+<!-- VILLES -->
+
+<section class="section story" id="villes">
+
+<h2 class="fade-up">Les villes racontent des histoires</h2>
+
+<p class="fade-up">
+Chaque ville possède une personnalité unique.
+</p>
+
+<p class="fade-up">
+Certaines impressionnent par leur architecture.
+</p>
+
+<p class="fade-up">
+D'autres fascinent par leur histoire.
+</p>
+
+<p class="fade-up">
+Certaines font rêver à travers le cinéma, la musique, le sport ou les grands événements qui les animent.
+</p>
+
+<p class="fade-up">
+Mais ce qui rend une ville inoubliable, ce ne sont pas seulement ses monuments.
+</p>
+
+<p class="fade-up">
+Ce sont aussi les moments que l'on y vit.
+</p>
+
+<p class="fade-up">
+Une promenade dans un quartier inconnu.
+</p>
+
+<p class="fade-up">
+Un festival au bout du monde.
+</p>
+
+<p class="fade-up">
+Un concert inattendu.
+</p>
+
+<p class="fade-up">
+Un match dont on se souviendra toujours.
+</p>
+
+<p class="fade-up">
+Un coucher de soleil partagé avec les bonnes personnes.
+</p>
+
+<p class="fade-up">
+Ce sont ces instants qui donnent une âme aux voyages.
+</p>
+
+</section>
+
+<!-- EXPERIENCE -->
+
+<section class="section story">
+
+<h2 class="fade-up">Vivre les villes, pas seulement les visiter</h2>
+
+<p class="fade-up">
+Vidolta n'a jamais eu pour ambition d'être un simple guide touristique.
+</p>
+
+<p class="fade-up">
+L'objectif a toujours été d'aller plus loin.
+</p>
+
+<p class="fade-up">
+Derrière chaque destination se cachent des événements, des spectacles, des festivals, des expériences, des lieux de tournage, des traditions et des rencontres qui rendent chaque ville unique.
+</p>
+
+<p class="fade-up">
+Un voyage n'est pas seulement un endroit que l'on visite.
+</p>
+
+<p class="fade-up">
+C'est une expérience que l'on vit.
+</p>
+
+<p class="fade-up">
+C'est pourquoi Vidolta réunit aujourd'hui des guides de voyage, des cartes thématiques, des idées d'activités, des événements, des expériences et des conseils destinés à aider chacun à découvrir une destination autrement.
+</p>
+
+</section>
+
+<!-- QUOTE -->
+
+<section class="section">
+
+<div class="quote fade-up">
+« Les souvenirs les plus précieux naissent souvent lorsque la découverte d'un lieu rencontre une émotion forte. »
+</div>
+
+</section>
+
+<!-- SOUVENIRS -->
+
+<section class="section story" id="souvenirs">
+
+<h2 class="fade-up">Les souvenirs qui restent</h2>
+
+<p class="fade-up">
+Les plus beaux souvenirs ne sont pas toujours les plus spectaculaires.
+</p>
+
+<p class="fade-up">
+Ils naissent souvent des premières fois.
+</p>
+
+<p class="fade-up">
+Le premier voyage.
+</p>
+
+<p class="fade-up">
+La première grande ville découverte.
+</p>
+
+<p class="fade-up">
+Le premier festival.
+</p>
+
+<p class="fade-up">
+Le premier concert.
+</p>
+
+<p class="fade-up">
+Le premier voyage partagé avec quelqu'un qui compte.
+</p>
+
+<p class="fade-up">
+Les années passent.
+</p>
+
+<p class="fade-up">
+Les destinations changent.
+</p>
+
+<p class="fade-up">
+Mais certaines émotions restent intactes.
+</p>
+
+<p class="fade-up">
+Nous oublions parfois les détails.
+</p>
+
+<p class="fade-up">
+Nous n'oublions presque jamais ce que nous avons ressenti.
+</p>
+
+</section>
+
+<!-- POURQUOI -->
+
+<section class="section story" id="pourquoi">
+
+<h2 class="fade-up">Pourquoi Vidolta ?</h2>
+
+<p class="fade-up">
+Parce que le monde regorge d'endroits extraordinaires.
+</p>
+
+<p class="fade-up">
+Parce que certaines expériences méritent d'être vécues au moins une fois.
+</p>
+
+<p class="fade-up">
+Parce qu'un événement peut parfois donner envie de découvrir une ville.
+</p>
+
+<p class="fade-up">
+Parce qu'une ville peut parfois changer une vie.
+</p>
+
+<p class="fade-up">
+Et parce que les souvenirs les plus précieux naissent souvent lorsque la découverte d'un lieu rencontre une émotion forte.
+</p>
+
+<p class="fade-up">
+Vidolta existe pour inspirer ces découvertes.
+</p>
+
+<p class="fade-up">
+Pour aider chacun à trouver sa prochaine destination, sa prochaine expérience ou simplement ce moment particulier dont il se souviendra encore dans plusieurs années.
+</p>
+
+</section>
+
+<!-- CTA -->
+
+<section class="section" id="experience">
+
+<div class="cta fade-up">
+
+<h2>Et vous ?</h2>
+
+<p>
+Chaque voyageur possède une histoire. Un paysage qui l'a marqué, une rencontre inattendue, un festival mémorable, un concert inoubliable ou une ville qu'il n'a jamais vraiment quittée.
+</p>
+
+<p>
+Peut-être que votre prochain souvenir commence aujourd'hui. Peut-être qu'il commence ici.
+</p>
+
+<a href="destinations.html">Explorer les destinations</a>
+
+</div>
+
+<div class="signature fade-up">
+
+<p>
+One Day In Your Life
+</p>
+
+<p>
+De la passion naît l'amour. De l'amour naît la vie.
+</p>
+
+<p>
+D'une passion pour la découverte est né l'amour du voyage.
+</p>
+
+<p>
+De cet amour est née <strong>Vidolta</strong>.
+</p>
+
+</div>
+
+</section>
+
+<!-- FOOTER -->
+
+<footer>
+
+<p>
+© 2026 Vidolta — One Day In Your Life.
+</p>
+
+<div class="footer-links">
+
+<a href="index.html">Accueil</a>
+
+<a href="about.html">À propos</a>
+
+<a href="destinations.html">Explorer les destinations</a>
+  
+<a href="mentions-legales.html">Mentions légales</a>
+
+<a href="confidentialite.html">Confidentialité</a>
+
+<a href="contact.html">Contact</a>
+
+</div>
+
+</footer>
+  
+<button class="back-to-top" id="backToTop">
+↑
+</button>
+
+<script>
+
+function toggleMenu(){
+const nav = document.querySelector('.nav-links');
+nav.classList.toggle('active');
+}
+
+/* ANIMATION */
+
+const observer = new IntersectionObserver(entries => {
+
+entries.forEach(entry => {
+
+if(entry.isIntersecting){
+entry.target.classList.add('visible');
+}
+
+});
+
+},{threshold:0.15});
+
+document.querySelectorAll('.fade-up').forEach(el => {
+observer.observe(el);
+});
+
+/* BACK TO TOP */
+
+const backToTop = document.getElementById('backToTop');
+
+window.addEventListener('scroll', () => {
+
+if(window.scrollY > 400){
+backToTop.classList.add('show');
+}else{
+backToTop.classList.remove('show');
+}
+
+});
+
+backToTop.addEventListener('click', () => {
+
+window.scrollTo({
+top:0,
+behavior:'smooth'
+});
+
+});
+
+/* CLOSE MOBILE MENU */
+
+document.querySelectorAll('.nav-links a').forEach(link => {
+
+link.addEventListener('click', () => {
+
+document.querySelector('.nav-links')
+.classList.remove('active');
+
+});
+
+});
+
+</script>
+
+</body>
+</html>
