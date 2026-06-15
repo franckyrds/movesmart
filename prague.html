@@ -6,10 +6,30 @@
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 
-<title>Prague — Vidolta</title>
+<title>Prague : Guide complet, monuments, hôtels et activités | Vidolta</title>
 
 <meta name="description"
-content="Découvre Prague avec Vidolta : tramways, Pont Charles, bière tchèque, rooftops, Château de Prague, nightlife et expériences incontournables.">
+content="Découvre Prague avec Vidolta : Pont Charles, Château de Prague, restaurants tchèques, tramways, bière locale, rooftops et expériences incontournables.">
+
+<link rel="canonical" href="https://www.vidolta.com/prague.html">
+
+<meta property="og:title"
+content="Prague : Guide complet, monuments, hôtels et activités | Vidolta">
+
+<meta property="og:description"
+content="Découvre Prague avec Vidolta : Pont Charles, Château de Prague, restaurants tchèques, tramways, bière locale, rooftops et expériences incontournables.">
+
+<meta property="og:url"
+content="https://www.vidolta.com/prague.html">
+
+<meta property="og:image"
+content="https://www.vidolta.com/images/prague.webp">
+
+<meta property="og:site_name"
+content="Vidolta">
+
+<meta property="og:type"
+content="website">
 
 <meta name="theme-color" content="#060b1f">
 
@@ -17,8 +37,6 @@ content="Découvre Prague avec Vidolta : tramways, Pont Charles, bière tchèque
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-
-<style>
 
 *{
 margin:0;
@@ -28,8 +46,8 @@ box-sizing:border-box;
 
 :root{
 --bg:#050816;
---primary:#f59e0b;
---primary2:#d97706;
+--primary:#7c5cff;
+--primary2:#5b8cff;
 --text:#ffffff;
 --muted:#94a3b8;
 }
@@ -42,8 +60,8 @@ body{
 font-family:'Poppins',sans-serif;
 
 background:
-radial-gradient(circle at top right,rgba(245,158,11,0.18),transparent 30%),
-radial-gradient(circle at top left,rgba(217,119,6,0.14),transparent 25%),
+radial-gradient(circle at top right,rgba(124,92,255,0.18),transparent 30%),
+radial-gradient(circle at top left,rgba(91,140,255,0.14),transparent 25%),
 linear-gradient(to bottom,#0b1426 0%,#09111f 100%);
 
 color:var(--text);
@@ -131,7 +149,7 @@ height:100%;
 
 object-fit:cover;
 
-filter:brightness(0.76);
+filter:brightness(0.80);
 }
 
 .hero::after{
@@ -144,7 +162,7 @@ background:
 linear-gradient(
 to bottom,
 rgba(5,8,22,0.12),
-rgba(5,8,22,0.48)
+rgba(5,8,22,0.42)
 );
 
 z-index:1;
@@ -166,7 +184,7 @@ margin-bottom:22px;
 }
 
 .hero h1 span{
-background:linear-gradient(90deg,#f59e0b,#d97706);
+background:linear-gradient(90deg,#f59e0b,#f97316);
 
 -webkit-background-clip:text;
 -webkit-text-fill-color:transparent;
@@ -228,8 +246,7 @@ transition:0.35s;
 
 .quick-card:hover{
 transform:translateY(-5px);
-
-border-color:rgba(245,158,11,0.4);
+border-color:rgba(249,115,22,0.4);
 }
 
 .quick-card h3{
@@ -249,6 +266,7 @@ line-height:1.6;
 padding:52px 20px;
 max-width:1300px;
 margin:auto;
+scroll-margin-top:90px;
 }
 
 .section-title{
@@ -279,7 +297,7 @@ height:100%;
 
 object-fit:cover;
 
-filter:brightness(0.78);
+filter:brightness(0.80);
 }
 
 .map-preview-overlay{
@@ -295,7 +313,7 @@ justify-content:flex-end;
 background:
 linear-gradient(
 to top,
-rgba(0,0,0,0.50),
+rgba(0,0,0,0.55),
 rgba(0,0,0,0.18)
 );
 }
@@ -360,7 +378,7 @@ transition:0.35s;
 .card:hover{
 transform:translateY(-6px);
 
-border-color:rgba(245,158,11,0.45);
+border-color:rgba(249,115,22,0.4);
 }
 
 .card h3{
@@ -385,7 +403,7 @@ display:inline-block;
 
 padding:12px 18px;
 
-background:#d97706;
+background:#f97316;
 
 color:white;
 
@@ -394,12 +412,39 @@ border-radius:12px;
 font-weight:600;
 }
 
+  /* THEMES */
+
+.experiences-theme .card{
+border-color:rgba(251,191,36,0.12);
+}
+
+.experiences-theme .card:hover{
+border-color:rgba(251,191,36,0.45);
+}
+
+.planning-theme .card{
+border-color:rgba(34,197,94,0.12);
+}
+
+.planning-theme .card:hover{
+border-color:rgba(34,197,94,0.45);
+}
+
+.warning-theme .card{
+border-color:rgba(239,68,68,0.12);
+}
+
+.warning-theme .card:hover{
+border-color:rgba(239,68,68,0.45);
+}
+
 /* INFO */
 
 .info-section{
 padding:40px 20px 10px;
 max-width:1100px;
 margin:auto;
+scroll-margin-top:90px;
 }
 
 .info-box{
@@ -496,7 +541,7 @@ height:52px;
 border:none;
 border-radius:50%;
 
-background:#d97706;
+background:#f97316;
 
 color:white;
 
@@ -616,14 +661,13 @@ font-size:1.6rem;
 
 <div class="nav-links">
 
-<a href="index.html">Accueil</a>
+<a href="#experiences">Expériences</a>
 <a href="#mobilite">Mobilité</a>
+<a href="#ou-dormir">Où dormir</a>
 <a href="#restaurants">Restaurants</a>
 <a href="#activites">Activités</a>
-
-<a href="destinations.html">
-← Retour
-</a>
+<a href="#sport">Sport</a>
+<a href="destinations.html">🌍 Destinations</a>
 
 </div>
 
@@ -641,19 +685,18 @@ alt="Prague">
 <div class="hero-overlay">
 
 <h1>
-<span>Quand Prague s’illumine, l’Europe devient magique</span>
+<span>Prague illumine l’Europe de sa magie médiévale</span>
 </h1>
 
 <p>
-Explore Prague entre tramways historiques,
-Pont Charles,
-bière tchèque,
-rooftops,
-vieille ville et ambiance gothique unique.
+Explore Prague entre Pont Charles,
+Château historique,
+ruelles gothiques,
+tramways, bière tchèque et rooftops.
 </p>
 
 <p class="subtitle">
-Pont Charles • Château • Beer Spa • Tramways • Vieille Ville
+Pont Charles • Château • Vieille Ville • Bière tchèque • Vltava
 </p>
 
 </div>
@@ -665,35 +708,61 @@ Pont Charles • Château • Beer Spa • Tramways • Vieille Ville
 <section class="quick-guide">
 
 <div class="quick-card fade-up">
-<h3>🚋 Tramways Prague</h3>
+<h3>🌉 Pont Charles</h3>
 <p>
-Les tramways historiques permettent d’explorer Prague facilement.
+L’un des ponts les plus célèbres d’Europe, magique au lever du soleil.
 </p>
 </div>
 
 <div class="quick-card fade-up">
-<h3>🏰 Vieille Ville</h3>
+<h3>🏰 Château de Prague</h3>
 <p>
-Découvre l’horloge astronomique et les quartiers historiques.
+Un immense ensemble historique dominant les toits rouges de la ville.
 </p>
 </div>
 
 <div class="quick-card fade-up">
-<h3>🍺 Beer & rooftops</h3>
+<h3>🍺 Bière tchèque</h3>
 <p>
-Profite des meilleures adresses bière et rooftops de Prague.
+Brasseries historiques, beer spa et bars typiques au cœur de Prague.
 </p>
 </div>
 
 <div class="quick-card fade-up">
-<h3>🎄 Noël & nightlife</h3>
+<h3>🚋 Tramways & quartiers</h3>
 <p>
-Prague possède une des plus belles ambiances hivernales d’Europe.
+Vieille Ville, Malá Strana et Vinohrady se découvrent facilement.
 </p>
 </div>
 
 </section>
 
+<!-- PRAGUE EN UN COUP D'OEIL -->
+
+<section class="info-section">
+
+<div class="info-box fade-up">
+
+<h2>
+🇨🇿 Prague en un coup d'œil
+</h2>
+
+<p>
+Prague est l'une des villes les plus romantiques et mystérieuses d'Europe. Capitale de la Tchéquie, elle mêle architecture gothique, ruelles médiévales, ponts historiques, châteaux et ambiance bohème.
+</p>
+
+<p>
+Du Pont Charles au Château de Prague, de la Vieille Ville à Malá Strana, chaque quartier révèle une atmosphère différente entre façades colorées, places animées et vues spectaculaires sur la Vltava.
+</p>
+
+<p>
+Entre visites culturelles, brasseries tchèques, croisières sur la rivière, rooftops, concerts classiques et marchés de Noël, Prague offre un séjour accessible, magique et très dépaysant.
+</p>
+
+</div>
+
+</section>
+  
 <!-- MAP -->
 
 <section class="section">
@@ -718,12 +787,174 @@ Voir la carte interactive de Prague
 Pont Charles,
 Château de Prague,
 Vieille Ville,
-tramways et lieux incontournables de Prague.
+Malá Strana,
+horloge astronomique et lieux incontournables.
 </p>
 
 <a href="prague-map.html" class="map-button">
 Explorer la carte →
 </a>
+
+</div>
+
+</div>
+
+</section>
+
+```html
+<!-- EXPERIENCES MEMORABLES -->
+
+<section class="section experiences-theme" id="experiences">
+
+<h2 class="section-title fade-up">
+✨ Les expériences qui rendent Prague mémorable
+</h2>
+
+<p style="
+text-align:center;
+max-width:850px;
+margin:0 auto 35px;
+color:#cbd5e1;
+line-height:1.8;">
+Au-delà du Pont Charles et du Château de Prague, certaines expériences permettent de découvrir une Prague plus authentique, plus romantique et souvent plus mémorable que les visites classiques.
+</p>
+
+<div class="grid">
+
+<div class="card fade-up">
+
+<img src="images/pont-charles-aube.webp"
+alt="Pont Charles au lever du soleil"
+style="width:100%;height:220px;object-fit:cover;border-radius:18px;margin-bottom:18px;">
+
+<h3>🌅 Admirer le Pont Charles au lever du soleil</h3>
+
+<p>
+Avant l'arrivée des visiteurs, le Pont Charles révèle toute sa magie. Les statues historiques, les tours gothiques et les reflets sur la Vltava offrent l'une des plus belles ambiances d'Europe.
+</p>
+
+</div>
+
+<div class="card fade-up">
+
+<img src="images/croisiere-vltava.webp"
+alt="Croisière sur la Vltava"
+style="width:100%;height:220px;object-fit:cover;border-radius:18px;margin-bottom:18px;">
+
+<h3>🚤 Découvrir Prague depuis la Vltava</h3>
+
+<p>
+Une croisière permet d'admirer les ponts historiques, le Château de Prague et les façades colorées de la Vieille Ville sous un angle totalement différent.
+</p>
+
+<a href="https://www.getyourguide.fr/prague-ville-capitale-l10/prague-croisiere-touristique-de-50-minutes-en-soiree-t357390/?partner_id=F9OV4TP&utm_medium=online_publisher"
+target="_blank">
+Découvrir l’expérience →
+</a>
+
+</div>
+
+<div class="card fade-up">
+
+<img src="images/chateau-prague.webp"
+alt="Château de Prague"
+style="width:100%;height:220px;object-fit:cover;border-radius:18px;margin-bottom:18px;">
+
+<h3>🏰 Explorer le Château de Prague</h3>
+
+<p>
+Dominant la ville depuis plus de mille ans, le plus grand complexe de château au monde offre des panoramas exceptionnels et un voyage à travers l'histoire tchèque.
+</p>
+
+<a href="https://www.getyourguide.fr/prague-ville-capitale-l10/prague-billet-pour-le-chateau-de-prague-t406279/?partner_id=F9OV4TP&utm_medium=online_publisher"
+target="_blank">
+Réserver la visite →
+</a>
+
+</div>
+
+<div class="card fade-up">
+
+<img src="images/souterrains-prague.webp"
+alt="Souterrains médiévaux de Prague"
+style="width:100%;height:220px;object-fit:cover;border-radius:18px;margin-bottom:18px;">
+
+<h3>🕳️ Explorer les souterrains médiévaux de Prague</h3>
+
+<p>
+Sous les rues de la Vieille Ville se cache un réseau fascinant de caves, passages et salles médiévales datant de plusieurs siècles. Une plongée unique dans l'histoire secrète de Prague.
+</p>
+
+<a href="https://www.getyourguide.fr/prague-ville-capitale-l10/prague-visite-historique-de-la-vieille-ville-des-souterrains-medievaux-et-du-donjon-t43385/?partner_id=F9OV4TP&utm_medium=online_publisher"
+target="_blank">
+Découvrir l’expérience →
+</a>
+
+</div>
+
+<div class="card fade-up">
+
+<img src="images/vieille-ville-prague.webp"
+alt="Vieille Ville de Prague"
+style="width:100%;height:220px;object-fit:cover;border-radius:18px;margin-bottom:18px;">
+
+<h3>⏰ Se perdre dans la Vieille Ville</h3>
+
+<p>
+Entre l'horloge astronomique, les ruelles pavées et les façades colorées, le centre historique de Prague se découvre sans itinéraire précis.
+</p>
+
+</div>
+
+<div class="card fade-up">
+
+<img src="images/concert-prague.webp"
+alt="Concert classique à Prague"
+style="width:100%;height:220px;object-fit:cover;border-radius:18px;margin-bottom:18px;">
+
+<h3>🎻 Assister à un concert classique à Prague</h3>
+
+<p>
+Prague est l'une des grandes capitales européennes de la musique classique. Églises, palais et salles historiques accueillent des concerts presque chaque soir.
+</p>
+
+<a href="https://www.getyourguide.fr/prague-ville-capitale-l10/prague-concert-classique-chapelle-miroir-clementinum-t498025/?partner_id=F9OV4TP&utm_medium=online_publisher"
+target="_blank">
+Réserver le concert →
+</a>
+
+</div>
+
+<div class="card fade-up">
+
+<img src="images/petrin-prague.webp"
+alt="Tour de Petřín Prague"
+style="width:100%;height:220px;object-fit:cover;border-radius:18px;margin-bottom:18px;">
+
+<h3>🌳 Admirer Prague depuis la tour de Petřín</h3>
+
+<p>
+Surnommée la petite Tour Eiffel de Prague, la tour de Petřín offre l'un des plus beaux panoramas sur les toits rouges, les clochers et la Vltava.
+</p>
+
+<a href="https://www.getyourguide.fr/prague-ville-capitale-l10/prague-billet-d-entree-pour-la-tour-petrin-et-le-labyrinthe-de-miroirs-t405222/?partner_id=F9OV4TP&utm_medium=online_publisher"
+target="_blank">
+Réserver la visite →
+</a>
+
+</div>
+
+<div class="card fade-up">
+
+<img src="images/rooftop-prague.webp"
+alt="Vue panoramique sur Prague"
+style="width:100%;height:220px;object-fit:cover;border-radius:18px;margin-bottom:18px;">
+
+<h3>🌇 Admirer les toits rouges de Prague</h3>
+
+<p>
+Depuis les meilleurs rooftops de la ville, les clochers, les dômes et les ponts de Prague composent un panorama spectaculaire particulièrement au coucher du soleil.
+</p>
 
 </div>
 
@@ -743,17 +974,18 @@ Explorer la carte →
 
 <div class="card fade-up">
 
-<h3>🚋 Tramways & métro</h3>
+<h3>🚋 Tramways & métro PID</h3>
 
 <div class="price">
 Mobilité Prague
 </div>
 
 <p>
-Explore Prague rapidement grâce aux transports tchèques.
+Utilise les tramways historiques, le métro et les bus pour explorer Prague rapidement et à moindre coût.
 </p>
 
-<a href="https://pid.cz/en/" target="_blank">
+<a href="https://pid.cz/en/"
+target="_blank">
 Explorer
 </a>
 
@@ -761,17 +993,18 @@ Explorer
 
 <div class="card fade-up">
 
-<h3>🚄 Europe centrale</h3>
+<h3>🚄 Trains Europe centrale</h3>
 
 <div class="price">
 Voyages Europe
 </div>
 
 <p>
-Voyage facilement entre Prague, Vienne, Budapest et Berlin.
+Voyage facilement entre Prague, Vienne, Budapest, Berlin et les grandes villes d'Europe centrale.
 </p>
 
-<a href="https://www.omio.com/" target="_blank">
+<a href="https://www.cd.cz/en/"
+target="_blank">
 Explorer
 </a>
 
@@ -779,20 +1012,167 @@ Explorer
 
 <div class="card fade-up">
 
-<h3>🚶 Vieille Ville</h3>
+<h3>🚶 Prague à pied</h3>
 
 <div class="price">
-Explorer Prague
+Prague autrement
 </div>
 
 <p>
-Découvre Prague à pied entre ponts historiques et ruelles médiévales.
+La Vieille Ville, Malá Strana et le quartier du Château se découvrent idéalement à pied au fil des ruelles historiques.
 </p>
 
-<a href="https://www.getyourguide.com/" target="_blank">
+<a href="https://www.getyourguide.fr/prague-ville-capitale-l10/"
+target="_blank">
 Explorer
 </a>
 
+</div>
+
+</div>
+
+</section>
+
+<!-- OU DORMIR -->
+
+<section class="section" id="ou-dormir">
+
+<h2 class="section-title fade-up">
+🏨 Où dormir à Prague ?
+</h2>
+
+<div class="grid">
+
+<div class="card fade-up">
+
+<h3>⏰ Staré Město (Vieille Ville)</h3>
+
+<p>
+Le cœur historique de Prague. Idéal pour une première visite, avec l'horloge astronomique, la place de la Vieille Ville et le Pont Charles accessibles à pied.
+</p>
+
+</div>
+
+<div class="card fade-up">
+
+<h3>🌉 Malá Strana</h3>
+
+<p>
+Situé au pied du Château de Prague, ce quartier romantique séduit par ses palais baroques, ses rues pavées et son atmosphère paisible.
+</p>
+
+</div>
+
+<div class="card fade-up">
+
+<h3>🍷 Vinohrady</h3>
+
+<p>
+Quartier élégant apprécié des habitants pour ses cafés, restaurants, parcs et son ambiance plus locale, tout en restant proche du centre historique.
+</p>
+
+</div>
+
+<div class="card fade-up">
+
+<h3>🏰 Hradčany</h3>
+
+<p>
+Autour du Château de Prague, ce secteur offre des vues spectaculaires sur la ville et une atmosphère unique au cœur du patrimoine tchèque.
+</p>
+
+</div>
+
+<div class="card fade-up">
+
+<h3>🎨 Nové Město (Nouvelle Ville)</h3>
+
+<p>
+Un excellent compromis entre visites, shopping, transports et vie nocturne. Idéal pour profiter pleinement de Prague tout en restant central.
+</p>
+
+</div>
+
+</div>
+
+<p style="
+text-align:center;
+margin-top:30px;
+color:#cbd5e1;
+">
+Comparez les hébergements dans les meilleurs quartiers de Prague.
+</p>
+
+<div style="text-align:center;margin-top:15px;">
+
+<a href="TON_LIEN_BOOKING"
+target="_blank">
+🏨 Réserver un hôtel à Prague →
+</a>
+
+</div>
+
+</section>
+
+<!-- AVANT DE PARTIR -->
+
+<section class="section planning-theme">
+
+<h2 class="section-title fade-up">
+✈️ Avant de partir à Prague
+</h2>
+
+<p style="
+text-align:center;
+max-width:850px;
+margin:0 auto 35px;
+color:#cbd5e1;
+line-height:1.8;">
+Quelques informations pratiques permettent de préparer plus facilement votre séjour à Prague, que ce soit pour organiser vos visites, votre budget ou choisir la meilleure période pour partir.
+</p>
+
+<div class="grid">
+
+<div class="card fade-up">
+<h3>🗣️ Langue</h3>
+<p>
+Le tchèque est la langue officielle. Dans les zones touristiques, l'anglais est largement utilisé dans les hôtels, restaurants et attractions.
+</p>
+</div>
+
+<div class="card fade-up">
+<h3>💶 Devise</h3>
+<p>
+La Tchéquie utilise la couronne tchèque (CZK). Les cartes bancaires sont acceptées presque partout, mais il reste utile d'avoir un peu d'espèces.
+</p>
+</div>
+
+<div class="card fade-up">
+<h3>🔌 Prises électriques</h3>
+<p>
+Prague utilise les prises de type C et E avec une tension de 230 V. Les voyageurs européens n'ont généralement pas besoin d'adaptateur.
+</p>
+</div>
+
+<div class="card fade-up">
+<h3>📅 Durée idéale</h3>
+<p>
+Deux à trois jours permettent de découvrir les incontournables de Prague. Quatre à cinq jours offrent davantage de temps pour explorer les quartiers et les environs.
+</p>
+</div>
+
+<div class="card fade-up">
+<h3>🌤️ Meilleure période</h3>
+<p>
+Le printemps, l'été et le début de l'automne sont particulièrement agréables. Les marchés de Noël rendent également Prague magique durant l'hiver.
+</p>
+</div>
+
+<div class="card fade-up">
+<h3>💰 Budget moyen</h3>
+<p>
+Prague reste l'une des capitales les plus abordables d'Europe. Comptez généralement entre 80 € et 180 € par jour selon l'hébergement, les activités et les restaurants choisis.
+</p>
 </div>
 
 </div>
@@ -807,46 +1187,93 @@ Explorer
 🍺 Goûter le vrai Prague
 </h2>
 
+<p style="
+text-align:center;
+max-width:850px;
+margin:0 auto 35px;
+color:#cbd5e1;
+line-height:1.8;">
+Entre brasseries historiques, cuisine tchèque traditionnelle, cafés élégants et rooftops panoramiques, la gastronomie fait pleinement partie de l'expérience praguoise.
+</p>
+
 <div class="grid">
 
 <div class="card fade-up">
 
-<h3>🍽️ Restaurants tchèques</h3>
+<img src="images/brasserie-prague.webp"
+alt="Brasserie traditionnelle à Prague"
+style="width:100%;height:220px;object-fit:cover;border-radius:18px;margin-bottom:18px;">
+
+<h3>🍺 Brasseries traditionnelles</h3>
 
 <p>
-Découvre les meilleures spécialités tchèques et adresses populaires.
+Prague est l'une des capitales mondiales de la bière. Les brasseries historiques permettent de découvrir les saveurs tchèques dans une ambiance authentique et conviviale.
 </p>
 
-<a href="https://www.tripadvisor.com/" target="_blank">
-Explorer
+</div>
+
+<div class="card fade-up">
+
+<img src="images/cuisine-tcheque.webp"
+alt="Cuisine tchèque traditionnelle"
+style="width:100%;height:220px;object-fit:cover;border-radius:18px;margin-bottom:18px;">
+
+<h3>🍽️ Cuisine tchèque</h3>
+
+<p>
+Goulash, svíčková, knedlíky et spécialités locales offrent un véritable aperçu de la culture gastronomique tchèque.
+</p>
+
+<a href="https://www.tripadvisor.fr/Restaurants-g274707-Prague_Bohemia.html"
+target="_blank">
+Voir les restaurants →
 </a>
 
 </div>
 
 <div class="card fade-up">
 
-<h3>🍻 Beer Spa & bars</h3>
+<img src="images/vieille-ville-prague-soir.webp"
+alt="Restaurant dans la Vieille Ville de Prague"
+style="width:100%;height:220px;object-fit:cover;border-radius:18px;margin-bottom:18px;">
+
+<h3>🌃 Dîner dans la Vieille Ville</h3>
 
 <p>
-Profite des expériences bière et nightlife emblématiques de Prague.
+Entre places illuminées, façades historiques et ruelles pavées, les restaurants du centre historique offrent une atmosphère unique après le coucher du soleil.
 </p>
-
-<a href="https://www.getyourguide.com/" target="_blank">
-Explorer
-</a>
 
 </div>
 
 <div class="card fade-up">
 
-<h3>🌃 Rooftops Prague</h3>
+<img src="images/cafe-prague.webp"
+alt="Café historique à Prague"
+style="width:100%;height:220px;object-fit:cover;border-radius:18px;margin-bottom:18px;">
+
+<h3>☕ Cafés historiques de Prague</h3>
 
 <p>
-Explore Prague autrement avec ses rooftops et vues illuminées.
+Les cafés praguois perpétuent une longue tradition culturelle où écrivains, artistes et intellectuels se retrouvaient autrefois autour d'un café ou d'une pâtisserie.
 </p>
 
-<a href="https://www.thefork.com/" target="_blank">
-Explorer
+</div>
+
+<div class="card fade-up">
+
+<img src="images/rooftop-prague.webp"
+alt="Rooftop avec vue sur Prague"
+style="width:100%;height:220px;object-fit:cover;border-radius:18px;margin-bottom:18px;">
+
+<h3>🍷 Rooftops avec vue sur Prague</h3>
+
+<p>
+Profiter d'un verre face aux toits rouges, aux clochers et au Château de Prague compte parmi les expériences les plus appréciées de la ville.
+</p>
+
+<a href="https://www.tripadvisor.fr/Restaurants-g274707-zfp43-Prague_Bohemia.html"
+target="_blank">
+Découvrir les meilleures adresses →
 </a>
 
 </div>
@@ -855,69 +1282,30 @@ Explorer
 
 </section>
 
-<!-- ACTIVITES -->
+```html
+<!-- PANORAMA AUTOUR DE PRAGUE -->
 
-<section class="section" id="activites">
+<section class="section">
 
-<h2 class="section-title fade-up">
-✨ Le Prague iconique
-</h2>
+<div class="map-preview fade-up">
 
-<div class="grid">
+<img
+loading="lazy"
+src="images/autour-prague.webp"
+alt="Excursions autour de Prague">
 
-<div class="card fade-up">
+<div class="map-preview-overlay">
 
-<h3>🌉 Pont Charles</h3>
-
-<p>
-Traverse l’un des ponts les plus célèbres d’Europe.
-</p>
-
-<a href="https://www.getyourguide.com/" target="_blank">
-Explorer
-</a>
-
-</div>
-
-<div class="card fade-up">
-
-<h3>🏰 Château de Prague</h3>
+<h3>
+La Bohême révèle quelques-uns des plus beaux trésors d'Europe
+</h3>
 
 <p>
-Découvre le célèbre château dominant la ville historique.
+Châteaux médiévaux,
+villes classées à l'UNESCO,
+forêts sauvages et paysages spectaculaires :
+les environs de Prague offrent de nombreuses excursions accessibles en une journée.
 </p>
-
-<a href="https://www.tiqets.com/" target="_blank">
-Explorer
-</a>
-
-</div>
-
-<div class="card fade-up">
-
-<h3>⏰ Horloge astronomique</h3>
-
-<p>
-Explore l’un des symboles historiques les plus célèbres de Prague.
-</p>
-
-<a href="https://www.getyourguide.com/" target="_blank">
-Explorer
-</a>
-
-</div>
-
-<div class="card fade-up">
-
-<h3>🚤 Croisières Vltava</h3>
-
-<p>
-Découvre Prague depuis la rivière et ses ponts illuminés.
-</p>
-
-<a href="https://www.getyourguide.com/" target="_blank">
-Explorer
-</a>
 
 </div>
 
@@ -925,77 +1313,78 @@ Explorer
 
 </section>
 
-<!-- NIGHTLIFE -->
+<!-- AUTOUR DE PRAGUE -->
 
 <section class="section">
 
 <h2 class="section-title fade-up">
-🎉 Prague côté nightlife & événements
+🌍 Autour de Prague
 </h2>
+
+<p style="
+text-align:center;
+max-width:850px;
+margin:0 auto 35px;
+color:#cbd5e1;
+line-height:1.8;">
+Au-delà de son centre historique, Prague constitue un excellent point de départ pour découvrir les châteaux, les villes médiévales et les paysages naturels les plus remarquables de Bohême.
+</p>
 
 <div class="grid">
 
 <div class="card fade-up">
 
-<h3>
-🍺 Pub crawl Prague
-</h3>
+<img src="images/kutna-hora.webp"
+alt="Kutná Hora"
+style="width:100%;height:220px;object-fit:cover;border-radius:18px;margin-bottom:18px;">
+
+<h3>🦴 Kutná Hora</h3>
 
 <p>
-Découvre les bars emblématiques et la nightlife de Prague.
+Classée au patrimoine mondial de l'UNESCO, Kutná Hora est célèbre pour son ossuaire de Sedlec, sa cathédrale Sainte-Barbe et son riche passé minier.
 </p>
-
-<a href="https://www.getyourguide.com/" target="_blank">
-Explorer
-</a>
 
 </div>
 
 <div class="card fade-up">
 
-<h3>
-🎄 Noël Prague
-</h3>
+<img src="images/karlstejn.webp"
+alt="Château de Karlštejn"
+style="width:100%;height:220px;object-fit:cover;border-radius:18px;margin-bottom:18px;">
+
+<h3>🏰 Château de Karlštejn</h3>
 
 <p>
-Profite des marchés de Noël et des lumières hivernales de Prague.
+Construit au XIVe siècle par Charles IV, ce château médiéval domine les collines boisées de Bohême et constitue l'une des excursions les plus populaires depuis Prague.
 </p>
-
-<a href="https://www.tiqets.com/" target="_blank">
-Explorer
-</a>
 
 </div>
 
 <div class="card fade-up">
 
-<h3>
-🎶 Concerts & événements
-</h3>
+<img src="images/cesky-krumlov.webp"
+alt="Český Krumlov"
+style="width:100%;height:220px;object-fit:cover;border-radius:18px;margin-bottom:18px;">
+
+<h3>🏛️ Český Krumlov</h3>
 
 <p>
-Retrouve facilement les grands événements culturels de Prague.
+Souvent considérée comme la plus belle ville de Tchéquie, Český Krumlov séduit par son château monumental, ses ruelles médiévales et sa rivière sinueuse.
 </p>
-
-<a href="https://www.ticketmaster.cz/" target="_blank">
-Explorer
-</a>
 
 </div>
 
 <div class="card fade-up">
 
-<h3>
-🎟️ Expériences Prague
-</h3>
+<img src="images/suisse-bohemienne.webp"
+alt="Suisse bohémienne"
+style="width:100%;height:220px;object-fit:cover;border-radius:18px;margin-bottom:18px;">
+
+<h3>🌲 Suisse bohémienne</h3>
 
 <p>
-Retrouve facilement les meilleures expériences à vivre à Prague.
+Falaises de grès, gorges sauvages, forêts profondes et panoramas spectaculaires font de ce parc national l'un des plus beaux espaces naturels d'Europe centrale.
 </p>
-
-<a href="https://www.getyourguide.com/" target="_blank">
-Découvrir
-</a>
 
 </div>
 
@@ -1003,28 +1392,30 @@ Découvrir
 
 </section>
 
+
 <!-- GUIDE -->
 
-<section class="info-section">
+<section class="info-section" id="faq">
 
 <div class="info-box fade-up">
 
 <h2>
 Pourquoi Prague fascine autant ?
 </h2>
-
+  
 <p>
-Prague mélange architecture gothique,
-tramways historiques,
-ambiance médiévale,
-nightlife et culture tchèque unique.
+Prague mélange architecture médiévale,
+histoire européenne,
+culture tchèque,
+gastronomie locale et atmosphère romantique unique.
 </p>
 
 <p>
-Entre les ponts illuminés,
-les ruelles anciennes,
-les rooftops et les marchés de Noël,
-Prague possède une atmosphère magique en Europe.
+Entre le Pont Charles,
+les ruelles pavées,
+les toits rouges de la Vieille Ville,
+les brasseries historiques et les vues sur la Vltava,
+Prague possède l'une des atmosphères les plus magiques d'Europe.
 </p>
 
 <div class="faq">
@@ -1036,7 +1427,7 @@ Prague possède une atmosphère magique en Europe.
 </h3>
 
 <p>
-Les tramways et le métro permettent d’explorer Prague facilement.
+Les tramways, le métro et la marche permettent d'explorer Prague facilement et à moindre coût.
 </p>
 
 </div>
@@ -1044,11 +1435,11 @@ Les tramways et le métro permettent d’explorer Prague facilement.
 <div class="faq-item">
 
 <h3>
-🍺 Où sortir à Prague ?
+🍺 Où manger à Prague ?
 </h3>
 
 <p>
-Prague est réputée pour sa bière tchèque, ses bars et sa nightlife.
+La Vieille Ville, Malá Strana et Vinohrady regroupent de nombreuses brasseries, restaurants tchèques et cafés historiques.
 </p>
 
 </div>
@@ -1060,7 +1451,7 @@ Prague est réputée pour sa bière tchèque, ses bars et sa nightlife.
 </h3>
 
 <p>
-Pont Charles, Château de Prague et Vieille Ville sont incontournables.
+Le Pont Charles, le Château de Prague, la Vieille Ville, les croisières sur la Vltava et les concerts classiques sont incontournables.
 </p>
 
 </div>
@@ -1084,15 +1475,15 @@ alt="Panorama Prague">
 <div class="map-preview-overlay">
 
 <h3>
-Entre tramways et lumières dorées, Prague fascine
+Quand les lumières s'allument à Prague, la ville devient féerique
 </h3>
 
 <p>
-Entre les ponts illuminés,
-les rues médiévales,
-les rooftops historiques
-et les lumières hivernales,
-Prague possède une atmosphère unique en Europe.
+Entre les ponts historiques,
+les toits rouges de la Vieille Ville,
+les clochers illuminés
+et les reflets de la Vltava,
+Prague dévoile l'une des atmosphères les plus magiques d'Europe.
 </p>
 
 <a href="destinations.html" class="map-button">
@@ -1180,6 +1571,12 @@ behavior:'smooth'
 
 });
 
+</script>
+  
+<!-- GetYourGuide Analytics -->
+<script async defer
+src="https://widget.getyourguide.com/dist/pa.umd.production.min.js"
+data-gyg-partner-id="F9OV4TP">
 </script>
 
 </body>
