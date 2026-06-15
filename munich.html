@@ -6,11 +6,13 @@
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 
-<title>Munich — Vidolta</title>
+<title>Munich : Guide complet, activités, restaurants et événements | Vidolta</title>
 
 <meta name="description"
-content="Découvre Munich avec Vidolta : Allianz Arena, Oktoberfest, biergartens, métro allemand, marchés de Noël et expériences incontournables en Bavière.">
+content="Découvre Munich avec Vidolta : Marienplatz, Allianz Arena, BMW Museum, biergartens, Oktoberfest, marchés de Noël, restaurants, mobilité et expériences incontournables en Bavière.">
 
+<link rel="canonical" href="https://www.vidolta.com/munich.html">
+  
 <meta name="theme-color" content="#060b1f">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -101,23 +103,31 @@ transition:0.3s;
 color:white;
 }
 
+.agenda-link{
+color:#fbbf24 !important;
+font-weight:700;
+}
+  
+.agenda-link:hover{
+color:#fde68a !important;
+}
+
 .mobile-btn{
 display:none;
 font-size:2rem;
 cursor:pointer;
 }
-
+  
 /* HERO */
 
 .hero{
 position:relative;
-min-height:78vh;
+height:72vh;
+padding-top:40px;
 
 display:flex;
 align-items:center;
 justify-content:center;
-
-padding-top:40px;
 
 text-align:center;
 
@@ -133,7 +143,7 @@ height:100%;
 
 object-fit:cover;
 
-filter:brightness(0.74);
+filter:brightness(0.76);
 }
 
 .hero::after{
@@ -146,7 +156,7 @@ background:
 linear-gradient(
 to bottom,
 rgba(5,8,22,0.12),
-rgba(5,8,22,0.48)
+rgba(5,8,22,0.58)
 );
 
 z-index:1;
@@ -161,14 +171,14 @@ max-width:900px;
 
 .hero h1{
 font-size:5rem;
-line-height:1.1;
+line-height:1.02;
 letter-spacing:-4px;
 
 margin-bottom:22px;
 }
 
 .hero h1 span{
-background:linear-gradient(90deg,#60a5fa,#2563eb);
+background:linear-gradient(90deg,#8b5cf6,#60a5fa);
 
 -webkit-background-clip:text;
 -webkit-text-fill-color:transparent;
@@ -196,7 +206,7 @@ grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
 
 gap:20px;
 
-margin-top:0px;
+margin-top:-40px;
 
 position:relative;
 z-index:5;
@@ -230,7 +240,7 @@ transition:0.35s;
 
 .quick-card:hover{
 transform:translateY(-5px);
-border-color:rgba(96,165,250,0.4);
+border-color:rgba(99,102,241,0.4);
 }
 
 .quick-card h3{
@@ -280,7 +290,7 @@ height:100%;
 
 object-fit:cover;
 
-filter:brightness(0.76);
+filter:brightness(0.82);
 }
 
 .map-preview-overlay{
@@ -296,8 +306,8 @@ justify-content:flex-end;
 background:
 linear-gradient(
 to top,
-rgba(0,0,0,0.52),
-rgba(0,0,0,0.18)
+rgba(0,0,0,0.62),
+rgba(0,0,0,0.12)
 );
 }
 
@@ -361,7 +371,7 @@ transition:0.35s;
 .card:hover{
 transform:translateY(-6px);
 
-border-color:rgba(96,165,250,0.4);
+border-color:rgba(99,102,241,0.45);
 }
 
 .card h3{
@@ -376,7 +386,7 @@ margin-bottom:16px;
 }
 
 .price{
-color:#60a5fa;
+color:#818cf8;
 font-weight:600;
 margin-bottom:14px;
 }
@@ -395,6 +405,32 @@ border-radius:12px;
 font-weight:600;
 }
 
+/* THEMES */
+
+.experiences-theme .card{
+border-color:rgba(251,191,36,0.12);
+}
+
+.experiences-theme .card:hover{
+border-color:rgba(251,191,36,0.45);
+}
+
+.planning-theme .card{
+border-color:rgba(34,197,94,0.12);
+}
+
+.planning-theme .card:hover{
+border-color:rgba(34,197,94,0.45);
+}
+
+.warning-theme .card{
+border-color:rgba(239,68,68,0.12);
+}
+
+.warning-theme .card:hover{
+border-color:rgba(239,68,68,0.45);
+}
+  
 /* INFO */
 
 .info-section{
@@ -601,6 +637,9 @@ font-size:1.6rem;
 
 </style>
 
+<!-- GetYourGuide Analytics -->
+<script async defer src="https://widget.getyourguide.com/dist/pa.umd.production.min.js" data-gyg-partner-id="F9OV4TP"></script>
+
 </head>
 
 <body>
@@ -617,13 +656,18 @@ font-size:1.6rem;
 
 <div class="nav-links">
 
-<a href="index.html">Accueil</a>
+<a href="#experiences">Expériences</a>
 <a href="#mobilite">Mobilité</a>
+<a href="#hebergements">Où dormir</a>
 <a href="#restaurants">Restaurants</a>
 <a href="#activites">Activités</a>
 
+<a href="#" onclick="agendaSoon(event)" class="agenda-link">
+📅 Agenda Munich
+</a>
+
 <a href="destinations.html">
-← Retour
+🌍 Destinations
 </a>
 
 </div>
@@ -642,18 +686,19 @@ alt="Munich">
 <div class="hero-overlay">
 
 <h1>
-<span>Munich mélange tradition bavaroise et modernité européenne</span>
+Munich
 </h1>
 
 <p>
-Explore Munich entre biergartens,
-football allemand,
-marchés de Noël,
-architecture bavaroise et ambiance unique.
+Explore Munich entre biergartens historiques,
+Allianz Arena,
+palais bavarois,
+marchés de Noël
+et paysages alpins.
 </p>
 
 <p class="subtitle">
-Allianz Arena • Oktoberfest • BMW • Biergarten • Bavière
+Allianz Arena • Marienplatz • BMW • Oktoberfest • Bavière
 </p>
 
 </div>
@@ -665,31 +710,64 @@ Allianz Arena • Oktoberfest • BMW • Biergarten • Bavière
 <section class="quick-guide">
 
 <div class="quick-card fade-up">
-<h3>🚆 Métro & trains</h3>
+<h3>🍺 Tradition bavaroise</h3>
 <p>
-Le réseau allemand permet d’explorer Munich facilement et rapidement.
+Biergartens, spécialités locales et ambiance unique.
 </p>
 </div>
 
 <div class="quick-card fade-up">
-<h3>🍺 Biergartens bavarois</h3>
+<h3>🚇 Mobilité allemande</h3>
 <p>
-Découvre les lieux emblématiques de la culture bavaroise.
+Métro, tramways et trains pour explorer facilement la ville.
 </p>
 </div>
 
 <div class="quick-card fade-up">
-<h3>🎄 Marchés de Noël</h3>
+<h3>🏔️ Autour de Munich</h3>
 <p>
-Munich possède l’une des plus belles ambiances hivernales d’Europe.
+Neuschwanstein, Alpes bavaroises, Salzbourg et lacs alpins.
 </p>
 </div>
 
 <div class="quick-card fade-up">
-<h3>⚽ Football allemand</h3>
+
+<h3>📅 Agenda Munich</h3>
+
 <p>
-Le Bayern Munich et l’Allianz Arena attirent des fans du monde entier.
+Oktoberfest, marchés de Noël, festivals, concerts et grands événements bavarois.
 </p>
+
+<a href="guide-munich.html">
+Voir l'agenda →
+</a>
+
+</div>
+
+</section>
+
+<!-- MUNICH EN UN COUP D'ŒIL -->
+
+<section class="info-section">
+
+<div class="info-box fade-up">
+
+<h2>
+🇩🇪 Munich en un coup d'œil
+</h2>
+
+<p>
+Capitale de la Bavière, Munich séduit par son équilibre entre traditions bavaroises, architecture élégante et modernité européenne.
+</p>
+
+<p>
+De Marienplatz à l’Allianz Arena, des biergartens historiques aux musées renommés, la ville offre une expérience unique mêlant culture, gastronomie et football.
+</p>
+
+<p>
+Entre Oktoberfest, marchés de Noël, palais royaux et excursions vers les Alpes, Munich est l’une des destinations les plus emblématiques d’Allemagne.
+</p>
+
 </div>
 
 </section>
@@ -699,7 +777,7 @@ Le Bayern Munich et l’Allianz Arena attirent des fans du monde entier.
 <section class="section">
 
 <h2 class="section-title fade-up">
-🚆 Comprendre Munich rapidement
+🗺️ Comprendre Munich rapidement
 </h2>
 
 <div class="map-preview fade-up">
@@ -711,18 +789,148 @@ alt="Carte Munich">
 <div class="map-preview-overlay">
 
 <h3>
-Voir la carte interactive de Munich
+La carte essentielle de Munich
 </h3>
 
 <p>
 Marienplatz,
 Allianz Arena,
 English Garden,
-BMW Museum et les lignes principales du métro.
+BMW Museum,
+Résidence de Munich,
+centre-ville et lieux incontournables de Munich.
 </p>
 
 <a href="munich-map.html" class="map-button">
 Explorer la carte →
+</a>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- EXPERIENCES MEMORABLES -->
+
+<section class="section experiences-theme" id="experiences">
+
+<h2 class="section-title fade-up">
+✨ Les expériences qui rendent Munich mémorable
+</h2>
+
+<p style="
+text-align:center;
+max-width:850px;
+margin:0 auto 35px;
+color:#cbd5e1;
+line-height:1.8;">
+Entre traditions bavaroises, palais royaux, football européen et excursions vers les Alpes, Munich propose des expériences uniques qui marquent durablement les voyageurs.
+</p>
+
+<div class="grid">
+
+<div class="card fade-up">
+
+<img src="images/neuschwanstein.webp"
+alt="Château de Neuschwanstein"
+style="width:100%;height:220px;object-fit:cover;border-radius:18px;margin-bottom:18px;">
+
+<h3>🏰 Château de Neuschwanstein</h3>
+
+<p>
+Le château qui inspira les contes de fées de Disney. Niché au cœur des Alpes bavaroises, il figure parmi les sites les plus visités d'Allemagne.
+</p>
+
+<a
+href="https://www.getyourguide.fr/fussen-l2236/billet-coupe-file-pour-le-chateau-de-neuschwanstein-avec-audioguide-t720041/?partner_id=F9OV4TP&utm_medium=online_publisher"
+target="_blank"
+rel="noopener sponsored">
+🎟️ Voir les billets
+</a>
+
+</div>
+
+<div class="card fade-up">
+
+<img src="images/allianz-arena.webp"
+alt="Allianz Arena Munich"
+style="width:100%;height:220px;object-fit:cover;border-radius:18px;margin-bottom:18px;">
+
+<h3>⚽ Allianz Arena</h3>
+
+<p>
+Découvrez les coulisses du stade du Bayern Munich et l'une des enceintes sportives les plus impressionnantes d'Europe.
+</p>
+
+<a
+href="https://www.getyourguide.fr/munich-l26/tournee-de-football-du-fc-bayern-munchen-t26017/?partner_id=F9OV4TP&utm_medium=online_publisher"
+target="_blank"
+rel="noopener sponsored">
+🎟️ Réserver la visite
+</a>
+
+</div>
+
+<div class="card fade-up">
+
+<img src="images/biergarten-munich.webp"
+alt="Biergarten Munich"
+style="width:100%;height:220px;object-fit:cover;border-radius:18px;margin-bottom:18px;">
+
+<h3>🍺 Vivre l'expérience biergarten</h3>
+
+<p>
+Partagez une grande table bavaroise sous les châtaigniers et découvrez l'ambiance conviviale qui fait la réputation de Munich.
+</p>
+
+</div>
+
+<div class="card fade-up">
+
+<img src="images/marienplatz.webp"
+alt="Marienplatz Munich"
+style="width:100%;height:220px;object-fit:cover;border-radius:18px;margin-bottom:18px;">
+
+<h3>🏛️ Explorer Marienplatz</h3>
+
+<p>
+Le cœur historique de Munich avec son célèbre hôtel de ville, ses façades élégantes et son atmosphère typiquement bavaroise.
+</p>
+
+</div>
+
+<div class="card fade-up">
+
+<img src="images/english-garden.webp"
+alt="English Garden Munich"
+style="width:100%;height:220px;object-fit:cover;border-radius:18px;margin-bottom:18px;">
+
+<h3>🌳 Se promener dans l'English Garden</h3>
+
+<p>
+L'un des plus grands parcs urbains d'Europe où se côtoient surfeurs, biergartens et vastes espaces verts.
+</p>
+
+</div>
+
+<div class="card fade-up">
+
+<img src="images/salzbourg.webp"
+alt="Salzbourg Autriche"
+style="width:100%;height:220px;object-fit:cover;border-radius:18px;margin-bottom:18px;">
+
+<h3>🏰 Neuschwanstein & Linderhof</h3>
+
+<p>
+Partez depuis Munich pour découvrir deux châteaux emblématiques de Bavière lors d'une excursion spectaculaire entre palais royaux et paysages alpins.
+</p>
+
+<a
+href="https://www.getyourguide.fr/munich-l26/au-depart-de-munich-excursion-d-une-journee-aux-chateaux-de-neuschwanstein-et-linderhof-t1753/?partner_id=F9OV4TP&utm_medium=online_publisher"
+target="_blank"
+rel="noopener sponsored">
+🎟️ Voir l'excursion
 </a>
 
 </div>
@@ -736,7 +944,7 @@ Explorer la carte →
 <section class="section" id="mobilite">
 
 <h2 class="section-title fade-up">
-🚆 Explorer Munich facilement
+🚇 Explorer Munich facilement
 </h2>
 
 <div class="grid">
@@ -750,50 +958,184 @@ Mobilité Munich
 </div>
 
 <p>
-Explore Munich rapidement grâce au métro allemand et aux trains urbains.
+Le réseau MVV permet de rejoindre facilement Marienplatz, la gare centrale, l’Allianz Arena, l’English Garden, les musées et les principaux quartiers de Munich.
 </p>
 
-<a href="https://www.mvg.de/" target="_blank">
-Explorer
+<a href="https://www.mvv-muenchen.de/" target="_blank" rel="noopener">
+Site officiel MVV →
 </a>
 
 </div>
 
 <div class="card fade-up">
 
-<h3>🚄 Deutsche Bahn</h3>
+<h3>🎟️ CityTourCard Munich</h3>
 
 <div class="price">
-Voyages Allemagne
+Transports & réductions
 </div>
 
 <p>
-Voyage facilement entre Munich, Berlin, Francfort et les Alpes.
+Un pass pratique pour profiter des transports en commun tout en bénéficiant de réductions sur plusieurs attractions, musées et expériences à Munich.
 </p>
 
-<a href="https://www.bahn.com/" target="_blank">
-Explorer
+<a href="https://www.citytourcard-muenchen.com/" target="_blank" rel="noopener">
+Découvrir le pass →
 </a>
 
 </div>
 
 <div class="card fade-up">
 
-<h3>✈️ Aéroport Munich</h3>
+<h3>🚲 Munich à vélo</h3>
 
 <div class="price">
-Transport rapide
+Vélo urbain
 </div>
 
 <p>
-Rejoins rapidement le centre-ville depuis l’aéroport de Munich.
+Munich se découvre très bien à vélo grâce à ses pistes cyclables, ses parcs, ses berges et ses itinéraires agréables autour du centre-ville.
 </p>
 
-<a href="https://www.munich-airport.com/" target="_blank">
-Explorer
+<a href="https://www.mvv-muenchen.de/en/mobility-services/bike/index.html" target="_blank" rel="noopener">
+Louer un vélo →
 </a>
 
 </div>
+
+<div class="card fade-up">
+
+<h3>🚗 Voiture & excursions</h3>
+
+<div class="price">
+Autour de Munich
+</div>
+
+<p>
+Une voiture peut être utile pour explorer les châteaux bavarois, les lacs alpins, la Route romantique ou certaines destinations autour de Munich.
+</p>
+
+<a href="https://www.sixt.fr/" target="_blank" rel="noopener">
+Réserver une voiture →
+</a>
+
+</div>
+
+<div class="card fade-up">
+
+<h3>🚆 Gare centrale de Munich</h3>
+
+<div class="price">
+Train & Allemagne
+</div>
+
+<p>
+Berlin, Francfort, Salzbourg, Nuremberg ou les Alpes bavaroises sont facilement accessibles grâce aux nombreuses liaisons ferroviaires au départ de Munich.
+</p>
+
+<a href="https://www.bahn.com/fr" target="_blank" rel="noopener">
+Réserver un train →
+</a>
+
+</div>
+
+<div class="card fade-up">
+
+<h3>✈️ Aéroport de Munich</h3>
+
+<div class="price">
+Voyages internationaux
+</div>
+
+<p>
+L’aéroport de Munich est l’un des plus grands hubs d’Allemagne et permet de rejoindre facilement le centre-ville en S-Bahn.
+</p>
+
+<a href="https://www.munich-airport.com/" target="_blank" rel="noopener">
+Vols & informations →
+</a>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- OU DORMIR -->
+
+<section class="section" id="hebergements">
+
+<h2 class="section-title fade-up">
+🏨 Où dormir à Munich ?
+</h2>
+
+<div class="grid">
+
+<div class="card fade-up">
+
+<h3>🏛️ Altstadt & Marienplatz</h3>
+
+<p>
+Le meilleur choix pour une première visite. Vous serez au cœur de Munich, à proximité des principaux monuments, des restaurants et des sites incontournables.
+</p>
+
+</div>
+
+<div class="card fade-up">
+
+<h3>🍺 Schwabing</h3>
+
+<p>
+Quartier animé et élégant apprécié pour ses cafés, ses biergartens, ses boutiques et sa proximité avec l’English Garden.
+</p>
+
+</div>
+
+<div class="card fade-up">
+
+<h3>🌳 English Garden</h3>
+
+<p>
+Idéal pour les voyageurs recherchant un environnement plus calme, proche des espaces verts et des balades tout en restant à quelques minutes du centre-ville.
+</p>
+
+</div>
+
+<div class="card fade-up">
+
+<h3>🚆 Gare centrale (Hauptbahnhof)</h3>
+
+<p>
+Pratique pour les arrivées en train et les excursions vers les Alpes, Salzbourg ou les autres grandes villes allemandes.
+</p>
+
+</div>
+
+<div class="card fade-up">
+
+<h3>🏟️ Allianz Arena & Nord Munich</h3>
+
+<p>
+Un secteur intéressant pour les amateurs de football souhaitant séjourner à proximité du stade du Bayern Munich et des grands axes de transport.
+</p>
+
+</div>
+
+</div>
+
+<p style="
+text-align:center;
+margin-top:30px;
+color:#cbd5e1;
+">
+Comparez les hébergements dans les principaux quartiers de Munich.
+</p>
+
+<div style="text-align:center;margin-top:15px;">
+
+<a href="https://www.booking.com" target="_blank" rel="noopener">
+🏨 Réserver un hébergement →
+</a>
 
 </div>
 
@@ -804,50 +1146,67 @@ Explorer
 <section class="section" id="restaurants">
 
 <h2 class="section-title fade-up">
-🍺 Goûter le vrai Munich
+🍽️ Goûter le vrai Munich
 </h2>
 
-<div class="grid">
+<p style="
+text-align:center;
+max-width:850px;
+margin:0 auto 35px;
+color:#cbd5e1;
+line-height:1.8;">
+Entre biergartens traditionnels, spécialités bavaroises, marchés gourmands et restaurants contemporains, Munich offre l'une des expériences culinaires les plus authentiques d'Allemagne.
+</p>
+
+<div class="map-preview fade-up">
+
+<img
+src="images/restaurants-munich.webp"
+alt="Restaurants et biergartens emblématiques de Munich">
+
+<div class="map-preview-overlay">
+
+<h3>
+Les meilleures adresses de Munich
+</h3>
+
+<p>
+Des grandes brasseries historiques de Marienplatz aux biergartens de l'English Garden, Munich propose une ambiance unique où gastronomie et convivialité bavaroise se rencontrent.
+</p>
+
+</div>
+
+</div>
+
+<div class="grid" style="margin-top:35px;">
 
 <div class="card fade-up">
 
-<h3>🍽️ Restaurants bavarois</h3>
+<h3>🍺 Biergartens bavarois</h3>
 
 <p>
-Découvre les meilleures spécialités allemandes et adresses populaires.
+Partagez une grande table sous les arbres et découvrez l'une des traditions les plus emblématiques de Munich autour d'une bière bavaroise et de spécialités locales.
 </p>
-
-<a href="https://www.tripadvisor.com/" target="_blank">
-Explorer
-</a>
 
 </div>
 
 <div class="card fade-up">
 
-<h3>🥨 Biergartens</h3>
+<h3>🥨 Viktualienmarkt</h3>
 
 <p>
-Profite de l’ambiance bavaroise traditionnelle dans les biergartens iconiques.
+Le célèbre marché de Munich rassemble producteurs locaux, spécialités bavaroises et terrasses animées au cœur du centre historique.
 </p>
-
-<a href="https://www.thefork.com/" target="_blank">
-Explorer
-</a>
 
 </div>
 
 <div class="card fade-up">
 
-<h3>🌃 Rooftops & cafés</h3>
+<h3>🏛️ Quartier de Marienplatz</h3>
 
 <p>
-Explore Munich autrement avec ses rooftops et cafés modernes.
+Autour de la place principale de Munich, de nombreuses brasseries historiques et restaurants traditionnels permettent de découvrir la véritable cuisine bavaroise.
 </p>
-
-<a href="https://www.getyourguide.com/" target="_blank">
-Explorer
-</a>
 
 </div>
 
@@ -855,68 +1214,119 @@ Explorer
 
 </section>
 
-<!-- ACTIVITES -->
+<!-- AUTOUR DE MUNICH -->
 
 <section class="section" id="activites">
 
 <h2 class="section-title fade-up">
-✨ Le Munich iconique
+🏔️ Autour de Munich
 </h2>
 
-<div class="grid">
+<p style="
+text-align:center;
+max-width:850px;
+margin:0 auto 35px;
+color:#cbd5e1;
+line-height:1.8;">
+Entre châteaux de contes de fées, lacs alpins, villages bavarois et sommets spectaculaires, les environs de Munich offrent certaines des plus belles excursions d'Allemagne.
+</p>
+
+<div class="map-preview fade-up">
+
+<img
+src="images/autour-munich.webp"
+alt="Autour de Munich">
+
+<div class="map-preview-overlay">
+
+<h3>
+Explorer les trésors de la Bavière
+</h3>
+
+<p>
+Neuschwanstein, Salzbourg, les Alpes bavaroises et les grands lacs permettent de prolonger facilement l'aventure au-delà de Munich.
+</p>
+
+</div>
+
+</div>
+
+<div class="grid" style="margin-top:35px;">
 
 <div class="card fade-up">
 
-<h3>🏟️ Allianz Arena</h3>
+<h3>🏰 Château de Neuschwanstein</h3>
 
 <p>
-Découvre l’un des stades les plus célèbres du football européen.
+Perché au cœur des Alpes bavaroises, le château de Neuschwanstein est l'un des monuments les plus célèbres d'Europe et aurait inspiré les châteaux de Disney.
 </p>
 
-<a href="https://www.getyourguide.com/" target="_blank">
-Explorer
+<a
+href="https://www.getyourguide.fr/munich-l26/au-depart-de-munich-excursion-d-une-journee-aux-chateaux-de-neuschwanstein-et-linderhof-t1753/?partner_id=F9OV4TP&utm_medium=online_publisher"
+target="_blank"
+rel="noopener sponsored">
+🏰 Voir l'excursion →
 </a>
 
 </div>
 
 <div class="card fade-up">
 
-<h3>🏛️ BMW Museum</h3>
+<h3>🇦🇹 Salzbourg</h3>
 
 <p>
-Explore l’univers automobile allemand et l’histoire de BMW.
+La ville natale de Mozart séduit par son centre historique classé à l'UNESCO, son patrimoine baroque et son magnifique cadre alpin.
 </p>
 
-<a href="https://www.tiqets.com/" target="_blank">
-Explorer
+<a
+href="https://www.getyourguide.fr/munich-l26/excursion-d-une-journee-a-salzbourg-depuis-munich-en-train-t24230/?partner_id=F9OV4TP&utm_medium=online_publisher"
+target="_blank"
+rel="noopener sponsored">
+🇦🇹 Découvrir Salzbourg →
 </a>
 
 </div>
 
 <div class="card fade-up">
 
-<h3>🌳 English Garden</h3>
+<h3>🏔️ Zugspitze</h3>
 
 <p>
-Profite de l’un des plus grands parcs urbains d’Europe.
+Atteignez le plus haut sommet d'Allemagne et profitez d'un panorama exceptionnel sur les Alpes bavaroises et autrichiennes.
 </p>
 
-<a href="https://www.getyourguide.com/" target="_blank">
-Explorer
+<a
+href="https://www.getyourguide.fr/munich-l26/au-depart-de-munich-excursion-en-minibus-sur-la-zugspitze-avec-la-ville-de-garmisch-t23215/?partner_id=F9OV4TP&utm_medium=online_publisher"
+target="_blank"
+rel="noopener sponsored">
+🏔️ Découvrir la Zugspitze →
 </a>
 
 </div>
 
 <div class="card fade-up">
 
-<h3>🎄 Oktoberfest & événements</h3>
+<h3>🌊 Lac de Tegernsee</h3>
 
 <p>
-Découvre les grands événements bavarois et l’ambiance festive de Munich.
+Entouré de montagnes, le lac de Tegernsee est l'une des destinations préférées des Bavarois pour profiter de la nature à moins d'une heure de Munich.
 </p>
 
-<a href="https://www.tiqets.com/" target="_blank">
-Explorer
+</div>
+
+<div class="card fade-up">
+
+<h3>🛣️ Route romantique</h3>
+
+<p>
+Découvrez villages médiévaux, remparts historiques et paysages de carte postale le long de l'un des itinéraires les plus célèbres d'Allemagne.
+</p>
+
+<a
+href="https://www.getyourguide.fr/rothenburg-ob-der-tauber-l93125/au-depart-de-munich-excursion-d-une-journee-en-bus-a-rothenburg-et-sur-la-route-romantique-t1781/?partner_id=F9OV4TP&utm_medium=online_publisher"
+target="_blank"
+rel="noopener sponsored">
+🛣️ Voir l'excursion →
 </a>
 
 </div>
@@ -927,74 +1337,124 @@ Explorer
 
 <!-- SPORT -->
 
-<section class="section">
+<section class="section" id="sport">
 
 <h2 class="section-title fade-up">
-⚽ Munich côté football & événements
+⚽ Vivre le sport et les grands événements à Munich
 </h2>
 
-<div class="grid">
+<p style="
+text-align:center;
+max-width:850px;
+margin:0 auto 35px;
+color:#cbd5e1;
+line-height:1.8;">
+Entre football européen, Oktoberfest, concerts internationaux et expériences immersives, Munich figure parmi les villes les plus dynamiques d'Allemagne pour vivre des événements mémorables.
+</p>
 
-<div class="card fade-up">
+<div class="map-preview fade-up">
+
+<img
+src="images/panorama-sport-munich.webp"
+alt="Sport et grands événements à Munich">
+
+<div class="map-preview-overlay">
 
 <h3>
-🔴 Bayern Munich
+L'énergie festive et sportive de Munich
 </h3>
 
 <p>
-Découvre l’ambiance unique du Bayern Munich et de l’Allianz Arena.
+Du Bayern Munich à l'Oktoberfest, en passant par les concerts, spectacles immersifs et grands événements bavarois, Munich vibre toute l'année au rythme des émotions collectives.
 </p>
 
-<a href="https://www.p1travel.com/" target="_blank">
-Voir les billets
+</div>
+
+</div>
+
+<div class="grid" style="margin-top:35px;">
+
+<div class="card fade-up">
+
+<h3>⚽ Bayern Munich & Allianz Arena</h3>
+
+<p>
+Assistez à un match du Bayern Munich ou découvrez l'Allianz Arena, l'un des stades les plus impressionnants d'Europe.
+</p>
+
+<a
+href="https://www.hellotickets.fr/billets-fc-bayern-munich/p-273?tap_a=150100-db3f02&tap_s=9884000-08dfab&qs=bayern"
+target="_blank"
+rel="noopener sponsored">
+🎟️ Voir les billets
 </a>
 
 </div>
 
 <div class="card fade-up">
 
-<h3>
-🏟️ Bundesliga
-</h3>
+<h3>🍺 Oktoberfest</h3>
 
 <p>
-Assiste aux grands matchs du championnat allemand.
+Le plus célèbre festival de bière au monde attire chaque année des millions de visiteurs venus découvrir les traditions bavaroises.
 </p>
 
-<a href="https://www.stubhub.com/" target="_blank">
-Explorer
+<a
+href="https://www.getyourguide.fr/munich-l26/munich-oktoberfest-avec-table-reservee-biere-et-nourriture-hote-local-t1271604/?partner_id=F9OV4TP&utm_medium=online_publisher"
+target="_blank"
+rel="noopener sponsored">
+🍺 Réserver l'expérience
 </a>
 
 </div>
 
 <div class="card fade-up">
 
-<h3>
-🎶 Concerts & festivals
-</h3>
+<h3>🎻 Candlelight Munich</h3>
 
 <p>
-Profite des grands concerts et événements culturels à Munich.
+Découvrez les célèbres concerts Candlelight dans des lieux emblématiques de Munich pour une expérience musicale unique à la lueur des bougies.
 </p>
 
-<a href="https://www.ticketmaster.de/" target="_blank">
-Explorer
+<a
+href="https://feverup.com/m/182376/fr"
+target="_blank"
+rel="noopener sponsored">
+🎻 Voir les concerts
 </a>
 
 </div>
 
 <div class="card fade-up">
 
-<h3>
-🎟️ Événements Munich
-</h3>
+<h3>🚁 DroneArt Show</h3>
 
 <p>
-Retrouve facilement les meilleures expériences à vivre en Bavière.
+Une expérience immersive spectaculaire mêlant musique et chorégraphies lumineuses réalisées par des centaines de drones dans le ciel.
 </p>
 
-<a href="https://www.getyourguide.com/" target="_blank">
-Découvrir
+<a
+href="https://feverup.com/m/595215"
+target="_blank"
+rel="noopener sponsored">
+🚁 Découvrir l'événement
+</a>
+
+</div>
+
+<div class="card fade-up">
+
+<h3>🎶 Concerts & spectacles</h3>
+
+<p>
+Munich accueille toute l'année des concerts internationaux, spectacles et événements culturels dans ses principales salles et arènes.
+</p>
+
+<a
+href="https://feverup.com/m/623921"
+target="_blank"
+rel="noopener sponsored">
+🎟️ Voir les événements
 </a>
 
 </div>
@@ -1003,39 +1463,156 @@ Découvrir
 
 </section>
 
-<!-- GUIDE -->
+<!-- AVANT DE PARTIR -->
+
+<section class="section planning-theme">
+
+<h2 class="section-title fade-up">
+✈️ Avant de partir à Munich
+</h2>
+
+<div class="grid">
+
+<div class="card fade-up">
+<h3>🗣️ Langue</h3>
+<p>
+L'allemand est la langue officielle. L'anglais est largement compris dans les hôtels, restaurants, attractions touristiques et transports.
+</p>
+</div>
+
+<div class="card fade-up">
+<h3>💶 Devise</h3>
+<p>
+L'euro (€) est utilisé partout à Munich. Les cartes bancaires sont acceptées dans la majorité des commerces, même si certains établissements traditionnels privilégient encore les paiements en espèces.
+</p>
+</div>
+
+<div class="card fade-up">
+<h3>🔌 Prises électriques</h3>
+<p>
+L'Allemagne utilise les prises de type C et F avec une tension de 230 V. Aucun adaptateur n'est nécessaire pour la plupart des voyageurs européens.
+</p>
+</div>
+
+<div class="card fade-up">
+<h3>📅 Durée idéale</h3>
+<p>
+Trois à quatre jours permettent de découvrir les principaux quartiers, les biergartens, les musées, l'Allianz Arena et les incontournables de Munich.
+</p>
+</div>
+
+<div class="card fade-up">
+<h3>🌤️ Meilleure période</h3>
+<p>
+De mai à octobre pour profiter des biergartens et des événements en plein air. Septembre est particulièrement apprécié grâce à l'Oktoberfest.
+</p>
+</div>
+
+<div class="card fade-up">
+<h3>💰 Budget moyen</h3>
+<p>
+Pour un séjour confortable, prévoyez généralement entre 120 € et 250 € par jour selon l'hébergement, les activités et les restaurants choisis.
+</p>
+</div>
+
+</div>
+
+</section>
+
+<!-- ERREURS A EVITER -->
+
+<section class="section warning-theme">
+
+<h2 class="section-title fade-up">
+⚠️ Les erreurs à éviter à Munich
+</h2>
+
+<div class="grid">
+
+<div class="card fade-up">
+
+<h3>🏰 Réserver Neuschwanstein trop tard</h3>
+
+<p>
+Les excursions vers Neuschwanstein, Linderhof ou les châteaux bavarois sont très demandées. En haute saison, mieux vaut réserver plusieurs jours à l'avance.
+</p>
+
+</div>
+
+<div class="card fade-up">
+
+<h3>🍺 Penser que Munich se résume à l'Oktoberfest</h3>
+
+<p>
+Munich possède aussi des palais, musées, parcs, marchés, biergartens et excursions alpines qui méritent largement d'être découverts.
+</p>
+
+</div>
+
+<div class="card fade-up">
+
+<h3>🚇 Négliger les transports en commun</h3>
+
+<p>
+Le réseau U-Bahn, S-Bahn, tramway et bus permet de rejoindre facilement les principaux quartiers, l'Allianz Arena, la gare et l'aéroport.
+</p>
+
+</div>
+
+<div class="card fade-up">
+
+<h3>🏔️ Oublier les excursions autour de Munich</h3>
+
+<p>
+Neuschwanstein, Salzbourg, la Zugspitze, les lacs alpins et la Route romantique font partie des plus belles expériences à vivre depuis Munich.
+</p>
+
+</div>
+
+<div class="card fade-up">
+
+<h3>🌦️ Sous-estimer la météo bavaroise</h3>
+
+<p>
+Même en été, la météo peut changer rapidement, surtout si vous partez vers les Alpes. Prévoyez une veste légère ou imperméable.
+</p>
+
+</div>
+
+<div class="card fade-up">
+
+<h3>📅 Visiter Munich trop rapidement</h3>
+
+<p>
+Deux jours permettent de voir le centre, mais trois à quatre jours sont préférables pour profiter des musées, biergartens, palais et excursions autour de Munich.
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- FAQ -->
 
 <section class="info-section">
 
 <div class="info-box fade-up">
 
 <h2>
-Pourquoi Munich fascine autant ?
+❓ FAQ Munich
 </h2>
-
-<p>
-Munich mélange culture bavaroise,
-football européen,
-gastronomie allemande et modernité urbaine.
-</p>
-
-<p>
-Entre les biergartens,
-les marchés de Noël,
-les stades mythiques et les paysages bavarois,
-Munich possède une atmosphère unique en Europe.
-</p>
 
 <div class="faq">
 
 <div class="faq-item">
 
 <h3>
-🚆 Comment se déplacer à Munich ?
+Combien de jours faut-il pour visiter Munich ?
 </h3>
 
 <p>
-Le métro allemand et les trains urbains permettent d’explorer Munich rapidement.
+Trois à quatre jours permettent de découvrir les principaux quartiers, les biergartens, les musées, les palais royaux et plusieurs excursions autour de Munich.
 </p>
 
 </div>
@@ -1043,11 +1620,11 @@ Le métro allemand et les trains urbains permettent d’explorer Munich rapideme
 <div class="faq-item">
 
 <h3>
-🍺 Où manger à Munich ?
+Quelle est l'activité incontournable à Munich ?
 </h3>
 
 <p>
-Biergartens, spécialités bavaroises et cafés modernes sont présents dans toute la ville.
+L'excursion au château de Neuschwanstein figure parmi les expériences les plus populaires. Dans la ville, Marienplatz et l'Allianz Arena comptent parmi les incontournables.
 </p>
 
 </div>
@@ -1055,11 +1632,71 @@ Biergartens, spécialités bavaroises et cafés modernes sont présents dans tou
 <div class="faq-item">
 
 <h3>
-🎟️ Que faire à Munich ?
+Quelle est la meilleure période pour visiter Munich ?
 </h3>
 
 <p>
-Allianz Arena, Marienplatz, BMW Museum et Oktoberfest sont incontournables.
+De mai à octobre, les températures sont généralement agréables pour profiter des biergartens, des parcs et des événements. Septembre attire également de nombreux visiteurs grâce à l'Oktoberfest.
+</p>
+
+</div>
+
+<div class="faq-item">
+
+<h3>
+Munich est-elle une destination chère ?
+</h3>
+
+<p>
+Munich fait partie des villes les plus onéreuses d'Allemagne, notamment pour l'hébergement. En revanche, les transports en commun et certaines activités restent accessibles.
+</p>
+
+</div>
+
+<div class="faq-item">
+
+<h3>
+Comment se déplacer facilement dans Munich ?
+</h3>
+
+<p>
+Le réseau MVV regroupe métro (U-Bahn), trains urbains (S-Bahn), tramways et bus permettant de rejoindre facilement l'ensemble de la ville.
+</p>
+
+</div>
+
+<div class="faq-item">
+
+<h3>
+Quels quartiers découvrir en priorité ?
+</h3>
+
+<p>
+Altstadt, Marienplatz, Schwabing, l'English Garden et les environs de l'Allianz Arena figurent parmi les secteurs les plus intéressants à explorer.
+</p>
+
+</div>
+
+<div class="faq-item">
+
+<h3>
+Que faire à Munich avec des enfants ?
+</h3>
+
+<p>
+L'English Garden, le Deutsches Museum, l'Allianz Arena, le château de Nymphenburg et certaines excursions alpines constituent d'excellentes activités familiales.
+</p>
+
+</div>
+
+<div class="faq-item">
+
+<h3>
+Munich est-elle une ville agréable pour le vélo ?
+</h3>
+
+<p>
+Oui. Munich dispose d'un vaste réseau cyclable et de nombreux espaces verts. Le vélo est l'un des meilleurs moyens de découvrir la ville et l'English Garden.
 </p>
 
 </div>
@@ -1083,15 +1720,16 @@ alt="Panorama Munich">
 <div class="map-preview-overlay">
 
 <h3>
-Quand les lumières bavaroises s’allument, Munich change d’ambiance
+Munich révèle toute la magie de la Bavière
 </h3>
 
 <p>
 Entre les biergartens,
-les marchés illuminés,
-les rooftops modernes
-et l’atmosphère bavaroise,
-Munich possède une identité unique en Europe.
+les palais royaux,
+les Alpes bavaroises,
+les traditions allemandes
+et l'effervescence de l'Oktoberfest,
+Munich offre l'une des expériences les plus mémorables d'Europe.
 </p>
 
 <a href="destinations.html" class="map-button">
@@ -1136,6 +1774,14 @@ function toggleMenu(){
 const nav = document.querySelector('.nav-links');
 
 nav.classList.toggle('active');
+
+}
+
+function agendaSoon(event){
+
+event.preventDefault();
+
+alert("📅 Agenda Munich bientôt disponible sur Vidolta.");
 
 }
 
