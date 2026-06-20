@@ -1490,6 +1490,13 @@ nav.classList.toggle('active');
 }
 
 document.querySelectorAll('.nav-links a').forEach(link => {
+  link.addEventListener('click', () => {
+    const nav = document.querySelector('.nav-links');
+    nav.classList.remove('active');
+  });
+});
+
+document.querySelectorAll('.nav-links a').forEach(link => {
 
 link.addEventListener('click', () => {
 
