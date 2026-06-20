@@ -1,0 +1,996 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+<title>The Story of Vidolta | Travel, Experiences and Memories</title>
+
+<meta name="description" content="Discover the story of Vidolta, born from a passion for discovery, travel, events and experiences that create unforgettable memories.">
+
+<meta name="theme-color" content="#0f172a">
+
+<link rel="canonical" href="https://www.vidolta.com/our-story.html">
+
+<link rel="alternate" hreflang="fr" href="https://www.vidolta.com/notre-histoire.html">
+<link rel="alternate" hreflang="en" href="https://www.vidolta.com/our-story.html">
+<link rel="alternate" hreflang="x-default" href="https://www.vidolta.com/notre-histoire.html">
+
+<meta property="og:title" content="The Story of Vidolta | Travel, Experiences and Memories">
+
+<meta property="og:description" content="Discover the story of Vidolta, born from a passion for discovery, travel, events and experiences that create unforgettable memories.">
+
+<meta property="og:url" content="https://www.vidolta.com/our-story.html">
+
+<meta property="og:image" content="https://www.vidolta.com/images/notre-histoire.webp">
+
+<meta property="og:type" content="website">
+
+<meta property="og:site_name" content="Vidolta">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Caveat:wght@400;500;600&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+html{
+scroll-behavior:smooth;
+}
+
+body{
+font-family:'Poppins',sans-serif;
+background:
+radial-gradient(circle at top right,rgba(124,92,255,0.14),transparent 30%),
+radial-gradient(circle at top left,rgba(245,158,11,0.08),transparent 28%),
+linear-gradient(to bottom,#07111f 0%,#08111f 45%,#050816 100%);
+color:white;
+overflow-x:hidden;
+}
+
+body::before{
+content:'';
+position:fixed;
+inset:0;
+pointer-events:none;
+z-index:-1;
+background:
+linear-gradient(rgba(255,255,255,0.018) 1px,transparent 1px),
+linear-gradient(90deg,rgba(255,255,255,0.014) 1px,transparent 1px);
+background-size:42px 42px;
+mask-image:linear-gradient(to bottom,rgba(0,0,0,0.45),transparent 75%);
+}
+
+a{
+text-decoration:none;
+}
+
+img{
+display:block;
+}
+
+/* NAVBAR */
+
+.navbar{
+position:sticky;
+top:0;
+z-index:1000;
+width:100%;
+padding:10px 16px;
+display:flex;
+justify-content:space-between;
+align-items:center;
+background:rgba(5,8,22,0.72);
+backdrop-filter:blur(14px);
+border-bottom:1px solid rgba(255,255,255,0.05);
+}
+
+.logo{
+font-size:1.6rem;
+font-weight:700;
+color:white;
+}
+
+.mobile-btn{
+display:none;
+font-size:2rem;
+cursor:pointer;
+color:white;
+}
+
+.nav-links{
+display:flex;
+gap:28px;
+align-items:center;
+}
+
+.nav-links a{
+color:#e2e8f0;
+font-weight:500;
+transition:0.3s;
+}
+
+.nav-links a:hover{
+color:#818cf8;
+}
+  
+/* HERO */
+
+.hero{
+position:relative;
+background:#060b1f;
+min-height:420px;
+padding:120px 20px 70px;
+display:flex;
+align-items:center;
+justify-content:center;
+text-align:center;
+overflow:hidden;
+}
+
+.hero img{
+position:absolute;
+inset:0;
+width:100%;
+height:100%;
+object-fit:cover;
+filter:brightness(0.68) saturate(1.05);
+}
+
+.hero::after{
+content:'';
+position:absolute;
+inset:0;
+background:
+linear-gradient(
+to bottom,
+rgba(5,8,22,0.18),
+rgba(5,8,22,0.42) 45%,
+rgba(7,17,31,0.92)
+);
+z-index:1;
+}
+
+.hero-overlay{
+position:relative;
+z-index:2;
+padding:26px;
+max-width:900px;
+}
+
+.hero h1{
+font-size:3.9rem;
+line-height:0.95;
+letter-spacing:-2px;
+margin-bottom:22px;
+text-shadow:0 12px 35px rgba(0,0,0,0.45);
+}
+
+.hero p{
+font-size:1.18rem;
+line-height:1.85;
+color:#e5e7eb;
+max-width:780px;
+margin:0 auto;
+}
+
+.subtitle{
+margin-top:22px;
+font-family:'Caveat',cursive;
+font-size:2rem;
+letter-spacing:0;
+opacity:0.92;
+color:#f8e7b0;
+text-shadow:0 8px 25px rgba(0,0,0,0.45);
+}
+
+/* SECTION */
+
+.section{
+padding:60px 20px;
+max-width:1200px;
+margin:auto;
+}
+
+.section-title{
+text-align:center;
+font-size:2.5rem;
+margin-bottom:32px;
+}
+
+/* GRID */
+
+.grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+gap:26px;
+}
+
+/* CARD */
+
+.card{
+background:
+linear-gradient(
+135deg,
+rgba(15,23,42,0.88),
+rgba(10,15,30,0.82)
+);
+
+padding:34px;
+
+border-radius:28px;
+
+border:1px solid rgba(255,255,255,0.06);
+
+box-shadow:0 15px 40px rgba(0,0,0,0.22);
+
+backdrop-filter:blur(14px);
+
+transition:0.35s;
+}
+
+.card:hover{
+transform:translateY(-6px);
+border-color:rgba(248,231,176,0.28);
+box-shadow:0 18px 45px rgba(0,0,0,0.28);
+}
+
+.card h3{
+font-size:1.4rem;
+margin-bottom:18px;
+color:white;
+}
+
+.card p{
+line-height:1.9;
+color:#cbd5e1;
+}
+
+/* STORY CONTENT */
+
+.story{
+max-width:760px;
+margin:auto;
+position:relative;
+}
+
+.story::before{
+display:none;
+}
+
+.story h2{
+font-size:2.15rem;
+line-height:1.25;
+margin-bottom:26px;
+color:#ffffff;
+letter-spacing:-0.8px;
+}
+
+.story h2::after{
+content:'';
+display:block;
+width:58px;
+height:2px;
+margin-top:18px;
+background:linear-gradient(90deg,#f8e7b0,rgba(129,140,248,0.1));
+border-radius:999px;
+}
+
+.story p{
+font-size:1.06rem;
+line-height:1.95;
+color:#d5deee;
+margin-bottom:16px;
+}
+
+.story p + p{
+margin-top:6px;
+}
+
+.quote{
+max-width:820px;
+margin:34px auto;
+padding:38px 42px;
+border-radius:30px;
+
+background:
+linear-gradient(
+135deg,
+rgba(15,23,42,0.78),
+rgba(8,13,28,0.9)
+);
+
+border:1px solid rgba(248,231,176,0.16);
+border-left:4px solid #f8e7b0;
+
+box-shadow:0 18px 45px rgba(0,0,0,0.28);
+
+font-family:'Caveat',cursive;
+font-size:2rem;
+line-height:1.45;
+font-style:normal;
+color:#f8e7b0;
+text-align:center;
+}
+
+.signature{
+max-width:760px;
+margin:36px auto 0;
+padding:36px 26px;
+text-align:center;
+color:#d5deee;
+line-height:1.9;
+font-size:1.08rem;
+}
+
+.signature p:first-child{
+font-family:'Caveat',cursive;
+font-size:2.15rem;
+color:#f8e7b0;
+margin-bottom:14px;
+}
+
+.author-signature{
+display:block;
+margin-top:22px;
+font-family:'Caveat',cursive;
+font-size:2rem;
+color:#f8e7b0;
+opacity:0.95;
+}
+
+/* CTA */
+
+.cta{
+background:
+linear-gradient(
+135deg,
+rgba(18,26,52,0.92),
+rgba(12,18,38,0.88)
+);
+
+padding:46px 32px;
+
+border-radius:34px;
+
+text-align:center;
+
+backdrop-filter:blur(18px);
+
+border:1px solid rgba(255,255,255,0.06);
+
+box-shadow:0 18px 45px rgba(0,0,0,0.22);
+}
+
+/* FOOTER */
+
+footer{
+padding:70px 20px;
+text-align:center;
+color:#94a3b8;
+line-height:2;
+border-top:1px solid rgba(255,255,255,0.05);
+margin-top:30px;
+}
+
+.footer-links{
+margin-top:18px;
+display:flex;
+justify-content:center;
+flex-wrap:wrap;
+gap:18px;
+}
+
+.footer-links a{
+color:#cbd5e1;
+transition:0.3s;
+}
+
+.footer-links a:hover{
+color:#f8e7b0;
+}
+
+/* ANIMATION */
+
+.fade-up{
+opacity:0;
+transform:translateY(30px);
+transition:0.8s ease;
+}
+
+.fade-up.visible{
+opacity:1;
+transform:translateY(0);
+}
+
+/* BACK TO TOP */
+
+.back-to-top{
+position:fixed;
+bottom:25px;
+right:25px;
+width:52px;
+height:52px;
+border:none;
+border-radius:50%;
+background:#6366f1;
+color:white;
+font-size:1.4rem;
+cursor:pointer;
+display:flex;
+align-items:center;
+justify-content:center;
+opacity:0;
+pointer-events:none;
+transition:0.3s;
+z-index:999;
+box-shadow:0 10px 25px rgba(0,0,0,0.35);
+}
+
+.back-to-top.show{
+opacity:1;
+pointer-events:auto;
+}
+
+/* MOBILE */
+
+@media(max-width:900px){
+
+.navbar{
+padding:10px 16px;
+}
+
+.mobile-btn{
+display:block;
+}
+
+.nav-links{
+display:none;
+position:absolute;
+top:78px;
+left:20px;
+right:20px;
+background:rgba(15,23,42,0.96);
+backdrop-filter:blur(18px);
+border:1px solid rgba(255,255,255,0.05);
+flex-direction:column;
+padding:24px;
+border-radius:24px;
+gap:18px;
+box-shadow:0 15px 35px rgba(0,0,0,0.35);
+}
+
+.nav-links.active{
+display:flex;
+}
+
+.nav-links a{
+font-size:1.1rem;
+}
+
+.hero{
+min-height:390px;
+padding:82px 18px 42px;
+}
+
+.hero h1{
+font-size:2.45rem;
+line-height:0.95;
+}
+
+.hero p{
+font-size:1.02rem;
+line-height:1.75;
+}
+
+.subtitle{
+font-size:1.75rem;
+}
+
+.section{
+padding:44px 18px;
+}
+
+.section-title{
+font-size:2rem;
+margin-bottom:28px;
+}
+
+.story h2{
+font-size:1.75rem;
+}
+
+.story p{
+font-size:1rem;
+line-height:1.85;
+}
+
+.quote{
+margin:22px auto;
+padding:30px 24px;
+font-size:1.65rem;
+line-height:1.45;
+}
+
+.cta{
+padding:42px 22px;
+border-radius:28px;
+}
+
+.cta h2{
+font-size:2rem;
+}
+
+.signature{
+padding:28px 18px;
+}
+
+.signature p:first-child{
+font-size:1.9rem;
+}
+
+.author-signature{
+font-size:1.8rem;
+}
+
+}
+
+</style>
+
+</head>
+  
+<body>
+
+<!-- NAVBAR -->
+
+<nav class="navbar">
+
+<a href="index-en.html" class="logo">🌍 Vidolta</a>
+
+<div class="mobile-btn" onclick="toggleMenu()">☰</div>
+
+<div class="nav-links">
+<a href="#origin">Origin</a>
+<a href="#cities">Cities</a>
+<a href="#memories">Memories</a>
+<a href="#why">Why</a>
+</div>
+
+</nav>
+
+<!-- HERO -->
+
+<section class="hero">
+
+<img
+loading="lazy"
+src="images/notre-histoire.webp"
+alt="The story of Vidolta">
+
+<div class="hero-overlay">
+
+<h1>
+The Story of Vidolta
+</h1>
+
+<p>
+Sometimes, a single day is enough to begin an adventure.
+Discover the story of Vidolta, born from a passion for discovery, travel, experiences and memories that stay with us for a lifetime.
+</p>
+
+<p class="subtitle">
+One Day In Your Life
+</p>
+
+</div>
+
+</section>
+
+<!-- ORIGIN -->
+
+<section class="section story" id="origin">
+
+<h2 class="fade-up">One Day In Your Life</h2>
+
+<p class="fade-up">
+Sometimes, a single day is enough to begin an adventure you never expected.
+</p>
+
+<p class="fade-up">
+Vidolta was born simply.
+</p>
+
+<p class="fade-up">
+First as just another idea, then as the desire to build something that could last over time.
+</p>
+
+<p class="fade-up">
+Day after day, through pages, destinations and discoveries, that idea grew into much more than a simple project.
+</p>
+
+<p class="fade-up">
+Today, Vidolta reflects a passion: discovering the world, experiencing unique moments and creating memories that stay with us for a lifetime.
+</p>
+
+</section>
+
+<!-- PASSION -->
+
+<section class="section story">
+
+<h2 class="fade-up">
+From Passion Comes Love, From Love Comes Life
+</h2>
+
+<p class="fade-up">
+It all began with a passion: the desire to discover.
+</p>
+
+<p class="fade-up">
+To discover new cities.
+</p>
+
+<p class="fade-up">
+To discover new horizons.
+</p>
+
+<p class="fade-up">
+To discover cultures, landscapes, stories and places that leave a lasting mark on the imagination.
+</p>
+
+<p class="fade-up">
+Over time, this passion became a true love for travel, adventure and the emotions that only discovery can bring.
+</p>
+
+<p class="fade-up">
+And from that love, an idea was born.
+</p>
+
+<p class="fade-up">
+That idea now has a name:
+<strong>Vidolta</strong>.
+</p>
+
+</section>
+
+<!-- CITIES -->
+
+<section class="section story" id="cities">
+
+<h2 class="fade-up">Cities Tell Stories</h2>
+
+<p class="fade-up">
+Every city has its own unique personality.
+</p>
+
+<p class="fade-up">
+Some impress through their architecture.
+</p>
+
+<p class="fade-up">
+Others fascinate through their history.
+</p>
+
+<p class="fade-up">
+Some inspire through cinema, music, sports and the major events that bring them to life.
+</p>
+
+<p class="fade-up">
+But what makes a city unforgettable is not only its landmarks.
+</p>
+
+<p class="fade-up">
+It is also the moments we experience there.
+</p>
+
+<p class="fade-up">
+A walk through an unfamiliar neighborhood.
+</p>
+
+<p class="fade-up">
+A festival on the other side of the world.
+</p>
+
+<p class="fade-up">
+An unexpected concert.
+</p>
+
+<p class="fade-up">
+A match that will never be forgotten.
+</p>
+
+<p class="fade-up">
+A sunset shared with the right people.
+</p>
+
+<p class="fade-up">
+These are the moments that give travel its soul.
+</p>
+
+</section>
+
+<!-- EXPERIENCE -->
+
+<section class="section story">
+
+<h2 class="fade-up">Living Cities, Not Just Visiting Them</h2>
+
+<p class="fade-up">
+Vidolta was never meant to be just another travel guide.
+</p>
+
+<p class="fade-up">
+The goal has always been to go further.
+</p>
+
+<p class="fade-up">
+Behind every destination are events, shows, festivals, experiences, filming locations, traditions and encounters that make each city unique.
+</p>
+
+<p class="fade-up">
+A journey is not simply a place you visit.
+</p>
+
+<p class="fade-up">
+It is an experience you live.
+</p>
+
+<p class="fade-up">
+That is why Vidolta now brings together travel guides, themed maps, activity ideas, events, experiences and practical tips designed to help people discover destinations in a different way.
+</p>
+
+</section>
+
+<!-- QUOTE -->
+
+<section class="section">
+
+<div class="quote fade-up">
+“The most valuable memories are often born when discovering a place meets a powerful emotion.”
+</div>
+
+</section>
+
+<!-- MEMORIES -->
+
+<section class="section story" id="memories">
+
+<h2 class="fade-up">The Memories That Stay</h2>
+
+<p class="fade-up">
+The most beautiful memories are not always the most spectacular ones.
+</p>
+
+<p class="fade-up">
+They are often born from first experiences.
+</p>
+
+<p class="fade-up">
+The first trip.
+</p>
+
+<p class="fade-up">
+The first great city discovered.
+</p>
+
+<p class="fade-up">
+The first festival.
+</p>
+
+<p class="fade-up">
+The first concert.
+</p>
+
+<p class="fade-up">
+The first journey shared with someone who truly matters.
+</p>
+
+<p class="fade-up">
+Years go by.
+</p>
+
+<p class="fade-up">
+Destinations change.
+</p>
+
+<p class="fade-up">
+But some emotions remain untouched.
+</p>
+
+<p class="fade-up">
+We sometimes forget the details.
+</p>
+
+<p class="fade-up">
+We almost never forget how we felt.
+</p>
+
+</section>
+
+<!-- WHY -->
+
+<section class="section story" id="why">
+
+<h2 class="fade-up">Why Vidolta?</h2>
+
+<p class="fade-up">
+Because the world is full of extraordinary places.
+</p>
+
+<p class="fade-up">
+Because some experiences deserve to be lived at least once in a lifetime.
+</p>
+
+<p class="fade-up">
+Because an event can sometimes inspire the desire to discover a city.
+</p>
+
+<p class="fade-up">
+Because a city can sometimes change a life.
+</p>
+
+<p class="fade-up">
+And because the most valuable memories are often born when discovering a place meets a powerful emotion.
+</p>
+
+<p class="fade-up">
+Vidolta exists to inspire those discoveries.
+</p>
+
+<p class="fade-up">
+To help everyone find their next destination, their next experience, or simply that special moment they will still remember years from now.
+</p>
+
+</section>
+
+<!-- CTA -->
+
+<section class="section" id="experience">
+
+<div class="cta fade-up">
+
+<h2>And you?</h2>
+
+<p>
+Every traveler has a story. A landscape that left a mark, an unexpected encounter, a memorable festival, an unforgettable concert or a city they never truly left behind.
+</p>
+
+<p>
+Maybe your next memory begins today. Maybe it begins here.
+</p>
+
+<a href="destinations-en.html">Explore destinations</a>
+
+</div>
+
+<div class="signature fade-up">
+
+<p>
+One Day In Your Life
+</p>
+
+<p>
+From passion comes love.<br>
+From love comes life.
+</p>
+
+<p>
+From a passion for discovery came a love for travel.
+</p>
+
+<p>
+From that love came <strong>Vidolta</strong>.
+</p>
+
+<span class="author-signature">
+— Vido
+</span>
+
+</div>
+
+</section>
+
+<!-- FOOTER -->
+
+<footer>
+
+<p>
+© 2026 Vidolta — One Day In Your Life.
+</p>
+
+<div class="footer-links">
+
+<a href="index-en.html">Home</a>
+
+<a href="about-en.html">About</a>
+
+<a href="destinations-en.html">Destinations</a>
+
+<a href="legal-notice.html">Legal Notice</a>
+
+<a href="privacy-policy.html">Privacy Policy</a>
+
+<a href="contact-en.html">Contact</a>
+
+</div>
+
+</footer>
+  
+<button class="back-to-top" id="backToTop">
+↑
+</button>
+
+<script>
+
+function toggleMenu(){
+const nav = document.querySelector('.nav-links');
+nav.classList.toggle('active');
+}
+
+/* ANIMATION */
+
+const observer = new IntersectionObserver(entries => {
+
+entries.forEach(entry => {
+
+if(entry.isIntersecting){
+entry.target.classList.add('visible');
+}
+
+});
+
+},{threshold:0.15});
+
+document.querySelectorAll('.fade-up').forEach(el => {
+observer.observe(el);
+});
+
+/* BACK TO TOP */
+
+const backToTop = document.getElementById('backToTop');
+
+window.addEventListener('scroll', () => {
+
+if(window.scrollY > 400){
+backToTop.classList.add('show');
+}else{
+backToTop.classList.remove('show');
+}
+
+});
+
+backToTop.addEventListener('click', () => {
+
+window.scrollTo({
+top:0,
+behavior:'smooth'
+});
+
+});
+
+/* CLOSE MOBILE MENU */
+
+document.querySelectorAll('.nav-links a').forEach(link => {
+
+link.addEventListener('click', () => {
+
+document.querySelector('.nav-links')
+.classList.remove('active');
+
+});
+
+});
+
+</script>
+
+</body>
+</html>
