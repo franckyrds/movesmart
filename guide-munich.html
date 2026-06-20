@@ -310,8 +310,7 @@ font-weight:700;
 color:white;
 list-style:none;
 
-display:grid;
-grid-template-columns:1fr auto 20px;
+display:flex;
 align-items:center;
 gap:12px;
 
@@ -333,8 +332,11 @@ text-align:right;
 transform:rotate(180deg);
 }
 
+.faq-item summary .badge:first-of-type{
+margin-left:auto;
+}
+
 .faq-item summary .badge{
-justify-self:end;
 white-space:nowrap;
 }
 
