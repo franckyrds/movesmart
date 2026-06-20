@@ -667,7 +667,7 @@ font-size:1.6rem;
 <a href="#restaurants">Restaurants</a>
 <a href="#activities">Activities</a>
 
-<a href="#" onclick="agendaSoon(event)" class="agenda-link">
+<a href="/guide-munich-en.html" class="agenda-link">
 📅 Munich Events
 </a>
 
@@ -1822,14 +1822,6 @@ document.querySelectorAll('.nav-links a').forEach(link => {
     nav.classList.remove('active');
   });
 });
-
-function agendaSoon(event){
-
-event.preventDefault();
-
-alert("📅 Munich Events coming soon on Vidolta.");
-
-}
 
 const observer = new IntersectionObserver(entries => {
 
