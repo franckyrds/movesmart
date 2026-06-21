@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Miami Map — Vidolta</title>
+
+<meta property="og:title" content="Miami Map — Vidolta">
+<meta property="og:description" content="Explore Miami's iconic beaches, South Beach, Ocean Drive, Wynwood, Little Havana, Brickell, Biscayne Bay and the best things to do in Miami with the Vidolta map.">
+<meta property="og:image" content="https://www.vidolta.com/images/miami-map-en.webp">
+<meta property="og:url" content="https://www.vidolta.com/miami-map-en.html">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="en_US">
+<meta property="og:site_name" content="Vidolta">
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Miami Map — Vidolta">
+<meta name="twitter:description" content="Explore Miami's iconic beaches, South Beach, Ocean Drive, Wynwood, Little Havana, Brickell, Biscayne Bay and the best things to do in Miami with the Vidolta map.">
+<meta name="twitter:image" content="https://www.vidolta.com/images/miami-map-en.webp">
+
+<meta name="description" content="Explore Miami's iconic beaches, South Beach, Ocean Drive, Wynwood, Little Havana, Brickell, Biscayne Bay and the best things to do in Miami with the Vidolta map.">
+
+<link rel="canonical" href="https://www.vidolta.com/miami-map-en.html">
+
+<link rel="alternate" hreflang="fr" href="https://www.vidolta.com/miami-map.html">
+<link rel="alternate" hreflang="en" href="https://www.vidolta.com/miami-map-en.html">
+<link rel="alternate" hreflang="x-default" href="https://www.vidolta.com/miami-map.html">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+body{
+font-family:'Poppins',sans-serif;
+
+background:
+radial-gradient(circle at top right,rgba(34,211,238,0.18),transparent 30%),
+radial-gradient(circle at top left,rgba(56,189,248,0.14),transparent 25%),
+radial-gradient(circle at center,rgba(250,204,21,0.08),transparent 35%),
+linear-gradient(to bottom,#071522 0%,#081827 100%);
+
+color:white;
+
+min-height:100vh;
+
+padding:40px 20px;
+}
+
+/* HEADER */
+
+.map-header{
+max-width:1200px;
+margin:auto auto 40px;
+
+text-align:center;
+}
+
+.map-header h1{
+font-size:3.6rem;
+margin-bottom:16px;
+
+letter-spacing:-2px;
+}
+
+.map-header h1 span{
+background:linear-gradient(
+90deg,
+#22d3ee,
+#38bdf8,
+#facc15
+);
+
+-webkit-background-clip:text;
+-webkit-text-fill-color:transparent;
+}
+
+.map-header p{
+max-width:850px;
+margin:auto;
+
+line-height:1.8;
+
+color:#cbd5e1;
+
+font-size:1.05rem;
+}
+
+/* MAP */
+
+.map-container{
+max-width:1400px;
+margin:auto;
+}
+
+.map-card{
+position:relative;
+overflow:hidden;
+border-radius:34px;
+border:1px solid rgba(255,255,255,0.06);
+box-shadow:0 20px 45px rgba(0,0,0,0.35);
+background:#0f172a;
+}
+
+.map-card img{
+width:100%;
+display:block;
+}
+
+/* INFORMATIONS */
+
+.info-grid{
+max-width:1200px;
+margin:40px auto;
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+gap:20px;
+}
+
+.info-card{
+background:rgba(15,31,49,0.85);
+padding:26px;
+border-radius:24px;
+border:1px solid rgba(255,255,255,0.06);
+}
+
+.info-card h3{
+margin-bottom:14px;
+font-size:1.1rem;
+}
+
+.info-card p{
+color:#cbd5e1;
+line-height:1.8;
+}
+
+/* CTA */
+
+.bottom-cta{
+max-width:1000px;
+margin:50px auto 0;
+padding:40px;
+text-align:center;
+background:linear-gradient(135deg,rgba(34,211,238,0.12),rgba(56,189,248,0.08));
+border-radius:30px;
+border:1px solid rgba(255,255,255,0.06);
+}
+
+.bottom-cta h2{
+font-size:2rem;
+margin-bottom:18px;
+}
+
+.bottom-cta p{
+max-width:700px;
+margin:0 auto 24px;
+color:#cbd5e1;
+line-height:1.8;
+}
+
+.bottom-cta a{
+display:inline-block;
+padding:14px 24px;
+border-radius:14px;
+background:linear-gradient(90deg,#22d3ee,#38bdf8);
+color:#071522;
+font-weight:700;
+text-decoration:none;
+}
+  
+/* MOBILE */
+
+@media(max-width:900px){
+
+body{
+padding:24px 16px;
+}
+
+.map-header h1{
+font-size:2.5rem;
+}
+
+.map-header p{
+font-size:0.96rem;
+line-height:1.7;
+}
+
+.map-card{
+border-radius:24px;
+}
+
+.bottom-cta{
+padding:28px;
+}
+
+.bottom-cta h2{
+font-size:1.6rem;
+}
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<!-- HEADER -->
+
+<section class="map-header">
+
+<h1>
+Miami <span>Map</span>
+</h1>
+
+<p>
+Find South Beach,
+Ocean Drive,
+Wynwood,
+Little Havana,
+Brickell,
+public transportation,
+iconic beaches
+and Miami's must-see attractions.
+</p>
+
+</section>
+
+<!-- MAP -->
+
+<section class="map-container">
+
+<div class="map-card">
+
+<img
+src="images/miami-map-en.webp"
+alt="Miami Map">
+
+</div>
+
+</section>
+
+<!-- INFORMATION -->
+
+<section class="info-grid">
+
+<div class="info-card">
+
+<h3>
+🚆 Transportation & Getting Around
+</h3>
+
+<p>
+The Metrorail,
+the free Metromover,
+Miami-Dade buses,
+taxis and Brightline make it easy to travel between Downtown,
+Brickell,
+Miami Beach
+and Miami International Airport.
+</p>
+
+</div>
+
+<div class="info-card">
+
+<h3>
+🌴 Beaches & Must-See Attractions
+</h3>
+
+<p>
+South Beach,
+Ocean Drive,
+Key Biscayne,
+Bayside Marketplace
+and Wynwood are among Miami's most iconic locations, combining beaches,
+culture
+and a tropical atmosphere.
+</p>
+
+</div>
+
+<div class="info-card">
+
+<h3>
+🎨 Neighborhoods & Culture
+</h3>
+
+<p>
+Wynwood,
+Little Havana,
+Brickell,
+Downtown Miami
+and the Design District offer completely different experiences, from street art and Cuban culture to shopping and modern architecture.
+</p>
+
+</div>
+
+<div class="info-card">
+
+<h3>
+☀️ Experiences & Leisure
+</h3>
+
+<p>
+Biscayne Bay cruises,
+the Everglades,
+Miami Heat games,
+South Beach,
+the Florida Keys
+and tropical sunsets are among Miami's most unforgettable experiences.
+</p>
+
+</div>
+
+</section>
+
+<!-- CTA -->
+
+<section class="bottom-cta">
+
+<h2>
+Explore Miami Travel Guide with Vidolta
+</h2>
+
+<p>
+Discover the best neighborhoods,
+beaches,
+restaurants,
+activities,
+sports
+and must-do experiences in Miami.
+</p>
+
+<a href="miami-en.html">
+Back to the Miami Guide →
+</a>
+
+</section>
+
+</body>
+
+</html>
