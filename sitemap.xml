@@ -8,7 +8,15 @@
 <loc>https://www.vidolta.com/index-en.html</loc>
 </url>
 
-<url><loc>https://www.vidolta.com/about.html</loc></url> <url><loc>https://www.vidolta.com/contact.html</loc></url> <url><loc>https://www.vidolta.com/confidentialite.html</loc></url> <url><loc>https://www.vidolta.com/mentions-legales.html</loc></url> <url><loc>https://www.vidolta.com/destinations.html</loc></url> <url><loc>https://www.vidolta.com/outils-voyage.html</loc></url> 
+<url><loc>https://www.vidolta.com/about.html</loc></url> <url><loc>https://www.vidolta.com/contact.html</loc></url> 
+  
+  <url><loc>https://www.vidolta.com/confidentialite.html</loc></url> 
+  
+  <url><loc>https://www.vidolta.com/mentions-legales.html</loc></url> 
+  
+  <url><loc>https://www.vidolta.com/destinations.html</loc></url> 
+  
+  <url><loc>https://www.vidolta.com/outils-voyage.html</loc></url> 
 
 <url>
 <loc>https://www.vidolta.com/notre-histoire.html</loc>
@@ -121,6 +129,10 @@
 <loc>https://www.vidolta.com/new-york-map2-en.html</loc>
 </url>
 
+<url>
+<loc>https://www.vidolta.com/new-york-map2.html</loc>
+</url>
+  
 <url>
   <loc>https://www.vidolta.com/world-map-en.html</loc>
 </url>
