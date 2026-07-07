@@ -6,10 +6,16 @@
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 
-<title>Tokyo — Vidolta</title>
+<title>Tokyo : Guide complet, hôtels, restaurants et activités | Vidolta</title>
 
 <meta name="description"
-content="Découvre Tokyo avec Vidolta : métro japonais, quartiers incontournables, restaurants, sport, mobilité et expériences uniques au Japon.">
+content="Découvre Tokyo avec Vidolta : quartiers incontournables, métro japonais, restaurants, TeamLab, Mont Fuji, sport, traditions et expériences incontournables au Japon.">
+
+<link rel="canonical" href="https://www.vidolta.com/tokyo.html">
+
+<link rel="alternate" hreflang="fr" href="https://www.vidolta.com/tokyo.html">
+<link rel="alternate" hreflang="en" href="https://www.vidolta.com/tokyo-en.html">
+<link rel="alternate" hreflang="x-default" href="https://www.vidolta.com/tokyo.html">
 
 <meta name="theme-color" content="#060b1f">
 
@@ -34,7 +40,7 @@ box-sizing:border-box;
 --muted:#94a3b8;
 }
 
- html{
+html{
 scroll-behavior:smooth;
 scroll-padding-top:80px;
 }
@@ -68,7 +74,7 @@ position:sticky;
 top:0;
 z-index:1000;
 
-padding:10px 16px;
+padding:12px 20px;
 
 display:flex;
 justify-content:space-between;
@@ -113,6 +119,7 @@ cursor:pointer;
 .hero{
 position:relative;
 height:72vh;
+padding-top:40px;
 
 display:flex;
 align-items:center;
@@ -132,7 +139,7 @@ height:100%;
 
 object-fit:cover;
 
-filter:brightness(0.82);
+filter:brightness(0.76);
 }
 
 .hero::after{
@@ -145,7 +152,7 @@ background:
 linear-gradient(
 to bottom,
 rgba(5,8,22,0.12),
-rgba(5,8,22,0.40)
+rgba(5,8,22,0.58)
 );
 
 z-index:1;
@@ -159,8 +166,8 @@ max-width:900px;
 }
 
 .hero h1{
-font-size:4.9rem;
-line-height:0.92;
+font-size:5rem;
+line-height:1.02;
 letter-spacing:-4px;
 
 margin-bottom:22px;
@@ -175,7 +182,7 @@ background:linear-gradient(90deg,#8b5cf6,#60a5fa);
 
 .hero p{
 font-size:1.2rem;
-line-height:1.9;
+line-height:1.8;
 color:#e2e8f0;
 margin-bottom:18px;
 }
@@ -215,8 +222,6 @@ linear-gradient(
 rgba(18,26,52,0.92),
 rgba(12,18,38,0.88)
 );
-
-backdrop-filter:blur(12px);
 
 padding:24px;
 
@@ -268,11 +273,11 @@ position:relative;
 
 display:block;
 
-height:370px;
+overflow:hidden;
+
+height:380px;
 
 border-radius:34px;
-
-overflow:hidden;
 
 border:1px solid rgba(255,255,255,0.06);
 
@@ -313,8 +318,8 @@ justify-content:flex-end;
 background:
 linear-gradient(
 to top,
-rgba(0,0,0,0.52),
-rgba(0,0,0,0.18)
+rgba(0,0,0,0.62),
+rgba(0,0,0,0.12)
 );
 }
 
@@ -330,10 +335,8 @@ color:#dbe4f0;
 margin-bottom:24px;
 }
 
-.map-preview-overlay a{
+.map-button{
 display:inline-block;
-
-width:fit-content;
 
 padding:14px 20px;
 
@@ -345,10 +348,12 @@ border-radius:14px;
 
 font-weight:700;
 
+width:fit-content;
+
 transition:0.3s;
 }
 
-.map-preview-overlay a:hover{
+.map-button:hover{
 transform:translateY(-2px);
 }
 
@@ -425,6 +430,32 @@ transition:0.3s;
 .card a:hover{
 background:#4f46e5;
 transform:translateY(-2px);
+}
+
+/* THEMES */
+
+.experiences-theme .card{
+border-color:rgba(251,191,36,0.12);
+}
+
+.experiences-theme .card:hover{
+border-color:rgba(251,191,36,0.45);
+}
+
+.planning-theme .card{
+border-color:rgba(34,197,94,0.12);
+}
+
+.planning-theme .card:hover{
+border-color:rgba(34,197,94,0.45);
+}
+
+.warning-theme .card{
+border-color:rgba(239,68,68,0.12);
+}
+
+.warning-theme .card:hover{
+border-color:rgba(239,68,68,0.45);
 }
 
 /* INFO */
@@ -656,9 +687,14 @@ font-size:1.6rem;
 
 </style>
 
+<!-- GetYourGuide Analytics -->
+<script async defer src="https://widget.getyourguide.com/dist/pa.umd.production.min.js" data-gyg-partner-id="F9OV4TP"></script>
+
 </head>
 
 <body>
+
+<!-- NAVBAR -->
 
 <nav class="navbar">
 
@@ -672,13 +708,32 @@ font-size:1.6rem;
 
 <div class="nav-links">
 
-<a href="index.html">Accueil</a>
-<a href="#mobilite">Mobilité</a>
-<a href="#restaurants">Restaurants</a>
-<a href="#activites">Activités</a>
+<a href="#experiences">
+Expériences
+</a>
+
+<a href="#mobilite">
+Mobilité
+</a>
+
+<a href="#ou-dormir">
+Où dormir
+</a>
+
+<a href="#restaurants">
+Restaurants
+</a>
+
+<a href="#activites">
+Activités
+</a>
+
+<a href="#sport">
+Sport
+</a>
 
 <a href="destinations.html">
-← Retour
+🌍 Destinations
 </a>
 
 </div>
@@ -697,17 +752,19 @@ alt="Tokyo">
 <div class="hero-overlay">
 
 <h1>
-Tokyo <span>ne dort jamais</span>
+<span>Tokyo ne dort jamais</span>
 </h1>
 
 <p>
-Explore Tokyo entre néons futuristes,
-trains ultra-connectés,
-quartiers mythiques et traditions japonaises.
+Explore Tokyo entre gratte-ciel futuristes,
+temples ancestraux,
+quartiers emblématiques,
+gastronomie japonaise
+et expériences uniques.
 </p>
 
 <p class="subtitle">
-Shibuya • Sushi • Sumo • Métro • Gaming • Tokyo Skytree
+Shibuya • Shinjuku • Asakusa • Sushi • Tokyo Skytree
 </p>
 
 </div>
@@ -719,36 +776,62 @@ Shibuya • Sushi • Sumo • Métro • Gaming • Tokyo Skytree
 <section class="quick-guide">
 
 <div class="quick-card fade-up">
-<h3>🚇 Métro japonais</h3>
+<h3>🌸 Tokyo authentique</h3>
 <p>
-Le réseau ferroviaire de Tokyo permet d’explorer la ville rapidement.
+Asakusa, Meiji-jingū, jardins japonais et traditions ancestrales.
 </p>
 </div>
 
 <div class="quick-card fade-up">
-<h3>🍣 Cuisine japonaise</h3>
+<h3>🚇 Se déplacer facilement</h3>
 <p>
-Sushi, ramen, izakayas et expériences culinaires uniques.
+Métro, JR Yamanote, Suica et conseils pratiques pour explorer Tokyo.
 </p>
 </div>
 
 <div class="quick-card fade-up">
-<h3>🌃 Quartiers iconiques</h3>
+<h3>🗼 Incontournables</h3>
 <p>
-Shibuya, Shinjuku, Akihabara et Ginza offrent des ambiances uniques.
+Shibuya, Tokyo Skytree, TeamLab, Sensō-ji et panoramas exceptionnels.
 </p>
 </div>
 
 <div class="quick-card fade-up">
-<h3>🎌 Culture japonaise</h3>
+<h3>⚾ Sport & culture</h3>
 <p>
-Temples, gaming, sumo et traditions modernes se mélangent à Tokyo.
+Sumo, baseball japonais, anime, gaming et événements toute l'année.
 </p>
 </div>
 
 </section>
 
-<!-- CARTE -->
+<!-- TOKYO EN UN COUP D'ŒIL -->
+
+<section class="info-section">
+
+<div class="info-box fade-up">
+
+<h2>
+🇯🇵 Tokyo en un coup d'œil
+</h2>
+
+<p>
+Tokyo est l'une des métropoles les plus fascinantes au monde. Entre gratte-ciel futuristes, temples centenaires, quartiers animés et gastronomie réputée, la capitale japonaise mêle harmonieusement tradition et innovation.
+</p>
+
+<p>
+De Shibuya à Shinjuku, d'Asakusa à Ginza, chaque quartier dévoile une ambiance unique, entre néons, jardins paisibles, sanctuaires, boutiques et expériences culturelles incontournables.
+</p>
+
+<p>
+Que tu viennes pour la cuisine japonaise, les panoramas urbains, les mangas, les cerisiers en fleurs ou une première découverte du Japon, Tokyo est une destination qui ne ressemble à aucune autre.
+</p>
+
+</div>
+
+</section>
+
+<!-- MAP -->
 
 <section class="section">
 
@@ -756,7 +839,7 @@ Temples, gaming, sumo et traditions modernes se mélangent à Tokyo.
 🚇 Comprendre Tokyo rapidement
 </h2>
 
-<a href="tokyo-map.html" class="map-preview fade-up">
+<div class="map-preview fade-up">
 
 <img
 src="images/tokyo-map.webp"
@@ -765,49 +848,203 @@ alt="Carte Tokyo">
 <div class="map-preview-overlay">
 
 <h3>
-Voir la carte interactive de Tokyo
+La carte essentielle de Tokyo
 </h3>
 
 <p>
-JR Yamanote Line, Shibuya,
-Shinjuku, Ginza et connexions essentielles.
+Shibuya,
+Shinjuku,
+Asakusa,
+Ginza,
+Tokyo Skytree et les principales lignes de métro pour explorer facilement la capitale japonaise.
 </p>
 
-<span>
+<a href="tokyo-map.html" class="map-button">
 Explorer la carte →
-</span>
+</a>
 
 </div>
 
+</div>
+
+</section>
+
+<!-- EXPERIENCES MEMORABLES -->
+
+<section class="section experiences-theme" id="experiences">
+
+<h2 class="section-title fade-up">
+✨ Les expériences qui rendent Tokyo inoubliable
+</h2>
+
+<p style="
+text-align:center;
+max-width:850px;
+margin:0 auto 35px;
+color:#cbd5e1;
+line-height:1.8;">
+Tokyo ne se visite pas seulement : elle se vit. Entre traditions millénaires, technologies futuristes, gastronomie japonaise, culture automobile et panoramas sur le mont Fuji, certaines expériences rendent un séjour dans la capitale japonaise véritablement inoubliable.
+</p>
+
+<div class="grid">
+
+<div class="card fade-up">
+
+<img src="images/sumo-tokyo.webp"
+alt="Spectacle de sumo à Tokyo"
+style="width:100%;height:220px;object-fit:cover;border-radius:18px;margin-bottom:18px;">
+
+<h3>🥋 Vivre un spectacle de sumo</h3>
+
+<p>
+Découvre le sport national japonais lors d'un spectacle immersif à Shibuya avec repas traditionnel chanko, présentation des rituels et séance photo avec les lutteurs.
+</p>
+
+<a
+href="https://www.getyourguide.fr/tokyo-l193/tokyo-spectacle-de-sumo-a-shibuya-et-experience-avec-chanko-et-photo-t1299373/?partner_id=F9OV4TP&utm_medium=online_publisher"
+target="_blank"
+rel="noopener sponsored">
+🎟️ Réserver l'expérience sumo
 </a>
+
+</div>
+
+<div class="card fade-up">
+
+<img src="images/teamlab-planets.webp"
+alt="TeamLab Planets Tokyo"
+style="width:100%;height:220px;object-fit:cover;border-radius:18px;margin-bottom:18px;">
+
+<h3>✨ Explorer TeamLab Planets</h3>
+
+<p>
+Marche pieds nus à travers des œuvres numériques interactives où lumière, eau et technologie créent l'une des expériences artistiques les plus célèbres du Japon.
+</p>
+
+<a
+href="https://www.getyourguide.fr/tokyo-l193/tokyo-billet-d-entree-au-musee-d-art-numerique-teamlab-planets-tokyo-t260407/?partner_id=F9OV4TP&utm_medium=online_publisher"
+target="_blank"
+rel="noopener sponsored">
+🎟️ Réserver TeamLab Planets
+</a>
+
+</div>
+
+<div class="card fade-up">
+
+<img src="images/food-tour-shinjuku.webp"
+alt="Food tour à Shinjuku"
+style="width:100%;height:220px;object-fit:cover;border-radius:18px;margin-bottom:18px;">
+
+<h3>🍜 Food tour à Shinjuku</h3>
+
+<p>
+Pars avec un guide local à la découverte des ruelles animées de Shinjuku pour goûter ramen, yakitori, izakayas et spécialités japonaises.
+</p>
+
+<a
+href="https://www.viator.com/fr-CH/tours/Tokyo/Shinjuku-Authentic-Food-Experience-in-Tokyo/d334-5507368P3?pid=P00306030&mcid=42383&medium=link"
+target="_blank"
+rel="noopener sponsored">
+Découvrir le food tour →
+</a>
+
+</div>
+
+<div class="card fade-up">
+
+<img src="images/daikoku-pa.webp"
+alt="Daikoku Parking Area"
+style="width:100%;height:220px;object-fit:cover;border-radius:18px;margin-bottom:18px;">
+
+<h3>🏎️ Découvrir la scène automobile japonaise</h3>
+
+<p>
+Rejoins les passionnés de voitures à Daikoku Parking Area et découvre l'univers des sportives japonaises, des préparations JDM et des rencontres automobiles mythiques.
+</p>
+
+<a
+href="https://www.getyourguide.fr/tokyo-l193/daikoku-rejoignez-un-club-automobile-et-decouvrez-la-scene-automobile-japonaise-t792970/?partner_id=F9OV4TP&utm_medium=online_publisher"
+target="_blank"
+rel="noopener sponsored">
+Explorer Daikoku PA →
+</a>
+
+</div>
+
+<div class="card fade-up">
+
+<img src="images/mont-fuji.webp"
+alt="Excursion au mont Fuji"
+style="width:100%;height:220px;object-fit:cover;border-radius:18px;margin-bottom:18px;">
+
+<h3>🏔️ Admirer le mont Fuji</h3>
+
+<p>
+Profite d'une excursion d'une journée vers la pagode Chureito, le lac Kawaguchi et Oshino Hakkai pour découvrir les plus beaux panoramas du mont Fuji.
+</p>
+
+<a
+href="https://www.getyourguide.fr/tokyo-l193/tokyo-mont-fuji-pagode-chureito-lac-kawaguchi-et-oshino-hakkai-t792363/?partner_id=F9OV4TP&utm_medium=online_publisher"
+target="_blank"
+rel="noopener sponsored">
+Réserver l'excursion →
+</a>
+
+</div>
+
+<div class="card fade-up">
+
+<img src="images/couteau-japonais.webp"
+alt="Atelier de fabrication de couteaux japonais"
+style="width:100%;height:220px;object-fit:cover;border-radius:18px;margin-bottom:18px;">
+
+<h3>🔪 Fabriquer son couteau japonais</h3>
+
+<p>
+Initie-toi au savoir-faire des artisans japonais lors d'un atelier où tu affûtes, graves et personnalises ton propre couteau avant de repartir avec.
+</p>
+
+<a
+href="https://www.getyourguide.fr/tokyo-l193/tokyo-atelier-de-fabrication-de-couteaux-affutage-gravure-t986681/?partner_id=F9OV4TP&utm_medium=online_publisher"
+target="_blank"
+rel="noopener sponsored">
+Participer à l'atelier →
+</a>
+
+</div>
+
+</div>
 
 </section>
 
 <!-- MOBILITE -->
 
-<section class="section" id="mobilite">
+<section class="section planning-theme" id="mobilite">
 
 <h2 class="section-title fade-up">
-🚆 Explorer Tokyo facilement
+🚇 Explorer Tokyo facilement
 </h2>
 
 <div class="grid">
 
 <div class="card fade-up">
 
-<h3>🚇 JR Pass & métro</h3>
+<h3>🚇 Pass Métro Tokyo</h3>
 
 <div class="price">
-Mobilité Japon
+24 h • 48 h • 72 h
 </div>
 
 <p>
-Voyage facilement avec les lignes JR,
-Tokyo Metro et les trains japonais.
+Voyage en illimité sur les lignes Tokyo Metro et Toei Subway grâce au pass officiel, idéal pour explorer les principaux quartiers de la capitale japonaise.
 </p>
 
-<a href="https://www.japan-experience.com/" target="_blank">
-Explorer
+<a
+href="https://www.getyourguide.fr/tokyo-l193/ticket-de-metro-de-tokyo-24h48h72h-t394678/?partner_id=F9OV4TP&utm_medium=online_publisher"
+target="_blank"
+rel="noopener sponsored">
+Réserver le pass métro →
 </a>
 
 </div>
@@ -821,11 +1058,14 @@ Connexion partout
 </div>
 
 <p>
-Reste connecté partout dans Tokyo grâce aux eSIM et Pocket WiFi.
+Reste connecté dès ton arrivée grâce à une eSIM et profite d'Internet pour utiliser les cartes, les transports et les applications indispensables.
 </p>
 
-<a href="https://www.airalo.com/" target="_blank">
-Explorer
+<a
+href="https://airalo.pxf.io/c/6037855/2703865/15608"
+target="_blank"
+rel="noopener sponsored">
+Découvrir Airalo →
 </a>
 
 </div>
@@ -835,18 +1075,104 @@ Explorer
 <h3>🚄 Shinkansen</h3>
 
 <div class="price">
-Tokyo ↔ Kyoto
+Voyager au Japon
 </div>
 
 <p>
-Découvre le Japon rapidement grâce aux célèbres trains à grande vitesse.
+Rejoins facilement Kyoto, Osaka, Hiroshima ou d'autres grandes villes grâce au célèbre train à grande vitesse japonais, reconnu pour sa rapidité et sa ponctualité.
 </p>
 
-<a href="https://www.klook.com/" target="_blank">
-Explorer
+<a
+href="https://www.japantravel.navitime.com/en/railpass/"
+target="_blank"
+rel="noopener">
+Préparer son voyage →
 </a>
 
 </div>
+
+</div>
+
+</section>
+
+<!-- OU DORMIR -->
+
+<section class="section planning-theme" id="ou-dormir">
+
+<h2 class="section-title fade-up">
+🏨 Où dormir à Tokyo ?
+</h2>
+
+<div class="grid">
+
+<div class="card fade-up">
+
+<h3>🌆 Shinjuku</h3>
+
+<p>
+Le quartier le plus animé de Tokyo. Idéal pour profiter de la vie nocturne, des restaurants, des transports et rejoindre facilement tous les grands sites de la capitale.
+</p>
+
+</div>
+
+<div class="card fade-up">
+
+<h3>🚶 Shibuya</h3>
+
+<p>
+Parfait pour un premier séjour. Entre le célèbre carrefour, les boutiques, les cafés et les rooftops, Shibuya concentre toute l'énergie de Tokyo.
+</p>
+
+</div>
+
+<div class="card fade-up">
+
+<h3>🏛️ Asakusa</h3>
+
+<p>
+Le meilleur quartier pour découvrir le Tokyo traditionnel avec le temple Sensō-ji, les ruelles historiques et une ambiance plus paisible.
+</p>
+
+</div>
+
+<div class="card fade-up">
+
+<h3>🛍️ Ginza</h3>
+
+<p>
+Le quartier chic de Tokyo. Hôtels haut de gamme, shopping de luxe, restaurants réputés et excellentes connexions en métro.
+</p>
+
+</div>
+
+<div class="card fade-up">
+
+<h3>🌸 Ueno</h3>
+
+<p>
+Un excellent compromis pour les voyageurs souhaitant un quartier plus calme, proche des musées, des parcs et très bien desservi par les transports.
+</p>
+
+</div>
+
+</div>
+
+<p style="
+text-align:center;
+margin-top:30px;
+color:#cbd5e1;
+">
+Compare les hébergements dans les principaux quartiers de Tokyo et trouve celui qui correspond le mieux à ton voyage.
+</p>
+
+<div style="text-align:center;margin-top:15px;">
+
+<a
+href="https://www.tkqlhce.com/click-101766856-12319490?url=https%3A%2F%2Fwww.booking.com%2Fsearchresults.fr.html%3Fss%3Dtokyo%26label%3Dgog235jc-10CAEoggI46AdIDVgDaE2IAQGYATO4ARfIAQ_YAQPoAQH4AQGIAgGoAgG4AvLXs9IGwAIB0gIkZWVlZTBmMTItY2EyMC00YzExLWFmNWQtMmJkZmMyYzQ5Y2Ux2AIB4AIB%26aid%3D397594%26lang%3Dfr%26sb%3D1%26src_elem%3Dsb%26src%3Dindex%26dest_id%3D-246227%26dest_type%3Dcity%26ac_position%3D0%26ac_click_type%3Db%26ac_langcode%3Dfr%26ac_suggestion_list_length%3D5%26search_selected%3Dtrue%26search_pageview_id%3Dd78b5539df760609%26ac_meta%3DGhBkNzhiNTUzOWRmNzYwNjA5IAAoATICZnI6BXRva3lv%26group_adults%3D2%26no_rooms%3D1%26group_children%3D0"
+target="_blank"
+rel="noopener sponsored">
+🏨 Réserver un hôtel à Tokyo →
+</a>
 
 </div>
 
@@ -860,47 +1186,56 @@ Explorer
 🍣 Goûter le vrai Tokyo
 </h2>
 
+<p style="
+text-align:center;
+max-width:850px;
+margin:0 auto 35px;
+color:#cbd5e1;
+line-height:1.8;">
+Des comptoirs à sushi traditionnels aux izakayas animés, en passant par les marchés et les restaurants étoilés, Tokyo est l'une des capitales gastronomiques les plus réputées au monde.
+</p>
+
 <div class="grid">
 
 <div class="card fade-up">
 
-<h3>🍜 Ramen & izakayas</h3>
+<img src="images/sushi-tokyo.webp"
+alt="Comptoir à sushi à Tokyo"
+style="width:100%;height:220px;object-fit:cover;border-radius:18px;margin-bottom:18px;">
+
+<h3>🍣 Sushis & comptoirs traditionnels</h3>
 
 <p>
-Découvre les meilleures adresses locales et la street food japonaise.
+S'installer au comptoir d'un restaurant de sushi permet d'observer le travail des chefs et de déguster des produits d'une fraîcheur exceptionnelle.
 </p>
-
-<a href="https://tabelog.com/en/tokyo/" target="_blank">
-Explorer
-</a>
 
 </div>
 
 <div class="card fade-up">
 
-<h3>⭐ Restaurants populaires</h3>
+<img src="images/izakaya-tokyo.webp"
+alt="Izakaya à Tokyo"
+style="width:100%;height:220px;object-fit:cover;border-radius:18px;margin-bottom:18px;">
+
+<h3>🍺 Les izakayas japonais</h3>
 
 <p>
-Explore les restaurants les mieux notés et les expériences culinaires tokyoïtes.
+Ces petits bars-restaurants sont parfaits pour partager yakitoris, gyozas, karaage et spécialités locales dans une ambiance conviviale après une journée de visite.
 </p>
-
-<a href="https://www.tripadvisor.fr/" target="_blank">
-Explorer
-</a>
 
 </div>
 
 <div class="card fade-up">
 
-<h3>🍱 Food tours Tokyo</h3>
+<img src="images/tsukiji-market.webp"
+alt="Marché de Tsukiji"
+style="width:100%;height:220px;object-fit:cover;border-radius:18px;margin-bottom:18px;">
+
+<h3>🐟 Le marché de Tsukiji</h3>
 
 <p>
-Découvre Tokyo autrement grâce aux visites culinaires japonaises.
+Le quartier de Tsukiji reste une référence pour découvrir les produits de la mer, déguster des sushis au petit matin et explorer l'une des adresses culinaires les plus célèbres du Japon.
 </p>
-
-<a href="https://arigatotravel.com/" target="_blank">
-Explorer
-</a>
 
 </div>
 
@@ -913,64 +1248,101 @@ Explorer
 <section class="section" id="activites">
 
 <h2 class="section-title fade-up">
-✨ Le Tokyo que tu imagines
+✨ Le Tokyo iconique
 </h2>
+
+<p style="
+text-align:center;
+max-width:850px;
+margin:0 auto 35px;
+color:#cbd5e1;
+line-height:1.8;">
+Entre panoramas spectaculaires, temples historiques, quartiers futuristes et expériences uniques, Tokyo offre une incroyable diversité d'activités qui marquent chaque voyage.
+</p>
 
 <div class="grid">
 
 <div class="card fade-up">
 
-<h3>🎟️ TeamLab Planets</h3>
-
-<p>
-Une expérience immersive futuriste parmi les plus populaires du Japon.
-</p>
-
-<a href="https://www.getyourguide.com/" target="_blank">
-Explorer
-</a>
-
-</div>
-
-<div class="card fade-up">
+<img src="images/tokyo-skytree.webp"
+alt="Tokyo Skytree"
+style="width:100%;height:180px;object-fit:cover;border-radius:18px;margin-bottom:18px;">
 
 <h3>🗼 Tokyo Skytree</h3>
 
 <p>
-Admire Tokyo depuis l’une des plus hautes tours du monde.
+Avec ses 634 mètres de hauteur, la Tokyo Skytree offre l'un des plus beaux panoramas sur la capitale japonaise et, par temps clair, jusqu'au mont Fuji.
 </p>
-
-<a href="https://www.getyourguide.com/tokyo-l193/tokyo-skytree-billet-d-entree-t215997/?ranking_uuid=72ef4745-801b-4d32-9b0e-600a1bad6d42" target="_blank">
-Explorer
-</a>
 
 </div>
 
 <div class="card fade-up">
 
-<h3>⛩️ Temples & traditions</h3>
+<img src="images/shibuya-crossing.webp"
+alt="Carrefour de Shibuya"
+style="width:100%;height:180px;object-fit:cover;border-radius:18px;margin-bottom:18px;">
+
+<h3>🚶 Shibuya Crossing</h3>
 
 <p>
-Découvre Asakusa, Meiji Shrine et les lieux historiques japonais.
+Le carrefour le plus célèbre du monde symbolise l'énergie de Tokyo. Des milliers de personnes s'y croisent à chaque changement de feu.
 </p>
-
-<a href="https://www.gotokyo.org/en/" target="_blank">
-Explorer
-</a>
 
 </div>
 
 <div class="card fade-up">
 
-<h3>🏔️ Excursion Mont Fuji</h3>
+<img src="images/sensoji.webp"
+alt="Temple Sensō-ji"
+style="width:100%;height:180px;object-fit:cover;border-radius:18px;margin-bottom:18px;">
+
+<h3>⛩️ Temple Sensō-ji</h3>
 
 <p>
-Pars vers le Mont Fuji et découvre les paysages iconiques du Japon.
+Situé à Asakusa, le Sensō-ji est le plus ancien temple bouddhiste de Tokyo et l'un des lieux les plus emblématiques de la capitale.
 </p>
 
-<a href="https://www.getyourguide.com/" target="_blank">
-Explorer
-</a>
+</div>
+
+<div class="card fade-up">
+
+<img src="images/teamlab-planets.webp"
+alt="TeamLab Planets"
+style="width:100%;height:180px;object-fit:cover;border-radius:18px;margin-bottom:18px;">
+
+<h3>✨ TeamLab Planets</h3>
+
+<p>
+Cette expérience immersive mêlant art numérique, lumière et eau est devenue l'une des attractions les plus populaires du Japon.
+</p>
+
+</div>
+
+<div class="card fade-up">
+
+<img src="images/akihabara.webp"
+alt="Akihabara Tokyo"
+style="width:100%;height:180px;object-fit:cover;border-radius:18px;margin-bottom:18px;">
+
+<h3>🎮 Akihabara</h3>
+
+<p>
+Le paradis des passionnés de mangas, d'anime, de jeux vidéo et de nouvelles technologies avec ses boutiques et ses salles d'arcade emblématiques.
+</p>
+
+</div>
+
+<div class="card fade-up">
+
+<img src="images/meiji-jingu.webp"
+alt="Sanctuaire Meiji-jingū"
+style="width:100%;height:180px;object-fit:cover;border-radius:18px;margin-bottom:18px;">
+
+<h3>🌳 Sanctuaire Meiji-jingū</h3>
+
+<p>
+Entouré d'une vaste forêt en plein cœur de Tokyo, ce sanctuaire shinto offre un contraste saisissant avec l'effervescence de la ville.
+</p>
 
 </div>
 
@@ -980,75 +1352,76 @@ Explorer
 
 <!-- SPORT -->
 
-<section class="section">
+<section class="section" id="sport">
 
 <h2 class="section-title fade-up">
-⚾ Tokyo côté sport & culture
+⚾ Vivre le sport et la culture à Tokyo
 </h2>
+
+<p style="
+text-align:center;
+max-width:850px;
+margin:0 auto 35px;
+color:#cbd5e1;
+line-height:1.8;">
+Au-delà des temples et des gratte-ciel, Tokyo possède une scène sportive et culturelle très forte, entre baseball japonais, sumo, football, arts martiaux, concerts et événements pop culture.
+</p>
 
 <div class="grid">
 
 <div class="card fade-up">
 
-<h3>
-⚾ Baseball japonais
-</h3>
+<img src="images/baseball-tokyo.webp"
+alt="Match de baseball à Tokyo"
+style="width:100%;height:220px;object-fit:cover;border-radius:18px;margin-bottom:18px;">
+
+<h3>⚾ Baseball japonais</h3>
 
 <p>
-Assister à un match de baseball à Tokyo est une expérience incontournable au Japon.
+Assister à un match de baseball à Tokyo est une expérience incontournable pour ressentir l'ambiance des supporters japonais, entre chants, rituels et ferveur populaire.
 </p>
-
-<a href="https://www.stubhub.com/" target="_blank">
-Voir les billets
-</a>
 
 </div>
 
 <div class="card fade-up">
 
-<h3>
-🥋 Tournois de sumo
-</h3>
+<img src="images/sumo-ryogoku.webp"
+alt="Tournoi de sumo à Ryōgoku"
+style="width:100%;height:220px;object-fit:cover;border-radius:18px;margin-bottom:18px;">
+
+<h3>🥋 Sumo à Ryōgoku</h3>
 
 <p>
-Les tournois de sumo de Ryōgoku attirent des visiteurs du monde entier.
+Le quartier de Ryōgoku est le cœur historique du sumo à Tokyo. Tournois, entraînements et traditions permettent de découvrir un sport profondément lié à la culture japonaise.
 </p>
-
-<a href="https://www.getyourguide.com/" target="_blank">
-Explorer
-</a>
 
 </div>
 
 <div class="card fade-up">
 
-<h3>
-⚽ Football japonais
-</h3>
+<img src="images/football-tokyo.webp"
+alt="Football japonais à Tokyo"
+style="width:100%;height:220px;object-fit:cover;border-radius:18px;margin-bottom:18px;">
+
+<h3>⚽ Football japonais</h3>
 
 <p>
-Découvre les matchs de football japonais au cœur de Tokyo.
+Les matchs de J-League offrent une autre facette du sport japonais, avec une ambiance familiale, passionnée et très différente des grands stades européens.
 </p>
-
-<a href="https://www.p1travel.com/" target="_blank">
-Explorer
-</a>
 
 </div>
 
 <div class="card fade-up">
 
-<h3>
-🎮 Gaming & esport
-</h3>
+<img src="images/anime-gaming-tokyo.webp"
+alt="Anime gaming et pop culture à Tokyo"
+style="width:100%;height:220px;object-fit:cover;border-radius:18px;margin-bottom:18px;">
+
+<h3>🎮 Anime, gaming & pop culture</h3>
 
 <p>
-Tokyo est une capitale mondiale du gaming, de l’anime et des événements esport.
+Akihabara, Ikebukuro et les grands événements pop culture font de Tokyo une capitale mondiale du manga, de l'anime, du gaming et de l'esport.
 </p>
-
-<a href="https://www.getyourguide.com/" target="_blank">
-Découvrir
-</a>
 
 </div>
 
@@ -1056,38 +1429,146 @@ Découvrir
 
 </section>
 
-<!-- GUIDE -->
+<!-- ERREURS A EVITER -->
+
+<section class="section warning-theme">
+
+<h2 class="section-title fade-up">
+⚠️ Les erreurs à éviter à Tokyo
+</h2>
+
+<div class="grid">
+
+<div class="card fade-up">
+
+<h3>🚇 Prendre le métro sans préparation</h3>
+
+<p>
+Le réseau de transports de Tokyo est immense. Avant de partir, repère les quartiers que tu souhaites visiter afin d'optimiser tes trajets et d'éviter de passer trop de temps dans les transports.
+</p>
+
+</div>
+
+<div class="card fade-up">
+
+<h3>🗼 Vouloir tout visiter en quelques jours</h3>
+
+<p>
+Tokyo est l'une des plus grandes métropoles du monde. Mieux vaut consacrer une journée à chaque grand quartier plutôt que d'enchaîner les trajets toute la journée.
+</p>
+
+</div>
+
+<div class="card fade-up">
+
+<h3>🎟️ Réserver les activités trop tard</h3>
+
+<p>
+TeamLab Planets, les excursions au mont Fuji ou certaines expériences comme le sumo affichent régulièrement complet. Réserver plusieurs jours à l'avance est vivement conseillé.
+</p>
+
+</div>
+
+<div class="card fade-up">
+
+<h3>💴 Ne pas prévoir un peu d'argent liquide</h3>
+
+<p>
+La carte bancaire est largement acceptée, mais certains petits restaurants, temples, marchés ou distributeurs fonctionnent encore principalement en espèces.
+</p>
+
+</div>
+
+<div class="card fade-up">
+
+<h3>🤫 Oublier les règles de savoir-vivre japonaises</h3>
+
+<p>
+Parler discrètement dans les transports, faire la queue, respecter les lieux et rapporter ses déchets font partie des habitudes locales et contribuent au confort de tous.
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- AVANT DE PARTIR -->
+
+<section class="section planning-theme">
+
+<h2 class="section-title fade-up">
+✈️ Avant de partir à Tokyo
+</h2>
+
+<div class="grid">
+
+<div class="card fade-up">
+<h3>🗣️ Langue</h3>
+<p>
+Le japonais est la langue officielle. L'anglais est présent dans les zones touristiques, les gares et les hôtels, mais quelques mots de japonais sont toujours appréciés.
+</p>
+</div>
+
+<div class="card fade-up">
+<h3>💴 Devise</h3>
+<p>
+La monnaie utilisée est le yen japonais (¥). La carte bancaire est acceptée dans beaucoup d'endroits, mais il reste utile de prévoir un peu d'argent liquide.
+</p>
+</div>
+
+<div class="card fade-up">
+<h3>🔌 Prises électriques</h3>
+<p>
+Le Japon utilise principalement les prises de type A et B avec une tension de 100 V. Un adaptateur est nécessaire pour les voyageurs européens.
+</p>
+</div>
+
+<div class="card fade-up">
+<h3>📅 Durée idéale</h3>
+<p>
+Quatre à cinq jours permettent de découvrir les principaux quartiers de Tokyo. Une semaine est idéale pour explorer plus calmement et prévoir une excursion au mont Fuji.
+</p>
+</div>
+
+<div class="card fade-up">
+<h3>🌸 Meilleure période</h3>
+<p>
+Le printemps, avec les cerisiers en fleurs, et l'automne, avec ses couleurs rouges et dorées, sont les périodes les plus appréciées pour visiter Tokyo.
+</p>
+</div>
+
+<div class="card fade-up">
+<h3>💰 Budget moyen</h3>
+<p>
+Pour un séjour confortable, prévois généralement entre 120 € et 250 € par jour selon l'hébergement, les restaurants, les transports et les activités choisies.
+</p>
+</div>
+
+</div>
+
+</section>
+ 
+<!-- FAQ -->
 
 <section class="info-section">
 
 <div class="info-box fade-up">
 
 <h2>
-Pourquoi Tokyo fascine autant ?
+❓ FAQ Tokyo
 </h2>
-
-<p>
-Tokyo mélange traditions japonaises,
-innovation futuriste et énergie urbaine unique au monde.
-</p>
-
-<p>
-Chaque quartier possède sa propre identité :
-Shibuya pour les néons,
-Akihabara pour le gaming,
-Asakusa pour les traditions et Ginza pour le luxe.
-</p>
 
 <div class="faq">
 
 <div class="faq-item">
 
 <h3>
-🚇 Comment se déplacer à Tokyo ?
+Combien de jours faut-il pour visiter Tokyo ?
 </h3>
 
 <p>
-Le métro Tokyo Metro et la JR Yamanote Line permettent de circuler facilement.
+Quatre à cinq jours permettent de découvrir les principaux quartiers, les temples, les panoramas et les expériences incontournables. Une semaine est idéale pour explorer Tokyo plus tranquillement et prévoir une excursion au mont Fuji ou à Kamakura.
 </p>
 
 </div>
@@ -1095,11 +1576,11 @@ Le métro Tokyo Metro et la JR Yamanote Line permettent de circuler facilement.
 <div class="faq-item">
 
 <h3>
-🍣 Où manger à Tokyo ?
+Quel est le meilleur quartier pour un premier séjour ?
 </h3>
 
 <p>
-Tokyo possède certains des meilleurs restaurants du monde.
+Shinjuku et Shibuya sont les meilleurs choix pour une première visite grâce à leur excellente desserte en transports, leur large choix d'hôtels, de restaurants et leur proximité avec les principaux sites touristiques.
 </p>
 
 </div>
@@ -1107,11 +1588,47 @@ Tokyo possède certains des meilleurs restaurants du monde.
 <div class="faq-item">
 
 <h3>
-🎌 Quelles activités faire à Tokyo ?
+Peut-on visiter Tokyo sans parler japonais ?
 </h3>
 
 <p>
-Shibuya Crossing, TeamLab, temples et Tokyo Skytree sont incontournables.
+Oui. Les panneaux sont généralement traduits en anglais et les principales attractions sont accessibles aux voyageurs internationaux. Quelques mots de japonais restent toutefois appréciés.
+</p>
+
+</div>
+
+<div class="faq-item">
+
+<h3>
+Peut-on bien manger sans se ruiner à Tokyo ?
+</h3>
+
+<p>
+Oui. Tokyo est réputée pour proposer une excellente cuisine à tous les prix. On trouve facilement des ramen, sushis, curry japonais ou donburi de qualité pour moins de 15 €.
+</p>
+
+</div>
+
+<div class="faq-item">
+
+<h3>
+Faut-il réserver certaines activités à l'avance ?
+</h3>
+
+<p>
+Oui. TeamLab Planets, les excursions au mont Fuji, les spectacles de sumo et plusieurs observatoires sont souvent complets, notamment pendant les vacances et la saison des cerisiers.
+</p>
+
+</div>
+
+<div class="faq-item">
+
+<h3>
+Comment se déplacer facilement dans Tokyo ?
+</h3>
+
+<p>
+Le métro Tokyo Metro, les lignes Toei Subway et la JR Yamanote permettent de rejoindre rapidement les principaux quartiers. Une carte Suica, Pasmo ou un pass métro facilite les déplacements.
 </p>
 
 </div>
@@ -1142,11 +1659,11 @@ Tokyo ne dort jamais
 Entre les néons de Shinjuku,
 les trains japonais,
 les rooftops futuristes
-et les quartiers animés,
-Tokyo possède une énergie unique au monde.
+et les temples paisibles,
+Tokyo révèle une énergie unique au monde.
 </p>
 
-<a href="destinations.html">
+<a href="destinations.html" class="map-button">
 Explorer les destinations →
 </a>
 
