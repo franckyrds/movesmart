@@ -107,7 +107,9 @@
   
 <url><loc>https://www.vidolta.com/lyon.html</loc></url> 
   
-<url><loc>https://www.vidolta.com/marseille.html</loc></url> 
+<url><loc>https://www.vidolta.com/marseille.html</loc></url>
+
+<url><loc>https://www.vidolta.com/marseille-map.html</loc></url> 
   
 <url><loc>https://www.vidolta.com/nantes.html</loc></url>
 
@@ -246,5 +248,9 @@
 <url><loc>https://www.vidolta.com/tokyo-en.html</loc></url> 
   
 <url><loc>https://www.vidolta.com/tokyo-map-en.html</loc></url>
+
+<url><loc>https://www.vidolta.com/marseille-en.html</loc></url>
+
+<url><loc>https://www.vidolta.com/marseille-map-en.html</loc></url> 
 
 </urlset>
