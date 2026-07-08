@@ -1,20 +1,57 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
 
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 
-<title>Marseille — Vidolta</title>
+<title>
+Guide de Marseille : Calanques, Vieux-Port, activités et restaurants | Vidolta
+</title>
 
-<meta name="description" content="Découvre Marseille avec Vidolta : mobilité, transports, restaurants, activités et découvertes urbaines.">
+<meta name="description"
+content="Découvre Marseille avec Vidolta : Calanques, Vieux-Port, Notre-Dame de la Garde, restaurants, hôtels, quartiers, activités incontournables et conseils pour préparer ton voyage.">
 
-<meta name="theme-color" content="#0f172a">
+<link rel="canonical"
+href="https://www.vidolta.com/marseille.html">
+
+<meta property="og:title"
+content="Guide de Marseille : Calanques, Vieux-Port, activités et restaurants | Vidolta">
+
+<meta property="og:description"
+content="Découvre Marseille avec Vidolta : Calanques, Vieux-Port, Notre-Dame de la Garde, restaurants, hôtels, quartiers, activités incontournables et conseils pour préparer ton voyage.">
+
+<meta property="og:url"
+content="https://www.vidolta.com/marseille.html">
+
+<meta property="og:image"
+content="https://www.vidolta.com/images/marseille.webp">
+
+<meta property="og:site_name"
+content="Vidolta">
+
+<meta property="og:type"
+content="website">
+
+<meta name="theme-color"
+content="#060b1f">
+
+<link rel="alternate" hreflang="fr"
+href="https://www.vidolta.com/marseille.html">
+
+<link rel="alternate" hreflang="en"
+href="https://www.vidolta.com/marseille-en.html">
+
+<link rel="alternate" hreflang="x-default"
+href="https://www.vidolta.com/marseille.html">
+
+<link rel="icon" href="favicon.ico">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 
 <style>
 
@@ -32,7 +69,7 @@ box-sizing:border-box;
 --muted:#94a3b8;
 }
 
- html{
+html{
 scroll-behavior:smooth;
 scroll-padding-top:80px;
 }
@@ -41,12 +78,11 @@ body{
 font-family:'Poppins',sans-serif;
 
 background:
-radial-gradient(circle at top right,rgba(255,138,61,0.16),transparent 30%),
-radial-gradient(circle at top left,rgba(245,158,11,0.12),transparent 25%),
-linear-gradient(to bottom,#0b1426 0%,#09111f 100%);
+radial-gradient(circle at top right,rgba(255,138,61,0.18),transparent 30%),
+radial-gradient(circle at top left,rgba(14,165,233,0.14),transparent 26%),
+linear-gradient(to bottom,#071225 0%,#050816 100%);
 
 color:var(--text);
-
 overflow-x:hidden;
 }
 
@@ -65,17 +101,12 @@ display:block;
 position:sticky;
 top:0;
 z-index:1000;
-
 padding:10px 16px;
-
 display:flex;
 justify-content:space-between;
 align-items:center;
-
 background:rgba(5,8,22,0.72);
-
 backdrop-filter:blur(18px);
-
 border-bottom:1px solid rgba(255,255,255,0.04);
 }
 
@@ -111,41 +142,32 @@ cursor:pointer;
 .hero{
 position:relative;
 height:72vh;
-
 display:flex;
 align-items:center;
 justify-content:center;
-
 text-align:center;
-
 overflow:hidden;
 }
 
 .hero img{
 position:absolute;
 inset:0;
-
 width:100%;
 height:100%;
-
 object-fit:cover;
-
-filter:brightness(0.78);
+filter:brightness(0.76);
 }
 
 .hero::after{
 content:'';
-
 position:absolute;
 inset:0;
-
 background:
 linear-gradient(
 to bottom,
-rgba(5,8,22,0.12),
-rgba(5,8,22,0.42)
+rgba(5,8,22,0.10),
+rgba(5,8,22,0.48)
 );
-
 z-index:1;
 }
 
@@ -160,13 +182,11 @@ max-width:920px;
 font-size:5.4rem;
 line-height:1.05;
 letter-spacing:-4px;
-
 margin-bottom:22px;
 }
 
 .hero h1 span{
 background:linear-gradient(90deg,#ff8a3d,#fbbf24);
-
 -webkit-background-clip:text;
 -webkit-text-fill-color:transparent;
 }
@@ -190,18 +210,12 @@ color:#cbd5e1;
 .quick-guide{
 display:grid;
 grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-
 gap:20px;
-
 margin-top:-40px;
-
 position:relative;
 z-index:5;
-
 padding:0 20px;
-
 max-width:1200px;
-
 margin-left:auto;
 margin-right:auto;
 }
@@ -210,22 +224,15 @@ margin-right:auto;
 background:
 linear-gradient(
 135deg,
-rgba(24,20,18,0.92),
-rgba(16,14,12,0.88)
+rgba(15,23,42,0.92),
+rgba(12,18,30,0.88)
 );
-
 backdrop-filter:blur(12px);
-
 padding:24px;
-
 border-radius:24px;
-
 border:1px solid rgba(255,255,255,0.05);
-
 box-shadow:0 10px 30px rgba(0,0,0,0.25);
-
 text-align:center;
-
 transition:0.35s;
 }
 
@@ -263,44 +270,33 @@ margin-bottom:34px;
 
 .map-preview{
 position:relative;
-
 display:block;
-
 height:400px;
-
 border-radius:34px;
-
 overflow:hidden;
-
 border:1px solid rgba(255,255,255,0.06);
-
 box-shadow:0 18px 45px rgba(0,0,0,0.32);
 }
 
 .map-preview img{
 width:100%;
 height:100%;
-
 object-fit:cover;
-
 filter:brightness(0.80);
 }
 
 .map-preview-overlay{
 position:absolute;
 inset:0;
-
 padding:42px;
-
 display:flex;
 flex-direction:column;
 justify-content:flex-end;
-
 background:
 linear-gradient(
 to top,
-rgba(0,0,0,0.48),
-rgba(0,0,0,0.18)
+rgba(0,0,0,0.52),
+rgba(0,0,0,0.16)
 );
 }
 
@@ -316,62 +312,32 @@ color:#dbe4f0;
 margin-bottom:24px;
 }
 
-.map-preview-overlay span{
-display:inline-block;
-
-margin-top:10px;
-
-padding:14px 20px;
-
-background:white;
-
-color:#111827;
-
-border-radius:14px;
-
-font-weight:700;
-
-width:fit-content;
-}
-
-.amsterdam-tags{
+.marseille-tags{
 display:flex;
 flex-wrap:wrap;
 gap:12px;
 }
 
-.amsterdam-tags span{
+.marseille-tags span{
 padding:10px 16px;
-
 border-radius:18px;
-
 background:rgba(255,255,255,0.08);
-
 backdrop-filter:blur(18px);
-
 border:1px solid rgba(255,255,255,0.08);
-
 font-size:0.9rem;
-
 color:white;
 }
 
 .map-button{
 display:inline-block;
-
 padding:14px 20px;
-
 background:#ff8a3d;
-
 color:white;
-
 border-radius:14px;
-
 font-weight:700;
-
 width:fit-content;
 }
- 
+
 /* GRID */
 
 .grid{
@@ -742,7 +708,7 @@ font-size:0.95rem;
 line-height:1.7;
 }
 
-.amsterdam-tags span{
+.marseille-tags span{
 font-size:0.8rem;
 padding:9px 14px;
 }
@@ -771,6 +737,7 @@ font-size:2rem;
 }
 
 </style>
+
 </head>
 
 <body>
@@ -779,16 +746,30 @@ font-size:2rem;
 
 <nav class="navbar">
 
-<a href="index.html" class="logo">🌍 Vidolta</a>
+<a href="index.html" class="logo">
+🌍 Vidolta
+</a>
 
-<div class="mobile-btn" onclick="toggleMenu()">☰</div>
+<div class="mobile-btn" onclick="toggleMenu()">
+☰
+</div>
 
 <div class="nav-links">
-<a href="index.html">Accueil</a>
+
+<a href="#experiences">Expériences</a>
+
 <a href="#mobilite">Mobilité</a>
+
+<a href="#ou-dormir">Où dormir</a>
+
 <a href="#restaurants">Restaurants</a>
+
 <a href="#activites">Activités</a>
-<a href="index.html" class="back-link">← Retour</a>
+
+<a href="#sport">Sport</a>
+
+<a href="destinations.html">🌍 Destinations</a>
+
 </div>
 
 </nav>
@@ -797,12 +778,217 @@ font-size:2rem;
 
 <section class="hero">
 
-<img loading="lazy" src="https://i.ibb.co/kg1LzsKQ/Screenshot-20260516-002137-Chrome.webp">
+<img
+loading="lazy"
+src="images/marseille.webp"
+alt="Vue panoramique de Marseille depuis Notre-Dame de la Garde">
 
 <div class="hero-overlay">
-<h1>Marseille</h1>
-<p>Explore Marseille autrement avec Vidolta</p>
-<p class="subtitle">Mobilité • Restaurants • Activités • Découvertes urbaines</p>
+
+<h1>
+Marseille<br>
+<span>Cap sur la cité phocéenne</span>
+</h1>
+
+<p>
+Embarque pour Marseille et laisse-toi porter par l'accent du Sud,
+les eaux turquoise des Calanques, les ruelles colorées du Panier,
+le Vieux-Port animé et l'art de vivre méditerranéen.
+</p>
+
+</div>
+
+</section>
+
+<!-- QUICK GUIDE -->
+
+<section class="quick-guide">
+
+<div class="quick-card fade-up">
+<h3>🏝️ Explorer les Calanques</h3>
+<p>
+Navigue ou randonne entre les falaises calcaires et découvre des criques parmi les plus belles de Méditerranée.
+</p>
+</div>
+
+<div class="quick-card fade-up">
+<h3>⚓ Vivre le Vieux-Port</h3>
+<p>
+Terrasses ensoleillées, marché aux poissons, bateaux et ambiance marseillaise du matin jusqu'au soir.
+</p>
+</div>
+
+<div class="quick-card fade-up">
+<h3>🎨 Flâner dans Le Panier</h3>
+<p>
+Balcons fleuris, street art, petites places et ruelles pleines de charme au cœur du plus vieux quartier de Marseille.
+</p>
+</div>
+
+<div class="quick-card fade-up">
+<h3>🌅 Admirer le coucher du soleil</h3>
+<p>
+Depuis la Corniche Kennedy, les plages du Prado ou Notre-Dame de la Garde, profite d'un panorama exceptionnel sur la Méditerranée.
+</p>
+</div>
+
+</section>
+
+<!-- MAP -->
+
+<section class="section">
+
+<h2 class="section-title fade-up">
+🗺️ Comprendre Marseille rapidement
+</h2>
+
+<div class="map-preview fade-up">
+
+<img
+src="images/marseille-map.webp"
+alt="Carte touristique de Marseille">
+
+<div class="map-preview-overlay">
+
+<h3>
+La carte essentielle de Marseille
+</h3>
+
+<p>
+Repère en un clin d'œil le Vieux-Port, Notre-Dame de la Garde,
+Le Panier, le Mucem, les plages, les Calanques
+et les principaux transports pour explorer la cité phocéenne facilement.
+</p>
+
+<a href="marseille-map.html" class="map-button">
+Explorer la carte →
+</a>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- EXPERIENCES MEMORABLES -->
+
+<section class="section experiences-theme" id="experiences">
+
+<h2 class="section-title fade-up">
+✨ Les expériences qui rendent Marseille inoubliable
+</h2>
+
+<p style="
+text-align:center;
+max-width:850px;
+margin:0 auto 35px;
+color:#cbd5e1;
+line-height:1.8;">
+Marseille ne se résume pas à ses monuments. Elle se vit entre les eaux turquoise des Calanques, les traversées vers les îles du Frioul, les saveurs de la cuisine provençale, les panoramas à couper le souffle et l'ambiance unique qui règne autour de l'Orange Vélodrome. Des expériences qui révèlent toute l'âme de la cité phocéenne.
+</p>
+
+<div class="grid">
+
+<div class="card fade-up">
+
+<img src="images/calanques-bateau.webp"
+alt="Excursion en bateau dans les Calanques de Marseille"
+style="width:100%;height:220px;object-fit:cover;border-radius:18px;margin-bottom:18px;">
+
+<h3>🛥️ Explorer les Calanques en bateau</h3>
+
+<p>
+Embarque pour une croisière au cœur du Parc national des Calanques et découvre des falaises spectaculaires, des criques aux eaux cristallines et des paysages accessibles uniquement par la mer. Une baignade dans ce décor exceptionnel restera sans doute le plus beau souvenir de ton séjour.
+</p>
+
+<a href="https://www.getyourguide.fr/marseille-l292/au-depart-de-marseille-tour-des-calanques-en-bateau-avec-baignade-t747138/?partner_id=F9OV4TP&utm_medium=online_publisher"
+target="_blank"
+rel="noopener sponsored">
+🛥️ Réserver la croisière →
+</a>
+
+</div>
+
+<div class="card fade-up">
+
+<img src="images/chateau-if.webp"
+alt="Château d'If et îles du Frioul"
+style="width:100%;height:220px;object-fit:cover;border-radius:18px;margin-bottom:18px;">
+
+<h3>🏝️ Cap sur le Château d'If et le Frioul</h3>
+
+<p>
+Navigue jusqu'au mythique Château d'If, immortalisé par Le Comte de Monte-Cristo, puis découvre les îles du Frioul et leurs criques sauvages. Entre histoire, patrimoine et paysages méditerranéens, cette escapade est l'une des plus belles au départ du Vieux-Port.
+</p>
+
+<a href="https://www.getyourguide.fr/marseille-l292/marseille-cap-sur-le-chateau-d-if-et-les-iles-du-frioul-t943114/?partner_id=F9OV4TP&utm_medium=online_publisher"
+target="_blank"
+rel="noopener sponsored">
+🏝️ Réserver l'excursion →
+</a>
+
+</div>
+
+<div class="card fade-up">
+
+<img src="images/food-tour-marseille.webp"
+alt="Food Tour à Marseille"
+style="width:100%;height:220px;object-fit:cover;border-radius:18px;margin-bottom:18px;">
+
+<h3>🥘 Goûter aux saveurs marseillaises</h3>
+
+<p>
+Découvre Marseille à travers sa gastronomie lors d'un food tour gourmand. Des spécialités provençales aux meilleures adresses locales, chaque dégustation raconte l'histoire d'une ville où la Méditerranée se retrouve dans toutes les assiettes.
+</p>
+
+<a href="https://www.viator.com/fr-CH/tours/Marseille/Marseille-Food-Tour-Do-Eat-Better-Experience/d485-188552P3?pid=P00306030&mcid=42383&medium=link"
+target="_blank"
+rel="noopener sponsored">
+🥘 Réserver le food tour →
+</a>
+
+</div>
+
+<div class="card fade-up">
+
+<img src="images/randonnee-calanques.webp"
+alt="Randonnée dans le Parc national des Calanques"
+style="width:100%;height:220px;object-fit:cover;border-radius:18px;margin-bottom:18px;">
+
+<h3>🥾 Randonner dans les Calanques</h3>
+
+<p>
+Parcours les sentiers du Parc national des Calanques et profite de panoramas spectaculaires sur les falaises blanches, la Méditerranée et les criques sauvages. Une immersion idéale pour découvrir le visage le plus naturel de Marseille.
+</p>
+
+<a href="https://www.getyourguide.fr/marseille-l292/au-depart-de-marseille-randonnee-guidee-dans-le-parc-national-des-calanques-t434521/?partner_id=F9OV4TP&utm_medium=online_publisher"
+target="_blank"
+rel="noopener sponsored">
+🥾 Réserver la randonnée →
+</a>
+
+</div>
+
+<div class="card fade-up">
+
+<img src="images/velodrome.webp"
+alt="Orange Vélodrome à Marseille"
+style="width:100%;height:220px;object-fit:cover;border-radius:18px;margin-bottom:18px;">
+
+<h3>⚽ Découvrir les coulisses du Vélodrome</h3>
+
+<p>
+Entre dans l'un des stades les plus emblématiques d'Europe et découvre les vestiaires, le tunnel des joueurs et les coulisses de l'Olympique de Marseille. Une visite incontournable pour tous les passionnés de football.
+</p>
+
+<a href="https://www.getyourguide.fr/marseille-l292/marseille-visite-du-stade-de-l-om-a-l-orange-velodrome-t608161/?partner_id=F9OV4TP&utm_medium=online_publisher"
+target="_blank"
+rel="noopener sponsored">
+⚽ Réserver la visite →
+</a>
+
+</div>
+
 </div>
 
 </section>
@@ -811,114 +997,935 @@ font-size:2rem;
 
 <section class="section" id="mobilite">
 
-<h2 class="section-title fade-up">🚇 Mobilité à Marseille</h2>
+<h2 class="section-title fade-up">
+🚇 Explorer Marseille facilement
+</h2>
+
+<p style="
+text-align:center;
+max-width:850px;
+margin:0 auto 35px;
+color:#cbd5e1;
+line-height:1.8;">
+Marseille se découvre entre métro, tramway, bus, marche et navettes maritimes. Pour profiter pleinement de la cité phocéenne, le plus simple est souvent de combiner transports en commun, balades à pied autour du Vieux-Port et excursions en bateau vers les îles ou les Calanques.
+</p>
 
 <div class="grid">
 
 <div class="card fade-up">
-<h3>🚇 RTM Marseille</h3>
-<div class="price">≈ 1,90€ / ticket</div>
-<p>Métro, tramway et bus dans toute la ville de Marseille.</p>
-<a href="https://www.rtm.fr/" target="_blank">RTM</a>
+
+<h3>🚇 Réseau RTM</h3>
+
+<div class="price">
+Métro, tramway, bus et navettes
+</div>
+
+<p>
+Le réseau RTM permet de rejoindre facilement les principaux quartiers de Marseille : Vieux-Port, Castellane, Joliette, Prado, Cinq-Avenues ou encore les plages. Le métro est pratique pour traverser la ville rapidement, tandis que le tramway dessert bien le centre et les zones touristiques.
+</p>
+
+<a href="https://www.rtm.fr/tarifs/pass-24h-72h-7j"
+target="_blank"
+rel="noopener">
+Voir les pass RTM →
+</a>
+
 </div>
 
 <div class="card fade-up">
-<h3>🚲 levélo Marseille</h3>
-<div class="price">≈ 3 à 5€ / h</div>
-<p>Explore Marseille avec les vélos électriques et mobilités douces.</p>
-<a href="https://www.rtm.fr/levelo" target="_blank">Explorer</a>
+
+<h3>⛴️ Navettes maritimes</h3>
+
+<div class="price">
+Marseille depuis la mer
+</div>
+
+<p>
+En saison, les navettes maritimes permettent de rejoindre des secteurs comme l'Estaque, la Pointe Rouge ou les Goudes. Une façon agréable d'éviter la circulation tout en profitant d'un superbe point de vue sur la rade de Marseille.
+</p>
+
+<a href="https://www.rtm.fr/mobilites/navettes-maritimes"
+target="_blank"
+rel="noopener">
+Voir les navettes maritimes →
+</a>
+
 </div>
 
 <div class="card fade-up">
-<h3>🚕 Taxi & VTC</h3>
-<div class="price">≈ 22€ / 15 km</div>
-<p>Réserve rapidement un taxi ou VTC à Marseille.</p>
-<a href="https://www.uber.com/" target="_blank">Uber</a>
+
+<h3>🚶 Vieux-Port & Le Panier à pied</h3>
+
+<div class="price">
+Le meilleur pour ressentir la ville
+</div>
+
+<p>
+Autour du Vieux-Port, du Panier, de la Major, de la Joliette et du Mucem, la marche reste le meilleur moyen de découvrir Marseille. Les ruelles, les façades colorées, les escaliers et les petites places révèlent toute l'ambiance de la ville.
+</p>
+
+<p style="margin-top:12px;font-size:0.95rem;color:#94a3b8;">
+📍 Vieux-Port • Le Panier • Mucem • La Major • Joliette
+</p>
+
 </div>
 
 <div class="card fade-up">
-<h3>🚗 Location voiture</h3>
-<div class="price">≈ 55€ / jour</div>
-<p>Location et autopartage disponibles dans toute la ville.</p>
-<a href="https://citiz.coop/" target="_blank">Citiz</a>
+
+<h3>✈️ Transfert aéroport privé</h3>
+
+<div class="price">
+Marseille Provence → Centre-ville
 </div>
 
-<div class="card fade-up">
-<h3>🚆 Train SNCF</h3>
-<div class="price">≈ 70€ Marseille → Paris</div>
-<p>Voyage facilement partout en France.</p>
-<a href="https://www.sncf-connect.com/" target="_blank">SNCF</a>
+<p>
+Rejoins facilement le Vieux-Port, la gare Saint-Charles ou ton hôtel grâce à un transfert privé depuis l'aéroport Marseille Provence. Une solution confortable, idéale après un vol, avec des bagages ou pour un départ sans stress.
+</p>
+
+<a href="https://www.getyourguide.fr/marseille-l292/aeroport-marseille-marignane-transfert-marseille-centre-t624417/?partner_id=F9OV4TP&utm_medium=online_publisher"
+target="_blank"
+rel="noopener sponsored">
+Réserver le transfert →
+</a>
+
 </div>
 
 </div>
+
 </section>
 
+<!-- OU DORMIR -->
+
+<section class="section" id="ou-dormir">
+
+<h2 class="section-title fade-up">
+🏨 Où dormir à Marseille ?
+</h2>
+
+<div class="grid">
+
+<div class="card fade-up">
+
+<h3>⚓ Vieux-Port</h3>
+
+<p>
+Le cœur de Marseille. Entre les terrasses animées, les départs vers les Calanques, les restaurants de poissons et les quais historiques, c'est le meilleur choix pour découvrir la ville à pied.
+</p>
+
+</div>
+
+<div class="card fade-up">
+
+<h3>🎨 Le Panier</h3>
+
+<p>
+Le plus ancien quartier de Marseille séduit avec ses ruelles colorées, ses places pleines de charme, ses ateliers d'artistes et son ambiance typiquement méditerranéenne. Idéal pour un séjour authentique.
+</p>
+
+</div>
+
+<div class="card fade-up">
+
+<h3>🌊 Prado</h3>
+
+<p>
+À deux pas des plages, du parc Borély et de la Corniche Kennedy, le Prado est parfait pour profiter de la Méditerranée, se détendre et pratiquer des activités nautiques.
+</p>
+
+</div>
+
+<div class="card fade-up">
+
+<h3>🏛️ Joliette & Euroméditerranée</h3>
+
+<p>
+Un quartier moderne où se mêlent architecture contemporaine, centres commerciaux, le Mucem, la Cathédrale de la Major et les Terrasses du Port. Une excellente option pour un city break confortable.
+</p>
+
+</div>
+
+<div class="card fade-up">
+
+<h3>⚽ Castellane</h3>
+
+<p>
+Très bien desservi par le métro, Castellane permet de rejoindre facilement le Vieux-Port, les plages et l'Orange Vélodrome. Un quartier vivant apprécié pour son excellent rapport qualité-prix.
+</p>
+
+</div>
+
+<div class="card fade-up">
+
+<h3>🌅 Corniche Kennedy</h3>
+
+<p>
+Pour un séjour face à la mer, difficile de faire mieux. Entre hôtels avec vue sur la Méditerranée, couchers de soleil spectaculaires et accès rapide aux plages, la Corniche offre l'un des plus beaux panoramas de Marseille.
+</p>
+
+</div>
+
+</div>
+
+<p style="
+text-align:center;
+max-width:900px;
+margin:35px auto 0;
+color:#cbd5e1;
+line-height:1.8;
+">
+Du charme historique du Panier aux hôtels avec vue sur la Méditerranée, en passant par l'animation du Vieux-Port ou les plages du Prado, chaque quartier offre une manière différente de découvrir Marseille selon ton budget et tes envies.
+</p>
+
+<div style="text-align:center;margin-top:28px;">
+
+<a
+href="https://www.kqzyfj.com/click-101766856-11795695?url=https%3A%2F%2Fwww.booking.com%2Findex.fr.html%3Faid%3D2311236%3Blabel%3Dfr-fr-booking-desktop-DCpBIW3k2*WIo8XuzMdB9AS652796013276%3Apl%3Ata%3Ap1%3Ap2%3Aac%3Aap%3Aneg%3Afi%3Atikwd-65526620%3Alp9196066%3Ali%3Adec%3Adm%3Bws%3D%26gad_source%3D1%26gad_campaignid%3D19637862690%26gclid%3DCjwKCAjw6rfSBhAqEiwA_yocpgfvmhZYj_TbhWM2CO1cZ2YL2OAhRH197wVXM0LFX0YwkAIKrEzphxoCcXgQAvD_BwE"
+target="_blank"
+rel="noopener sponsored"
+style="
+display:inline-block;
+padding:16px 34px;
+border-radius:16px;
+background:linear-gradient(135deg,#2563eb,#1d4ed8);
+color:#fff;
+font-size:1rem;
+font-weight:700;
+text-decoration:none;
+box-shadow:0 12px 32px rgba(37,99,235,.35);
+transition:all .3s ease;
+">
+🏨 Voir les hébergements à Marseille
+</a>
+
+</div>
+
+</section>
 <!-- RESTAURANTS -->
 
 <section class="section" id="restaurants">
 
-<h2 class="section-title fade-up">🍽️ Restaurants à Marseille</h2>
+<h2 class="section-title fade-up">
+🍽️ Savourer Marseille
+</h2>
+
+<p style="
+text-align:center;
+max-width:850px;
+margin:0 auto 35px;
+color:#cbd5e1;
+line-height:1.8;">
+Marseille se découvre aussi dans l'assiette. Entre poissons fraîchement pêchés, terrasses face à la Méditerranée, cuisine provençale et adresses gourmandes, chaque repas devient une véritable expérience de voyage.
+</p>
 
 <div class="grid">
 
 <div class="card fade-up">
-<h3>⭐ TripAdvisor</h3>
-<p>Découvre les restaurants les mieux notés de Marseille.</p>
-<a href="https://www.tripadvisor.fr/" target="_blank">Explorer</a>
+
+<img src="images/bouillabaisse.webp"
+alt="Bouillabaisse traditionnelle à Marseille"
+style="width:100%;height:220px;object-fit:cover;border-radius:18px;margin-bottom:18px;">
+
+<h3>🥘 Goûter la véritable bouillabaisse marseillaise</h3>
+
+<p>
+Préparée avec plusieurs poissons de Méditerranée, accompagnée de croûtons, de rouille et d'un bouillon parfumé, la bouillabaisse est bien plus qu'un plat : c'est une véritable institution marseillaise à savourer au moins une fois pendant ton séjour.
+</p>
+
 </div>
 
 <div class="card fade-up">
-<h3>🍴 TheFork</h3>
-<p>Réserve rapidement les meilleures tables marseillaises.</p>
-<a href="https://www.thefork.fr/" target="_blank">Explorer</a>
+
+<img src="images/vieux-port-restaurant.webp"
+alt="Restaurants du Vieux-Port de Marseille"
+style="width:100%;height:220px;object-fit:cover;border-radius:18px;margin-bottom:18px;">
+
+<h3>⚓ Déjeuner face aux bateaux du Vieux-Port</h3>
+
+<p>
+Installe-toi en terrasse face aux voiliers et aux bateaux de pêche pour déguster poissons grillés, fruits de mer et spécialités provençales dans l'une des plus belles cartes postales de Marseille.
+</p>
+
 </div>
 
 <div class="card fade-up">
-<h3>🐟 Cuisine méditerranéenne</h3>
-<p>Explore les meilleures adresses et spécialités locales.</p>
-<a href="https://maps.google.com/" target="_blank">Explorer</a>
+
+<img src="images/noailles.webp"
+alt="Quartier de Noailles à Marseille"
+style="width:100%;height:220px;object-fit:cover;border-radius:18px;margin-bottom:18px;">
+
+<h3>🌍 Voyager dans les saveurs de Noailles</h3>
+
+<p>
+Épices, pâtisseries orientales, cuisine libanaise, comorienne ou maghrébine… Le quartier de Noailles reflète toute la richesse culturelle de Marseille et invite à un véritable voyage culinaire.
+</p>
+
+</div>
+
+<div class="card fade-up">
+
+<img src="images/catamaran-sunset.webp"
+alt="Dîner en catamaran au coucher du soleil à Marseille"
+style="width:100%;height:220px;object-fit:cover;border-radius:18px;margin-bottom:18px;">
+
+<h3>⛵ Dîner en catamaran au coucher du soleil</h3>
+
+<p>
+Installe-toi à bord d'un catamaran, un verre à la main, pendant que le soleil embrase les falaises du Frioul. Entre buffet, baignade et panorama sur Marseille, cette soirée fait partie des souvenirs qui restent longtemps après le voyage.
+</p>
+
+<a href="https://www.getyourguide.fr/marseille-l292/marseille-la-soiree-sunset-diner-en-maxi-catamaran-archipel-du-frioul-t947220/?partner_id=F9OV4TP&utm_medium=online_publisher"
+target="_blank"
+rel="noopener sponsored">
+⛵ Réserver la soirée →
+</a>
+
+</div>
+
+<div class="card fade-up">
+
+<img src="images/food-tour-marseille.webp"
+alt="Food Tour à Marseille"
+style="width:100%;height:220px;object-fit:cover;border-radius:18px;margin-bottom:18px;">
+
+<h3>🍽️ Explorer Marseille avec un guide gourmand</h3>
+
+<p>
+Pars à la rencontre des artisans, marchés et spécialités locales lors d'un food tour convivial. Une excellente façon de découvrir la cité phocéenne à travers ses saveurs et les histoires de ceux qui la font vivre.
+</p>
+
+<a href="https://www.viator.com/fr-CH/tours/Marseille/Marseille-Food-Tour-Do-Eat-Better-Experience/d485-188552P3?pid=P00306030&mcid=42383&medium=link"
+target="_blank"
+rel="noopener sponsored">
+🍽️ Réserver le food tour →
+</a>
+
 </div>
 
 </div>
+
 </section>
 
 <!-- ACTIVITES -->
 
 <section class="section" id="activites">
 
-<h2 class="section-title fade-up">🎭 Découvrir Marseille</h2>
+<h2 class="section-title fade-up">
+⭐ Les incontournables de Marseille
+</h2>
+
+<p style="
+text-align:center;
+max-width:850px;
+margin:0 auto 35px;
+color:#cbd5e1;
+line-height:1.8;">
+Entre monuments historiques, musées emblématiques et lieux chargés d'histoire, Marseille dévoile plus de 2 600 ans de patrimoine. Ces visites incontournables permettent de mieux comprendre l'identité unique de la plus ancienne ville de France.
+</p>
 
 <div class="grid">
 
 <div class="card fade-up">
-<h3>🎟️ Fnac Spectacles</h3>
-<p>Concerts, événements et spectacles à Marseille.</p>
-<a href="https://www.fnacspectacles.com/" target="_blank">Explorer</a>
+
+<img src="images/marseille-citypass.webp"
+alt="Marseille CityPass"
+style="width:100%;height:180px;object-fit:cover;border-radius:18px;margin-bottom:18px;">
+
+<h3>🎫 Marseille CityPass</h3>
+
+<p>
+Le Marseille CityPass est la solution idéale pour visiter la ville tout en faisant des économies. Il inclut les transports en commun, le Mucem, le Château d'If, le train touristique, le bus panoramique, des visites guidées ainsi qu'un choix entre les îles du Frioul ou la Grotte Cosquer selon la formule choisie.
+</p>
+
+<a href="https://www.getyourguide.fr/marseille-l292/marseille-citypass-de-24-48-ou-72-heures-avec-transports-publics-t4159/?partner_id=F9OV4TP&utm_medium=online_publisher"
+target="_blank"
+rel="noopener sponsored">
+🎫 Découvrir le CityPass →
+</a>
+
 </div>
 
 <div class="card fade-up">
-<h3>🧭 Office du tourisme</h3>
-<p>Explore les lieux emblématiques et quartiers incontournables.</p>
-<a href="https://www.marseille-tourisme.com/" target="_blank">Explorer</a>
+
+<img src="images/notre-dame-garde.webp"
+alt="Basilique Notre-Dame de la Garde"
+style="width:100%;height:180px;object-fit:cover;border-radius:18px;margin-bottom:18px;">
+
+<h3>⛪ Notre-Dame de la Garde</h3>
+
+<p>
+Surnommée « la Bonne Mère », la basilique domine Marseille depuis son promontoire et offre un panorama spectaculaire sur le Vieux-Port, les îles du Frioul et la Méditerranée. Un passage incontournable lors d'un séjour dans la cité phocéenne.
+</p>
+
 </div>
 
 <div class="card fade-up">
-<h3>🏛️ Détours en France</h3>
-<p>Explore le patrimoine et les régions françaises.</p>
-<a href="https://www.detoursenfrance.fr/patrimoine/destinations/regions" target="_blank">Explorer</a>
+
+<img src="images/chateau-if.webp"
+alt="Château d'If"
+style="width:100%;height:180px;object-fit:cover;border-radius:18px;margin-bottom:18px;">
+
+<h3>🏰 Château d'If</h3>
+
+<p>
+Rendu célèbre par Le Comte de Monte-Cristo d'Alexandre Dumas, le Château d'If se visite après une courte traversée en bateau depuis le Vieux-Port. Une découverte fascinante entre histoire, patrimoine et vues exceptionnelles sur Marseille.
+</p>
+
+<a href="https://www.getyourguide.fr/marseille-l292/chateau-d-if-billet-d-entree-et-visite-audio-guidee-de-marseille-t1316140/?partner_id=F9OV4TP&utm_medium=online_publisher"
+target="_blank"
+rel="noopener sponsored">
+🏰 Réserver la visite →
+</a>
+
+</div>
+
+<div class="card fade-up">
+
+<img src="images/grotte-cosquer.webp"
+alt="Grotte Cosquer Méditerranée"
+style="width:100%;height:180px;object-fit:cover;border-radius:18px;margin-bottom:18px;">
+
+<h3>🪸 Grotte Cosquer</h3>
+
+<p>
+Découvre la reconstitution spectaculaire de la célèbre grotte préhistorique engloutie sous la Méditerranée. Grâce à un parcours immersif unique, remonte plus de 30 000 ans dans le passé et admire les peintures rupestres aujourd'hui inaccessibles au public.
+</p>
+
+<a href="https://grotte-cosquer.tickeasy.com/fr-FR/produits"
+target="_blank"
+rel="noopener">
+🪸 Réserver la visite →
+</a>
+
+</div>
+
+<div class="card fade-up">
+
+<img src="images/velodrome.webp"
+alt="Orange Vélodrome Marseille"
+style="width:100%;height:180px;object-fit:cover;border-radius:18px;margin-bottom:18px;">
+
+<h3>⚽ Orange Vélodrome</h3>
+
+<p>
+Découvre les coulisses de l'un des stades les plus mythiques d'Europe. Vestiaires, tunnel des joueurs, bord de pelouse et histoire de l'Olympique de Marseille plongent les visiteurs dans l'univers du club le plus populaire de France.
+</p>
+
+<a href="https://www.getyourguide.fr/marseille-l292/marseille-visite-du-stade-de-l-om-a-l-orange-velodrome-t608161/?partner_id=F9OV4TP&utm_medium=online_publisher"
+target="_blank"
+rel="noopener sponsored">
+⚽ Réserver la visite →
+</a>
+
 </div>
 
 </div>
+
 </section>
 
-<!-- CTA -->
+<!-- SPORT -->
+
+<section class="section" id="sport">
+
+<h2 class="section-title fade-up">
+⚽ Vivre le sport à Marseille
+</h2>
+
+<p style="
+text-align:center;
+max-width:850px;
+margin:0 auto 35px;
+color:#cbd5e1;
+line-height:1.8;">
+À Marseille, le sport se vit avec passion. Entre l'OM, l'Orange Vélodrome, les plages, la mer, les Calanques et les grands événements populaires, la cité phocéenne transforme chaque moment sportif en expérience intense.
+</p>
+
+<div class="map-preview fade-up" style="margin-bottom:35px;">
+
+<img
+src="images/sport-marseille.webp"
+alt="Sport à Marseille">
+
+<div class="map-preview-overlay">
+
+<h3>
+Une ville qui vit au rythme de l'OM et de la Méditerranée
+</h3>
+
+<p>
+Du Vélodrome aux sentiers des Calanques, Marseille mêle ferveur footballistique, culture outdoor et énergie méditerranéenne.
+</p>
+
+</div>
+
+</div>
+
+<div class="grid">
+
+<div class="card fade-up">
+
+<h3>⚽ Match de l'OM</h3>
+
+<p>
+Assister à un match de l'Olympique de Marseille, c'est vivre l'une des ambiances les plus intenses du football français. Chants, tifos, ferveur populaire et stade en fusion font du Vélodrome une expérience marquante, même pour les voyageurs qui ne suivent pas le football.
+</p>
+
+<a href="https://billetterie.om.fr/fr/"
+target="_blank"
+rel="noopener">
+Voir la billetterie OM →
+</a>
+
+</div>
+
+<div class="card fade-up">
+
+<h3>🏟️ Visite de l'Orange Vélodrome</h3>
+
+<p>
+En dehors des soirs de match, découvre les coulisses du stade : vestiaires, tunnel des joueurs, bord de pelouse et histoire de l'OM. Une visite incontournable pour comprendre la place du football dans l'identité marseillaise.
+</p>
+
+<a href="https://www.getyourguide.fr/marseille-l292/marseille-visite-du-stade-de-l-om-a-l-orange-velodrome-t608161/?partner_id=F9OV4TP&utm_medium=online_publisher"
+target="_blank"
+rel="noopener sponsored">
+Visiter le Vélodrome →
+</a>
+
+</div>
+
+<div class="card fade-up">
+
+<h3>🥾 Randonnée dans les Calanques</h3>
+
+<p>
+Les Calanques offrent l'un des plus beaux terrains de randonnée de France. Entre falaises blanches, sentiers escarpés et vues plongeantes sur la Méditerranée, marcher ici devient une véritable aventure.
+</p>
+
+<a href="https://www.getyourguide.fr/marseille-l292/au-depart-de-marseille-randonnee-guidee-dans-le-parc-national-des-calanques-t434521/?partner_id=F9OV4TP&utm_medium=online_publisher"
+target="_blank"
+rel="noopener sponsored">
+Réserver la randonnée →
+</a>
+
+</div>
+
+<div class="card fade-up">
+
+<h3>🌊 Sports nautiques</h3>
+
+<p>
+Kayak, paddle, snorkeling, voile ou baignade : Marseille est une ville tournée vers la mer. Des plages du Prado aux criques de la Côte Bleue, la Méditerranée devient un immense terrain de jeu.
+</p>
+
+</div>
+
+<div class="card fade-up">
+
+<h3>🏃 Marseille-Cassis</h3>
+
+<p>
+Chaque automne, la course Marseille-Cassis rassemble des milliers de coureurs sur un parcours mythique de 20 km entre le stade Orange Vélodrome, le col de la Gineste, le Parc national des Calanques et la baie de Cassis. Un événement sportif emblématique du Sud.
+</p>
+
+<a href="https://www.marseille-cassis.com/"
+target="_blank"
+rel="noopener">
+Découvrir la course →
+</a>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- AUTOUR DE MARSEILLE -->
+
+<section class="section" id="autour">
+
+<h2 class="section-title fade-up">
+🌍 À découvrir autour de Marseille
+</h2>
+
+<p style="
+text-align:center;
+max-width:850px;
+margin:0 auto 35px;
+color:#cbd5e1;
+line-height:1.8;">
+Entre villages provençaux, vignobles réputés, calanques spectaculaires et espaces naturels préservés, les environs de Marseille offrent de magnifiques excursions à la journée pour découvrir toute la richesse de la Provence.
+</p>
+
+<div class="map-preview fade-up" style="margin-bottom:35px;">
+
+<img
+src="images/marseille-around.webp"
+alt="Excursions autour de Marseille">
+
+<div class="map-preview-overlay">
+
+<h3>
+Entre Méditerranée, Provence et nature sauvage
+</h3>
+
+<p>
+De Cassis aux vignobles de Bandol en passant par la Camargue, Marseille constitue un excellent point de départ pour explorer quelques-uns des plus beaux paysages du sud de la France.
+</p>
+
+</div>
+
+</div>
+
+<div class="grid">
+
+<div class="card fade-up">
+
+<h3>🌊 Cassis</h3>
+
+<p>
+Avec son port pittoresque, ses falaises de Cap Canaille et ses eaux turquoise, Cassis est l'une des plus belles escapades à réaliser depuis Marseille. Cette excursion permet également de découvrir les ruelles élégantes d'Aix-en-Provence au cours de la même journée.
+</p>
+
+<a
+href="https://www.getyourguide.fr/marseille-l292/depuis-marseille-visite-d-une-journee-de-cassis-et-aix-en-provence-t31298/?partner_id=F9OV4TP&utm_medium=online_publisher"
+target="_blank"
+rel="noopener sponsored">
+Réserver l'excursion →
+</a>
+
+</div>
+
+<div class="card fade-up">
+
+<h3>🌸 Aix-en-Provence</h3>
+
+<p>
+Ancienne capitale de la Provence, Aix-en-Provence séduit par ses places ombragées, ses fontaines, ses marchés et son atmosphère raffinée. Une destination idéale pour flâner entre patrimoine, gastronomie et art de vivre provençal.
+</p>
+
+<a
+href="https://www.getyourguide.fr/marseille-l292/depuis-marseille-visite-d-une-journee-de-cassis-et-aix-en-provence-t31298/?partner_id=F9OV4TP&utm_medium=online_publisher"
+target="_blank"
+rel="noopener sponsored">
+Découvrir Aix-en-Provence →
+</a>
+
+</div>
+
+<div class="card fade-up">
+
+<h3>🚤 Les Calanques en bateau</h3>
+
+<p>
+Admire les falaises calcaires, les criques secrètes et les eaux cristallines du Parc national des Calanques lors d'une excursion en bateau. Une expérience incontournable pour profiter pleinement du littoral méditerranéen.
+</p>
+
+<a
+href="https://www.getyourguide.fr/marseille-l292/au-depart-de-marseille-tour-des-calanques-en-bateau-avec-baignade-t747138/?partner_id=F9OV4TP&utm_medium=online_publisher"
+target="_blank"
+rel="noopener sponsored">
+Réserver la croisière →
+</a>
+
+</div>
+
+<div class="card fade-up">
+
+<h3>🍷 Bandol et les vignobles</h3>
+
+<p>
+Pars à la découverte des célèbres vignobles de Bandol et de Cassis, rencontre des producteurs passionnés et déguste quelques-uns des meilleurs vins de Provence dans un cadre exceptionnel entre collines et Méditerranée.
+</p>
+
+<a
+href="https://www.getyourguide.fr/marseille-l292/depuis-marseille-visite-oenologique-bandol-et-cassis-t165929/?partner_id=F9OV4TP&utm_medium=online_publisher"
+target="_blank"
+rel="noopener sponsored">
+Réserver la dégustation →
+</a>
+
+</div>
+
+<div class="card fade-up">
+
+<h3>🦩 La Camargue</h3>
+
+<p>
+Entre flamants roses, chevaux blancs, marais salants et paysages sauvages, la Camargue dévoile un visage unique de la Provence. Un safari en 4x4 permet d'approcher cette nature préservée et sa faune emblématique.
+</p>
+
+<a
+href="https://www.getyourguide.fr/arles-l155/au-depart-d-arles-demi-journee-de-safari-en-camargue-en-4x4-prive-t221223/?partner_id=F9OV4TP&utm_medium=online_publisher"
+target="_blank"
+rel="noopener sponsored">
+Découvrir la Camargue →
+</a>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- AVANT DE PARTIR -->
+
+<section class="section planning-theme">
+
+<h2 class="section-title fade-up">
+✈️ Avant de partir à Marseille
+</h2>
+
+<div class="grid">
+
+<div class="card fade-up">
+
+<h3>🗣️ Langue</h3>
+
+<p>
+Le français est la langue officielle. Dans les quartiers touristiques, de nombreux professionnels parlent également anglais, notamment dans les hôtels, restaurants et lieux de visite.
+</p>
+
+</div>
+
+<div class="card fade-up">
+
+<h3>💶 Devise</h3>
+
+<p>
+La monnaie utilisée est l'euro (€). Les paiements par carte bancaire sont acceptés presque partout, mais quelques marchés et petits commerces privilégient encore les espèces.
+</p>
+
+</div>
+
+<div class="card fade-up">
+
+<h3>🔌 Prises électriques</h3>
+
+<p>
+La France utilise les prises de type C et E avec une tension de 230 V. Aucun adaptateur n'est nécessaire pour la plupart des voyageurs européens.
+</p>
+
+</div>
+
+<div class="card fade-up">
+
+<h3>📅 Durée idéale</h3>
+
+<p>
+Trois à quatre jours permettent de découvrir le Vieux-Port, les Calanques, Notre-Dame de la Garde, les principaux quartiers et de profiter d'une excursion autour de Marseille.
+</p>
+
+</div>
+
+<div class="card fade-up">
+
+<h3>☀️ Meilleure période</h3>
+
+<p>
+D'avril à juin et de septembre à octobre, les températures sont agréables et les sites touristiques sont moins fréquentés. L'été offre une ambiance animée mais attire davantage de visiteurs.
+</p>
+
+</div>
+
+<div class="card fade-up">
+
+<h3>💰 Budget moyen</h3>
+
+<p>
+Comptez généralement entre 100 € et 220 € par jour selon votre hébergement, vos restaurants et les activités choisies. Les excursions en mer peuvent augmenter le budget.
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ERREURS A EVITER -->
+
+<section class="section warning-theme">
+
+<h2 class="section-title fade-up">
+⚠️ Les erreurs à éviter à Marseille
+</h2>
+
+<div class="grid">
+
+<div class="card fade-up">
+
+<h3>☀️ Sous-estimer le soleil</h3>
+
+<p>
+Le soleil méditerranéen peut être très intense, surtout en été. Pense à emporter de l'eau, une casquette et de la crème solaire, notamment lors des randonnées dans les Calanques.
+</p>
+
+</div>
+
+<div class="card fade-up">
+
+<h3>🥾 Partir dans les Calanques sans préparation</h3>
+
+<p>
+Les sentiers peuvent être exigeants et certains accès sont réglementés en raison du risque d'incendie. Vérifie toujours les conditions d'accès avant ton départ.
+</p>
+
+</div>
+
+<div class="card fade-up">
+
+<h3>🚗 Vouloir circuler partout en voiture</h3>
+
+<p>
+Le centre-ville est souvent encombré et le stationnement peut être difficile. Les transports en commun, la marche et les bateaux-navettes sont souvent plus pratiques.
+</p>
+
+</div>
+
+<div class="card fade-up">
+
+<h3>👜 Négliger ses effets personnels</h3>
+
+<p>
+Comme dans toutes les grandes villes touristiques, reste vigilant dans les zones très fréquentées comme le Vieux-Port, les transports et certains marchés.
+</p>
+
+</div>
+
+<div class="card fade-up">
+
+<h3>🌊 Se limiter au Vieux-Port</h3>
+
+<p>
+Marseille révèle toute sa richesse en explorant ses quartiers, les Calanques, les îles du Frioul, Notre-Dame de la Garde ou encore les villages voisins comme Cassis et Aix-en-Provence.
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- FAQ -->
+
+<section class="info-section">
+
+<div class="info-box fade-up">
+
+<h2>
+❓ FAQ Marseille
+</h2>
+
+<div class="faq">
+
+<div class="faq-item">
+
+<h3>
+Combien de jours faut-il pour visiter Marseille ?
+</h3>
+
+<p>
+Trois à quatre jours permettent de découvrir les principaux sites de la ville, les Calanques et de réaliser une excursion vers Cassis ou Aix-en-Provence.
+</p>
+
+</div>
+
+<div class="faq-item">
+
+<h3>
+Quelle est la meilleure période pour visiter Marseille ?
+</h3>
+
+<p>
+Le printemps et le début de l'automne offrent un climat idéal pour profiter de la ville, de la mer et des randonnées tout en évitant les fortes chaleurs estivales.
+</p>
+
+</div>
+
+<div class="faq-item">
+
+<h3>
+Peut-on visiter Marseille sans voiture ?
+</h3>
+
+<p>
+Oui. Le métro, les tramways, les bus, les navettes maritimes et la marche permettent de découvrir facilement les principaux quartiers et attractions de la ville.
+</p>
+
+</div>
+
+<div class="faq-item">
+
+<h3>
+Les Calanques sont-elles accessibles toute l'année ?
+</h3>
+
+<p>
+Oui, mais certains accès peuvent être temporairement fermés en été en raison du risque d'incendie. Il est conseillé de vérifier les conditions d'accès avant toute randonnée.
+</p>
+
+</div>
+
+<div class="faq-item">
+
+<h3>
+Quel quartier choisir pour un premier séjour ?
+</h3>
+
+<p>
+Le Vieux-Port constitue un excellent point de départ grâce à sa situation centrale, ses nombreux restaurants, ses transports et sa proximité avec les principaux monuments.
+</p>
+
+</div>
+
+<div class="faq-item">
+
+<h3>
+Marseille est-elle une destination chère ?
+</h3>
+
+<p>
+Marseille reste généralement plus abordable que Paris ou la Côte d'Azur. Les hébergements et les restaurants offrent un large choix pour tous les budgets.
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- PANORAMA -->
 
 <section class="section">
 
-<div class="cta fade-up">
-<h2>Découvre Marseille autrement</h2>
-<p>Vidolta rassemble mobilité, restaurants et découvertes urbaines sur une seule plateforme moderne et rapide.</p>
-<a href="index.html">Retour à l’accueil</a>
+<div class="map-preview fade-up">
+
+<img
+src="images/panorama-marseille.webp"
+alt="Panorama Marseille">
+
+<div class="map-preview-overlay">
+
+<h3>
+Marseille regarde la mer en face
+</h3>
+
+<p>
+Entre le Vieux-Port,
+les collines baignées de soleil,
+les Calanques aux eaux turquoise,
+les ruelles du Panier
+et Notre-Dame de la Garde qui veille sur la ville,
+Marseille possède une énergie brute, lumineuse et profondément méditerranéenne.
+</p>
+
+<a href="destinations.html">
+Explorer les destinations →
+</a>
+
+</div>
+
 </div>
 
 </section>
@@ -926,6 +1933,7 @@ font-size:2rem;
 <!-- FOOTER -->
 
 <footer>
+
 <p>
 © 2026 Vidolta — Marseille.
 </p>
@@ -940,36 +1948,79 @@ font-size:2rem;
 <a href="contact.html">Contact</a>
 
 </div>
+
 </footer>
+
+<!-- BACK TO TOP -->
+
+<button class="back-to-top" id="backToTop">
+↑
+</button>
 
 <script>
 
+/* MENU MOBILE */
+
 function toggleMenu(){
+
 const nav = document.querySelector('.nav-links');
+
 nav.classList.toggle('active');
+
 }
 
 document.querySelectorAll('.nav-links a').forEach(link => {
   link.addEventListener('click', () => {
-    document.querySelector('.nav-links').classList.remove('active');
+    const nav = document.querySelector('.nav-links');
+    nav.classList.remove('active');
   });
 });
 
 /* ANIMATION */
 
 const observer = new IntersectionObserver(entries => {
+
 entries.forEach(entry => {
+
 if(entry.isIntersecting){
 entry.target.classList.add('visible');
 }
-});
-},{threshold:0.15});
 
-document.querySelectorAll('.fade-up').forEach(el => {
+});
+
+},{
+threshold:0.15
+});
+
+document.querySelectorAll('.fade-up')
+.forEach(el => {
 observer.observe(el);
+});
+
+/* BACK TO TOP */
+
+const backToTop = document.getElementById('backToTop');
+
+window.addEventListener('scroll', () => {
+
+if(window.scrollY > 400){
+backToTop.classList.add('show');
+}else{
+backToTop.classList.remove('show');
+}
+
+});
+
+backToTop.addEventListener('click', () => {
+
+window.scrollTo({
+top:0,
+behavior:'smooth'
+});
+
 });
 
 </script>
 
 </body>
-</html> 
+</html>
