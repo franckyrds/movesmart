@@ -6,12 +6,47 @@
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 
-<title>Palma de Majorque — Vidolta</title>
+<title>
+Palma de Majorque : plages, criques, vieille ville et activités | Vidolta
+</title>
 
 <meta name="description"
-content="Découvre Palma de Majorque avec Vidolta : plages méditerranéennes, rooftops, vieille ville, criques, mobilité, restaurants et expériences incontournables aux Baléares.">
+content="Guide de Palma de Majorque : vieille ville, cathédrale, plages, criques turquoise, rooftops, restaurants, hôtels, activités et conseils pour préparer votre voyage aux Baléares.">
 
-<meta name="theme-color" content="#071423">
+<link rel="canonical"
+href="https://www.vidolta.com/majorque.html">
+
+<meta property="og:title"
+content="Palma de Majorque : plages, criques, vieille ville et activités | Vidolta">
+
+<meta property="og:description"
+content="Découvre Palma de Majorque avec Vidolta : cathédrale, vieille ville, plages méditerranéennes, criques, rooftops, restaurants, hôtels et expériences incontournables aux Baléares.">
+
+<meta property="og:url"
+content="https://www.vidolta.com/majorque.html">
+
+<meta property="og:image"
+content="https://www.vidolta.com/images/majorque.webp">
+
+<meta property="og:site_name"
+content="Vidolta">
+
+<meta property="og:type"
+content="website">
+
+<meta name="theme-color"
+content="#071423">
+
+<link rel="alternate" hreflang="fr"
+href="https://www.vidolta.com/majorque.html">
+
+<link rel="alternate" hreflang="en"
+href="https://www.vidolta.com/majorque-en.html">
+
+<link rel="alternate" hreflang="x-default"
+href="https://www.vidolta.com/majorque.html">
+ 
+<link rel="icon" href="favicon.ico">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -30,6 +65,7 @@ box-sizing:border-box;
 --bg:#071423;
 --primary:#38bdf8;
 --primary2:#f59e0b;
+--booking:#ff8a00;
 --text:#ffffff;
 --muted:#94a3b8;
 }
@@ -44,7 +80,7 @@ font-family:'Poppins',sans-serif;
 
 background:
 radial-gradient(circle at top right,rgba(56,189,248,0.16),transparent 30%),
-radial-gradient(circle at top left,rgba(245,158,11,0.12),transparent 24%),
+radial-gradient(circle at top left,rgba(245,158,11,0.12),transparent 25%),
 linear-gradient(to bottom,#0b1426 0%,#09111f 100%);
 
 color:var(--text);
@@ -132,7 +168,7 @@ height:100%;
 
 object-fit:cover;
 
-filter:brightness(0.86);
+filter:brightness(0.82);
 }
 
 .hero::after{
@@ -145,7 +181,7 @@ background:
 linear-gradient(
 to bottom,
 rgba(7,20,35,0.10),
-rgba(7,20,35,0.36)
+rgba(7,20,35,0.40)
 );
 
 z-index:1;
@@ -154,32 +190,29 @@ z-index:1;
 .hero-overlay{
 position:relative;
 z-index:2;
-
 padding:20px;
-
 max-width:920px;
 }
 
 .hero h1{
-font-size:5rem;
-line-height:0.92;
+font-size:5.4rem;
+line-height:1.05;
 letter-spacing:-4px;
 
 margin-bottom:22px;
 }
 
 .hero h1 span{
-background:linear-gradient(90deg,#38bdf8,#f59e0b);
+background:linear-gradient(90deg,#38bdf8,#fbbf24);
 
 -webkit-background-clip:text;
 -webkit-text-fill-color:transparent;
 }
 
 .hero p{
-font-size:1.15rem;
-line-height:1.8;
+font-size:1.2rem;
+line-height:1.9;
 color:#e2e8f0;
-
 margin-bottom:18px;
 }
 
@@ -190,7 +223,7 @@ opacity:0.7;
 color:#cbd5e1;
 }
 
-/* QUICK */
+/* QUICK GUIDE */
 
 .quick-guide{
 display:grid;
@@ -219,6 +252,8 @@ rgba(14,30,48,0.94),
 rgba(10,20,35,0.90)
 );
 
+backdrop-filter:blur(12px);
+
 padding:24px;
 
 border-radius:24px;
@@ -227,12 +262,13 @@ border:1px solid rgba(255,255,255,0.05);
 
 box-shadow:0 10px 30px rgba(0,0,0,0.25);
 
+text-align:center;
+
 transition:0.35s;
 }
 
 .quick-card:hover{
 transform:translateY(-5px);
-
 border-color:rgba(56,189,248,0.35);
 }
 
@@ -261,16 +297,18 @@ font-size:2.8rem;
 margin-bottom:34px;
 }
 
-/* MAP */
+/* MAP PREVIEW */
 
 .map-preview{
 position:relative;
 
-overflow:hidden;
+display:block;
 
-height:380px;
+height:400px;
 
 border-radius:34px;
+
+overflow:hidden;
 
 border:1px solid rgba(255,255,255,0.06);
 
@@ -283,7 +321,7 @@ height:100%;
 
 object-fit:cover;
 
-filter:brightness(0.84);
+filter:brightness(0.82);
 }
 
 .map-preview-overlay{
@@ -299,8 +337,8 @@ justify-content:flex-end;
 background:
 linear-gradient(
 to top,
-rgba(0,0,0,0.42),
-rgba(0,0,0,0.16)
+rgba(0,0,0,0.48),
+rgba(0,0,0,0.18)
 );
 }
 
@@ -316,8 +354,10 @@ color:#dbe4f0;
 margin-bottom:24px;
 }
 
-.map-button{
+.map-preview-overlay span{
 display:inline-block;
+
+margin-top:10px;
 
 padding:14px 20px;
 
@@ -332,6 +372,51 @@ font-weight:700;
 width:fit-content;
 }
 
+.majorque-tags{
+display:flex;
+flex-wrap:wrap;
+gap:12px;
+}
+
+.majorque-tags span{
+padding:10px 16px;
+
+border-radius:18px;
+
+background:rgba(255,255,255,0.08);
+
+backdrop-filter:blur(18px);
+
+border:1px solid rgba(255,255,255,0.08);
+
+font-size:0.9rem;
+
+color:white;
+}
+
+.map-button{
+display:inline-block;
+
+padding:14px 20px;
+
+background:#38bdf8;
+
+color:white;
+
+border-radius:14px;
+
+font-weight:700;
+
+width:fit-content;
+
+transition:.3s;
+}
+
+.map-button:hover{
+background:#0ea5e9;
+transform:translateY(-2px);
+}
+ 
 /* GRID */
 
 .grid{
@@ -364,18 +449,20 @@ transition:0.35s;
 .card:hover{
 transform:translateY(-6px);
 
-border-color:rgba(56,189,248,0.35);
+border-color:rgba(56,189,248,0.40);
+
+box-shadow:0 15px 35px rgba(0,0,0,0.25);
 }
 
 .card h3{
 font-size:1.35rem;
-margin-bottom:12px;
+margin-bottom:16px;
 }
 
 .card p{
 line-height:1.65;
 color:#cbd5e1;
-margin-bottom:16px;
+margin-bottom:22px;
 }
 
 .price{
@@ -396,6 +483,13 @@ color:white;
 border-radius:12px;
 
 font-weight:600;
+
+transition:0.3s;
+}
+
+.card a:hover{
+background:#0ea5e9;
+transform:translateY(-2px);
 }
 
 /* INFO */
@@ -415,7 +509,7 @@ border-radius:28px;
 
 border:1px solid rgba(255,255,255,0.05);
 
-line-height:1.7;
+line-height:1.9;
 
 color:#cbd5e1;
 }
@@ -424,6 +518,10 @@ color:#cbd5e1;
 font-size:2rem;
 margin-bottom:22px;
 color:white;
+}
+
+.info-box p{
+margin-bottom:18px;
 }
 
 /* FAQ */
@@ -442,6 +540,13 @@ padding:24px;
 border-radius:22px;
 
 border:1px solid rgba(255,255,255,0.05);
+
+transition:.3s;
+}
+
+.faq-item:hover{
+border-color:rgba(56,189,248,0.25);
+transform:translateY(-2px);
 }
 
 .faq-item h3{
@@ -452,6 +557,91 @@ font-size:1.05rem;
 .faq-item p{
 color:#cbd5e1;
 line-height:1.7;
+}
+
+/* CTA */
+
+.cta{
+position:relative;
+
+overflow:hidden;
+
+border-radius:32px;
+
+min-height:420px;
+
+display:flex;
+align-items:center;
+justify-content:center;
+
+text-align:center;
+}
+
+.cta img{
+position:absolute;
+inset:0;
+
+width:100%;
+height:100%;
+
+object-fit:cover;
+
+filter:brightness(0.76);
+}
+
+.cta::after{
+content:'';
+
+position:absolute;
+inset:0;
+
+background:
+linear-gradient(
+to bottom,
+rgba(7,20,35,0.18),
+rgba(7,20,35,0.48)
+);
+}
+
+.cta-content{
+position:relative;
+z-index:2;
+
+padding:40px;
+
+max-width:850px;
+}
+
+.cta h2{
+font-size:2.8rem;
+margin-bottom:18px;
+}
+
+.cta p{
+line-height:1.9;
+color:#e2e8f0;
+margin-bottom:30px;
+}
+
+.cta a{
+display:inline-block;
+
+padding:16px 24px;
+
+background:#38bdf8;
+
+color:white;
+
+font-weight:700;
+
+border-radius:16px;
+
+transition:.3s;
+}
+
+.cta a:hover{
+background:#0ea5e9;
+transform:translateY(-2px);
 }
 
 /* FOOTER */
@@ -473,20 +663,16 @@ flex-wrap:wrap;
 gap:18px;
 }
 
-/* ANIM */
-
-.fade-up{
-opacity:0;
-transform:translateY(30px);
-transition:0.8s ease;
+.footer-links a{
+color:#cbd5e1;
+transition:.3s;
 }
 
-.fade-up.visible{
-opacity:1;
-transform:translateY(0);
+.footer-links a:hover{
+color:white;
 }
 
-/* BACK */
+/* BACK TO TOP */
 
 .back-to-top{
 position:fixed;
@@ -512,6 +698,8 @@ display:flex;
 align-items:center;
 justify-content:center;
 
+box-shadow:0 10px 25px rgba(0,0,0,0.3);
+
 opacity:0;
 pointer-events:none;
 
@@ -523,6 +711,24 @@ z-index:999;
 .back-to-top.show{
 opacity:1;
 pointer-events:auto;
+}
+
+.back-to-top:hover{
+background:#0ea5e9;
+transform:translateY(-2px);
+}
+
+/* ANIMATION */
+
+.fade-up{
+opacity:0;
+transform:translateY(30px);
+transition:0.8s ease;
+}
+
+.fade-up.visible{
+opacity:1;
+transform:translateY(0);
 }
 
 /* MOBILE */
@@ -557,6 +763,10 @@ z-index:999;
 display:flex;
 }
 
+.hero{
+height:72vh;
+}
+
 .hero h1{
 font-size:3.2rem;
 letter-spacing:-2px;
@@ -569,6 +779,10 @@ line-height:1.7;
 
 .quick-guide{
 margin-top:-20px;
+}
+
+.quick-card{
+padding:20px;
 }
 
 .section{
@@ -592,12 +806,35 @@ padding:24px;
 font-size:1.5rem;
 }
 
+.map-preview-overlay p{
+font-size:0.95rem;
+line-height:1.7;
+}
+
+.majorque-tags span{
+font-size:0.8rem;
+padding:9px 14px;
+}
+
 .info-box{
 padding:26px;
 }
 
 .info-box h2{
 font-size:1.6rem;
+}
+
+.cta{
+min-height:360px;
+border-radius:28px;
+}
+
+.cta-content{
+padding:24px;
+}
+
+.cta h2{
+font-size:2rem;
 }
 
 }
@@ -607,6 +844,8 @@ font-size:1.6rem;
 </head>
 
 <body>
+
+<!-- NAVBAR -->
 
 <nav class="navbar">
 
@@ -620,14 +859,19 @@ font-size:1.6rem;
 
 <div class="nav-links">
 
-<a href="index.html">Accueil</a>
+<a href="#experiences">Expériences</a>
+
 <a href="#mobilite">Mobilité</a>
+
+<a href="#ou-dormir">Où dormir</a>
+
 <a href="#restaurants">Restaurants</a>
+
 <a href="#activites">Activités</a>
 
-<a href="destinations.html">
-← Retour
-</a>
+<a href="#sport">Sport</a>
+
+<a href="destinations.html">🌍 Destinations</a>
 
 </div>
 
@@ -644,56 +888,56 @@ alt="Palma de Majorque">
 
 <div class="hero-overlay">
 
+<p class="subtitle">
+☀️ Baléares • Espagne • Méditerranée
+</p>
+
 <h1>
-<span>Palma mélange Méditerranée, soleil et rooftops élégants</span>
+Palma de<br>
+<span>Majorque</span>
 </h1>
 
 <p>
-Découvre Palma de Majorque entre plages turquoise,
-vieille ville,
-cathédrale emblématique,
-rooftops,
-ports méditerranéens
-et criques des Baléares.
-</p>
-
-<p class="subtitle">
-Méditerranée • Plages • Rooftops • Vieille ville • Baléares
+Découvre Palma de Majorque entre la majestueuse cathédrale La Seu,
+les ruelles de la vieille ville,
+les plages aux eaux turquoise,
+les rooftops élégants
+et les plus belles criques de la Méditerranée.
 </p>
 
 </div>
 
 </section>
 
-<!-- QUICK -->
+<!-- QUICK GUIDE -->
 
 <section class="quick-guide">
 
 <div class="quick-card fade-up">
-<h3>🌊 Plages & criques</h3>
+<h3>🏖️ Plages & criques</h3>
 <p>
-Profite des eaux turquoise et des criques méditerranéennes.
+Profite d'eaux turquoise, de criques sauvages et de plages baignées de soleil tout autour de Palma.
 </p>
 </div>
 
 <div class="quick-card fade-up">
 <h3>🏛️ Vieille ville</h3>
 <p>
-Explore les ruelles historiques et la cathédrale de Palma.
+Flâne entre les ruelles historiques, les patios cachés et l'impressionnante cathédrale de Palma.
 </p>
 </div>
 
 <div class="quick-card fade-up">
-<h3>🍹 Rooftops & sunset</h3>
+<h3>🍹 Rooftops & sunsets</h3>
 <p>
-Découvre des couchers de soleil magnifiques sur la Méditerranée.
+Savoure un cocktail avec vue sur la Méditerranée et admire les plus beaux couchers de soleil de l'île.
 </p>
 </div>
 
 <div class="quick-card fade-up">
-<h3>⛵ Port & marina</h3>
+<h3>⛵ Mer & excursions</h3>
 <p>
-Ambiance méditerranéenne premium entre yachts et promenades.
+Catamarans, villages côtiers, Serra de Tramuntana et panoramas spectaculaires t'attendent.
 </p>
 </div>
 
@@ -704,32 +948,226 @@ Ambiance méditerranéenne premium entre yachts et promenades.
 <section class="section">
 
 <h2 class="section-title fade-up">
-🌴 Comprendre Palma rapidement
+🗺️ Comprendre Palma rapidement
 </h2>
 
 <div class="map-preview fade-up">
 
 <img
 src="images/majorque-map.webp"
-alt="Carte Palma">
+alt="Carte de Palma de Majorque">
 
 <div class="map-preview-overlay">
 
 <h3>
-Voir la carte interactive de Palma
+La carte essentielle de Palma
 </h3>
 
 <p>
-Cathédrale,
-vieille ville,
+Vieille ville,
+cathédrale La Seu,
+Santa Catalina,
+Portixol,
 plages,
-port,
+marina,
 quartiers incontournables
-et lieux emblématiques de Majorque.
+et principaux sites à découvrir autour de Palma de Majorque.
 </p>
 
 <a href="majorque-map.html" class="map-button">
 Explorer la carte →
+</a>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- SELECTION VIDOLTA -->
+
+<section class="section" style="padding-top:10px;padding-bottom:10px;">
+
+<div style="
+max-width:900px;
+margin:auto;
+padding:28px 34px;
+text-align:center;
+background:linear-gradient(135deg,rgba(14,30,48,.92),rgba(10,20,35,.88));
+border:1px solid rgba(255,255,255,.06);
+border-radius:24px;
+box-shadow:0 12px 35px rgba(0,0,0,.20);
+">
+
+<p style="
+font-size:.85rem;
+letter-spacing:2px;
+text-transform:uppercase;
+color:#38bdf8;
+font-weight:700;
+margin-bottom:14px;
+">
+
+✨ La sélection Vidolta
+
+</p>
+
+<p style="
+color:#dbe4f0;
+line-height:1.9;
+font-size:1.05rem;
+margin:0;
+">
+
+Chez <strong>Vidolta</strong>, nous sélectionnons les expériences qui rendent un voyage réellement inoubliable. Chaque activité présentée a été choisie pour son authenticité, la qualité de l'expérience proposée et les souvenirs qu'elle laisse.
+
+</p>
+
+</div>
+
+</section>
+ 
+<!-- EXPERIENCES MEMORABLES -->
+
+<section class="section" id="activites">
+
+<h2 class="section-title fade-up">
+⭐ Les expériences mémorables à Majorque
+</h2>
+
+<p style="
+text-align:center;
+max-width:850px;
+margin:0 auto 35px;
+color:#cbd5e1;
+line-height:1.8;">
+Entre croisières en Méditerranée, patrimoine exceptionnel, villages historiques, grottes spectaculaires et soirées espagnoles, ces expériences font partie des plus beaux souvenirs que l'on rapporte d'un voyage à Majorque.
+</p>
+
+<div class="grid">
+
+<div class="card fade-up">
+
+<h3>⛵ Croisière en catamaran</h3>
+
+<div class="price">
+Déjeuner & baignade
+</div>
+
+<p>
+Embarque à bord d'un catamaran et mets le cap sur les eaux cristallines de la baie de Palma. Entre baignades dans des criques turquoise, déjeuner face à la Méditerranée et détente au soleil, c'est l'expérience emblématique d'un séjour à Majorque.
+</p>
+
+<a
+href="https://www.getyourguide.fr/majorque-l47/majorque-croisiere-magique-d-une-demi-journee-en-catamaran-dans-la-baie-de-palma-t112329/?partner_id=F9OV4TP&utm_medium=online_publisher"
+target="_blank"
+rel="noopener sponsored">
+Réserver la croisière →
+</a>
+
+</div>
+
+<div class="card fade-up">
+
+<h3>🌅 Croisière au coucher du soleil</h3>
+
+<div class="price">
+DJ & ambiance festive
+</div>
+
+<p>
+Lorsque le soleil disparaît derrière les montagnes de Majorque, la baie de Palma se pare de couleurs spectaculaires. Profite d'une croisière festive avec DJ, musique et vue imprenable sur le littoral.
+</p>
+
+<a
+href="https://www.getyourguide.fr/majorque-l47/palma-de-majorque-tour-en-bateau-au-coucher-du-soleil-avec-dj-et-piste-de-danse-t412033/?partner_id=F9OV4TP&utm_medium=online_publisher"
+target="_blank"
+rel="noopener sponsored">
+Voir la croisière sunset →
+</a>
+
+</div>
+
+<div class="card fade-up">
+
+<h3>⛪ Cathédrale de Palma</h3>
+
+<div class="price">
+Billet coupe-file
+</div>
+
+<p>
+Dominant la Méditerranée, La Seu est l'un des plus beaux monuments gothiques d'Europe. Évite les files d'attente et découvre son architecture spectaculaire ainsi que son impressionnant intérieur.
+</p>
+
+<a
+href="https://www.getyourguide.fr/majorque-l47/billet-coupe-file-pour-la-cathedrale-et-le-musee-diocesain-de-majorque-t104426/?partner_id=F9OV4TP&utm_medium=online_publisher"
+target="_blank"
+rel="noopener sponsored">
+Réserver le billet →
+</a>
+
+</div>
+
+<div class="card fade-up">
+
+<img src="images/train-soller.webp"
+alt="Train historique de Sóller Majorque"
+style="width:100%;height:180px;object-fit:cover;border-radius:18px;margin-bottom:18px;">
+
+<h3>🚂 Train historique de Sóller</h3>
+
+<p>
+Monte à bord du célèbre train en bois de Sóller et traverse les paysages de la Serra de Tramuntana entre montagnes, tunnels, vallées et orangeraies. Une excursion emblématique de Majorque.
+</p>
+
+<a
+href="https://www.getyourguide.fr/majorque-l47/visite-exclusive-d-une-demi-journee-en-train-et-tramway-de-soller-t486267/?partner_id=F9OV4TP&utm_medium=online_publisher"
+target="_blank"
+rel="noopener sponsored">
+🚂 Réserver l'excursion →
+</a>
+
+</div>
+
+<div class="card fade-up">
+
+<img src="images/grottes-drach.webp"
+alt="Grottes du Drach Majorque"
+style="width:100%;height:180px;object-fit:cover;border-radius:18px;margin-bottom:18px;">
+
+<h3>🕳️ Grottes du Drach</h3>
+
+<p>
+Explore l'un des sites naturels les plus impressionnants de l'île, célèbre pour son lac souterrain, ses formations rocheuses spectaculaires et son concert de musique classique dans les grottes.
+</p>
+
+<a
+href="https://www.getyourguide.fr/majorque-l47/palma-entree-des-grottes-de-drach-concert-de-musique-et-promenade-en-bateau-t608697/?partner_id=F9OV4TP&utm_medium=online_publisher"
+target="_blank"
+rel="noopener sponsored">
+🕳️ Visiter les grottes →
+</a>
+
+</div>
+
+<div class="card fade-up">
+
+<img src="images/flamenco-palma.webp"
+alt="Spectacle de flamenco à Palma"
+style="width:100%;height:180px;object-fit:cover;border-radius:18px;margin-bottom:18px;">
+
+<h3>💃 Soirée flamenco</h3>
+
+<p>
+Prolonge la journée avec un spectacle de flamenco en direct dans une ambiance intense et chaleureuse. Guitare, chant, danse et boisson incluse composent une soirée espagnole pleine d'énergie.
+</p>
+
+<a
+href="https://www.getyourguide.fr/majorque-l47/palma-spectacle-de-flamenco-au-tablao-flamenco-alma-avec-boisson-t653681/?partner_id=F9OV4TP&utm_medium=online_publisher"
+target="_blank"
+rel="noopener sponsored">
+💃 Réserver la soirée →
 </a>
 
 </div>
@@ -743,64 +1181,187 @@ Explorer la carte →
 <section class="section" id="mobilite">
 
 <h2 class="section-title fade-up">
-🚍 Explorer Palma facilement
+🚲 Explorer Palma de Majorque facilement
+</h2>
+
+<p style="
+text-align:center;
+max-width:850px;
+margin:0 auto 35px;
+color:#cbd5e1;
+line-height:1.8;">
+Entre vieille ville piétonne, front de mer, pistes cyclables et bus reliant les principales plages, Palma se découvre facilement sans voiture. Pour explorer le reste de l'île, la location d'un véhicule reste toutefois la meilleure option.
+</p>
+
+<div class="grid">
+
+<div class="card fade-up">
+
+<h3>🚌 Réseau EMT Palma</h3>
+
+<div class="price">
+Bus urbains
+</div>
+
+<p>
+Le réseau EMT dessert les principaux quartiers, le centre historique, le port, les plages de Can Pere Antoni et de Cala Major ainsi que de nombreux sites touristiques. Une solution simple et économique pour se déplacer dans Palma.
+</p>
+
+<a
+href="https://www.emtpalma.cat"
+target="_blank"
+rel="noopener">
+Voir le réseau EMT →
+</a>
+
+</div>
+
+<div class="card fade-up">
+
+<h3>🚲 Visite à vélo électrique</h3>
+
+<div class="price">
+Le littoral autrement
+</div>
+
+<p>
+Découvre Palma sans effort grâce à un vélo électrique. Entre la cathédrale, les ruelles historiques, le Paseo Marítimo et les panoramas sur la Méditerranée, c'est l'une des façons les plus agréables d'explorer la ville.
+</p>
+
+<a
+href="https://www.getyourguide.fr/majorque-l47/palma-excursion-exclusive-en-e-bike-a-pneus-larges-t465581/?partner_id=F9OV4TP&utm_medium=online_publisher"
+target="_blank"
+rel="noopener sponsored">
+Découvrir la visite →
+</a>
+
+</div>
+
+<div class="card fade-up">
+
+<h3>✈️ Transfert aéroport</h3>
+
+<div class="price">
+Aéroport de Palma (PMI)
+</div>
+
+<p>
+Rejoins facilement ton hôtel dès ton arrivée grâce à un transfert partagé entre l'aéroport et Palma. Une solution pratique pour commencer les vacances sans stress ni attente.
+</p>
+
+<a
+href="https://www.getyourguide.fr/majorque-l47/majorque-transfert-partage-aller-simple-a-l-aeroport-de-palma-t438557/?partner_id=F9OV4TP&utm_medium=online_publisher"
+target="_blank"
+rel="noopener sponsored">
+Réserver le transfert →
+</a>
+
+</div>
+
+<div class="card fade-up">
+
+<h3>🚗 Explorer toute l'île</h3>
+
+<div class="price">
+La meilleure liberté
+</div>
+
+<p>
+Si Palma se visite facilement à pied ou en bus, louer une voiture permet de rejoindre les plus belles plages, la Serra de Tramuntana, Valldemossa, Sóller, Cap de Formentor ou les criques les plus sauvages de Majorque.
+</p>
+
+<p style="margin-top:12px;font-size:0.95rem;color:#94a3b8;">
+📍 Valldemossa • Sóller • Formentor • Cala Mondragó • Sa Calobra
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- OU DORMIR -->
+
+<section class="section" id="ou-dormir">
+
+<h2 class="section-title fade-up">
+🏨 Où dormir à Palma de Majorque ?
 </h2>
 
 <div class="grid">
 
 <div class="card fade-up">
 
-<h3>🚍 Bus & mobilité</h3>
-
-<div class="price">
-Mobilité Palma
-</div>
+<h3>🏛️ Centre historique</h3>
 
 <p>
-Déplace-toi facilement entre plages, vieille ville et marina.
+Le meilleur choix pour un premier séjour à Palma. Entre la cathédrale, les ruelles pavées, les patios majorquins, les boutiques et les restaurants, tout se découvre facilement à pied dans une atmosphère méditerranéenne pleine de charme.
 </p>
-
-<a href="https://www.emtpalma.cat/" target="_blank">
-Explorer
-</a>
 
 </div>
 
 <div class="card fade-up">
 
-<h3>🚲 Balades & vélos</h3>
-
-<div class="price">
-Explorer Majorque
-</div>
+<h3>🌴 Santa Catalina</h3>
 
 <p>
-Découvre la côte méditerranéenne et les plus beaux points de vue.
+Le quartier tendance de Palma, réputé pour son marché couvert, ses bars à tapas, ses restaurants créatifs et son ambiance animée en soirée. Idéal pour les voyageurs qui veulent profiter d'une Palma vivante, gourmande et locale.
 </p>
-
-<a href="https://www.getyourguide.com/" target="_blank">
-Explorer
-</a>
 
 </div>
 
 <div class="card fade-up">
 
-<h3>✈️ Voyages Baléares</h3>
-
-<div class="price">
-Îles & Méditerranée
-</div>
+<h3>🌊 Portixol & Molinar</h3>
 
 <p>
-Voyage facilement entre Majorque, Ibiza et Barcelone.
+Ancien secteur de pêcheurs devenu l'un des coins les plus agréables de Palma. Entre promenade en bord de mer, petites plages, cafés face à la Méditerranée et ambiance plus paisible, c'est une excellente option pour un séjour romantique ou relaxant.
 </p>
 
-<a href="https://www.omio.com/" target="_blank">
-Explorer
-</a>
+</div>
+
+<div class="card fade-up">
+
+<h3>🏖️ Playa de Palma</h3>
+
+<p>
+Parfait pour profiter d'un séjour balnéaire avec grande plage, hôtels avec piscine, restaurants, bars et activités nautiques. Proche de l'aéroport, ce secteur convient très bien aux voyageurs qui veulent privilégier la mer et la détente.
+</p>
 
 </div>
+
+</div>
+
+<p style="
+text-align:center;
+max-width:900px;
+margin:35px auto 0;
+color:#cbd5e1;
+line-height:1.8;
+">
+Du charme historique du centre de Palma à l'ambiance branchée de Santa Catalina, en passant par les promenades face à la mer de Portixol ou les hôtels balnéaires de Playa de Palma, chaque quartier offre une manière différente de vivre Majorque.
+</p>
+
+<div style="text-align:center;margin-top:28px;">
+
+<a
+href="https://www.jdoqocy.com/click-101766856-12319490?url=https%3A%2F%2Fwww.booking.com%2Fsearchresults.fr.html%3Fss%3DPalma%2Bde%2BMajorque%252C%2B%25C3%258Eles%2BBal%25C3%25A9ares%252C%2BEspagne%26efdco%3D1%26label%3Dgen173nr-10CAEoggI46AdIM1gEaE2IAQGYATO4ARfIAQ_YAQPoAQH4AQGIAgGoAgG4ArrBu9IGwAIB0gIkMzE3MDRmMGEtZDE1MC00OTQxLWI0YzgtZDdhN2Q1ODhiOTBk2AIB4AIB%26aid%3D304142%26lang%3Dfr%26sb%3D1%26src_elem%3Dsb%26src%3Dindex%26dest_id%3D-395224%26dest_type%3Dcity%26ac_position%3D0%26ac_click_type%3Db%26ac_langcode%3Dfr%26ac_suggestion_list_length%3D5%26search_selected%3Dtrue%26search_pageview_id%3D3eada6dde0ce0003%26ac_meta%3DGhAzZWFkYTZkZGUwY2UwMDAzIAAoATICZnI6BXBhbG1h%26group_adults%3D2%26no_rooms%3D1%26group_children%3D0"
+target="_blank"
+rel="noopener sponsored"
+style="
+display:inline-block;
+padding:16px 34px;
+border-radius:16px;
+background:linear-gradient(135deg,#2563eb,#1d4ed8);
+color:#fff;
+font-size:1rem;
+font-weight:700;
+text-decoration:none;
+box-shadow:0 12px 32px rgba(37,99,235,.35);
+transition:all .3s ease;
+">
+🏨 Voir les hébergements à Palma de Majorque
+</a>
 
 </div>
 
@@ -811,49 +1372,121 @@ Explorer
 <section class="section" id="restaurants">
 
 <h2 class="section-title fade-up">
-🍽️ Saveurs méditerranéennes
+🍽️ Goûter les saveurs de Majorque
 </h2>
+
+<p style="
+text-align:center;
+max-width:850px;
+margin:0 auto 35px;
+color:#cbd5e1;
+line-height:1.8;">
+Entre cuisine méditerranéenne, tapas, vins locaux, pâtisseries traditionnelles et poissons fraîchement pêchés, Palma de Majorque est une destination idéale pour éveiller les papilles autant que les yeux.
+</p>
 
 <div class="grid">
 
 <div class="card fade-up">
 
-<h3>🍷 Restaurants Palma</h3>
+<img src="images/cours-cuisine-majorque.webp"
+alt="Cours de cuisine espagnole à Palma"
+style="width:100%;height:220px;object-fit:cover;border-radius:18px;margin-bottom:18px;">
+
+<h3>🥘 Apprendre la cuisine espagnole</h3>
 
 <p>
-Découvre les meilleures adresses méditerranéennes de Palma.
+Prépare une véritable paella, découvre les secrets des tapas et partage un repas convivial accompagné de vins locaux. Une expérience gourmande idéale pour ramener un peu de Majorque dans ses valises.
 </p>
 
-<a href="https://www.tripadvisor.com/" target="_blank">
-Explorer
+<a
+href="https://www.getyourguide.fr/majorque-l47/palma-de-majorque-experience-culinaire-espagnole-t364970/?partner_id=F9OV4TP&utm_medium=online_publisher"
+target="_blank"
+rel="noopener sponsored">
+Réserver le cours →
 </a>
 
 </div>
 
 <div class="card fade-up">
 
-<h3>🍸 Rooftops & cocktails</h3>
+<img src="images/tapas-majorque.webp"
+alt="Food tour tapas et vins à Palma"
+style="width:100%;height:220px;object-fit:cover;border-radius:18px;margin-bottom:18px;">
+
+<h3>🍷 Food tour tapas & vins</h3>
 
 <p>
-Profite des rooftops avec vue sur la mer et le coucher du soleil.
+Pars à la découverte des meilleures adresses de Palma en dégustant tapas traditionnelles, vins majorquins et spécialités locales dans une ambiance chaleureuse au cœur de la vieille ville.
 </p>
 
-<a href="https://www.thefork.com/" target="_blank">
-Explorer
+<a
+href="https://www.getyourguide.fr/majorque-l47/palma-de-majorque-visite-gastronomique-des-tapas-et-du-vin-t568460/?partner_id=F9OV4TP&utm_medium=online_publisher"
+target="_blank"
+rel="noopener sponsored">
+Découvrir le food tour →
 </a>
 
 </div>
 
 <div class="card fade-up">
 
-<h3>🌅 Beach clubs</h3>
+<img src="images/vignoble-majorque.webp"
+alt="Dégustation de vins à Majorque"
+style="width:100%;height:220px;object-fit:cover;border-radius:18px;margin-bottom:18px;">
+
+<h3>🍇 Les vins de Majorque</h3>
 
 <p>
-Explore les beach clubs et les ambiances premium de Majorque.
+Visite un domaine viticole majorquin, découvre les cépages de l'île et déguste plusieurs vins accompagnés de produits locaux. Une excellente façon de découvrir une autre facette de Majorque.
 </p>
 
-<a href="https://www.getyourguide.com/" target="_blank">
-Explorer
+<a
+href="https://www.getyourguide.fr/majorque-l47/majorque-visite-du-domaine-viticole-bodegas-angel-et-degustation-de-vin-t1126890/?partner_id=F9OV4TP&utm_medium=online_publisher"
+target="_blank"
+rel="noopener sponsored">
+Visiter le domaine →
+</a>
+
+</div>
+
+<div class="card fade-up">
+
+<img src="images/ensaimada.webp"
+alt="Ensaïmada de Majorque"
+style="width:100%;height:220px;object-fit:cover;border-radius:18px;margin-bottom:18px;">
+
+<h3>🥐 Goûter une ensaïmada</h3>
+
+<p>
+Impossible de quitter Majorque sans savourer une ensaïmada, la pâtisserie emblématique de l'île. L'institution Ca'n Joan de s'Aigo la prépare depuis plus de trois siècles dans un cadre chargé d'histoire.
+</p>
+
+<a
+href="https://canjoandesaigo.com/"
+target="_blank"
+rel="noopener">
+Découvrir l'adresse →
+</a>
+
+</div>
+
+<div class="card fade-up">
+
+<img src="images/restaurant-mer-majorque.webp"
+alt="Restaurant face à la mer à Palma"
+style="width:100%;height:220px;object-fit:cover;border-radius:18px;margin-bottom:18px;">
+
+<h3>🐟 Dîner face à la Méditerranée</h3>
+
+<p>
+Installe-toi en terrasse pour déguster poissons, fruits de mer et spécialités méditerranéennes avec vue sur le port de Palma. Le cadre idéal pour terminer une journée entre mer et soleil.
+</p>
+
+<a
+href="https://www.tripadvisor.fr/Search?q=Ca+n%27Eduardo+Palma"
+target="_blank"
+rel="noopener sponsored">
+Voir le restaurant →
 </a>
 
 </div>
@@ -867,64 +1500,523 @@ Explorer
 <section class="section" id="activites">
 
 <h2 class="section-title fade-up">
-✨ Le meilleur de Majorque
+🎯 Activités & découvertes à Majorque
+</h2>
+
+<p style="
+text-align:center;
+max-width:850px;
+margin:0 auto 35px;
+color:#cbd5e1;
+line-height:1.8;">
+Entre panoramas spectaculaires, nature préservée, gastronomie locale, excursions en mer et découvertes insolites, Majorque regorge d'activités pour explorer toutes les facettes de l'île à son propre rythme.
+</p>
+
+<div class="grid">
+
+<div class="card fade-up">
+
+<h3>🍷 Food tour tapas & vins</h3>
+
+<div class="price">
+Saveurs majorquines
+</div>
+
+<p>
+Laisse-toi guider dans les ruelles historiques de Palma pour déguster tapas traditionnelles, vins majorquins et spécialités locales. Une immersion gourmande au cœur de la culture de l'île.
+</p>
+
+<a
+href="https://www.getyourguide.fr/majorque-l47/palma-de-majorque-visite-gastronomique-des-tapas-et-du-vin-t568460/?partner_id=F9OV4TP&utm_medium=online_publisher"
+target="_blank"
+rel="noopener sponsored">
+Découvrir le food tour →
+</a>
+
+</div>
+
+<div class="card fade-up">
+
+<h3>🌊 Les criques secrètes de Bendinat</h3>
+
+<div class="price">
+Majorque confidentielle
+</div>
+
+<p>
+Explore l'un des plus beaux secteurs du littoral majorquin entre falaises, eaux translucides et criques préservées. Une balade idéale pour découvrir une Majorque plus sauvage et confidentielle.
+</p>
+
+<a
+href="https://www.getyourguide.fr/majorque-l47/explorez-l-histoire-et-les-paysages-cotiers-les-joyaux-caches-de-bendinat-t749753/?partner_id=F9OV4TP&utm_medium=online_publisher"
+target="_blank"
+rel="noopener sponsored">
+Explorer Bendinat →
+</a>
+
+</div>
+
+<div class="card fade-up">
+
+<img src="images/serra-tramuntana.webp" alt="Randonnée Serra de Tramuntana Majorque" style="width:100%;height:180px;object-fit:cover;border-radius:18px;margin-bottom:18px;">
+
+<h3>🏔️ Serra de Tramuntana</h3>
+
+<p>
+Pars randonner dans les montagnes classées à l'UNESCO entre villages de pierre, sentiers panoramiques et vues spectaculaires sur la Méditerranée.
+</p>
+
+<a href="https://www.getyourguide.fr/majorque-l47/depuis-palma-randonnee-dans-la-sierra-de-tramuntana-avec-petit-pique-nique-t590773/?partner_id=F9OV4TP&utm_medium=online_publisher" target="_blank" rel="noopener sponsored">
+🏔️ Découvrir la randonnée →
+</a>
+
+</div>
+
+<div class="card fade-up">
+
+<img src="images/bus-palma.webp" alt="Bus panoramique Palma de Majorque" style="width:100%;height:180px;object-fit:cover;border-radius:18px;margin-bottom:18px;">
+
+<h3>🚌 Bus panoramique de Palma</h3>
+
+<p>
+Explore Palma à ton rythme grâce au bus à arrêts multiples et rejoins facilement les principaux monuments, quartiers historiques et points de vue de la ville.
+</p>
+
+<a href="https://www.getyourguide.fr/majorque-l47/visite-en-bus-a-arrets-multiples-de-palma-de-majorque-billet-de-24-heures-t3455/?partner_id=F9OV4TP&utm_medium=online_publisher" target="_blank" rel="noopener sponsored">
+🚌 Réserver le bus →
+</a>
+
+</div>
+
+<div class="card fade-up">
+
+<img src="images/dauphins-majorque.webp" alt="Observation des dauphins à Majorque" style="width:100%;height:180px;object-fit:cover;border-radius:18px;margin-bottom:18px;">
+
+<h3>🐬 Observer les dauphins</h3>
+
+<p>
+Pars en mer pour tenter d'apercevoir les dauphins dans leur environnement naturel lors d'une excursion inoubliable au large des côtes de Majorque.
+</p>
+
+<a href="https://www.getyourguide.fr/majorque-l47/majorque-croisiere-d-observation-des-dauphins-a-bord-d-un-bateau-a-fond-de-verre-t412132/?partner_id=F9OV4TP&utm_medium=online_publisher" target="_blank" rel="noopener sponsored">
+🐬 Voir les dauphins →
+</a>
+
+</div>
+
+<div class="card fade-up">
+
+<img src="images/plongee-majorque.webp" alt="Première plongée à Majorque" style="width:100%;height:180px;object-fit:cover;border-radius:18px;margin-bottom:18px;">
+
+<h3>🤿 Première plongée</h3>
+
+<p>
+Découvre les fonds marins de Majorque accompagné d'un instructeur, même sans expérience. Une activité idéale pour admirer les eaux cristallines de l'île.
+</p>
+
+<a href="https://www.getyourguide.fr/majorque-l47/majorque-plongee-sans-licence-avec-un-instructeur-depuis-un-bateau-cap-de-formentor-t981653/?partner_id=F9OV4TP&utm_medium=online_publisher" target="_blank" rel="noopener sponsored">
+🤿 Tenter la plongée →
+</a>
+
+</div>
+
+<div class="card fade-up">
+
+<img src="images/buggy-majorque.webp" alt="Aventure en buggy à Majorque" style="width:100%;height:180px;object-fit:cover;border-radius:18px;margin-bottom:18px;">
+
+<h3>🏎️ Aventure en buggy</h3>
+
+<p>
+Traverse les montagnes, les pistes et les criques sauvages de Majorque au volant d'un buggy pour découvrir des paysages spectaculaires hors des itinéraires classiques.
+</p>
+
+<a href="https://www.getyourguide.fr/majorque-l47/majorque-aventure-en-buggy-dans-les-montagnes-et-les-criques-secretes-t622226/?partner_id=F9OV4TP&utm_medium=online_publisher" target="_blank" rel="noopener sponsored">
+🏎️ Réserver le buggy →
+</a>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- SPORTS & AVENTURES -->
+
+<section class="section" id="sport">
+
+<h2 class="section-title fade-up">
+🌊 Sports & aventures à Majorque
+</h2>
+
+<p style="
+text-align:center;
+max-width:850px;
+margin:0 auto 35px;
+color:#cbd5e1;
+line-height:1.8;">
+Avec ses eaux turquoise, ses falaises spectaculaires et ses montagnes classées à l'UNESCO, Majorque est un immense terrain de jeu pour les amateurs de sensations fortes. Entre mer et montagne, l'île propose des expériences inoubliables accessibles à tous.
+</p>
+
+<div class="map-preview fade-up" style="margin-bottom:35px;">
+
+<img
+src="images/sport-majorque.webp"
+alt="Sports et aventures à Majorque">
+
+<div class="map-preview-overlay">
+
+<h3>
+Une île taillée pour l'aventure
+</h3>
+
+<p>
+Kayak, jet-ski, quad, snorkeling ou routes panoramiques : Majorque offre une incroyable diversité d'activités sportives dans des paysages parmi les plus beaux de la Méditerranée.
+</p>
+
+</div>
+
+</div>
+
+<div class="grid">
+
+<div class="card fade-up">
+
+<img
+src="images/kayak-majorque.webp"
+alt="Kayak et paddle à Majorque"
+style="width:100%;height:220px;object-fit:cover;border-radius:18px;margin-bottom:18px;">
+
+<h3>🛶 Kayak, paddle & grottes marines</h3>
+
+<p>
+Explore les eaux cristallines de Majorque en kayak et en paddle, découvre des grottes marines accessibles uniquement par la mer et profite d'une séance de snorkeling dans des criques sauvages aux couleurs incroyables.
+</p>
+
+<a
+href="https://www.getyourguide.fr/majorque-l47/majorque-excursion-en-kayak-et-paddle-surf-dans-des-grottes-aux-eaux-cristallines-t753144/?partner_id=F9OV4TP&utm_medium=online_publisher"
+target="_blank"
+rel="nofollow sponsored noopener"
+class="btn-affiliate">
+Explorer les grottes →
+</a>
+
+</div>
+
+<div class="card fade-up">
+
+<img
+src="images/quad-majorque.webp"
+alt="Excursion en quad à Majorque"
+style="width:100%;height:220px;object-fit:cover;border-radius:18px;margin-bottom:18px;">
+
+<h3>🏍️ Quad & saut de falaise</h3>
+
+<p>
+Parcours les pistes et les routes panoramiques de Majorque en quad avant de rejoindre des criques secrètes pour te baigner, faire du snorkeling et tenter un saut de falaise pour une bonne dose d'adrénaline.
+</p>
+
+<a
+href="https://www.getyourguide.fr/majorque-l47/majorque-excursion-en-quad-t75869/?partner_id=F9OV4TP&utm_medium=online_publisher"
+target="_blank"
+rel="nofollow sponsored noopener"
+class="btn-affiliate">
+Vivre l'aventure →
+</a>
+
+</div>
+
+<div class="card fade-up">
+
+<img
+src="images/jetski-majorque.webp"
+alt="Jet-ski à Majorque"
+style="width:100%;height:220px;object-fit:cover;border-radius:18px;margin-bottom:18px;">
+
+<h3>🚤 Jet-ski sur les eaux turquoise</h3>
+
+<p>
+Prends les commandes d'un jet-ski et longe les falaises, les grottes marines et les plages sauvages de Majorque. Une façon spectaculaire de découvrir le littoral depuis la mer.
+</p>
+
+<a
+href="https://www.getyourguide.fr/majorque-l47/cala-millor-excursion-en-jetski-dans-la-grotte-des-lions-de-mer-ou-dans-les-grottes-d-arta-t455027/?partner_id=F9OV4TP&utm_medium=online_publisher"
+target="_blank"
+rel="nofollow sponsored noopener"
+class="btn-affiliate">
+Piloter un jet-ski →
+</a>
+
+</div>
+
+<div class="card fade-up">
+
+<img
+src="images/formula-car-majorque.webp"
+alt="Formula Car à Majorque"
+style="width:100%;height:220px;object-fit:cover;border-radius:18px;margin-bottom:18px;">
+
+<h3>🏎️ Piloter une Formula Car</h3>
+
+<p>
+Installe-toi au volant d'une spectaculaire Formula Car à trois roues et parcours les plus belles routes de Majorque entre littoral et montagne. Une expérience de conduite originale mêlant sensations fortes et panoramas exceptionnels.
+</p>
+
+<a
+href="https://www.getyourguide.fr/majorque-l47/majorque-circuit-de-45-heures-en-voiture-de-formule-1-t171066/?partner_id=F9OV4TP&utm_medium=online_publisher"
+target="_blank"
+rel="nofollow sponsored noopener"
+class="btn-affiliate">
+Prendre le volant →
+</a>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- AUTOUR DE MAJORQUE -->
+
+<section class="section" id="autour">
+
+<h2 class="section-title fade-up">
+🌍 À découvrir autour de Palma
+</h2>
+
+<p style="
+text-align:center;
+max-width:850px;
+margin:0 auto 35px;
+color:#cbd5e1;
+line-height:1.8;">
+Au-delà de Palma, Majorque dévoile des villages de montagne, des criques aux eaux turquoise, des routes panoramiques et quelques-uns des plus beaux paysages de la Méditerranée. Ces excursions permettent de découvrir toute la richesse de l'île en une journée.
+</p>
+
+<div class="map-preview fade-up" style="margin-bottom:35px;">
+
+<img
+src="images/majorque-around.webp"
+alt="Excursions autour de Palma">
+
+<div class="map-preview-overlay">
+
+<h3>
+Entre montagnes, villages et criques paradisiaques
+</h3>
+
+<p>
+De la Serra de Tramuntana aux falaises du Cap de Formentor, chaque excursion révèle une facette différente de Majorque et offre des panoramas inoubliables.
+</p>
+
+</div>
+
+</div>
+
+<div class="grid">
+
+<div class="card fade-up">
+
+<h3>🚂 Sóller & Port de Sóller</h3>
+
+<p>
+Emprunte le célèbre train en bois qui traverse les montagnes avant de rejoindre le charmant port de Sóller à bord du tramway historique. Une excursion emblématique mêlant paysages, patrimoine et ambiance méditerranéenne.
+</p>
+
+</div>
+
+<div class="card fade-up">
+
+<h3>🏛️ Valldemossa</h3>
+
+<p>
+Classé parmi les plus beaux villages d'Espagne, Valldemossa séduit par ses ruelles pavées, ses maisons en pierre, ses volets verts et son atmosphère paisible au cœur de la Serra de Tramuntana.
+</p>
+
+</div>
+
+<div class="card fade-up">
+
+<h3>🏖️ Cap de Formentor</h3>
+
+<p>
+Falaises vertigineuses, belvédères spectaculaires et eaux turquoise font du Cap de Formentor l'un des sites naturels les plus impressionnants de Majorque. La route qui y mène est déjà une attraction à elle seule.
+</p>
+
+</div>
+
+<div class="card fade-up">
+
+<h3>🐉 Grottes du Drach</h3>
+
+<p>
+Découvre l'un des plus grands réseaux de grottes d'Europe, célèbre pour son immense lac souterrain et ses concerts de musique classique organisés dans un décor naturel exceptionnel.
+</p>
+
+</div>
+
+<div class="card fade-up">
+
+<h3>🏰 Alcúdia & Pollença</h3>
+
+<p>
+Entre remparts médiévaux, ruelles fleuries, marchés traditionnels et plages de sable fin, Alcúdia et Pollença offrent une immersion authentique dans le nord de Majorque, loin de l'effervescence de Palma.
+</p>
+
+</div>
+
+<div class="card fade-up">
+
+<h3>🚤 Les plus belles criques du sud</h3>
+
+<p>
+Embarque pour une croisière vers Es Pontàs, Caló des Moro et Cala Marmols, trois joyaux de la côte sud-est uniquement accessibles ou pleinement appréciés depuis la mer. Entre falaises, arches rocheuses, snorkeling et eaux cristallines, cette excursion dévoile l'un des plus beaux littoraux de Majorque. :contentReference[oaicite:0]{index=0}
+</p>
+
+<a
+href="https://www.getyourguide.fr/majorque-l47/majorque-es-pontas-calo-des-moro-et-cala-marmols-cruise-t705414/?partner_id=F9OV4TP&utm_medium=online_publisher"
+target="_blank"
+rel="nofollow sponsored noopener"
+class="btn-affiliate">
+Explorer les criques →
+</a>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- AVANT DE PARTIR -->
+
+<section class="section planning-theme">
+
+<h2 class="section-title fade-up">
+✈️ Avant de partir à Majorque
 </h2>
 
 <div class="grid">
 
 <div class="card fade-up">
 
-<h3>⛪ Cathédrale de Palma</h3>
+<h3>🇪🇸 Langue</h3>
 
 <p>
-Découvre l’un des monuments les plus emblématiques des Baléares.
+L'espagnol et le catalan (majorquin) sont les langues officielles. Dans les zones touristiques, l'anglais est largement parlé et le français est parfois compris.
 </p>
-
-<a href="https://www.tiqets.com/" target="_blank">
-Explorer
-</a>
 
 </div>
 
 <div class="card fade-up">
 
-<h3>🏖️ Cala Major & plages</h3>
+<h3>💶 Devise</h3>
 
 <p>
-Profite des plages méditerranéennes et des eaux turquoise.
+L'euro (€) est utilisé partout sur l'île. Les paiements par carte sont acceptés dans la grande majorité des commerces, restaurants et activités.
 </p>
-
-<a href="https://www.getyourguide.com/" target="_blank">
-Explorer
-</a>
 
 </div>
 
 <div class="card fade-up">
 
-<h3>⛰️ Excursions & criques</h3>
+<h3>🚗 Se déplacer</h3>
 
 <p>
-Découvre les plus beaux paysages naturels de Majorque.
+Une voiture est idéale pour explorer les criques, les villages de montagne et les plus beaux panoramas de l'île. Pour visiter Palma uniquement, les transports en commun sont largement suffisants.
 </p>
-
-<a href="https://www.getyourguide.com/" target="_blank">
-Explorer
-</a>
 
 </div>
 
 <div class="card fade-up">
 
-<h3>⛵ Croisières & marina</h3>
+<h3>📅 Durée idéale</h3>
 
 <p>
-Explore Palma depuis la mer et profite des couchers de soleil.
+Quatre à sept jours permettent de découvrir Palma, les villages de la Serra de Tramuntana, plusieurs criques paradisiaques et de profiter pleinement des activités en mer.
 </p>
 
-<a href="https://www.getyourguide.com/" target="_blank">
-Explorer
-</a>
+</div>
+
+<div class="card fade-up">
+
+<h3>☀️ Meilleure période</h3>
+
+<p>
+D'avril à juin et de septembre à octobre, Majorque bénéficie de températures agréables, d'une mer déjà chaude et d'une fréquentation plus modérée qu'en plein été.
+</p>
+
+</div>
+
+<div class="card fade-up">
+
+<h3>💰 Budget moyen</h3>
+
+<p>
+Comptez environ 120 € à 250 € par personne et par jour selon la saison, le type d'hébergement et les activités choisies. Réserver plusieurs semaines à l'avance permet souvent d'obtenir les meilleurs tarifs.
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ERREURS A EVITER -->
+
+<section class="section warning-theme">
+
+<h2 class="section-title fade-up">
+⚠️ Les erreurs à éviter à Majorque
+</h2>
+
+<div class="grid">
+
+<div class="card fade-up">
+
+<h3>🚗 Attendre pour louer une voiture</h3>
+
+<p>
+Les tarifs augmentent rapidement pendant les vacances scolaires et les véhicules les plus demandés disparaissent vite. Réserver à l'avance permet souvent d'économiser tout en profitant d'un plus grand choix.
+</p>
+
+</div>
+
+<div class="card fade-up">
+
+<h3>🏖️ Arriver trop tard dans les criques</h3>
+
+<p>
+Les plus belles plages comme Caló des Moro, Cala Deià ou Cala Varques sont rapidement très fréquentées en été. Une arrivée tôt le matin permet de profiter d'un cadre beaucoup plus paisible.
+</p>
+
+</div>
+
+<div class="card fade-up">
+
+<h3>☀️ Sous-estimer le soleil méditerranéen</h3>
+
+<p>
+Entre mai et septembre, les températures peuvent rapidement grimper. Pense à emporter de l'eau, de la crème solaire et un chapeau, surtout lors des randonnées ou des excursions en bateau.
+</p>
+
+</div>
+
+<div class="card fade-up">
+
+<h3>🥾 Négliger les temps de trajet</h3>
+
+<p>
+Même si Majorque paraît compacte, les routes de montagne sont sinueuses. Les déplacements dans la Serra de Tramuntana prennent souvent plus de temps que ce que l'on imagine.
+</p>
+
+</div>
+
+<div class="card fade-up">
+
+<h3>🌊 Se limiter aux plages de Palma</h3>
+
+<p>
+Palma possède de belles plages, mais les paysages les plus spectaculaires se découvrent dans les criques sauvages, les villages de montagne et les panoramas du nord et de l'ouest de l'île.
+</p>
 
 </div>
 
@@ -939,35 +2031,19 @@ Explorer
 <div class="info-box fade-up">
 
 <h2>
-Pourquoi Palma attire autant ?
+❓ FAQ Majorque
 </h2>
-
-<p>
-Palma mélange ambiance méditerranéenne,
-plages,
-rooftops,
-architecture historique
-et lifestyle premium.
-</p>
-
-<p>
-Entre les criques turquoise,
-les couchers de soleil,
-les beach clubs
-et les ruelles historiques,
-Majorque possède une atmosphère unique en Méditerranée.
-</p>
 
 <div class="faq">
 
 <div class="faq-item">
 
 <h3>
-🌊 Quand visiter Majorque ?
+Combien de jours faut-il pour visiter Majorque ?
 </h3>
 
 <p>
-Le printemps et l’été offrent les meilleures conditions pour profiter des plages et rooftops.
+Quatre à sept jours permettent de découvrir Palma, les principaux villages de la Serra de Tramuntana, plusieurs criques emblématiques et quelques-unes des plus belles excursions de l'île.
 </p>
 
 </div>
@@ -975,11 +2051,11 @@ Le printemps et l’été offrent les meilleures conditions pour profiter des pl
 <div class="faq-item">
 
 <h3>
-🏖️ Quelles plages voir ?
+Quelle est la meilleure période pour partir à Majorque ?
 </h3>
 
 <p>
-Cala Major, Illetas et les criques autour de Palma sont incontournables.
+Les mois d'avril à juin et de septembre à octobre offrent un excellent compromis entre météo agréable, mer tempérée et fréquentation plus faible qu'en plein été.
 </p>
 
 </div>
@@ -987,11 +2063,47 @@ Cala Major, Illetas et les criques autour de Palma sont incontournables.
 <div class="faq-item">
 
 <h3>
-🍹 Palma est-elle animée ?
+Faut-il louer une voiture à Majorque ?
 </h3>
 
 <p>
-Oui, Palma possède une nightlife élégante avec rooftops, bars et beach clubs.
+Oui, si tu souhaites explorer les villages, les criques et les routes panoramiques. En revanche, pour un séjour centré sur Palma, les transports en commun suffisent largement.
+</p>
+
+</div>
+
+<div class="faq-item">
+
+<h3>
+Quelles sont les plus belles plages de Majorque ?
+</h3>
+
+<p>
+Caló des Moro, Cala Varques, Cala Deià, Es Trenc, Cala Mondragó ou encore Cala Agulla figurent parmi les plus belles plages et criques de l'île.
+</p>
+
+</div>
+
+<div class="faq-item">
+
+<h3>
+Où séjourner pour une première visite ?
+</h3>
+
+<p>
+Palma constitue une excellente base pour découvrir l'île. Pour un séjour plus calme, les villages de Sóller, Port de Sóller, Alcúdia ou Pollença sont également très appréciés.
+</p>
+
+</div>
+
+<div class="faq-item">
+
+<h3>
+Majorque est-elle adaptée aux familles ?
+</h3>
+
+<p>
+Oui. Entre plages sécurisées, excursions en bateau, villages pittoresques, aquariums, parcs aquatiques et nombreuses activités de plein air, Majorque est une destination idéale pour voyager en famille.
 </p>
 
 </div>
@@ -1010,24 +2122,25 @@ Oui, Palma possède une nightlife élégante avec rooftops, bars et beach clubs.
 
 <img
 src="images/panorama-majorque.webp"
-alt="Panorama Palma">
+alt="Panorama de Majorque">
 
 <div class="map-preview-overlay">
 
 <h3>
-Entre Méditerranée et coucher de soleil
+Majorque, bien plus qu'une île
 </h3>
 
 <p>
-Entre mer turquoise,
-vieille ville,
-marina,
-rooftops
-et ambiance méditerranéenne,
-Palma de Majorque possède une atmosphère unique.
+Entre les villages suspendus de la Serra de Tramuntana,
+les criques aux eaux cristallines,
+les routes panoramiques,
+les couchers de soleil sur la Méditerranée
+et l'animation de Palma,
+Majorque offre un équilibre rare entre nature, aventure et douceur de vivre.
+Une destination où chaque journée donne envie d'en découvrir davantage.
 </p>
 
-<a href="destinations.html" class="map-button">
+<a href="destinations.html">
 Explorer les destinations →
 </a>
 
@@ -1042,7 +2155,7 @@ Explorer les destinations →
 <footer>
 
 <p>
-© 2026 Vidolta — Palma de Majorque
+© 2026 Vidolta — Palma de Majorque.
 </p>
 
 <div class="footer-links">
@@ -1058,11 +2171,15 @@ Explorer les destinations →
 
 </footer>
 
+<!-- BACK TO TOP -->
+
 <button class="back-to-top" id="backToTop">
 ↑
 </button>
 
 <script>
+
+/* MENU MOBILE */
 
 function toggleMenu(){
 
@@ -1078,6 +2195,8 @@ document.querySelectorAll('.nav-links a').forEach(link => {
     nav.classList.remove('active');
   });
 });
+
+/* ANIMATION */
 
 const observer = new IntersectionObserver(entries => {
 
@@ -1097,6 +2216,8 @@ document.querySelectorAll('.fade-up')
 .forEach(el => {
 observer.observe(el);
 });
+
+/* BACK TO TOP */
 
 const backToTop = document.getElementById('backToTop');
 
@@ -1122,5 +2243,4 @@ behavior:'smooth'
 </script>
 
 </body>
-
 </html>
