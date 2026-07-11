@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Athens Interactive Map | Vidolta</title>
+
+<meta name="description" content="Explore Athens with Vidolta's interactive map. Discover the Acropolis, Plaka, Monastiraki, Syntagma, Lycabettus Hill, museums, viewpoints and the city's must-see districts.">
+
+<link rel="canonical" href="https://vidolta.com/athenes-map-en.html">
+
+<link rel="alternate" hreflang="fr" href="https://vidolta.com/athenes-map.html">
+<link rel="alternate" hreflang="en" href="https://vidolta.com/athenes-map-en.html">
+<link rel="alternate" hreflang="x-default" href="https://vidolta.com/athenes-map.html">
+
+<meta property="og:type" content="website">
+<meta property="og:title" content="Athens Interactive Map | Vidolta">
+<meta property="og:description" content="Discover Athens' iconic landmarks, historic districts and panoramic viewpoints with Vidolta's interactive map.">
+<meta property="og:url" content="https://vidolta.com/athenes-map-en.html">
+<meta property="og:image" content="https://vidolta.com/images/athenes-map-en.webp">
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Athens Interactive Map | Vidolta">
+<meta name="twitter:description" content="Explore Athens' iconic landmarks, museums and neighborhoods with Vidolta's interactive map.">
+<meta name="twitter:image" content="https://vidolta.com/images/athenes-map-en.webp">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+body{
+font-family:'Poppins',sans-serif;
+
+background:
+radial-gradient(circle at top right,rgba(0,170,255,0.16),transparent 30%),
+radial-gradient(circle at top left,rgba(255,184,77,0.12),transparent 24%),
+linear-gradient(to bottom,#081320 0%,#09111f 100%);
+
+color:white;
+
+min-height:100vh;
+
+padding:40px 20px;
+}
+
+/* HEADER */
+
+.map-header{
+max-width:1200px;
+margin:auto auto 40px;
+
+text-align:center;
+}
+
+.map-header h1{
+font-size:3.6rem;
+margin-bottom:16px;
+
+letter-spacing:-2px;
+}
+
+.map-header h1 span{
+background:linear-gradient(90deg,#38bdf8,#fbbf24);
+
+-webkit-background-clip:text;
+-webkit-text-fill-color:transparent;
+}
+
+.map-header p{
+max-width:860px;
+margin:auto;
+
+line-height:1.8;
+
+color:#cbd5e1;
+
+font-size:1.05rem;
+}
+
+/* MAP */
+
+.map-container{
+max-width:1400px;
+margin:auto;
+}
+
+.map-card{
+position:relative;
+
+overflow:hidden;
+
+border-radius:34px;
+
+border:1px solid rgba(255,255,255,0.06);
+
+box-shadow:0 20px 45px rgba(0,0,0,0.35);
+
+background:#0f172a;
+}
+
+.map-card img{
+width:100%;
+display:block;
+}
+
+/* GRID */
+
+.info-grid{
+max-width:1400px;
+
+margin:40px auto 0;
+
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+
+gap:20px;
+}
+
+.info-card{
+background:
+linear-gradient(
+135deg,
+rgba(14,24,45,0.92),
+rgba(8,15,30,0.88)
+);
+
+padding:26px;
+
+border-radius:26px;
+
+border:1px solid rgba(255,255,255,0.05);
+
+box-shadow:0 12px 35px rgba(0,0,0,0.24);
+
+transition:0.35s;
+}
+
+.info-card:hover{
+transform:translateY(-6px);
+
+border-color:rgba(56,189,248,0.45);
+}
+
+.info-card h3{
+font-size:1.2rem;
+margin-bottom:14px;
+}
+
+.info-card p{
+line-height:1.7;
+color:#cbd5e1;
+font-size:0.96rem;
+}
+
+/* CTA */
+
+.bottom-cta{
+max-width:1200px;
+
+margin:50px auto 0;
+
+padding:40px;
+
+border-radius:30px;
+
+background:
+linear-gradient(
+135deg,
+rgba(56,189,248,0.18),
+rgba(251,191,36,0.14)
+);
+
+border:1px solid rgba(255,255,255,0.05);
+
+text-align:center;
+}
+
+.bottom-cta h2{
+font-size:2rem;
+margin-bottom:16px;
+}
+
+.bottom-cta p{
+max-width:800px;
+margin:auto auto 24px;
+
+line-height:1.8;
+
+color:#dbe4f0;
+}
+
+.bottom-cta a{
+display:inline-block;
+
+padding:14px 22px;
+
+background:white;
+
+color:#111827;
+
+border-radius:14px;
+
+font-weight:700;
+
+text-decoration:none;
+
+transition:0.3s;
+}
+
+.bottom-cta a:hover{
+transform:translateY(-2px);
+}
+
+/* MOBILE */
+
+@media(max-width:900px){
+
+body{
+padding:24px 16px;
+}
+
+.map-header h1{
+font-size:2.5rem;
+}
+
+.map-header p{
+font-size:0.96rem;
+line-height:1.7;
+}
+
+.map-card{
+border-radius:24px;
+}
+
+.bottom-cta{
+padding:28px;
+}
+
+.bottom-cta h2{
+font-size:1.6rem;
+}
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<!-- HEADER -->
+
+<section class="map-header">
+
+<h1>
+Map of <span>Athens</span>
+</h1>
+
+<p>
+Discover Athens’ main metro lines,
+must-see ancient landmarks,
+iconic neighborhoods,
+the port of Piraeus,
+lively areas
+and the major sights of the Greek capital.
+</p>
+
+</section>
+
+<!-- MAP -->
+
+<section class="map-container">
+
+<div class="map-card">
+
+<img
+src="images/athenes-map-en.webp"
+alt="Interactive map of Athens">
+
+</div>
+
+</section>
+
+<!-- INFORMATION -->
+
+<section class="info-grid">
+
+<div class="info-card">
+
+<h3>
+🚇 Athens Metro
+</h3>
+
+<p>
+The metro network provides quick access
+to the historic center,
+the airport,
+Piraeus
+and the city’s main tourist districts.
+</p>
+
+</div>
+
+<div class="info-card">
+
+<h3>
+🏛️ Iconic Landmarks
+</h3>
+
+<p>
+The Acropolis,
+the Parthenon,
+the Temple of Olympian Zeus,
+the Ancient Agora
+and the Panathenaic Stadium are among the city’s major sights.
+</p>
+
+</div>
+
+<div class="info-card">
+
+<h3>
+🌊 Neighborhoods & Atmosphere
+</h3>
+
+<p>
+Plaka,
+Monastiraki,
+Psyrri
+and the Athens Riviera offer
+a unique Mediterranean atmosphere.
+</p>
+
+</div>
+
+<div class="info-card">
+
+<h3>
+🌅 Athens by Night
+</h3>
+
+<p>
+Rooftops overlooking the Acropolis,
+hidden bars,
+traditional Greek tavernas
+and lively summer evenings bring the city to life.
+</p>
+
+</div>
+
+</section>
+
+<!-- CTA -->
+
+<section class="bottom-cta">
+
+<h2>
+Explore Athens with Vidolta
+</h2>
+
+<p>
+Discover the best activities,
+restaurants,
+neighborhoods,
+local experiences
+and must-see places in Athens.
+</p>
+
+<a href="athenes-en.html">
+Back to the Athens guide →
+</a>
+
+</section>
+
+</body>
+
+</html>
