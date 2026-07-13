@@ -102,8 +102,6 @@
 <url><loc>https://www.vidolta.com/tokyo.html</loc></url> 
   
 <url><loc>https://www.vidolta.com/tokyo-map.html</loc></url>
-
-<url><loc>https://www.vidolta.com/bordeaux.html</loc></url> 
   
 <url><loc>https://www.vidolta.com/lyon.html</loc></url> 
   
@@ -260,5 +258,13 @@
 <url><loc>https://www.vidolta.com/athenes-en.html</loc></url> 
   
 <url><loc>https://www.vidolta.com/athenes-map-en.html</loc></url>
+
+<url>
+<loc>https://www.vidolta.com/nantes-en.html</loc>
+</url>
+
+<url>
+<loc>https://www.vidolta.com/nantes-map-en.html</loc>
+</url>
 
 </urlset>
