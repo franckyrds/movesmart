@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Istanbul Map — Vidolta</title>
+
+<meta name="description"
+content="Explore the map of Istanbul with its main neighbourhoods, landmarks, metro lines, tram lines, ferries, airports and must-see places across the city.">
+
+<link rel="canonical"
+href="https://www.vidolta.com/istanbul-map-en.html">
+
+<link rel="alternate"
+hreflang="fr"
+href="https://www.vidolta.com/istanbul-map.html">
+
+<link rel="alternate"
+hreflang="en"
+href="https://www.vidolta.com/istanbul-map-en.html">
+
+<link rel="alternate"
+hreflang="x-default"
+href="https://www.vidolta.com/istanbul-map.html">
+
+<meta name="theme-color"
+content="#0f766e">
+
+<meta property="og:type"
+content="website">
+
+<meta property="og:title"
+content="Istanbul Map — Vidolta">
+
+<meta property="og:description"
+content="Explore the map of Istanbul with its main neighbourhoods, landmarks, transport connections and must-see places across the city.">
+
+<meta property="og:url"
+content="https://www.vidolta.com/istanbul-map-en.html">
+
+<meta property="og:site_name"
+content="Vidolta">
+
+<meta property="og:locale"
+content="en_US">
+
+<meta property="og:locale:alternate"
+content="fr_FR">
+
+<meta property="og:image"
+content="https://www.vidolta.com/images/istanbul-map.webp">
+
+<link rel="icon"
+type="image/png"
+href="favicon-96x96.png"
+sizes="96x96">
+
+<link rel="icon"
+type="image/svg+xml"
+href="favicon.svg">
+
+<link rel="shortcut icon"
+href="favicon.ico">
+
+<link rel="apple-touch-icon"
+sizes="180x180"
+href="apple-touch-icon.png">
+
+<meta name="apple-mobile-web-app-title"
+content="Vidolta">
+
+<link rel="manifest"
+href="site.webmanifest">
+
+<link rel="preconnect"
+href="https://fonts.googleapis.com">
+
+<link rel="preconnect"
+href="https://fonts.gstatic.com"
+crossorigin>
+
+<link
+href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+rel="stylesheet">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+body{
+font-family:'Poppins',sans-serif;
+
+background:
+radial-gradient(circle at top right,rgba(46,196,182,0.16),transparent 30%),
+radial-gradient(circle at top left,rgba(56,189,248,0.12),transparent 25%),
+linear-gradient(to bottom,#0b1426 0%,#09111f 100%);
+
+color:white;
+
+min-height:100vh;
+
+padding:40px 20px;
+}
+
+/* HEADER */
+
+.map-header{
+max-width:1200px;
+margin:auto auto 40px;
+
+text-align:center;
+}
+
+.map-header h1{
+font-size:3.6rem;
+margin-bottom:16px;
+
+letter-spacing:-2px;
+}
+
+.map-header h1 span{
+background:linear-gradient(90deg,#2ec4b6,#38bdf8);
+
+-webkit-background-clip:text;
+-webkit-text-fill-color:transparent;
+background-clip:text;
+}
+
+.map-header p{
+max-width:850px;
+margin:auto;
+
+line-height:1.8;
+
+color:#cbd5e1;
+
+font-size:1.05rem;
+}
+
+/* MAP */
+
+.map-container{
+max-width:1400px;
+margin:auto;
+}
+
+.map-card{
+position:relative;
+
+overflow:hidden;
+
+border-radius:34px;
+
+border:1px solid rgba(255,255,255,0.06);
+
+box-shadow:0 20px 45px rgba(0,0,0,0.35);
+
+background:#0f172a;
+}
+
+.map-card img{
+width:100%;
+display:block;
+}
+
+/* GRID */
+
+.info-grid{
+max-width:1400px;
+
+margin:40px auto 0;
+
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+
+gap:20px;
+}
+
+.info-card{
+background:
+linear-gradient(
+135deg,
+rgba(18,26,52,0.92),
+rgba(12,18,38,0.88)
+);
+
+padding:26px;
+
+border-radius:26px;
+
+border:1px solid rgba(255,255,255,0.05);
+
+box-shadow:0 12px 35px rgba(0,0,0,0.24);
+
+transition:0.35s;
+}
+
+.info-card:hover{
+transform:translateY(-6px);
+
+border-color:rgba(46,196,182,0.45);
+}
+
+.info-card h3{
+font-size:1.2rem;
+margin-bottom:14px;
+}
+
+.info-card p{
+line-height:1.7;
+color:#cbd5e1;
+font-size:0.96rem;
+}
+
+/* CTA */
+
+.bottom-cta{
+max-width:1200px;
+
+margin:50px auto 0;
+
+padding:40px;
+
+border-radius:30px;
+
+background:
+linear-gradient(
+135deg,
+rgba(46,196,182,0.22),
+rgba(56,189,248,0.16)
+);
+
+border:1px solid rgba(255,255,255,0.05);
+
+text-align:center;
+}
+
+.bottom-cta h2{
+font-size:2rem;
+margin-bottom:16px;
+}
+
+.bottom-cta p{
+max-width:800px;
+margin:auto auto 24px;
+
+line-height:1.8;
+
+color:#dbe4f0;
+}
+
+.bottom-cta a{
+display:inline-block;
+
+padding:14px 22px;
+
+background:white;
+
+color:#111827;
+
+border-radius:14px;
+
+font-weight:700;
+
+transition:0.3s;
+}
+
+.bottom-cta a:hover{
+transform:translateY(-2px);
+}
+
+/* MOBILE */
+
+@media(max-width:900px){
+
+body{
+padding:24px 16px;
+}
+
+.map-header h1{
+font-size:2.5rem;
+}
+
+.map-header p{
+font-size:0.96rem;
+line-height:1.7;
+}
+
+.map-card{
+border-radius:24px;
+}
+
+.bottom-cta{
+padding:28px;
+}
+
+.bottom-cta h2{
+font-size:1.6rem;
+}
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<!-- HEADER -->
+
+<section class="map-header">
+
+<h1>
+Map of <span>Istanbul</span>
+</h1>
+
+<p>
+Find the Bosphorus,
+ferry routes,
+the T1 tram,
+Galata,
+Kadıköy,
+Hagia Sophia
+and Istanbul’s must-see neighbourhoods.
+</p>
+
+</section>
+
+<!-- MAP -->
+
+<section class="map-container">
+
+<div class="map-card">
+
+<img
+src="images/istanbul-map.webp"
+alt="Map of Istanbul showing the main neighbourhoods, landmarks and transport connections">
+
+</div>
+
+</section>
+
+<!-- INFORMATION -->
+
+<section class="info-grid">
+
+<div class="info-card">
+
+<h3>
+🚋 Tram & Metro
+</h3>
+
+<p>
+The T1 tram and metro network provide quick access to Istanbul’s main attractions.
+</p>
+
+</div>
+
+<div class="info-card">
+
+<h3>
+⛴️ Bosphorus & Ferries
+</h3>
+
+<p>
+Travel easily between Europe and Asia aboard Istanbul’s iconic ferries.
+</p>
+
+</div>
+
+<div class="info-card">
+
+<h3>
+🕌 Historic Landmarks
+</h3>
+
+<p>
+Hagia Sophia,
+the Blue Mosque,
+Topkapi Palace
+and the Grand Bazaar are among the city’s must-see sights.
+</p>
+
+</div>
+
+<div class="info-card">
+
+<h3>
+⚽ Football & Nightlife
+</h3>
+
+<p>
+Galatasaray,
+Fenerbahçe,
+rooftop venues and Istanbul’s vibrant nightlife give the city its unique energy.
+</p>
+
+</div>
+
+</section>
+
+<!-- CTA -->
+
+<section class="bottom-cta">
+
+<h2>
+Explore Istanbul with Vidolta
+</h2>
+
+<p>
+Discover the best activities,
+cruises,
+restaurants,
+neighbourhoods and unforgettable experiences in Istanbul.
+</p>
+
+<a href="istanbul-en.html">
+Return to the Istanbul guide →
+</a>
+
+</section>
+
+</body>
+
+</html>
