@@ -1,81 +1,3 @@
-<!DOCTYPE html>
-<html lang="fr">
-
-<head>
-
-<meta charset="UTF-8"/>
-<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-
-<title>Guide de Marrakech, Hôtels, Restaurants & Activités | Vidolta</title>
-
-<meta name="description"
-content="Découvrez Marrakech avec Vidolta : médina, souks, jardins, riads, désert d'Agafay, montagnes de l'Atlas, restaurants, hébergements et expériences incontournables au Maroc.">
-
-<link rel="canonical"
-href="https://www.vidolta.com/marrakech.html">
-
-<link rel="alternate"
-hreflang="fr"
-href="https://www.vidolta.com/marrakech.html">
-
-<link rel="alternate"
-hreflang="x-default"
-href="https://www.vidolta.com/marrakech.html">
-
-<meta name="theme-color"
-content="#060b1f">
-
-<meta property="og:type"
-content="website">
-
-<meta property="og:title"
-content="Guide de Marrakech, Hôtels, Restaurants & Activités | Vidolta">
-
-<meta property="og:description"
-content="Découvrez Marrakech avec Vidolta : médina, souks, jardins, riads, désert d'Agafay, montagnes de l'Atlas, restaurants, hébergements et expériences incontournables au Maroc.">
-
-<meta property="og:url"
-content="https://www.vidolta.com/marrakech.html">
-
-<meta property="og:image"
-content="https://www.vidolta.com/images/homepage.webp">
-
-<meta property="og:site_name"
-content="Vidolta">
-
-<link rel="icon"
-type="image/png"
-href="favicon-96x96.png"
-sizes="96x96">
-
-<link rel="icon"
-type="image/svg+xml"
-href="favicon.svg">
-
-<link rel="shortcut icon"
-href="favicon.ico">
-
-<link rel="apple-touch-icon"
-sizes="180x180"
-href="apple-touch-icon.png">
-
-<meta name="apple-mobile-web-app-title"
-content="Vidolta">
-
-<link rel="manifest"
-href="site.webmanifest">
-
-<link rel="preconnect"
-href="https://fonts.googleapis.com">
-
-<link rel="preconnect"
-href="https://fonts.gstatic.com"
-crossorigin>
-
-<link
-href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
-rel="stylesheet">
-
 <style>
 
 *{
@@ -92,9 +14,9 @@ box-sizing:border-box;
 --muted:#94a3b8;
 }
 
- html{
+html{
 scroll-behavior:smooth;
-scroll-padding-top:80px;
+scroll-padding-top:60px;
 }
 
 body{
@@ -103,7 +25,7 @@ font-family:'Poppins',sans-serif;
 background:
 radial-gradient(circle at top right,rgba(249,115,22,0.18),transparent 30%),
 radial-gradient(circle at top left,rgba(245,158,11,0.14),transparent 25%),
-linear-gradient(to bottom,#081120 0%,#050816 100%);
+linear-gradient(to bottom,#11101b 0%,#080b16 100%);
 
 color:var(--text);
 
@@ -190,7 +112,7 @@ height:100%;
 
 object-fit:cover;
 
-filter:brightness(0.82);
+filter:brightness(0.78);
 }
 
 .hero::after{
@@ -202,8 +124,8 @@ inset:0;
 background:
 linear-gradient(
 to bottom,
-rgba(5,8,22,0.12),
-rgba(5,8,22,0.40)
+rgba(5,8,22,0.10),
+rgba(5,8,22,0.44)
 );
 
 z-index:1;
@@ -213,19 +135,19 @@ z-index:1;
 position:relative;
 z-index:2;
 padding:20px;
-max-width:900px;
+max-width:920px;
 }
 
 .hero h1{
-font-size:5rem;
-line-height:0.92;
+font-size:5.4rem;
+line-height:1.05;
 letter-spacing:-4px;
 
 margin-bottom:22px;
 }
 
 .hero h1 span{
-background:linear-gradient(90deg,#f97316,#f59e0b);
+background:linear-gradient(90deg,#f97316,#fbbf24);
 
 -webkit-background-clip:text;
 -webkit-text-fill-color:transparent;
@@ -233,7 +155,7 @@ background:linear-gradient(90deg,#f97316,#f59e0b);
 
 .hero p{
 font-size:1.2rem;
-line-height:1.8;
+line-height:1.9;
 color:#e2e8f0;
 margin-bottom:18px;
 }
@@ -270,9 +192,11 @@ margin-right:auto;
 background:
 linear-gradient(
 135deg,
-rgba(18,26,52,0.92),
-rgba(12,18,38,0.88)
+rgba(42,28,24,0.94),
+rgba(24,20,27,0.90)
 );
+
+backdrop-filter:blur(12px);
 
 padding:24px;
 
@@ -282,13 +206,14 @@ border:1px solid rgba(255,255,255,0.05);
 
 box-shadow:0 10px 30px rgba(0,0,0,0.25);
 
+text-align:center;
+
 transition:0.35s;
 }
 
 .quick-card:hover{
 transform:translateY(-5px);
-
-border-color:rgba(249,115,22,0.4);
+border-color:rgba(249,115,22,0.42);
 }
 
 .quick-card h3{
@@ -316,16 +241,18 @@ font-size:2.8rem;
 margin-bottom:34px;
 }
 
-/* MAP */
+/* MAP PREVIEW */
 
 .map-preview{
 position:relative;
 
-overflow:hidden;
+display:block;
 
-height:380px;
+height:400px;
 
 border-radius:34px;
+
+overflow:hidden;
 
 border:1px solid rgba(255,255,255,0.06);
 
@@ -338,7 +265,7 @@ height:100%;
 
 object-fit:cover;
 
-filter:brightness(0.82);
+filter:brightness(0.80);
 }
 
 .map-preview-overlay{
@@ -354,7 +281,7 @@ justify-content:flex-end;
 background:
 linear-gradient(
 to top,
-rgba(0,0,0,0.46),
+rgba(0,0,0,0.50),
 rgba(0,0,0,0.18)
 );
 }
@@ -371,8 +298,10 @@ color:#dbe4f0;
 margin-bottom:24px;
 }
 
-.map-button{
+.map-preview-overlay span{
 display:inline-block;
+
+margin-top:10px;
 
 padding:14px 20px;
 
@@ -385,6 +314,51 @@ border-radius:14px;
 font-weight:700;
 
 width:fit-content;
+}
+
+.marrakech-tags{
+display:flex;
+flex-wrap:wrap;
+gap:12px;
+}
+
+.marrakech-tags span{
+padding:10px 16px;
+
+border-radius:18px;
+
+background:rgba(255,255,255,0.08);
+
+backdrop-filter:blur(18px);
+
+border:1px solid rgba(255,255,255,0.08);
+
+font-size:0.9rem;
+
+color:white;
+}
+
+.map-button{
+display:inline-block;
+
+padding:14px 20px;
+
+background:#f97316;
+
+color:white;
+
+border-radius:14px;
+
+font-weight:700;
+
+width:fit-content;
+
+transition:0.3s;
+}
+
+.map-button:hover{
+background:#ea580c;
+transform:translateY(-2px);
 }
 
 /* GRID */
@@ -401,8 +375,8 @@ gap:18px;
 background:
 linear-gradient(
 135deg,
-rgba(18,26,52,0.92),
-rgba(12,18,38,0.88)
+rgba(42,28,24,0.94),
+rgba(24,20,27,0.90)
 );
 
 padding:24px;
@@ -419,18 +393,20 @@ transition:0.35s;
 .card:hover{
 transform:translateY(-6px);
 
-border-color:rgba(249,115,22,0.45);
+border-color:rgba(249,115,22,0.42);
+
+box-shadow:0 15px 35px rgba(0,0,0,0.28);
 }
 
 .card h3{
 font-size:1.35rem;
-margin-bottom:12px;
+margin-bottom:16px;
 }
 
 .card p{
 line-height:1.65;
 color:#cbd5e1;
-margin-bottom:16px;
+margin-bottom:22px;
 }
 
 .price{
@@ -451,6 +427,13 @@ color:white;
 border-radius:12px;
 
 font-weight:600;
+
+transition:0.3s;
+}
+
+.card a:hover{
+background:#ea580c;
+transform:translateY(-2px);
 }
 
 /* INFO */
@@ -462,7 +445,12 @@ margin:auto;
 }
 
 .info-box{
-background:#111827;
+background:
+linear-gradient(
+135deg,
+rgba(42,28,24,0.95),
+rgba(24,20,27,0.92)
+);
 
 padding:35px;
 
@@ -470,7 +458,7 @@ border-radius:28px;
 
 border:1px solid rgba(255,255,255,0.05);
 
-line-height:1.7;
+line-height:1.9;
 
 color:#cbd5e1;
 }
@@ -479,6 +467,10 @@ color:#cbd5e1;
 font-size:2rem;
 margin-bottom:22px;
 color:white;
+}
+
+.info-box p{
+margin-bottom:18px;
 }
 
 /* FAQ */
@@ -490,13 +482,25 @@ gap:18px;
 }
 
 .faq-item{
-background:#1e293b;
+background:
+linear-gradient(
+135deg,
+rgba(63,40,25,0.92),
+rgba(35,27,22,0.92)
+);
 
 padding:24px;
 
 border-radius:22px;
 
 border:1px solid rgba(255,255,255,0.05);
+
+transition:0.3s;
+}
+
+.faq-item:hover{
+border-color:rgba(249,115,22,0.35);
+transform:translateY(-2px);
 }
 
 .faq-item h3{
@@ -507,6 +511,90 @@ font-size:1.05rem;
 .faq-item p{
 color:#cbd5e1;
 line-height:1.7;
+}
+
+/* CTA */
+
+.cta{
+position:relative;
+
+overflow:hidden;
+
+border-radius:32px;
+
+min-height:420px;
+
+display:flex;
+align-items:center;
+justify-content:center;
+
+text-align:center;
+}
+
+.cta img{
+position:absolute;
+inset:0;
+
+width:100%;
+height:100%;
+
+object-fit:cover;
+
+filter:brightness(0.74);
+}
+
+.cta::after{
+content:'';
+
+position:absolute;
+inset:0;
+
+background:
+linear-gradient(
+to bottom,
+rgba(5,8,22,0.18),
+rgba(5,8,22,0.48)
+);
+}
+
+.cta-content{
+position:relative;
+z-index:2;
+
+padding:40px;
+
+max-width:850px;
+}
+
+.cta h2{
+font-size:2.8rem;
+margin-bottom:18px;
+}
+
+.cta p{
+line-height:1.9;
+color:#e2e8f0;
+margin-bottom:30px;
+}
+
+.cta a{
+display:inline-block;
+
+padding:16px 24px;
+
+background:white;
+
+color:#111827;
+
+font-weight:700;
+
+border-radius:16px;
+
+transition:0.3s;
+}
+
+.cta a:hover{
+transform:translateY(-2px);
 }
 
 /* FOOTER */
@@ -528,17 +616,13 @@ flex-wrap:wrap;
 gap:18px;
 }
 
-/* ANIMATION */
-
-.fade-up{
-opacity:0;
-transform:translateY(30px);
-transition:0.8s ease;
+.footer-links a{
+color:#cbd5e1;
+transition:0.3s;
 }
 
-.fade-up.visible{
-opacity:1;
-transform:translateY(0);
+.footer-links a:hover{
+color:white;
 }
 
 /* BACK TO TOP */
@@ -567,6 +651,8 @@ display:flex;
 align-items:center;
 justify-content:center;
 
+box-shadow:0 10px 25px rgba(0,0,0,0.3);
+
 opacity:0;
 pointer-events:none;
 
@@ -578,6 +664,19 @@ z-index:999;
 .back-to-top.show{
 opacity:1;
 pointer-events:auto;
+}
+
+/* ANIMATION */
+
+.fade-up{
+opacity:0;
+transform:translateY(30px);
+transition:0.8s ease;
+}
+
+.fade-up.visible{
+opacity:1;
+transform:translateY(0);
 }
 
 /* MOBILE */
@@ -597,11 +696,20 @@ top:78px;
 left:20px;
 right:20px;
 
-background:#111827;
+background:
+linear-gradient(
+135deg,
+rgba(42,28,24,0.98),
+rgba(24,20,27,0.98)
+);
 
 padding:22px;
 
 border-radius:26px;
+
+border:1px solid rgba(255,255,255,0.05);
+
+box-shadow:0 18px 40px rgba(0,0,0,0.32);
 
 flex-direction:column;
 
@@ -610,6 +718,10 @@ z-index:999;
 
 .nav-links.active{
 display:flex;
+}
+
+.hero{
+height:72vh;
 }
 
 .hero h1{
@@ -624,6 +736,10 @@ line-height:1.7;
 
 .quick-guide{
 margin-top:-20px;
+}
+
+.quick-card{
+padding:20px;
 }
 
 .section{
@@ -647,12 +763,35 @@ padding:24px;
 font-size:1.5rem;
 }
 
+.map-preview-overlay p{
+font-size:0.95rem;
+line-height:1.7;
+}
+
+.marrakech-tags span{
+font-size:0.8rem;
+padding:9px 14px;
+}
+
 .info-box{
 padding:26px;
 }
 
 .info-box h2{
 font-size:1.6rem;
+}
+
+.cta{
+min-height:360px;
+border-radius:28px;
+}
+
+.cta-content{
+padding:24px;
+}
+
+.cta h2{
+font-size:2rem;
 }
 
 }
@@ -662,6 +801,8 @@ font-size:1.6rem;
 </head>
 
 <body>
+
+<!-- NAVBAR -->
 
 <nav class="navbar">
 
@@ -675,14 +816,19 @@ font-size:1.6rem;
 
 <div class="nav-links">
 
-<a href="index.html">Accueil</a>
+<a href="#experiences">Expériences</a>
+
 <a href="#mobilite">Mobilité</a>
+
+<a href="#ou-dormir">Où dormir</a>
+
 <a href="#restaurants">Restaurants</a>
+
 <a href="#activites">Activités</a>
 
-<a href="destinations.html">
-← Retour
-</a>
+<a href="#autour">Autour</a>
+
+<a href="destinations.html">🌍 Destinations</a>
 
 </div>
 
@@ -695,24 +841,17 @@ font-size:1.6rem;
 <img
 loading="lazy"
 src="images/marrakech.webp"
-alt="Marrakech">
+alt="Vue panoramique de Marrakech au coucher du soleil">
 
 <div class="hero-overlay">
 
 <h1>
-<span>Entre palmiers et lumières dorées, Marrakech fascine</span>
+Marrakech<br>
+<span>Entre médina et désert</span>
 </h1>
 
 <p>
-Explore Marrakech entre médina,
-souks,
-riads,
-rooftops marocains,
-désert et ambiance orientale unique.
-</p>
-
-<p class="subtitle">
-Riads • Médina • Désert • Rooftops • Atlas
+Entre palais, riads, jardins luxuriants et montagnes de l'Atlas, découvre une ville où chaque ruelle dévoile une nouvelle facette du Maroc.
 </p>
 
 </div>
@@ -726,28 +865,28 @@ Riads • Médina • Désert • Rooftops • Atlas
 <div class="quick-card fade-up">
 <h3>🕌 Médina & souks</h3>
 <p>
-Découvre les ruelles historiques et l’atmosphère unique de Marrakech.
+Perds-toi dans les ruelles animées, les échoppes artisanales et l'atmosphère unique de la vieille ville.
 </p>
 </div>
 
 <div class="quick-card fade-up">
-<h3>🍽️ Rooftops & tajines</h3>
+<h3>🐪 Désert & Atlas</h3>
 <p>
-Profite des meilleures adresses marocaines et rooftops de la ville.
+Pars en excursion vers le désert d'Agafay, les villages berbères et les sommets de l'Atlas à quelques kilomètres de Marrakech.
 </p>
 </div>
 
 <div class="quick-card fade-up">
-<h3>🏜️ Désert & Atlas</h3>
+<h3>🥘 Saveurs marocaines</h3>
 <p>
-Pars explorer Agafay, les montagnes de l’Atlas et les excursions marocaines.
+Tajines, couscous, pâtisseries orientales, thé à la menthe et rooftops offrent une véritable immersion culinaire.
 </p>
 </div>
 
 <div class="quick-card fade-up">
-<h3>🚖 Mobilité Marrakech</h3>
+<h3>🌴 Palais & jardins</h3>
 <p>
-Rejoins facilement les quartiers principaux et les lieux incontournables.
+Du Jardin Majorelle au palais Bahia en passant par les riads traditionnels, Marrakech dévoile tout son raffinement.
 </p>
 </div>
 
@@ -758,27 +897,23 @@ Rejoins facilement les quartiers principaux et les lieux incontournables.
 <section class="section">
 
 <h2 class="section-title fade-up">
-🕌 Comprendre Marrakech rapidement
+🗺️ Comprendre Marrakech rapidement
 </h2>
 
 <div class="map-preview fade-up">
 
 <img
 src="images/marrakech-map.webp"
-alt="Carte Marrakech">
+alt="Carte de Marrakech">
 
 <div class="map-preview-overlay">
 
 <h3>
-Voir la carte interactive de Marrakech
+La carte essentielle de Marrakech
 </h3>
 
 <p>
-Médina,
-Jemaa el-Fna,
-Majorelle,
-Guéliz,
-Hivernage et lieux incontournables de Marrakech.
+Médina, Jemaa el-Fna, Jardin Majorelle, Guéliz, Hivernage, Palmeraie, principaux monuments et quartiers incontournables pour explorer facilement la ville.
 </p>
 
 <a href="marrakech-map.html" class="map-button">
@@ -791,7 +926,206 @@ Explorer la carte →
 
 </section>
 
-<!-- MOBILITE -->
+<!-- EXPERIENCES MEMORABLES -->
+
+<section class="section experiences-theme" id="experiences">
+
+<h2 class="section-title fade-up">
+✨ Les expériences qui rendent Marrakech inoubliable
+</h2>
+
+<p style="
+text-align:center;
+max-width:850px;
+margin:0 auto 35px;
+color:#cbd5e1;
+line-height:1.8;">
+Marrakech se vit autant qu'elle se visite. Entre le silence du désert au lever du soleil, les montagnes de l'Atlas, les souks parfumés d'épices, les hammams traditionnels et les dîners sous les étoiles, chaque journée réserve une nouvelle aventure. Des expériences authentiques qui font de la ville rouge l'une des destinations les plus dépaysantes du Maroc.
+</p>
+
+<div class="grid">
+
+<div class="card fade-up">
+
+<img
+src="images/montgolfiere-marrakech.webp"
+alt="Vol en montgolfière au-dessus de Marrakech"
+style="width:100%;height:220px;object-fit:cover;border-radius:18px;margin-bottom:18px;">
+
+<h3>🎈 Survoler Marrakech en montgolfière au lever du soleil</h3>
+
+<p>
+Laisse le soleil illuminer progressivement le désert et les montagnes de l'Atlas tandis que la montgolfière s'élève dans un silence absolu. L'expérience se termine par un petit-déjeuner berbère traditionnel et un certificat souvenir.
+</p>
+
+<a
+href="https://www.getyourguide.fr/marrakech-l208/marrakech-vol-en-montgolfiere-petit-dejeuner-berbere-et-certificat-t743273/?partner_id=F9OV4TP&utm_medium=online_publisher"
+target="_blank"
+rel="noopener sponsored">
+🎈 Réserver le vol →
+</a>
+
+</div>
+
+<div class="card fade-up">
+
+<img
+src="images/agafay-quad.webp"
+alt="Quad et balade à dos de dromadaire dans le désert d'Agafay"
+style="width:100%;height:220px;object-fit:cover;border-radius:18px;margin-bottom:18px;">
+
+<h3>🐪 Vivre une soirée magique dans le désert d'Agafay</h3>
+
+<p>
+Traverse les pistes du désert en quad, profite d'une balade à dos de dromadaire au coucher du soleil puis partage un dîner berbère accompagné de musique et de spectacles sous les étoiles. Une soirée emblématique de Marrakech.
+</p>
+
+<a
+href="https://www.getyourguide.fr/marrakech-l208/marrakech-balade-a-dos-de-chameau-et-quad-dans-le-desert-d-agafay-avec-diner-spectacle-t486696/?partner_id=F9OV4TP&utm_medium=online_publisher"
+target="_blank"
+rel="noopener sponsored">
+🐪 Découvrir Agafay →
+</a>
+
+</div>
+
+<div class="card fade-up">
+
+<img
+src="images/ourika-atlas.webp"
+alt="Vallée de l'Ourika et montagnes de l'Atlas"
+style="width:100%;height:220px;object-fit:cover;border-radius:18px;margin-bottom:18px;">
+
+<h3>⛰️ Explorer la vallée de l'Ourika et l'Atlas</h3>
+
+<p>
+Pars à la découverte des villages berbères, des cascades de l'Ourika et des paysages spectaculaires du Haut Atlas. Une journée entre nature, randonnée et traditions marocaines, loin de l'agitation de la médina.
+</p>
+
+<a
+href="https://www.getyourguide.fr/setti-fadma-l109847/marrakech-cascades-de-l-ourika-montagnes-de-l-atlas-guide-dejeuner-t646065/?partner_id=F9OV4TP&utm_medium=online_publisher"
+target="_blank"
+rel="noopener sponsored">
+⛰️ Explorer l'Atlas →
+</a>
+
+</div>
+
+<div class="card fade-up">
+
+<img
+src="images/merzouga-sahara.webp"
+alt="Désert du Sahara à Merzouga"
+style="width:100%;height:220px;object-fit:cover;border-radius:18px;margin-bottom:18px;">
+
+<h3>🏜️ Dormir au cœur du désert du Sahara</h3>
+
+<p>
+Traverse les montagnes de l'Atlas jusqu'aux dunes dorées de Merzouga, profite d'une balade à dos de dromadaire et passe la nuit dans un camp berbère sous un ciel étoilé. Une aventure inoubliable de trois jours.
+</p>
+
+<a
+href="https://www.getyourguide.fr/marrakech-l208/de-marrakech-a-merzouga-3-jours-d-aventure-dans-le-desert-t482521/?partner_id=F9OV4TP&utm_medium=online_publisher"
+target="_blank"
+rel="noopener sponsored">
+🏜️ Partir dans le Sahara →
+</a>
+
+</div>
+
+<div class="card fade-up">
+
+<img
+src="images/cuisine-marocaine.webp"
+alt="Cours de cuisine marocaine"
+style="width:100%;height:220px;object-fit:cover;border-radius:18px;margin-bottom:18px;">
+
+<h3>🍲 Préparer un véritable tajine marocain</h3>
+
+<p>
+Accompagné d'un chef local, découvre les épices, visite le marché puis cuisine un tajine traditionnel avant de partager le repas dans une ambiance chaleureuse. Une immersion gourmande au cœur de la culture marocaine.
+</p>
+
+<a
+href="https://www.viator.com/fr-CH/tours/Marrakech/Cooking-Class-Chef-Laila/d5408-340051P2?pid=P00306030&mcid=42383&medium=link"
+target="_blank"
+rel="noopener sponsored">
+🍲 Participer au cours →
+</a>
+
+</div>
+
+<div class="card fade-up">
+
+<img
+src="images/hammam-marrakech.webp"
+alt="Hammam traditionnel à Marrakech"
+style="width:100%;height:220px;object-fit:cover;border-radius:18px;margin-bottom:18px;">
+
+<h3>🧖 Découvrir le rituel du hammam marocain</h3>
+
+<p>
+Offre-toi un véritable moment de détente avec un hammam traditionnel, un gommage au savon noir et un massage relaxant. Un rituel ancestral qui fait partie intégrante de l'art de vivre marocain.
+</p>
+
+<a
+href="https://www.getyourguide.fr/marrakech-l208/marrakech-head-spa-hammam-traditionnel-avec-transfert-hotelier-t1287135/?partner_id=F9OV4TP&utm_medium=online_publisher"
+target="_blank"
+rel="noopener sponsored">
+🧖 Réserver le hammam →
+</a>
+
+</div>
+
+<div class="card fade-up">
+
+<img
+src="images/medina-marrakech.webp"
+alt="Visite guidée de la médina de Marrakech"
+style="width:100%;height:220px;object-fit:cover;border-radius:18px;margin-bottom:18px;">
+
+<h3>🕌 Explorer les trésors cachés de la médina</h3>
+
+<p>
+Découvre le palais Bahia, la médersa Ben Youssef et les ruelles animées des souks en compagnie d'un guide local. Une immersion fascinante dans l'histoire, l'architecture et les traditions de Marrakech.
+</p>
+
+<a
+href="https://www.getyourguide.fr/marrakech-l208/marrakech-visite-du-palais-bahia-de-la-madrasa-ben-youssef-et-de-la-medina-t563312/?partner_id=F9OV4TP&utm_medium=online_publisher"
+target="_blank"
+rel="noopener sponsored">
+🕌 Visiter la médina →
+</a>
+
+</div>
+
+<div class="card fade-up">
+
+<img
+src="images/food-tour-marrakech.webp"
+alt="Visite gastronomique de Marrakech"
+style="width:100%;height:220px;object-fit:cover;border-radius:18px;margin-bottom:18px;">
+
+<h3>🍢 Goûter les saveurs authentiques de Marrakech</h3>
+
+<p>
+Parcours les ruelles de la médina à la rencontre des artisans et des étals parfumés pour déguster tajines, pâtisseries orientales, olives, thé à la menthe et spécialités locales lors d'une véritable aventure culinaire.
+</p>
+
+<a
+href="https://www.viator.com/fr-CH/tours/Marrakech/Tasting-the-flavors-of-Marrakech-Your-authentic-Moroccan-food-tour/d5408-133491P1?pid=P00306030&mcid=42383&medium=link"
+target="_blank"
+rel="noopener sponsored">
+🍢 Découvrir le food tour →
+</a>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- MOBILITÉ -->
 
 <section class="section" id="mobilite">
 
@@ -799,61 +1133,193 @@ Explorer la carte →
 🚖 Explorer Marrakech facilement
 </h2>
 
+<p style="
+text-align:center;
+max-width:850px;
+margin:0 auto 35px;
+color:#cbd5e1;
+line-height:1.8;">
+Entre la médina, les quartiers modernes, les jardins et les excursions vers l'Atlas ou le désert, Marrakech se découvre facilement à pied, en taxi ou grâce aux nombreux services de transport disponibles.
+</p>
+
 <div class="grid">
 
 <div class="card fade-up">
 
-<h3>🚖 Taxis & transferts</h3>
+<h3>🚶 Découvrir la médina à pied</h3>
 
 <div class="price">
-Mobilité Marrakech
+La meilleure façon de vivre Marrakech
 </div>
 
 <p>
-Déplace-toi facilement entre la médina, Guéliz et les quartiers modernes.
+Les principaux sites de la vieille ville se rejoignent facilement à pied. Flâner dans les souks, traverser les ruelles et rejoindre la place Jemaa el-Fna fait partie intégrante de l'expérience.
 </p>
 
-<a href="https://www.booking.com/taxis/index.fr.html" target="_blank">
-Explorer
+</div>
+
+<div class="card fade-up">
+
+<h3>🚕 Petits taxis</h3>
+
+<div class="price">
+Rapides et économiques
+</div>
+
+<p>
+Les petits taxis permettent de rejoindre rapidement Guéliz, Hivernage, les jardins ou la Palmeraie. Pense à demander l'utilisation du compteur ou à convenir du tarif avant le départ.
+</p>
+
+</div>
+
+<div class="card fade-up">
+
+<h3>🚌 Bus Alsa & excursions</h3>
+
+<div class="price">
+Pour sortir facilement de Marrakech
+</div>
+
+<p>
+Le réseau de bus dessert les principaux quartiers de la ville, tandis que les excursions organisées avec prise en charge permettent de découvrir facilement l'Atlas, Essaouira, Ouarzazate ou le désert d'Agafay.
+</p>
+
+<a
+href="https://www.alsa.ma/"
+target="_blank"
+rel="noopener">
+Découvrir le réseau →
 </a>
 
 </div>
 
 <div class="card fade-up">
 
-<h3>✈️ Aéroport Marrakech</h3>
+<h3>✈️ Transfert privé depuis l'aéroport</h3>
 
 <div class="price">
-Transport rapide
+Rejoindre son riad en toute tranquillité
 </div>
 
 <p>
-Rejoins rapidement le centre-ville depuis l’aéroport Marrakech-Menara.
+L'aéroport de Marrakech-Menara se situe à seulement quelques kilomètres du centre-ville. Un transfert privé permet d'arriver sereinement à son hôtel ou à son riad, sans négocier un taxi ni chercher son chemin dans la médina.
 </p>
 
-<a href="https://www.onda.ma/" target="_blank">
-Explorer
+<a
+href="https://www.getyourguide.fr/marrakech-l208/marrakech-transfert-prive-aller-simple-depuisvers-l-aeroport-de-marrakech-t752404/?partner_id=F9OV4TP&utm_medium=online_publisher"
+target="_blank"
+rel="noopener sponsored">
+Réserver le transfert →
 </a>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- OU DORMIR -->
+
+<section class="section" id="ou-dormir">
+
+<h2 class="section-title fade-up">
+🏨 Où dormir à Marrakech ?
+</h2>
+
+<div class="grid">
+
+<div class="card fade-up">
+
+<h3>🕌 Médina</h3>
+
+<p>
+Le cœur historique de Marrakech. Entre les riads traditionnels, les souks, la place Jemaa el-Fna et les principaux monuments, c'est le quartier idéal pour vivre l'atmosphère authentique de la ville.
+</p>
 
 </div>
 
 <div class="card fade-up">
 
-<h3>🏜️ Excursions Atlas</h3>
-
-<div class="price">
-Explorer le Maroc
-</div>
+<h3>🌴 Guéliz</h3>
 
 <p>
-Découvre facilement les montagnes de l’Atlas et le désert d’Agafay.
+Le visage moderne de Marrakech. Boutiques, cafés, restaurants, galeries d'art et hôtels contemporains en font un excellent choix pour un séjour confortable, à quelques minutes de la médina.
 </p>
 
-<a href="https://www.getyourguide.com/" target="_blank">
-Explorer
-</a>
+</div>
+
+<div class="card fade-up">
+
+<h3>✨ Hivernage</h3>
+
+<p>
+Le quartier chic de Marrakech. Entre hôtels de luxe, rooftops, spas, restaurants raffinés et vie nocturne, Hivernage séduit les voyageurs à la recherche d'un séjour élégant et animé.
+</p>
 
 </div>
+
+<div class="card fade-up">
+
+<h3>🌺 Palmeraie</h3>
+
+<p>
+À l'écart de l'agitation du centre, la Palmeraie accueille de nombreux resorts avec piscines, jardins et spas. Un cadre paisible parfait pour se détendre tout en restant proche de Marrakech.
+</p>
+
+</div>
+
+<div class="card fade-up">
+
+<h3>🏡 Kasbah</h3>
+
+<p>
+Situé au sud de la médina, ce quartier plus calme permet de découvrir les remparts, les tombeaux Saadiens et plusieurs palais tout en profitant d'une ambiance authentique et agréable.
+</p>
+
+</div>
+
+<div class="card fade-up">
+
+<h3>🌿 Agdal</h3>
+
+<p>
+À proximité des célèbres jardins et de plusieurs grands hôtels, Agdal offre un environnement résidentiel, spacieux et moderne, apprécié pour son calme et son accès rapide au centre-ville.
+</p>
+
+</div>
+
+</div>
+
+<p style="
+text-align:center;
+max-width:900px;
+margin:35px auto 0;
+color:#cbd5e1;
+line-height:1.8;
+">
+Des riads de charme nichés au cœur de la médina aux hôtels de luxe d'Hivernage, en passant par les resorts de la Palmeraie ou les adresses modernes de Guéliz, Marrakech propose des hébergements adaptés à tous les styles de voyage.
+</p>
+
+<div style="text-align:center;margin-top:28px;">
+
+<a
+href="https://www.anrdoezrs.net/click-101766856-12319490?url=https%3A%2F%2Fwww.booking.com%2Fsearchresults.fr.html%3Fss%3DMarrakech%252C%2BMarrakech-Tensift-Haouz%252C%2BMaroc%26efdco%3D1%26label%3Dgen173nr-10CAEoggI46AdIM1gEaE2IAQGYATO4ARfIAQ_YAQPoAQH4AQGIAgGoAgG4Av7p7tIGwAIB0gIkMDQyZGJkMjAtMTNlZC00YmM5LTgwNDctNGNmN2Q4YzIyNWE52AIB4AIB%26aid%3D304142%26lang%3Dfr%26sb%3D1%26src_elem%3Dsb%26src%3Dindex%26dest_id%3D-38833%26dest_type%3Dcity%26ac_position%3D0%26ac_click_type%3Db%26ac_langcode%3Dfr%26ac_suggestion_list_length%3D5%26search_selected%3Dtrue%26search_pageview_id%3D8c93797f4e590a1e%26ac_meta%3DGhA4YzkzNzk3ZjRlNTkwYTFlIAAoATICZnI6BW1hcnJh%26group_adults%3D2%26no_rooms%3D1%26group_children%3D0%26chal_t%3D1784395028202%26force_referer%3Dhttps%253A%252F%252Fwww.booking.com%252Findex.fr.html%253Faid%253D304142%2526label%253Dgen173nr-10CAEoggI46AdIM1gEaE2IAQGYATO4ARfIAQ_YAQPoAQH4AQGIAgGoAgG4Av7p7tIGwAIB0gIkMDQyZGJkMjAtMTNlZC00YmM5LTgwNDctNGNmN2Q4YzIyNWE52AIB4AIB%2526chal_t%253D1784395005136%2526force_referer%253D"
+target="_blank"
+rel="noopener sponsored"
+style="
+display:inline-block;
+padding:16px 34px;
+border-radius:16px;
+background:linear-gradient(135deg,#f97316,#ea580c);
+color:#fff;
+font-size:1rem;
+font-weight:700;
+text-decoration:none;
+box-shadow:0 12px 32px rgba(249,115,22,.35);
+transition:all .3s ease;
+">
+🏨 Voir les hébergements à Marrakech
+</a>
 
 </div>
 
@@ -864,50 +1330,125 @@ Explorer
 <section class="section" id="restaurants">
 
 <h2 class="section-title fade-up">
-🍽️ Goûter le vrai Marrakech
+🍽️ Les saveurs qui font battre le cœur de Marrakech
 </h2>
 
-<div class="grid">
+<p style="
+text-align:center;
+max-width:850px;
+margin:0 auto 35px;
+color:#cbd5e1;
+line-height:1.8;">
+Entre les riads cachés, les rooftops dominant la médina, les marchés parfumés aux épices et les recettes transmises de génération en génération, Marrakech se découvre aussi à travers sa gastronomie. Ici, chaque repas est une véritable immersion dans l'art de vivre marocain.
+</p>
+
+<div class="map-preview fade-up">
+
+<img
+src="images/restaurants-marrakech.webp"
+alt="Gastronomie marocaine à Marrakech">
+
+<div class="map-preview-overlay">
+
+<h3>
+La gastronomie marocaine au cœur de la médina
+</h3>
+
+<p>
+Des tajines mijotés aux pâtisseries orientales, en passant par le couscous, le thé à la menthe et les épices aux mille parfums, chaque repas dévoile une nouvelle facette de la culture marocaine dans une ambiance chaleureuse et authentique.
+</p>
+
+</div>
+
+</div>
+
+<div class="grid" style="margin-top:35px;">
 
 <div class="card fade-up">
 
-<h3>🍴 Restaurants marocains</h3>
+<h3>🍲 Préparer les grands classiques de la cuisine marocaine</h3>
 
 <p>
-Découvre les meilleures spécialités marocaines et restaurants incontournables.
+Accompagné d'un chef local, visite un marché traditionnel avant d'apprendre à préparer un véritable tajine, du pain marocain et un thé à la menthe. Une expérience conviviale qui permet de découvrir Marrakech autrement, à travers ses saveurs et ses traditions.
 </p>
 
-<a href="https://www.tripadvisor.fr/" target="_blank">
-Explorer
+<a
+href="https://www.viator.com/fr-CH/tours/Marrakech/Cooking-class-with-chef-Leila/d5408-112810P1?pid=P00306030&mcid=42383&medium=link"
+target="_blank"
+rel="noopener sponsored">
+🍲 Participer au cours →
 </a>
 
 </div>
 
 <div class="card fade-up">
 
-<h3>☕ Riads & rooftops</h3>
+<h3>🌇 Dîner face à la Koutoubia au coucher du soleil</h3>
 
 <p>
-Profite des plus beaux rooftops et riads traditionnels de Marrakech.
+Installe-toi sur un rooftop dominant la médina pour savourer les spécialités marocaines pendant que le soleil se couche derrière le célèbre minaret de la Koutoubia. Une soirée paisible avec l'un des plus beaux panoramas de Marrakech.
 </p>
 
-<a href="https://www.thefork.com/" target="_blank">
-Explorer
+<a
+href="https://www.getyourguide.fr/marrakech-l208/marrakech-diner-sur-le-toit-avec-vue-sur-la-koutoubia-t936722/?partner_id=F9OV4TP&utm_medium=online_publisher"
+target="_blank"
+rel="noopener sponsored">
+🌇 Réserver le rooftop →
 </a>
 
 </div>
 
 <div class="card fade-up">
 
-<h3>🌃 Jemaa el-Fna</h3>
+<h3>🎭 Vivre une soirée dans un palais marocain</h3>
 
 <p>
-Explore l’ambiance unique de la célèbre place et des souks marocains.
+Pousse les portes du mythique Dar Essalam, installé dans un palais historique de la médina, pour déguster une cuisine marocaine raffinée accompagnée de musiciens, danseuses orientales et spectacles traditionnels. Une soirée qui plonge au cœur des traditions de Marrakech.
 </p>
 
-<a href="https://www.getyourguide.com/" target="_blank">
-Explorer
+<a
+href="https://www.getyourguide.fr/marrakech-l208/marrakech-diner-spectacle-au-restaurant-dar-essalam-t658574/?partner_id=F9OV4TP&utm_medium=online_publisher"
+target="_blank"
+rel="noopener sponsored">
+🎭 Découvrir Dar Essalam →
 </a>
+
+</div>
+
+<div class="card fade-up">
+
+<h3>🌶️ Les souks et le marché aux épices</h3>
+
+<p>
+Safran, cumin, ras el-hanout, olives, fruits secs et montagnes d'épices colorées éveillent les sens à chaque détour. Les souks de Marrakech sont une étape incontournable pour découvrir les parfums qui font la richesse de la cuisine marocaine.
+</p>
+
+<a
+href="https://visitmarrakech.com/"
+target="_blank"
+rel="noopener">
+Découvrir la médina →
+</a>
+
+</div>
+
+<div class="card fade-up">
+
+<h3>🍵 Les cafés traditionnels marocains</h3>
+
+<p>
+Accorde-toi une pause autour d'un thé à la menthe accompagné de pâtisseries orientales. Depuis les terrasses de la médina, observe l'animation de Marrakech tout en découvrant l'une des traditions les plus emblématiques du pays.
+</p>
+
+</div>
+
+<div class="card fade-up">
+
+<h3>🥘 Déguster un tajine dans un riad</h3>
+
+<p>
+Prendre le temps de partager un tajine ou un couscous dans le patio fleuri d'un riad traditionnel fait partie des plaisirs incontournables d'un séjour à Marrakech. Une cuisine généreuse, parfumée et profondément ancrée dans les traditions marocaines.
+</p>
 
 </div>
 
@@ -915,70 +1456,284 @@ Explorer
 
 </section>
 
-<!-- ACTIVITES -->
+<!-- ACTIVITÉS -->
 
 <section class="section" id="activites">
 
 <h2 class="section-title fade-up">
-✨ Le Marrakech iconique
+🏛️ Les incontournables de Marrakech
 </h2>
+
+<p style="
+text-align:center;
+max-width:850px;
+margin:0 auto 35px;
+color:#cbd5e1;
+line-height:1.8;">
+Ville impériale au riche patrimoine, Marrakech dévoile ses palais somptueux, ses jardins emblématiques, ses souks animés et ses monuments historiques au fil de la médina. Ces lieux incontournables permettent de découvrir toute la richesse culturelle de la ville rouge.
+</p>
 
 <div class="grid">
 
 <div class="card fade-up">
 
-<h3>🕌 Jemaa el-Fna</h3>
+<img
+src="images/palais-bahia.webp"
+alt="Palais Bahia à Marrakech"
+style="width:100%;height:220px;object-fit:cover;border-radius:18px;margin-bottom:18px;">
+
+<h3>🕌 Palais Bahia</h3>
 
 <p>
-Découvre la place emblématique et l’énergie unique de Marrakech.
+Explore l'un des plus beaux palais du Maroc à travers ses patios fleuris, ses jardins paisibles et ses magnifiques zelliges. Un chef-d'œuvre de l'architecture marocaine qui témoigne du raffinement des anciennes demeures royales.
 </p>
 
-<a href="https://www.getyourguide.com/" target="_blank">
-Explorer
+<a
+href="https://www.getyourguide.fr/marrakech-l208/marrakech-visite-guidee-du-palais-de-la-bahia-avec-entree-prioritaire-t559590/?partner_id=F9OV4TP&utm_medium=online_publisher"
+target="_blank"
+rel="noopener sponsored">
+🕌 Découvrir le palais →
 </a>
 
 </div>
 
 <div class="card fade-up">
 
-<h3>🌴 Jardin Majorelle</h3>
+<img
+src="images/jardin-majorelle.webp"
+alt="Jardin Majorelle à Marrakech"
+style="width:100%;height:220px;object-fit:cover;border-radius:18px;margin-bottom:18px;">
+
+<h3>🌴 Jardin Majorelle & Musée Yves Saint Laurent</h3>
 
 <p>
-Explore l’un des jardins les plus célèbres du Maroc.
+Entre les célèbres façades bleu Majorelle, les cactus géants, les bassins et le musée Yves Saint Laurent, cette visite offre une parenthèse de calme et de couleurs au cœur de Marrakech.
 </p>
 
-<a href="https://www.tiqets.com/" target="_blank">
-Explorer
+<a
+href="https://www.getyourguide.fr/marrakech-l208/entree-au-jardin-majorelle-yves-saint-laurent-et-au-musee-berbere-t665852/?partner_id=F9OV4TP&utm_medium=online_publisher"
+target="_blank"
+rel="noopener sponsored">
+🌴 Visiter Majorelle →
 </a>
 
 </div>
 
 <div class="card fade-up">
 
-<h3>🏛️ Palais Bahia</h3>
+<img
+src="images/el-badi.webp"
+alt="Palais El Badi et Tombeaux Saadiens"
+style="width:100%;height:220px;object-fit:cover;border-radius:18px;margin-bottom:18px;">
+
+<h3>🏰 Palais El Badi & Tombeaux Saadiens</h3>
 
 <p>
-Découvre l’architecture marocaine et les palais historiques de Marrakech.
+Découvre les impressionnantes ruines du palais El Badi avant de visiter les célèbres Tombeaux Saadiens, témoins de la puissance de la dynastie saadienne et parmi les plus beaux sites historiques de Marrakech.
 </p>
 
-<a href="https://www.getyourguide.com/" target="_blank">
-Explorer
+</div>
+
+<div class="card fade-up">
+
+<img
+src="images/souks-marrakech.webp"
+alt="Souks de Marrakech"
+style="width:100%;height:220px;object-fit:cover;border-radius:18px;margin-bottom:18px;">
+
+<h3>🛍️ Les souks de Marrakech</h3>
+
+<p>
+Parcours les ruelles colorées de la médina à la découverte des artisans, des épices, des tapis, du cuir et des objets traditionnels. Une immersion fascinante dans l'un des plus célèbres marchés du Maroc.
+</p>
+
+<a
+href="https://www.getyourguide.fr/marrakech-l208/marrakech-3-heures-de-visite-des-souks-colores-t296415/?partner_id=F9OV4TP&utm_medium=online_publisher"
+target="_blank"
+rel="noopener sponsored">
+🛍️ Explorer les souks →
 </a>
 
 </div>
 
 <div class="card fade-up">
 
-<h3>🎭 Activités & expériences</h3>
+<img
+src="images/jardin-secret.webp"
+alt="Jardin Secret et Médersa Ben Youssef à Marrakech"
+style="width:100%;height:220px;object-fit:cover;border-radius:18px;margin-bottom:18px;">
+
+<h3>🌿 Jardin Secret & Médersa Ben Youssef</h3>
 
 <p>
-Food tours,
-hammams,
-balades et expériences incontournables à Marrakech.
+Découvre deux joyaux de la médina entre jardins andalous, fontaines paisibles et décors sculptés d'une finesse remarquable. Une visite qui révèle toute l'élégance de l'architecture marocaine.
 </p>
 
-<a href="https://www.tiqets.com/" target="_blank">
-Explorer
+<a
+href="https://www.getyourguide.fr/marrakech-l208/marrakech-visite-de-la-madrasa-ben-youssef-du-jardin-secret-et-de-la-medina-t556996/?partner_id=F9OV4TP&utm_medium=online_publisher"
+target="_blank"
+rel="noopener sponsored">
+🌿 Découvrir ces trésors →
+</a>
+
+</div>
+
+<div class="card fade-up">
+
+<img
+src="images/jemaa-el-fna.webp"
+alt="Place Jemaa el-Fna à Marrakech"
+style="width:100%;height:220px;object-fit:cover;border-radius:18px;margin-bottom:18px;">
+
+<h3>🌇 La place Jemaa el-Fna</h3>
+
+<p>
+Véritable cœur battant de Marrakech, la place s'anime du matin jusqu'au bout de la nuit avec ses artistes de rue, ses musiciens, ses conteurs, ses étals de cuisine et son ambiance unique inscrite au patrimoine culturel immatériel de l'UNESCO.
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- SENSATIONS & AVENTURES -->
+
+<section class="section" id="sport">
+
+<h2 class="section-title fade-up">
+🏕️ Sensations & aventures à Marrakech
+</h2>
+
+<p style="
+text-align:center;
+max-width:850px;
+margin:0 auto 35px;
+color:#cbd5e1;
+line-height:1.8;">
+Au-delà de sa médina et de ses palais, Marrakech est aussi un formidable terrain de jeu pour les amateurs d'aventure. Entre pistes désertiques, activités aériennes, balades à cheval, découvertes à vélo et parcours de golf face à l'Atlas, la ville offre de nombreuses expériences pour vivre le Maroc autrement.
+</p>
+
+<div class="map-preview fade-up">
+
+<img
+src="images/sport-marrakech.webp"
+alt="Sensations et aventures à Marrakech">
+
+<div class="map-preview-overlay">
+
+<h3>
+Le Maroc version aventure
+</h3>
+
+<p>
+Des dunes de la Palmeraie aux paysages sauvages d'Agafay, Marrakech permet de multiplier les expériences en plein air. Que tu recherches l'adrénaline, la découverte ou un moment de détente dans un cadre exceptionnel, chacun trouvera une activité à son rythme.
+</p>
+
+</div>
+
+</div>
+
+<div class="grid" style="margin-top:35px;">
+
+<div class="card fade-up">
+
+<h3>🚵 Quad dans la Palmeraie</h3>
+
+<p>
+Pars à l'aventure sur les pistes sablonneuses de la Palmeraie avant de partager un thé à la menthe dans un village berbère. Une excellente initiation au désert aux portes de Marrakech.
+</p>
+
+<a
+href="https://www.getyourguide.fr/marrakech-l208/marrakech-dunes-de-la-palmeraie-balade-en-quad-avec-the-t605290/?partner_id=F9OV4TP&utm_medium=online_publisher"
+target="_blank"
+rel="noopener sponsored">
+🚵 Réserver l'activité →
+</a>
+
+</div>
+
+<div class="card fade-up">
+
+<h3>🏎️ Buggy dans le désert d'Agafay</h3>
+
+<p>
+Prends le volant d'un buggy SSV et traverse les pistes rocailleuses du désert d'Agafay. Une activité idéale pour les amateurs de sensations fortes et de paysages spectaculaires.
+</p>
+
+<a
+href="https://www.getyourguide.fr/marrakech-l208/marrakech-excursions-en-buggy-ssv-dans-le-desert-d-agafay-1000cc-sport-r-t731579/"
+target="_blank"
+rel="noopener sponsored">
+🏎️ Découvrir le buggy →
+</a>
+
+</div>
+
+<div class="card fade-up">
+
+<h3>🪂 Parapente au-dessus d'Agafay</h3>
+
+<p>
+Admire le désert d'Agafay et les montagnes de l'Atlas depuis les airs lors d'un vol en tandem. Une expérience inoubliable pour découvrir les paysages marocains sous un nouvel angle.
+</p>
+
+<a
+href="https://www.viator.com/fr-CH/tours/Marrakech/Paragliding-Agafay/d5408-485378P1?pid=P00306030&mcid=42383&medium=link"
+target="_blank"
+rel="noopener sponsored">
+🪂 S'envoler →
+</a>
+
+</div>
+
+<div class="card fade-up">
+
+<h3>🚴 Marrakech à vélo</h3>
+
+<p>
+Explore les quartiers historiques, les jardins et les ruelles de la médina lors d'une visite culturelle à vélo. Une façon originale et conviviale de découvrir la ville.
+</p>
+
+<a
+href="https://www.getyourguide.fr/marrakech-l208/marrakech-visite-culturelle-a-velo-avec-patisseries-et-the-t418349/?partner_id=F9OV4TP&utm_medium=online_publisher"
+target="_blank"
+rel="noopener sponsored">
+🚴 Explorer Marrakech →
+</a>
+
+</div>
+
+<div class="card fade-up">
+
+<h3>🐎 Balade à cheval dans la Palmeraie</h3>
+
+<p>
+Traverse les pistes sablonneuses, les palmiers et les villages traditionnels lors d'une balade à cheval offrant une autre vision des paysages qui entourent Marrakech.
+</p>
+
+<a
+href="https://www.getyourguide.fr/marrakech-l208/marrakech-tour-en-quad-au-dunes-de-la-palmeraie-avec-the-t610406/?partner_id=F9OV4TP&utm_medium=online_publisher"
+target="_blank"
+rel="noopener sponsored">
+🐎 Partir à cheval →
+</a>
+
+</div>
+
+<div class="card fade-up">
+
+<h3>🏌️ Golf à Marrakech</h3>
+
+<p>
+Profite d'une initiation ou d'une partie sur l'un des prestigieux parcours de golf de Marrakech, dans un cadre verdoyant avec les montagnes de l'Atlas en toile de fond.
+</p>
+
+<a
+href="https://www.getyourguide.fr/marrakech-l208/decouverte-du-golf-de-marrakech-avec-rafraichissement-t1090677/?partner_id=F9OV4TP&utm_medium=online_publisher"
+target="_blank"
+rel="noopener sponsored">
+🏌️ Découvrir le golf →
 </a>
 
 </div>
@@ -987,77 +1742,280 @@ Explorer
 
 </section>
 
-<!-- DESERT -->
+<!-- AUTOUR DE MARRAKECH -->
 
 <section class="section">
 
 <h2 class="section-title fade-up">
-🏜️ Marrakech côté désert & aventures
+🌍 Prolonger l'aventure autour de Marrakech
+</h2>
+
+<p style="
+text-align:center;
+max-width:850px;
+margin:0 auto 35px;
+color:#cbd5e1;
+line-height:1.8;">
+Marrakech est le point de départ idéal pour explorer les paysages les plus spectaculaires du Maroc. Entre l'océan Atlantique, les montagnes de l'Atlas, les villages berbères, les cascades et les kasbahs classées à l'UNESCO, chaque excursion révèle une facette différente du pays et complète parfaitement un séjour dans la ville rouge.
+</p>
+
+<div class="grid">
+
+<div class="card fade-up">
+
+<img
+src="images/essaouira.webp"
+alt="Essaouira"
+style="width:100%;height:220px;object-fit:cover;border-radius:18px;margin-bottom:18px;">
+
+<h3>🌊 Essaouira</h3>
+
+<p>
+Entre son port de pêche animé, ses remparts classés à l'UNESCO, sa médina blanchie à la chaux et sa longue plage, Essaouira offre une escapade rafraîchissante au bord de l'Atlantique, à seulement quelques heures de Marrakech.
+</p>
+
+<a
+href="https://www.getyourguide.fr/marrakech-l208/au-depart-de-fes-journee-partagee-volubilis-moulay-driss-et-meknes-t526110/?partner_id=F9OV4TP&utm_medium=online_publisher"
+target="_blank"
+rel="noopener sponsored">
+🌊 Découvrir Essaouira →
+</a>
+
+</div>
+
+<div class="card fade-up">
+
+<img
+src="images/ouzoud.webp"
+alt="Cascades d'Ouzoud"
+style="width:100%;height:220px;object-fit:cover;border-radius:18px;margin-bottom:18px;">
+
+<h3>💦 Cascades d'Ouzoud</h3>
+
+<p>
+Admire les plus hautes cascades du Maroc lors d'une journée entre nature, randonnée et balade en bateau au pied des chutes. Tu pourras également observer les célèbres singes magots vivant dans les falaises environnantes.
+</p>
+
+<a
+href="https://www.getyourguide.fr/marrakech-l208/visite-d-une-journee-aux-cascades-d-ouzoud-incluant-une-excursion-en-bateau-et-un-dejeuner-t59215/?partner_id=F9OV4TP&utm_medium=online_publisher"
+target="_blank"
+rel="noopener sponsored">
+💦 Découvrir Ouzoud →
+</a>
+
+</div>
+
+<div class="card fade-up">
+
+<img
+src="images/ait-ben-haddou.webp"
+alt="Aït Ben Haddou et Ouarzazate"
+style="width:100%;height:220px;object-fit:cover;border-radius:18px;margin-bottom:18px;">
+
+<h3>🏰 Aït Ben Haddou & Ouarzazate</h3>
+
+<p>
+Traverse le Haut Atlas avant de découvrir la célèbre kasbah d'Aït Ben Haddou, classée au patrimoine mondial de l'UNESCO, puis les studios de cinéma de Ouarzazate où furent tournés de nombreux films et séries.
+</p>
+
+<a
+href="https://www.getyourguide.fr/marrakech-l208/excursion-privee-d-une-journee-a-ouarzazate-et-ait-benhaddou-t59397/?partner_id=F9OV4TP&utm_medium=online_publisher"
+target="_blank"
+rel="noopener sponsored">
+🏰 Explorer les kasbahs →
+</a>
+
+</div>
+
+<div class="card fade-up">
+
+<img
+src="images/imlil.webp"
+alt="Imlil et le Haut Atlas"
+style="width:100%;height:220px;object-fit:cover;border-radius:18px;margin-bottom:18px;">
+
+<h3>🏔️ Imlil & le Haut Atlas</h3>
+
+<p>
+Découvre les paysages spectaculaires du Haut Atlas à travers les villages berbères d'Imlil, les vallées verdoyantes et les panoramas sur le mont Toubkal, le plus haut sommet d'Afrique du Nord.
+</p>
+
+<a
+href="https://www.getyourguide.fr/marrakech-l208/marrakech-excursion-a-imlil-dans-l-atlas-avec-dejeuner-t823774/?partner_id=F9OV4TP&utm_medium=online_publisher"
+target="_blank"
+rel="noopener sponsored">
+🏔️ Explorer l'Atlas →
+</a>
+
+</div>
+
+<div class="card fade-up">
+
+<img
+src="images/ourika.webp"
+alt="Vallée de l'Ourika"
+style="width:100%;height:220px;object-fit:cover;border-radius:18px;margin-bottom:18px;">
+
+<h3>🌿 Vallée de l'Ourika</h3>
+
+<p>
+À moins d'une heure de Marrakech, la vallée de l'Ourika dévoile ses villages berbères, ses rivières, ses terrasses verdoyantes et ses cascades accessibles lors d'une agréable randonnée au cœur de l'Atlas.
+</p>
+
+<a
+href="https://www.getyourguide.fr/marrakech-l208/marrakech-dejeuner-dans-la-vallee-de-l-ourika-et-randonnee-guidee-jusqu-aux-cascades-t480657/?partner_id=F9OV4TP&utm_medium=online_publisher"
+target="_blank"
+rel="noopener sponsored">
+🌿 Découvrir l'Ourika →
+</a>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- AVANT DE PARTIR -->
+
+<section class="section planning-theme">
+
+<h2 class="section-title fade-up">
+✈️ Avant de partir à Marrakech
 </h2>
 
 <div class="grid">
 
 <div class="card fade-up">
 
-<h3>
-🐪 Désert d’Agafay
-</h3>
+<h3>🗣️ Langue</h3>
 
 <p>
-Découvre les couchers de soleil et expériences désert proches de Marrakech.
+L'arabe marocain (darija) et le berbère sont les langues les plus parlées. Le français est largement compris dans les hôtels, les restaurants et les commerces, ce qui facilite les échanges pour les voyageurs francophones.
 </p>
-
-<a href="https://www.getyourguide.com/" target="_blank">
-Explorer
-</a>
 
 </div>
 
 <div class="card fade-up">
 
-<h3>
-🏍️ Quad & buggy
-</h3>
+<h3>💳 Devise & paiements</h3>
 
 <p>
-Profite des excursions et aventures dans le désert marocain.
+La monnaie locale est le dirham marocain (MAD). Les cartes bancaires sont acceptées dans de nombreux établissements, mais il est conseillé de conserver des espèces pour les souks, les taxis, les petits commerces et les pourboires.
 </p>
-
-<a href="https://www.viator.com/" target="_blank">
-Explorer
-</a>
 
 </div>
 
 <div class="card fade-up">
 
-<h3>
-⛰️ Atlas marocain
-</h3>
+<h3>🚕 Se déplacer</h3>
 
 <p>
-Pars explorer les montagnes de l’Atlas et les villages berbères.
+Les principaux sites de la médina se découvrent facilement à pied. Pour les trajets plus longs, privilégie les petits taxis officiels ou les transferts réservés à l'avance afin d'éviter les négociations.
 </p>
-
-<a href="https://www.getyourguide.com/" target="_blank">
-Explorer
-</a>
 
 </div>
 
 <div class="card fade-up">
 
-<h3>
-🎟️ Expériences Maroc
-</h3>
+<h3>📅 Durée idéale</h3>
 
 <p>
-Retrouve facilement les meilleures activités à vivre autour de Marrakech.
+Trois à quatre jours permettent de visiter les principaux monuments, profiter des jardins, explorer les souks et consacrer une journée à une excursion dans l'Atlas, à Essaouira ou aux cascades d'Ouzoud.
 </p>
 
-<a href="https://www.getyourguide.com/" target="_blank">
-Découvrir
-</a>
+</div>
+
+<div class="card fade-up">
+
+<h3>☀️ Meilleure période</h3>
+
+<p>
+Le printemps et l'automne offrent des températures particulièrement agréables. L'été peut dépasser les 40 °C en journée, tandis que les soirées d'hiver restent souvent fraîches.
+</p>
+
+</div>
+
+<div class="card fade-up">
+
+<h3>🕌 Coutumes locales</h3>
+
+<p>
+Le Maroc est un pays accueillant où une tenue respectueuse est appréciée, notamment dans les lieux religieux et les quartiers traditionnels. Demander l'autorisation avant de photographier les habitants est également une marque de respect.
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ERREURS A EVITER -->
+
+<section class="section warning-theme">
+
+<h2 class="section-title fade-up">
+⚠️ Les erreurs à éviter à Marrakech
+</h2>
+
+<div class="grid">
+
+<div class="card fade-up">
+
+<h3>🛍️ Acheter sans comparer</h3>
+
+<p>
+Dans les souks, la négociation fait partie de la culture locale. Prends le temps de comparer plusieurs boutiques avant d'acheter et garde toujours le sourire pendant les échanges.
+</p>
+
+</div>
+
+<div class="card fade-up">
+
+<h3>🚕 Monter dans un taxi sans fixer le prix</h3>
+
+<p>
+Lorsque le compteur n'est pas utilisé, demande le tarif avant de partir. Les applications ou les transferts réservés à l'avance permettent également d'éviter les mauvaises surprises.
+</p>
+
+</div>
+
+<div class="card fade-up">
+
+<h3>🥤 Oublier de s'hydrater</h3>
+
+<p>
+Le climat peut être très chaud une grande partie de l'année. Garde toujours une bouteille d'eau avec toi, surtout lors des visites de la médina ou des excursions dans le désert.
+</p>
+
+</div>
+
+<div class="card fade-up">
+
+<h3>📸 Photographier sans demander</h3>
+
+<p>
+Certaines personnes, notamment les artistes de la place Jemaa el-Fna ou les habitants des souks, peuvent demander une rémunération pour une photo. Demande toujours leur accord au préalable.
+</p>
+
+</div>
+
+<div class="card fade-up">
+
+<h3>☀️ Sous-estimer le soleil</h3>
+
+<p>
+Même au printemps, le soleil marocain est puissant. Casquette, lunettes, crème solaire et pauses régulières à l'ombre rendent les visites beaucoup plus agréables.
+</p>
+
+</div>
+
+<div class="card fade-up">
+
+<h3>🗺️ Rester uniquement dans la médina</h3>
+
+<p>
+Marrakech possède bien d'autres trésors que son centre historique. Les jardins, la Palmeraie, Guéliz et les nombreuses excursions dans l'Atlas ou sur la côte permettent de découvrir toute la diversité de la région.
+</p>
 
 </div>
 
@@ -1072,33 +2030,19 @@ Découvrir
 <div class="info-box fade-up">
 
 <h2>
-Pourquoi Marrakech fascine autant ?
+❓ FAQ Marrakech
 </h2>
-
-<p>
-Marrakech mélange culture marocaine,
-architecture orientale,
-gastronomie,
-désert et ambiance unique au monde.
-</p>
-
-<p>
-Entre les souks,
-les riads,
-les rooftops illuminés et les paysages désertiques,
-Marrakech possède une atmosphère magique.
-</p>
 
 <div class="faq">
 
 <div class="faq-item">
 
 <h3>
-🚖 Comment se déplacer à Marrakech ?
+Combien de jours faut-il pour visiter Marrakech ?
 </h3>
 
 <p>
-Les taxis et transferts privés permettent de rejoindre facilement les lieux majeurs.
+Trois à quatre jours permettent de découvrir les principaux monuments, les jardins, les souks, les palais et de prévoir une excursion dans les environs.
 </p>
 
 </div>
@@ -1106,11 +2050,11 @@ Les taxis et transferts privés permettent de rejoindre facilement les lieux maj
 <div class="faq-item">
 
 <h3>
-🍽️ Où manger à Marrakech ?
+Quel quartier choisir pour un premier séjour ?
 </h3>
 
 <p>
-Les rooftops, riads et restaurants marocains offrent une expérience unique.
+La médina est idéale pour vivre l'ambiance traditionnelle de Marrakech, tandis que Guéliz et l'Hivernage offrent davantage de confort, de restaurants modernes et de vie nocturne.
 </p>
 
 </div>
@@ -1118,11 +2062,47 @@ Les rooftops, riads et restaurants marocains offrent une expérience unique.
 <div class="faq-item">
 
 <h3>
-🎟️ Que faire à Marrakech ?
+Peut-on visiter Marrakech sans voiture ?
 </h3>
 
 <p>
-Jemaa el-Fna, Majorelle, souks et désert d’Agafay sont incontournables.
+Oui. La plupart des sites touristiques sont accessibles à pied dans la médina. Les taxis et les excursions organisées permettent ensuite de rejoindre facilement les autres quartiers et les environs.
+</p>
+
+</div>
+
+<div class="faq-item">
+
+<h3>
+Quelle est la meilleure période pour partir ?
+</h3>
+
+<p>
+Les mois de mars à mai ainsi que de septembre à novembre offrent généralement les meilleures conditions pour visiter Marrakech et profiter des excursions en plein air.
+</p>
+
+</div>
+
+<div class="faq-item">
+
+<h3>
+Faut-il réserver les visites à l'avance ?
+</h3>
+
+<p>
+Oui, notamment pour le Jardin Majorelle, certaines excursions très populaires et les activités dans le désert, qui affichent souvent complet pendant les vacances scolaires et les week-ends.
+</p>
+
+</div>
+
+<div class="faq-item">
+
+<h3>
+Marrakech convient-elle à un voyage en famille ?
+</h3>
+
+<p>
+Oui. Les jardins, les balades en calèche, les excursions dans l'Atlas, les activités dans la Palmeraie et les spectacles traditionnels offrent de nombreuses expériences adaptées aux familles.
 </p>
 
 </div>
@@ -1141,20 +2121,22 @@ Jemaa el-Fna, Majorelle, souks et désert d’Agafay sont incontournables.
 
 <img
 src="images/panorama-marrakech.webp"
-alt="Panorama Marrakech">
+alt="Panorama de Marrakech avec la médina et l'Atlas au coucher du soleil">
 
 <div class="map-preview-overlay">
 
 <h3>
-Quand Marrakech s’illumine, la médina devient magique
+Marrakech laisse une empreinte unique
 </h3>
 
 <p>
-Entre les lanternes,
-les rooftops marocains,
-les lumières dorées
-et les ruelles de la médina,
-Marrakech possède une atmosphère unique.
+Entre les couleurs de la médina,
+les parfums d'épices,
+les jardins cachés,
+les appels à la prière,
+les lumières dorées sur les remparts
+et les sommets de l'Atlas à l'horizon,
+Marrakech laisse derrière elle bien plus que de simples souvenirs.
 </p>
 
 <a href="destinations.html" class="map-button">
@@ -1172,7 +2154,7 @@ Explorer les destinations →
 <footer>
 
 <p>
-© 2026 Vidolta — Marrakech
+© 2026 Vidolta — Marrakech.
 </p>
 
 <div class="footer-links">
@@ -1188,11 +2170,15 @@ Explorer les destinations →
 
 </footer>
 
+<!-- BACK TO TOP -->
+
 <button class="back-to-top" id="backToTop">
 ↑
 </button>
 
 <script>
+
+/* MENU MOBILE */
 
 function toggleMenu(){
 
@@ -1208,6 +2194,8 @@ document.querySelectorAll('.nav-links a').forEach(link => {
     nav.classList.remove('active');
   });
 });
+
+/* ANIMATION */
 
 const observer = new IntersectionObserver(entries => {
 
@@ -1227,6 +2215,8 @@ document.querySelectorAll('.fade-up')
 .forEach(el => {
 observer.observe(el);
 });
+
+/* BACK TO TOP */
 
 const backToTop = document.getElementById('backToTop');
 
@@ -1249,8 +2239,9 @@ behavior:'smooth'
 
 });
 
+});
+
 </script>
 
 </body>
-
 </html>
