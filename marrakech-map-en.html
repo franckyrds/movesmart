@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Marrakech Map — Vidolta</title>
+
+<meta name="description"
+content="Explore the map of Marrakech with its main neighbourhoods, landmarks, souks, gardens, palaces, airport and top attractions.">
+
+<link rel="canonical"
+href="https://www.vidolta.com/marrakech-map-en.html">
+
+<link rel="alternate"
+hreflang="fr"
+href="https://www.vidolta.com/marrakech-map.html">
+
+<link rel="alternate"
+hreflang="en"
+href="https://www.vidolta.com/marrakech-map-en.html">
+
+<link rel="alternate"
+hreflang="x-default"
+href="https://www.vidolta.com/marrakech-map.html">
+
+<meta name="theme-color"
+content="#060b1f">
+
+<meta property="og:type"
+content="website">
+
+<meta property="og:title"
+content="Marrakech Map — Vidolta">
+
+<meta property="og:description"
+content="Explore the map of Marrakech with its neighbourhoods, landmarks, souks, gardens, palaces and the city's main points of interest.">
+
+<meta property="og:url"
+content="https://www.vidolta.com/marrakech-map-en.html">
+
+<meta property="og:site_name"
+content="Vidolta">
+
+<meta property="og:locale"
+content="en_US">
+
+<meta property="og:locale:alternate"
+content="fr_FR">
+
+<meta property="og:image"
+content="https://www.vidolta.com/images/marrakech-map-en.webp">
+
+<link rel="icon"
+type="image/png"
+href="favicon-96x96.png"
+sizes="96x96">
+
+<link rel="icon"
+type="image/svg+xml"
+href="favicon.svg">
+
+<link rel="shortcut icon"
+href="favicon.ico">
+
+<link rel="apple-touch-icon"
+sizes="180x180"
+href="apple-touch-icon.png">
+
+<meta name="apple-mobile-web-app-title"
+content="Vidolta">
+
+<link rel="manifest"
+href="site.webmanifest">
+
+<link rel="preconnect"
+href="https://fonts.googleapis.com">
+
+<link rel="preconnect"
+href="https://fonts.gstatic.com"
+crossorigin>
+
+<link
+href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+rel="stylesheet">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+body{
+font-family:'Poppins',sans-serif;
+
+background:
+radial-gradient(circle at top right,rgba(249,115,22,0.18),transparent 30%),
+radial-gradient(circle at top left,rgba(245,158,11,0.14),transparent 25%),
+linear-gradient(to bottom,#0b1426 0%,#09111f 100%);
+
+color:white;
+
+min-height:100vh;
+
+padding:40px 20px;
+}
+
+/* HEADER */
+
+.map-header{
+max-width:1200px;
+margin:auto auto 40px;
+
+text-align:center;
+}
+
+.map-header h1{
+font-size:3.6rem;
+margin-bottom:16px;
+
+letter-spacing:-2px;
+}
+
+.map-header h1 span{
+background:linear-gradient(90deg,#f97316,#f59e0b);
+
+-webkit-background-clip:text;
+-webkit-text-fill-color:transparent;
+}
+
+.map-header p{
+max-width:850px;
+margin:auto;
+
+line-height:1.8;
+
+color:#cbd5e1;
+
+font-size:1.05rem;
+}
+
+/* MAP */
+
+.map-container{
+max-width:1400px;
+margin:auto;
+}
+
+.map-card{
+position:relative;
+
+overflow:hidden;
+
+border-radius:34px;
+
+border:1px solid rgba(255,255,255,0.06);
+
+box-shadow:0 20px 45px rgba(0,0,0,0.35);
+
+background:#0f172a;
+}
+
+.map-card img{
+width:100%;
+display:block;
+}
+
+/* GRID */
+
+.info-grid{
+max-width:1400px;
+
+margin:40px auto 0;
+
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+
+gap:20px;
+}
+
+.info-card{
+background:
+linear-gradient(
+135deg,
+rgba(18,26,52,0.92),
+rgba(12,18,38,0.88)
+);
+
+padding:26px;
+
+border-radius:26px;
+
+border:1px solid rgba(255,255,255,0.05);
+
+box-shadow:0 12px 35px rgba(0,0,0,0.24);
+
+transition:0.35s;
+}
+
+.info-card:hover{
+transform:translateY(-6px);
+
+border-color:rgba(249,115,22,0.4);
+}
+
+.info-card h3{
+font-size:1.2rem;
+margin-bottom:14px;
+}
+
+.info-card p{
+line-height:1.7;
+color:#cbd5e1;
+font-size:0.96rem;
+}
+
+/* CTA */
+
+.bottom-cta{
+max-width:1200px;
+
+margin:50px auto 0;
+
+padding:40px;
+
+border-radius:30px;
+
+background:
+linear-gradient(
+135deg,
+rgba(249,115,22,0.22),
+rgba(245,158,11,0.14)
+);
+
+border:1px solid rgba(255,255,255,0.05);
+
+text-align:center;
+}
+
+.bottom-cta h2{
+font-size:2rem;
+margin-bottom:16px;
+}
+
+.bottom-cta p{
+max-width:800px;
+margin:auto auto 24px;
+
+line-height:1.8;
+
+color:#dbe4f0;
+}
+
+.bottom-cta a{
+display:inline-block;
+
+padding:14px 22px;
+
+background:white;
+
+color:#111827;
+
+border-radius:14px;
+
+font-weight:700;
+
+transition:0.3s;
+}
+
+.bottom-cta a:hover{
+transform:translateY(-2px);
+}
+
+/* MOBILE */
+
+@media(max-width:900px){
+
+body{
+padding:24px 16px;
+}
+
+.map-header h1{
+font-size:2.5rem;
+}
+
+.map-header p{
+font-size:0.96rem;
+line-height:1.7;
+}
+
+.map-card{
+border-radius:24px;
+}
+
+.bottom-cta{
+padding:28px;
+}
+
+.bottom-cta h2{
+font-size:1.6rem;
+}
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<!-- HEADER -->
+
+<section class="map-header">
+
+<h1>
+Marrakech <span>Map</span>
+</h1>
+
+<p>
+Find the Medina,
+Jemaa el-Fna,
+Majorelle Garden,
+Guéliz,
+Hivernage,
+the souks
+and Marrakech's must-see attractions.
+</p>
+
+</section>
+
+<!-- MAP -->
+
+<section class="map-container">
+
+<div class="map-card">
+
+<img
+src="images/marrakech-map-en.webp"
+alt="Marrakech Map">
+
+</div>
+
+</section>
+
+<!-- INFORMATION -->
+
+<section class="info-grid">
+
+<div class="info-card">
+
+<h3>
+🕌 Medina & Souks
+</h3>
+
+<p>
+Explore the historic streets,
+traditional markets
+and the unique atmosphere of Marrakech.
+</p>
+
+</div>
+
+<div class="info-card">
+
+<h3>
+🌴 Gardens & Riads
+</h3>
+
+<p>
+Majorelle Garden,
+the Palm Grove,
+traditional riads
+and rooftop terraces make Marrakech unforgettable.
+</p>
+
+</div>
+
+<div class="info-card">
+
+<h3>
+🏜️ Desert & Atlas Mountains
+</h3>
+
+<p>
+The Agafay Desert and the Atlas Mountains are both easy to reach from the city.
+</p>
+
+</div>
+
+<div class="info-card">
+
+<h3>
+🍽️ Rooftops & Moroccan Cuisine
+</h3>
+
+<p>
+Tagines,
+Moroccan cafés,
+colourful lanterns
+and rooftop restaurants create a truly unique atmosphere.
+</p>
+
+</div>
+
+</section>
+
+<!-- CTA -->
+
+<section class="bottom-cta">
+
+<h2>
+Explore Marrakech with Vidolta
+</h2>
+
+<p>
+Discover the best activities,
+souks,
+riads,
+desert adventures,
+restaurants
+and unforgettable experiences in Marrakech.
+</p>
+
+<a href="marrakech-en.html">
+Back to the Marrakech Guide →
+</a>
+
+</section>
+
+</body>
+
+</html>
