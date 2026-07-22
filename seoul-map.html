@@ -3,10 +3,20 @@
 
 <head>
 
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 
-<title>Carte de Séoul — Vidolta</title>
+<title>Carte Séoul — Vidolta</title>
+
+<meta name="description"
+content="Carte simplifiée du métro et des quartiers incontournables de Séoul avec Vidolta.">
+
+<link rel="canonical" href="https://www.vidolta.com/seoul-map.html">
+
+<link rel="alternate" hreflang="fr" href="https://www.vidolta.com/seoul-map.html">
+<link rel="alternate" hreflang="x-default" href="https://www.vidolta.com/seoul-map.html">
+
+<meta name="theme-color" content="#050816">
 
 <link rel="icon" type="image/png" href="favicon-96x96.png" sizes="96x96">
 
@@ -34,105 +44,170 @@ padding:0;
 box-sizing:border-box;
 }
 
+:root{
+--bg:#050816;
+--primary:#2fb7a4;
+--primary2:#67d4c4;
+--text:#ffffff;
+--muted:#94a3b8;
+}
+
+html{
+scroll-behavior:smooth;
+scroll-padding-top:80px;
+}
+
 body{
 font-family:'Poppins',sans-serif;
 
 background:
-radial-gradient(circle at top right,rgba(124,92,255,0.18),transparent 30%),
-radial-gradient(circle at top left,rgba(91,140,255,0.14),transparent 25%),
-linear-gradient(to bottom,#0b1426 0%,#09111f 100%);
+radial-gradient(circle at top right,rgba(47,183,164,0.18),transparent 30%),
+radial-gradient(circle at top left,rgba(103,212,196,0.13),transparent 25%),
+linear-gradient(to bottom,#0a1820 0%,#071219 100%);
 
-color:white;
+color:var(--text);
 
-min-height:100vh;
-
-padding:40px 20px;
+overflow-x:hidden;
 }
 
-/* HEADER */
+/* NAVBAR */
 
-.map-header{
-max-width:1200px;
-margin:auto auto 40px;
+.navbar{
+position:sticky;
+top:0;
+z-index:1000;
 
+padding:10px 16px;
+
+display:flex;
+justify-content:space-between;
+align-items:center;
+
+background:rgba(5,13,18,0.76);
+
+backdrop-filter:blur(18px);
+
+border-bottom:1px solid rgba(255,255,255,0.04);
+}
+
+.logo{
+font-size:1.65rem;
+font-weight:800;
+color:white;
+text-decoration:none;
+}
+
+.nav-links{
+display:flex;
+gap:28px;
+align-items:center;
+}
+
+.nav-links a{
+color:#cbd5e1;
+font-size:0.95rem;
+text-decoration:none;
+transition:0.3s;
+}
+
+.nav-links a:hover{
+color:white;
+}
+
+.mobile-btn{
+display:none;
+font-size:2rem;
+cursor:pointer;
+color:white;
+}
+
+/* HERO */
+
+.hero{
+padding:60px 20px 30px;
 text-align:center;
 }
 
-.map-header h1{
-font-size:3.6rem;
-margin-bottom:16px;
+.hero h1{
+font-size:4rem;
+line-height:0.95;
+letter-spacing:-3px;
 
-letter-spacing:-2px;
+margin-bottom:18px;
 }
 
-.map-header h1 span{
-background:linear-gradient(90deg,#8b5cf6,#60a5fa);
+.hero h1 span{
+background:linear-gradient(90deg,#2fb7a4,#7ee5d5);
 
 -webkit-background-clip:text;
 -webkit-text-fill-color:transparent;
 }
 
-.map-header p{
-max-width:850px;
+.hero p{
+max-width:760px;
 margin:auto;
 
-line-height:1.8;
-
-color:#cbd5e1;
-
 font-size:1.05rem;
+line-height:1.9;
+
+color:#dbe4f0;
 }
 
 /* MAP */
 
-.map-container{
-max-width:1400px;
+.map-section{
+max-width:1450px;
 margin:auto;
+
+padding:10px 20px 80px;
 }
 
-.map-card{
+.map-wrapper{
 position:relative;
-
-overflow:hidden;
 
 border-radius:34px;
 
+overflow:hidden;
+
 border:1px solid rgba(255,255,255,0.06);
 
-box-shadow:0 20px 45px rgba(0,0,0,0.35);
+box-shadow:
+0 18px 45px rgba(0,0,0,0.32),
+inset 0 1px 0 rgba(255,255,255,0.03);
 
-background:#0f172a;
+background:#0b1a20;
 }
 
-.map-card img{
+.map-wrapper img{
 width:100%;
 display:block;
 }
 
-/* GRID */
+/* INFO GRID */
 
 .info-grid{
-max-width:1400px;
+max-width:1300px;
+margin:auto;
 
-margin:40px auto 0;
+padding:0 20px 90px;
 
 display:grid;
 grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
 
-gap:20px;
+gap:24px;
 }
 
 .info-card{
 background:
 linear-gradient(
 135deg,
-rgba(18,26,52,0.92),
-rgba(12,18,38,0.88)
+rgba(13,31,35,0.94),
+rgba(8,23,27,0.90)
 );
 
-padding:26px;
+padding:28px;
 
-border-radius:26px;
+border-radius:28px;
 
 border:1px solid rgba(255,255,255,0.05);
 
@@ -142,9 +217,9 @@ transition:0.35s;
 }
 
 .info-card:hover{
-transform:translateY(-6px);
+transform:translateY(-5px);
 
-border-color:rgba(99,102,241,0.4);
+border-color:rgba(47,183,164,0.45);
 }
 
 .info-card h3{
@@ -153,95 +228,203 @@ margin-bottom:14px;
 }
 
 .info-card p{
-line-height:1.7;
+line-height:1.8;
 color:#cbd5e1;
-font-size:0.96rem;
 }
 
 /* CTA */
 
-.bottom-cta{
+.cta{
 max-width:1200px;
+margin:0 auto 90px;
 
-margin:50px auto 0;
+padding:0 20px;
+}
 
-padding:40px;
-
-border-radius:30px;
-
+.cta-box{
 background:
 linear-gradient(
 135deg,
-rgba(99,102,241,0.22),
-rgba(59,130,246,0.16)
+rgba(47,183,164,0.22),
+rgba(103,212,196,0.16)
 );
 
-border:1px solid rgba(255,255,255,0.05);
+padding:60px 30px;
+
+border-radius:34px;
 
 text-align:center;
+
+backdrop-filter:blur(24px);
+
+border:1px solid rgba(255,255,255,0.08);
 }
 
-.bottom-cta h2{
-font-size:2rem;
-margin-bottom:16px;
+.cta-box h2{
+font-size:2.5rem;
+margin-bottom:18px;
 }
 
-.bottom-cta p{
-max-width:800px;
-margin:auto auto 24px;
+.cta-box p{
+max-width:720px;
+margin:auto;
 
-line-height:1.8;
+line-height:1.9;
 
-color:#dbe4f0;
+color:#e2e8f0;
+
+margin-bottom:30px;
 }
 
-.bottom-cta a{
-display:inline-block;
+.cta-box a{
+display:inline-flex;
+align-items:center;
+justify-content:center;
 
-padding:14px 22px;
+height:52px;
 
-background:white;
+padding:0 24px;
 
-color:#111827;
+border-radius:18px;
 
-border-radius:14px;
+background:linear-gradient(135deg,#2fb7a4,#67d4c4);
+
+color:white;
 
 font-weight:700;
+
+text-decoration:none;
+
+box-shadow:0 10px 25px rgba(47,183,164,0.30);
 
 transition:0.3s;
 }
 
-.bottom-cta a:hover{
+.cta-box a:hover{
 transform:translateY(-2px);
+
+box-shadow:0 14px 30px rgba(47,183,164,0.40);
+}
+
+/* FOOTER */
+
+footer{
+padding:70px 20px;
+text-align:center;
+color:#94a3b8;
+line-height:2;
+}
+
+.footer-links{
+margin-top:18px;
+
+display:flex;
+justify-content:center;
+flex-wrap:wrap;
+
+gap:18px;
+}
+
+.footer-links a{
+color:#cbd5e1;
+text-decoration:none;
+transition:0.3s;
+}
+
+.footer-links a:hover{
+color:#67d4c4;
 }
 
 /* MOBILE */
 
 @media(max-width:900px){
 
-body{
-padding:24px 16px;
+.mobile-btn{
+display:block;
 }
 
-.map-header h1{
-font-size:2.5rem;
+.nav-links{
+display:none;
+
+position:absolute;
+
+top:78px;
+left:20px;
+right:20px;
+
+background:
+linear-gradient(
+135deg,
+rgba(13,31,35,0.98),
+rgba(8,23,27,0.98)
+);
+
+padding:22px;
+
+border-radius:26px;
+
+flex-direction:column;
+
+border:1px solid rgba(255,255,255,0.06);
+
+box-shadow:0 18px 40px rgba(0,0,0,0.35);
+
+z-index:999;
 }
 
-.map-header p{
-font-size:0.96rem;
-line-height:1.7;
+.nav-links.active{
+display:flex;
 }
 
-.map-card{
+.hero{
+padding:40px 18px 24px;
+}
+
+.hero h1{
+font-size:2.8rem;
+letter-spacing:-2px;
+}
+
+.hero p{
+font-size:0.95rem;
+line-height:1.8;
+}
+
+.map-section{
+padding:0 18px 60px;
+}
+
+.map-wrapper{
+border-radius:26px;
+}
+
+.info-grid{
+padding:0 18px 70px;
+gap:18px;
+}
+
+.info-card{
+padding:22px;
 border-radius:24px;
 }
 
-.bottom-cta{
-padding:28px;
+.cta{
+padding:0 18px;
+margin-bottom:70px;
 }
 
-.bottom-cta h2{
-font-size:1.6rem;
+.cta-box{
+padding:40px 22px;
+border-radius:28px;
+}
+
+.cta-box h2{
+font-size:2rem;
+}
+
+.cta-box p{
+font-size:0.95rem;
+line-height:1.8;
 }
 
 }
@@ -252,40 +435,68 @@ font-size:1.6rem;
 
 <body>
 
-<!-- HEADER -->
+<!-- NAVBAR -->
 
-<section class="map-header">
+<nav class="navbar">
+
+<a href="index.html" class="logo">
+🌍 Vidolta
+</a>
+
+<div class="mobile-btn" onclick="toggleMenu()">
+☰
+</div>
+
+<div class="nav-links">
+
+<a href="index.html">
+Accueil
+</a>
+
+<a href="seoul.html">
+Séoul
+</a>
+
+<a href="destinations.html">
+Destinations
+</a>
+
+</div>
+
+</nav>
+
+<!-- HERO -->
+
+<section class="hero">
 
 <h1>
-Carte de <span>Séoul</span>
+Carte <span>Séoul</span>
 </h1>
 
 <p>
-Retrouve Gangnam,
-Hongdae,
-Myeongdong,
-Han River,
-les lignes essentielles du métro coréen
-et les quartiers incontournables de Séoul.
+Une version simplifiée et visuelle du réseau essentiel de Séoul
+pour comprendre rapidement les quartiers incontournables,
+les principales lignes de métro
+et les connexions utiles pour explorer la capitale sud-coréenne.
 </p>
 
 </section>
 
 <!-- MAP -->
 
-<section class="map-container">
+<section class="map-section">
 
-<div class="map-card">
+<div class="map-wrapper">
 
 <img
 src="images/seoul-map.webp"
-alt="Carte Séoul">
+alt="Carte simplifiée du métro et des quartiers de Séoul par Vidolta">
 
 </div>
 
 </section>
 
-<!-- INFORMATIONS -->
+<!-- INFO -->
 
 <section class="info-grid">
 
@@ -296,7 +507,7 @@ alt="Carte Séoul">
 </h3>
 
 <p>
-Le métro coréen est l’un des plus modernes et efficaces au monde pour explorer la ville.
+L'un des réseaux de métro les plus performants au monde relie rapidement les principaux quartiers de Séoul. Les lignes numérotées permettent de se déplacer facilement entre les sites incontournables.
 </p>
 
 </div>
@@ -304,13 +515,11 @@ Le métro coréen est l’un des plus modernes et efficaces au monde pour explor
 <div class="info-card">
 
 <h3>
-🌃 Quartiers iconiques
+📍 Quartiers incontournables
 </h3>
 
 <p>
-Gangnam,
-Hongdae,
-Itaewon et Myeongdong offrent des ambiances totalement différentes.
+Myeong-dong pour le shopping, Hongdae pour l'ambiance étudiante, Gangnam pour la modernité, Bukchon pour les hanoks et Insadong pour la culture traditionnelle.
 </p>
 
 </div>
@@ -318,13 +527,11 @@ Itaewon et Myeongdong offrent des ambiances totalement différentes.
 <div class="info-card">
 
 <h3>
-🎤 K-culture & nightlife
+💳 Carte T-money
 </h3>
 
 <p>
-Concerts K-pop,
-cafés modernes,
-gaming et nightlife font partie de l’expérience coréenne.
+La carte T-money facilite tous les déplacements en métro, en bus et même dans certains taxis. Rechargeable partout, elle est indispensable pour visiter Séoul sereinement.
 </p>
 
 </div>
@@ -332,13 +539,11 @@ gaming et nightlife font partie de l’expérience coréenne.
 <div class="info-card">
 
 <h3>
-🍜 Street food coréenne
+✈️ Depuis l'aéroport
 </h3>
 
 <p>
-Découvre les marchés,
-BBQ coréens,
-ramen et spécialités locales dans toute la ville.
+L'AREX relie directement les aéroports d'Incheon et de Gimpo au centre de Séoul. Une solution rapide et confortable pour rejoindre la capitale dès ton arrivée.
 </p>
 
 </div>
@@ -347,25 +552,76 @@ ramen et spécialités locales dans toute la ville.
 
 <!-- CTA -->
 
-<section class="bottom-cta">
+<section class="cta">
+
+<div class="cta-box">
 
 <h2>
-Explorer Séoul avec Vidolta
+Explorer Séoul autrement
 </h2>
 
 <p>
-Découvre les meilleures activités,
-cafés,
-quartiers,
-transports et expériences incontournables à Séoul.
+Vidolta simplifie les grandes villes grâce à des cartes claires,
+des conseils mobilité et des guides pensés pour explorer facilement
+la capitale sud-coréenne.
 </p>
 
 <a href="seoul.html">
-Retour au guide Séoul →
+Retour à Séoul →
 </a>
+
+</div>
 
 </section>
 
-</body>
+<!-- FOOTER -->
 
+<footer>
+
+<p>
+© 2026 Vidolta — Séoul Map
+</p>
+
+<div class="footer-links">
+
+<a href="about.html">
+À propos
+</a>
+
+<a href="mentions-legales.html">
+Mentions légales
+</a>
+
+<a href="confidentialite.html">
+Confidentialité
+</a>
+
+<a href="contact.html">
+Contact
+</a>
+
+</div>
+
+</footer>
+
+<script>
+
+function toggleMenu(){
+
+const nav = document.querySelector('.nav-links');
+
+nav.classList.toggle('active');
+
+}
+
+document.querySelectorAll('.nav-links a').forEach(link => {
+link.addEventListener('click', () => {
+const nav = document.querySelector('.nav-links');
+nav.classList.remove('active');
+});
+});
+
+</script>
+
+</body>
 </html>
