@@ -1,21 +1,25 @@
 {
+  "id": "/",
   "name": "Vidolta",
   "short_name": "Vidolta",
+  "description": "Guides de voyage, cartes et expériences pour découvrir les plus belles destinations.",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "theme_color": "#060b1f",
+  "background_color": "#060b1f",
   "icons": [
     {
       "src": "/web-app-manifest-192x192.png",
       "sizes": "192x192",
       "type": "image/png",
-      "purpose": "maskable"
+      "purpose": "any maskable"
     },
     {
       "src": "/web-app-manifest-512x512.png",
       "sizes": "512x512",
       "type": "image/png",
-      "purpose": "maskable"
+      "purpose": "any maskable"
     }
-  ],
-  "theme_color": "#060b1f",
-  "background_color": "#060b1f",
-  "display": "standalone"
+  ]
 }
