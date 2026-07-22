@@ -6,10 +6,15 @@
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 
-<title>Séoul — Vidolta</title>
+<title>Séoul : Guide complet, hôtels, restaurants et activités | Vidolta</title>
 
 <meta name="description"
-content="Découvre Séoul avec Vidolta : métro coréen, cafés, K-food, rooftops, Gangnam, Hongdae, activités, K-pop et expériences incontournables en Corée du Sud.">
+content="Découvre Séoul avec Vidolta : quartiers incontournables, métro, palais royaux, street food, cafés, K-pop, randonnées, traditions et expériences incontournables en Corée du Sud.">
+
+<link rel="canonical" href="https://www.vidolta.com/seoul.html">
+
+<link rel="alternate" hreflang="fr" href="https://www.vidolta.com/seoul.html">
+<link rel="alternate" hreflang="x-default" href="https://www.vidolta.com/seoul.html">
 
 <meta name="theme-color" content="#060b1f">
 
@@ -41,13 +46,13 @@ box-sizing:border-box;
 
 :root{
 --bg:#050816;
---primary:#7c5cff;
---primary2:#5b8cff;
+--primary:#2fb7a4;
+--primary2:#67d4c4;
 --text:#ffffff;
 --muted:#94a3b8;
 }
 
- html{
+html{
 scroll-behavior:smooth;
 scroll-padding-top:80px;
 }
@@ -56,9 +61,9 @@ body{
 font-family:'Poppins',sans-serif;
 
 background:
-radial-gradient(circle at top right,rgba(124,92,255,0.18),transparent 30%),
-radial-gradient(circle at top left,rgba(91,140,255,0.14),transparent 25%),
-linear-gradient(to bottom,#0b1426 0%,#09111f 100%);
+radial-gradient(circle at top right,rgba(47,183,164,0.18),transparent 30%),
+radial-gradient(circle at top left,rgba(103,212,196,0.13),transparent 25%),
+linear-gradient(to bottom,#0a1820 0%,#071219 100%);
 
 color:var(--text);
 
@@ -81,13 +86,13 @@ position:sticky;
 top:0;
 z-index:1000;
 
-padding:10px 16px;
+padding:12px 20px;
 
 display:flex;
 justify-content:space-between;
 align-items:center;
 
-background:rgba(5,8,22,0.72);
+background:rgba(5,13,18,0.76);
 
 backdrop-filter:blur(18px);
 
@@ -126,6 +131,7 @@ cursor:pointer;
 .hero{
 position:relative;
 height:72vh;
+padding-top:40px;
 
 display:flex;
 align-items:center;
@@ -145,7 +151,7 @@ height:100%;
 
 object-fit:cover;
 
-filter:brightness(0.80);
+filter:brightness(0.76);
 }
 
 .hero::after{
@@ -157,8 +163,8 @@ inset:0;
 background:
 linear-gradient(
 to bottom,
-rgba(5,8,22,0.12),
-rgba(5,8,22,0.42)
+rgba(5,13,18,0.10),
+rgba(5,13,18,0.64)
 );
 
 z-index:1;
@@ -173,14 +179,14 @@ max-width:900px;
 
 .hero h1{
 font-size:5rem;
-line-height:0.92;
+line-height:1.02;
 letter-spacing:-4px;
 
 margin-bottom:22px;
 }
 
 .hero h1 span{
-background:linear-gradient(90deg,#8b5cf6,#60a5fa);
+background:linear-gradient(90deg,#2fb7a4,#7ee5d5);
 
 -webkit-background-clip:text;
 -webkit-text-fill-color:transparent;
@@ -225,8 +231,8 @@ margin-right:auto;
 background:
 linear-gradient(
 135deg,
-rgba(18,26,52,0.92),
-rgba(12,18,38,0.88)
+rgba(13,31,35,0.94),
+rgba(8,23,27,0.90)
 );
 
 padding:24px;
@@ -237,12 +243,14 @@ border:1px solid rgba(255,255,255,0.05);
 
 box-shadow:0 10px 30px rgba(0,0,0,0.25);
 
+text-align:center;
+
 transition:0.35s;
 }
 
 .quick-card:hover{
 transform:translateY(-5px);
-border-color:rgba(99,102,241,0.4);
+border-color:rgba(47,183,164,0.42);
 }
 
 .quick-card h3{
@@ -275,6 +283,8 @@ margin-bottom:34px;
 .map-preview{
 position:relative;
 
+display:block;
+
 overflow:hidden;
 
 height:380px;
@@ -284,6 +294,12 @@ border-radius:34px;
 border:1px solid rgba(255,255,255,0.06);
 
 box-shadow:0 18px 45px rgba(0,0,0,0.32);
+
+transition:0.4s;
+}
+
+.map-preview:hover{
+transform:translateY(-6px);
 }
 
 .map-preview img{
@@ -292,7 +308,13 @@ height:100%;
 
 object-fit:cover;
 
-filter:brightness(0.80);
+filter:brightness(0.82);
+
+transition:0.5s;
+}
+
+.map-preview:hover img{
+transform:scale(1.03);
 }
 
 .map-preview-overlay{
@@ -308,8 +330,8 @@ justify-content:flex-end;
 background:
 linear-gradient(
 to top,
-rgba(0,0,0,0.50),
-rgba(0,0,0,0.18)
+rgba(0,0,0,0.64),
+rgba(0,0,0,0.12)
 );
 }
 
@@ -330,15 +352,24 @@ display:inline-block;
 
 padding:14px 20px;
 
-background:white;
+background:linear-gradient(135deg,#2fb7a4,#67d4c4);
 
-color:#111827;
+color:#ffffff;
 
 border-radius:14px;
 
 font-weight:700;
 
 width:fit-content;
+
+transition:0.3s;
+
+box-shadow:0 10px 25px rgba(47,183,164,0.30);
+}
+
+.map-button:hover{
+transform:translateY(-2px);
+box-shadow:0 14px 30px rgba(47,183,164,0.40);
 }
 
 /* GRID */
@@ -355,8 +386,8 @@ gap:18px;
 background:
 linear-gradient(
 135deg,
-rgba(18,26,52,0.92),
-rgba(12,18,38,0.88)
+rgba(13,31,35,0.94),
+rgba(8,23,27,0.90)
 );
 
 padding:24px;
@@ -373,7 +404,9 @@ transition:0.35s;
 .card:hover{
 transform:translateY(-6px);
 
-border-color:rgba(99,102,241,0.45);
+border-color:rgba(47,183,164,0.45);
+
+box-shadow:0 15px 35px rgba(0,0,0,0.25);
 }
 
 .card h3{
@@ -388,7 +421,7 @@ margin-bottom:16px;
 }
 
 .price{
-color:#818cf8;
+color:#67d4c4;
 font-weight:600;
 margin-bottom:14px;
 }
@@ -398,13 +431,46 @@ display:inline-block;
 
 padding:12px 18px;
 
-background:#6366f1;
+background:#2fb7a4;
 
 color:white;
 
 border-radius:12px;
 
 font-weight:600;
+
+transition:0.3s;
+}
+
+.card a:hover{
+background:#249786;
+transform:translateY(-2px);
+}
+
+/* THEMES */
+
+.experiences-theme .card{
+border-color:rgba(47,183,164,0.14);
+}
+
+.experiences-theme .card:hover{
+border-color:rgba(47,183,164,0.45);
+}
+
+.planning-theme .card{
+border-color:rgba(103,212,196,0.14);
+}
+
+.planning-theme .card:hover{
+border-color:rgba(103,212,196,0.45);
+}
+
+.warning-theme .card{
+border-color:rgba(239,68,68,0.14);
+}
+
+.warning-theme .card:hover{
+border-color:rgba(239,68,68,0.45);
 }
 
 /* INFO */
@@ -416,7 +482,12 @@ margin:auto;
 }
 
 .info-box{
-background:#111827;
+background:
+linear-gradient(
+135deg,
+rgba(13,31,35,0.94),
+rgba(8,23,27,0.90)
+);
 
 padding:35px;
 
@@ -427,12 +498,18 @@ border:1px solid rgba(255,255,255,0.05);
 line-height:1.7;
 
 color:#cbd5e1;
+
+box-shadow:0 12px 35px rgba(0,0,0,0.24);
 }
 
 .info-box h2{
 font-size:2rem;
 margin-bottom:22px;
 color:white;
+}
+
+.info-box p{
+margin-bottom:18px;
 }
 
 /* FAQ */
@@ -444,13 +521,25 @@ gap:18px;
 }
 
 .faq-item{
-background:#1e293b;
+background:
+linear-gradient(
+135deg,
+rgba(13,31,35,0.94),
+rgba(8,23,27,0.90)
+);
 
 padding:24px;
 
 border-radius:22px;
 
 border:1px solid rgba(255,255,255,0.05);
+
+transition:0.35s;
+}
+
+.faq-item:hover{
+border-color:rgba(47,183,164,0.35);
+transform:translateY(-3px);
 }
 
 .faq-item h3{
@@ -482,6 +571,15 @@ flex-wrap:wrap;
 gap:18px;
 }
 
+.footer-links a{
+color:#cbd5e1;
+transition:0.3s;
+}
+
+.footer-links a:hover{
+color:#67d4c4;
+}
+
 /* ANIMATION */
 
 .fade-up{
@@ -509,7 +607,7 @@ height:52px;
 border:none;
 border-radius:50%;
 
-background:#6366f1;
+background:linear-gradient(135deg,#2fb7a4,#67d4c4);
 
 color:white;
 
@@ -520,6 +618,8 @@ cursor:pointer;
 display:flex;
 align-items:center;
 justify-content:center;
+
+box-shadow:0 10px 25px rgba(47,183,164,0.30);
 
 opacity:0;
 pointer-events:none;
@@ -532,6 +632,11 @@ z-index:999;
 .back-to-top.show{
 opacity:1;
 pointer-events:auto;
+}
+
+.back-to-top:hover{
+transform:translateY(-3px);
+box-shadow:0 14px 30px rgba(47,183,164,0.40);
 }
 
 /* MOBILE */
@@ -551,7 +656,12 @@ top:78px;
 left:20px;
 right:20px;
 
-background:#111827;
+background:
+linear-gradient(
+135deg,
+rgba(13,31,35,0.98),
+rgba(8,23,27,0.98)
+);
 
 padding:22px;
 
@@ -559,11 +669,19 @@ border-radius:26px;
 
 flex-direction:column;
 
+border:1px solid rgba(255,255,255,0.06);
+
+box-shadow:0 18px 40px rgba(0,0,0,0.35);
+
 z-index:999;
 }
 
 .nav-links.active{
 display:flex;
+}
+
+.hero{
+height:72vh;
 }
 
 .hero h1{
@@ -578,6 +696,10 @@ line-height:1.7;
 
 .quick-guide{
 margin-top:-20px;
+}
+
+.quick-card{
+padding:20px;
 }
 
 .section{
@@ -601,6 +723,11 @@ padding:24px;
 font-size:1.5rem;
 }
 
+.map-preview-overlay p{
+font-size:0.95rem;
+line-height:1.7;
+}
+
 .info-box{
 padding:26px;
 }
@@ -613,9 +740,14 @@ font-size:1.6rem;
 
 </style>
 
+<!-- GetYourGuide Analytics -->
+<script async defer src="https://widget.getyourguide.com/dist/pa.umd.production.min.js" data-gyg-partner-id="F9OV4TP"></script>
+
 </head>
 
 <body>
+
+<!-- NAVBAR -->
 
 <nav class="navbar">
 
@@ -629,13 +761,32 @@ font-size:1.6rem;
 
 <div class="nav-links">
 
-<a href="index.html">Accueil</a>
-<a href="#mobilite">Mobilité</a>
-<a href="#restaurants">Restaurants</a>
-<a href="#activites">Activités</a>
+<a href="#experiences">
+Expériences
+</a>
+
+<a href="#mobilite">
+Mobilité
+</a>
+
+<a href="#ou-dormir">
+Où dormir
+</a>
+
+<a href="#restaurants">
+Restaurants
+</a>
+
+<a href="#activites">
+Activités
+</a>
+
+<a href="#sport">
+Sport
+</a>
 
 <a href="destinations.html">
-← Retour
+🌍 Destinations
 </a>
 
 </div>
@@ -647,25 +798,28 @@ font-size:1.6rem;
 <section class="hero">
 
 <img
-loading="lazy"
 src="images/seoul.webp"
 alt="Séoul">
 
 <div class="hero-overlay">
 
 <h1>
-<span>Séoul ne ralentit jamais</span>
+<span>Séoul ne cesse de surprendre</span>
 </h1>
 
 <p>
-Explore Séoul entre métro futuriste,
-cafés modernes,
-street food coréenne,
-néons et quartiers iconiques.
+Découvre Séoul entre palais royaux,
+quartiers branchés,
+street food,
+cafés tendance,
+K-pop
+et panoramas entre montagnes,
+fleuve Han
+et gratte-ciel.
 </p>
 
 <p class="subtitle">
-Gangnam • Hongdae • K-food • Han River • K-pop
+Gyeongbokgung • Myeong-dong • Hongdae • Bukchon • N Seoul Tower
 </p>
 
 </div>
@@ -677,31 +831,57 @@ Gangnam • Hongdae • K-food • Han River • K-pop
 <section class="quick-guide">
 
 <div class="quick-card fade-up">
-<h3>🚇 Métro ultra moderne</h3>
+<h3>🏯 Séoul entre tradition et modernité</h3>
 <p>
-Le métro de Séoul permet d’explorer la ville rapidement et facilement.
+Palais royaux, villages hanok, temples bouddhistes et quartiers futuristes.
 </p>
 </div>
 
 <div class="quick-card fade-up">
-<h3>🍜 Street food coréenne</h3>
+<h3>🚇 Un métro ultra efficace</h3>
 <p>
-Découvre les marchés et spécialités incontournables de Séoul.
+T-money, métro de Séoul, AREX et conseils pratiques pour explorer facilement la capitale.
 </p>
 </div>
 
 <div class="quick-card fade-up">
-<h3>🌃 Nightlife & cafés</h3>
+<h3>🌆 Les incontournables</h3>
 <p>
-Hongdae, Gangnam et Itaewon offrent une ambiance unique de jour comme de nuit.
+Myeong-dong, Gyeongbokgung, Bukchon, N Seoul Tower et le fleuve Han.
 </p>
 </div>
 
 <div class="quick-card fade-up">
-<h3>🎤 K-pop & culture</h3>
+<h3>🎤 Culture & tendances</h3>
 <p>
-Concerts, e-sport et culture coréenne moderne font vibrer Séoul.
+K-pop, cafés design, street food, shopping, e-sport et vie nocturne animée.
 </p>
+</div>
+
+</section>
+
+<!-- SÉOUL EN UN COUP D'ŒIL -->
+
+<section class="info-section">
+
+<div class="info-box fade-up">
+
+<h2>
+🇰🇷 Séoul en un coup d'œil
+</h2>
+
+<p>
+Séoul est une capitale fascinante où les palais royaux côtoient les gratte-ciel, les marchés traditionnels, les cafés les plus créatifs et une scène culturelle parmi les plus dynamiques d'Asie. Moderne sans renier son histoire, elle offre une expérience unique à chaque visite.
+</p>
+
+<p>
+De Myeong-dong à Hongdae, de Gangnam à Seongsu-dong, sans oublier Bukchon Hanok Village, chaque quartier possède sa propre identité. Entre shopping, gastronomie coréenne, K-pop, rooftops, temples et promenades au bord du fleuve Han, les découvertes se succèdent du matin jusqu'au bout de la nuit.
+</p>
+
+<p>
+Que tu viennes pour la cuisine coréenne, les palais de la dynastie Joseon, les paysages urbains, les cafés atypiques ou l'effervescence de la Hallyu, Séoul est une destination captivante où l'héritage coréen rencontre l'innovation, la créativité et un art de vivre unique.
+</p>
+
 </div>
 
 </section>
@@ -723,14 +903,16 @@ alt="Carte Séoul">
 <div class="map-preview-overlay">
 
 <h3>
-Voir la carte interactive de Séoul
+La carte essentielle de Séoul
 </h3>
 
 <p>
-Gangnam,
+Myeong-dong,
 Hongdae,
-Myeongdong,
-Han River et les lignes essentielles du métro coréen.
+Gangnam,
+Bukchon Hanok Village,
+Gyeongbokgung,
+N Seoul Tower et les principales lignes de métro pour explorer facilement la capitale sud-coréenne.
 </p>
 
 <a href="seoul-map.html" class="map-button">
@@ -743,66 +925,188 @@ Explorer la carte →
 
 </section>
 
-<!-- MOBILITE -->
+<!-- EXPERIENCES MEMORABLES -->
 
-<section class="section" id="mobilite">
+<section class="section experiences-theme" id="experiences">
 
 <h2 class="section-title fade-up">
-🚄 Explorer Séoul facilement
+✨ Les expériences qui rendent Séoul inoubliable
+</h2>
+
+<p style="
+text-align:center;
+max-width:850px;
+margin:0 auto 35px;
+color:#cbd5e1;
+line-height:1.8;">
+Séoul ne se découvre pas seulement : elle se vit. Entre palais royaux, gastronomie coréenne, quartiers branchés, K-pop, traditions ancestrales et panoramas urbains, certaines expériences rendent un séjour dans la capitale sud-coréenne véritablement inoubliable.
+</p>
+
+<div class="grid">
+
+<div class="card fade-up">
+
+<img
+src="images/seoul-experience-1.webp"
+alt="Palais Gyeongbokgung à Séoul"
+style="width:100%;height:220px;object-fit:cover;border-radius:18px;margin-bottom:18px;">
+
+<h3>🏯 Visiter les palais royaux en hanbok</h3>
+
+<p>
+Enfile un hanbok traditionnel et découvre les majestueux palais de la dynastie Joseon, dont Gyeongbokgung, pour une immersion dans l'histoire et la culture coréennes.
+</p>
+
+</div>
+
+<div class="card fade-up">
+
+<img
+src="images/seoul-experience-2.webp"
+alt="Street food à Séoul"
+style="width:100%;height:220px;object-fit:cover;border-radius:18px;margin-bottom:18px;">
+
+<h3>🍢 Explorer les marchés de street food</h3>
+
+<p>
+Savoure les spécialités emblématiques de la cuisine coréenne dans les marchés animés de Séoul, entre tteokbokki, mandu, hotteok, gimbap et poulet frit.
+</p>
+
+</div>
+
+<div class="card fade-up">
+
+<img
+src="images/seoul-experience-3.webp"
+alt="Séoul de nuit"
+style="width:100%;height:220px;object-fit:cover;border-radius:18px;margin-bottom:18px;">
+
+<h3>🌆 Découvrir Séoul après le coucher du soleil</h3>
+
+<p>
+Lorsque les enseignes s'illuminent, la capitale révèle une toute autre ambiance entre rooftops, marchés de nuit, quartiers animés et vues panoramiques.
+</p>
+
+</div>
+
+<div class="card fade-up">
+
+<img
+src="images/seoul-experience-4.webp"
+alt="Culture K-pop à Séoul"
+style="width:100%;height:220px;object-fit:cover;border-radius:18px;margin-bottom:18px;">
+
+<h3>🎤 Plonger dans l'univers de la K-pop</h3>
+
+<p>
+Explore Gangnam, les boutiques officielles, les cafés à thème et les lieux emblématiques qui ont fait de Séoul la capitale mondiale de la K-pop.
+</p>
+
+</div>
+
+<div class="card fade-up">
+
+<img
+src="images/seoul-experience-5.webp"
+alt="Cuisine coréenne"
+style="width:100%;height:220px;object-fit:cover;border-radius:18px;margin-bottom:18px;">
+
+<h3>🥢 Découvrir la gastronomie coréenne</h3>
+
+<p>
+Entre barbecue coréen, bibimbap, kimchi, nouilles froides et cafés créatifs, Séoul est une destination incontournable pour les amateurs de cuisine.
+</p>
+
+</div>
+
+<div class="card fade-up">
+
+<img
+src="images/seoul-experience-6.webp"
+alt="Panorama sur Séoul"
+style="width:100%;height:220px;object-fit:cover;border-radius:18px;margin-bottom:18px;">
+
+<h3>🌄 Admirer Séoul depuis les hauteurs</h3>
+
+<p>
+Rejoins la N Seoul Tower ou les sentiers des montagnes environnantes pour profiter de panoramas exceptionnels sur l'une des plus grandes métropoles d'Asie.
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- MOBILITE -->
+
+<section class="section planning-theme" id="mobilite">
+
+<h2 class="section-title fade-up">
+🚇 Explorer Séoul facilement
 </h2>
 
 <div class="grid">
 
 <div class="card fade-up">
 
-<h3>🚇 Métro Séoul</h3>
+<h3>💳 Carte T-money</h3>
 
 <div class="price">
-Transport urbain
+La carte indispensable
 </div>
 
 <p>
-Utilise le métro coréen pour explorer rapidement les quartiers principaux.
+La T-money est la carte de transport la plus pratique pour voyager dans le métro, les bus et même les taxis. Rechargeable dans les stations et les supérettes, elle simplifie tous tes déplacements à Séoul et dans une grande partie de la Corée du Sud.
 </p>
 
-<a href="https://english.seoul.go.kr/" target="_blank">
-Explorer
+<a
+href="https://english.visitkorea.or.kr/svc/contents/infoBscView.do?menuSn=479&vcontsId=140663"
+target="_blank"
+rel="noopener">
+Découvrir la T-money →
 </a>
 
 </div>
 
 <div class="card fade-up">
 
-<h3>🚄 KTX Corée</h3>
+<h3>📶 eSIM Corée du Sud</h3>
 
 <div class="price">
-Voyages Corée
+Connexion partout
 </div>
 
 <p>
-Voyage facilement entre Séoul, Busan et les grandes villes coréennes.
+Reste connecté dès ton arrivée grâce à une eSIM et profite d'Internet pour utiliser les cartes, les transports, la traduction et les applications indispensables.
 </p>
 
-<a href="https://www.letskorail.com" target="_blank">
-Explorer
+<a
+href="https://www.airalo.com/fr/south-korea-esim"
+target="_blank"
+rel="noopener">
+Voir les eSIM →
 </a>
 
 </div>
 
 <div class="card fade-up">
 
-<h3>📱 eSIM Corée</h3>
+<h3>🎫 Discover Seoul Pass</h3>
 
 <div class="price">
-Connexion rapide
+Transports & attractions
 </div>
 
 <p>
-Reste connecté partout en Corée grâce aux eSIM internationales.
+Le Discover Seoul Pass combine l'accès à de nombreuses attractions touristiques avec des réductions exclusives. La version physique peut également être utilisée comme carte T-money après rechargement. :contentReference[oaicite:0]{index=0}
 </p>
 
-<a href="https://www.airalo.com/" target="_blank">
-Explorer
+<a
+href="https://www.discoverseoulpass.com/"
+target="_blank"
+rel="noopener">
+Découvrir le pass →
 </a>
 
 </div>
@@ -811,55 +1115,160 @@ Explorer
 
 </section>
 
-<!-- FOOD -->
+<!-- OU DORMIR -->
 
-<section class="section" id="restaurants">
+<section class="section planning-theme" id="ou-dormir">
 
 <h2 class="section-title fade-up">
-🍜 Goûter le vrai Séoul
+🏨 Où dormir à Séoul ?
 </h2>
 
 <div class="grid">
 
 <div class="card fade-up">
 
-<h3>🍢 Street food coréenne</h3>
+<h3>🛍️ Myeong-dong</h3>
 
 <p>
-Découvre les meilleurs marchés et spécialités locales de Séoul.
+Le quartier idéal pour un premier séjour. Shopping, street food, excellentes connexions en métro et proximité des principaux sites touristiques font de Myeong-dong l'un des meilleurs points de départ pour découvrir Séoul.
 </p>
-
-<a href="https://www.tripadvisor.com/" target="_blank">
-Explorer
-</a>
 
 </div>
 
 <div class="card fade-up">
 
-<h3>☕ Cafés & rooftops</h3>
+<h3>🎨 Hongdae</h3>
 
 <p>
-Explore les cafés modernes et rooftops iconiques de Gangnam et Hongdae.
+Le quartier le plus animé de Séoul. Cafés tendance, concerts, boutiques indépendantes, art de rue et vie nocturne attirent une clientèle jeune et dynamique.
 </p>
-
-<a href="https://www.klook.com/" target="_blank">
-Explorer
-</a>
 
 </div>
 
 <div class="card fade-up">
 
-<h3>🍽️ Restaurants populaires</h3>
+<h3>🏯 Bukchon & Insadong</h3>
 
 <p>
-BBQ coréen, ramen et cuisine locale dans les quartiers incontournables.
+Le meilleur secteur pour découvrir les palais royaux, les villages hanok, les salons de thé traditionnels et le patrimoine historique de la capitale coréenne.
 </p>
 
-<a href="https://guide.michelin.com/" target="_blank">
-Explorer
+</div>
+
+<div class="card fade-up">
+
+<h3>🏙️ Gangnam</h3>
+
+<p>
+Quartier moderne et élégant, Gangnam séduit par ses hôtels haut de gamme, ses centres commerciaux, ses restaurants, ses rooftops et son ambiance cosmopolite.
+</p>
+
+</div>
+
+<div class="card fade-up">
+
+<h3>🌿 Jamsil</h3>
+
+<p>
+Parfait pour les familles et les voyageurs recherchant davantage de calme. On y trouve le Lotte World, le parc olympique, le lac Seokchon et de nombreux espaces verts.
+</p>
+
+</div>
+
+</div>
+
+<p style="
+text-align:center;
+margin-top:30px;
+color:#cbd5e1;
+">
+Compare les hôtels des principaux quartiers de Séoul et trouve l'hébergement idéal selon ton budget et ton style de voyage.
+</p>
+
+<div style="text-align:center;margin-top:35px;">
+
+<a
+href="https://www.jdoqocy.com/click-101766856-12319490?url=https%3A%2F%2Fwww.booking.com%2Fsearchresults.fr.html%3Fss%3DS%25C3%25A9oul%252C%2BCor%25C3%25A9e%2Bdu%2BSud%26efdco%3D1%26label%3Dgen173nr-10CAEoggI46AdIM1gEaE2IAQGYATO4ARfIAQ_YAQPoAQH4AQGIAgGoAgG4ApKFhdMGwAIB0gIkODc0ZWRmMzUtZjgxMC00MTI5LWE1OTYtNGYxNDAxODAwZDIz2AIB4AIB%26aid%3D304142%26lang%3Dfr%26sb%3D1%26src_elem%3Dsb%26src%3Dindex%26dest_id%3D-716583%26dest_type%3Dcity%26ac_position%3D0%26ac_click_type%3Db%26ac_langcode%3Dfr%26ac_suggestion_list_length%3D5%26search_selected%3Dtrue%26search_pageview_id%3Dab209d49890a00ee%26ac_meta%3DGhBhYjIwOWQ0OTg5MGEwMGVlIAAoATICZnI6BXNlb3Vs%26group_adults%3D2%26no_rooms%3D1%26group_children%3D0%26chal_t%3D1784758943671%26force_referer%3Dhttps%253A%252F%252Fwww.booking.com%252Findex.fr.html%253Faid%253D304142%2526label%253Dgen173nr-10CAEoggI46AdIM1gEaE2IAQGYATO4ARfIAQ_YAQPoAQH4AQGIAgGoAgG4ApKFhdMGwAIB0gIkODc0ZWRmMzUtZjgxMC00MTI5LWE1OTYtNGYxNDAxODAwZDIz2AIB4AIB%2526chal_t%253D1784758929756%2526force_referer%253D"
+target="_blank"
+rel="noopener sponsored"
+style="
+display:inline-block;
+padding:16px 28px;
+background:linear-gradient(90deg,#f97316,#facc15);
+color:white;
+border-radius:14px;
+font-weight:700;
+font-size:1rem;
+box-shadow:0 10px 25px rgba(0,0,0,0.25);
+transition:0.3s;">
+🏨 Réserver un hôtel à Séoul →
 </a>
+
+</div>
+
+</section>
+
+<!-- RESTAURANTS -->
+
+<section class="section" id="restaurants">
+
+<h2 class="section-title fade-up">
+🥢 Goûter le vrai Séoul
+</h2>
+
+<p style="
+text-align:center;
+max-width:850px;
+margin:0 auto 35px;
+color:#cbd5e1;
+line-height:1.8;">
+Des barbecues coréens aux marchés de street food, en passant par les cafés design et les restaurants traditionnels, Séoul est l'une des capitales gastronomiques les plus passionnantes d'Asie.
+</p>
+
+<div class="grid">
+
+<div class="card fade-up">
+
+<img
+src="images/korean-bbq.webp"
+alt="Barbecue coréen à Séoul"
+style="width:100%;height:220px;object-fit:cover;border-radius:18px;margin-bottom:18px;">
+
+<h3>🔥 Le barbecue coréen</h3>
+
+<p>
+Installe-toi autour d'un grill, fais cuire toi-même les meilleures viandes et partage ce repas convivial accompagné de banchan, les célèbres petits accompagnements coréens.
+</p>
+
+</div>
+
+<div class="card fade-up">
+
+<img
+src="images/gwangjang-market.webp"
+alt="Marché Gwangjang à Séoul"
+style="width:100%;height:220px;object-fit:cover;border-radius:18px;margin-bottom:18px;">
+
+<h3>🍢 Les marchés de street food</h3>
+
+<p>
+Découvre les saveurs incontournables de la cuisine coréenne dans les marchés de Gwangjang ou Namdaemun entre tteokbokki, mandu, hotteok, gimbap et nombreuses spécialités locales.
+</p>
+
+</div>
+
+<div class="card fade-up">
+
+<img
+src="images/seoul-cafe.webp"
+alt="Café à Séoul"
+style="width:100%;height:220px;object-fit:cover;border-radius:18px;margin-bottom:18px;">
+
+<h3>☕ Les cafés emblématiques</h3>
+
+<p>
+Séoul est réputée pour ses cafés créatifs. Cafés à thème, pâtisseries raffinées et lieux au design soigné font partie intégrante de la culture locale.
+</p>
 
 </div>
 
@@ -875,61 +1284,104 @@ Explorer
 ✨ Le Séoul iconique
 </h2>
 
+<p style="
+text-align:center;
+max-width:850px;
+margin:0 auto 35px;
+color:#cbd5e1;
+line-height:1.8;">
+Entre palais royaux, quartiers animés, panoramas urbains, villages traditionnels et culture coréenne contemporaine, Séoul offre une incroyable diversité d'expériences.
+</p>
+
 <div class="grid">
 
 <div class="card fade-up">
 
-<h3>🏯 Gyeongbokgung</h3>
+<img
+src="images/gyeongbokgung.webp"
+alt="Palais Gyeongbokgung"
+style="width:100%;height:180px;object-fit:cover;border-radius:18px;margin-bottom:18px;">
+
+<h3>🏯 Palais Gyeongbokgung</h3>
 
 <p>
-Découvre le palais historique emblématique de Séoul.
+Le plus grand palais royal de Corée du Sud dévoile l'histoire de la dynastie Joseon avec son architecture majestueuse, ses jardins et la relève de la garde.
 </p>
-
-<a href="https://www.getyourguide.com/" target="_blank">
-Explorer
-</a>
 
 </div>
 
 <div class="card fade-up">
 
-<h3>🌃 N Seoul Tower</h3>
+<img
+src="images/bukchon.webp"
+alt="Bukchon Hanok Village"
+style="width:100%;height:180px;object-fit:cover;border-radius:18px;margin-bottom:18px;">
+
+<h3>🏘️ Bukchon Hanok Village</h3>
 
 <p>
-Profite d’une vue incroyable sur la skyline coréenne.
+Promène-toi dans les ruelles bordées de maisons traditionnelles coréennes et découvre l'un des quartiers historiques les plus emblématiques de Séoul.
 </p>
-
-<a href="https://www.klook.com/" target="_blank">
-Explorer
-</a>
 
 </div>
 
 <div class="card fade-up">
 
-<h3>🛍️ Myeongdong</h3>
+<img
+src="images/n-seoul-tower.webp"
+alt="N Seoul Tower"
+style="width:100%;height:180px;object-fit:cover;border-radius:18px;margin-bottom:18px;">
+
+<h3>🗼 N Seoul Tower</h3>
 
 <p>
-Shopping, street food et ambiance unique au cœur de Séoul.
+Dominant la capitale depuis le mont Namsan, la N Seoul Tower offre un panorama exceptionnel sur l'immense skyline de Séoul.
 </p>
-
-<a href="https://www.trazy.com/" target="_blank">
-Explorer
-</a>
 
 </div>
 
 <div class="card fade-up">
 
-<h3>🌊 Han River</h3>
+<img
+src="images/myeongdong.webp"
+alt="Myeong-dong"
+style="width:100%;height:180px;object-fit:cover;border-radius:18px;margin-bottom:18px;">
+
+<h3>🛍️ Myeong-dong</h3>
 
 <p>
-Balades, pique-niques et nightlife le long de la rivière Han.
+Quartier incontournable du shopping, de la street food et des cosmétiques coréens, Myeong-dong reste l'un des lieux les plus animés de la capitale.
 </p>
 
-<a href="https://www.getyourguide.com/" target="_blank">
-Explorer
-</a>
+</div>
+
+<div class="card fade-up">
+
+<img
+src="images/hongdae.webp"
+alt="Hongdae"
+style="width:100%;height:180px;object-fit:cover;border-radius:18px;margin-bottom:18px;">
+
+<h3>🎨 Hongdae</h3>
+
+<p>
+Art de rue, musique live, cafés originaux, boutiques indépendantes et vie nocturne font de Hongdae l'un des quartiers les plus créatifs de Séoul.
+</p>
+
+</div>
+
+<div class="card fade-up">
+
+<img
+src="images/cheonggyecheon.webp"
+alt="Cheonggyecheon"
+style="width:100%;height:180px;object-fit:cover;border-radius:18px;margin-bottom:18px;">
+
+<h3>🌊 Cheonggyecheon</h3>
+
+<p>
+Cette rivière aménagée au cœur de Séoul offre une agréable promenade entre nature, art urbain et illuminations en soirée.
+</p>
 
 </div>
 
@@ -937,77 +1389,225 @@ Explorer
 
 </section>
 
-<!-- SPORT -->
+<!-- ⚽ SPORT & CULTURE -->
+
+<section class="section" id="sport">
+
+<h2 class="section-title fade-up">
+⚽ Vivre le sport et la culture à Séoul
+</h2>
+
+<p style="
+text-align:center;
+max-width:850px;
+margin:0 auto 35px;
+color:#cbd5e1;
+line-height:1.8;">
+Au-delà des palais et des quartiers branchés, Séoul vibre toute l'année au rythme du football, du baseball, de l'e-sport, de la K-pop et des grands événements culturels qui font rayonner la Corée du Sud.
+</p>
+
+<div class="map-preview fade-up">
+
+<img
+src="images/seoul-sports.webp"
+alt="Sport et culture à Séoul">
+
+<div class="map-preview-overlay">
+</div>
+
+</div>
+
+<div class="grid">
+
+<div class="card fade-up">
+
+<h3>⚽ Football coréen</h3>
+
+<p>
+Assister à un match du FC Seoul permet de découvrir l'ambiance passionnée des supporters coréens dans l'impressionnant Seoul World Cup Stadium, construit pour la Coupe du monde 2002.
+</p>
+
+</div>
+
+<div class="card fade-up">
+
+<h3>⚾ Baseball à la coréenne</h3>
+
+<p>
+Les rencontres de KBO League sont réputées pour leur ambiance festive. Chants, pom-pom girls, animations et supporters passionnés transforment chaque match en véritable spectacle.
+</p>
+
+</div>
+
+<div class="card fade-up">
+
+<h3>🎮 La capitale mondiale de l'e-sport</h3>
+
+<p>
+Séoul est le berceau de l'e-sport moderne. Arènes, PC bangs, compétitions internationales et culture gaming font partie intégrante de la ville.
+</p>
+
+</div>
+
+<div class="card fade-up">
+
+<h3>🎤 K-pop & culture coréenne</h3>
+
+<p>
+Concerts, boutiques officielles, cafés à thème, studios et quartiers emblématiques permettent de découvrir l'univers de la Hallyu qui séduit aujourd'hui des millions de fans à travers le monde.
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- AUTOUR DE SÉOUL -->
 
 <section class="section">
 
 <h2 class="section-title fade-up">
-⚾ Séoul côté sport & culture
+🌿 Les plus belles excursions autour de Séoul
+</h2>
+
+<p style="
+text-align:center;
+max-width:850px;
+margin:0 auto 35px;
+color:#cbd5e1;
+line-height:1.8;">
+À moins de deux heures de Séoul, découvre quelques-unes des plus belles escapades de Corée du Sud. Entre forteresses historiques, villages traditionnels, montagnes, îles et zones démilitarisées, ces excursions complètent parfaitement un séjour dans la capitale.
+</p>
+
+<div class="map-preview fade-up">
+
+<img
+src="images/autour-seoul.webp"
+alt="Excursions autour de Séoul">
+
+<div class="map-preview-overlay">
+
+<h3>
+Les plus belles découvertes autour de Séoul
+</h3>
+
+<p>
+DMZ,
+Suwon,
+Nami Island,
+Bukhansan,
+Incheon…
+Autant de destinations accessibles en une journée pour découvrir une autre facette de la Corée du Sud.
+</p>
+
+</div>
+
+</div>
+
+<div class="grid" style="margin-top:28px;">
+
+<div class="card fade-up">
+
+<h3>🪖 La DMZ</h3>
+
+<p>
+Découvre la célèbre zone démilitarisée qui sépare les deux Corées. Entre tunnels, postes d'observation et histoire contemporaine, cette excursion est l'une des plus marquantes du pays.
+</p>
+
+</div>
+
+<div class="card fade-up">
+
+<h3>🏰 Suwon</h3>
+
+<p>
+Explore la forteresse de Hwaseong, classée au patrimoine mondial de l'UNESCO, et découvre l'une des plus belles villes historiques de Corée du Sud.
+</p>
+
+</div>
+
+<div class="card fade-up">
+
+<h3>🍁 Nami Island</h3>
+
+<p>
+Réputée pour ses magnifiques allées bordées d'arbres, Nami Island séduit en toute saison et constitue l'une des excursions les plus populaires au départ de Séoul.
+</p>
+
+</div>
+
+<div class="card fade-up">
+
+<h3>🥾 Parc national de Bukhansan</h3>
+
+<p>
+À seulement quelques stations de métro du centre-ville, Bukhansan offre des sentiers accessibles et des panoramas spectaculaires sur l'ensemble de Séoul.
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ERREURS A EVITER -->
+
+<section class="section warning-theme">
+
+<h2 class="section-title fade-up">
+⚠️ Les erreurs à éviter à Séoul
 </h2>
 
 <div class="grid">
 
 <div class="card fade-up">
 
-<h3>
-⚾ Baseball coréen
-</h3>
+<h3>🚇 Sous-estimer les distances</h3>
 
 <p>
-Découvre l’ambiance unique des matchs de baseball en Corée du Sud.
+Séoul est une immense métropole. Même avec un excellent métro, les trajets peuvent être longs. Regroupe les visites par quartier pour profiter pleinement de tes journées.
 </p>
-
-<a href="https://www.stubhub.com/" target="_blank">
-Voir les billets
-</a>
 
 </div>
 
 <div class="card fade-up">
 
-<h3>
-🎤 Concerts K-pop
-</h3>
+<h3>🏯 Se limiter aux quartiers modernes</h3>
 
 <p>
-Assiste aux grands concerts et événements musicaux coréens.
+Gangnam et Hongdae sont incontournables, mais les palais royaux, Bukchon Hanok Village et Insadong permettent de découvrir toute la richesse historique de la ville.
 </p>
-
-<a href="https://www.trazy.com/" target="_blank">
-Explorer
-</a>
 
 </div>
 
 <div class="card fade-up">
 
-<h3>
-🎮 E-sport & gaming
-</h3>
+<h3>🎟️ Attendre le dernier moment</h3>
 
 <p>
-Séoul est l’une des capitales mondiales du gaming et de l’e-sport.
+Certaines activités, visites guidées ou observatoires peuvent rapidement afficher complet, notamment pendant les vacances et la saison des cerisiers en fleurs.
 </p>
-
-<a href="https://www.klook.com/" target="_blank">
-Découvrir
-</a>
 
 </div>
 
 <div class="card fade-up">
 
-<h3>
-🎟️ Événements Séoul
-</h3>
+<h3>💳 Oublier la carte T-money</h3>
 
 <p>
-Retrouve facilement concerts, événements et expériences incontournables.
+Cette carte rechargeable facilite les déplacements dans le métro, les bus et certains taxis. Elle permet également de gagner un temps précieux lors des correspondances.
 </p>
 
-<a href="https://www.getyourguide.com/" target="_blank">
-Explorer
-</a>
+</div>
+
+<div class="card fade-up">
+
+<h3>🤝 Ignorer les usages locaux</h3>
+
+<p>
+Faire preuve de discrétion dans les transports, respecter les files d'attente et adopter quelques règles de politesse locales rendent les échanges plus agréables avec les habitants.
+</p>
 
 </div>
 
@@ -1015,40 +1615,82 @@ Explorer
 
 </section>
 
-<!-- GUIDE -->
+<!-- AVANT DE PARTIR -->
+
+<section class="section planning-theme">
+
+<h2 class="section-title fade-up">
+✈️ Avant de partir à Séoul
+</h2>
+
+<div class="grid">
+
+<div class="card fade-up">
+<h3>🗣️ Langue</h3>
+<p>
+Le coréen est la langue officielle. L'anglais est présent dans les principaux sites touristiques, mais quelques mots de coréen sont toujours appréciés.
+</p>
+</div>
+
+<div class="card fade-up">
+<h3>💴 Devise</h3>
+<p>
+La monnaie utilisée est le won sud-coréen (₩). Les cartes bancaires sont largement acceptées, mais un peu d'espèces reste utile dans certains marchés.
+</p>
+</div>
+
+<div class="card fade-up">
+<h3>🔌 Prises électriques</h3>
+<p>
+La Corée du Sud utilise les prises de type C et F en 220 V, identiques à celles utilisées en France. Aucun adaptateur n'est généralement nécessaire.
+</p>
+</div>
+
+<div class="card fade-up">
+<h3>📅 Durée idéale</h3>
+<p>
+Quatre à cinq jours permettent de découvrir les principaux quartiers de Séoul. Une semaine est idéale pour ajouter une ou deux excursions aux alentours.
+</p>
+</div>
+
+<div class="card fade-up">
+<h3>🌸 Meilleure période</h3>
+<p>
+Le printemps pour les cerisiers en fleurs et l'automne pour les couleurs flamboyantes offrent les meilleures conditions pour découvrir Séoul.
+</p>
+</div>
+
+<div class="card fade-up">
+<h3>💰 Budget moyen</h3>
+<p>
+Prévois généralement entre 100 € et 220 € par jour selon ton hébergement, tes restaurants, tes activités et ton mode de transport.
+</p>
+</div>
+
+</div>
+
+</section>
+
+<!-- FAQ -->
 
 <section class="info-section">
 
 <div class="info-box fade-up">
 
 <h2>
-Pourquoi Séoul fascine autant ?
+❓ FAQ Séoul
 </h2>
-
-<p>
-Séoul mélange modernité futuriste,
-culture coréenne,
-street food,
-nightlife et mobilité ultra efficace.
-</p>
-
-<p>
-Entre Gangnam,
-Hongdae,
-les palais historiques et les néons coréens,
-la capitale sud-coréenne offre une énergie unique.
-</p>
 
 <div class="faq">
 
 <div class="faq-item">
 
 <h3>
-🚇 Comment se déplacer à Séoul ?
+Combien de jours faut-il pour visiter Séoul ?
 </h3>
 
 <p>
-Le métro coréen est rapide, moderne et extrêmement simple à utiliser.
+Quatre à cinq jours permettent de découvrir les principaux quartiers, les palais royaux, les marchés, les panoramas et les expériences incontournables. Une semaine est idéale pour ajouter une excursion autour de la capitale.
 </p>
 
 </div>
@@ -1056,11 +1698,11 @@ Le métro coréen est rapide, moderne et extrêmement simple à utiliser.
 <div class="faq-item">
 
 <h3>
-🍜 Où manger à Séoul ?
+Quel est le meilleur quartier pour un premier séjour ?
 </h3>
 
 <p>
-BBQ coréen, marchés de street food et cafés modernes sont présents dans toute la ville.
+Myeong-dong est souvent le meilleur choix grâce à sa situation centrale, son excellente desserte en métro, ses nombreux hôtels, restaurants et boutiques.
 </p>
 
 </div>
@@ -1068,11 +1710,47 @@ BBQ coréen, marchés de street food et cafés modernes sont présents dans tout
 <div class="faq-item">
 
 <h3>
-🎟️ Que faire à Séoul ?
+Peut-on visiter Séoul sans parler coréen ?
 </h3>
 
 <p>
-Palais historiques, K-pop, rooftops, Han River et quartiers modernes sont incontournables.
+Oui. Les principales stations de métro, les attractions et de nombreux commerces disposent d'informations en anglais. Les applications de traduction facilitent également les échanges.
+</p>
+
+</div>
+
+<div class="faq-item">
+
+<h3>
+La nourriture est-elle très épicée ?
+</h3>
+
+<p>
+Certaines spécialités coréennes sont relevées, mais de nombreux plats sont peu ou pas épicés. Les restaurants proposent généralement un large choix adapté à tous les goûts.
+</p>
+
+</div>
+
+<div class="faq-item">
+
+<h3>
+Quelle est la meilleure saison pour visiter Séoul ?
+</h3>
+
+<p>
+Le printemps et l'automne sont les saisons les plus agréables grâce à leurs températures douces, leurs paysages colorés et leurs nombreuses festivités.
+</p>
+
+</div>
+
+<div class="faq-item">
+
+<h3>
+Comment se déplacer facilement dans Séoul ?
+</h3>
+
+<p>
+Le métro de Séoul est l'un des plus efficaces au monde. Associé à la carte T-money, il permet de rejoindre rapidement tous les principaux quartiers de la capitale.
 </p>
 
 </div>
@@ -1091,19 +1769,21 @@ Palais historiques, K-pop, rooftops, Han River et quartiers modernes sont incont
 
 <img
 src="images/panorama-seoul.webp"
-alt="Panorama Séoul">
+alt="Panorama de Séoul">
 
 <div class="map-preview-overlay">
 
 <h3>
-Entre néons et montagnes, Séoul reste unique
+Séoul ne cesse jamais de surprendre
 </h3>
 
 <p>
-Entre les cafés modernes,
-les quartiers illuminés,
-les rooftops et la culture coréenne,
-Séoul possède une atmosphère futuriste fascinante.
+Entre les palais royaux,
+les néons de Hongdae,
+les cafés créatifs,
+les montagnes
+et les rives du fleuve Han,
+Séoul révèle une énergie unique.
 </p>
 
 <a href="destinations.html" class="map-button">
@@ -1152,10 +1832,15 @@ nav.classList.toggle('active');
 }
 
 document.querySelectorAll('.nav-links a').forEach(link => {
-  link.addEventListener('click', () => {
-    const nav = document.querySelector('.nav-links');
-    nav.classList.remove('active');
-  });
+
+link.addEventListener('click', () => {
+
+const nav = document.querySelector('.nav-links');
+
+nav.classList.remove('active');
+
+});
+
 });
 
 const observer = new IntersectionObserver(entries => {
@@ -1163,18 +1848,24 @@ const observer = new IntersectionObserver(entries => {
 entries.forEach(entry => {
 
 if(entry.isIntersecting){
+
 entry.target.classList.add('visible');
+
 }
 
 });
 
 },{
+
 threshold:0.15
+
 });
 
 document.querySelectorAll('.fade-up')
 .forEach(el => {
+
 observer.observe(el);
+
 });
 
 const backToTop = document.getElementById('backToTop');
@@ -1182,9 +1873,13 @@ const backToTop = document.getElementById('backToTop');
 window.addEventListener('scroll', () => {
 
 if(window.scrollY > 400){
+
 backToTop.classList.add('show');
+
 }else{
+
 backToTop.classList.remove('show');
+
 }
 
 });
@@ -1192,8 +1887,10 @@ backToTop.classList.remove('show');
 backToTop.addEventListener('click', () => {
 
 window.scrollTo({
+
 top:0,
 behavior:'smooth'
+
 });
 
 });
