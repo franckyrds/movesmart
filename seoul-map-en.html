@@ -1,0 +1,625 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+<title>Seoul Map — Metro and Must-See Districts | Vidolta</title>
+
+<meta name="description"
+content="Explore a simplified map of Seoul's metro network and must-see districts with Vidolta.">
+
+<link rel="canonical" href="https://www.vidolta.com/seoul-map-en.html">
+
+<link rel="alternate" hreflang="fr" href="https://www.vidolta.com/seoul-map.html">
+<link rel="alternate" hreflang="en" href="https://www.vidolta.com/seoul-map-en.html">
+<link rel="alternate" hreflang="x-default" href="https://www.vidolta.com/seoul-map.html">
+
+<meta name="theme-color" content="#050816">
+
+<link rel="icon" type="image/png" href="favicon-96x96.png" sizes="96x96">
+
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
+
+<link rel="shortcut icon" href="favicon.ico">
+
+<link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+
+<meta name="apple-mobile-web-app-title" content="Vidolta">
+
+<link rel="manifest" href="site.webmanifest">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+:root{
+--bg:#050816;
+--primary:#2fb7a4;
+--primary2:#67d4c4;
+--text:#ffffff;
+--muted:#94a3b8;
+}
+
+html{
+scroll-behavior:smooth;
+scroll-padding-top:80px;
+}
+
+body{
+font-family:'Poppins',sans-serif;
+
+background:
+radial-gradient(circle at top right,rgba(47,183,164,0.18),transparent 30%),
+radial-gradient(circle at top left,rgba(103,212,196,0.13),transparent 25%),
+linear-gradient(to bottom,#0a1820 0%,#071219 100%);
+
+color:var(--text);
+
+overflow-x:hidden;
+}
+
+/* NAVBAR */
+
+.navbar{
+position:sticky;
+top:0;
+z-index:1000;
+
+padding:10px 16px;
+
+display:flex;
+justify-content:space-between;
+align-items:center;
+
+background:rgba(5,13,18,0.76);
+
+backdrop-filter:blur(18px);
+
+border-bottom:1px solid rgba(255,255,255,0.04);
+}
+
+.logo{
+font-size:1.65rem;
+font-weight:800;
+color:white;
+text-decoration:none;
+}
+
+.nav-links{
+display:flex;
+gap:28px;
+align-items:center;
+}
+
+.nav-links a{
+color:#cbd5e1;
+font-size:0.95rem;
+text-decoration:none;
+transition:0.3s;
+}
+
+.nav-links a:hover{
+color:white;
+}
+
+.mobile-btn{
+display:none;
+font-size:2rem;
+cursor:pointer;
+color:white;
+}
+
+/* HERO */
+
+.hero{
+padding:60px 20px 30px;
+text-align:center;
+}
+
+.hero h1{
+font-size:4rem;
+line-height:0.95;
+letter-spacing:-3px;
+
+margin-bottom:18px;
+}
+
+.hero h1 span{
+background:linear-gradient(90deg,#2fb7a4,#7ee5d5);
+
+-webkit-background-clip:text;
+-webkit-text-fill-color:transparent;
+}
+
+.hero p{
+max-width:760px;
+margin:auto;
+
+font-size:1.05rem;
+line-height:1.9;
+
+color:#dbe4f0;
+}
+
+/* MAP */
+
+.map-section{
+max-width:1450px;
+margin:auto;
+
+padding:10px 20px 80px;
+}
+
+.map-wrapper{
+position:relative;
+
+border-radius:34px;
+
+overflow:hidden;
+
+border:1px solid rgba(255,255,255,0.06);
+
+box-shadow:
+0 18px 45px rgba(0,0,0,0.32),
+inset 0 1px 0 rgba(255,255,255,0.03);
+
+background:#0b1a20;
+}
+
+.map-wrapper img{
+width:100%;
+display:block;
+}
+
+/* INFO GRID */
+
+.info-grid{
+max-width:1300px;
+margin:auto;
+
+padding:0 20px 90px;
+
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+
+gap:24px;
+}
+
+.info-card{
+background:
+linear-gradient(
+135deg,
+rgba(13,31,35,0.94),
+rgba(8,23,27,0.90)
+);
+
+padding:28px;
+
+border-radius:28px;
+
+border:1px solid rgba(255,255,255,0.05);
+
+box-shadow:0 12px 35px rgba(0,0,0,0.24);
+
+transition:0.35s;
+}
+
+.info-card:hover{
+transform:translateY(-5px);
+
+border-color:rgba(47,183,164,0.45);
+}
+
+.info-card h3{
+font-size:1.2rem;
+margin-bottom:14px;
+}
+
+.info-card p{
+line-height:1.8;
+color:#cbd5e1;
+}
+
+/* CTA */
+
+.cta{
+max-width:1200px;
+margin:0 auto 90px;
+
+padding:0 20px;
+}
+
+.cta-box{
+background:
+linear-gradient(
+135deg,
+rgba(47,183,164,0.22),
+rgba(103,212,196,0.16)
+);
+
+padding:60px 30px;
+
+border-radius:34px;
+
+text-align:center;
+
+backdrop-filter:blur(24px);
+
+border:1px solid rgba(255,255,255,0.08);
+}
+
+.cta-box h2{
+font-size:2.5rem;
+margin-bottom:18px;
+}
+
+.cta-box p{
+max-width:720px;
+margin:auto;
+
+line-height:1.9;
+
+color:#e2e8f0;
+
+margin-bottom:30px;
+}
+
+.cta-box a{
+display:inline-flex;
+align-items:center;
+justify-content:center;
+
+height:52px;
+
+padding:0 24px;
+
+border-radius:18px;
+
+background:linear-gradient(135deg,#2fb7a4,#67d4c4);
+
+color:white;
+
+font-weight:700;
+
+text-decoration:none;
+
+box-shadow:0 10px 25px rgba(47,183,164,0.30);
+
+transition:0.3s;
+}
+
+.cta-box a:hover{
+transform:translateY(-2px);
+
+box-shadow:0 14px 30px rgba(47,183,164,0.40);
+}
+
+/* FOOTER */
+
+footer{
+padding:70px 20px;
+text-align:center;
+color:#94a3b8;
+line-height:2;
+}
+
+.footer-links{
+margin-top:18px;
+
+display:flex;
+justify-content:center;
+flex-wrap:wrap;
+
+gap:18px;
+}
+
+.footer-links a{
+color:#cbd5e1;
+text-decoration:none;
+transition:0.3s;
+}
+
+.footer-links a:hover{
+color:#67d4c4;
+}
+
+/* MOBILE */
+
+@media(max-width:900px){
+
+.mobile-btn{
+display:block;
+}
+
+.nav-links{
+display:none;
+
+position:absolute;
+
+top:78px;
+left:20px;
+right:20px;
+
+background:
+linear-gradient(
+135deg,
+rgba(13,31,35,0.98),
+rgba(8,23,27,0.98)
+);
+
+padding:22px;
+
+border-radius:26px;
+
+flex-direction:column;
+
+border:1px solid rgba(255,255,255,0.06);
+
+box-shadow:0 18px 40px rgba(0,0,0,0.35);
+
+z-index:999;
+}
+
+.nav-links.active{
+display:flex;
+}
+
+.hero{
+padding:40px 18px 24px;
+}
+
+.hero h1{
+font-size:2.8rem;
+letter-spacing:-2px;
+}
+
+.hero p{
+font-size:0.95rem;
+line-height:1.8;
+}
+
+.map-section{
+padding:0 18px 60px;
+}
+
+.map-wrapper{
+border-radius:26px;
+}
+
+.info-grid{
+padding:0 18px 70px;
+gap:18px;
+}
+
+.info-card{
+padding:22px;
+border-radius:24px;
+}
+
+.cta{
+padding:0 18px;
+margin-bottom:70px;
+}
+
+.cta-box{
+padding:40px 22px;
+border-radius:28px;
+}
+
+.cta-box h2{
+font-size:2rem;
+}
+
+.cta-box p{
+font-size:0.95rem;
+line-height:1.8;
+}
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+
+<nav class="navbar">
+
+<a href="index-en.html" class="logo">
+🌍 Vidolta
+</a>
+
+<div class="mobile-btn" onclick="toggleMenu()">
+☰
+</div>
+
+<div class="nav-links">
+
+<a href="index-en.html">
+Home
+</a>
+
+<a href="seoul-en.html">
+Seoul
+</a>
+
+<a href="destinations-en.html">
+Destinations
+</a>
+
+</div>
+
+</nav>
+
+<!-- HERO -->
+
+<section class="hero">
+
+<h1>
+<span>Seoul</span> Map
+</h1>
+
+<p>
+A simple and easy-to-read map of Seoul highlighting the city's main districts,
+key metro lines and essential transport connections to help you explore South Korea's vibrant capital.
+</p>
+
+</section>
+
+<!-- MAP -->
+
+<section class="map-section">
+
+<div class="map-wrapper">
+
+<img
+src="images/seoul-map.webp"
+alt="Simplified map of Seoul's metro network and major districts by Vidolta">
+
+</div>
+
+</section>
+
+<!-- INFO -->
+
+<section class="info-grid">
+
+<div class="info-card">
+
+<h3>
+🚇 Seoul Metro
+</h3>
+
+<p>
+One of the world's most efficient metro systems connects Seoul's main neighborhoods quickly and reliably. Numbered lines make it easy to travel between the city's top attractions.
+</p>
+
+</div>
+
+<div class="info-card">
+
+<h3>
+📍 Must-See Districts
+</h3>
+
+<p>
+Discover Myeongdong for shopping, Hongdae for its youthful atmosphere, Gangnam for modern Seoul, Bukchon for traditional hanok houses and Insadong for Korean culture.
+</p>
+
+</div>
+
+<div class="info-card">
+
+<h3>
+💳 T-money Card
+</h3>
+
+<p>
+The T-money Card makes travelling around Seoul simple. It can be used on the metro, buses and even many taxis, making it an essential travel companion.
+</p>
+
+</div>
+
+<div class="info-card">
+
+<h3>
+✈️ From the Airport
+</h3>
+
+<p>
+The AREX Airport Railroad provides a fast and comfortable connection between Incheon Airport, Gimpo Airport and downtown Seoul, making your arrival smooth and convenient.
+</p>
+
+</div>
+
+</section>
+
+<!-- CTA -->
+
+<section class="cta">
+
+<div class="cta-box">
+
+<h2>
+Discover Seoul with confidence
+</h2>
+
+<p>
+Vidolta makes exploring major cities easier with clear maps,
+transport tips and practical travel guides designed to help you experience Seoul effortlessly.
+</p>
+
+<a href="seoul-en.html">
+Back to Seoul →
+</a>
+
+</div>
+
+</section>
+
+<!-- FOOTER -->
+
+<footer>
+
+<p>
+© 2026 Vidolta — Seoul Map
+</p>
+
+<div class="footer-links">
+
+<a href="about-en.html">
+About
+</a>
+
+<a href="legal-notice.html">
+Legal Notice
+</a>
+
+<a href="privacy.html">
+Privacy
+</a>
+
+<a href="contact-en.html">
+Contact
+</a>
+
+</div>
+
+</footer>
+
+<script>
+
+function toggleMenu(){
+
+const nav = document.querySelector('.nav-links');
+
+nav.classList.toggle('active');
+
+}
+
+document.querySelectorAll('.nav-links a').forEach(link => {
+link.addEventListener('click', () => {
+const nav = document.querySelector('.nav-links');
+nav.classList.remove('active');
+});
+});
+
+</script>
+
+</body>
+</html>
