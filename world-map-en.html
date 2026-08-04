@@ -9,7 +9,7 @@
 <title>Explore the World — Vidolta</title>
 
 <meta name="description"
-content="Explore Vidolta destinations through a modern and immersive premium world map.">
+content="Explore Vidolta destinations through a modern, immersive and premium globe.">
 
 <link rel="canonical"
 href="https://www.vidolta.com/world-map-en.html">
@@ -18,7 +18,7 @@ href="https://www.vidolta.com/world-map-en.html">
 content="Explore the World — Vidolta">
 
 <meta property="og:description"
-content="Explore Vidolta destinations through a modern and immersive premium world map.">
+content="Explore Vidolta destinations through a modern, immersive and premium globe.">
 
 <meta property="og:url"
 content="https://www.vidolta.com/world-map-en.html">
@@ -74,14 +74,19 @@ href="https://fonts.googleapis.com">
 href="https://fonts.gstatic.com"
 crossorigin>
 
+<link rel="preconnect"
+href="https://unpkg.com"
+crossorigin>
+
 <link
-href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap"
 rel="stylesheet">
 
-<script src="https://unpkg.com/three"></script>
-<script src="https://unpkg.com/globe.gl"></script>
+<script defer src="https://unpkg.com/three"></script>
+<script defer src="https://unpkg.com/globe.gl"></script>
 
 <style>
+
 
 *{
 margin:0;
@@ -97,7 +102,7 @@ box-sizing:border-box;
 --muted:#94a3b8;
 }
 
- html{
+html{
 scroll-behavior:smooth;
 scroll-padding-top:80px;
 }
@@ -110,9 +115,14 @@ radial-gradient(circle at top right,rgba(124,92,255,0.18),transparent 30%),
 radial-gradient(circle at top left,rgba(91,140,255,0.14),transparent 25%),
 linear-gradient(to bottom,#0b1426 0%,#09111f 100%);
 
-color:white;
+color:#fff;
 
 overflow-x:hidden;
+
+-webkit-font-smoothing:antialiased;
+-moz-osx-font-smoothing:grayscale;
+
+text-rendering:optimizeLegibility;
 }
 
 /* NAVBAR */
@@ -128,11 +138,12 @@ display:flex;
 justify-content:space-between;
 align-items:center;
 
-background:rgba(5,8,22,0.72);
+background:rgba(5,8,22,.72);
 
 backdrop-filter:blur(18px);
+-webkit-backdrop-filter:blur(18px);
 
-border-bottom:1px solid rgba(255,255,255,0.04);
+border-bottom:1px solid rgba(255,255,255,.04);
 }
 
 .logo{
@@ -142,7 +153,7 @@ align-items:center;
 font-size:1.65rem;
 font-weight:800;
 
-color:white;
+color:#fff;
 
 text-decoration:none;
 }
@@ -155,13 +166,13 @@ align-items:center;
 
 .nav-links a{
 color:#cbd5e1;
-font-size:0.95rem;
-transition:0.3s;
+font-size:.95rem;
+transition:color .3s ease;
 text-decoration:none;
 }
 
 .nav-links a:hover{
-color:white;
+color:#fff;
 }
 
 /* HERO */
@@ -185,16 +196,17 @@ max-width:760px;
 
 .hero-left h1{
 font-size:4.9rem;
-line-height:0.92;
+line-height:.92;
 letter-spacing:-4px;
 margin-bottom:18px;
-text-shadow:0 8px 30px rgba(0,0,0,0.25);
-color:white;
+text-shadow:0 8px 30px rgba(0,0,0,.25);
+color:#fff;
 }
 
 .hero-left h1 span{
 background:linear-gradient(90deg,#8b5cf6,#60a5fa);
 -webkit-background-clip:text;
+background-clip:text;
 -webkit-text-fill-color:transparent;
 }
 
@@ -204,10 +216,11 @@ line-height:1.85;
 max-width:620px;
 color:#dbe4f0;
 margin-bottom:10px;
+text-wrap:pretty;
 }
 
 .hero-sub{
-font-size:0.82rem;
+font-size:.82rem;
 letter-spacing:2px;
 color:#7f8ca6;
 margin-bottom:18px;
@@ -235,18 +248,21 @@ overflow:hidden;
 background:
 linear-gradient(
 135deg,
-rgba(255,255,255,0.05),
-rgba(255,255,255,0.02)
+rgba(255,255,255,.05),
+rgba(255,255,255,.02)
 );
 
-border:1px solid rgba(255,255,255,0.06);
+border:1px solid rgba(255,255,255,.06);
 
 backdrop-filter:blur(24px);
+-webkit-backdrop-filter:blur(24px);
 
 box-shadow:
-0 30px 80px rgba(0,0,0,0.35);
+0 30px 80px rgba(0,0,0,.35);
 
 margin-top:10px;
+
+contain:layout paint;
 }
 
 #globeViz{
@@ -255,8 +271,37 @@ inset:0;
 z-index:1;
 }
 
-canvas{
+#globeViz canvas{
 display:block;
+width:100%!important;
+height:100%!important;
+}
+
+/* FOOTER */
+
+footer{
+padding:70px 22px;
+text-align:center;
+line-height:2;
+color:#94a3b8;
+}
+
+.footer-links{
+margin-top:18px;
+display:flex;
+justify-content:center;
+flex-wrap:wrap;
+gap:18px;
+}
+
+.footer-links a{
+color:#cbd5e1;
+text-decoration:none;
+transition:color .3s ease;
+}
+
+.footer-links a:hover{
+color:#fff;
 }
 
 /* MOBILE */
@@ -269,13 +314,52 @@ letter-spacing:-2px;
 }
 
 .hero-text{
-font-size:0.92rem;
+font-size:.92rem;
 line-height:1.7;
 }
 
 .globe-wrapper{
 height:520px;
 border-radius:28px;
+}
+
+.nav-links{
+gap:18px;
+}
+
+.nav-links a{
+font-size:.9rem;
+}
+
+}
+
+@media(max-width:600px){
+
+.hero-map{
+padding-top:28px;
+}
+
+.hero-left h1{
+font-size:2.35rem;
+line-height:1;
+letter-spacing:-1px;
+}
+
+.hero-text{
+font-size:.9rem;
+}
+
+.globe-wrapper{
+height:460px;
+border-radius:22px;
+}
+
+footer{
+padding:55px 20px;
+}
+
+.footer-links{
+gap:14px;
 }
 
 }
@@ -288,9 +372,9 @@ border-radius:28px;
 
 <!-- NAVBAR -->
 
-<nav class="navbar">
+<nav class="navbar" aria-label="Main navigation">
 
-<a href="index-en.html" class="logo">
+<a href="index-en.html" class="logo" aria-label="Vidolta — Home">
 🌍 Vidolta
 </a>
 
@@ -310,6 +394,8 @@ Destinations
 
 <!-- HERO -->
 
+<main>
+
 <section class="hero-map">
 
 <div class="hero-container">
@@ -321,11 +407,11 @@ MOVE SMARTER. DISCOVER MORE.
 </p>
 
 <h1>
-Explore the <span>World</span>
+Explore the world <span>differently</span>
 </h1>
 
 <p class="hero-text">
-Choose an immersive Vidolta destination through the interactive globe.
+🌍 Drag the globe, zoom in on a continent, then click on a destination to access its complete travel guide.
 </p>
 
 </div>
@@ -336,15 +422,21 @@ Choose an immersive Vidolta destination through the interactive globe.
 
 <!-- GLOBE -->
 
-<section class="section">
+<section class="section" aria-label="Interactive globe of Vidolta destinations">
 
 <div class="globe-wrapper">
 
-<div id="globeViz"></div>
+<div
+id="globeViz"
+role="application"
+aria-label="Interactive globe for selecting a destination">
+</div>
 
 </div>
 
 </section>
+
+</main>
 
 <script>
 
@@ -356,7 +448,7 @@ const cities = [
 {name:'London',lat:51.5072,lng:-0.1276,page:'londres-en.html'},
 {name:'Tokyo',lat:35.6762,lng:139.6503,page:'tokyo-en.html'},
 {name:'New York',lat:40.7128,lng:-74.0060,page:'new-york-en.html'},
-{name:'Rio de Janeiro',lat:-22.9068,lng:-43.1729,page:'rio.html'},
+{name:'Rio',lat:-22.9068,lng:-43.1729,page:'rio.html'},
 {name:'Rome',lat:41.9028,lng:12.4964,page:'rome-en.html'},
 {name:'Barcelona',lat:41.3874,lng:2.1686,page:'barcelone-en.html'},
 {name:'Amsterdam',lat:52.3676,lng:4.9041,page:'amsterdam-en.html'},
@@ -368,18 +460,24 @@ const cities = [
 {name:'Marrakech',lat:31.6295,lng:-7.9811,page:'marrakech-en.html'},
 {name:'Munich',lat:48.1351,lng:11.5820,page:'munich-en.html'},
 {name:'Prague',lat:50.0755,lng:14.4378,page:'prague-en.html'},
-{name:'Palma de Mallorca',lat:39.5696,lng:2.6502,page:'majorque-en.html'},
+{name:'Palma',lat:39.5696,lng:2.6502,page:'majorque-en.html'},
 {name:'Nantes',lat:47.2184,lng:-1.5536,page:'nantes-en.html'},
+{name:'Bordeaux',lat:44.8378,lng:-0.5792,page:'bordeaux-en.html'},
 {name:'Marseille',lat:43.2965,lng:5.3698,page:'marseille-en.html'},
 {name:'Lyon',lat:45.7640,lng:4.8357,page:'lyon.html'},
 {name:'Miami',lat:25.7617,lng:-80.1918,page:'miami-en.html'}
 
 ];
 
+
 window.addEventListener('load', () => {
 
+const wrapper = document.querySelector('.globe-wrapper');
+const container = document.getElementById('globeViz');
+const isMobile = window.matchMedia('(max-width:900px)').matches;
+
 const globe = Globe()
-(document.getElementById('globeViz'))
+(container)
 
 .globeImageUrl(
 'https://raw.githubusercontent.com/vasturiano/three-globe/master/example/img/earth-blue-marble.jpg'
@@ -387,9 +485,9 @@ const globe = Globe()
 
 .backgroundColor('rgba(0,0,0,0)')
 
-.width(document.querySelector('.globe-wrapper').offsetWidth)
+.width(wrapper.clientWidth)
 
-.height(document.querySelector('.globe-wrapper').offsetHeight)
+.height(wrapper.clientHeight)
 
 .pointsData(cities)
 
@@ -401,7 +499,7 @@ const globe = Globe()
 
 .pointRadius(0.22)
 
-.pointResolution(18)
+.pointResolution(isMobile ? 10 : 16)
 
 .pointColor(() => 'rgba(255,255,255,0.92)')
 
@@ -410,8 +508,9 @@ const globe = Globe()
 .atmosphereAltitude(0.16)
 
 .pointLabel(d => `
+
 <div style="
-font-family:Poppins;
+font-family:Poppins,sans-serif;
 padding:10px 14px;
 border-radius:16px;
 background:rgba(15,23,42,0.96);
@@ -419,7 +518,6 @@ color:white;
 font-size:13px;
 font-weight:600;
 border:1px solid rgba(255,255,255,0.08);
-backdrop-filter:blur(18px);
 box-shadow:0 10px 30px rgba(0,0,0,0.35);
 ">
 ${d.name}
@@ -430,35 +528,79 @@ ${d.name}
 window.location.href = d.page;
 });
 
+const renderer = globe.renderer();
+
+renderer.setPixelRatio(
+isMobile
+? 1
+: Math.min(window.devicePixelRatio || 1,1.5)
+);
+
 globe.pointOfView({
 lat:28,
 lng:12,
 altitude:1.95
-});
+},0);
 
 const controls = globe.controls();
 
 controls.autoRotate = false;
-
 controls.enableZoom = true;
-
 controls.enablePan = false;
-
+controls.enableDamping = true;
+controls.dampingFactor = 0.08;
 controls.rotateSpeed = 0.8;
-
 controls.zoomSpeed = 0.8;
+
+let resizeTimer;
 
 window.addEventListener('resize', () => {
 
+clearTimeout(resizeTimer);
+
+resizeTimer = setTimeout(() => {
+
+const mobileView = window.matchMedia('(max-width:900px)').matches;
+
 globe
-.width(document.querySelector('.globe-wrapper').offsetWidth)
-.height(document.querySelector('.globe-wrapper').offsetHeight);
+.width(wrapper.clientWidth)
+.height(wrapper.clientHeight)
+.pointResolution(mobileView ? 10 : 16);
+
+renderer.setPixelRatio(
+mobileView
+? 1
+: Math.min(window.devicePixelRatio || 1,1.5)
+);
+
+},150);
 
 });
 
 });
 
 </script>
+
+<!-- FOOTER -->
+
+<footer>
+
+<p>
+© 2026 Vidolta — Explore the World.
+</p>
+
+<div class="footer-links">
+
+<a href="index-en.html">Home</a> 
+ <a href="about-en.html">About</a> 
+ <a href="our-story.html">Our Story</a> 
+ <a href="mentions-legales-en.html">Legal Notice</a> 
+ <a href="privacy.html">Privacy</a> 
+ <a href="contact-en.html">Contact</a>
+
+</div>
+
+</footer>
 
 </body>
 
