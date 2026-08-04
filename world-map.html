@@ -74,210 +74,296 @@ href="https://fonts.googleapis.com">
 href="https://fonts.gstatic.com"
 crossorigin>
 
+<link rel="preconnect"
+href="https://unpkg.com"
+crossorigin>
+
 <link
 href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap"
 rel="stylesheet">
 
-<script>
+<script defer src="https://unpkg.com/three"></script>
+<script defer src="https://unpkg.com/globe.gl"></script>
 
-/* DESTINATIONS */
+<style>
 
-const cities = [
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
 
-{name:'Paris',lat:48.8566,lng:2.3522,page:'paris.html'},
-{name:'Londres',lat:51.5072,lng:-0.1276,page:'londres.html'},
-{name:'Tokyo',lat:35.6762,lng:139.6503,page:'tokyo.html'},
-{name:'New York',lat:40.7128,lng:-74.0060,page:'new-york.html'},
-{name:'Rio',lat:-22.9068,lng:-43.1729,page:'rio.html'},
-{name:'Rome',lat:41.9028,lng:12.4964,page:'rome.html'},
-{name:'Barcelone',lat:41.3874,lng:2.1686,page:'barcelone.html'},
-{name:'Amsterdam',lat:52.3676,lng:4.9041,page:'amsterdam.html'},
-{name:'Athènes',lat:37.9838,lng:23.7275,page:'athenes.html'},
-{name:'Istanbul',lat:41.0082,lng:28.9784,page:'istanbul.html'},
-{name:'Séoul',lat:37.5665,lng:126.9780,page:'seoul.html'},
-{name:'Dubaï',lat:25.2048,lng:55.2708,page:'dubai.html'},
-{name:'Montréal',lat:45.5019,lng:-73.5674,page:'montreal.html'},
-{name:'Marrakech',lat:31.6295,lng:-7.9811,page:'marrakech.html'},
-{name:'Munich',lat:48.1351,lng:11.5820,page:'munich.html'},
-{name:'Prague',lat:50.0755,lng:14.4378,page:'prague.html'},
-{name:'Palma',lat:39.5696,lng:2.6502,page:'majorque.html'},
-{name:'Nantes',lat:47.2184,lng:-1.5536,page:'nantes.html'},
-{name:'Bordeaux',lat:44.8378,lng:-0.5792,page:'bordeaux.html'},
-{name:'Marseille',lat:43.2965,lng:5.3698,page:'marseille.html'},
-{name:'Lyon',lat:45.7640,lng:4.8357,page:'lyon.html'},
-{name:'Miami',lat:25.7617,lng:-80.1918,page:'miami.html'}
+:root{
+--bg:#050816;
+--primary:#7c5cff;
+--primary2:#5b8cff;
+--text:#ffffff;
+--muted:#94a3b8;
+}
 
-];
+html{
+scroll-behavior:smooth;
+scroll-padding-top:80px;
+}
 
-/* CHARGEMENT DYNAMIQUE DES BIBLIOTHÈQUES */
+body{
+font-family:'Poppins',sans-serif;
 
-function loadScript(src) {
+background:
+radial-gradient(circle at top right,rgba(124,92,255,0.18),transparent 30%),
+radial-gradient(circle at top left,rgba(91,140,255,0.14),transparent 25%),
+linear-gradient(to bottom,#0b1426 0%,#09111f 100%);
 
-  return new Promise((resolve, reject) => {
+color:#fff;
 
-    const script = document.createElement('script');
+overflow-x:hidden;
 
-    script.src = src;
-    script.async = true;
+-webkit-font-smoothing:antialiased;
+-moz-osx-font-smoothing:grayscale;
 
-    script.onload = resolve;
-    script.onerror = reject;
+text-rendering:optimizeLegibility;
+}
 
-    document.body.appendChild(script);
+/* NAVBAR */
 
-  });
+.navbar{
+position:sticky;
+top:0;
+z-index:1000;
+
+padding:10px 16px;
+
+display:flex;
+justify-content:space-between;
+align-items:center;
+
+background:rgba(5,8,22,.72);
+
+backdrop-filter:blur(18px);
+-webkit-backdrop-filter:blur(18px);
+
+border-bottom:1px solid rgba(255,255,255,.04);
+}
+
+.logo{
+display:inline-flex;
+align-items:center;
+
+font-size:1.65rem;
+font-weight:800;
+
+color:#fff;
+
+text-decoration:none;
+}
+
+.nav-links{
+display:flex;
+gap:28px;
+align-items:center;
+}
+
+.nav-links a{
+color:#cbd5e1;
+font-size:.95rem;
+transition:color .3s ease;
+text-decoration:none;
+}
+
+.nav-links a:hover{
+color:#fff;
+}
+
+/* HERO */
+
+.hero-map{
+padding-top:40px;
+padding-bottom:10px;
+position:relative;
+z-index:2;
+}
+
+.hero-container{
+max-width:1280px;
+margin:auto;
+padding:0 22px;
+}
+
+.hero-left{
+max-width:760px;
+}
+
+.hero-left h1{
+font-size:4.9rem;
+line-height:.92;
+letter-spacing:-4px;
+margin-bottom:18px;
+text-shadow:0 8px 30px rgba(0,0,0,.25);
+color:#fff;
+}
+
+.hero-left h1 span{
+background:linear-gradient(90deg,#8b5cf6,#60a5fa);
+-webkit-background-clip:text;
+background-clip:text;
+-webkit-text-fill-color:transparent;
+}
+
+.hero-text{
+font-size:1.08rem;
+line-height:1.85;
+max-width:620px;
+color:#dbe4f0;
+margin-bottom:10px;
+text-wrap:pretty;
+}
+
+.hero-sub{
+font-size:.82rem;
+letter-spacing:2px;
+color:#7f8ca6;
+margin-bottom:18px;
+}
+
+/* SECTION */
+
+.section{
+max-width:1300px;
+margin:auto;
+padding:0 22px 60px;
+}
+
+/* GLOBE */
+
+.globe-wrapper{
+position:relative;
+
+height:720px;
+
+border-radius:38px;
+
+overflow:hidden;
+
+background:
+linear-gradient(
+135deg,
+rgba(255,255,255,.05),
+rgba(255,255,255,.02)
+);
+
+border:1px solid rgba(255,255,255,.06);
+
+backdrop-filter:blur(24px);
+-webkit-backdrop-filter:blur(24px);
+
+box-shadow:
+0 30px 80px rgba(0,0,0,.35);
+
+margin-top:10px;
+
+contain:layout paint;
+}
+
+#globeViz{
+position:absolute;
+inset:0;
+z-index:1;
+}
+
+#globeViz canvas{
+display:block;
+width:100%!important;
+height:100%!important;
+}
+
+/* FOOTER */
+
+footer{
+padding:70px 22px;
+text-align:center;
+line-height:2;
+color:#94a3b8;
+}
+
+.footer-links{
+margin-top:18px;
+display:flex;
+justify-content:center;
+flex-wrap:wrap;
+gap:18px;
+}
+
+.footer-links a{
+color:#cbd5e1;
+text-decoration:none;
+transition:color .3s ease;
+}
+
+.footer-links a:hover{
+color:#fff;
+}
+
+/* MOBILE */
+
+@media(max-width:900px){
+
+.hero-left h1{
+font-size:2.9rem;
+letter-spacing:-2px;
+}
+
+.hero-text{
+font-size:.92rem;
+line-height:1.7;
+}
+
+.globe-wrapper{
+height:520px;
+border-radius:28px;
+}
+
+.nav-links{
+gap:18px;
+}
+
+.nav-links a{
+font-size:.9rem;
+}
 
 }
 
-async function initGlobe() {
+@media(max-width:600px){
 
-  try {
+.hero-map{
+padding-top:28px;
+}
 
-    await loadScript(
-      'https://unpkg.com/three@0.180.0/build/three.min.js'
-    );
+.hero-left h1{
+font-size:2.35rem;
+line-height:1;
+letter-spacing:-1px;
+}
 
-    await loadScript(
-      'https://unpkg.com/globe.gl@2.45.1/dist/globe.gl.min.js'
-    );
+.hero-text{
+font-size:.9rem;
+}
 
-    const wrapper = document.querySelector('.globe-wrapper');
-    const container = document.getElementById('globeViz');
+.globe-wrapper{
+height:460px;
+border-radius:22px;
+}
 
-    const globe = Globe()(container)
+footer{
+padding:55px 20px;
+}
 
-      .globeImageUrl(
-        'images/earth-blue-marble.webp'
-      )
-
-      .backgroundColor('rgba(0,0,0,0)')
-
-      .width(wrapper.clientWidth)
-
-      .height(wrapper.clientHeight)
-
-      .pointsData(cities)
-
-      .pointLat(d => d.lat)
-
-      .pointLng(d => d.lng)
-
-      .pointAltitude(0)
-
-      .pointRadius(0.22)
-
-      .pointResolution(
-        window.innerWidth <= 900 ? 8 : 12
-      )
-
-      .pointColor(() => 'rgba(255,255,255,0.92)')
-
-      .atmosphereColor('#60a5fa')
-
-      .atmosphereAltitude(0.16)
-
-      .pointLabel(d => `
-        <div style="
-          font-family:Poppins,sans-serif;
-          padding:10px 14px;
-          border-radius:16px;
-          background:rgba(15,23,42,0.96);
-          color:white;
-          font-size:13px;
-          font-weight:600;
-          border:1px solid rgba(255,255,255,0.08);
-          box-shadow:0 10px 30px rgba(0,0,0,0.35);
-        ">
-          ${d.name}
-        </div>
-      `)
-
-      .onPointClick(d => {
-        window.location.href = d.page;
-      });
-
-    /* Résolution WebGL limitée */
-
-    const renderer = globe.renderer();
-
-    renderer.setPixelRatio(
-      window.innerWidth <= 900
-        ? 1
-        : Math.min(window.devicePixelRatio || 1, 1.5)
-    );
-
-    globe.pointOfView({
-      lat:28,
-      lng:12,
-      altitude:1.95
-    }, 0);
-
-    const controls = globe.controls();
-
-    controls.autoRotate = false;
-    controls.enableZoom = true;
-    controls.enablePan = false;
-    controls.enableDamping = true;
-    controls.dampingFactor = 0.08;
-    controls.rotateSpeed = 0.8;
-    controls.zoomSpeed = 0.8;
-
-    let resizeTimer;
-
-    window.addEventListener('resize', () => {
-
-      clearTimeout(resizeTimer);
-
-      resizeTimer = setTimeout(() => {
-
-        globe
-          .width(wrapper.clientWidth)
-          .height(wrapper.clientHeight);
-
-        renderer.setPixelRatio(
-          window.innerWidth <= 900
-            ? 1
-            : Math.min(window.devicePixelRatio || 1, 1.5)
-        );
-
-      }, 150);
-
-    });
-
-  } catch (error) {
-
-    console.error(
-      'Impossible de charger le globe Vidolta :',
-      error
-    );
-
-  }
+.footer-links{
+gap:14px;
+}
 
 }
 
-/*
-Le texte et la structure HTML s’affichent d’abord.
-Le globe est ensuite chargé lorsque le navigateur est disponible.
-*/
-
-window.addEventListener('load', () => {
-
-  if ('requestIdleCallback' in window) {
-
-    requestIdleCallback(
-      initGlobe,
-      { timeout: 1200 }
-    );
-
-  } else {
-
-    setTimeout(initGlobe, 200);
-
-  }
-
-});
-
-</script>
+</style>
 
 </head>
 
@@ -285,9 +371,9 @@ window.addEventListener('load', () => {
 
 <!-- NAVBAR -->
 
-<nav class="navbar">
+<nav class="navbar" aria-label="Navigation principale">
 
-<a href="index.html" class="logo">
+<a href="index.html" class="logo" aria-label="Vidolta — Accueil">
 🌍 Vidolta
 </a>
 
@@ -306,6 +392,8 @@ Destinations
 </nav>
 
 <!-- HERO -->
+
+<main>
 
 <section class="hero-map">
 
@@ -333,15 +421,21 @@ Choisis une destination immersive Vidolta à travers le globe interactif.
 
 <!-- GLOBE -->
 
-<section class="section">
+<section class="section" aria-label="Globe interactif des destinations Vidolta">
 
 <div class="globe-wrapper">
 
-<div id="globeViz"></div>
+<div
+id="globeViz"
+role="application"
+aria-label="Globe interactif permettant de sélectionner une destination">
+</div>
 
 </div>
 
 </section>
+
+</main>
 
 <script>
 
@@ -376,8 +470,12 @@ const cities = [
 
 window.addEventListener('load', () => {
 
+const wrapper = document.querySelector('.globe-wrapper');
+const container = document.getElementById('globeViz');
+const isMobile = window.matchMedia('(max-width:900px)').matches;
+
 const globe = Globe()
-(document.getElementById('globeViz'))
+(container)
 
 .globeImageUrl(
 'https://raw.githubusercontent.com/vasturiano/three-globe/master/example/img/earth-blue-marble.jpg'
@@ -385,9 +483,9 @@ const globe = Globe()
 
 .backgroundColor('rgba(0,0,0,0)')
 
-.width(document.querySelector('.globe-wrapper').offsetWidth)
+.width(wrapper.clientWidth)
 
-.height(document.querySelector('.globe-wrapper').offsetHeight)
+.height(wrapper.clientHeight)
 
 .pointsData(cities)
 
@@ -399,7 +497,7 @@ const globe = Globe()
 
 .pointRadius(0.22)
 
-.pointResolution(18)
+.pointResolution(isMobile ? 10 : 16)
 
 .pointColor(() => 'rgba(255,255,255,0.92)')
 
@@ -409,7 +507,7 @@ const globe = Globe()
 
 .pointLabel(d => `
 <div style="
-font-family:Poppins;
+font-family:Poppins,sans-serif;
 padding:10px 14px;
 border-radius:16px;
 background:rgba(15,23,42,0.96);
@@ -417,7 +515,6 @@ color:white;
 font-size:13px;
 font-weight:600;
 border:1px solid rgba(255,255,255,0.08);
-backdrop-filter:blur(18px);
 box-shadow:0 10px 30px rgba(0,0,0,0.35);
 ">
 ${d.name}
@@ -428,36 +525,59 @@ ${d.name}
 window.location.href = d.page;
 });
 
+const renderer = globe.renderer();
+
+renderer.setPixelRatio(
+isMobile
+? 1
+: Math.min(window.devicePixelRatio || 1,1.5)
+);
+
 globe.pointOfView({
 lat:28,
 lng:12,
 altitude:1.95
-});
+},0);
 
 const controls = globe.controls();
 
 controls.autoRotate = false;
-
 controls.enableZoom = true;
-
 controls.enablePan = false;
-
+controls.enableDamping = true;
+controls.dampingFactor = 0.08;
 controls.rotateSpeed = 0.8;
-
 controls.zoomSpeed = 0.8;
+
+let resizeTimer;
 
 window.addEventListener('resize', () => {
 
+clearTimeout(resizeTimer);
+
+resizeTimer = setTimeout(() => {
+
+const mobileView = window.matchMedia('(max-width:900px)').matches;
+
 globe
-.width(document.querySelector('.globe-wrapper').offsetWidth)
-.height(document.querySelector('.globe-wrapper').offsetHeight);
+.width(wrapper.clientWidth)
+.height(wrapper.clientHeight)
+.pointResolution(mobileView ? 10 : 16);
+
+renderer.setPixelRatio(
+mobileView
+? 1
+: Math.min(window.devicePixelRatio || 1,1.5)
+);
+
+},150);
 
 });
 
 });
 
 </script>
-  
+
 <!-- FOOTER -->
 
 <footer>
