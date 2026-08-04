@@ -1946,6 +1946,8 @@ rel="sponsored noopener">
 
 </details>
 
+</div>
+
 </section>
 
 <section class="section" id="june-2027">
@@ -2055,6 +2057,8 @@ if(entry.isIntersecting){
 
 entry.target.classList.add('visible');
 
+observer.unobserve(entry.target);
+
 }
 
 });
@@ -2063,8 +2067,7 @@ entry.target.classList.add('visible');
 threshold:0.15
 });
 
-document.querySelectorAll('.fade-up')
-.forEach(el => {
+document.querySelectorAll('.fade-up').forEach(el => {
 
 observer.observe(el);
 
@@ -2091,8 +2094,6 @@ backToTop.addEventListener('click', () => {
 window.scrollTo({
 top:0,
 behavior:'smooth'
-});
-
 });
 
 });
