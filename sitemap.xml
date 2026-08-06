@@ -87,6 +87,8 @@
   
 <url><loc>https://www.vidolta.com/rio-map.html</loc></url>
 
+<url><loc>https://www.vidolta.com/rio-sports.html</loc></url>
+
 <url><loc>https://www.vidolta.com/seoul.html</loc></url> 
   
 <url><loc>https://www.vidolta.com/seoul-map.html</loc></url>
@@ -286,5 +288,11 @@
 <url>
 <loc>https://www.vidolta.com/montreal-sports-en.html</loc>
 </url>
+
+<url><loc>https://www.vidolta.com/rio-en.html</loc></url> 
+  
+<url><loc>https://www.vidolta.com/rio-map-en.html</loc></url>
+
+<url><loc>https://www.vidolta.com/rio-sports-en.html</loc></url>
 
 </urlset>
