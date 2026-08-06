@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Rio de Janeiro Map — Vidolta</title>
+
+<link rel="icon" type="image/png" href="favicon-96x96.png" sizes="96x96">
+
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
+
+<link rel="shortcut icon" href="favicon.ico">
+
+<link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+
+<meta name="apple-mobile-web-app-title" content="Vidolta">
+
+<link rel="manifest" href="site.webmanifest">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+body{
+font-family:'Poppins',sans-serif;
+
+background:
+radial-gradient(circle at top right,rgba(34,197,94,0.18),transparent 30%),
+radial-gradient(circle at top left,rgba(56,189,248,0.14),transparent 25%),
+linear-gradient(to bottom,#071422 0%,#04111d 100%);
+
+color:white;
+
+min-height:100vh;
+
+padding:40px 20px;
+}
+
+/* HEADER */
+
+.map-header{
+max-width:1200px;
+margin:auto auto 40px;
+
+text-align:center;
+}
+
+.map-header h1{
+font-size:3.6rem;
+margin-bottom:16px;
+
+letter-spacing:-2px;
+}
+
+.map-header h1 span{
+background:linear-gradient(90deg,#22c55e,#38bdf8);
+
+-webkit-background-clip:text;
+-webkit-text-fill-color:transparent;
+}
+
+.map-header p{
+max-width:850px;
+margin:auto;
+
+line-height:1.8;
+
+color:#cbd5e1;
+
+font-size:1.05rem;
+}
+
+/* MAP */
+
+.map-container{
+max-width:1400px;
+margin:auto;
+}
+
+.map-card{
+position:relative;
+
+overflow:hidden;
+
+border-radius:34px;
+
+border:1px solid rgba(255,255,255,0.06);
+
+box-shadow:0 20px 45px rgba(0,0,0,0.35);
+
+background:#0f172a;
+}
+
+.map-card img{
+width:100%;
+display:block;
+}
+
+/* GRID */
+
+.info-grid{
+max-width:1400px;
+
+margin:40px auto 0;
+
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+
+gap:20px;
+}
+
+.info-card{
+background:
+linear-gradient(
+135deg,
+rgba(12,28,44,0.94),
+rgba(10,20,35,0.90)
+);
+
+padding:26px;
+
+border-radius:26px;
+
+border:1px solid rgba(255,255,255,0.05);
+
+box-shadow:0 12px 35px rgba(0,0,0,0.24);
+
+transition:0.35s;
+}
+
+.info-card:hover{
+transform:translateY(-6px);
+
+border-color:rgba(34,197,94,0.45);
+}
+
+.info-card h3{
+font-size:1.2rem;
+margin-bottom:14px;
+}
+
+.info-card p{
+line-height:1.7;
+color:#cbd5e1;
+font-size:0.96rem;
+}
+
+/* CTA */
+
+.bottom-cta{
+max-width:1200px;
+
+margin:50px auto 0;
+
+padding:40px;
+
+border-radius:30px;
+
+background:
+linear-gradient(
+135deg,
+rgba(34,197,94,0.20),
+rgba(56,189,248,0.14)
+);
+
+border:1px solid rgba(255,255,255,0.05);
+
+text-align:center;
+}
+
+.bottom-cta h2{
+font-size:2rem;
+margin-bottom:16px;
+}
+
+.bottom-cta p{
+max-width:800px;
+margin:auto auto 24px;
+
+line-height:1.8;
+
+color:#dbe4f0;
+}
+
+.bottom-cta a{
+display:inline-block;
+
+padding:14px 22px;
+
+background:white;
+
+color:#111827;
+
+border-radius:14px;
+
+font-weight:700;
+
+transition:0.3s;
+}
+
+.bottom-cta a:hover{
+transform:translateY(-2px);
+}
+
+/* MOBILE */
+
+@media(max-width:900px){
+
+body{
+padding:24px 16px;
+}
+
+.map-header h1{
+font-size:2.5rem;
+}
+
+.map-header p{
+font-size:0.96rem;
+line-height:1.7;
+}
+
+.map-card{
+border-radius:24px;
+}
+
+.bottom-cta{
+padding:28px;
+}
+
+.bottom-cta h2{
+font-size:1.6rem;
+}
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<!-- HEADER -->
+
+<section class="map-header">
+
+<h1>
+Map of <span>Rio de Janeiro</span>
+</h1>
+
+<p>
+Discover Copacabana,
+Ipanema,
+Christ the Redeemer,
+Sugarloaf Mountain,
+the Maracanã,
+metro lines,
+iconic beaches
+and Rio's must-see attractions.
+</p>
+
+</section>
+
+<!-- MAP -->
+
+<section class="map-container">
+
+<div class="map-card">
+
+<img
+src="images/rio-map.webp"
+alt="Map of Rio de Janeiro">
+
+</div>
+
+</section>
+
+<!-- INFORMATION -->
+
+<section class="info-grid">
+
+<div class="info-card">
+
+<h3>
+🌴 Copacabana & Ipanema
+</h3>
+
+<p>
+Rio's most iconic beaches offer a unique atmosphere with sports, spectacular sunsets and vibrant nightlife.
+</p>
+
+</div>
+
+<div class="info-card">
+
+<h3>
+⚽ Maracanã & Football
+</h3>
+
+<p>
+Experience the legendary atmosphere of Brazilian football in one of the world's most famous stadiums.
+</p>
+
+</div>
+
+<div class="info-card">
+
+<h3>
+⛰️ Christ the Redeemer & Sugarloaf
+</h3>
+
+<p>
+Rio's panoramic viewpoints are among the most breathtaking anywhere in the world.
+</p>
+
+</div>
+
+<div class="info-card">
+
+<h3>
+🎉 Carnival & Nightlife
+</h3>
+
+<p>
+Music, rooftop bars, festivals and Carnival make Rio one of the liveliest cities in the world all year round.
+</p>
+
+</div>
+
+</section>
+
+<!-- CTA -->
+
+<section class="bottom-cta">
+
+<h2>
+Explore Rio with Vidolta
+</h2>
+
+<p>
+Discover the city's best beaches,
+rooftop bars,
+restaurants,
+tropical experiences,
+football
+and Rio de Janeiro's must-see attractions.
+</p>
+
+<a href="rio-en.html">
+Back to the Rio Guide →
+</a>
+
+</section>
+
+</body>
+
+</html>
