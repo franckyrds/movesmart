@@ -543,6 +543,132 @@ background:#4f46e5;
 transform:translateY(-2px);
 }
 
+/* INFOS ÉVÉNEMENTS */
+
+.event-meta{
+display:flex;
+flex-wrap:wrap;
+gap:8px 12px;
+
+margin:12px 0 16px;
+
+font-size:0.88rem;
+font-weight:600;
+
+color:#cbd5e1;
+}
+
+.event-date{
+color:#E8D83D;
+}
+
+.event-location{
+color:#cbd5e1;
+}
+
+.event-location a{
+color:#ffffff;
+transition:0.3s;
+}
+
+.event-location a:hover
+
+/* CALENDRIER DANS UNE VIGNETTE */
+
+.card-calendar{
+margin-top:18px;
+
+border-top:1px solid rgba(255,255,255,0.08);
+
+padding-top:14px;
+}
+
+.card-calendar summary{
+cursor:pointer;
+
+font-size:0.9rem;
+font-weight:700;
+
+color:#ffffff;
+
+list-style:none;
+}
+
+.card-calendar summary::-webkit-details-marker{
+display:none;
+}
+
+.card-calendar summary::after{
+content:'＋';
+
+float:right;
+
+color:#E8D83D;
+}
+
+.card-calendar[open] summary::after{
+content:'−';
+}
+
+.card-calendar-content{
+display:grid;
+gap:10px;
+
+margin-top:14px;
+}
+
+.card-calendar-row{
+display:flex;
+align-items:center;
+justify-content:space-between;
+
+gap:14px;
+
+padding-top:10px;
+
+border-top:1px solid rgba(255,255,255,0.06);
+}
+
+.card-calendar-date{
+font-size:0.84rem;
+
+color:#cbd5e1;
+}
+
+.card-calendar-row a{
+padding:7px 11px;
+
+border-radius:9px;
+
+background:#E8D83D;
+
+color:#102A56;
+
+font-size:0.76rem;
+font-weight:700;
+
+white-space:nowrap;
+
+transition:0.3s;
+}
+
+.card-calendar-row a:hover{
+background:#F4E96B;
+transform:translateY(-1px);
+}
+
+@media(max-width:700px){
+
+.event-meta{
+font-size:0.84rem;
+}
+
+.card-calendar-row{
+gap:10px;
+}
+
+}
+
 /* INFO */
 
 .info-section{
@@ -1148,6 +1274,8 @@ Des scènes mythiques aux festivals les plus spectaculaires, découvrez les gran
 
 <div class="grid">
 
+<!-- TOMORROWLAND -->
+
 <div class="card">
 
 <img
@@ -1157,11 +1285,25 @@ loading="lazy">
 
 <h3>🎶 Tomorrowland</h3>
 
+<div class="event-meta">
+
+<span class="event-date">
+📅 17–19 & 24–26 juillet 2026
+</span>
+
+<span class="event-location">
+📍 Boom, Belgique
+</span>
+
+</div>
+
 <p>
 L'un des festivals de musique électronique les plus célèbres au monde, organisé chaque été en Belgique dans une atmosphère spectaculaire.
 </p>
 
 </div>
+
+<!-- ROCK IN RIO -->
 
 <div class="card">
 
@@ -1172,11 +1314,25 @@ loading="lazy">
 
 <h3>🎸 Rock in Rio</h3>
 
+<div class="event-meta">
+
+<span class="event-date">
+📅 4–7 & 11–13 septembre 2026
+</span>
+
+<span class="event-location">
+📍 <a href="rio.html">Rio de Janeiro →</a>
+</span>
+
+</div>
+
 <p>
 Un festival emblématique qui réunit de grandes stars internationales dans l'ambiance incomparable de Rio de Janeiro.
 </p>
 
 </div>
+
+<!-- COACHELLA -->
 
 <div class="card">
 
@@ -1187,11 +1343,93 @@ loading="lazy">
 
 <h3>🌴 Coachella</h3>
 
+<div class="event-meta">
+
+<span class="event-date">
+📅 Avril 2027
+</span>
+
+<span class="event-location">
+📍 Californie, États-Unis
+</span>
+
+</div>
+
 <p>
 Musique, tendances et créations artistiques se rencontrent dans le désert californien lors de l'un des festivals les plus connus au monde.
 </p>
 
+<details class="card-calendar">
+
+<summary>
+🎟️ Calendrier & billets 2027
+</summary>
+
+<div class="card-calendar-content">
+
+<div class="card-calendar-row">
+
+<span class="card-calendar-date">
+📅 8 avril 2027
+</span>
+
+<a
+href="https://www.hellotickets.com/us/los-angeles/concerts/coachella-music-festival-tickets/2027-04-08,1200/2509277/2?tap_a=141252-18675a&tap_s=9884000-08dfab"
+target="_blank"
+rel="nofollow sponsored noopener">
+Billets → </a>
+
 </div>
+
+<div class="card-calendar-row">
+
+<span class="card-calendar-date">
+📅 9 avril 2027
+</span>
+
+<a
+href="https://www.hellotickets.com/us/los-angeles/concerts/coachella-music-festival-tickets/2027-04-09,1200/2509276/2?tap_a=141252-18675a&tap_s=9884000-08dfab"
+target="_blank"
+rel="nofollow sponsored noopener">
+Billets → </a>
+
+</div>
+
+<div class="card-calendar-row">
+
+<span class="card-calendar-date">
+📅 15 avril 2027
+</span>
+
+<a
+href="https://www.hellotickets.com/us/los-angeles/concerts/coachella-music-festival-tickets/2027-04-15,1200/2509275/2?tap_a=141252-18675a&tap_s=9884000-08dfab"
+target="_blank"
+rel="nofollow sponsored noopener">
+Billets → </a>
+
+</div>
+
+<div class="card-calendar-row">
+
+<span class="card-calendar-date">
+📅 16 avril 2027
+</span>
+
+<a
+href="https://www.hellotickets.com/us/los-angeles/concerts/coachella-music-festival-tickets/2027-04-16,1200/2509274/2?tap_a=141252-18675a&tap_s=9884000-08dfab"
+target="_blank"
+rel="nofollow sponsored noopener">
+Billets → </a>
+
+</div>
+
+</div>
+
+</details>
+
+</div>
+
+<!-- BURNING MAN -->
 
 <div class="card">
 
@@ -1201,6 +1439,18 @@ alt="Burning Man dans le désert du Nevada"
 loading="lazy">
 
 <h3>🔥 Burning Man</h3>
+
+<div class="event-meta">
+
+<span class="event-date">
+📅 30 août – 7 septembre 2026
+</span>
+
+<span class="event-location">
+📍 Black Rock Desert, Nevada
+</span>
+
+</div>
 
 <p>
 Une expérience artistique hors norme au cœur du désert du Nevada, où installations monumentales, performances et communauté éphémère donnent naissance à Black Rock City.
@@ -1232,6 +1482,8 @@ Découvrez les célébrations les plus emblématiques de la planète. Carnavals,
 
 <div class="grid">
 
+<!-- CARNAVAL DE RIO -->
+
 <div class="card">
 
 <img
@@ -1241,11 +1493,25 @@ loading="lazy">
 
 <h3>🎭 Carnaval de Rio</h3>
 
+<div class="event-meta">
+
+<span class="event-date">
+📅 5–13 février 2027
+</span>
+
+<span class="event-location">
+📍 <a href="rio.html">Rio de Janeiro →</a>
+</span>
+
+</div>
+
 <p>
 Le plus célèbre carnaval au monde transforme Rio de Janeiro en une immense scène de musique, de danse et de couleurs.
 </p>
 
 </div>
+
+<!-- OKTOBERFEST -->
 
 <div class="card">
 
@@ -1256,11 +1522,25 @@ loading="lazy">
 
 <h3>🍺 Oktoberfest</h3>
 
+<div class="event-meta">
+
+<span class="event-date">
+📅 19 septembre – 4 octobre 2026
+</span>
+
+<span class="event-location">
+📍 <a href="munich.html">Munich →</a>
+</span>
+
+</div>
+
 <p>
 La plus grande fête populaire d'Allemagne rassemble chaque année des millions de visiteurs à Munich.
 </p>
 
 </div>
+
+<!-- NOUVEL AN CHINOIS -->
 
 <div class="card">
 
@@ -1271,11 +1551,25 @@ loading="lazy">
 
 <h3>🏮 Nouvel An chinois</h3>
 
+<div class="event-meta">
+
+<span class="event-date">
+📅 6 février 2027
+</span>
+
+<span class="event-location">
+📍 Chine & grandes villes d'Asie
+</span>
+
+</div>
+
 <p>
 Parades, lanternes et feux d'artifice célèbrent l'arrivée de la nouvelle année dans de nombreux pays d'Asie.
 </p>
 
 </div>
+
+<!-- SAINT-PATRICK -->
 
 <div class="card">
 
@@ -1285,6 +1579,18 @@ alt="Fête de la Saint-Patrick en Irlande"
 loading="lazy">
 
 <h3>☘️ Saint-Patrick</h3>
+
+<div class="event-meta">
+
+<span class="event-date">
+📅 17 mars 2027
+</span>
+
+<span class="event-location">
+📍 Dublin, Irlande
+</span>
+
+</div>
 
 <p>
 Une fête incontournable en Irlande et dans de nombreuses villes du monde où musique et convivialité sont à l'honneur.
