@@ -481,6 +481,25 @@ border-color:rgba(99,102,241,0.45);
 box-shadow:0 15px 35px rgba(0,0,0,0.25);
 }
 
+.card img{
+display:block;
+
+width:100%;
+height:190px;
+
+object-fit:cover;
+
+border-radius:20px;
+
+margin-bottom:20px;
+
+transition:0.4s ease;
+}
+
+.card:hover img{
+transform:scale(1.03);
+}
+
 .card h3{
 font-size:1.35rem;
 margin-bottom:16px;
@@ -517,30 +536,6 @@ transition:0.3s;
 .card a:hover{
 background:#4f46e5;
 transform:translateY(-2px);
-}
-
-.card img{
-transition:0.4s ease;
-}
-
-.card:hover img{
-transform:scale(1.03);
-}
-
-/* BIENTÔT DISPONIBLE */
-
-.card.soon{
-position:relative;
-}
-
-.card.soon a{
-background:#475569;
-cursor:default;
-}
-
-.card.soon a:hover{
-background:#475569;
-transform:none;
 }
 
 /* INFO */
