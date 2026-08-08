@@ -452,6 +452,65 @@ color:white;
 display:grid;
 grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
 gap:18px;
+align-items:stretch;
+}
+
+/* VIGNETTES */
+
+.card{
+background:#111827;
+
+border-radius:24px;
+
+padding:20px;
+
+border:1px solid rgba(255,255,255,0.05);
+
+box-shadow:0 10px 30px rgba(0,0,0,0.22);
+
+overflow:hidden;
+
+display:flex;
+flex-direction:column;
+
+min-width:0;
+
+transition:0.35s;
+}
+
+.card:hover{
+transform:translateY(-4px);
+
+border-color:rgba(99,102,241,0.30);
+
+box-shadow:0 16px 36px rgba(0,0,0,0.28);
+}
+
+.card img{
+width:100%;
+height:210px;
+
+object-fit:cover;
+
+border-radius:18px;
+
+margin-bottom:20px;
+}
+
+.card h3{
+font-size:1.25rem;
+line-height:1.35;
+
+margin-bottom:12px;
+}
+
+.card p{
+font-size:0.95rem;
+line-height:1.7;
+
+color:#cbd5e1;
+
+margin-bottom:14px;
 }
 
 /* LIEN DESTINATION / VILLE */
@@ -540,8 +599,6 @@ color:#cbd5e1;
 color:#ffffff;
 transition:0.3s;
 }
-
-.event-location a:hover
 
 /* CALENDRIER DANS UNE VIGNETTE */
 
