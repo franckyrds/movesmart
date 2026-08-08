@@ -467,6 +467,30 @@ font-size:0.9rem;
 color:white;
 }
 
+/* SÉPARATEUR ENTRE LES TOURNOIS */
+
+.tournament-separator{
+width:100%;
+max-width:900px;
+height:2px;
+
+margin:20px auto;
+
+background:
+linear-gradient(
+90deg,
+transparent 0%,
+rgba(232,216,61,0.15) 15%,
+rgba(232,216,61,0.55) 35%,
+#E8D83D 50%,
+rgba(232,216,61,0.55) 65%,
+rgba(232,216,61,0.15) 85%,
+transparent 100%
+);
+
+border-radius:100%;
+}
+  
 /* GRID */
 
 .grid{
@@ -1082,48 +1106,6 @@ Quatre tournois mythiques, quatre villes et quatre expériences uniques à vivre
 
 <section class="quick-guide">
 
-<a href="#australie" class="quick-card">
-
-<h3>🇦🇺 Open d’Australie</h3>
-
-<p>
-Melbourne ouvre la saison des Grands Chelems dans une ambiance estivale et spectaculaire.
-</p>
-
-</a>
-
-<a href="#roland-garros" class="quick-card">
-
-<h3>🇫🇷 Roland-Garros</h3>
-
-<p>
-La terre battue parisienne accueille l'un des rendez-vous les plus emblématiques du tennis mondial.
-</p>
-
-</a>
-
-<a href="#wimbledon" class="quick-card">
-
-<h3>🇬🇧 Wimbledon</h3>
-
-<p>
-Gazon, traditions et élégance britannique au cœur du plus ancien tournoi de tennis au monde.
-</p>
-
-</a>
-
-<a href="#us-open" class="quick-card">
-
-<h3>🇺🇸 US Open</h3>
-
-<p>
-New York clôture les Grands Chelems dans une atmosphère électrique et spectaculaire.
-</p>
-
-</a>
-
-</section>
-
 <section id="australie" class="section australia-theme">
 
 <h2 class="section-title">
@@ -1136,26 +1118,18 @@ Premier Grand Chelem de l'année, l'Open d'Australie transforme Melbourne en cap
 
 <div class="tournament-visual">
 
-<section id="australie" class="section australia-theme">
-
-<h2 class="section-title">
-🇦🇺 Open d’Australie
-</h2>
-
 <img
 src="images/event-open-australie.webp"
 alt="Open d'Australie à Melbourne"
 loading="lazy">
 
-<div class="card-overlay">
+<div class="tournament-content">
 
 <h3>🎾 Open d’Australie — Melbourne</h3>
 
 <p>
 Sous le soleil australien, les meilleurs joueurs du monde s'affrontent dans une atmosphère festive et spectaculaire autour de Melbourne Park.
 </p>
-
-</div>
 
 </div>
 
@@ -1347,6 +1321,8 @@ L'Open d'Australie est aussi l'occasion de découvrir Melbourne en plein été. 
 
 </section>
 
+<div class="tournament-separator"></div>
+  
 <section id="roland-garros" class="section roland-theme">
 
 <h2 class="section-title">
@@ -1388,6 +1364,8 @@ Roland-Garros permet de combiner l'un des grands rendez-vous sportifs de l'anné
 
 </section>
 
+<div class="tournament-separator"></div>
+  
 <section id="wimbledon" class="section wimbledon-theme">
 
 <h2 class="section-title">
@@ -1429,6 +1407,8 @@ Wimbledon est autant une tradition britannique qu'un événement sportif. Profit
 
 </section>
 
+<div class="tournament-separator"></div>
+  
 <section id="us-open" class="section usopen-theme">
 
 <h2 class="section-title">
@@ -1470,6 +1450,8 @@ L'US Open se prête parfaitement à un séjour à New York. Après une journée 
 
 </section>
 
+<div class="tournament-separator"></div>
+  
 <section class="info-section">
 
 <div class="info-box">
