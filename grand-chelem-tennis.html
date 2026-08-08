@@ -230,16 +230,29 @@ text-shadow:0 8px 30px rgba(0,0,0,0.25);
 }
 
 .hero h1 .highlight{
-color:#E8D83D;
+background:
+linear-gradient(
+90deg,
+#2f6fff 0%,
+#2f6fff 30%,
+#ffffff 50%,
+#ef4444 70%,
+#ef4444 100%
+);
+
+-webkit-background-clip:text;
+-webkit-text-fill-color:transparent;
+
+background-clip:text;
+color:transparent;
 }
 
 .hero h1 span{
 display:inline;
 
-background:linear-gradient(90deg,#F4E96B,#E8D83D);
+color:#ffffff;
 
--webkit-background-clip:text;
--webkit-text-fill-color:transparent;
+-webkit-text-fill-color:#ffffff;
 }
 
 .hero p{
@@ -1003,7 +1016,7 @@ font-size:2rem;
 <section class="hero">
 
 <img
-src="images/grand-chelem-tennis-hero.webp"
+src="images/event-grand-chelem.webp"
 alt="Les quatre tournois du Grand Chelem de tennis">
 
 <div class="hero-overlay">
