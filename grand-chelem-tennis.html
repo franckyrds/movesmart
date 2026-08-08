@@ -634,6 +634,170 @@ line-height:1.7;
 
 }
 
+/* CALENDRIER DÉPLIANT */
+
+.calendar-toggle{
+margin-top:28px;
+
+background:
+linear-gradient(
+135deg,
+rgba(18,42,86,0.94),
+rgba(9,22,48,0.94)
+);
+
+border:1px solid rgba(232,216,61,0.16);
+
+border-radius:22px;
+
+overflow:hidden;
+
+box-shadow:0 10px 30px rgba(0,0,0,0.20);
+}
+
+.calendar-toggle summary{
+padding:18px 24px;
+
+cursor:pointer;
+
+font-weight:700;
+
+color:#ffffff;
+
+list-style:none;
+
+transition:0.3s;
+}
+
+.calendar-toggle summary::-webkit-details-marker{
+display:none;
+}
+
+.calendar-toggle summary::after{
+content:'＋';
+
+float:right;
+
+color:#E8D83D;
+
+font-size:1.3rem;
+}
+
+.calendar-toggle[open] summary::after{
+content:'−';
+}
+
+.calendar-toggle summary:hover{
+background:rgba(255,255,255,0.04);
+}
+
+.event-calendar{
+padding:0 24px 18px;
+}
+
+.calendar-row{
+display:grid;
+
+grid-template-columns:120px 1fr auto;
+
+gap:18px;
+
+align-items:center;
+
+padding:14px 0;
+
+border-top:1px solid rgba(255,255,255,0.07);
+}
+
+.calendar-date{
+font-weight:700;
+color:#E8D83D;
+}
+
+.calendar-event{
+color:#e2e8f0;
+font-size:0.95rem;
+}
+
+.calendar-row a{
+display:inline-block;
+
+padding:9px 14px;
+
+background:#E8D83D;
+
+color:#102A56;
+
+border-radius:10px;
+
+font-size:0.82rem;
+font-weight:700;
+
+white-space:nowrap;
+
+transition:0.3s;
+}
+
+.calendar-row a:hover{
+background:#F4E96B;
+transform:translateY(-2px);
+}
+
+/* SÉPARATEUR TOURNOIS */
+
+.tournament-separator{
+width:100%;
+max-width:900px;
+height:2px;
+
+margin:8px auto;
+
+background:
+linear-gradient(
+90deg,
+transparent 0%,
+rgba(232,216,61,0.18) 18%,
+rgba(232,216,61,0.65) 38%,
+#E8D83D 50%,
+rgba(232,216,61,0.65) 62%,
+rgba(232,216,61,0.18) 82%,
+transparent 100%
+);
+
+border-radius:50%;
+}
+
+@media(max-width:700px){
+
+.calendar-toggle summary{
+padding:17px 20px;
+}
+
+.event-calendar{
+padding:0 20px 16px;
+}
+
+.calendar-row{
+grid-template-columns:1fr auto;
+gap:8px 14px;
+}
+
+.calendar-date,
+.calendar-event{
+grid-column:1;
+}
+
+.calendar-row a{
+grid-column:2;
+grid-row:1 / span 2;
+}
+
+.tournament-separator{
+width:85%;
+}
+
+}
+
 /* INFO */
 
 .info-section{
@@ -1117,7 +1281,7 @@ Premier Grand Chelem de l'année, l'Open d'Australie transforme Melbourne en cap
 </p>
 
 <div class="tournament-visual">
-
+  
 <img
 src="images/event-open-australie.webp"
 alt="Open d'Australie à Melbourne"
@@ -1340,15 +1504,13 @@ src="images/roland-garros.webp"
 alt="Roland-Garros à Paris"
 loading="lazy">
 
-<div class="card-overlay">
+<div class="tournament-content">
 
 <h3>🎾 Roland-Garros — Paris</h3>
 
 <p>
 Vivez l'atmosphère unique de la Porte d'Auteuil et assistez aux plus grands matchs sur la célèbre terre battue parisienne.
 </p>
-
-</div>
 
 </div>
 
@@ -1383,15 +1545,13 @@ src="images/grand-chelem-wimbledon.webp"
 alt="Tournoi de Wimbledon à Londres"
 loading="lazy">
 
-<div class="card-overlay">
+<div class="tournament-content">
 
 <h3>🎾 Wimbledon — Londres</h3>
 
 <p>
 Découvrez le tournoi le plus ancien du Grand Chelem, célèbre pour son gazon, ses tenues blanches et l'atmosphère incomparable du Centre Court.
 </p>
-
-</div>
 
 </div>
 
@@ -1426,15 +1586,13 @@ src="images/grand-chelem-us-open.webp"
 alt="US Open de tennis à New York"
 loading="lazy">
 
-<div class="card-overlay">
+<div class="tournament-content">
 
 <h3>🎾 US Open — New York</h3>
 
 <p>
 Sous les lumières de Flushing Meadows, vivez des rencontres intenses dans l'une des atmosphères les plus animées du tennis mondial.
 </p>
-
-</div>
 
 </div>
 
@@ -1449,8 +1607,6 @@ L'US Open se prête parfaitement à un séjour à New York. Après une journée 
 </div>
 
 </section>
-
-<div class="tournament-separator"></div>
   
 <section class="info-section">
 
