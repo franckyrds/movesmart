@@ -220,29 +220,13 @@ cursor:pointer;
 
 .hero{
 position:relative;
-
-min-height:560px;
+height:52vh;
+min-height:420px;
 
 display:flex;
 align-items:center;
 
-padding:70px 22px;
-
 overflow:hidden;
-
-background:
-linear-gradient(
-90deg,
-rgba(5,8,22,0.30) 0%,
-rgba(5,8,22,0.16) 38%,
-rgba(5,8,22,0.04) 65%,
-transparent 82%
-),
-url("images/destinations.webp");
-
-background-size:cover;
-background-position:center;
-background-repeat:no-repeat;
 }
 
 .hero::before{
@@ -251,39 +235,67 @@ content:"";
 position:absolute;
 inset:0;
 
-background:transparent;
+background-image:url("images/destinations.webp");
+background-size:cover;
+background-position:center;
+background-repeat:no-repeat;
+
+filter:brightness(0.88);
+
+z-index:0;
+}
+
+.hero::after{
+content:"";
+
+position:absolute;
+inset:0;
+
+background:
+linear-gradient(
+90deg,
+rgba(5,8,22,0.30) 0%,
+rgba(5,8,22,0.15) 40%,
+rgba(5,8,22,0.03) 70%,
+transparent 100%
+);
 
 z-index:1;
 }
 
 .hero-container{
+position:relative;
+z-index:2;
+
 width:100%;
 max-width:1280px;
 
-margin:auto;
+margin:0 auto;
+padding:20px 22px;
 
-position:relative;
-z-index:2;
+text-align:left;
 }
 
 .hero h1{
-max-width:760px;
+font-size:5.25rem;
+line-height:0.95;
+letter-spacing:-3px;
 
-font-size:5.3rem;
-line-height:0.9;
-letter-spacing:-4px;
+max-width:800px;
 
-margin:0 0 24px;
+margin:0 0 14px;
+
+text-align:left;
 
 color:white;
 
-text-shadow:
-0 3px 12px rgba(0,0,0,0.45),
-0 8px 30px rgba(0,0,0,0.18);
+text-shadow:0 8px 30px rgba(0,0,0,0.25);
 }
 
 .hero h1 span{
-background:linear-gradient(90deg,#8b5cf6,#60a5fa);
+display:inline;
+
+background:linear-gradient(90deg,#9b7cff,#6ea8ff);
 
 -webkit-background-clip:text;
 -webkit-text-fill-color:transparent;
@@ -292,18 +304,18 @@ background-clip:text;
 }
 
 .hero p{
-max-width:680px;
+font-size:1.1rem;
+line-height:1.8;
 
-font-size:1.08rem;
-line-height:1.85;
+color:#e2e8f0;
 
-color:#ffffff;
+max-width:720px;
 
 margin:0;
 
-text-shadow:
-0 2px 8px rgba(0,0,0,0.65),
-0 4px 18px rgba(0,0,0,0.30);
+text-align:left;
+
+text-shadow:0 3px 18px rgba(0,0,0,0.30);
 }
 
 /* MOBILE */
