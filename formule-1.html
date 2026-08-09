@@ -267,15 +267,15 @@ padding:0 20px;
 
 display:flex;
 
+flex-wrap:wrap;
+
+justify-content:center;
+
+align-items:center;
+
 gap:10px;
 
-overflow-x:auto;
-
-scrollbar-width:none;
-}
-
-.gp-nav::-webkit-scrollbar{
-display:none;
+overflow:visible;
 }
 
 .gp-nav a{
@@ -294,7 +294,13 @@ color:#e2e8f0;
 font-size:0.9rem;
 font-weight:600;
 
-transition:0.3s;
+white-space:nowrap;
+
+transition:
+background 0.3s,
+border-color 0.3s,
+color 0.3s,
+transform 0.3s;
 }
 
 .gp-nav a:hover{
@@ -307,6 +313,8 @@ rgba(47,124,255,0.18)
 border-color:rgba(255,255,255,0.18);
 
 color:white;
+
+transform:translateY(-2px);
 }
 
 /* PAGE HEADER */
@@ -986,6 +994,40 @@ line-height:1.65;
 font-size:1.65rem;
 }
 
+/* NAVIGATION GRAND PRIX MOBILE */
+
+.gp-nav{
+display:flex;
+
+flex-wrap:nowrap;
+
+justify-content:flex-start;
+
+overflow-x:auto;
+
+padding:0 18px 10px;
+
+gap:10px;
+
+scrollbar-width:none;
+
+-webkit-overflow-scrolling:touch;
+}
+
+.gp-nav::-webkit-scrollbar{
+display:none;
+}
+
+.gp-nav a{
+flex:0 0 auto;
+
+white-space:nowrap;
+
+font-size:0.85rem;
+}
+
+/* GRAND PRIX */
+
 .faq-item summary{
 grid-template-columns:1fr 18px;
 }
@@ -1006,17 +1048,23 @@ width:calc(100% - 32px);
 margin:0 16px 12px;
 }
 
+/* CARDS */
+
 .card{
 padding:22px 20px;
 
 border-radius:20px;
 }
 
+/* INFO BOX */
+
 .info-box{
 padding:22px 20px;
 
 border-radius:20px;
 }
+
+/* CTA */
 
 .cta{
 min-height:300px;
