@@ -309,6 +309,67 @@ text-shadow:0 3px 18px rgba(0,0,0,0.55);
 }
 
 
+/* HERO MOBILE */
+
+@media(max-width:900px){
+
+.hero{
+min-height:500px;
+
+display:flex;
+align-items:center;
+
+padding:55px 22px;
+
+background-size:cover;
+background-position:center;
+background-repeat:no-repeat;
+}
+
+.hero::before{
+background:
+linear-gradient(
+90deg,
+rgba(5,8,22,0.76) 0%,
+rgba(5,8,22,0.52) 60%,
+rgba(5,8,22,0.24) 100%
+);
+}
+
+.hero-container{
+width:100%;
+max-width:100%;
+
+margin:auto;
+}
+
+.hero h1{
+max-width:520px;
+
+font-size:3rem;
+line-height:1;
+letter-spacing:-2px;
+
+margin:0 0 18px;
+
+text-align:left;
+}
+
+.hero p{
+max-width:470px;
+
+font-size:0.96rem;
+line-height:1.7;
+
+margin:0;
+
+text-align:left;
+
+color:#f1f5f9;
+}
+
+}
+
 /* MOBILE */
 
 @media(max-width:900px){
@@ -342,59 +403,6 @@ display:flex;
 }
 
 
-/* HERO */
-
-.hero{
-min-height:520px;
-
-display:flex;
-align-items:center;
-
-padding:55px 22px;
-
-background-position:center;
-background-size:cover;
-}
-
-.hero::before{
-background:
-linear-gradient(
-to right,
-rgba(5,8,22,0.78) 0%,
-rgba(5,8,22,0.55) 55%,
-rgba(5,8,22,0.25) 100%
-);
-}
-
-.hero-container{
-width:100%;
-margin:auto;
-}
-
-.hero h1{
-max-width:520px;
-
-font-size:3rem;
-line-height:1;
-letter-spacing:-2px;
-
-margin:0 0 18px;
-
-text-align:left;
-}
-
-.hero p{
-max-width:470px;
-
-font-size:0.96rem;
-line-height:1.7;
-
-margin:0;
-
-text-align:left;
-}
-
-
 /* SECTION */
 
 .section{
@@ -408,7 +416,6 @@ margin-bottom:18px;
 .section-header h2{
 font-size:1.8rem;
 }
-
 
 /* TRENDING */
 
@@ -479,11 +486,7 @@ font-size:0.76rem;
 
 <section class="hero">
 
-<img
-src="images/destinations.webp"
-alt="Destinations à travers le monde">
-
-<div class="hero-overlay">
+<div class="hero-container fade-up">
 
 <h1>
 Explore le <span>monde</span>
