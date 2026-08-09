@@ -91,55 +91,47 @@ max-width:100%;
 /* NAVBAR */
 
 .navbar{
-width:100%;
+position:sticky;
+top:0;
+z-index:1000;
+
+padding:10px 16px;
 
 display:flex;
-align-items:center;
 justify-content:space-between;
+align-items:center;
 
-padding:22px 6%;
+background:rgba(3,17,26,0.80);
 
-background:rgba(5,8,22,0.82);
+backdrop-filter:blur(18px);
 
-backdrop-filter:blur(15px);
--webkit-backdrop-filter:blur(15px);
-
-border-bottom:1px solid rgba(255,255,255,0.06);
-
-position:relative;
-z-index:20;
+border-bottom:1px solid rgba(255,255,255,0.04);
 }
 
 .logo{
-font-size:1.45rem;
+font-size:1.65rem;
 font-weight:800;
-letter-spacing:-0.5px;
 }
 
 .nav-links{
 display:flex;
-align-items:center;
 gap:28px;
+align-items:center;
 }
 
 .nav-links a{
-font-size:0.93rem;
-font-weight:500;
-
-color:#dbeafe;
-
-transition:0.25s ease;
+color:#cbd5e1;
+font-size:0.95rem;
+transition:0.3s;
 }
 
 .nav-links a:hover{
-color:#ffffff;
+color:white;
 }
 
 .mobile-btn{
 display:none;
-
-font-size:1.7rem;
-
+font-size:2rem;
 cursor:pointer;
 }
 
