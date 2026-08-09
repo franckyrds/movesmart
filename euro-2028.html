@@ -873,7 +873,6 @@ font-size:2rem;
 
 </style>
 
-
 </head>
 
 <body>
@@ -1321,6 +1320,12 @@ et vivez l'ambiance de l'Euro 2028 à travers le Royaume-Uni et l'Irlande.
 
 </section>
 
+<button
+class="back-to-top"
+id="backToTop"
+aria-label="Retour en haut de la page">
+↑ </button>
+  
 <footer>
 
 <p>© 2026 Vidolta — Euro 2028</p>
@@ -1330,12 +1335,6 @@ et vivez l'ambiance de l'Euro 2028 à travers le Royaume-Uni et l'Irlande.
 <a href="index.html">Accueil</a> <a href="about.html">À propos</a> <a href="notre-histoire.html">Notre histoire</a> <a href="mentions-legales.html">Mentions légales</a> <a href="confidentialite.html">Confidentialité</a> <a href="contact.html">Contact</a>
 
 </div>
-
-<button
-class="back-to-top"
-id="backToTop"
-aria-label="Retour en haut de la page">
-↑ </button>
   
 </footer>
 
@@ -1350,10 +1349,42 @@ nav.classList.toggle('active');
 }
 
 document.querySelectorAll('.nav-links a').forEach(link => {
-  link.addEventListener('click', () => {
-    const nav = document.querySelector('.nav-links');
-    nav.classList.remove('active');
-  });
+
+link.addEventListener('click', () => {
+
+const nav = document.querySelector('.nav-links');
+
+nav.classList.remove('active');
+
+});
+
+});
+
+const backToTop = document.getElementById('backToTop');
+
+window.addEventListener('scroll', () => {
+
+if(window.scrollY > 400){
+
+backToTop.classList.add('show');
+
+}else{
+
+backToTop.classList.remove('show');
+
+}
+
+});
+
+backToTop.addEventListener('click', () => {
+
+window.scrollTo({
+
+top:0,
+behavior:'smooth'
+
+});
+
 });
 
 </script>
