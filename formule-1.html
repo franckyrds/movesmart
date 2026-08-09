@@ -1,0 +1,2005 @@
+<!DOCTYPE html>
+
+<html lang="fr">
+
+<head>
+
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+<title>Formule 1 2026 : calendrier des Grands Prix | Vidolta</title>
+
+<meta name="description"
+content="Découvrez le calendrier complet de la saison de Formule 1 2026 : dates des Grands Prix, circuits, destinations et informations pour préparer votre voyage autour de la F1.">
+
+<link rel="canonical"
+href="https://www.vidolta.com/formule-1.html">
+
+<link rel="alternate"
+hreflang="fr"
+href="https://www.vidolta.com/formule-1.html">
+
+<link rel="alternate"
+hreflang="x-default"
+href="https://www.vidolta.com/formule-1.html">
+
+<meta property="og:title"
+content="Formule 1 2026 : calendrier des Grands Prix | Vidolta">
+
+<meta property="og:description"
+content="Retrouvez tous les Grands Prix de Formule 1 2026 dans l'ordre de la saison, leurs circuits, leurs dates et les destinations à découvrir.">
+
+<meta property="og:url"
+content="https://www.vidolta.com/formule-1.html">
+
+<meta property="og:image"
+content="https://www.vidolta.com/images/event-formule-1.webp">
+
+<meta property="og:type"
+content="website">
+
+<meta property="og:site_name"
+content="Vidolta">
+
+<meta name="theme-color"
+content="#050816">
+
+<link rel="icon"
+type="image/x-icon"
+href="favicon.ico">
+
+<link rel="icon"
+type="image/svg+xml"
+href="favicon.svg">
+
+<link rel="icon"
+type="image/png"
+sizes="96x96"
+href="favicon-96x96.png">
+
+<link rel="apple-touch-icon"
+sizes="180x180"
+href="apple-touch-icon.png">
+
+<link rel="manifest"
+href="site.webmanifest">
+
+<link rel="preconnect"
+href="https://fonts.googleapis.com">
+
+<link rel="preconnect"
+href="https://fonts.gstatic.com"
+crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+rel="stylesheet">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+:root{
+--bg:#050816;
+--primary:#7c5cff;
+--primary2:#5b8cff;
+--accent:#f4e96b;
+--red:#ff2d2d;
+--blue:#2f7cff;
+--text:#ffffff;
+--muted:#94a3b8;
+}
+
+html{
+scroll-behavior:smooth;
+scroll-padding-top:80px;
+}
+
+body{
+font-family:'Poppins',sans-serif;
+
+background:
+linear-gradient(
+90deg,
+rgba(255,45,45,0.14) 0%,
+rgba(255,45,45,0.05) 8%,
+transparent 18%,
+transparent 82%,
+rgba(47,124,255,0.05) 92%,
+rgba(47,124,255,0.14) 100%
+),
+radial-gradient(circle at top left,rgba(255,45,45,0.16),transparent 30%),
+radial-gradient(circle at top right,rgba(47,124,255,0.18),transparent 30%),
+linear-gradient(to bottom,#0b1426 0%,#09111f 100%);
+
+color:var(--text);
+overflow-x:hidden;
+}
+
+a{
+text-decoration:none;
+color:inherit;
+}
+
+img{
+display:block;
+}
+
+/* NAVBAR */
+
+.navbar{
+position:sticky;
+top:0;
+z-index:1000;
+
+padding:10px 16px;
+
+display:flex;
+justify-content:space-between;
+align-items:center;
+
+background:rgba(5,8,22,0.82);
+
+backdrop-filter:blur(18px);
+
+border-bottom:1px solid rgba(255,255,255,0.06);
+}
+
+.logo{
+font-size:1.65rem;
+font-weight:800;
+}
+
+.nav-links{
+display:flex;
+gap:22px;
+align-items:center;
+}
+
+.nav-links a{
+color:#cbd5e1;
+font-size:0.92rem;
+transition:0.3s;
+}
+
+.nav-links a:hover{
+color:white;
+}
+
+.mobile-btn{
+display:none;
+font-size:2rem;
+cursor:pointer;
+}
+
+/* LEGEND */
+
+.legend{
+max-width:1200px;
+
+margin:34px auto 0;
+
+padding:0 20px;
+
+display:flex;
+flex-wrap:wrap;
+justify-content:center;
+
+gap:12px;
+}
+
+.legend span,
+.badge{
+display:inline-flex;
+align-items:center;
+
+gap:6px;
+
+padding:8px 12px;
+
+border-radius:999px;
+
+font-size:0.82rem;
+font-weight:700;
+
+border:1px solid rgba(255,255,255,0.08);
+
+background:rgba(15,23,42,0.72);
+}
+
+.badge-past{
+color:#cbd5e1;
+border-color:rgba(148,163,184,0.35);
+}
+
+.badge-next{
+color:#ffffff;
+border-color:rgba(47,124,255,0.45);
+background:rgba(47,124,255,0.16);
+}
+
+.badge-cancelled{
+color:#fca5a5;
+border-color:rgba(255,45,45,0.4);
+background:rgba(255,45,45,0.10);
+}
+
+/* GRAND PRIX NAV */
+
+.gp-nav{
+max-width:1200px;
+
+margin:30px auto 0;
+
+padding:0 20px;
+
+display:flex;
+
+gap:10px;
+
+overflow-x:auto;
+
+scrollbar-width:none;
+}
+
+.gp-nav::-webkit-scrollbar{
+display:none;
+}
+
+.gp-nav a{
+flex:0 0 auto;
+
+padding:10px 14px;
+
+border-radius:999px;
+
+background:rgba(255,255,255,0.07);
+
+border:1px solid rgba(255,255,255,0.08);
+
+color:#e2e8f0;
+
+font-size:0.9rem;
+font-weight:600;
+
+transition:0.3s;
+}
+
+.gp-nav a:hover{
+background:linear-gradient(
+90deg,
+rgba(255,45,45,0.18),
+rgba(47,124,255,0.18)
+);
+
+border-color:rgba(255,255,255,0.18);
+
+color:white;
+}
+
+/* PAGE HEADER */
+
+.page-header{
+position:relative;
+
+padding:120px 20px;
+
+text-align:center;
+
+max-width:none;
+margin:auto;
+
+background:
+linear-gradient(
+rgba(5,8,22,0.48),
+rgba(5,8,22,0.78)
+),
+url('images/event-formule-1');
+
+background-size:cover;
+background-position:center;
+background-repeat:no-repeat;
+
+border-bottom:1px solid rgba(255,255,255,0.06);
+}
+
+.page-header::after{
+content:'';
+
+position:absolute;
+left:0;
+right:0;
+bottom:0;
+
+height:4px;
+
+background:linear-gradient(
+90deg,
+#ff2d2d 0%,
+#ff2d2d 45%,
+rgba(255,255,255,0.9) 50%,
+#2f7cff 55%,
+#2f7cff 100%
+);
+}
+
+.page-header h1{
+position:relative;
+z-index:2;
+
+font-size:3.4rem;
+line-height:1.05;
+
+margin-bottom:16px;
+
+text-shadow:0 4px 24px rgba(0,0,0,0.65);
+}
+
+.page-header p{
+position:relative;
+z-index:2;
+
+max-width:760px;
+
+margin:auto;
+
+color:#e2e8f0;
+
+font-size:1.05rem;
+line-height:1.7;
+
+text-shadow:0 2px 12px rgba(0,0,0,0.65);
+}
+
+/* SECTIONS */
+
+.section{
+padding:40px 20px;
+
+max-width:1100px;
+
+margin:auto;
+}
+
+.section-title{
+font-size:2rem;
+
+margin-bottom:24px;
+
+color:white;
+
+padding-top:20px;
+}
+
+/* GRAND PRIX LIST */
+
+.faq{
+margin-top:20px;
+
+display:grid;
+
+gap:12px;
+}
+
+.faq-item{
+position:relative;
+
+background:rgba(15,23,42,0.84);
+
+border:1px solid rgba(255,255,255,0.08);
+
+border-left:4px solid #ff2d2d;
+
+border-radius:18px;
+
+overflow:hidden;
+
+transition:
+transform 0.25s ease,
+border-color 0.25s ease,
+background 0.25s ease;
+}
+
+.faq-item:nth-child(even){
+border-left-color:#2f7cff;
+}
+
+.faq-item:hover{
+transform:translateY(-2px);
+
+background:rgba(18,28,50,0.92);
+
+border-top-color:rgba(255,255,255,0.14);
+border-right-color:rgba(255,255,255,0.14);
+border-bottom-color:rgba(255,255,255,0.14);
+}
+
+/* GRAND PRIX DETAILS */
+
+.faq-item summary{
+cursor:pointer;
+
+padding:16px;
+
+font-weight:700;
+
+color:white;
+
+list-style:none;
+
+display:grid;
+
+grid-template-columns:1fr auto 20px;
+
+align-items:center;
+
+gap:12px;
+
+min-height:72px;
+}
+
+.faq-item summary::-webkit-details-marker{
+display:none;
+}
+
+.faq-item summary::after{
+content:'↓';
+
+opacity:0.8;
+
+transition:0.3s;
+
+text-align:right;
+}
+
+.faq-item[open] summary::after{
+transform:rotate(180deg);
+}
+
+.faq-item summary .badge{
+justify-self:end;
+
+white-space:nowrap;
+}
+
+.faq-item p{
+margin:0;
+
+padding:0 16px 14px;
+
+font-size:0.94rem;
+
+color:#cbd5e1;
+
+line-height:1.65;
+}
+
+/* BUTTONS */
+
+.event-btn{
+display:inline-flex;
+
+align-items:center;
+justify-content:center;
+
+margin:0 8px 16px 16px;
+
+padding:11px 16px;
+
+border-radius:12px;
+
+font-weight:700;
+
+font-size:0.9rem;
+
+transition:
+transform 0.25s ease,
+box-shadow 0.25s ease;
+}
+
+.event-btn:hover{
+transform:translateY(-2px);
+}
+
+/* DESTINATION VIDOLTA */
+
+.destination-btn{
+background:linear-gradient(
+135deg,
+#8b5cf6,
+#6366f1
+);
+
+color:white;
+
+box-shadow:0 8px 24px rgba(124,92,255,0.18);
+}
+
+.destination-btn:hover{
+box-shadow:0 10px 30px rgba(124,92,255,0.32);
+}
+
+/* RESERVATION */
+
+.booking-btn{
+background:#F4E96B;
+
+color:#111827;
+
+box-shadow:0 8px 24px rgba(244,233,107,0.12);
+}
+
+.booking-btn:hover{
+box-shadow:0 10px 30px rgba(244,233,107,0.25);
+}
+
+/* DISABLED */
+
+.disabled-btn{
+background:#374151;
+
+color:#cbd5e1;
+
+cursor:default;
+
+opacity:0.75;
+
+pointer-events:none;
+
+box-shadow:none;
+}
+
+/* FOOTER */
+
+footer{
+padding:70px 20px;
+
+text-align:center;
+
+color:#94a3b8;
+
+line-height:2;
+}
+
+.footer-links{
+margin-top:16px;
+
+display:flex;
+
+justify-content:center;
+
+flex-wrap:wrap;
+
+gap:18px;
+}
+
+/* ANIMATION */
+
+.fade-up{
+opacity:0;
+
+transform:translateY(30px);
+
+transition:0.8s ease;
+}
+
+.fade-up.visible{
+opacity:1;
+
+transform:translateY(0);
+}
+
+/* BACK TO TOP */
+
+.back-to-top{
+position:fixed;
+
+bottom:24px;
+right:24px;
+
+width:52px;
+height:52px;
+
+border:none;
+
+border-radius:50%;
+
+background:linear-gradient(
+135deg,
+#ff2d2d,
+#2f7cff
+);
+
+color:white;
+
+font-size:1.4rem;
+
+cursor:pointer;
+
+display:flex;
+
+align-items:center;
+justify-content:center;
+
+opacity:0;
+
+pointer-events:none;
+
+transition:0.35s;
+
+z-index:999;
+
+box-shadow:0 8px 30px rgba(0,0,0,0.30);
+}
+
+.back-to-top.show{
+opacity:1;
+
+pointer-events:auto;
+}
+
+/* MOBILE */
+
+@media(max-width:900px){
+
+.mobile-btn{
+display:block;
+}
+
+.nav-links{
+display:none;
+
+position:absolute;
+
+top:78px;
+left:20px;
+right:20px;
+
+background:#111827;
+
+padding:22px;
+
+border-radius:26px;
+
+flex-direction:column;
+
+z-index:999;
+}
+
+.nav-links.active{
+display:flex;
+}
+
+.section{
+padding:42px 18px;
+}
+
+.section-title{
+font-size:1.8rem;
+}
+
+.gp-nav{
+padding:0 18px;
+}
+
+.gp-nav a{
+font-size:0.85rem;
+}
+
+.faq-item summary{
+font-size:0.95rem;
+
+grid-template-columns:1fr auto 18px;
+
+gap:8px;
+}
+
+.faq-item summary .badge{
+font-size:0.72rem;
+
+padding:7px 9px;
+}
+
+.event-btn{
+margin:0 8px 12px 16px;
+
+padding:10px 14px;
+
+font-size:0.86rem;
+}
+
+.page-header{
+padding:72px 20px 66px;
+
+background-position:center;
+}
+
+.page-header h1{
+font-size:2.6rem;
+
+line-height:1.05;
+
+letter-spacing:-1px;
+}
+
+.page-header p{
+font-size:1rem;
+
+line-height:1.65;
+}
+
+}
+
+@media(max-width:600px){
+
+.page-header{
+padding:64px 18px 58px;
+}
+
+.page-header h1{
+font-size:2.35rem;
+}
+
+.section-title{
+font-size:1.65rem;
+}
+
+.faq-item summary{
+grid-template-columns:1fr 18px;
+}
+
+.faq-item summary .badge{
+grid-column:1 / -1;
+
+justify-self:start;
+
+margin-top:4px;
+}
+
+.event-btn{
+display:flex;
+
+width:calc(100% - 32px);
+
+margin:0 16px 12px;
+}
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<nav class="navbar">
+
+<a href="index.html" class="logo">
+🌍 Vidolta
+</a>
+
+<div class="mobile-btn" onclick="toggleMenu()">
+☰
+</div>
+
+<div class="nav-links">
+
+<a href="events.html">
+🏆 Événements
+</a>
+
+<a href="destinations.html">
+🌍 Destinations
+</a>
+
+</div>
+
+</nav>
+
+<header class="page-header" id="calendrier">
+
+<h1>
+Formule 1 — Saison 2026
+</h1>
+
+<p>
+Retrouvez tous les Grands Prix de la saison 2026 dans l’ordre chronologique, avec leurs dates, leurs circuits et les destinations à découvrir autour du championnat.
+</p>
+
+</header>
+
+<div class="legend">
+
+<span class="badge badge-past">✓ Déjà disputé</span>
+
+<span class="badge badge-next">● À venir</span>
+
+<span class="badge badge-cancelled">✕ Annulé</span>
+
+</div>
+
+<nav class="gp-nav">
+
+<a href="#australie">🇦🇺 Australie</a> <a href="#chine">🇨🇳 Chine</a> <a href="#japon">🇯🇵 Japon</a> <a href="#bahrein">🇧🇭 Bahreïn</a> <a href="#arabie-saoudite">🇸🇦 Arabie saoudite</a> <a href="#miami">🇺🇸 Miami</a> <a href="#canada">🇨🇦 Canada</a> <a href="#monaco">🇲🇨 Monaco</a> <a href="#barcelone">🇪🇸 Barcelone</a> <a href="#autriche">🇦🇹 Autriche</a> <a href="#grande-bretagne">🇬🇧 Grande-Bretagne</a> <a href="#belgique">🇧🇪 Belgique</a> <a href="#hongrie">🇭🇺 Hongrie</a> <a href="#pays-bas">🇳🇱 Pays-Bas</a> <a href="#italie">🇮🇹 Italie</a> <a href="#madrid">🇪🇸 Madrid</a> <a href="#azerbaidjan">🇦🇿 Azerbaïdjan</a> <a href="#singapour">🇸🇬 Singapour</a> <a href="#austin">🇺🇸 Austin</a> <a href="#mexique">🇲🇽 Mexique</a> <a href="#sao-paulo">🇧🇷 São Paulo</a> <a href="#las-vegas">🇺🇸 Las Vegas</a> <a href="#qatar">🇶🇦 Qatar</a> <a href="#abu-dhabi">🇦🇪 Abu Dhabi</a>
+
+</nav>
+
+<section class="section" id="australie">
+
+<h2 class="section-title">
+🇦🇺 Grand Prix d’Australie
+</h2>
+
+<div class="faq">
+
+<details class="faq-item fade-up">
+
+<summary>
+🏎️ Melbourne — Australie
+<span class="badge badge-past">✓ Déjà disputé</span>
+</summary>
+
+<p>
+📅 6 au 8 mars 2026
+</p>
+
+<p>
+📍 Melbourne, Australie
+</p>
+
+<p>
+🏁 Albert Park Grand Prix Circuit
+</p>
+
+<p>
+💡 Le Grand Prix d’Australie ouvre la saison 2026 dans le cadre verdoyant d’Albert Park, à quelques kilomètres du centre de Melbourne.
+</p>
+
+</details>
+
+</div>
+
+</section>
+
+<section class="section" id="chine">
+
+<h2 class="section-title">
+🇨🇳 Grand Prix de Chine
+</h2>
+
+<div class="faq">
+
+<details class="faq-item fade-up">
+
+<summary>
+🏎️ Shanghai — Chine
+<span class="badge badge-past">✓ Déjà disputé</span>
+</summary>
+
+<p>
+📅 13 au 15 mars 2026
+</p>
+
+<p>
+📍 Shanghai, Chine
+</p>
+
+<p>
+🏁 Shanghai International Circuit
+</p>
+
+<p>
+💡 Un circuit moderne reconnaissable à son tracé spectaculaire, situé aux portes de l'une des plus grandes métropoles d'Asie.
+</p>
+
+</details>
+
+</div>
+
+</section>
+
+<section class="section" id="japon">
+
+<h2 class="section-title">
+🇯🇵 Grand Prix du Japon
+</h2>
+
+<div class="faq">
+
+<details class="faq-item fade-up">
+
+<summary>
+🏎️ Suzuka — Japon
+<span class="badge badge-past">✓ Déjà disputé</span>
+</summary>
+
+<p>
+📅 27 au 29 mars 2026
+</p>
+
+<p>
+📍 Suzuka, Japon
+</p>
+
+<p>
+🏁 Suzuka International Racing Course
+</p>
+
+<p>
+💡 Suzuka est l'un des circuits les plus emblématiques de la Formule 1, célèbre pour son tracé en huit et son ambiance portée par des supporters passionnés.
+</p>
+
+</details>
+
+</div>
+
+</section>
+
+<section class="section" id="bahrein">
+
+<h2 class="section-title">
+🇧🇭 Grand Prix de Bahreïn
+</h2>
+
+<div class="faq">
+
+<details class="faq-item fade-up">
+
+<summary>
+🏎️ Sakhir — Bahreïn
+<span class="badge badge-cancelled">✕ Annulé</span>
+</summary>
+
+<p>
+📅 10 au 12 avril 2026
+</p>
+
+<p>
+📍 Sakhir, Bahreïn
+</p>
+
+<p>
+🏁 Bahrain International Circuit
+</p>
+
+<p>
+💡 Initialement prévu au calendrier 2026, le Grand Prix de Bahreïn a été annulé et n'a pas été disputé cette saison.
+</p>
+
+</details>
+
+</div>
+
+</section>
+
+<section class="section" id="arabie-saoudite">
+
+<h2 class="section-title">
+🇸🇦 Grand Prix d'Arabie saoudite
+</h2>
+
+<div class="faq">
+
+<details class="faq-item fade-up">
+
+<summary>
+🏎️ Djeddah — Arabie saoudite
+<span class="badge badge-cancelled">✕ Annulé</span>
+</summary>
+
+<p>
+📅 17 au 19 avril 2026
+</p>
+
+<p>
+📍 Djeddah, Arabie saoudite
+</p>
+
+<p>
+🏁 Jeddah Corniche Circuit
+</p>
+
+<p>
+💡 Initialement programmée sur le rapide circuit urbain de Djeddah, cette manche du championnat 2026 a été annulée et n'a pas été disputée.
+</p>
+
+</details>
+
+</div>
+
+</section>
+
+<section class="section" id="miami">
+
+<h2 class="section-title">
+🇺🇸 Grand Prix de Miami
+</h2>
+
+<div class="faq">
+
+<details class="faq-item fade-up">
+
+<summary>
+🏎️ Miami — États-Unis
+<span class="badge badge-past">✓ Déjà disputé</span>
+</summary>
+
+<p>
+📅 1er au 3 mai 2026
+</p>
+
+<p>
+📍 Miami, Floride, États-Unis
+</p>
+
+<p>
+🏁 Miami International Autodrome
+</p>
+
+<p>
+💡 Un Grand Prix au cœur de l'ambiance de Miami, disputé autour du Hard Rock Stadium et idéal pour associer un week-end de Formule 1 à quelques jours en Floride.
+</p>
+
+<a
+href="miami.html"
+class="event-btn destination-btn">
+🌍 Découvrir Miami </a>
+
+</details>
+
+</div>
+
+</section>
+
+<section class="section" id="canada">
+
+<h2 class="section-title">
+🇨🇦 Grand Prix du Canada
+</h2>
+
+<div class="faq">
+
+<details class="faq-item fade-up">
+
+<summary>
+🏎️ Montréal — Canada
+<span class="badge badge-past">✓ Déjà disputé</span>
+</summary>
+
+<p>
+📅 22 au 24 mai 2026
+</p>
+
+<p>
+📍 Montréal, Québec, Canada
+</p>
+
+<p>
+🏁 Circuit Gilles-Villeneuve
+</p>
+
+<p>
+💡 Installé sur l'île Notre-Dame, le circuit Gilles-Villeneuve permet de vivre la Formule 1 à quelques minutes seulement du centre de Montréal.
+</p>
+
+<a
+href="montreal.html"
+class="event-btn destination-btn">
+🌍 Découvrir Montréal </a>
+
+</details>
+
+</div>
+
+</section>
+
+<section class="section" id="monaco">
+
+<h2 class="section-title">
+🇲🇨 Grand Prix de Monaco
+</h2>
+
+<div class="faq">
+
+<details class="faq-item fade-up">
+
+<summary>
+🏎️ Monaco — Principauté de Monaco
+<span class="badge badge-past">✓ Déjà disputé</span>
+</summary>
+
+<p>
+📅 5 au 7 juin 2026
+</p>
+
+<p>
+📍 Monte-Carlo, Monaco
+</p>
+
+<p>
+🏁 Circuit de Monaco
+</p>
+
+<p>
+💡 L'un des rendez-vous les plus mythiques de la Formule 1, disputé directement dans les rues de la principauté entre le port, les bâtiments et les célèbres virages de Monte-Carlo.
+</p>
+
+</details>
+
+</div>
+
+</section>
+
+<section class="section" id="barcelone">
+
+<h2 class="section-title">
+🇪🇸 Grand Prix de Barcelone-Catalogne
+</h2>
+
+<div class="faq">
+
+<details class="faq-item fade-up">
+
+<summary>
+🏎️ Barcelone — Espagne
+<span class="badge badge-past">✓ Déjà disputé</span>
+</summary>
+
+<p>
+📅 12 au 14 juin 2026
+</p>
+
+<p>
+📍 Montmeló, près de Barcelone, Espagne
+</p>
+
+<p>
+🏁 Circuit de Barcelona-Catalunya
+</p>
+
+<p>
+💡 Situé à proximité de Barcelone, le circuit permet de combiner facilement un week-end de Formule 1 avec quelques jours de découverte de la capitale catalane.
+</p>
+
+<a
+href="barcelone.html"
+class="event-btn destination-btn">
+🌍 Découvrir Barcelone </a>
+
+</details>
+
+</div>
+
+</section>
+
+<section class="section" id="autriche">
+
+<h2 class="section-title">
+🇦🇹 Grand Prix d'Autriche
+</h2>
+
+<div class="faq">
+
+<details class="faq-item fade-up">
+
+<summary>
+🏎️ Spielberg — Autriche
+<span class="badge badge-past">✓ Déjà disputé</span>
+</summary>
+
+<p>
+📅 26 au 28 juin 2026
+</p>
+
+<p>
+📍 Spielberg, Styrie, Autriche
+</p>
+
+<p>
+🏁 Red Bull Ring
+</p>
+
+<p>
+💡 Niché dans les paysages verdoyants de Styrie, le Red Bull Ring est un circuit rapide et compact entouré de montagnes.
+</p>
+
+</details>
+
+</div>
+
+</section>
+
+<section class="section" id="grande-bretagne">
+
+<h2 class="section-title">
+🇬🇧 Grand Prix de Grande-Bretagne
+</h2>
+
+<div class="faq">
+
+<details class="faq-item fade-up">
+
+<summary>
+🏎️ Silverstone — Royaume-Uni
+<span class="badge badge-past">✓ Déjà disputé</span>
+</summary>
+
+<p>
+📅 3 au 5 juillet 2026
+</p>
+
+<p>
+📍 Silverstone, Angleterre, Royaume-Uni
+</p>
+
+<p>
+🏁 Silverstone Circuit
+</p>
+
+<p>
+💡 Berceau historique de la Formule 1, Silverstone accueille le championnat depuis ses débuts et reste l'un des rendez-vous les plus populaires de la saison.
+</p>
+
+<a
+href="londres.html"
+class="event-btn destination-btn">
+🌍 Découvrir Londres </a>
+
+</details>
+
+</div>
+
+</section>
+
+<section class="section" id="belgique">
+
+<h2 class="section-title">
+🇧🇪 Grand Prix de Belgique
+</h2>
+
+<div class="faq">
+
+<details class="faq-item fade-up">
+
+<summary>
+🏎️ Spa-Francorchamps — Belgique
+<span class="badge badge-past">✓ Déjà disputé</span>
+</summary>
+
+<p>
+📅 17 au 19 juillet 2026
+</p>
+
+<p>
+📍 Stavelot, Belgique
+</p>
+
+<p>
+🏁 Circuit de Spa-Francorchamps
+</p>
+
+<p>
+💡 Au cœur des Ardennes belges, Spa-Francorchamps est l'un des circuits les plus spectaculaires du championnat, notamment grâce à ses reliefs et au célèbre enchaînement de l'Eau Rouge et du Raidillon.
+</p>
+
+</details>
+
+</div>
+
+</section>
+
+<section class="section" id="hongrie">
+
+<h2 class="section-title">
+🇭🇺 Grand Prix de Hongrie
+</h2>
+
+<div class="faq">
+
+<details class="faq-item fade-up">
+
+<summary>
+🏎️ Budapest — Hongrie
+<span class="badge badge-past">✓ Déjà disputé</span>
+</summary>
+
+<p>
+📅 24 au 26 juillet 2026
+</p>
+
+<p>
+📍 Mogyoród, près de Budapest, Hongrie
+</p>
+
+<p>
+🏁 Hungaroring
+</p>
+
+<p>
+💡 Situé à quelques kilomètres de Budapest, le Hungaroring est réputé pour son tracé sinueux et permet d'associer facilement Formule 1 et séjour dans la capitale hongroise.
+</p>
+
+</details>
+
+</div>
+
+</section>
+
+<section class="section" id="pays-bas">
+
+<h2 class="section-title">
+🇳🇱 Grand Prix des Pays-Bas
+</h2>
+
+<div class="faq">
+
+<details class="faq-item fade-up">
+
+<summary>
+🏎️ Zandvoort — Pays-Bas
+<span class="badge badge-next">● À venir</span>
+</summary>
+
+<p>
+📅 21 au 23 août 2026
+</p>
+
+<p>
+📍 Zandvoort, Pays-Bas
+</p>
+
+<p>
+🏁 Circuit Zandvoort
+</p>
+
+<p>
+💡 Installé au milieu des dunes de la côte néerlandaise, Zandvoort offre une atmosphère particulièrement intense et se trouve à proximité d'Amsterdam.
+</p>
+
+<a
+href="amsterdam.html"
+class="event-btn destination-btn">
+🌍 Découvrir Amsterdam </a>
+
+</details>
+
+</div>
+
+</section>
+
+<section class="section" id="italie">
+
+<h2 class="section-title">
+🇮🇹 Grand Prix d'Italie
+</h2>
+
+<div class="faq">
+
+<details class="faq-item fade-up">
+
+<summary>
+🏎️ Monza — Italie
+<span class="badge badge-next">● À venir</span>
+</summary>
+
+<p>
+📅 4 au 6 septembre 2026
+</p>
+
+<p>
+📍 Monza, Lombardie, Italie
+</p>
+
+<p>
+🏁 Autodromo Nazionale Monza
+</p>
+
+<p>
+💡 Surnommé le Temple de la vitesse, Monza est l'un des circuits historiques de la Formule 1 et l'un des grands rendez-vous européens de la saison.
+</p>
+
+</details>
+
+</div>
+
+</section>
+
+<section class="section" id="madrid">
+
+<h2 class="section-title">
+🇪🇸 Grand Prix d'Espagne
+</h2>
+
+<div class="faq">
+
+<details class="faq-item fade-up">
+
+<summary>
+🏎️ Madrid — Espagne
+<span class="badge badge-next">● À venir</span>
+</summary>
+
+<p>
+📅 11 au 13 septembre 2026
+</p>
+
+<p>
+📍 Madrid, Espagne
+</p>
+
+<p>
+🏁 Madring
+</p>
+
+<p>
+💡 Madrid accueille en 2026 son nouveau Grand Prix sur un tracé urbain développé autour du quartier d'IFEMA, ajoutant une nouvelle grande capitale européenne au calendrier.
+</p>
+
+</details>
+
+</div>
+
+</section>
+
+<section class="section" id="azerbaidjan">
+
+<h2 class="section-title">
+🇦🇿 Grand Prix d'Azerbaïdjan
+</h2>
+
+<div class="faq">
+
+<details class="faq-item fade-up">
+
+<summary>
+🏎️ Bakou — Azerbaïdjan
+<span class="badge badge-next">● À venir</span>
+</summary>
+
+<p>
+📅 24 au 26 septembre 2026
+</p>
+
+<p>
+📍 Bakou, Azerbaïdjan
+</p>
+
+<p>
+🏁 Baku City Circuit
+</p>
+
+<p>
+💡 Le circuit urbain de Bakou traverse le centre historique et les grandes avenues de la capitale, avec l'une des plus longues lignes droites du championnat.
+</p>
+
+</details>
+
+</div>
+
+</section>
+
+<section class="section" id="singapour">
+
+<h2 class="section-title">
+🇸🇬 Grand Prix de Singapour
+</h2>
+
+<div class="faq">
+
+<details class="faq-item fade-up">
+
+<summary>
+🏎️ Singapour
+<span class="badge badge-next">● À venir</span>
+</summary>
+
+<p>
+📅 9 au 11 octobre 2026
+</p>
+
+<p>
+📍 Marina Bay, Singapour
+</p>
+
+<p>
+🏁 Marina Bay Street Circuit
+</p>
+
+<p>
+💡 Disputé de nuit au cœur de Singapour, ce Grand Prix offre l'un des décors urbains les plus spectaculaires de toute la saison.
+</p>
+
+</details>
+
+</div>
+
+</section>
+
+<section class="section" id="austin">
+
+<h2 class="section-title">
+🇺🇸 Grand Prix des États-Unis
+</h2>
+
+<div class="faq">
+
+<details class="faq-item fade-up">
+
+<summary>
+🏎️ Austin — États-Unis
+<span class="badge badge-next">● À venir</span>
+</summary>
+
+<p>
+📅 23 au 25 octobre 2026
+</p>
+
+<p>
+📍 Austin, Texas, États-Unis
+</p>
+
+<p>
+🏁 Circuit of the Americas
+</p>
+
+<p>
+💡 Le Circuit of the Americas accueille la Formule 1 dans une ambiance texane particulièrement festive, à proximité de la ville d'Austin.
+</p>
+
+</details>
+
+</div>
+
+</section>
+
+<section class="section" id="mexique">
+
+<h2 class="section-title">
+🇲🇽 Grand Prix de Mexico
+</h2>
+
+<div class="faq">
+
+<details class="faq-item fade-up">
+
+<summary>
+🏎️ Mexico — Mexique
+<span class="badge badge-next">● À venir</span>
+</summary>
+
+<p>
+📅 30 octobre au 1er novembre 2026
+</p>
+
+<p>
+📍 Mexico, Mexique
+</p>
+
+<p>
+🏁 Autódromo Hermanos Rodríguez
+</p>
+
+<p>
+💡 Situé à plus de 2 000 mètres d'altitude, le circuit de Mexico est notamment célèbre pour son passage dans l'ancien stade de baseball transformé en tribunes spectaculaires.
+</p>
+
+</details>
+
+</div>
+
+</section>
+
+<section class="section" id="sao-paulo">
+
+<h2 class="section-title">
+🇧🇷 Grand Prix de São Paulo
+</h2>
+
+<div class="faq">
+
+<details class="faq-item fade-up">
+
+<summary>
+🏎️ São Paulo — Brésil
+<span class="badge badge-next">● À venir</span>
+</summary>
+
+<p>
+📅 6 au 8 novembre 2026
+</p>
+
+<p>
+📍 São Paulo, Brésil
+</p>
+
+<p>
+🏁 Autódromo José Carlos Pace — Interlagos
+</p>
+
+<p>
+💡 Interlagos est l'un des circuits historiques du championnat, réputé pour son tracé vallonné, son sens antihoraire et ses courses souvent imprévisibles.
+</p>
+
+</details>
+
+</div>
+
+</section>
+
+<section class="section" id="las-vegas">
+
+<h2 class="section-title">
+🇺🇸 Grand Prix de Las Vegas
+</h2>
+
+<div class="faq">
+
+<details class="faq-item fade-up">
+
+<summary>
+🏎️ Las Vegas — États-Unis
+<span class="badge badge-next">● À venir</span>
+</summary>
+
+<p>
+📅 19 au 21 novembre 2026
+</p>
+
+<p>
+📍 Las Vegas, Nevada, États-Unis
+</p>
+
+<p>
+🏁 Las Vegas Strip Circuit
+</p>
+
+<p>
+💡 Disputé de nuit au cœur de Las Vegas, le tracé emprunte une partie du célèbre Strip entre hôtels, casinos et illuminations.
+</p>
+
+</details>
+
+</div>
+
+</section>
+
+<section class="section" id="qatar">
+
+<h2 class="section-title">
+🇶🇦 Grand Prix du Qatar
+</h2>
+
+<div class="faq">
+
+<details class="faq-item fade-up">
+
+<summary>
+🏎️ Lusail — Qatar
+<span class="badge badge-next">● À venir</span>
+</summary>
+
+<p>
+📅 27 au 29 novembre 2026
+</p>
+
+<p>
+📍 Lusail, Qatar
+</p>
+
+<p>
+🏁 Lusail International Circuit
+</p>
+
+<p>
+💡 Situé au nord de Doha, le circuit de Lusail accueille l'une des dernières manches de la saison sous les projecteurs.
+</p>
+
+</details>
+
+</div>
+
+</section>
+
+<section class="section" id="abu-dhabi">
+
+<h2 class="section-title">
+🇦🇪 Grand Prix d'Abu Dhabi
+</h2>
+
+<div class="faq">
+
+<details class="faq-item fade-up">
+
+<summary>
+🏎️ Abu Dhabi — Émirats arabes unis
+<span class="badge badge-next">● À venir</span>
+</summary>
+
+<p>
+📅 4 au 6 décembre 2026
+</p>
+
+<p>
+📍 Yas Island, Abu Dhabi, Émirats arabes unis
+</p>
+
+<p>
+🏁 Yas Marina Circuit
+</p>
+
+<p>
+💡 Traditionnelle finale de la saison, Abu Dhabi accueille le dernier Grand Prix 2026 sur le circuit de Yas Marina, avec une course débutant en journée et se terminant sous les projecteurs.
+</p>
+
+<a
+href="dubai.html"
+class="event-btn destination-btn">
+🌍 Découvrir Dubaï </a>
+
+</details>
+
+</div>
+
+</section>
+
+<div class="card"
+style="text-align:center;max-width:900px;margin:0 auto 35px;">
+
+<h3>🏎️ Calendrier officiel Formule 1 2026</h3>
+
+<p>
+La saison 2026 de Formule 1 se déroule de mars à décembre à travers plusieurs continents.
+Retrouvez les dates, circuits et informations officielles de chaque Grand Prix directement sur le site de la Formule 1.
+</p>
+
+<a
+href="https://www.formula1.com/en/racing/2026"
+target="_blank"
+rel="noopener">
+🏁 Consulter le calendrier officiel de la Formule 1 → </a>
+
+</div>
+
+<div class="info-box">
+
+<p>
+Le calendrier présenté sur Vidolta regroupe les Grands Prix de la saison 2026 dans leur ordre chronologique, des premières courses de mars jusqu'à la finale d'Abu Dhabi en décembre.
+</p>
+
+<p>
+Les dates et le programme peuvent évoluer au cours de la saison. Avant d'organiser un déplacement, vérifiez toujours les dernières informations publiées par la Formule 1 et les organisateurs du Grand Prix concerné.
+</p>
+
+</div>
+
+</section>
+
+<section id="billets" class="section billets-section">
+
+<div
+class="card"
+style="text-align:center;max-width:900px;margin:0 auto 35px;">
+
+<h3>🎟️ Billets Formule 1 2026</h3>
+
+<p>
+La billetterie officielle de la Formule 1 permet de retrouver les billets disponibles pour les prochains Grands Prix de la saison 2026.
+Choisissez votre course, votre circuit et les catégories de places disponibles pour vivre un week-end de Formule 1.
+</p>
+
+<a
+href="https://ticketing.formula1.com/fr/"
+target="_blank"
+rel="noopener"
+class="event-btn booking-btn">
+🎟️ Billetterie officielle Formule 1 → </a>
+
+</div>
+
+</section>
+
+<section id="weekend-gp" class="section">
+
+<h2 class="section-title">
+🏁 Vivre un week-end de Grand Prix
+</h2>
+
+<div class="info-box">
+
+<p>
+🏎️ <strong>Prévoir plusieurs jours :</strong> un week-end de Formule 1 s'étend généralement du vendredi au dimanche, entre essais, qualifications et Grand Prix.
+</p>
+
+<p>
+🎟️ <strong>Réserver à l'avance :</strong> pour les Grands Prix les plus populaires, les billets et les hébergements peuvent être très demandés plusieurs mois avant la course.
+</p>
+
+<p>
+🚆 <strong>Anticiper l'accès au circuit :</strong> certains circuits sont éloignés des centres-villes. Vérifiez les navettes, trains et transports mis en place pendant le Grand Prix.
+</p>
+
+<p>
+🏨 <strong>Choisir son hébergement :</strong> dormir dans la ville principale permet souvent de profiter de l'ambiance du Grand Prix tout en découvrant la destination.
+</p>
+
+<p>
+⏰ <strong>Arriver suffisamment tôt :</strong> les journées de course attirent beaucoup de spectateurs et les contrôles ainsi que les déplacements autour du circuit peuvent prendre du temps.
+</p>
+
+</div>
+
+</section>
+
+<section id="faq" class="section">
+
+<h2 class="section-title">
+❓ FAQ Formule 1
+</h2>
+
+<div class="faq">
+
+<details class="faq-item fade-up">
+
+<summary>
+🏎️ Combien de temps dure un week-end de Formule 1 ?
+</summary>
+
+<p>
+Un Grand Prix se déroule généralement sur trois jours, du vendredi au dimanche. Le programme comprend habituellement les essais libres, les qualifications et la course, avec un format qui peut varier lors des week-ends Sprint.
+</p>
+
+</details>
+
+<details class="faq-item fade-up">
+
+<summary>
+🎟️ Quand réserver ses billets pour un Grand Prix ?
+</summary>
+
+<p>
+Il est conseillé de réserver le plus tôt possible, particulièrement pour les Grands Prix très demandés. Les meilleures catégories de places et les hébergements proches des circuits peuvent être réservés plusieurs mois à l'avance.
+</p>
+
+</details>
+
+<details class="faq-item fade-up">
+
+<summary>
+📅 Peut-on acheter un billet uniquement pour le vendredi, le samedi ou le dimanche ?
+</summary>
+
+<p>
+Cela dépend du Grand Prix et de la billetterie proposée par l'organisateur. Certains circuits commercialisent des billets pour une seule journée, tandis que d'autres proposent principalement des forfaits couvrant plusieurs jours du week-end.
+</p>
+
+</details>
+
+<details class="faq-item fade-up">
+
+<summary>
+🚆 Comment rejoindre un circuit de Formule 1 ?
+</summary>
+
+<p>
+L'accès varie fortement selon les destinations. Certains circuits sont proches d'une grande ville ou accessibles en transports en commun, tandis que d'autres nécessitent un train, une navette, une voiture ou un transfert spécifique. Vérifiez les informations de transport avant votre départ.
+</p>
+
+</details>
+
+<details class="faq-item fade-up">
+
+<summary>
+📆 Le calendrier de Formule 1 peut-il changer ?
+</summary>
+
+<p>
+Oui. Les dates, horaires ou certaines manches peuvent évoluer au cours de la saison. Avant de réserver un voyage, vérifiez toujours les dernières informations publiées par la Formule 1 et l'organisateur du Grand Prix concerné.
+</p>
+
+</details>
+
+</div>
+
+</section>
+
+<section class="section">
+
+<div class="cta">
+
+<img
+src="images/event-formule-1.webp"
+alt="Formule 1 — Saison 2026">
+
+<div class="cta-content">
+
+<h2>
+🏎️ Prêt à vivre un Grand Prix de Formule 1 ?
+</h2>
+
+<p>
+Choisissez votre Grand Prix, découvrez la destination
+et préparez votre voyage pour vivre l'ambiance unique de la Formule 1 au bord du circuit.
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+<button
+class="back-to-top"
+id="backToTop"
+aria-label="Retour en haut de la page">
+↑ </button>
+
+<footer>
+
+<p>© 2026 Vidolta — Formule 1</p>
+
+<div class="footer-links">
+
+<a href="index.html">Accueil</a> <a href="about.html">À propos</a> <a href="notre-histoire.html">Notre histoire</a> <a href="mentions-legales.html">Mentions légales</a> <a href="confidentialite.html">Confidentialité</a> <a href="contact.html">Contact</a>
+
+</div>
+
+</footer>
+
+<script>
+
+function toggleMenu(){
+
+const nav = document.querySelector('.nav-links');
+
+nav.classList.toggle('active');
+
+}
+
+document.querySelectorAll('.nav-links a').forEach(link => {
+
+link.addEventListener('click', () => {
+
+const nav = document.querySelector('.nav-links');
+
+nav.classList.remove('active');
+
+});
+
+});
+
+const backToTop = document.getElementById('backToTop');
+
+window.addEventListener('scroll', () => {
+
+if(window.scrollY > 400){
+
+backToTop.classList.add('show');
+
+}else{
+
+backToTop.classList.remove('show');
+
+}
+
+});
+
+backToTop.addEventListener('click', () => {
+
+window.scrollTo({
+
+top:0,
+behavior:'smooth'
+
+});
+
+});
+
+</script>
+
+</body>
+</html>
+
+
