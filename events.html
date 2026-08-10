@@ -120,23 +120,27 @@ display:block;
 position:sticky;
 top:0;
 z-index:1000;
-
 padding:10px 16px;
-
 display:flex;
 justify-content:space-between;
 align-items:center;
-
 background:rgba(5,8,22,0.72);
-
 backdrop-filter:blur(18px);
-
 border-bottom:1px solid rgba(255,255,255,0.04);
 }
 
 .logo{
+display:inline-flex;
+align-items:center;
 font-size:1.65rem;
 font-weight:800;
+color:white;
+cursor:pointer;
+transition:opacity .25s ease;
+}
+
+.logo:hover{
+opacity:.9;
 }
 
 .nav-links{
@@ -147,12 +151,29 @@ align-items:center;
 
 .nav-links a{
 color:#cbd5e1;
-font-size:0.82rem;
-transition:0.3s;
+font-size:0.95rem;
+transition:color .25s ease;
 }
 
 .nav-links a:hover{
 color:white;
+}
+
+.event-link{
+color:#F4C542 !important;
+}
+
+.event-link:hover{
+color:#FFD95A !important;
+}
+
+.explorer-link{
+font-size:0.82rem !important;
+color:#94a3b8 !important;
+}
+
+.explorer-link:hover{
+color:white !important;
 }
 
 .mobile-btn{
