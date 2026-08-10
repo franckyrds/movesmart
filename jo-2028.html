@@ -571,6 +571,99 @@ transform:translateY(-2px);
 box-shadow:0 8px 22px rgba(124,92,255,0.25);
 }
 
+/* SPORTS DETAILS */
+
+.sport-card{
+display:flex;
+flex-direction:column;
+}
+
+.sport-card > p{
+margin-bottom:18px;
+}
+
+.sport-details{
+margin-top:auto;
+
+border-top:1px solid rgba(255,255,255,0.08);
+
+padding-top:14px;
+}
+
+.sport-details summary{
+cursor:pointer;
+
+display:flex;
+align-items:center;
+justify-content:space-between;
+
+gap:10px;
+
+list-style:none;
+
+font-weight:700;
+
+color:#ffffff;
+
+padding:4px 0;
+
+transition:opacity 0.25s ease;
+}
+
+.sport-details summary::-webkit-details-marker{
+display:none;
+}
+
+.sport-details summary:hover{
+opacity:0.8;
+}
+
+.details-arrow{
+display:inline-flex;
+
+align-items:center;
+justify-content:center;
+
+width:28px;
+height:28px;
+
+border-radius:50%;
+
+background:rgba(124,92,255,0.14);
+
+font-size:0.9rem;
+
+transition:
+transform 0.3s ease,
+background 0.3s ease;
+}
+
+.sport-details[open] .details-arrow{
+transform:rotate(180deg);
+
+background:rgba(124,92,255,0.24);
+}
+
+.sport-details-content{
+padding-top:14px;
+
+color:#cbd5e1;
+
+line-height:1.65;
+}
+
+.sport-details-content p{
+margin:0 0 12px;
+}
+
+.sport-details-content p:last-child{
+margin-bottom:0;
+}
+
+.sport-details-content strong{
+color:#ffffff;
+}
+
 /* INFO */
 
 .info-section{
@@ -1198,85 +1291,357 @@ des grandes disciplines historiques de l'olympisme aux sports
 qui feront leur apparition ou leur retour au programme à Los Angeles.
 </p>
 
-<p>
-Athlétisme, natation, gymnastique, basketball, tennis, cyclisme,
-sports de combat, sports collectifs et disciplines urbaines
-rythmeront les compétitions pendant les Jeux.
-</p>
-
 </div>
 
 <div class="grid">
 
-<div class="card">
+<section id="sports" class="section">
 
-<h3>🏃 Athlétisme & endurance</h3>
+<h2 class="section-title">
+🏅 Sports des JO 2028
+</h2>
+
+<p class="section-subtitle">
+Découvrez quelques-uns des grands rendez-vous sportifs de Los Angeles 2028.
+Dates, phases importantes et lieux sont accessibles dans chaque vignette.
+</p>
+
+<div class="grid sports-grid">
+
+<!-- FOOTBALL -->
+
+<div class="card sport-card">
+
+<h3>⚽ Football</h3>
 
 <p>
-Athlétisme, marathon, triathlon et marche feront partie
-des grands rendez-vous des Jeux, avec plusieurs épreuves
-parmi les plus emblématiques du programme olympique.
+Le tournoi olympique débutera avant même la cérémonie d'ouverture
+et se poursuivra jusqu'au dernier week-end des Jeux.
+</p>
+
+<details class="sport-details">
+
+<summary>
+Informations <span class="details-arrow">↓</span>
+</summary>
+
+<div class="sport-details-content">
+
+<p>
+📅 <strong>12 → 29 juillet 2028</strong>
+</p>
+
+<p>
+Le tournoi débutera deux jours avant la cérémonie d'ouverture,
+avant de laisser place aux rencontres à élimination directe.
+</p>
+
+<p>
+🏆 <strong>Dernière finale : 29 juillet 2028</strong>
+</p>
+
+<p>
+📍 <strong>Rose Bowl</strong> pour la dernière finale.
 </p>
 
 </div>
 
-<div class="card">
+</details>
 
-<h3>🏊 Sports aquatiques</h3>
+</div>
+
+<!-- ATHLÉTISME -->
+
+<div class="card sport-card">
+
+<h3>🏃 Athlétisme</h3>
 
 <p>
-Natation, plongeon, water-polo, natation artistique,
-nage en eau libre, surf et voile permettront de vivre
-les Jeux aussi bien dans les bassins que sur le littoral californien.
+Courses, concours et grandes finales feront de l'athlétisme
+l'un des rendez-vous majeurs de la première partie des Jeux.
+</p>
+
+<details class="sport-details">
+
+<summary>
+Informations <span class="details-arrow">↓</span>
+</summary>
+
+<div class="sport-details-content">
+
+<p>
+📅 <strong>15 → 24 juillet 2028</strong>
+</p>
+
+<p>
+Les principales épreuves d'athlétisme se dérouleront
+durant la première partie du programme olympique.
+</p>
+
+<p>
+🏅 <strong>Marathon féminin : 29 juillet 2028</strong>
 </p>
 
 </div>
 
-<div class="card">
+</details>
 
-<h3>🏀 Sports collectifs</h3>
+</div>
+
+<!-- NATATION -->
+
+<div class="card sport-card">
+
+<h3>🏊 Natation</h3>
 
 <p>
-Basketball, basketball 3x3, football, handball, hockey,
-volleyball, beach-volley et rugby à 7 feront partie
-des nombreuses compétitions par équipes de Los Angeles 2028.
+La natation animera la seconde partie des Jeux
+dans l'une des installations les plus spectaculaires de LA 2028.
+</p>
+
+<details class="sport-details">
+
+<summary>
+Informations <span class="details-arrow">↓</span>
+</summary>
+
+<div class="sport-details-content">
+
+<p>
+📅 <strong>22 → 30 juillet 2028</strong>
+</p>
+
+<p>
+Les séries et finales se succéderont pendant les derniers jours
+du programme olympique.
+</p>
+
+<p>
+🏟️ <strong>SoFi Stadium</strong>
+</p>
+
+<p>
+Un bassin olympique temporaire sera installé
+à l'intérieur du stade pour accueillir les compétitions.
 </p>
 
 </div>
 
-<div class="card">
+</details>
 
-<h3>🥋 Sports de combat</h3>
+</div>
+
+<!-- BASKETBALL FÉMININ -->
+
+<div class="card sport-card">
+
+<h3>🏀 Basketball féminin</h3>
 
 <p>
-Boxe, judo, taekwondo, lutte et escrime réuniront
-certains des meilleurs combattants et escrimeurs du monde
-dans des compétitions individuelles particulièrement intenses.
+Les grandes sélections féminines viseront le titre olympique
+au terme de plus de deux semaines de compétition.
+</p>
+
+<details class="sport-details">
+
+<summary>
+Informations <span class="details-arrow">↓</span>
+</summary>
+
+<div class="sport-details-content">
+
+<p>
+📅 <strong>12 → 29 juillet 2028</strong>
+</p>
+
+<p>
+🏀 Phase de groupes : 12 → 20 juillet
+</p>
+
+<p>
+🏆 Quarts de finale : 22 → 23 juillet<br>
+Demi-finales : 26 juillet<br>
+Finale olympique : 29 juillet
 </p>
 
 </div>
 
-<div class="card">
+</details>
 
-<h3>🚴 Cyclisme & sports urbains</h3>
+</div>
+
+<!-- BASKETBALL MASCULIN -->
+
+<div class="card sport-card">
+
+<h3>🏀 Basketball masculin</h3>
 
 <p>
-Cyclisme sur route, cyclisme sur piste, BMX,
-VTT, skateboard et escalade apporteront une dimension
-spectaculaire et moderne au programme olympique.
+Le tournoi masculin accompagnera presque toute la durée des Jeux
+avant de connaître son dénouement lors de la dernière journée.
+</p>
+
+<details class="sport-details">
+
+<summary>
+Informations <span class="details-arrow">↓</span>
+</summary>
+
+<div class="sport-details-content">
+
+<p>
+📅 <strong>13 → 30 juillet 2028</strong>
+</p>
+
+<p>
+🏀 Phase de groupes : 13 → 21 juillet
+</p>
+
+<p>
+🏆 Quarts de finale : 24 → 25 juillet<br>
+Demi-finales : 27 juillet<br>
+Finale olympique : 30 juillet
 </p>
 
 </div>
 
-<div class="card">
+</details>
 
-<h3>🤸 Gymnastique & précision</h3>
+</div>
+
+<!-- GYMNASTIQUE -->
+
+<div class="card sport-card">
+
+<h3>🤸 Gymnastique artistique</h3>
 
 <p>
-Gymnastique artistique, gymnastique rythmique, trampoline,
-tir à l'arc, tir sportif et pentathlon moderne proposeront
-des épreuves mêlant technique, précision et maîtrise.
+Agrès, concours individuels et compétitions par équipes
+feront partie des grands rendez-vous de la gymnastique olympique.
 </p>
+
+<details class="sport-details">
+
+<summary>
+Informations <span class="details-arrow">↓</span>
+</summary>
+
+<div class="sport-details-content">
+
+<p>
+📅 <strong>Calendrier détaillé à venir</strong>
+</p>
+
+<p>
+Les qualifications et les différentes finales
+seront ajoutées selon le calendrier officiel de LA 2028.
+</p>
+
+<p>
+📍 Les informations sur le site de compétition
+seront également indiquées ici.
+</p>
+
+</div>
+
+</details>
+
+</div>
+
+<!-- SPRINT 100 M & 200 M -->
+
+<div class="card sport-card">
+
+<h3>⚡ Sprint 100 m & 200 m</h3>
+
+<p>
+Vitesse pure et finales sous tension : les épreuves du 100 m
+et du 200 m réuniront quelques-uns des sprinteurs
+les plus rapides du monde.
+</p>
+
+<details class="sport-details">
+
+<summary>
+Informations <span class="details-arrow">↓</span>
+</summary>
+
+<div class="sport-details-content">
+
+<p>
+⚡ <strong>100 m féminin — 15 juillet</strong><br>
+Séries et premier tour le matin,
+puis demi-finales et finale en soirée.
+</p>
+
+<p>
+⚡ <strong>100 m masculin — 15 → 16 juillet</strong><br>
+Tours préliminaires et premier tour le 15,
+puis demi-finales et finale le 16 juillet.
+</p>
+
+<p>
+🏃 <strong>200 m féminin — 17 → 19 juillet</strong><br>
+Séries le 17, demi-finales le 18
+et finale le 19 juillet.
+</p>
+
+<p>
+🏃 <strong>200 m masculin — 18 → 19 juillet</strong><br>
+Séries le 18, demi-finales puis finale
+le 19 juillet.
+</p>
+
+<p>
+📍 <strong>Los Angeles Memorial Coliseum</strong>
+</p>
+
+</div>
+
+</details>
+
+</div>
+
+</details>
+
+</div>
+
+<!-- BASEBALL -->
+
+<div class="card sport-card">
+
+<h3>⚾ Baseball</h3>
+
+<p>
+Sport emblématique aux États-Unis, le baseball retrouvera
+le programme olympique à l'occasion des Jeux de Los Angeles.
+</p>
+
+<details class="sport-details">
+
+<summary>
+Informations <span class="details-arrow">↓</span>
+</summary>
+
+<div class="sport-details-content">
+
+<p>
+📅 <strong>Calendrier détaillé à venir</strong>
+</p>
+
+<p>
+Les rencontres, les phases décisives et la finale
+seront intégrées au fil des confirmations officielles.
+</p>
+
+<p>
+📍 Les informations sur le site de compétition
+seront également ajoutées ici.
+</p>
+
+</div>
+
+</details>
 
 </div>
 
