@@ -169,8 +169,21 @@ color:#FFD95A !important;
 }
   
 .explorer-link{
-font-size:0.82rem !important;
-color:#94a3b8 !important;
+background:linear-gradient(90deg,#8b5cf6,#5b8cff);
+-webkit-background-clip:text;
+background-clip:text;
+color:transparent !important;
+
+font-weight:600;
+
+transition:
+transform 0.25s ease,
+filter 0.25s ease;
+}
+
+.explorer-link:hover{
+transform:translateY(-1px);
+filter:brightness(1.2);
 }
 
 .mobile-btn{
@@ -1005,7 +1018,7 @@ Destinations
 🎉 Événements
 </a>
 
-<a href="outils-voyage.html" class="explorer-link">
+<a href="outils-voyage.html"
 🛠️ Outils Voyage
 </a>
 
@@ -1013,7 +1026,7 @@ Destinations
 Explorer le monde 🌍
 </a>
   
-<a href="index-en.html" class="explorer-link">
+<a href="index-en.html"
 🇬🇧 English
 </a>
 
