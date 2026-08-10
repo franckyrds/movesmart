@@ -153,12 +153,16 @@ align-items:center;
 .nav-links a{
 color:#cbd5e1;
 font-size:0.95rem;
-transition:color .25s ease;
+transition:
+color .25s ease,
+opacity .25s ease;
 }
 
 .nav-links a:hover{
 color:white;
 }
+
+/* ÉVÉNEMENTS */
 
 .event-link{
 color:#F4C542 !important;
@@ -167,8 +171,12 @@ color:#F4C542 !important;
 .event-link:hover{
 color:#FFD95A !important;
 }
-  
+
+/* EXPLORER LE MONDE */
+
 .explorer-link{
+display:inline-block;
+
 background:linear-gradient(90deg,#8b5cf6,#5b8cff);
 -webkit-background-clip:text;
 background-clip:text;
@@ -185,6 +193,23 @@ filter 0.25s ease;
 transform:translateY(-1px);
 filter:brightness(1.2);
 }
+
+/* LIENS NAVIGATION SIMPLES */
+
+.nav-simple{
+display:inline-block;
+color:#cbd5e1 !important;
+
+transition:
+color .25s ease,
+opacity .25s ease;
+}
+
+.nav-simple:hover{
+color:white !important;
+}
+
+/* MENU MOBILE */
 
 .mobile-btn{
 display:none;
