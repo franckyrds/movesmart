@@ -1435,6 +1435,8 @@ toast.classList.remove('show');
 
 }
 
+/* MENU MOBILE */
+
 function toggleMenu(){
 
 const nav = document.querySelector('.nav-links');
@@ -1442,6 +1444,60 @@ const nav = document.querySelector('.nav-links');
 nav.classList.toggle('active');
 
 }
+
+/* Fermeture après clic sur un lien */
+
+document.querySelectorAll('.nav-links a').forEach(link => {
+
+link.addEventListener('click', () => {
+
+const nav = document.querySelector('.nav-links');
+
+nav.classList.remove('active');
+
+});
+
+});
+
+/* Fermeture après clic en dehors du menu */
+
+document.addEventListener('click', function(event){
+
+const nav = document.querySelector('.nav-links');
+
+const button = document.querySelector('.mobile-btn');
+
+if(
+nav &&
+button &&
+nav.classList.contains('active') &&
+!nav.contains(event.target) &&
+!button.contains(event.target)
+){
+
+nav.classList.remove('active');
+
+}
+
+});
+
+/* Fermeture avec la touche Échap */
+
+document.addEventListener('keydown', function(event){
+
+if(event.key === 'Escape'){
+
+const nav = document.querySelector('.nav-links');
+
+if(nav){
+nav.classList.remove('active');
+}
+
+}
+
+});
+
+/* ANIMATIONS */
 
 const observer = new IntersectionObserver(entries => {
 
@@ -1462,6 +1518,8 @@ document.querySelectorAll('.fade-up').forEach(el => {
 observer.observe(el);
 });
 
+/* SLIDER DESTINATIONS */
+
 function scrollDestinations(distance){
 
 const slider = document.querySelector('.destinations-grid');
@@ -1472,6 +1530,8 @@ behavior:'smooth'
 });
 
 }
+
+/* RECHERCHE AVEC ENTRÉE */
 
 document
 .getElementById('cityInput')
