@@ -224,10 +224,7 @@ color:#ffffff;
 
 .hero{
 position:relative;
-
-height:68vh;
-min-height:600px;
-max-height:760px;
+height:60vh;
 
 display:flex;
 align-items:center;
@@ -236,6 +233,8 @@ justify-content:center;
 text-align:center;
 
 overflow:hidden;
+
+background:#050816;
 }
 
 .hero img{
@@ -347,19 +346,19 @@ margin-bottom:12px;
 text-shadow:0 2px 8px rgba(0,0,0,0.50);
 }
 
-/* HERO PC */
+/* HERO PC - MEME HAUTEUR, CADRAGE PLUS LARGE */
 
 @media(min-width:1000px){
 
 .hero{
-height:68vh;
-min-height:600px;
-max-height:760px;
+height:60vh;
+min-height:0;
+max-height:none;
 }
 
 .hero img,
 .hero picture img{
-object-fit:cover;
+object-fit:contain;
 object-position:center center;
 }
 
