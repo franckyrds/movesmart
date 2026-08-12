@@ -179,6 +179,13 @@ color:#F4E96B !important;
 font-weight:600;
 }
 
+.mobile-btn{
+display:none;
+font-size:2rem;
+cursor:pointer;
+color:white;
+}
+
 /* HERO */
 
 .hero-map{
@@ -327,17 +334,37 @@ height:520px;
 border-radius:28px;
 }
 
+}
+
+@media(max-width:700px){
+
+.mobile-btn{
+display:block;
+}
+
 .nav-links{
-gap:18px;
+display:none;
+
+position:absolute;
+
+top:78px;
+left:20px;
+right:20px;
+
+background:#111827;
+
+padding:22px;
+
+border-radius:26px;
+
+flex-direction:column;
+
+z-index:999;
 }
 
-.nav-links a{
-font-size:.9rem;
+.nav-links.active{
+display:flex;
 }
-
-}
-
-@media(max-width:600px){
 
 .hero-map{
 padding-top:28px;
@@ -380,7 +407,14 @@ gap:14px;
 
 <a href="index.html" class="logo">🌍 Vidolta</a>
 
-<div class="mobile-btn" onclick="toggleMenu()">☰</div>
+<div
+class="mobile-btn"
+onclick="toggleMenu()"
+role="button"
+tabindex="0"
+aria-label="Ouvrir le menu">
+☰
+</div>
 
 <div class="nav-links">
 
@@ -392,9 +426,13 @@ gap:14px;
 🎉 Événements
 </a>
 
-<a href="outils-voyage.html"> 🛠️ Outils Voyage </a> 
-  
-<a href="world-map-en.html"> 🇬🇧 English </a> </div> </nav>
+<a href="outils-voyage.html">
+🛠️ Outils Voyage
+</a>
+
+<a href="world-map-en.html">
+🇬🇧 English
+</a>
 
 </div>
 
@@ -448,6 +486,32 @@ aria-label="Globe interactif permettant de sélectionner une destination">
 
 <script>
 
+function toggleMenu(){
+
+const nav =
+document.querySelector('.nav-links');
+
+if(nav){
+nav.classList.toggle('active');
+}
+
+}
+
+document.querySelectorAll('.nav-links a').forEach(link => {
+
+link.addEventListener('click', () => {
+
+const nav =
+document.querySelector('.nav-links');
+
+if(nav){
+nav.classList.remove('active');
+}
+
+});
+
+});
+  
 /* DESTINATIONS */
 
 const cities = [
