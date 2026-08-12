@@ -78,7 +78,7 @@ padding:0;
 box-sizing:border-box;
 }
 
- html{
+html{
 scroll-behavior:smooth;
 scroll-padding-top:80px;
 }
@@ -100,25 +100,67 @@ a:hover{
 color:#a5b4fc;
 }
 
+/* NAVBAR */
+
 .navbar{
 position:sticky;
 top:0;
 z-index:1000;
-width:100%;
-padding:14px 20px;
+padding:10px 16px;
 display:flex;
 justify-content:space-between;
 align-items:center;
-background:rgba(15,23,42,0.88);
-backdrop-filter:blur(14px);
-border-bottom:1px solid rgba(255,255,255,0.05);
+background:rgba(5,8,22,0.72);
+backdrop-filter:blur(18px);
+border-bottom:1px solid rgba(255,255,255,0.04);
 }
 
 .logo{
-font-size:1.6rem;
-font-weight:700;
+display:inline-flex;
+align-items:center;
+
+font-size:1.65rem;
+font-weight:800;
+
+color:white;
+
+cursor:pointer;
+}
+
+.nav-links{
+display:flex;
+gap:28px;
+align-items:center;
+}
+
+.nav-links a{
+color:#cbd5e1;
+font-size:0.95rem;
+transition:0.3s;
+}
+
+.nav-links a:hover{
 color:white;
 }
+
+.event-link{
+color:#F4E96B !important;
+font-weight:600;
+}
+
+.explorer-link{
+font-size:0.82rem !important;
+color:#94a3b8 !important;
+}
+
+.mobile-btn{
+display:none;
+font-size:2rem;
+cursor:pointer;
+color:white;
+}
+
+/* HERO */
 
 .hero{
 padding:90px 20px 70px;
@@ -139,11 +181,15 @@ line-height:1.9;
 color:#cbd5e1;
 }
 
+/* SECTION */
+
 .section{
 max-width:900px;
 margin:auto;
 padding:70px 20px;
 }
+
+/* CONTACT */
 
 .contact-card{
 background:#1e293b;
@@ -191,11 +237,13 @@ background:#4f46e5;
 transform:translateY(-2px);
 }
 
+/* FOOTER */
+
 footer{
-padding:70px 20px;
+padding:70px 22px;
 text-align:center;
-color:#cbd5e1;
 line-height:2;
+color:#94a3b8;
 }
 
 .footer-links{
@@ -205,17 +253,46 @@ justify-content:center;
 flex-wrap:wrap;
 gap:18px;
 }
-  
-footer a{
-color:#e2e8f0;
-transition:0.3s;
+
+.footer-links a{
+color:#cbd5e1;
 }
 
-footer a:hover{
-color:#818cf8;
+.footer-links a:hover{
+color:white;
 }
 
-@media(max-width:900px){
+/* MOBILE */
+
+@media(max-width:700px){
+
+.mobile-btn{
+display:block;
+}
+
+.nav-links{
+display:none;
+
+position:absolute;
+
+top:78px;
+left:20px;
+right:20px;
+
+background:#111827;
+
+padding:22px;
+
+border-radius:26px;
+
+flex-direction:column;
+
+z-index:999;
+}
+
+.nav-links.active{
+display:flex;
+}
 
 .hero h1{
 font-size:2.8rem;
@@ -237,6 +314,39 @@ padding:30px;
 <nav class="navbar">
 
 <a href="index.html" class="logo">🌍 Vidolta</a>
+
+<div
+class="mobile-btn"
+onclick="toggleMenu()"
+role="button"
+tabindex="0"
+aria-label="Ouvrir le menu">
+☰
+</div>
+
+<div class="nav-links">
+
+<a href="destinations.html">
+Destinations
+</a>
+
+<a href="events.html" class="event-link">
+🎉 Événements
+</a>
+
+<a href="world-map.html" class="explorer-link">
+Explorer le monde 🌍
+</a>
+
+<a href="outils-voyage.html" class="nav-simple">
+🛠️ Outils Voyage
+</a>
+
+<a href="contact-en.html" class="nav-simple">
+🇬🇧 English
+</a>
+
+</div>
 
 </nav>
 
@@ -292,21 +402,34 @@ Envoyer un email
 <footer>
 
 <p>
-© 2026 Vidolta — One Day In Your Life.
+© 2026 Vidolta — One day in your life.
 </p>
 
 <div class="footer-links">
 
-<a href="index.html">Accueil</a>
-<a href="about.html">À propos</a>
-<a href="notre-histoire.html">Notre histoire</a>
-<a href="mentions-legales.html">Mentions légales</a>
-<a href="confidentialite.html">Confidentialité</a>
-<a href="contact.html">Contact</a>
+<a href="about.html">
+À propos
+</a>
+
+<a href="notre-histoire.html">
+Notre histoire
+</a>
+
+<a href="mentions-legales.html">
+Mentions légales
+</a>
+
+<a href="confidentialite.html">
+Politique de confidentialité
+</a>
+
+<a href="contact.html">
+Contact
+</a>
 
 </div>
 
 </footer>
 
 </body>
-</html> 
+</html>
