@@ -134,13 +134,15 @@ border-bottom:1px solid rgba(255,255,255,0.04);
 .logo{
 display:inline-flex;
 align-items:center;
-
 font-size:1.65rem;
 font-weight:800;
-
 color:white;
-
 cursor:pointer;
+transition:opacity .25s ease;
+}
+
+.logo:hover{
+opacity:.9;
 }
 
 .nav-links{
@@ -152,30 +154,60 @@ align-items:center;
 .nav-links a{
 color:#cbd5e1;
 font-size:0.95rem;
-transition:0.3s;
+transition:
+color .25s ease,
+opacity .25s ease;
 }
 
 .nav-links a:hover{
 color:white;
 }
 
-.explorer-link{
-font-size:0.82rem !important;
-color:#94a3b8 !important;
-}
+/* ÉVÉNEMENTS */
 
 .event-link{
-color:#d6ad55 !important;
+color:#F4C542 !important;
 }
 
 .event-link:hover{
-color:#e0bd6a !important;
+color:#FFD95A !important;
 }
 
-.mobile-btn{
-display:none;
-font-size:2rem;
-cursor:pointer;
+/* EXPLORER LE MONDE */
+
+.explorer-link{
+display:inline-block;
+
+background:linear-gradient(90deg,#a78bfa,#7da2ff);
+-webkit-background-clip:text;
+background-clip:text;
+color:transparent !important;
+
+font-weight:400;
+
+transition:
+transform 0.25s ease,
+filter 0.25s ease;
+}
+
+.explorer-link:hover{
+transform:translateY(-1px);
+filter:brightness(1.15);
+}
+
+/* LIENS NAVIGATION SIMPLES */
+
+.nav-simple{
+display:inline-block;
+color:#cbd5e1 !important;
+
+transition:
+color .25s ease,
+opacity .25s ease;
+}
+
+.nav-simple:hover{
+color:white !important;
 }
 
 /* HERO */
@@ -701,13 +733,19 @@ top:78px;
 left:20px;
 right:20px;
 
-background:#111827;
+background:rgba(17,24,39,0.97);
 
 padding:22px;
 
 border-radius:26px;
 
 flex-direction:column;
+
+border:1px solid rgba(255,255,255,0.08);
+
+box-shadow:0 18px 40px rgba(0,0,0,0.32);
+
+backdrop-filter:blur(18px);
 
 z-index:999;
 }
@@ -765,6 +803,7 @@ margin-bottom:18px;
 .search-box{
 width:100%;
 max-width:none;
+gap:10px;
 }
 
 .search-wrapper input{
@@ -773,6 +812,13 @@ height:58px;
 font-size:0.9rem;
 
 border-radius:18px;
+}
+
+.discover-button{
+width:104px;
+height:58px;
+border-radius:20px;
+font-size:0.86rem;
 }
 
 .category-grid{
@@ -808,8 +854,20 @@ line-height:1.3;
 padding:6px 18px 44px;
 }
 
+.section-header{
+gap:14px;
+margin-bottom:22px;
+}
+
 .section-header h2{
 font-size:1.8rem;
+}
+
+.view-all-btn{
+padding:11px 14px;
+border-radius:16px;
+font-size:0.80rem;
+white-space:nowrap;
 }
 
 .destination-card{
@@ -849,6 +907,41 @@ line-height:1.7;
 
 }
 
+@media(max-width:520px){
+
+.search-box{
+align-items:stretch;
+}
+
+.search-wrapper input{
+padding-left:48px;
+}
+
+.search-icon{
+left:18px;
+}
+
+.discover-button{
+width:96px;
+}
+
+.section-header{
+align-items:flex-start;
+}
+
+.section-header h2{
+font-size:1.55rem;
+line-height:1.2;
+}
+
+.view-all-btn{
+padding:10px 12px;
+font-size:0.74rem;
+gap:7px;
+}
+
+}
+
 </style>
 
 </head>
@@ -861,7 +954,14 @@ line-height:1.7;
 
 <a href="index-en.html" class="logo">🌍 Vidolta</a>
 
-<div class="mobile-btn" onclick="toggleMenu()">☰</div>
+<div
+class="mobile-btn"
+onclick="toggleMenu()"
+role="button"
+tabindex="0"
+aria-label="Open menu">
+☰
+</div>
 
 <div class="nav-links">
 
@@ -869,25 +969,24 @@ line-height:1.7;
 Destinations
 </a>
 
-<a href="events-en.html" class="event-link"> 🎉 Events </a>
-
-<a href="world-map-en.html"
-class="explorer-link">
-🌍 Explore the World
+<a href="events-en.html" class="event-link">
+🎉 Events
 </a>
 
-<a href="travel-tools.html"
-class="explorer-link">
+<a href="world-map-en.html" class="explorer-link">
+Explore the World 🌍
+</a>
+
+<a href="travel-tools.html" class="nav-simple">
 🛠️ Travel Tools
 </a>
-
-<a href="index.html"
-class="explorer-link">
+  
+<a href="index.html" class="nav-simple">
 🇫🇷 Français
 </a>
-  
+
 </div>
-  
+
 </nav>
 
 <!-- HERO -->
