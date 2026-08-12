@@ -71,7 +71,7 @@ href="https://fonts.googleapis.com">
 href="https://fonts.gstatic.com"
 crossorigin>
 
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
 rel="stylesheet">
 
 <style>
@@ -82,7 +82,7 @@ padding:0;
 box-sizing:border-box;
 }
 
- html{
+html{
 scroll-behavior:smooth;
 scroll-padding-top:80px;
 }
@@ -105,31 +105,28 @@ img{
 display:block;
 }
 
+/* NAVBAR */
+
 .navbar{
 position:sticky;
 top:0;
 z-index:1000;
-width:100%;
 padding:10px 16px;
 display:flex;
 justify-content:space-between;
 align-items:center;
 background:rgba(5,8,22,0.72);
-backdrop-filter:blur(14px);
-border-bottom:1px solid rgba(255,255,255,0.05);
+backdrop-filter:blur(18px);
+border-bottom:1px solid rgba(255,255,255,0.04);
 }
 
 .logo{
-font-size:1.6rem;
-font-weight:700;
+display:inline-flex;
+align-items:center;
+font-size:1.65rem;
+font-weight:800;
 color:white;
-}
-
-.mobile-btn{
-display:none;
-font-size:2rem;
 cursor:pointer;
-color:white;
 }
 
 .nav-links{
@@ -139,13 +136,30 @@ align-items:center;
 }
 
 .nav-links a{
-color:#e2e8f0;
-font-weight:500;
+color:#cbd5e1;
+font-size:0.95rem;
 transition:0.3s;
 }
 
 .nav-links a:hover{
-color:#818cf8;
+color:white;
+}
+
+.event-link{
+color:#F4E96B !important;
+font-weight:600;
+}
+
+.explorer-link{
+font-size:0.82rem !important;
+color:#94a3b8 !important;
+}
+
+.mobile-btn{
+display:none;
+font-size:2rem;
+cursor:pointer;
+color:white;
 }
 
 /* HERO */
@@ -154,9 +168,7 @@ color:#818cf8;
 position:relative;
 background:#060b1f;
 min-height:420px;
-
 padding:120px 20px 70px;
-
 display:flex;
 align-items:center;
 justify-content:center;
@@ -213,7 +225,7 @@ letter-spacing:1px;
 opacity:0.6;
 color:#cbd5e1;
 }
-  
+
 /* SECTION */
 
 .section{
@@ -330,10 +342,10 @@ background:rgba(255,255,255,0.08);
 /* FOOTER */
 
 footer{
-padding:70px 20px;
+padding:70px 22px;
 text-align:center;
-color:#94a3b8;
 line-height:2;
+color:#94a3b8;
 }
 
 .footer-links{
@@ -390,41 +402,9 @@ opacity:1;
 pointer-events:auto;
 }
 
-/* MOBILE */
+/* TABLET */
 
 @media(max-width:900px){
-
-.navbar{
-padding:10px 16px;
-}
-
-.mobile-btn{
-display:block;
-}
-
-.nav-links{
-display:none;
-position:absolute;
-top:78px;
-left:20px;
-right:20px;
-background:rgba(15,23,42,0.96);
-backdrop-filter:blur(18px);
-border:1px solid rgba(255,255,255,0.05);
-flex-direction:column;
-padding:24px;
-border-radius:24px;
-gap:18px;
-box-shadow:0 15px 35px rgba(0,0,0,0.35);
-}
-
-.nav-links.active{
-display:flex;
-}
-
-.nav-links a{
-font-size:1.1rem;
-}
 
 .hero{
 height:44vh;
@@ -438,6 +418,7 @@ padding:52px 18px;
 
 .section-title{
 margin-bottom:28px;
+font-size:2rem;
 }
 
 .hero h1{
@@ -449,31 +430,85 @@ line-height:0.95;
 font-size:1.05rem;
 }
 
-.section-title{
-font-size:2rem;
+}
+
+/* MOBILE */
+
+@media(max-width:700px){
+
+.mobile-btn{
+display:block;
+}
+
+.nav-links{
+display:none;
+
+position:absolute;
+
+top:78px;
+left:20px;
+right:20px;
+
+background:#111827;
+
+padding:22px;
+
+border-radius:26px;
+
+flex-direction:column;
+
+z-index:999;
+}
+
+.nav-links.active{
+display:flex;
 }
 
 }
 
 </style>
+
 </head>
 
 <body>
-  
+
 <!-- NAVBAR -->
 
 <nav class="navbar">
 
 <a href="index.html" class="logo">🌍 Vidolta</a>
 
-<div class="mobile-btn" onclick="toggleMenu()">☰</div>
+<div
+class="mobile-btn"
+onclick="toggleMenu()"
+role="button"
+tabindex="0"
+aria-label="Ouvrir le menu">
+☰
+</div>
 
 <div class="nav-links">
-<a href="index.html">Accueil</a>
-<a href="#mission">Mission</a>
-<a href="#vision">Vision</a>
-<a href="#experience">Expérience</a>
-<a href="notre-histoire.html">Notre histoire</a>
+
+<a href="destinations.html">
+Destinations
+</a>
+
+<a href="events.html" class="event-link">
+🎉 Événements
+</a>
+
+<a href="world-map.html" class="explorer-link">
+Explorer le monde 🌍
+</a>
+
+<a href="outils-voyage.html" class="nav-simple">
+🛠️ Outils Voyage
+</a>
+
+<a href="about-en.html" class="nav-simple">
+🇬🇧 English
+</a>
+
 </div>
 
 </nav>
@@ -482,7 +517,10 @@ font-size:2rem;
 
 <section class="hero">
 
-<img loading="lazy" src="https://images.unsplash.com/photo-1526772662000-3f88f10405ff?q=80&w=1600&auto=format&fit=crop" alt="Voyage et découverte">
+<img
+loading="lazy"
+src="https://images.unsplash.com/photo-1526772662000-3f88f10405ff?q=80&w=1600&auto=format&fit=crop"
+alt="Voyage et découverte">
 
 <div class="hero-overlay">
 
@@ -495,7 +533,7 @@ Vidolta aide les voyageurs à découvrir le monde plus facilement grâce à des 
 <p class="subtitle">
 One Day In Your Life
 </p>
-  
+
 </div>
 
 </section>
@@ -504,7 +542,9 @@ One Day In Your Life
 
 <section class="section" id="mission">
 
-<h2 class="section-title fade-up">🌍 La mission de Vidolta</h2>
+<h2 class="section-title fade-up">
+🌍 La mission de Vidolta
+</h2>
 
 <div class="grid">
 
@@ -546,32 +586,40 @@ Nous pensons que les plus beaux voyages sont ceux qui laissent des souvenirs dur
 
 <section class="section" id="vision">
 
-<h2 class="section-title fade-up">✨ Une nouvelle façon de préparer ses voyages</h2>
+<h2 class="section-title fade-up">
+✨ Une nouvelle façon de préparer ses voyages
+</h2>
 
 <div class="grid">
 
 <div class="card fade-up">
+
 <h3>🌍 Tout au même endroit</h3>
 
 <p>
 Guides de voyage, hébergements, restaurants, expériences, événements et conseils pratiques sont réunis sur une seule plateforme pour faciliter l'organisation de chaque destination.
 </p>
+
 </div>
 
 <div class="card fade-up">
+
 <h3>📱 Pensé pour les voyageurs</h3>
 
 <p>
 Une expérience simple, rapide et optimisée pour mobile afin d'accéder facilement aux informations essentielles avant et pendant le voyage, où que l'on soit.
 </p>
+
 </div>
 
 <div class="card fade-up">
+
 <h3>🎯 Des voyages plus mémorables</h3>
 
 <p>
 Moins de temps passé à chercher des informations, plus de temps pour profiter de sa destination, vivre des expériences uniques et créer des souvenirs durables.
 </p>
+
 </div>
 
 </div>
@@ -590,8 +638,13 @@ Moins de temps passé à chercher des informations, plus de temps pour profiter 
 Chez Vidolta, nous croyons que chaque destination peut devenir un souvenir inoubliable. Notre objectif est de vous aider à gagner du temps, trouver l'inspiration et vivre les plus beaux moments de votre voyage.
 </p>
 
-<a href="index.html">Retour à l’accueil</a>
-<a href="notre-histoire.html" class="secondary-link">Découvrir notre histoire</a>
+<a href="index.html">
+Retour à l’accueil
+</a>
+
+<a href="notre-histoire.html" class="secondary-link">
+Découvrir notre histoire
+</a>
 
 </div>
 
@@ -602,22 +655,35 @@ Chez Vidolta, nous croyons que chaque destination peut devenir un souvenir inoub
 <footer>
 
 <p>
-© 2026 Vidolta — One Day In Your Life.
+© 2026 Vidolta — One day in your life.
 </p>
 
 <div class="footer-links">
 
-<a href="index.html">Accueil</a>
-<a href="about.html">À propos</a>
-<a href="notre-histoire.html">Notre histoire</a>
-<a href="mentions-legales.html">Mentions légales</a>
-<a href="confidentialite.html">Confidentialité</a>
-<a href="contact.html">Contact</a>
+<a href="about.html">
+À propos
+</a>
+
+<a href="notre-histoire.html">
+Notre histoire
+</a>
+
+<a href="mentions-legales.html">
+Mentions légales
+</a>
+
+<a href="confidentialite.html">
+Politique de confidentialité
+</a>
+
+<a href="contact.html">
+Contact
+</a>
 
 </div>
 
 </footer>
-  
+
 <button class="back-to-top" id="backToTop">
 ↑
 </button>
@@ -625,19 +691,35 @@ Chez Vidolta, nous croyons que chaque destination peut devenir un souvenir inoub
 <script>
 
 function toggleMenu(){
-const nav = document.querySelector('.nav-links');
+
+const nav =
+document.querySelector('.nav-links');
+
+if(nav){
 nav.classList.toggle('active');
 }
 
+}
+
 document.querySelectorAll('.nav-links a').forEach(link => {
-  link.addEventListener('click', () => {
-    document.querySelector('.nav-links').classList.remove('active');
-  });
+
+link.addEventListener('click', () => {
+
+const nav =
+document.querySelector('.nav-links');
+
+if(nav){
+nav.classList.remove('active');
+}
+
+});
+
 });
 
 /* ANIMATION */
 
-const observer = new IntersectionObserver(entries => {
+const observer =
+new IntersectionObserver(entries => {
 
 entries.forEach(entry => {
 
@@ -647,15 +729,18 @@ entry.target.classList.add('visible');
 
 });
 
-},{threshold:0.15});
-
-document.querySelectorAll('.fade-up').forEach(el => {
-observer.observe(el);
+},{
+threshold:0.15
 });
+
+document
+.querySelectorAll('.fade-up')
+.forEach(el => observer.observe(el));
 
 /* BACK TO TOP */
 
-const backToTop = document.getElementById('backToTop');
+const backToTop =
+document.getElementById('backToTop');
 
 window.addEventListener('scroll', () => {
 
@@ -672,19 +757,6 @@ backToTop.addEventListener('click', () => {
 window.scrollTo({
 top:0,
 behavior:'smooth'
-});
-
-});
-
-/* CLOSE MOBILE MENU */
-
-document.querySelectorAll('.nav-links a').forEach(link => {
-
-link.addEventListener('click', () => {
-
-document.querySelector('.nav-links')
-.classList.remove('active');
-
 });
 
 });
