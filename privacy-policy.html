@@ -9,7 +9,7 @@
 <title>Privacy Policy — Vidolta</title>
 
 <meta name="description"
-content="Privacy Policy of the Vidolta website.">
+content="Privacy policy for the Vidolta website.">
 
 <link rel="canonical"
 href="https://www.vidolta.com/privacy-policy.html">
@@ -18,7 +18,7 @@ href="https://www.vidolta.com/privacy-policy.html">
 content="Privacy Policy — Vidolta">
 
 <meta property="og:description"
-content="Privacy Policy of the Vidolta website.">
+content="Read the privacy policy for the Vidolta website.">
 
 <meta property="og:url"
 content="https://www.vidolta.com/privacy-policy.html">
@@ -85,7 +85,7 @@ padding:0;
 box-sizing:border-box;
 }
 
- html{
+html{
 scroll-behavior:smooth;
 scroll-padding-top:80px;
 }
@@ -107,25 +107,67 @@ a:hover{
 color:#a5b4fc;
 }
 
+/* NAVBAR */
+
 .navbar{
 position:sticky;
 top:0;
 z-index:1000;
-width:100%;
-padding:14px 20px;
+padding:10px 16px;
 display:flex;
 justify-content:space-between;
 align-items:center;
-background:rgba(15,23,42,0.88);
-backdrop-filter:blur(14px);
-border-bottom:1px solid rgba(255,255,255,0.05);
+background:rgba(5,8,22,0.72);
+backdrop-filter:blur(18px);
+border-bottom:1px solid rgba(255,255,255,0.04);
 }
 
 .logo{
-font-size:1.6rem;
-font-weight:700;
+display:inline-flex;
+align-items:center;
+
+font-size:1.65rem;
+font-weight:800;
+
+color:white;
+
+cursor:pointer;
+}
+
+.nav-links{
+display:flex;
+gap:28px;
+align-items:center;
+}
+
+.nav-links a{
+color:#cbd5e1;
+font-size:0.95rem;
+transition:0.3s;
+}
+
+.nav-links a:hover{
 color:white;
 }
+
+.event-link{
+color:#F4E96B !important;
+font-weight:600;
+}
+
+.explorer-link{
+font-size:0.82rem !important;
+color:#94a3b8 !important;
+}
+
+.mobile-btn{
+display:none;
+font-size:2rem;
+cursor:pointer;
+color:white;
+}
+
+/* HERO */
 
 .hero{
 padding:90px 20px 70px;
@@ -146,11 +188,15 @@ line-height:1.9;
 color:#cbd5e1;
 }
 
+/* SECTION */
+
 .section{
 max-width:1000px;
 margin:auto;
 padding:70px 20px;
 }
+
+/* CARD */
 
 .card{
 background:#1e293b;
@@ -171,23 +217,62 @@ color:#cbd5e1;
 margin-bottom:14px;
 }
 
+/* FOOTER */
+
 footer{
-padding:70px 20px;
+padding:70px 22px;
 text-align:center;
-color:#cbd5e1;
 line-height:2;
+color:#94a3b8;
 }
 
-footer a{
-color:#e2e8f0;
-transition:0.3s;
+.footer-links{
+margin-top:18px;
+display:flex;
+justify-content:center;
+flex-wrap:wrap;
+gap:18px;
 }
 
-footer a:hover{
-color:#818cf8;
+.footer-links a{
+color:#cbd5e1;
 }
 
-@media(max-width:900px){
+.footer-links a:hover{
+color:white;
+}
+
+/* MOBILE */
+
+@media(max-width:700px){
+
+.mobile-btn{
+display:block;
+}
+
+.nav-links{
+display:none;
+
+position:absolute;
+
+top:78px;
+left:20px;
+right:20px;
+
+background:#111827;
+
+padding:22px;
+
+border-radius:26px;
+
+flex-direction:column;
+
+z-index:999;
+}
+
+.nav-links.active{
+display:flex;
+}
 
 .hero h1{
 font-size:2.8rem;
@@ -200,6 +285,7 @@ padding:28px;
 }
 
 </style>
+
 </head>
 
 <body>
@@ -210,6 +296,39 @@ padding:28px;
 
 <a href="index-en.html" class="logo">🌍 Vidolta</a>
 
+<div
+class="mobile-btn"
+onclick="toggleMenu()"
+role="button"
+tabindex="0"
+aria-label="Open menu">
+☰
+</div>
+
+<div class="nav-links">
+
+<a href="destinations-en.html">
+Destinations
+</a>
+
+<a href="events-en.html" class="event-link">
+🎉 Events
+</a>
+
+<a href="world-map-en.html" class="explorer-link">
+Explore the world 🌍
+</a>
+
+<a href="outils-voyage-en.html" class="nav-simple">
+🛠️ Travel Tools
+</a>
+
+<a href="confidentialite.html" class="nav-simple">
+🇫🇷 Français
+</a>
+
+</div>
+
 </nav>
 
 <!-- HERO -->
@@ -219,8 +338,8 @@ padding:28px;
 <h1>Privacy Policy</h1>
 
 <p>
-Vidolta places great importance on protecting
-personal data and ensuring user privacy.
+Vidolta places particular importance on protecting
+personal data and user privacy.
 </p>
 
 </section>
@@ -231,54 +350,50 @@ personal data and ensuring user privacy.
 
 <div class="card">
 
-<h2>🔒 Personal Data</h2>
+<h2>🔒 Personal data</h2>
 
 <p>
-Vidolta respects the privacy of its users
-and does not intentionally collect sensitive personal data
-through the website.
+Vidolta does not directly collect sensitive personal data
+when users simply browse the website.
 </p>
 
 <p>
-Certain technical information may nevertheless be collected automatically
-when browsing the website in order to ensure its proper operation,
-measure its audience and improve the user experience.
-</p>
-
-<p>
-Vidolta does not sell users' personal data.
+Certain statistical and technical information may nevertheless
+be available through the services used by Vidolta,
+particularly to monitor the website's visibility in search engines
+and to improve its content and performance.
 </p>
 
 </div>
 
 <div class="card">
 
-<h2>📊 Browsing Data</h2>
+<h2>📊 Browsing data and statistics</h2>
 
 <p>
-Certain browsing and technical data may be collected
-to understand how the website is used,
-monitor its performance
-and improve its content and navigation.
+Vidolta uses Google Search Console to monitor
+the website's visibility and performance in Google
+search results.
 </p>
 
 <p>
-This information may include:
+This service provides aggregated statistical information including:
 </p>
 
 <p>
-• device type<br>
-• operating system<br>
-• browser used<br>
-• pages visited<br>
-• date and duration of visits<br>
-• approximate geographic location<br>
-• general website usage statistics
+• search queries<br>
+• impressions and clicks<br>
+• pages appearing in search results<br>
+• device types<br>
+• countries of origin<br>
+• overall performance in search results
 </p>
 
 <p>
-Whenever possible, this information is analyzed
-in an aggregated or anonymized form.
+This information is used to better understand
+Vidolta's visibility in search engines,
+improve the content provided
+and optimize the website's performance.
 </p>
 
 </div>
@@ -288,195 +403,154 @@ in an aggregated or anonymized form.
 <h2>🍪 Cookies</h2>
 
 <p>
-Vidolta and certain third-party services
-may use cookies or similar technologies
-necessary for the operation of the website,
-audience measurement
-or the attribution of affiliate transactions.
+Vidolta does not currently use advertising cookies
+or audience measurement cookies directly,
+such as those that may be associated with Google Analytics.
 </p>
 
 <p>
-Depending on the technologies used,
-certain cookies may require the user's consent
-before being placed on their device.
+Certain services or partner websites accessible
+from Vidolta may, however, use their own cookies,
+identifiers or similar technologies.
 </p>
 
 <p>
-Users may also configure their browser
-to block, delete or restrict cookies.
-However, disabling certain cookies
-may affect the operation of some website features.
+When a user leaves Vidolta to access
+an external service, any use of cookies
+is subject to the terms and privacy policy
+of the service concerned.
 </p>
 
 </div>
 
 <div class="card">
 
-<h2>📈 Analytics</h2>
+<h2>📈 Performance analysis</h2>
 
 <p>
-Vidolta uses website performance and analytics tools
-to better understand its visibility in search engines
-and to improve its content, performance and user experience.
+Vidolta uses Google Search Console
+to analyze the website's performance
+in Google search results.
 </p>
 
 <p>
-Vidolta currently uses Google Search Console,
-which provides aggregated statistical information such as:
+The available data includes, in particular,
+clicks, impressions, search queries,
+the pages concerned, device types
+and the countries from which searches are performed.
 </p>
 
 <p>
-• search queries<br>
-• impressions and clicks<br>
-• pages appearing in search results<br>
-• device types<br>
-• countries of origin<br>
-• general search performance statistics
-</p>
-
-<p>
-This information is used primarily for statistical,
-technical and website improvement purposes.
+This information is mainly used
+for statistical and technical purposes
+and to improve Vidolta's content.
 </p>
 
 <p>
 Vidolta does not currently use Google Analytics
-or similar audience-tracking tools directly on the website.
+or any similar solution to track visitor behavior
+in detail directly on the website.
 </p>
 
 </div>
 
 <div class="card">
 
-<h2>🤝 Affiliate Links & Partners</h2>
+<h2>🤝 Affiliate links and partners</h2>
 
 <p>
-Some pages on Vidolta contain affiliate links
-to travel, accommodation, ticketing,
-activity or booking platforms.
+Some Vidolta pages contain affiliate links to booking,
+activity, ticketing or travel platforms.
 </p>
 
 <p>
-When a user clicks an affiliate link
-and subsequently makes a booking or purchase,
-Vidolta may receive a commission
+When a user makes a booking or purchase after clicking
+one of these links, Vidolta may receive a commission
 at no additional cost to the user.
 </p>
 
 <p>
-These commissions help finance the operation of the website
-and the creation of new travel content.
+These commissions help support the website and the development
+of new content.
 </p>
 
 <p>
-Vidolta may work with partners such as
-Booking.com, GetYourGuide, Hellotickets
-and other travel, ticketing or booking platforms.
+Vidolta may work with platforms such as
+Booking.com, GetYourGuide, Hellotickets or other
+travel, ticketing and booking services.
 </p>
 
 <p>
-The presence of an affiliate partnership
-does not determine the editorial content published on Vidolta.
-Recommendations, destination information and travel content
-remain independently selected and presented.
+The recommendations and content published on Vidolta remain independent
+of these commercial partnerships.
 </p>
 
 <p>
-Affiliate partners or affiliate networks
-may use cookies, tracking links
-or similar technologies
-to identify the origin of a booking or purchase
-and attribute the corresponding commission.
+When a user clicks on an affiliate link, the relevant partner
+may use cookies, identifiers or similar technologies
+to identify the origin of the click and attribute a potential booking
+or transaction to Vidolta.
 </p>
 
 <p>
-When users leave Vidolta and access a partner website,
-the processing of their personal data
-is governed by the privacy policy
-and terms of that third-party service.
+Any data processing carried out after accessing a partner website
+is subject to that partner's terms and privacy policy.
 </p>
 
 </div>
 
 <div class="card">
 
-<h2>🔗 Third-Party Services</h2>
+<h2>🔗 Third-party services</h2>
 
 <p>
-Vidolta may contain links to external websites,
-booking platforms, ticket providers,
-tourism services and other third-party services.
+Vidolta may provide links to third-party websites, platforms or services.
 </p>
 
 <p>
-These websites and services operate independently
-and apply their own privacy policies,
-cookie policies and terms of use.
+When a user leaves Vidolta to access an external service,
+any data processing carried out on that service is the responsibility
+of the relevant third party and is governed by its own privacy policy.
 </p>
 
 <p>
-Vidolta does not control the data processing practices
-of these third-party services
-and cannot be held responsible
-for their content or privacy practices.
-</p>
-
-<p>
-Users are encouraged to review
-the privacy policies of the relevant third-party services
-before providing personal information
-or completing a transaction.
+Vidolta encourages users to review the privacy policies
+of the external services they use.
 </p>
 
 </div>
 
 <div class="card">
 
-<h2>🛡️ Data Security</h2>
+<h2>🛡️ Security</h2>
 
 <p>
-Vidolta takes reasonable technical
-and organizational measures
-to protect the website
-and any information processed through it
-against unauthorized access,
-alteration, disclosure or loss.
+Vidolta implements reasonable measures
+to protect information and secure access to the website.
 </p>
 
 <p>
-However, no website,
-internet transmission
-or online storage system
-can guarantee absolute security.
+However, no online system can guarantee
+absolute security.
 </p>
 
 </div>
 
 <div class="card">
 
-<h2>⚖️ Your Rights</h2>
+<h2>⚖️ Your rights</h2>
 
 <p>
-Depending on the applicable data protection regulations,
-users may have rights regarding their personal data,
-including the right to access,
-rectify, erase or restrict the processing
-of certain personal information.
+In accordance with applicable personal data protection laws,
+including the General Data Protection Regulation (GDPR), individuals may,
+where these rights apply, request access to, rectification or deletion
+of their personal data, as well as restriction of or objection
+to certain types of processing.
 </p>
 
 <p>
-Users may also have the right to object
-to certain processing activities
-or request information about the use of their data.
-</p>
-
-<p>
-Any request relating to personal data
-may be sent to:
-</p>
-
-<p>
-contact@vidolta.com
+Any request relating to the exercise of these rights may be sent
+to Vidolta using the contact details provided below.
 </p>
 
 </div>
@@ -486,9 +560,8 @@ contact@vidolta.com
 <h2>📬 Contact</h2>
 
 <p>
-For any questions regarding this Privacy Policy,
-cookies or personal data protection,
-please contact:
+For any questions regarding this Privacy Policy
+or the protection of personal data:
 </p>
 
 <p>
@@ -513,14 +586,13 @@ contact@vidolta.com
 <p>
 This Privacy Policy may be updated
 to reflect changes to the website,
-the services offered,
-the technologies used
-or applicable legal and regulatory requirements.
+the services offered, the technologies used
+or applicable regulations.
 </p>
 
 <p>
-Users are encouraged to review this page periodically
-to remain informed of any changes.
+Users are encouraged to review this page regularly
+to stay informed of any changes.
 </p>
 
 </div>
@@ -531,13 +603,35 @@ to remain informed of any changes.
 
 <footer>
 
-<p><a href="index-en.html">Back to Home</a></p>
+<p>
+© 2026 Vidolta — One Day In Your Life.
+</p>
 
-<p>© 2026 Vidolta — All Rights Reserved</p>
+<div class="footer-links">
+
+<a href="about-en.html">
+About
+</a>
+
+<a href="our-story.html">
+Our Story
+</a>
+
+<a href="legal-notice.html">
+Legal Notice
+</a>
+
+<a href="privacy-policy.html">
+Privacy Policy
+</a>
+
+<a href="contact-en.html">
+Contact
+</a>
+
+</div>
 
 </footer>
 
 </body>
 </html>
-
-
