@@ -80,14 +80,19 @@ rel="stylesheet">
 
 <style>
 
-*{ margin:0; padding:0; box-sizing:border-box; }
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
 
 :root{
---bg:#050816;
---primary:#7c5cff;
---primary2:#5b8cff;
+--bg:#171126;
+--primary:#8b5cf6;
+--primary2:#b56cff;
+--accent:#f4c542;
 --text:#ffffff;
---muted:#94a3b8;
+--muted:#c2b8d0;
 }
 
 html{
@@ -99,9 +104,50 @@ body{
 font-family:'Poppins',sans-serif;
 
 background:
-radial-gradient(circle at top right,rgba(124,92,255,0.18),transparent 30%),
-radial-gradient(circle at top left,rgba(91,140,255,0.14),transparent 25%),
-linear-gradient(to bottom,#0b1426 0%,#09111f 100%);
+radial-gradient(
+ellipse at 0% 8%,
+rgba(139,92,246,0.34) 0%,
+rgba(139,92,246,0.14) 25%,
+transparent 50%
+),
+
+radial-gradient(
+ellipse at 100% 25%,
+rgba(244,197,66,0.22) 0%,
+rgba(244,197,66,0.08) 24%,
+transparent 48%
+),
+
+radial-gradient(
+ellipse at 0% 52%,
+rgba(181,108,255,0.28) 0%,
+rgba(181,108,255,0.10) 25%,
+transparent 48%
+),
+
+radial-gradient(
+ellipse at 100% 72%,
+rgba(242,178,61,0.20) 0%,
+rgba(242,178,61,0.07) 24%,
+transparent 48%
+),
+
+radial-gradient(
+ellipse at 25% 100%,
+rgba(130,84,210,0.28) 0%,
+rgba(130,84,210,0.09) 25%,
+transparent 48%
+),
+
+linear-gradient(
+180deg,
+#1a122b 0%,
+#211438 22%,
+#2a1940 43%,
+#241536 63%,
+#301c40 82%,
+#1c142b 100%
+);
 
 color:var(--text);
 
@@ -123,22 +169,31 @@ display:block;
 position:sticky;
 top:0;
 z-index:1000;
+
 padding:10px 16px;
+
 display:flex;
 justify-content:space-between;
 align-items:center;
-background:rgba(5,8,22,0.72);
+
+background:rgba(22,14,36,0.88);
+
 backdrop-filter:blur(18px);
-border-bottom:1px solid rgba(255,255,255,0.04);
+
+border-bottom:1px solid rgba(244,197,66,0.10);
 }
 
 .logo{
 display:inline-flex;
 align-items:center;
+
 font-size:1.65rem;
 font-weight:800;
+
 color:white;
+
 cursor:pointer;
+
 transition:opacity .25s ease;
 }
 
@@ -153,8 +208,10 @@ align-items:center;
 }
 
 .nav-links a{
-color:#cbd5e1;
+color:#d8cfe2;
+
 font-size:0.95rem;
+
 transition:color .25s ease;
 }
 
@@ -172,7 +229,7 @@ color:#FFD95A !important;
 
 .explorer-link{
 font-size:0.82rem !important;
-color:#94a3b8 !important;
+color:#b9a8ce !important;
 }
 
 .explorer-link:hover{
@@ -181,8 +238,12 @@ color:white !important;
 
 .mobile-btn{
 display:none;
+
 font-size:2rem;
+
 cursor:pointer;
+
+color:white;
 }
 
 /* HERO */
