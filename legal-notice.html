@@ -9,7 +9,7 @@
 <title>Legal Notice — Vidolta</title>
 
 <meta name="description"
-content="Legal notice of the Vidolta website.">
+content="Legal notice for the Vidolta website.">
 
 <link rel="canonical"
 href="https://www.vidolta.com/legal-notice.html">
@@ -18,7 +18,7 @@ href="https://www.vidolta.com/legal-notice.html">
 content="Legal Notice — Vidolta">
 
 <meta property="og:description"
-content="Legal notice of the Vidolta website.">
+content="Read the legal notice for the Vidolta website.">
 
 <meta property="og:url"
 content="https://www.vidolta.com/legal-notice.html">
@@ -85,7 +85,7 @@ padding:0;
 box-sizing:border-box;
 }
 
- html{
+html{
 scroll-behavior:smooth;
 scroll-padding-top:80px;
 }
@@ -107,25 +107,67 @@ a:hover{
 color:#a5b4fc;
 }
 
+/* NAVBAR */
+
 .navbar{
 position:sticky;
 top:0;
 z-index:1000;
-width:100%;
-padding:14px 20px;
+padding:10px 16px;
 display:flex;
 justify-content:space-between;
 align-items:center;
-background:rgba(15,23,42,0.88);
-backdrop-filter:blur(14px);
-border-bottom:1px solid rgba(255,255,255,0.05);
+background:rgba(5,8,22,0.72);
+backdrop-filter:blur(18px);
+border-bottom:1px solid rgba(255,255,255,0.04);
 }
 
 .logo{
-font-size:1.6rem;
-font-weight:700;
+display:inline-flex;
+align-items:center;
+
+font-size:1.65rem;
+font-weight:800;
+
+color:white;
+
+cursor:pointer;
+}
+
+.nav-links{
+display:flex;
+gap:28px;
+align-items:center;
+}
+
+.nav-links a{
+color:#cbd5e1;
+font-size:0.95rem;
+transition:0.3s;
+}
+
+.nav-links a:hover{
 color:white;
 }
+
+.event-link{
+color:#F4E96B !important;
+font-weight:600;
+}
+
+.explorer-link{
+font-size:0.82rem !important;
+color:#94a3b8 !important;
+}
+
+.mobile-btn{
+display:none;
+font-size:2rem;
+cursor:pointer;
+color:white;
+}
+
+/* HERO */
 
 .hero{
 padding:90px 20px 70px;
@@ -146,11 +188,15 @@ line-height:1.9;
 color:#cbd5e1;
 }
 
+/* SECTION */
+
 .section{
 max-width:1000px;
 margin:auto;
 padding:70px 20px;
 }
+
+/* CARD */
 
 .card{
 background:#1e293b;
@@ -171,23 +217,62 @@ color:#cbd5e1;
 margin-bottom:14px;
 }
 
+/* FOOTER */
+
 footer{
-padding:70px 20px;
+padding:70px 22px;
 text-align:center;
-color:#cbd5e1;
 line-height:2;
+color:#94a3b8;
 }
 
-footer a{
-color:#e2e8f0;
-transition:0.3s;
+.footer-links{
+margin-top:18px;
+display:flex;
+justify-content:center;
+flex-wrap:wrap;
+gap:18px;
 }
 
-footer a:hover{
-color:#818cf8;
+.footer-links a{
+color:#cbd5e1;
 }
 
-@media(max-width:900px){
+.footer-links a:hover{
+color:white;
+}
+
+/* MOBILE */
+
+@media(max-width:700px){
+
+.mobile-btn{
+display:block;
+}
+
+.nav-links{
+display:none;
+
+position:absolute;
+
+top:78px;
+left:20px;
+right:20px;
+
+background:#111827;
+
+padding:22px;
+
+border-radius:26px;
+
+flex-direction:column;
+
+z-index:999;
+}
+
+.nav-links.active{
+display:flex;
+}
 
 .hero h1{
 font-size:2.8rem;
@@ -210,6 +295,39 @@ padding:28px;
 
 <a href="index-en.html" class="logo">🌍 Vidolta</a>
 
+<div
+class="mobile-btn"
+onclick="toggleMenu()"
+role="button"
+tabindex="0"
+aria-label="Open menu">
+☰
+</div>
+
+<div class="nav-links">
+
+<a href="destinations-en.html">
+Destinations
+</a>
+
+<a href="events-en.html" class="event-link">
+🎉 Events
+</a>
+
+<a href="world-map-en.html" class="explorer-link">
+Explore the world 🌍
+</a>
+
+<a href="outils-voyage-en.html" class="nav-simple">
+🛠️ Travel Tools
+</a>
+
+<a href="mentions-legales.html" class="nav-simple">
+🇫🇷 Français
+</a>
+
+</div>
+
 </nav>
 
 <!-- HERO -->
@@ -230,58 +348,6 @@ Legal information relating to the Vidolta website.
 
 <div class="card">
 
-<h2>🌍 Website Publisher</h2>
-
-<p>
-Vidolta is an independent website dedicated to travel,
-destinations, events, activities
-and discovering experiences around the world.
-</p>
-
-<p>
-The website is published by:<br>
-<strong>Vidolta</strong><br>
-Franck RUEDAS — Individual Entrepreneur (Entrepreneur individuel — EI)<br>
-17 chemin de la Guiblinière<br>
-44300 Nantes — France
-</p>
-
-<p>
-SIREN: 107 593 394<br>
-Registered with the French National Business Register (RNE)
-</p>
-
-<p>
-Website:
-<a href="https://www.vidolta.com">www.vidolta.com</a>
-</p>
-
-<p>
-Contact:
-<a href="mailto:contact@vidolta.com">contact@vidolta.com</a>
-</p>
-
-</div>
-
-<div class="card">
-
-<h2>🖥️ Hosting</h2>
-
-<p>
-The Vidolta website is hosted by Vercel Inc.
-</p>
-
-<p>
-Vercel Inc.<br>
-440 N Barranca Ave #4133<br>
-Covina, CA 91723<br>
-United States
-</p>
-
-</div>
-
-<div class="card">
-
 <h2>📄 Intellectual Property</h2>
 
 <p>
@@ -299,7 +365,7 @@ subject to the exceptions provided for by applicable law.
 </p>
 
 <p>
-Trademarks, logos, photographs and other content belonging
+Trademarks, logos, photographs or other content belonging
 to third parties remain the property of their respective owners.
 </p>
 
@@ -317,7 +383,7 @@ partner services or third-party platforms.
 <p>
 These websites are operated independently of Vidolta.
 Vidolta cannot guarantee their availability or the accuracy,
-currency or completeness of the information they provide.
+timeliness or completeness of the information they provide.
 </p>
 
 <p>
@@ -333,8 +399,8 @@ and policies applicable to the relevant websites.
 
 <p>
 Some Vidolta pages may contain affiliate links
-to travel, activity, ticketing,
-accommodation or booking platforms.
+to travel, activity, ticketing, accommodation
+or booking platforms.
 </p>
 
 <p>
@@ -368,28 +434,28 @@ and regularly updated information.
 <p>
 However, information relating in particular to prices,
 opening hours, events, schedules, travel requirements,
-availability, transport, activities or partner services
+availability, transportation, activities or partner services
 may change at any time.
 </p>
 
 <p>
 The information published on Vidolta is provided
-for informational purposes only and should not replace
-information provided by official authorities,
-event organizers or the relevant service providers.
+for informational purposes only and is not intended to replace
+information provided by the relevant official authorities,
+organizers or service providers.
 </p>
 
 <p>
 Before making any booking, purchase or trip,
 users are encouraged to verify important information
-directly with official authorities
-or the relevant service providers.
+directly with the relevant official authorities
+or service providers.
 </p>
 
 <p>
-Vidolta cannot be held liable for any consequences resulting
+Vidolta cannot be held liable for consequences resulting
 from the use of information that has become inaccurate,
-incomplete or outdated due to circumstances beyond its control.
+incomplete or outdated for reasons beyond its control.
 </p>
 
 </div>
@@ -407,8 +473,60 @@ in Vidolta's Privacy Policy.
 
 <p>
 <a href="privacy-policy.html">
-View the Privacy Policy
+Read the Privacy Policy
 </a>
+</p>
+
+</div>
+
+<div class="card">
+
+<h2>🖥️ Hosting</h2>
+
+<p>
+The Vidolta website is hosted by Vercel Inc.
+</p>
+
+<p>
+Vercel Inc.<br>
+440 N Barranca Ave #4133<br>
+Covina, CA 91723<br>
+United States
+</p>
+
+</div>
+
+<div class="card">
+
+<h2>🌍 Website Publisher</h2>
+
+<p>
+Vidolta is an independent website dedicated to travel,
+destinations, events, activities
+and discovering experiences around the world.
+</p>
+
+<p>
+The website is published by:<br>
+<strong>Vidolta</strong><br>
+Franck RUEDAS — Sole Proprietor<br>
+17 chemin de la Guiblinière<br>
+44300 Nantes — France
+</p>
+
+<p>
+SIREN: 107 593 394<br>
+Registered with the French National Business Register (RNE)
+</p>
+
+<p>
+Website:<br>
+https://www.vidolta.com
+</p>
+
+<p>
+Contact:<br>
+contact@vidolta.com
 </p>
 
 </div>
@@ -443,11 +561,65 @@ Last updated: August 9, 2026.
 
 <footer>
 
-<p><a href="index-en.html">Back to Home</a></p>
+<p>
+© 2026 Vidolta — One Day In Your Life.
+</p>
 
-<p>© 2026 Vidolta — All Rights Reserved</p>
+<div class="footer-links">
+
+<a href="about-en.html">
+About
+</a>
+
+<a href="our-story.html">
+Our Story
+</a>
+
+<a href="legal-notice.html">
+Legal Notice
+</a>
+
+<a href="privacy-policy.html">
+Privacy Policy
+</a>
+
+<a href="contact-en.html">
+Contact
+</a>
+
+</div>
 
 </footer>
+
+<script>
+
+function toggleMenu(){
+
+const nav =
+document.querySelector('.nav-links');
+
+if(nav){
+nav.classList.toggle('active');
+}
+
+}
+
+document.querySelectorAll('.nav-links a').forEach(link => {
+
+link.addEventListener('click', () => {
+
+const nav =
+document.querySelector('.nav-links');
+
+if(nav){
+nav.classList.remove('active');
+}
+
+});
+
+});
+
+</script>
 
 </body>
 </html>
