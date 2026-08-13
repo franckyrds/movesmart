@@ -71,57 +71,6 @@ color:var(--text);
 overflow-x:hidden;
 }
 
-/* NAVBAR */
-
-.navbar{
-position:sticky;
-top:0;
-z-index:1000;
-
-padding:10px 16px;
-
-display:flex;
-justify-content:space-between;
-align-items:center;
-
-background:rgba(5,8,22,0.72);
-
-backdrop-filter:blur(18px);
-
-border-bottom:1px solid rgba(255,255,255,0.04);
-}
-
-.logo{
-font-size:1.65rem;
-font-weight:800;
-color:white;
-text-decoration:none;
-}
-
-.nav-links{
-display:flex;
-gap:28px;
-align-items:center;
-}
-
-.nav-links a{
-color:#cbd5e1;
-font-size:0.95rem;
-text-decoration:none;
-transition:0.3s;
-}
-
-.nav-links a:hover{
-color:white;
-}
-
-.mobile-btn{
-display:none;
-font-size:2rem;
-cursor:pointer;
-color:white;
-}
-
 /* HERO */
 
 .hero{
@@ -303,61 +252,9 @@ transition:0.3s;
 transform:translateY(-2px);
 }
 
-/* FOOTER */
-
-footer{
-padding:70px 20px;
-text-align:center;
-color:#94a3b8;
-line-height:2;
-}
-
-.footer-links{
-margin-top:18px;
-
-display:flex;
-justify-content:center;
-flex-wrap:wrap;
-
-gap:18px;
-}
-
-.footer-links a{
-color:#cbd5e1;
-text-decoration:none;
-}
-
 /* MOBILE */
 
 @media(max-width:900px){
-
-.mobile-btn{
-display:block;
-}
-
-.nav-links{
-display:none;
-
-position:absolute;
-
-top:78px;
-left:20px;
-right:20px;
-
-background:#111827;
-
-padding:22px;
-
-border-radius:26px;
-
-flex-direction:column;
-
-z-index:999;
-}
-
-.nav-links.active{
-display:flex;
-}
 
 .hero{
 padding:40px 18px 24px;
@@ -417,36 +314,6 @@ line-height:1.8;
 </head>
 
 <body>
-
-<!-- NAVBAR -->
-
-<nav class="navbar">
-
-<a href="index-en.html" class="logo">
-🌍 Vidolta
-</a>
-
-<div class="mobile-btn" onclick="toggleMenu()">
-☰
-</div>
-
-<div class="nav-links">
-
-<a href="index-en.html">
-Home
-</a>
-
-<a href="tokyo-en.html">
-Tokyo
-</a>
-
-<a href="destinations-en.html">
-Destinations
-</a>
-
-</div>
-
-</nav>
 
 <!-- HERO -->
 
@@ -593,25 +460,6 @@ Contact
 </div>
 
 </footer>
-
-<script>
-
-function toggleMenu(){
-
-const nav = document.querySelector('.nav-links');
-
-nav.classList.toggle('active');
-
-}
-
-document.querySelectorAll('.nav-links a').forEach(link => {
-  link.addEventListener('click', () => {
-    const nav = document.querySelector('.nav-links');
-    nav.classList.remove('active');
-  });
-});
-
-</script>
 
 </body>
 </html>
