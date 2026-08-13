@@ -1990,32 +1990,6 @@ Carnavals, célébrations populaires et traditions culturelles : découvrez mois
 
 </details>
 
-
-<details class="faq-item fade-up">
-
-<summary>
-💀 Día de los Muertos — Mexique
-<span class="badge badge-highlight">✨ Incontournable</span>
-</summary>
-
-<p>
-📅 Célébrations de fin octobre au 2 novembre
-</p>
-
-<p>
-📍 Mexique — notamment Mexico, Oaxaca et Michoacán
-</p>
-
-<p>
-💀 Autels fleuris, bougies, costumes, décorations colorées et traditions familiales rendent hommage aux proches disparus lors de l’une des célébrations mexicaines les plus emblématiques.
-</p>
-
-<p>
-💡 Le Día de los Muertos est bien plus qu’une fête costumée. Cette tradition profondément ancrée dans la culture mexicaine offre aux voyageurs une occasion exceptionnelle de découvrir les croyances, l’art et les traditions du pays.
-</p>
-
-</details>
-
 </div>
 
 </section>
@@ -2433,7 +2407,9 @@ function toggleMenu(){
 
 const nav = document.querySelector('.nav-links');
 
+if(nav){
 nav.classList.toggle('active');
+}
 
 }
 
@@ -2443,13 +2419,17 @@ link.addEventListener('click', () => {
 
 const nav = document.querySelector('.nav-links');
 
+if(nav){
 nav.classList.remove('active');
+}
 
 });
 
 });
 
 const backToTop = document.getElementById('backToTop');
+
+if(backToTop){
 
 window.addEventListener('scroll', () => {
 
@@ -2476,9 +2456,10 @@ behavior:'smooth'
 
 });
 
-});
+}
 
 </script>
 
 </body>
 </html>
+
