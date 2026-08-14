@@ -229,100 +229,78 @@ cursor:pointer;
 /* HERO */
 
 .hero{
-padding:42px 22px 18px;
 position:relative;
+height:52vh;
+min-height:420px;
+
+display:flex;
+align-items:center;
+
 overflow:hidden;
-}
 
-.hero::before{
-content:"";
-
-position:absolute;
-
-width:560px;
-height:560px;
-
-background:#7c5cff;
-
-filter:blur(150px);
-
-opacity:0.16;
-
-top:-180px;
-right:-180px;
-
-border-radius:50%;
+background-image:url("images/destinations.webp");
+background-size:cover;
+background-position:center;
+background-repeat:no-repeat;
 }
 
 .hero-container{
-max-width:1280px;
-margin:auto;
 position:relative;
 z-index:2;
+
+width:100%;
+max-width:1280px;
+
+margin:0 auto;
+padding:20px 22px;
+
+text-align:left;
 }
 
 .hero h1{
-font-size:5.3rem;
-line-height:0.9;
-letter-spacing:-4px;
+font-size:5.25rem;
+line-height:0.95;
+letter-spacing:-3px;
 
-margin-bottom:20px;
+max-width:800px;
+
+margin:0 0 14px;
+
+text-align:left;
+
+color:white;
+
+text-shadow:
+0 3px 10px rgba(0,0,0,0.55),
+0 8px 30px rgba(0,0,0,0.25);
 }
 
 .hero h1 span{
-background:linear-gradient(90deg,#8b5cf6,#60a5fa);
+display:inline;
+
+background:linear-gradient(90deg,#9b7cff,#6ea8ff);
 
 -webkit-background-clip:text;
 -webkit-text-fill-color:transparent;
+
+background-clip:text;
 }
 
 .hero p{
-max-width:760px;
+font-size:1.1rem;
+line-height:1.8;
 
-font-size:1.08rem;
-line-height:1.85;
+color:#ffffff;
 
-color:#dbe4f0;
+max-width:720px;
 
-margin-bottom:24px;
-}
+margin:0;
 
-.hero-tags{
-display:flex;
-flex-wrap:wrap;
-gap:12px;
-}
+text-align:left;
 
-.hero-tag{
-display:inline-flex;
-align-items:center;
-
-padding:12px 18px;
-
-border-radius:18px;
-
-background:rgba(255,255,255,0.06);
-
-border:1px solid rgba(255,255,255,0.06);
-
-color:#dbe4f0;
-
-font-size:0.84rem;
-font-weight:600;
-
-cursor:pointer;
-
-transition:0.3s;
-}
-
-.hero-tag:hover{
-transform:translateY(-2px);
-
-background:rgba(255,255,255,0.14);
-
-border-color:rgba(255,255,255,0.14);
-
-color:white;
+text-shadow:
+0 2px 8px rgba(0,0,0,0.65),
+0 3px 18px rgba(0,0,0,0.30);
 }
 
 /* SECTION */
