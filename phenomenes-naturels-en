@@ -1,0 +1,2524 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+<title>Natural Phenomena Around the World: Travel Calendar | Vidolta</title>
+
+<meta name="description"
+content="Discover the world's most beautiful natural phenomena month by month: northern lights, blooms, wildlife migrations, seasonal landscapes and spectacular natural events to experience while travelling.">
+
+<link rel="canonical"
+href="https://www.vidolta.com/phenomenes-naturels-en.html">
+
+<link rel="alternate"
+hreflang="fr"
+href="https://www.vidolta.com/phenomenes-naturels.html">
+
+<link rel="alternate"
+hreflang="en"
+href="https://www.vidolta.com/phenomenes-naturels-en.html">
+
+<link rel="alternate"
+hreflang="x-default"
+href="https://www.vidolta.com/phenomenes-naturels.html">
+
+<meta property="og:title"
+content="Natural Phenomena Around the World: Travel Calendar | Vidolta">
+
+<meta property="og:description"
+content="Explore the world's most beautiful natural phenomena throughout the year and discover where to travel to witness extraordinary natural spectacles.">
+
+<meta property="og:url"
+content="https://www.vidolta.com/phenomenes-naturels-en.html">
+
+<meta property="og:image"
+content="https://www.vidolta.com/images/phenomenes-naturels-hero.webp">
+
+<meta property="og:type"
+content="website">
+
+<meta property="og:site_name"
+content="Vidolta">
+
+<meta name="theme-color"
+content="#527e8c">
+
+<link rel="icon"
+type="image/x-icon"
+href="favicon.ico">
+
+<link rel="icon"
+type="image/svg+xml"
+href="favicon.svg">
+
+<link rel="icon"
+type="image/png"
+sizes="96x96"
+href="favicon-96x96.png">
+
+<link rel="apple-touch-icon"
+sizes="180x180"
+href="apple-touch-icon.png">
+
+<link rel="manifest"
+href="site.webmanifest">
+
+<link rel="preconnect"
+href="https://fonts.googleapis.com">
+
+<link rel="preconnect"
+href="https://fonts.gstatic.com"
+crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+rel="stylesheet">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+:root{
+--bg:#173c35;
+--primary:#dcebe3;
+--primary2:#76b59c;
+--accent:#d3df83;
+--mint:#69b99a;
+--aqua:#66aeb0;
+--sky:#79a9bd;
+--text:#f4f8f5;
+--muted:#c5d7cf;
+}
+
+html{
+scroll-behavior:smooth;
+scroll-padding-top:80px;
+}
+
+body{
+font-family:'Poppins',sans-serif;
+
+background:
+radial-gradient(
+ellipse at 0% 10%,
+rgba(58,139,108,0.38) 0%,
+rgba(58,139,108,0.14) 28%,
+transparent 54%
+),
+
+radial-gradient(
+ellipse at 100% 28%,
+rgba(47,111,104,0.36) 0%,
+rgba(47,111,104,0.12) 27%,
+transparent 53%
+),
+
+radial-gradient(
+ellipse at 0% 55%,
+rgba(91,142,104,0.28) 0%,
+rgba(91,142,104,0.10) 27%,
+transparent 50%
+),
+
+radial-gradient(
+ellipse at 100% 78%,
+rgba(51,113,105,0.30) 0%,
+rgba(51,113,105,0.10) 26%,
+transparent 50%
+),
+
+radial-gradient(
+ellipse at 20% 100%,
+rgba(112,145,83,0.22) 0%,
+rgba(112,145,83,0.08) 25%,
+transparent 48%
+),
+
+linear-gradient(
+180deg,
+#173c35 0%,
+#1b453b 22%,
+#204b3e 43%,
+#183f39 64%,
+#1c4640 82%,
+#173b35 100%
+);
+
+color:var(--text);
+
+overflow-x:hidden;
+}
+
+a{
+text-decoration:none;
+color:inherit;
+}
+
+img{
+display:block;
+}
+
+/* NAVBAR */
+
+.navbar{
+position:sticky;
+top:0;
+z-index:1000;
+
+padding:10px 16px;
+
+display:flex;
+justify-content:space-between;
+align-items:center;
+
+background:linear-gradient(
+90deg,
+rgba(12,46,40,0.97) 0%,
+rgba(20,63,52,0.97) 50%,
+rgba(15,52,47,0.97) 100%
+);
+
+backdrop-filter:blur(18px);
+
+border-bottom:1px solid rgba(255,255,255,0.10);
+
+box-shadow:
+0 4px 22px rgba(5,30,25,0.24),
+0 2px 18px rgba(74,154,121,0.08);
+}
+
+.logo{
+font-size:1.65rem;
+font-weight:800;
+color:#ffffff;
+}
+
+.nav-links{
+display:flex;
+gap:22px;
+align-items:center;
+}
+
+.nav-links a{
+color:#dcebe4;
+font-size:0.92rem;
+transition:0.3s;
+}
+
+.nav-links a:hover{
+color:#ffffff;
+}
+
+.nav-links a.active{
+color:#d3df83;
+font-weight:400;
+}
+
+.mobile-btn{
+display:none;
+font-size:2rem;
+cursor:pointer;
+color:#ffffff;
+}
+
+/* LEGEND */
+
+.legend{
+max-width:1200px;
+
+margin:34px auto 0;
+
+padding:0 20px;
+
+display:flex;
+flex-wrap:wrap;
+justify-content:center;
+
+gap:12px;
+}
+
+.legend span,
+.badge{
+display:inline-flex;
+align-items:center;
+
+gap:6px;
+
+padding:8px 12px;
+
+border-radius:999px;
+
+font-size:0.82rem;
+font-weight:700;
+
+border:1px solid rgba(255,255,255,0.12);
+
+background:rgba(255,255,255,0.10);
+
+box-shadow:0 5px 18px rgba(4,30,25,0.10);
+}
+
+.badge-highlight{
+color:#eef4b4;
+
+border-color:rgba(211,223,131,0.32);
+
+background:rgba(157,176,83,0.18);
+}
+
+.badge-tradition{
+color:#bde8d4;
+
+border-color:rgba(105,185,154,0.30);
+
+background:rgba(71,151,120,0.18);
+}
+
+.badge-festival{
+color:#bce1e3;
+
+border-color:rgba(102,174,176,0.30);
+
+background:rgba(73,143,147,0.18);
+}
+
+/* MONTH NAV */
+
+.gp-nav{
+max-width:1200px;
+
+margin:30px auto 0;
+
+padding:0 20px;
+
+display:flex;
+
+flex-wrap:wrap;
+
+justify-content:center;
+
+align-items:center;
+
+gap:10px;
+
+overflow:visible;
+}
+
+.gp-nav a{
+flex:0 0 auto;
+
+padding:10px 14px;
+
+border-radius:999px;
+
+background:rgba(255,255,255,0.10);
+
+border:1px solid rgba(255,255,255,0.12);
+
+color:#e5f0eb;
+
+font-size:0.9rem;
+font-weight:600;
+
+white-space:nowrap;
+
+box-shadow:0 5px 18px rgba(4,30,25,0.10);
+
+transition:
+background 0.3s,
+border-color 0.3s,
+color 0.3s,
+transform 0.3s,
+box-shadow 0.3s;
+}
+
+.gp-nav a:hover{
+background:linear-gradient(
+90deg,
+rgba(73,154,122,0.70),
+rgba(103,161,119,0.70),
+rgba(70,137,132,0.70)
+);
+
+border-color:rgba(180,220,198,0.26);
+
+color:#ffffff;
+
+transform:translateY(-2px);
+
+box-shadow:0 8px 22px rgba(4,30,25,0.18);
+}
+
+/* PAGE HEADER */
+
+.page-header{
+position:relative;
+
+padding:120px 20px;
+
+text-align:center;
+
+max-width:none;
+margin:auto;
+
+background:url('images/phenomenes-naturels-hero.webp');
+
+background-size:cover;
+background-position:center;
+background-repeat:no-repeat;
+
+border-bottom:1px solid rgba(255,255,255,0.14);
+
+box-shadow:
+0 18px 55px rgba(7,35,29,0.24),
+0 18px 70px rgba(46,111,92,0.12);
+}
+
+.page-header::after{
+content:'';
+
+position:absolute;
+left:0;
+right:0;
+bottom:0;
+
+height:4px;
+
+background:linear-gradient(
+90deg,
+#4d9a79 0%,
+#69b99a 25%,
+#d3df83 52%,
+#66aeb0 76%,
+#4f8c91 100%
+);
+
+box-shadow:
+0 0 18px rgba(77,154,121,0.24),
+0 0 22px rgba(211,223,131,0.20),
+0 0 20px rgba(102,174,176,0.20);
+}
+
+.page-header h1{
+position:relative;
+z-index:2;
+
+font-size:3.4rem;
+line-height:1.05;
+
+margin-bottom:16px;
+
+color:#ffffff;
+
+text-shadow:
+0 4px 24px rgba(0,0,0,0.58),
+0 0 30px rgba(255,255,255,0.04);
+}
+
+.page-header p{
+position:relative;
+z-index:2;
+
+max-width:760px;
+
+margin:auto;
+
+color:#ffffff;
+
+font-size:1.05rem;
+line-height:1.7;
+
+text-shadow:0 2px 14px rgba(0,0,0,0.64);
+}
+
+/* SECTIONS */
+
+.section{
+padding:40px 20px;
+
+max-width:1100px;
+
+margin:auto;
+}
+
+.section-title{
+font-size:2rem;
+
+margin-bottom:24px;
+
+color:#edf5f0;
+
+padding-top:20px;
+
+text-shadow:0 2px 10px rgba(4,30,25,0.20);
+}
+
+/* EVENTS LIST */
+
+.faq{
+margin-top:20px;
+
+display:grid;
+
+gap:12px;
+}
+
+.faq-item{
+position:relative;
+
+background:
+linear-gradient(
+135deg,
+rgba(250,253,251,0.96),
+rgba(230,241,235,0.94)
+);
+
+border:1px solid rgba(121,165,145,0.18);
+
+border-left:4px solid #4d9a79;
+
+border-radius:18px;
+
+overflow:hidden;
+
+box-shadow:
+0 12px 30px rgba(4,30,25,0.18),
+-8px 0 24px rgba(77,154,121,0.05),
+8px 0 24px rgba(102,174,176,0.05);
+
+transition:
+transform 0.25s ease,
+border-color 0.25s ease,
+background 0.25s ease,
+box-shadow 0.25s ease;
+}
+
+.faq-item:nth-child(3n+2){
+border-left-color:#66aeb0;
+}
+
+.faq-item:nth-child(3n){
+border-left-color:#aebf63;
+}
+
+.faq-item:hover{
+transform:translateY(-2px);
+
+background:
+linear-gradient(
+135deg,
+rgba(255,255,255,0.99),
+rgba(237,246,241,0.98)
+);
+
+border-top-color:rgba(102,151,130,0.28);
+border-right-color:rgba(102,151,130,0.28);
+border-bottom-color:rgba(102,151,130,0.28);
+
+box-shadow:
+0 16px 36px rgba(4,30,25,0.24),
+-10px 0 28px rgba(77,154,121,0.08),
+10px 0 28px rgba(102,174,176,0.07);
+}
+
+/* EVENT DETAILS */
+
+.faq-item summary{
+cursor:pointer;
+
+padding:16px;
+
+font-weight:700;
+
+color:#245d5c;
+
+list-style:none;
+
+display:grid;
+
+grid-template-columns:1fr auto 20px;
+
+align-items:center;
+
+gap:12px;
+
+min-height:72px;
+}
+
+.faq-item summary::-webkit-details-marker{
+display:none;
+}
+
+.faq-item summary::after{
+content:'↓';
+
+color:#4f8584;
+
+opacity:0.85;
+
+transition:0.3s;
+
+text-align:right;
+}
+
+.faq-item[open] summary::after{
+transform:rotate(180deg);
+}
+
+.faq-item summary .badge{
+justify-self:end;
+
+white-space:nowrap;
+}
+
+.faq-item p{
+margin:0;
+
+padding:0 16px 14px;
+
+font-size:0.94rem;
+
+color:#5f7475;
+
+line-height:1.65;
+}
+
+/* BUTTONS */
+
+.event-btn{
+display:inline-flex;
+
+align-items:center;
+justify-content:center;
+
+margin:0 8px 16px 16px;
+
+padding:11px 16px;
+
+border-radius:12px;
+
+font-weight:700;
+
+font-size:0.9rem;
+
+transition:
+transform 0.25s ease,
+box-shadow 0.25s ease,
+background 0.25s ease;
+}
+
+.event-btn:hover{
+transform:translateY(-2px);
+}
+
+/* DESTINATION VIDOLTA */
+
+.destination-btn{
+background:linear-gradient(
+135deg,
+#72bfd2,
+#5b9fc2
+);
+
+color:#ffffff;
+
+box-shadow:0 8px 24px rgba(78,145,177,0.20);
+}
+
+.destination-btn:hover{
+background:linear-gradient(
+135deg,
+#86cce0,
+#68abcd
+);
+
+box-shadow:0 10px 30px rgba(78,145,177,0.30);
+}
+
+/* RESERVATION / EXPERIENCE */
+
+.booking-btn{
+background:linear-gradient(
+135deg,
+#b8df74,
+#d0ea9b
+);
+
+color:#294528;
+
+box-shadow:0 8px 24px rgba(137,177,77,0.18);
+}
+
+.booking-btn:hover{
+background:linear-gradient(
+135deg,
+#c4e787,
+#dbefae
+);
+
+box-shadow:0 10px 30px rgba(137,177,77,0.28);
+}
+
+/* DISABLED */
+.disabled-btn{
+background:#d7e3dd;
+
+color:#7f9189;
+
+cursor:default;
+
+opacity:0.85;
+
+pointer-events:none;
+
+box-shadow:none;
+}
+
+/* CARDS */
+
+.card{
+background:
+linear-gradient(
+135deg,
+rgba(252,254,253,0.96),
+rgba(231,241,235,0.94)
+);
+
+border:1px solid rgba(122,164,145,0.18);
+
+border-radius:24px;
+
+padding:28px;
+
+color:#526860;
+
+line-height:1.7;
+
+box-shadow:
+0 14px 36px rgba(4,30,25,0.20),
+-10px 0 28px rgba(77,154,121,0.05),
+10px 0 28px rgba(102,174,176,0.05);
+}
+
+.card h3{
+font-size:1.35rem;
+
+color:#214f43;
+
+margin-bottom:14px;
+}
+
+.card p{
+margin-bottom:20px;
+}
+
+/* INFO BOX */
+
+.info-box{
+background:
+linear-gradient(
+135deg,
+rgba(250,253,251,0.95),
+rgba(229,240,234,0.93)
+);
+
+padding:26px 30px;
+
+border-radius:24px;
+
+border:1px solid rgba(122,164,145,0.18);
+
+line-height:1.8;
+
+color:#526860;
+
+box-shadow:
+0 14px 36px rgba(4,30,25,0.18),
+-10px 0 26px rgba(77,154,121,0.05),
+10px 0 26px rgba(211,223,131,0.04);
+}
+
+.info-box p{
+margin-bottom:16px;
+}
+
+.info-box p:last-child{
+margin-bottom:0;
+}
+
+/* CTA */
+
+.cta{
+position:relative;
+
+max-width:1100px;
+
+margin:auto;
+
+border-radius:30px;
+
+overflow:hidden;
+
+min-height:340px;
+
+display:flex;
+
+align-items:flex-end;
+
+border:1px solid rgba(255,255,255,0.10);
+
+box-shadow:
+0 18px 46px rgba(4,30,25,0.28),
+-12px 0 32px rgba(77,154,121,0.06),
+12px 0 32px rgba(102,174,176,0.06);
+}
+
+.cta img{
+position:absolute;
+
+inset:0;
+
+width:100%;
+height:100%;
+
+object-fit:cover;
+
+z-index:0;
+}
+
+/* CTA CONTENT */
+
+.cta-content{
+position:relative;
+
+z-index:2;
+
+width:100%;
+
+padding:38px;
+
+text-align:center;
+}
+
+.cta-content h2{
+font-size:2rem;
+
+line-height:1.2;
+
+margin-bottom:14px;
+
+color:#ffffff;
+
+text-shadow:
+0 3px 16px rgba(0,0,0,0.58),
+0 0 18px rgba(255,255,255,0.06);
+}
+
+.cta-content p{
+max-width:720px;
+
+margin:0 auto;
+
+font-size:1rem;
+
+line-height:1.7;
+
+color:#ffffff;
+
+text-shadow:
+0 2px 12px rgba(0,0,0,0.62);
+}
+
+/* BACK TO TOP */
+
+.back-to-top{
+position:fixed;
+
+bottom:24px;
+right:24px;
+
+width:52px;
+height:52px;
+
+border:none;
+
+border-radius:50%;
+
+background:linear-gradient(
+135deg,
+#3f8f70,
+#74ad72,
+#4f9290
+);
+
+color:#ffffff;
+
+font-size:1.4rem;
+
+cursor:pointer;
+
+display:flex;
+
+align-items:center;
+justify-content:center;
+
+opacity:0;
+
+pointer-events:none;
+
+transition:0.35s;
+
+z-index:9999;
+
+box-shadow:
+0 8px 24px rgba(4,30,25,0.28),
+-5px 0 18px rgba(77,154,121,0.12),
+5px 0 18px rgba(102,174,176,0.12);
+}
+
+.back-to-top.show{
+opacity:1;
+
+pointer-events:auto;
+}
+
+.back-to-top:hover{
+transform:translateY(-3px);
+
+background:linear-gradient(
+135deg,
+#4b9d7c,
+#83bb7c,
+#5aa3a0
+);
+
+box-shadow:
+0 10px 30px rgba(4,30,25,0.34),
+-6px 0 20px rgba(77,154,121,0.16),
+6px 0 20px rgba(102,174,176,0.16);
+}
+
+/* FOOTER */
+
+footer{
+padding:70px 20px;
+
+text-align:center;
+
+color:#b8cdc3;
+
+line-height:2;
+}
+
+.footer-links{
+margin-top:16px;
+
+display:flex;
+
+justify-content:center;
+
+flex-wrap:wrap;
+
+gap:18px;
+}
+
+.footer-links a{
+color:#dce9e3;
+
+transition:0.3s;
+}
+
+.footer-links a:hover{
+color:#d3df83;
+}
+
+/* ANIMATION */
+
+.fade-up{
+opacity:1;
+
+transform:none;
+}
+
+/* MOBILE / TABLETTE */
+
+@media(max-width:900px){
+
+.mobile-btn{
+display:block;
+}
+
+.nav-links{
+display:none;
+
+position:absolute;
+
+top:78px;
+left:20px;
+right:20px;
+
+background:linear-gradient(
+135deg,
+rgba(12,46,40,0.98),
+rgba(20,63,52,0.98)
+);
+
+padding:22px;
+
+border-radius:26px;
+
+flex-direction:column;
+
+z-index:999;
+
+border:1px solid rgba(255,255,255,0.10);
+
+box-shadow:
+0 16px 36px rgba(4,30,25,0.30),
+0 0 24px rgba(77,154,121,0.08);
+}
+
+.nav-links.active{
+display:flex;
+}
+
+.section{
+padding:42px 18px;
+}
+
+.section-title{
+font-size:1.8rem;
+}
+
+.gp-nav{
+padding:0 18px;
+}
+
+.gp-nav a{
+font-size:0.85rem;
+}
+
+.faq-item summary{
+font-size:0.95rem;
+
+grid-template-columns:1fr auto 18px;
+
+gap:8px;
+}
+
+.faq-item summary .badge{
+font-size:0.72rem;
+
+padding:7px 9px;
+}
+
+.event-btn{
+margin:0 8px 12px 16px;
+
+padding:10px 14px;
+
+font-size:0.86rem;
+}
+
+.page-header{
+padding:72px 20px 66px;
+
+background-position:center;
+}
+
+.page-header h1{
+font-size:2.6rem;
+
+line-height:1.05;
+
+letter-spacing:-1px;
+}
+
+.page-header p{
+font-size:1rem;
+
+line-height:1.65;
+}
+
+}
+
+/* MOBILE */
+
+@media(max-width:600px){
+
+.page-header{
+padding:64px 18px 58px;
+}
+
+.page-header h1{
+font-size:2.35rem;
+
+line-height:1.05;
+}
+
+.page-header p{
+font-size:1rem;
+
+line-height:1.65;
+}
+
+.section-title{
+font-size:1.65rem;
+
+color:#edf5f0;
+
+text-shadow:0 2px 10px rgba(4,30,25,0.20);
+}
+
+/* NAVIGATION MONTHS MOBILE */
+
+.gp-nav{
+display:flex;
+
+flex-wrap:nowrap;
+
+justify-content:flex-start;
+
+overflow-x:auto;
+
+padding:0 18px 10px;
+
+gap:10px;
+
+scrollbar-width:none;
+
+-webkit-overflow-scrolling:touch;
+}
+
+.gp-nav::-webkit-scrollbar{
+display:none;
+}
+
+.gp-nav a{
+flex:0 0 auto;
+
+white-space:nowrap;
+
+font-size:0.85rem;
+
+padding:9px 13px;
+}
+
+/* EVENTS */
+
+.faq{
+gap:10px;
+}
+
+.faq-item{
+border-radius:16px;
+}
+
+.faq-item summary{
+grid-template-columns:1fr 18px;
+
+padding:15px;
+}
+
+.faq-item summary .badge{
+grid-column:1 / -1;
+
+justify-self:start;
+
+margin-top:4px;
+}
+
+.faq-item p{
+padding:0 15px 13px;
+}
+
+/* BUTTONS */
+
+.event-btn{
+display:flex;
+
+width:calc(100% - 32px);
+
+margin:0 16px 12px;
+}
+
+/* CARDS */
+
+.card{
+padding:22px 20px;
+
+border-radius:20px;
+}
+
+/* INFO BOX */
+
+.info-box{
+padding:22px 20px;
+
+border-radius:20px;
+}
+
+/* CTA */
+
+.cta{
+min-height:300px;
+
+border-radius:24px;
+}
+
+.cta-content{
+padding:28px 20px;
+}
+
+.cta-content h2{
+font-size:1.65rem;
+
+line-height:1.2;
+}
+
+.cta-content p{
+font-size:0.95rem;
+
+line-height:1.65;
+}
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<nav class="navbar">
+
+<a href="index-en.html" class="logo">
+🌍 Vidolta
+</a>
+
+<div class="mobile-btn" onclick="toggleMenu()">
+☰
+</div>
+
+<div class="nav-links">
+
+<a href="#january">
+📅 Calendar
+</a>
+
+<a href="events-en.html" class="active">
+🌿 Nature
+</a>
+
+<a href="destinations-en.html">
+🌍 Destinations
+</a>
+
+</div>
+
+</nav>
+
+<header class="page-header" id="calendar">
+
+<h1>
+Natural Phenomena Around the World
+</h1>
+
+<p>
+Northern lights, spectacular blooms, wildlife migrations and seasonal landscapes: discover the world's most beautiful natural phenomena month by month and find the perfect time to experience them while travelling.
+</p>
+
+</header>
+
+<div class="legend">
+
+<span class="badge badge-highlight">
+✨ Must-sees
+</span>
+
+<span class="badge badge-tradition">
+🌿 Nature
+</span>
+
+<span class="badge badge-festival">
+🐾 Wildlife & Seasons
+</span>
+
+</div>
+
+<nav class="gp-nav">
+
+<a href="#january">January</a> <a href="#february">February</a> <a href="#march">March</a> <a href="#april">April</a> <a href="#may">May</a> <a href="#june">June</a> <a href="#july">July</a> <a href="#august">August</a> <a href="#september">September</a> <a href="#october">October</a> <a href="#november">November</a> <a href="#december">December</a>
+
+</nav>
+
+<section class="section" id="january">
+
+<h2 class="section-title">
+❄️ January
+</h2>
+
+<div class="faq">
+
+<details class="faq-item fade-up">
+
+<summary>
+🌌 Northern Lights — Norway
+<span class="badge badge-highlight">
+✨ Must-see
+</span>
+</summary>
+
+<p>
+📅 Best season: from autumn to early spring
+</p>
+
+<p>
+📍 Tromsø and Northern Norway
+</p>
+
+<p>
+🌌 Curtains of green light, sometimes tinged with pink or purple, can appear in the sky when solar activity interacts with the upper layers of Earth's atmosphere.
+</p>
+
+<p>
+💡 January brings long nights to Northern Norway, making it an excellent time to search for the Northern Lights. However, this is a natural phenomenon and sightings can never be guaranteed.
+</p>
+
+</details>
+
+</div>
+
+</section>
+
+<section class="section" id="february">
+
+<h2 class="section-title">
+🧊 February
+</h2>
+
+<div class="faq">
+
+<details class="faq-item fade-up">
+
+<summary>
+🌌 Northern Lights — Iceland
+<span class="badge badge-highlight">
+✨ Must-see
+</span>
+</summary>
+
+<p>
+📅 Best season: September to March
+</p>
+
+<p>
+📍 Iceland
+</p>
+
+<p>
+🌌 When the sky is dark and clear enough, glowing curtains of green light, sometimes pink or purple, can appear above Iceland's dramatic landscapes.
+</p>
+
+<p>
+💡 February still offers long nights combined with spectacular winter scenery. However, the Northern Lights remain unpredictable: sightings depend on solar activity, cloud cover and local conditions.
+</p>
+
+</details>
+
+<details class="faq-item fade-up">
+
+<summary>
+🫧 Frozen Bubbles at Abraham Lake — Canada
+<span class="badge badge-tradition">
+🌿 Nature
+</span>
+</summary>
+
+<p>
+📅 Mainly during winter
+</p>
+
+<p>
+📍 Abraham Lake, Alberta — Canada
+</p>
+
+<p>
+🧊 Methane bubbles produced beneath the water can become trapped within several layers of ice, creating striking white patterns beneath the frozen surface.
+</p>
+
+<p>
+💡 Abraham Lake is one of the world's best-known places to observe this phenomenon. However, ice conditions can be unstable, so visits should always take local conditions and safety advice into account.
+</p>
+
+</details>
+
+<details class="faq-item fade-up">
+
+<summary>
+🐋 Gray Whales — Baja California
+<span class="badge badge-festival">
+🐾 Wildlife & Seasons
+</span>
+</summary>
+
+<p>
+📅 Generally from January to March
+</p>
+
+<p>
+📍 Baja California Sur, Mexico
+</p>
+
+<p>
+🐋 Every winter, gray whales migrate to the sheltered lagoons of the Baja California Peninsula to breed and give birth.
+</p>
+
+<p>
+💡 Places such as San Ignacio Lagoon and Magdalena Bay are among the most renowned locations for witnessing this spectacular migration while respecting local wildlife regulations.
+</p>
+
+</details>
+
+</div>
+
+</section>
+
+<section class="section" id="march">
+
+<h2 class="section-title">
+🌸 March
+</h2>
+
+<div class="faq">
+
+<details class="faq-item fade-up">
+
+<summary>
+🌸 Cherry Blossoms — Japan
+<span class="badge badge-highlight">✨ Must-see</span>
+</summary>
+
+<p>
+📅 Generally from March to April depending on the region
+</p>
+
+<p>
+📍 Japan — especially Tokyo, Kyoto and Osaka
+</p>
+
+<p>
+🌸 For a few days, thousands of cherry trees burst into pink and white blossoms, transforming parks, temples and riverbanks.
+</p>
+
+<p>
+💡 The blossom season gradually moves from southern to northern Japan, and dates vary each year depending on temperatures. “Hanami”, the tradition of admiring the flowers, makes this one of the country's most iconic travel seasons.
+</p>
+
+</details>
+
+<details class="faq-item fade-up">
+
+<summary>
+🌼 Super Bloom — California
+<span class="badge badge-tradition">🌿 Nature</span>
+</summary>
+
+<p>
+📅 Possible between February and April depending on the year
+</p>
+
+<p>
+📍 California, United States
+</p>
+
+<p>
+🌼 After particularly favourable winter conditions, some desert regions can become covered in millions of wildflowers.
+</p>
+
+<p>
+💡 The phenomenon known as a “super bloom” does not occur every year, and its intensity depends heavily on rainfall, temperatures and many other natural factors. When it happens, desert landscapes can be completely transformed.
+</p>
+
+</details>
+
+<details class="faq-item fade-up">
+
+<summary>
+🦋 Monarch Butterfly Migration — Mexico
+<span class="badge badge-festival">🐾 Wildlife & Seasons</span>
+</summary>
+
+<p>
+📅 Winter viewing season until March
+</p>
+
+<p>
+📍 Michoacán and the State of Mexico — Mexico
+</p>
+
+<p>
+🦋 Millions of monarch butterflies spend the winter clustered together in the mountain forests of central Mexico before beginning their migration north.
+</p>
+
+<p>
+💡 In late winter, warmer temperatures increase their activity before departure. Several sanctuaries offer the opportunity to observe this extraordinary natural phenomenon in protected areas.
+</p>
+
+</details>
+
+</div>
+
+</section>
+
+<section class="section" id="april">
+
+<h2 class="section-title">
+🌷 April
+</h2>
+
+<div class="faq">
+
+<details class="faq-item fade-up">
+
+<summary>
+🌷 Tulip Fields — Netherlands
+<span class="badge badge-highlight">✨ Must-see</span>
+</summary>
+
+<p>
+📅 Generally from late March to early May
+</p>
+
+<p>
+📍 Netherlands — especially around Lisse
+</p>
+
+<p>
+🌷 In spring, vast tulip fields cover parts of the Dutch countryside with bands of red, yellow, pink, purple and white.
+</p>
+
+<p>
+💡 April is generally the heart of tulip season. The area around Lisse, between Amsterdam and The Hague, is especially famous for its colourful landscapes and the renowned Keukenhof gardens. Exact blooming times still depend on weather conditions.
+</p>
+
+<a href="amsterdam-en.html" class="event-btn destination-btn">
+🌍 Discover Amsterdam
+</a>
+
+</details>
+
+<details class="faq-item fade-up">
+
+<summary>
+🌸 Cherry Blossoms — South Korea
+<span class="badge badge-tradition">🌿 Nature</span>
+</summary>
+
+<p>
+📅 Generally from late March to mid-April
+</p>
+
+<p>
+📍 South Korea — especially Seoul, Jinhae and Gyeongju
+</p>
+
+<p>
+🌸 As spring returns, cherry trees cover parks, avenues and riverbanks across many South Korean cities with white and pink blossoms.
+</p>
+
+<p>
+💡 The bloom generally progresses from south to north across the country. Jinhae is particularly famous for its cherry blossoms, while Seoul offers many easily accessible places to enjoy the season.
+</p>
+
+<a href="seoul-en.html" class="event-btn destination-btn">
+🌍 Discover Seoul
+</a>
+
+</details>
+
+<details class="faq-item fade-up">
+
+<summary>
+💜 Wisteria in Bloom — Japan
+<span class="badge badge-highlight">✨ Must-see</span>
+</summary>
+
+<p>
+📅 Generally from mid-April to early May
+</p>
+
+<p>
+📍 Japan — especially Ashikaga and Kitakyushu
+</p>
+
+<p>
+💜 Huge clusters of purple, pink and white wisteria form flower tunnels and cascading displays in several Japanese gardens.
+</p>
+
+<p>
+💡 After cherry blossom season, wisteria provides another remarkable spring spectacle. Ashikaga Flower Park and Kawachi Wisteria Garden are among the most famous places to see them.
+</p>
+
+</details>
+
+</div>
+
+</section>
+
+<section class="section" id="may">
+
+<h2 class="section-title">
+🌿 May
+</h2>
+
+<div class="faq">
+
+<details class="faq-item fade-up">
+
+<summary>
+✨ Bioluminescence — Maldives
+<span class="badge badge-highlight">✨ Must-see</span>
+</summary>
+
+<p>
+📅 Possible at different times of the year
+</p>
+
+<p>
+📍 Maldives
+</p>
+
+<p>
+✨ On some nights, bioluminescent plankton can produce tiny blue flashes when the water is disturbed, sometimes creating the impression of a starry sky along the ocean's edge.
+</p>
+
+<p>
+💡 This phenomenon is natural and unpredictable. Its visibility depends on factors such as plankton concentration, currents, weather and ambient light, so no trip can guarantee a sighting.
+</p>
+
+</details>
+
+<details class="faq-item fade-up">
+
+<summary>
+🐢 Sea Turtles — Costa Rica
+<span class="badge badge-festival">🐾 Wildlife & Seasons</span>
+</summary>
+
+<p>
+📅 Several nesting seasons depending on the species and coastline
+</p>
+
+<p>
+📍 Costa Rica
+</p>
+
+<p>
+🐢 Every year, different species of sea turtles return to Costa Rica's beaches to lay their eggs, sometimes in very large numbers.
+</p>
+
+<p>
+💡 Timing varies considerably depending on the species and region. Protected sites on both the Caribbean and Pacific coasts make it possible to observe certain stages of this natural cycle through regulated excursions.
+</p>
+
+</details>
+
+<details class="faq-item fade-up">
+
+<summary>
+🌺 Himalayan Rhododendrons — Nepal
+<span class="badge badge-tradition">🌿 Nature</span>
+</summary>
+
+<p>
+📅 Mainly in spring
+</p>
+
+<p>
+📍 Himalayan region — Nepal
+</p>
+
+<p>
+🌺 In spring, the rhododendron forests of Nepal's mountains burst into red, pink and white flowers, with the Himalayan peaks rising in the background.
+</p>
+
+<p>
+💡 Several trekking routes pass through these flowering forests. Altitude strongly influences the blooming period, which gradually shifts towards higher elevations as spring progresses.
+</p>
+
+</details>
+
+</div>
+
+</section>
+
+<section class="section" id="june">
+
+<h2 class="section-title">
+☀️ June
+</h2>
+
+<div class="faq">
+
+<details class="faq-item fade-up">
+
+<summary>
+☀️ Midnight Sun — Norway
+<span class="badge badge-highlight">✨ Must-see</span>
+</summary>
+
+<p>
+📅 From May to July depending on latitude
+</p>
+
+<p>
+📍 Northern Norway — especially Tromsø and the Lofoten Islands
+</p>
+
+<p>
+☀️ Beyond the Arctic Circle, the Sun can remain visible above the horizon throughout the night, creating several weeks of almost continuous daylight.
+</p>
+
+<p>
+💡 June is one of the best times to experience the midnight sun in Northern Norway. Night-time hikes, scenic drives and the landscapes of the Lofoten Islands become especially spectacular during this period.
+</p>
+
+</details>
+
+<details class="faq-item fade-up">
+
+<summary>
+🌺 Jacaranda Bloom — South America
+<span class="badge badge-tradition">🌿 Nature</span>
+</summary>
+
+<p>
+📅 Timing varies depending on the destination
+</p>
+
+<p>
+📍 Several regions of South America
+</p>
+
+<p>
+🌺 When jacaranda trees bloom, their purple flowers transform certain avenues and parks into striking colourful landscapes.
+</p>
+
+<p>
+💡 The flowering period varies greatly depending on the climate and destination, so it is best to check local conditions before planning a trip specifically around this phenomenon.
+</p>
+
+</details>
+
+<details class="faq-item fade-up">
+
+<summary>
+🐋 Humpback Whales — Australia
+<span class="badge badge-festival">🐾 Wildlife & Seasons</span>
+</summary>
+
+<p>
+📅 Generally from May to November depending on the region
+</p>
+
+<p>
+📍 Australia's east and west coasts
+</p>
+
+<p>
+🐋 Thousands of humpback whales migrate along the Australian coastline between their Antarctic feeding grounds and warmer waters where they breed.
+</p>
+
+<p>
+💡 Several regions of Australia offer whale-watching trips during this migration. The best time varies depending on the coast and destination.
+</p>
+
+</details>
+
+</div>
+
+</section>
+
+<section class="section" id="july">
+
+<h2 class="section-title">
+💜 July
+</h2>
+
+<div class="faq">
+
+<details class="faq-item fade-up">
+
+<summary>
+💜 Lavender Fields — Provence
+<span class="badge badge-highlight">✨ Must-see</span>
+</summary>
+
+<p>
+📅 Generally from June to early August depending on the area
+</p>
+
+<p>
+📍 Provence — France
+</p>
+
+<p>
+💜 As summer arrives, lavender fields turn the landscapes of Provence purple, creating one of the most iconic scenes in southern France.
+</p>
+
+<p>
+💡 The Valensole Plateau, the Sault area and several parts of the Luberon are among the best-known places to see them. Blooming and harvesting times vary depending on altitude, weather and location.
+</p>
+
+</details>
+
+<details class="faq-item fade-up">
+
+<summary>
+🦓 Great Migration — Kenya & Tanzania
+<span class="badge badge-highlight">✨ Must-see</span>
+</summary>
+
+<p>
+📅 Migration throughout the year — stages vary with the seasons
+</p>
+
+<p>
+📍 Serengeti, Tanzania & Maasai Mara, Kenya
+</p>
+
+<p>
+🦓 Vast herds of wildebeest, accompanied by zebras and other herbivores, move across the Serengeti and Maasai Mara ecosystem in search of water and fresh grazing.
+</p>
+
+<p>
+💡 Between July and October, northward movements and river crossings can provide some of the most spectacular moments. However, the migration remains a natural phenomenon and its exact timing varies according to rainfall and local conditions.
+</p>
+
+</details>
+
+<details class="faq-item fade-up">
+
+<summary>
+🐋 Humpback Whales — Madagascar
+<span class="badge badge-festival">🐾 Wildlife & Seasons</span>
+</summary>
+
+<p>
+📅 Generally from June to September
+</p>
+
+<p>
+📍 Île Sainte-Marie — Madagascar
+</p>
+
+<p>
+🐋 Every austral winter, humpback whales migrate to the warm waters around Madagascar to breed and give birth.
+</p>
+
+<p>
+💡 Île Sainte-Marie is particularly well known for whale watching during this period. Boat excursions should favour operators that respect wildlife-viewing distances and local regulations.
+</p>
+
+</details>
+
+</div>
+
+</section>
+
+<section class="section" id="august">
+
+<h2 class="section-title">
+🌠 August
+</h2>
+
+<div class="faq">
+
+<details class="faq-item fade-up">
+
+<summary>
+🌠 Perseids — Meteor Shower
+<span class="badge badge-highlight">✨ Must-see</span>
+</summary>
+
+<p>
+📅 Every year around mid-August
+</p>
+
+<p>
+📍 Visible across much of the Northern Hemisphere
+</p>
+
+<p>
+🌠 Earth passes through a stream of debris left behind by Comet Swift-Tuttle, producing one of the most famous meteor showers of the year.
+</p>
+
+<p>
+💡 For the best experience, choose a location away from light pollution with a clear view of the sky. Viewing conditions vary depending on the weather and the brightness of the Moon.
+</p>
+
+</details>
+
+<details class="faq-item fade-up">
+
+<summary>
+🦓 Mara River Crossings — East Africa
+<span class="badge badge-festival">🐾 Wildlife & Seasons</span>
+</summary>
+
+<p>
+📅 Often between July and October
+</p>
+
+<p>
+📍 Kenya & Tanzania
+</p>
+
+<p>
+🦓 During the Great Migration, enormous herds of wildebeest and zebras may attempt to cross rivers separating their grazing areas.
+</p>
+
+<p>
+💡 The Mara River crossings are among the most famous scenes of the migration. They remain completely unpredictable: no exact date or safari can guarantee witnessing one.
+</p>
+
+</details>
+
+<details class="faq-item fade-up">
+
+<summary>
+🌻 Sunflower Fields — Tuscany
+<span class="badge badge-tradition">🌿 Nature</span>
+</summary>
+
+<p>
+📅 Mainly during summer
+</p>
+
+<p>
+📍 Tuscany — Italy
+</p>
+
+<p>
+🌻 Vast sunflower fields appear across the Tuscan countryside in summer, set among villages, cypress trees and rolling farmland.
+</p>
+
+<p>
+💡 Blooming periods vary depending on planting schedules and weather conditions. The countryside around Siena, the Val d'Orcia and other parts of Tuscany can offer beautiful summer landscapes.
+</p>
+
+</details>
+
+</div>
+
+</section>
+
+<section class="section" id="september">
+
+<h2 class="section-title">
+🍂 September
+</h2>
+
+<div class="faq">
+
+<details class="faq-item fade-up">
+
+<summary>
+🍁 First Autumn Colours — Canada
+<span class="badge badge-highlight">✨ Must-see</span>
+</summary>
+
+<p>
+📅 Generally from September to October depending on the region
+</p>
+
+<p>
+📍 Quebec and Ontario — Canada
+</p>
+
+<p>
+🍁 Forests begin to turn red, orange and yellow as temperatures fall and autumn gradually settles in.
+</p>
+
+<p>
+💡 Exact timing varies depending on latitude, altitude and weather conditions. Some parts of Quebec can already display beautiful autumn colours by late September.
+</p>
+
+<a href="montreal-en.html" class="event-btn destination-btn">
+🌍 Discover Montreal
+</a>
+
+</details>
+
+<details class="faq-item fade-up">
+
+<summary>
+🌌 Return of the Northern Lights — Iceland
+<span class="badge badge-tradition">🌿 Nature</span>
+</summary>
+
+<p>
+📅 From September to early spring
+</p>
+
+<p>
+📍 Iceland
+</p>
+
+<p>
+🌌 As sufficiently dark nights return, September marks the beginning of a new season for observing the Northern Lights.
+</p>
+
+<p>
+💡 This period combines relatively accessible landscapes, milder temperatures than in the middle of winter and increasingly long nights. As always, solar activity and weather conditions remain decisive.
+</p>
+
+</details>
+
+</div>
+
+</section>
+
+<section class="section" id="october">
+
+<h2 class="section-title">
+🍁 October
+</h2>
+
+<div class="faq">
+
+<details class="faq-item fade-up">
+
+<summary>
+🍁 Fall Colours — Canada
+<span class="badge badge-highlight">✨ Must-see</span>
+</summary>
+
+<p>
+📅 Generally from late September through October
+</p>
+
+<p>
+📍 Quebec and Eastern Canada
+</p>
+
+<p>
+🍁 In autumn, Canada's vast forests take on spectacular shades of red, orange and gold.
+</p>
+
+<p>
+💡 October is often one of the best times to enjoy autumn colours in southern Quebec. Peak foliage dates change every year and vary from one region to another.
+</p>
+
+<a href="montreal-en.html" class="event-btn destination-btn">
+🌍 Discover Montreal
+</a>
+
+</details>
+
+<details class="faq-item fade-up">
+
+<summary>
+🌊 Giant Waves — Nazaré
+<span class="badge badge-tradition">🌿 Nature</span>
+</summary>
+
+<p>
+📅 Largest swells generally occur from autumn to winter
+</p>
+
+<p>
+📍 Nazaré, Portugal
+</p>
+
+<p>
+🌊 The underwater geography of the Nazaré Canyon can amplify certain Atlantic swells and produce waves of exceptional height.
+</p>
+
+<p>
+💡 There is no guaranteed date for seeing giant waves. The best days depend on Atlantic storms and swell conditions, sometimes becoming clear only a few days in advance.
+</p>
+
+</details>
+
+<details class="faq-item fade-up">
+
+<summary>
+🦌 Red Deer Rut — Europe
+<span class="badge badge-festival">🐾 Wildlife & Seasons</span>
+</summary>
+
+<p>
+📅 Generally from September to October
+</p>
+
+<p>
+📍 Forested regions across Europe
+</p>
+
+<p>
+🦌 In autumn, male red deer produce powerful calls to attract females and assert their presence against rival males.
+</p>
+
+<p>
+💡 This period offers an impressive natural and acoustic experience. Wildlife should be observed from a distance to avoid disturbing the animals during this essential stage of their breeding cycle.
+</p>
+
+</details>
+
+</div>
+
+</section>
+
+<section class="section" id="november">
+
+<h2 class="section-title">
+🍁 November
+</h2>
+
+<div class="faq">
+
+<details class="faq-item fade-up">
+
+<summary>
+🍁 Kōyō — Autumn Leaves in Japan
+<span class="badge badge-highlight">✨ Must-see</span>
+</summary>
+
+<p>
+📅 From October to December depending on the region
+</p>
+
+<p>
+📍 Japan — especially Kyoto and Tokyo
+</p>
+
+<p>
+🍁 Red maple leaves, golden ginkgo trees and traditional gardens take on spectacular colours during Japan's autumn foliage season.
+</p>
+
+<p>
+💡 After the spring cherry blossoms, kōyō is one of Japan's major seasonal spectacles. November is particularly popular in places such as Kyoto, although peak dates vary from year to year.
+</p>
+
+<a href="tokyo-en.html" class="event-btn destination-btn">
+🌍 Discover Tokyo
+</a>
+
+</details>
+
+<details class="faq-item fade-up">
+
+<summary>
+🦋 Arrival of Monarch Butterflies — Mexico
+<span class="badge badge-festival">🐾 Wildlife & Seasons</span>
+</summary>
+
+<p>
+📅 Generally from November onwards
+</p>
+
+<p>
+📍 Michoacán and the State of Mexico — Mexico
+</p>
+
+<p>
+🦋 After migrating several thousand kilometres, monarch butterflies reach the mountain forests of central Mexico, where they spend the winter.
+</p>
+
+<p>
+💡 As the colonies form, some trees can host thousands of butterflies. Protected sanctuaries are the main places to experience this extraordinary natural phenomenon.
+</p>
+
+</details>
+
+<details class="faq-item fade-up">
+
+<summary>
+🌊 Big Wave Season — Nazaré
+<span class="badge badge-tradition">🌿 Nature</span>
+</summary>
+
+<p>
+📅 Mainly from November to February
+</p>
+
+<p>
+📍 Nazaré, Portugal
+</p>
+
+<p>
+🌊 Powerful winter swells from the Atlantic can generate some of the most impressive surfed waves in the world at Nazaré.
+</p>
+
+<p>
+💡 November generally marks the beginning of the main season, but truly spectacular days are impossible to predict months in advance. Swell forecasts should be monitored as the trip approaches.
+</p>
+
+</details>
+
+</div>
+
+</section>
+
+<section class="section" id="december">
+
+<h2 class="section-title">
+❄️ December
+</h2>
+
+<div class="faq">
+
+<details class="faq-item fade-up">
+
+<summary>
+🌌 Northern Lights — Lapland
+<span class="badge badge-highlight">✨ Must-see</span>
+</summary>
+
+<p>
+📅 Best season: from autumn to early spring
+</p>
+
+<p>
+📍 Lapland — Finland, Sweden and Norway
+</p>
+
+<p>
+🌌 Long polar nights provide many hours of darkness during which the Northern Lights may appear above snow-covered landscapes.
+</p>
+
+<p>
+💡 December offers the opportunity to combine a winter experience in Lapland with the search for the Northern Lights. Their appearance, however, remains entirely dependent on solar activity and weather conditions.
+</p>
+
+</details>
+
+<details class="faq-item fade-up">
+
+<summary>
+❄️ Snow-Covered Landscapes — Finnish Lapland
+<span class="badge badge-tradition">🌿 Nature</span>
+</summary>
+
+<p>
+📅 Generally from November to spring depending on the region
+</p>
+
+<p>
+📍 Lapland, Finland
+</p>
+
+<p>
+❄️ Forests, frozen lakes and Arctic landscapes gradually become covered by a thick layer of snow during winter.
+</p>
+
+<p>
+💡 Snow completely transforms the landscapes of northern Finland, offering a true Arctic experience in the heart of the polar night.
+</p>
+
+</details>
+
+<details class="faq-item fade-up">
+
+<summary>
+🐧 King Penguins — South Georgia
+<span class="badge badge-festival">🐾 Wildlife & Seasons</span>
+</summary>
+
+<p>
+📅 Possible to observe during the austral summer
+</p>
+
+<p>
+📍 South Georgia — South Atlantic
+</p>
+
+<p>
+🐧 Enormous colonies of king penguins gather on some of the island's beaches, creating one of the most impressive wildlife spectacles on the planet.
+</p>
+
+<p>
+💡 December falls during the austral summer and the expedition season in this extremely remote region. Access is mainly possible through specialised voyages operating under strict wildlife protection rules.
+</p>
+
+</details>
+
+<details class="faq-item fade-up">
+
+<summary>
+🌌 Polar Night — Arctic
+<span class="badge badge-highlight">✨ Must-see</span>
+</summary>
+
+<p>
+📅 Around December and January depending on latitude
+</p>
+
+<p>
+📍 Regions located beyond the Arctic Circle
+</p>
+
+<p>
+🌌 In the middle of winter, the Sun does not rise for several days or even several weeks in the northernmost regions.
+</p>
+
+<p>
+💡 The polar night does not necessarily mean permanent total darkness: beautiful blue and twilight tones can appear around midday, creating a very distinctive atmosphere.
+</p>
+
+</details>
+
+</div>
+
+</section>
+
+<section class="section">
+
+<div class="info-box">
+
+<p>
+📅 The periods shown are provided as a guide. Natural phenomena often depend on weather, temperatures, rainfall, solar activity or animal behaviour. Always check local conditions before planning your trip.
+</p>
+
+</div>
+
+</section>
+
+<section id="prepare-nature" class="section">
+
+<h2 class="section-title">
+🌿 Preparing Your Trip to See a Natural Phenomenon
+</h2>
+
+<div class="info-box">
+
+<p>
+📅 <strong>Check the best time to go:</strong> blooms, wildlife migrations, autumn colours and the Northern Lights do not always follow exactly the same schedule every year. Check local information before booking.
+</p>
+
+<p>
+🌦️ <strong>Stay flexible:</strong> some phenomena depend heavily on weather conditions. Spending several days at your destination often increases your chances of experiencing the spectacle in good conditions.
+</p>
+
+<p>
+📍 <strong>Choose the right location:</strong> conditions within the same region can vary considerably depending on altitude, exposure, light pollution or the stage of the season.
+</p>
+
+<p>
+🔭 <strong>Prepare for the experience:</strong> suitable clothing, binoculars, a torch, appropriate footwear, cold-weather protection or photography equipment may be useful depending on the phenomenon you want to observe.
+</p>
+
+<p>
+🐾 <strong>Respect nature:</strong> observe wildlife from a distance, stay on authorised trails and follow the rules of parks, reserves and protected areas.
+</p>
+
+<p>
+⚠️ <strong>Never consider a phenomenon guaranteed:</strong> the Northern Lights, a wildlife migration, a bloom or an exceptional wave remain natural phenomena. Even during the best season, seeing them may not be possible.
+</p>
+
+</div>
+
+</section>
+
+<section id="faq" class="section">
+
+<h2 class="section-title">
+❓ Natural Phenomena FAQ
+</h2>
+
+<div class="faq">
+
+<details class="faq-item fade-up">
+
+<summary>
+📅 Are the periods shown guaranteed?
+</summary>
+
+<p>
+No. The periods generally correspond to the most favourable seasons, but natural phenomena may occur earlier or later, or be less spectacular depending on the conditions that year.
+</p>
+
+</details>
+
+<details class="faq-item fade-up">
+
+<summary>
+🌌 Can seeing the Northern Lights be guaranteed?
+</summary>
+
+<p>
+No. Even during the most favourable season, their appearance depends on factors such as solar activity, cloud cover, ambient light and your location. Staying for several nights generally increases your chances of seeing them.
+</p>
+
+</details>
+
+<details class="faq-item fade-up">
+
+<summary>
+🌸 How can I find the exact dates of a bloom?
+</summary>
+
+<p>
+Blooming periods vary depending on temperatures, rainfall, altitude and region. For cherry blossoms in Japan, tulips in the Netherlands or autumn colours, local forecasts are often published as the season approaches.
+</p>
+
+</details>
+
+<details class="faq-item fade-up">
+
+<summary>
+🐋 What is the best time to see wildlife?
+</summary>
+
+<p>
+It depends on the species and destination. Some migrations follow relatively regular seasonal cycles, but animal movements remain influenced by food availability, rainfall, temperatures and other natural factors.
+</p>
+
+</details>
+
+<details class="faq-item fade-up">
+
+<summary>
+🌍 Can I plan a trip specifically around a natural phenomenon?
+</summary>
+
+<p>
+Yes. The Northern Lights, cherry blossoms, the Great Migration in Africa or autumn colours can become the main theme of a trip. However, it is a good idea to plan other activities as well, so the journey remains enjoyable if conditions prevent you from seeing the phenomenon you came for.
+</p>
+
+</details>
+
+<details class="faq-item fade-up">
+
+<summary>
+⚠️ What precautions should I take before an excursion?
+</summary>
+
+<p>
+Always check the weather, local alerts, road or trail conditions and official recommendations. Some phenomena can involve challenging environments such as ice, high mountains, the ocean or extremely remote areas.
+</p>
+
+</details>
+
+</div>
+
+</section>
+
+<section class="section">
+
+<div class="cta">
+
+<img
+src="images/phenomenes-naturels-panorama.webp"
+alt="Natural phenomena around the world">
+
+<div class="cta-content">
+
+<h2>
+🌿 Ready to Experience an Unforgettable Natural Spectacle?
+</h2>
+
+<p>
+Choose the right season, discover the world's most beautiful natural phenomena
+and plan your trip to experience them in the best possible conditions.
+</p>
+
+<a href="destinations-en.html" class="event-btn destination-btn" style="margin-top:22px;">
+🌍 Explore Destinations
+</a>
+
+</div>
+
+</div>
+
+</section>
+
+<button
+class="back-to-top"
+id="backToTop"
+aria-label="Back to top">
+↑ </button>
+
+<footer>
+
+<p>© 2026 Vidolta — Natural Phenomena</p>
+
+<div class="footer-links">
+
+<a href="index-en.html">Home</a> <a href="about-en.html">About</a> <a href="notre-histoire-en.html">Our Story</a> <a href="mentions-legales-en.html">Legal Notice</a> <a href="confidentialite-en.html">Privacy Policy</a> <a href="contact-en.html">Contact</a>
+
+</div>
+
+</footer>
+
+<script>
+
+function toggleMenu(){
+
+const nav = document.querySelector('.nav-links');
+
+if(nav){
+nav.classList.toggle('active');
+}
+
+}
+
+document.querySelectorAll('.nav-links a').forEach(link => {
+
+link.addEventListener('click', () => {
+
+const nav = document.querySelector('.nav-links');
+
+if(nav){
+nav.classList.remove('active');
+}
+
+});
+
+});
+
+const backToTop = document.getElementById('backToTop');
+
+if(backToTop){
+
+window.addEventListener('scroll', () => {
+
+if(window.scrollY > 400){
+
+backToTop.classList.add('show');
+
+}else{
+
+backToTop.classList.remove('show');
+
+}
+
+});
+
+backToTop.addEventListener('click', () => {
+
+window.scrollTo({
+
+top:0,
+behavior:'smooth'
+
+});
+
+});
+
+}
+
+</script>
+
+</body>
+</html>
