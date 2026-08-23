@@ -128,12 +128,12 @@ display:flex;
 justify-content:space-between;
 align-items:center;
 
-background:rgba(31,32,33,0.92);
+background:rgba(5,8,22,0.72);
 
 backdrop-filter:blur(18px);
 -webkit-backdrop-filter:blur(18px);
 
-border-bottom:1px solid rgba(255,255,255,0.06);
+border-bottom:1px solid rgba(255,255,255,0.04);
 }
 
 .logo{
@@ -146,6 +146,12 @@ font-weight:800;
 color:white;
 
 cursor:pointer;
+
+transition:opacity .25s ease;
+}
+
+.logo:hover{
+opacity:.9;
 }
 
 .nav-links{
@@ -155,24 +161,79 @@ align-items:center;
 }
 
 .nav-links a{
-color:#d1d5db;
+color:#cbd5e1;
 font-size:0.95rem;
-transition:0.3s;
+
+transition:
+color .25s ease,
+opacity .25s ease;
 }
 
 .nav-links a:hover{
 color:white;
 }
 
+/* ÉVÉNEMENTS */
+
 .event-link{
-color:#F4E96B !important;
+color:#F4C542 !important;
+}
+
+.event-link:hover{
+color:#FFD95A !important;
+}
+
+/* EXPLORER LE MONDE */
+
+.explorer-link{
+display:inline-block;
+
+background:linear-gradient(90deg,#a78bfa,#7da2ff);
+
+-webkit-background-clip:text;
+background-clip:text;
+
+color:transparent !important;
+
+font-weight:400;
+
+transition:
+transform 0.25s ease,
+filter 0.25s ease;
+}
+
+.explorer-link:hover{
+transform:translateY(-1px);
+filter:brightness(1.15);
+}
+
+/* PARCS & LOISIRS */
+
+.parks-link{
+color:#5fc7bd !important;
 font-weight:600;
 }
 
-.explorer-link{
-font-size:0.82rem !important;
-color:#a3a3a3 !important;
+.parks-link:hover{
+color:#82ddd4 !important;
 }
+
+/* LIENS NAVIGATION SIMPLES */
+
+.nav-simple{
+display:inline-block;
+color:#cbd5e1 !important;
+
+transition:
+color .25s ease,
+opacity .25s ease;
+}
+
+.nav-simple:hover{
+color:white !important;
+}
+
+/* MENU MOBILE */
 
 .mobile-btn{
 display:none;
@@ -1621,41 +1682,47 @@ text-align:center;
 
 <nav class="navbar">
 
-<a href="index.html" class="logo">🌍 Vidolta</a>
+<a href="index.html" class="logo">🌍
+Vidolta</a>
 
-<button
+<div
 class="mobile-btn"
 onclick="toggleMenu()"
+role="button"
+tabindex="0"
 aria-label="Ouvrir le menu">
 ☰
-</button>
+</div>
 
 <div class="nav-links">
 
 <a href="destinations.html">
-🌍 Destinations
+Destinations
 </a>
 
-<a href="events.html" class="event-link">
+<a href="events.html"
+class="event-link">
 🎉 Événements
 </a>
 
-<a href="parcs-loisirs.html" class="parks-link">
+<a href="parcs-loisirs.html"
+class="parks-link">
 🎢 Parcs & loisirs
 </a>
 
-<a href="outils-voyage.html">
-🧰 Outils Voyage
+<a href="world-map.html"
+class="explorer-link">
+Explorer le monde 🌍
 </a>
 
-<a href="travel-tools.html">
-English
+<a href="index-en.html"
+class="nav-simple">
+🇬🇧 English
 </a>
 
 </div>
 
 </nav>
-
 <!-- HERO -->
 
 <section class="hero">
