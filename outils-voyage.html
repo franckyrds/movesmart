@@ -94,18 +94,17 @@ scroll-padding-top:80px;
 body{
 font-family:'Poppins',sans-serif;
 
-background:#272e38;
+background:
+linear-gradient(
+to bottom,
+#272e38 0%,
+#2b333e 30%,
+#303a45 60%,
+#35414c 100%
+);
 
 color:var(--text);
 overflow-x:hidden;
-}
-
-a{
-text-decoration:none;
-}
-
-img{
-display:block;
 }
 
 /* NAVBAR */
@@ -599,12 +598,20 @@ gap:20px;
 
 padding:24px;
 
-background:#dde6e9;
+background:
+linear-gradient(
+135deg,
+#245b6b,
+#1f5060
+);
 
-border:1px solid #e5e7eb;
+border:1px solid rgba(255,255,255,0.12);
 border-radius:22px;
 
 text-align:left;
+
+box-shadow:
+0 10px 26px rgba(0,0,0,0.18);
 
 transition:
 transform 0.25s ease,
@@ -615,10 +622,10 @@ border-color 0.25s ease;
 .single-tool-card:hover{
 transform:translateY(-3px);
 
-border-color:rgba(245,158,11,0.45);
+border-color:rgba(245,158,11,0.55);
 
 box-shadow:
-0 12px 28px rgba(0,0,0,0.07);
+0 14px 30px rgba(0,0,0,0.24);
 }
 
 .single-tool-icon{
@@ -631,8 +638,9 @@ display:flex;
 align-items:center;
 justify-content:center;
 
-background:#fff4df;
+background:#263d56;
 
+border:1px solid rgba(255,255,255,0.10);
 border-radius:16px;
 
 font-size:1.7rem;
@@ -647,7 +655,7 @@ font-size:1.15rem;
 
 margin-bottom:6px;
 
-color:#f1f3f5;
+color:#ffffff;
 }
 
 .single-tool-content p{
@@ -656,11 +664,25 @@ margin:0;
 font-size:0.82rem;
 line-height:1.55;
 
-color:#c4cad2;
+color:#d8e0e6;
 }
 
 .single-tool-card .partner-btn{
 min-width:210px;
+
+background:#383e48;
+
+border:1px solid rgba(255,255,255,0.16);
+
+color:#ffffff;
+}
+
+.single-tool-card .partner-btn:hover{
+background:#414852;
+
+border-color:#f59e0b;
+
+color:#f5b642;
 }
 
 .official-note{
@@ -669,7 +691,7 @@ margin-bottom:0 !important;
 
 font-size:0.7rem !important;
 
-color:#9ca3af !important;
+color:#aeb8c2 !important;
 }
 
 /* ACTIVITES */
