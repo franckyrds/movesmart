@@ -106,47 +106,47 @@ font-family:'Poppins',sans-serif;
 background:
 radial-gradient(
 ellipse at 0% 8%,
-rgba(244,197,66,0.30) 0%,
-rgba(244,197,66,0.12) 25%,
+rgba(139,92,246,0.34) 0%,
+rgba(139,92,246,0.14) 25%,
 transparent 50%
 ),
 
 radial-gradient(
 ellipse at 100% 25%,
-rgba(242,169,59,0.26) 0%,
-rgba(242,169,59,0.10) 24%,
+rgba(244,197,66,0.22) 0%,
+rgba(244,197,66,0.08) 24%,
 transparent 48%
 ),
 
 radial-gradient(
 ellipse at 0% 52%,
-rgba(232,120,50,0.24) 0%,
-rgba(232,120,50,0.09) 25%,
+rgba(181,108,255,0.28) 0%,
+rgba(181,108,255,0.10) 25%,
 transparent 48%
 ),
 
 radial-gradient(
 ellipse at 100% 72%,
-rgba(201,91,38,0.22) 0%,
-rgba(201,91,38,0.08) 24%,
+rgba(242,178,61,0.20) 0%,
+rgba(242,178,61,0.07) 24%,
 transparent 48%
 ),
 
 radial-gradient(
 ellipse at 25% 100%,
-rgba(166,72,31,0.24) 0%,
-rgba(166,72,31,0.08) 25%,
+rgba(130,84,210,0.28) 0%,
+rgba(130,84,210,0.09) 25%,
 transparent 48%
 ),
 
 linear-gradient(
 180deg,
-#4a3518 0%,
-#5b3b18 22%,
-#6c3d1b 43%,
-#74391d 63%,
-#69301e 82%,
-#48251b 100%
+#1a122b 0%,
+#211438 22%,
+#2a1940 43%,
+#241536 63%,
+#301c40 82%,
+#1c142b 100%
 );
 
 color:var(--text);
@@ -224,7 +224,6 @@ color:white;
 
 .event-link{
 color:#F4C542 !important;
-font-weight:600;
 }
 
 .event-link:hover{
@@ -1092,24 +1091,6 @@ pointer-events:auto;
 
 /* COULEURS PAR THÈME */
 
-/* OR COMMUN */
-
-.sports-theme,
-.festivals-theme,
-.fetes-theme,
-.nature-theme,
-.traditions-theme{
---theme-gold:#EFC477;
---theme-gold-light:#F5D99B;
-}
-
-
-/* SPORTS — BLEU NUIT */
-
-.sports-theme .section-title{
-color:#EFC477;
-}
-
 .sports-theme .card{
 background:
 linear-gradient(
@@ -1117,26 +1098,6 @@ linear-gradient(
 rgba(18,38,72,0.92),
 rgba(12,24,48,0.90)
 );
-
-border:1px solid rgba(239,196,119,0.20);
-}
-
-.sports-theme .info-box{
-background:
-linear-gradient(
-135deg,
-rgba(18,38,72,0.92),
-rgba(12,24,48,0.90)
-);
-
-border:1px solid rgba(239,196,119,0.18);
-}
-
-
-/* FESTIVALS — VIOLET */
-
-.festivals-theme .section-title{
-color:#EFC477;
 }
 
 .festivals-theme .card{
@@ -1146,26 +1107,6 @@ linear-gradient(
 rgba(58,24,72,0.92),
 rgba(28,14,48,0.90)
 );
-
-border:1px solid rgba(239,196,119,0.20);
-}
-
-.festivals-theme .info-box{
-background:
-linear-gradient(
-135deg,
-rgba(58,24,72,0.92),
-rgba(28,14,48,0.90)
-);
-
-border:1px solid rgba(239,196,119,0.18);
-}
-
-
-/* FÊTES & TRADITIONS — JAUNE → ORANGE → ROUGE */
-
-.fetes-theme .section-title{
-color:#EFC477;
 }
 
 .fetes-theme .card{
@@ -1176,27 +1117,6 @@ rgba(160,120,38,0.94) 0%,
 rgba(145,70,32,0.93) 50%,
 rgba(112,32,38,0.94) 100%
 );
-
-border:1px solid rgba(239,196,119,0.20);
-}
-
-.fetes-theme .info-box{
-background:
-linear-gradient(
-180deg,
-rgba(160,120,38,0.94) 0%,
-rgba(145,70,32,0.93) 50%,
-rgba(112,32,38,0.94) 100%
-);
-
-border:1px solid rgba(239,196,119,0.18);
-}
-
-
-/* PHÉNOMÈNES NATURELS — VERT */
-
-.nature-theme .section-title{
-color:#EFC477;
 }
 
 .nature-theme .card{
@@ -1206,23 +1126,14 @@ linear-gradient(
 rgba(18,72,48,0.92),
 rgba(10,40,28,0.90)
 );
-
-border:1px solid rgba(239,196,119,0.20);
 }
-
-.nature-theme .info-box{
-background:
-linear-gradient(
-135deg,
-rgba(18,72,48,0.92),
-rgba(10,40,28,0.90)
-);
-
-border:1px solid rgba(239,196,119,0.18);
-}
-
 
 /* SPORTS TRADITIONNELS — NOIR PREMIUM */
+
+.traditions-theme{
+--tradition-gold:#EFC477;
+--tradition-gold-light:#F5D99B;
+}
 
 .traditions-theme .section-title{
 color:#EFC477;
@@ -1245,6 +1156,22 @@ box-shadow:
 inset 0 1px 0 rgba(255,255,255,0.035);
 }
 
+.traditions-theme .card:hover{
+border-color:rgba(239,196,119,0.48);
+
+box-shadow:
+0 18px 42px rgba(0,0,0,0.38),
+0 0 18px rgba(239,196,119,0.05);
+}
+
+.traditions-theme .event-date{
+color:#EFC477;
+}
+
+.traditions-theme .event-location{
+color:#D7D3CF;
+}
+
 .traditions-theme .info-box{
 background:
 linear-gradient(
@@ -1261,224 +1188,14 @@ box-shadow:
 inset 0 1px 0 rgba(255,255,255,0.03);
 }
 
-
-/* HOVER CARTES — CONTOUR OR */
-
-.sports-theme .card:hover,
-.festivals-theme .card:hover,
-.fetes-theme .card:hover,
-.nature-theme .card:hover,
-.traditions-theme .card:hover{
-border-color:rgba(239,196,119,0.48);
-
-box-shadow:
-0 18px 42px rgba(0,0,0,0.38),
-0 0 18px rgba(239,196,119,0.05);
-}
-
-
-/* TITRES DE CARTES — OR */
-
-.sports-theme .card h3,
-.festivals-theme .card h3,
-.fetes-theme .card h3,
-.nature-theme .card h3,
-.traditions-theme .card h3{
-color:#EFC477;
-}
-
-
-/* TEXTES — BLANC */
-
-.sports-theme .card p,
-.festivals-theme .card p,
-.fetes-theme .card p,
-.nature-theme .card p,
-.traditions-theme .card p,
-.sports-theme .info-box,
-.festivals-theme .info-box,
-.fetes-theme .info-box,
-.nature-theme .info-box,
-.traditions-theme .info-box,
-.sports-theme .info-box p,
-.festivals-theme .info-box p,
-.fetes-theme .info-box p,
-.nature-theme .info-box p,
-.traditions-theme .info-box p{
-color:#ffffff;
-}
-
-
-/* DATES — OR */
-
-.sports-theme .event-date,
-.festivals-theme .event-date,
-.fetes-theme .event-date,
-.nature-theme .event-date,
-.traditions-theme .event-date{
-color:#EFC477;
-}
-
-
-/* LIEUX — BLANC */
-
-.sports-theme .event-location,
-.festivals-theme .event-location,
-.fetes-theme .event-location,
-.nature-theme .event-location,
-.traditions-theme .event-location{
-color:#ffffff;
-}
-
-
-/* BOUTON VILLE — TRANSPARENT + CONTOUR OR */
-
-.sports-theme .event-location a,
-.festivals-theme .event-location a,
-.fetes-theme .event-location a,
-.nature-theme .event-location a,
-.traditions-theme .event-location a{
-background:transparent;
-color:#ffffff;
-border:1px solid #EFC477;
-}
-
-.sports-theme .event-location a:hover,
-.festivals-theme .event-location a:hover,
-.fetes-theme .event-location a:hover,
-.nature-theme .event-location a:hover,
-.traditions-theme .event-location a:hover{
-background:rgba(239,196,119,0.10);
-color:#ffffff;
-}
-
-
-/* BOUTONS EXPÉRIENCE / PAGE VIGNETTE / PAGE THÈME — OR */
-
-.sports-theme .experience-btn,
-.festivals-theme .experience-btn,
-.fetes-theme .experience-btn,
-.nature-theme .experience-btn,
-.traditions-theme .experience-btn,
-.sports-theme .info-box .experience-btn,
-.festivals-theme .info-box .experience-btn,
-.fetes-theme .info-box .experience-btn,
-.nature-theme .info-box .experience-btn,
-.traditions-theme .info-box .experience-btn{
-background:#EFC477;
-color:#202124;
-}
-
-.sports-theme .experience-btn:hover,
-.festivals-theme .experience-btn:hover,
-.fetes-theme .experience-btn:hover,
-.nature-theme .experience-btn:hover,
-.traditions-theme .experience-btn:hover,
-.sports-theme .info-box .experience-btn:hover,
-.festivals-theme .info-box .experience-btn:hover,
-.fetes-theme .info-box .experience-btn:hover,
-.nature-theme .info-box .experience-btn:hover,
-.traditions-theme .info-box .experience-btn:hover{
-background:#F5D99B;
-color:#181818;
-}
-
-
-/* BOUTON CALENDRIER — BLANC */
-
-.sports-theme .calendar-btn,
-.festivals-theme .calendar-btn,
-.fetes-theme .calendar-btn,
-.nature-theme .calendar-btn,
-.traditions-theme .calendar-btn{
+.traditions-theme .experience-btn{
 background:#ffffff;
 color:#202124;
 }
 
-.sports-theme .calendar-btn:hover,
-.festivals-theme .calendar-btn:hover,
-.fetes-theme .calendar-btn:hover,
-.nature-theme .calendar-btn:hover,
-.traditions-theme .calendar-btn:hover{
-background:#f1f1f1;
-color:#202124;
-}
-
-
-/* BOUTONS À L'INTÉRIEUR DU CALENDRIER — OR */
-
-.sports-theme .card-calendar-row a,
-.festivals-theme .card-calendar-row a,
-.fetes-theme .card-calendar-row a,
-.nature-theme .card-calendar-row a,
-.traditions-theme .card-calendar-row a{
+.traditions-theme .experience-btn:hover{
 background:#EFC477;
-color:#202124;
-}
-
-.sports-theme .card-calendar-row a:hover,
-.festivals-theme .card-calendar-row a:hover,
-.fetes-theme .card-calendar-row a:hover,
-.nature-theme .card-calendar-row a:hover,
-.traditions-theme .card-calendar-row a:hover{
-background:#F5D99B;
 color:#181818;
-}
-
-
-/* + / - CALENDRIER — OR */
-
-.sports-theme .card-calendar summary::after,
-.festivals-theme .card-calendar summary::after,
-.fetes-theme .card-calendar summary::after,
-.nature-theme .card-calendar summary::after,
-.traditions-theme .card-calendar summary::after{
-color:#EFC477;
-}
-
-
-/* FAQ — TRANSPARENT + CONTOUR OR */
-
-.sports-theme .faq-item,
-.festivals-theme .faq-item,
-.fetes-theme .faq-item,
-.nature-theme .faq-item,
-.traditions-theme .faq-item{
-background:transparent;
-border:1px solid rgba(239,196,119,0.42);
-}
-
-.sports-theme .faq-item:hover,
-.festivals-theme .faq-item:hover,
-.fetes-theme .faq-item:hover,
-.nature-theme .faq-item:hover,
-.traditions-theme .faq-item:hover{
-background:transparent;
-border-color:#EFC477;
-}
-
-.sports-theme .faq-item h3,
-.festivals-theme .faq-item h3,
-.fetes-theme .faq-item h3,
-.nature-theme .faq-item h3,
-.traditions-theme .faq-item h3{
-color:#EFC477;
-}
-
-.sports-theme .faq-item p,
-.festivals-theme .faq-item p,
-.fetes-theme .faq-item p,
-.nature-theme .faq-item p,
-.traditions-theme .faq-item p{
-color:#ffffff;
-}
-
-
-/* BOUTON RETOUR EN HAUT — OR */
-
-.back-to-top{
-background:#EFC477;
-color:#202124;
 }
 
 /* MOBILE */
