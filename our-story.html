@@ -123,6 +123,7 @@ img{
 display:block;
 }
 
+
 /* NAVBAR */
 
 .navbar{
@@ -141,13 +142,15 @@ border-bottom:1px solid rgba(255,255,255,0.04);
 .logo{
 display:inline-flex;
 align-items:center;
-
 font-size:1.65rem;
 font-weight:800;
-
 color:white;
-
 cursor:pointer;
+transition:opacity .25s ease;
+}
+
+.logo:hover{
+opacity:.9;
 }
 
 .nav-links{
@@ -159,22 +162,74 @@ align-items:center;
 .nav-links a{
 color:#cbd5e1;
 font-size:0.95rem;
-transition:0.3s;
+transition:
+color .25s ease,
+opacity .25s ease;
 }
 
 .nav-links a:hover{
 color:white;
 }
 
+/* ÉVÉNEMENTS */
+
 .event-link{
-color:#F4E96B !important;
+color:#F4C542 !important;
+}
+
+.event-link:hover{
+color:#FFD95A !important;
+}
+
+/* PARCS & LOISIRS */
+
+.parks-link{
+color:#5fc7bd !important;
 font-weight:600;
 }
 
-.explorer-link{
-font-size:0.82rem !important;
-color:#94a3b8 !important;
+.parks-link:hover{
+color:#82ddd4 !important;
 }
+
+/* EXPLORER LE MONDE */
+
+.explorer-link{
+display:inline-block;
+
+background:linear-gradient(90deg,#a78bfa,#7da2ff);
+-webkit-background-clip:text;
+background-clip:text;
+color:transparent !important;
+
+font-weight:400;
+
+transition:
+transform 0.25s ease,
+filter 0.25s ease;
+}
+
+.explorer-link:hover{
+transform:translateY(-1px);
+filter:brightness(1.15);
+}
+
+/* LIENS NAVIGATION SIMPLES */
+
+.nav-simple{
+display:inline-block;
+color:#cbd5e1 !important;
+
+transition:
+color .25s ease,
+opacity .25s ease;
+}
+
+.nav-simple:hover{
+color:white !important;
+}
+
+/* MENU MOBILE */
 
 .mobile-btn{
 display:none;
