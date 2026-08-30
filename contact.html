@@ -476,5 +476,75 @@ Contact
 
 </footer>
 
+ 
+<!-- FOOTER -->
+
+<footer>
+
+<p>
+© 2026 Vidolta — One day in your life.
+</p>
+
+<div class="footer-links">
+
+<a href="/"
+>
+Accueil
+</a>
+
+<a href="about.html">
+À propos
+</a>
+
+<a href="notre-histoire.html">
+Notre histoire
+</a>
+
+<a href="mentions-legales.html">
+Mentions légales
+</a>
+
+<a href="confidentialite.html">
+Confidentialité
+</a>
+
+<a href="contact.html">
+Contact
+</a>
+
+</div>
+
+</footer>
+<script>
+
+function toggleMenu(){
+
+const menu = document.querySelector('.nav-links');
+const btn = document.querySelector('.mobile-btn');
+
+menu.classList.toggle('active');
+
+if(menu.classList.contains('active')){
+btn.textContent = '✕';
+btn.setAttribute('aria-label','Fermer le menu');
+}else{
+btn.textContent = '☰';
+btn.setAttribute('aria-label','Ouvrir le menu');
+}
+
+}
+
+document.querySelectorAll('.nav-links a').forEach(link=>{
+link.addEventListener('click',()=>{
+document.querySelector('.nav-links').classList.remove('active');
+
+const btn = document.querySelector('.mobile-btn');
+btn.textContent = '☰';
+btn.setAttribute('aria-label','Ouvrir le menu');
+});
+});
+
+</script>
+
 </body>
 </html>
