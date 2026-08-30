@@ -150,9 +150,26 @@ color:#F4E96B !important;
 font-weight:600;
 }
 
+/* EXPLORER LE MONDE */
+
 .explorer-link{
-font-size:0.82rem !important;
-color:#94a3b8 !important;
+display:inline-block;
+
+background:linear-gradient(90deg,#a78bfa,#7da2ff);
+-webkit-background-clip:text;
+background-clip:text;
+color:transparent !important;
+
+font-weight:400;
+
+transition:
+transform 0.25s ease,
+filter 0.25s ease;
+}
+
+.explorer-link:hover{
+transform:translateY(-1px);
+filter:brightness(1.15);
 }
 
 .mobile-btn{
