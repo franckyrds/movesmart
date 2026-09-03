@@ -1170,6 +1170,66 @@ opacity:1;
 transform:translateY(0);
 }
 
+/* PRACTICAL INFORMATION */
+
+.practical-list{
+max-width:1000px;
+margin:0 auto;
+
+border-top:1px solid rgba(255,255,255,.14);
+}
+
+.practical-row{
+display:grid;
+grid-template-columns:70px 1fr;
+gap:22px;
+
+padding:28px 8px;
+
+border-bottom:1px solid rgba(255,255,255,.14);
+}
+
+.practical-icon{
+width:54px;
+height:54px;
+
+display:flex;
+align-items:center;
+justify-content:center;
+
+border-radius:16px;
+
+background:rgba(255,255,255,.10);
+
+font-size:1.55rem;
+}
+
+.practical-content h3{
+margin-bottom:8px;
+
+font-size:1.25rem;
+
+color:#ffffff;
+}
+
+.practical-content p{
+margin-bottom:7px;
+
+line-height:1.7;
+
+color:var(--muted);
+}
+
+.practical-content p:last-child{
+margin-bottom:0;
+}
+
+.practical-tip{
+margin-top:12px;
+
+color:#e8f4ed !important;
+}
+
 /* MOBILE */
 
 @media(max-width:700px){
@@ -1210,22 +1270,42 @@ box-shadow:0 14px 34px rgba(5,28,40,.28);
 display:flex;
 }
 
+
+/* HERO */
+
 .hero{
-height:58vh;
-min-height:470px;
+height:360px;
+min-height:360px;
+max-height:360px;
+}
+
+.hero-overlay{
+padding:20px 18px;
+}
+
+.subtitle{
+margin-bottom:10px;
+
+font-size:.72rem;
+letter-spacing:1.2px;
 }
 
 .hero h1{
-font-size:3rem;
-line-height:1.05;
+margin-bottom:14px;
 
-letter-spacing:-1.8px;
+font-size:clamp(2.35rem,11vw,3rem);
+line-height:1.02;
+
+letter-spacing:-1.5px;
 }
 
 .hero p{
-font-size:1rem;
-line-height:1.68;
+font-size:.92rem;
+line-height:1.55;
 }
+
+
+/* QUICK GUIDE */
 
 .quick-guide{
 margin-top:-32px;
@@ -1252,6 +1332,9 @@ font-size:.78rem;
 line-height:1.45;
 }
 
+
+/* PAGE NAVIGATION */
+
 .gp-nav{
 flex-wrap:nowrap;
 justify-content:flex-start;
@@ -1274,6 +1357,9 @@ flex:0 0 auto;
 font-size:.82rem;
 }
 
+
+/* SECTIONS */
+
 .section{
 padding:44px 18px;
 }
@@ -1288,16 +1374,25 @@ font-size:.94rem;
 text-align:left;
 }
 
+
+/* GRIDS */
+
 .grid,
 .content-grid{
 grid-template-columns:1fr;
 }
+
+
+/* CARDS */
 
 .card{
 padding:22px;
 
 border-radius:22px;
 }
+
+
+/* INFO BOX */
 
 .info-box{
 padding:25px 22px;
@@ -1309,6 +1404,46 @@ border-radius:23px;
 font-size:1.65rem;
 }
 
+
+/* PRACTICAL INFORMATION */
+
+.practical-row{
+grid-template-columns:48px 1fr;
+
+gap:14px;
+
+padding:24px 0;
+}
+
+.practical-icon{
+width:44px;
+height:44px;
+
+border-radius:13px;
+
+font-size:1.25rem;
+}
+
+.practical-content h3{
+margin-bottom:7px;
+
+font-size:1.12rem;
+}
+
+.practical-content p{
+margin-bottom:7px;
+
+font-size:.92rem;
+line-height:1.65;
+}
+
+.practical-tip{
+margin-top:10px;
+}
+
+
+/* BUTTONS */
+
 .event-btn{
 display:flex;
 
@@ -1316,6 +1451,9 @@ width:100%;
 
 margin:10px 0 0;
 }
+
+
+/* MAP PREVIEW */
 
 .map-preview{
 height:350px;
@@ -1334,6 +1472,9 @@ font-size:1.55rem;
 .map-preview-overlay p{
 font-size:.92rem;
 }
+
+
+/* LARGE IMAGE CTA */
 
 .cta{
 min-height:370px;
@@ -1520,89 +1661,108 @@ id="dates-location">
 </h2>
 
 <p class="section-intro">
-Find the essential information for planning your visit to Munich Springfest, 
-including the 2027 dates, festival location and easiest public transport options.
+Everything you need to know about when and where Frühlingsfest takes place,
+and how to reach the Theresienwiese.
 </p>
 
-<div class="content-grid">
+<div class="practical-list fade-up">
 
-<div class="card fade-up">
+<!-- DATES -->
+
+<div class="practical-row">
+
+<div class="practical-icon">
+📅
+</div>
+
+<div class="practical-content">
 
 <h3>
-📅 When is Springfest Munich 2027?
+Dates
 </h3>
 
 <p>
-The <strong>Frühlingsfest Munich 2027 dates</strong> are currently scheduled 
-from <strong>Friday, April 16 to Sunday, May 2, 2027</strong>.
+<strong>Friday, April 16 to Sunday, May 2, 2027</strong>
 </p>
 
 <p>
-The festival runs across three weekends, giving visitors several opportunities 
-to experience Munich's traditional spring celebration.
-</p>
-
-<p>
-Programmes and special-event times may still change, so visitors should check 
-the latest information shortly before travelling.
+Frühlingsfest runs across three weekends. Programmes and special-event
+times may still be updated before the festival.
 </p>
 
 </div>
 
-<div class="card fade-up">
+</div>
+
+
+<!-- LOCATION -->
+
+<div class="practical-row">
+
+<div class="practical-icon">
+📍
+</div>
+
+<div class="practical-content">
 
 <h3>
-📍 Where does Frühlingsfest take place?
+Location
 </h3>
 
 <p>
-Frühlingsfest takes place at the <strong>Theresienwiese</strong>, the famous 
-festival grounds located southwest of Munich's historic city centre.
+<strong>Theresienwiese, Munich</strong>
 </p>
 
 <p>
-This is the same iconic location that hosts Oktoberfest each autumn, with enough 
-space for large beer tents, fairground rides, food stalls and family attractions.
-</p>
-
-<p>
-The grounds are easily accessible from Munich city centre and the main railway station.
+The festival takes place on Munich's famous Theresienwiese,
+the same grounds that host Oktoberfest each autumn.
 </p>
 
 </div>
 
 </div>
 
-<div
-class="info-box fade-up"
-style="margin-top:20px;">
+
+<!-- TRANSPORT -->
+
+<div class="practical-row">
+
+<div class="practical-icon">
+🚇
+</div>
+
+<div class="practical-content">
 
 <h3>
-🚇 How to Get to Frühlingsfest
+Getting There
 </h3>
 
 <p>
-<strong>U-Bahn:</strong> Take the U4 or U5 underground line to 
-<strong>Theresienwiese</strong>, the closest station to the festival grounds.
+<strong>U-Bahn:</strong> U4 or U5 to <strong>Theresienwiese</strong>.
 </p>
 
 <p>
-<strong>S-Bahn:</strong> Travel to <strong>Hackerbrücke</strong> and walk 
-approximately 10 minutes to the Theresienwiese.
+<strong>S-Bahn:</strong> Travel to <strong>Hackerbrücke</strong>,
+then walk approximately 10 minutes.
 </p>
 
 <p>
-<strong>Alternative route:</strong> Take the U3 or U6 to 
-<strong>Goetheplatz</strong>. The festival grounds are also around a 
-10-minute walk from the station.
+<strong>Alternative:</strong> U3 or U6 to <strong>Goetheplatz</strong>,
+followed by an approximately 10-minute walk.
 </p>
 
-<p>
-Public transport is generally the easiest option, especially during busy 
-evenings and weekends when the surrounding streets can become crowded.
+<p class="practical-tip">
+💡 Public transport is generally the easiest option,
+especially during busy evenings and weekends.
 </p>
 
 </div>
+
+</div>
+
+</div>
+
+</section>
 
 
 <!-- MUNICH MAP PREVIEW -->
