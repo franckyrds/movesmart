@@ -1329,6 +1329,61 @@ border-top:1px solid rgba(255,255,255,.15);
 color:#ffffff !important;
 }
 
+/* PRACTICAL TIPS */
+
+.tips-list{
+max-width:1050px;
+margin:0 auto;
+
+border-top:1px solid rgba(255,255,255,.14);
+}
+
+.tips-row{
+display:grid;
+
+grid-template-columns:280px 1fr;
+
+gap:30px;
+
+align-items:center;
+
+padding:22px 10px;
+
+border-bottom:1px solid rgba(255,255,255,.14);
+}
+
+.tips-heading{
+display:flex;
+align-items:center;
+
+gap:12px;
+}
+
+.tips-heading span{
+font-size:1.35rem;
+}
+
+.tips-heading h3{
+margin:0;
+
+font-size:1.05rem;
+
+color:#ffffff;
+}
+
+.tips-text p{
+margin:0;
+
+font-size:.94rem;
+line-height:1.7;
+
+color:var(--muted);
+}
+
+.tips-text strong{
+color:#ffffff;
+}
+
 /* MOBILE */
 
 @media(max-width:700px){
@@ -1573,6 +1628,36 @@ width:100%;
 margin:10px 0 0;
 }
 
+/* PRACTICAL TIPS */
+
+.tips-row{
+grid-template-columns:1fr;
+
+gap:9px;
+
+padding:19px 0;
+}
+
+.tips-heading{
+gap:10px;
+}
+
+.tips-heading span{
+font-size:1.2rem;
+}
+
+.tips-heading h3{
+font-size:1rem;
+}
+
+.tips-text{
+padding-left:32px;
+}
+
+.tips-text p{
+font-size:.9rem;
+line-height:1.6;
+}
 
 /* MAP PREVIEW */
 
@@ -2152,117 +2237,156 @@ id="practical-tips">
 </h2>
 
 <p class="section-intro">
-A little preparation can make your visit to Munich Springfest more comfortable, 
+A little preparation can make your visit to Munich Springfest more comfortable,
 especially during busy evenings, weekends and special programme days.
 </p>
 
-<div class="content-grid">
+<div class="tips-list fade-up">
 
-<div class="card fade-up">
+
+<!-- RIGHT TIME -->
+
+<div class="tips-row">
+
+<div class="tips-heading">
+<span>🕰️</span>
 
 <h3>
-🕰️ Choose the Right Time
+Choose the Right Time
 </h3>
+</div>
+
+<div class="tips-text">
 
 <p>
-Weekday afternoons generally offer a calmer atmosphere and can be more convenient 
-for exploring the rides, food stalls and festival grounds.
-</p>
-
-<p>
-Friday evenings and weekends are usually livelier and may be more crowded.
+Weekday afternoons are generally calmer, while Friday evenings and weekends
+usually offer a livelier and more crowded atmosphere.
 </p>
 
 </div>
 
-<div class="card fade-up">
+</div>
+
+
+<!-- TENT RESERVATION -->
+
+<div class="tips-row">
+
+<div class="tips-heading">
+<span>🍺</span>
 
 <h3>
-🍺 Consider a Tent Reservation
+Tent Reservations
 </h3>
+</div>
+
+<div class="tips-text">
 
 <p>
-Visitors can usually enter the festival tents without a reservation when space 
-is available.
-</p>
-
-<p>
-Booking a table can still be useful for groups or anyone planning to visit during 
-a busy evening or weekend.
+Entry to festival tents is usually possible without a reservation when space
+is available, but booking can be useful for groups and busy evenings.
 </p>
 
 </div>
 
-<div class="card fade-up">
+</div>
+
+
+<!-- WEATHER -->
+
+<div class="tips-row">
+
+<div class="tips-heading">
+<span>🌦️</span>
 
 <h3>
-🌦️ Prepare for Spring Weather
+Spring Weather
 </h3>
+</div>
+
+<div class="tips-text">
 
 <p>
-Munich's weather can be changeable in April and early May, with mild sunshine, 
-cooler evenings and occasional rain.
-</p>
-
-<p>
-Bring an extra layer and lightweight rain protection, particularly if you plan 
-to remain at the festival after sunset.
+April and early May can bring mild sunshine, cool evenings and occasional rain.
+Bring an extra layer and lightweight rain protection.
 </p>
 
 </div>
 
-<div class="card fade-up">
+</div>
+
+
+<!-- FAMILY DAYS -->
+
+<div class="tips-row">
+
+<div class="tips-heading">
+<span>👨‍👩‍👧‍👦</span>
 
 <h3>
-👨‍👩‍👧‍👦 Visit on Family Days
+Family Days
 </h3>
+</div>
+
+<div class="tips-text">
 
 <p>
-Families should consider visiting on <strong>April 20 or April 27, 2027</strong>, 
-when selected rides, attractions and food offers are expected to be available 
-at reduced prices.
-</p>
-
-<p>
-Arriving earlier in the day can make the experience easier with younger children.
+Consider visiting on <strong>April 20 or April 27, 2027</strong>, when selected
+rides, attractions and food offers are expected to be available at reduced prices.
 </p>
 
 </div>
 
-<div class="card fade-up">
+</div>
+
+
+<!-- PAYMENT -->
+
+<div class="tips-row">
+
+<div class="tips-heading">
+<span>💶</span>
 
 <h3>
-💶 Keep More Than One Payment Option
+Payment
 </h3>
+</div>
+
+<div class="tips-text">
 
 <p>
-Card payments may be available in many locations, but carrying some euros in cash 
+Card payments may be available in many locations, but carrying some euros in cash
 can still be useful for smaller stalls, rides and quick purchases.
 </p>
 
-<p>
-Prices vary between attractions, food stands and festival tents.
-</p>
+</div>
 
 </div>
 
-<div class="card fade-up">
+
+<!-- CLOTHING -->
+
+<div class="tips-row">
+
+<div class="tips-heading">
+<span>👗</span>
 
 <h3>
-👗 Traditional Clothing Is Optional
+What to Wear
 </h3>
+</div>
+
+<div class="tips-text">
 
 <p>
-Some visitors wear a dirndl or lederhosen, particularly during evenings and 
-traditional programme events.
-</p>
-
-<p>
-Traditional clothing is not required. Comfortable shoes are more important, 
-as visitors may spend several hours walking and standing.
+Dirndls and lederhosen are welcome but never required. Comfortable shoes are
+more important, as visitors may spend several hours walking and standing.
 </p>
 
 </div>
+
+</div>
+
 
 </div>
 
