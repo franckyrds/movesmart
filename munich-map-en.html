@@ -6,7 +6,10 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Munich Map — Vidolta</title>
+<title>Munich Map: Attractions, Transport & Landmarks | Vidolta</title>
+
+<meta name="description"
+content="Explore Munich with Vidolta's tourist map: Marienplatz, English Garden, Allianz Arena, BMW Museum, Theresienwiese, U-Bahn and S-Bahn lines, and essential landmarks.">
 
 <link rel="canonical" href="https://www.vidolta.com/munich-map-en.html">
 
@@ -14,17 +17,11 @@
 <link rel="alternate" hreflang="en" href="https://www.vidolta.com/munich-map-en.html">
 <link rel="alternate" hreflang="x-default" href="https://www.vidolta.com/munich-map.html">
 
-<meta name="description"
-content="Explore Munich with Vidolta's interactive map: Marienplatz, Allianz Arena, English Garden, BMW Museum, Munich Residence and the city's essential attractions.">
-
-<meta name="theme-color" content="#060b1f">
+<meta name="theme-color" content="#071522">
 
 <link rel="icon" type="image/png" href="favicon-96x96.png" sizes="96x96">
-
 <link rel="icon" type="image/svg+xml" href="favicon.svg">
-
 <link rel="shortcut icon" href="favicon.ico">
-
 <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
 
 <meta name="apple-mobile-web-app-title" content="Vidolta">
@@ -32,12 +29,34 @@ content="Explore Munich with Vidolta's interactive map: Marienplatz, Allianz Are
 <link rel="manifest" href="site.webmanifest">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
-
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<link
+href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+rel="stylesheet">
 
 <style>
+
+:root{
+--bg:#071522;
+--bg-deep:#040b12;
+
+--blue:#5bb8e8;
+--blue-light:#8bd3f5;
+
+--gold:#f2c14d;
+--gold-light:#ffe08a;
+
+--green:#70c78c;
+
+--text:#ffffff;
+--muted:#cbd5e1;
+
+--card:#0d2030;
+--card2:#0a1826;
+
+--border:rgba(255,255,255,.08);
+}
 
 *{
 margin:0;
@@ -45,59 +64,190 @@ padding:0;
 box-sizing:border-box;
 }
 
+html{
+scroll-behavior:smooth;
+}
+
 body{
 font-family:'Poppins',sans-serif;
 
 background:
-radial-gradient(circle at top right,rgba(37,99,235,0.18),transparent 30%),
-radial-gradient(circle at top left,rgba(96,165,250,0.14),transparent 25%),
-linear-gradient(to bottom,#081120 0%,#050816 100%);
+radial-gradient(
+circle at 85% 8%,
+rgba(91,184,232,.18),
+transparent 28%
+),
+radial-gradient(
+circle at 10% 30%,
+rgba(242,193,77,.07),
+transparent 26%
+),
+linear-gradient(
+180deg,
+#0a1d2c 0%,
+#071522 48%,
+#040b12 100%
+);
 
-color:white;
+color:var(--text);
 
 min-height:100vh;
 
-padding:40px 20px;
+padding:0 20px 55px;
 }
 
-/* HEADER */
+a{
+text-decoration:none;
+}
+
+
+/* =========================
+HERO
+========================= */
 
 .map-header{
-max-width:1200px;
-margin:auto auto 40px;
+max-width:1400px;
+
+margin:0 auto 38px;
+
+padding:70px 25px 46px;
 
 text-align:center;
+
+position:relative;
+}
+
+.map-eyebrow{
+display:inline-flex;
+
+align-items:center;
+
+gap:8px;
+
+padding:8px 15px;
+
+margin-bottom:20px;
+
+border-radius:999px;
+
+background:rgba(91,184,232,.10);
+
+border:1px solid rgba(91,184,232,.22);
+
+color:var(--blue-light);
+
+font-size:.82rem;
+font-weight:700;
+
+letter-spacing:.07em;
+text-transform:uppercase;
 }
 
 .map-header h1{
-font-size:3.6rem;
-margin-bottom:16px;
+font-size:clamp(2.8rem,7vw,5.4rem);
 
-letter-spacing:-2px;
+line-height:1.02;
+
+letter-spacing:-3px;
+
+margin-bottom:20px;
 }
 
 .map-header h1 span{
-background:linear-gradient(90deg,#60a5fa,#2563eb);
+background:
+linear-gradient(
+90deg,
+var(--blue-light),
+var(--blue),
+var(--gold)
+);
 
 -webkit-background-clip:text;
 -webkit-text-fill-color:transparent;
+background-clip:text;
+color:transparent;
 }
 
 .map-header p{
-max-width:850px;
+max-width:820px;
+
 margin:auto;
 
-line-height:1.8;
+line-height:1.85;
 
-color:#cbd5e1;
+color:var(--muted);
 
 font-size:1.05rem;
 }
 
-/* MAP */
+
+/* HERO LINKS */
+
+.hero-links{
+margin-top:28px;
+
+display:flex;
+
+justify-content:center;
+
+flex-wrap:wrap;
+
+gap:12px;
+}
+
+.hero-btn{
+display:inline-flex;
+
+align-items:center;
+
+justify-content:center;
+
+padding:12px 18px;
+
+border-radius:13px;
+
+font-size:.9rem;
+
+font-weight:700;
+
+transition:
+transform .25s ease,
+border-color .25s ease,
+background .25s ease;
+}
+
+.hero-btn-primary{
+background:var(--gold);
+
+color:#10202c;
+}
+
+.hero-btn-secondary{
+background:rgba(255,255,255,.05);
+
+border:1px solid rgba(255,255,255,.12);
+
+color:white;
+}
+
+.hero-btn:hover{
+transform:translateY(-2px);
+}
+
+.hero-btn-secondary:hover{
+border-color:rgba(91,184,232,.5);
+
+background:rgba(91,184,232,.08);
+}
+
+
+/* =========================
+MAP
+========================= */
 
 .map-container{
 max-width:1400px;
+
 margin:auto;
 }
 
@@ -106,100 +256,354 @@ position:relative;
 
 overflow:hidden;
 
-border-radius:34px;
+border-radius:32px;
 
-border:1px solid rgba(255,255,255,0.06);
+border:1px solid rgba(139,211,245,.15);
 
-box-shadow:0 20px 45px rgba(0,0,0,0.35);
+box-shadow:
+0 25px 65px rgba(0,0,0,.42),
+0 0 45px rgba(91,184,232,.06);
 
 background:#0f172a;
 }
 
+.map-card::after{
+content:"";
+
+position:absolute;
+
+inset:0;
+
+pointer-events:none;
+
+box-shadow:
+inset 0 0 50px rgba(0,0,0,.12);
+}
+
 .map-card img{
 width:100%;
+
+height:auto;
+
 display:block;
 }
+
+
+/* MAP CAPTION */
+
+.map-caption{
+max-width:1100px;
+
+margin:20px auto 0;
+
+text-align:center;
+
+color:#aebdca;
+
+font-size:.88rem;
+
+line-height:1.7;
+}
+
+
+/* =========================
+EXPLORE
+========================= */
+
+.explore-section{
+max-width:1400px;
+
+margin:55px auto 0;
+}
+
+.section-heading{
+text-align:center;
+
+margin-bottom:28px;
+}
+
+.section-heading h2{
+font-size:clamp(1.8rem,4vw,2.5rem);
+
+margin-bottom:10px;
+}
+
+.section-heading p{
+max-width:760px;
+
+margin:auto;
+
+color:var(--muted);
+
+line-height:1.75;
+}
+
 
 /* GRID */
 
 .info-grid{
-max-width:1400px;
-
-margin:40px auto 0;
-
 display:grid;
-grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+
+grid-template-columns:repeat(4,1fr);
 
 gap:20px;
 }
 
 .info-card{
+display:flex;
+
+flex-direction:column;
+
+min-height:255px;
+
+padding:28px;
+
+border-radius:24px;
+
 background:
 linear-gradient(
-135deg,
-rgba(18,26,52,0.92),
-rgba(12,18,38,0.88)
+145deg,
+rgba(17,48,66,.96),
+rgba(8,24,36,.96)
 );
 
-padding:26px;
+border:1px solid var(--border);
 
-border-radius:26px;
+box-shadow:0 14px 35px rgba(0,0,0,.22);
 
-border:1px solid rgba(255,255,255,0.05);
-
-box-shadow:0 12px 35px rgba(0,0,0,0.24);
-
-transition:0.35s;
+transition:
+transform .3s ease,
+border-color .3s ease,
+box-shadow .3s ease;
 }
 
 .info-card:hover{
 transform:translateY(-6px);
 
-border-color:rgba(96,165,250,0.4);
+border-color:rgba(91,184,232,.38);
+
+box-shadow:
+0 18px 40px rgba(0,0,0,.28),
+0 0 24px rgba(91,184,232,.06);
+}
+
+.card-icon{
+font-size:2rem;
+
+margin-bottom:18px;
 }
 
 .info-card h3{
-font-size:1.2rem;
-margin-bottom:14px;
+font-size:1.15rem;
+
+margin-bottom:12px;
 }
 
 .info-card p{
-line-height:1.7;
-color:#cbd5e1;
-font-size:0.96rem;
+line-height:1.72;
+
+color:var(--muted);
+
+font-size:.94rem;
+
+margin-bottom:20px;
 }
 
-/* CTA */
+.card-link{
+margin-top:auto;
 
-.bottom-cta{
+display:inline-flex;
+
+align-items:center;
+
+color:var(--blue-light);
+
+font-weight:700;
+
+font-size:.9rem;
+
+transition:
+color .25s ease,
+transform .25s ease;
+}
+
+.card-link:hover{
+color:var(--gold-light);
+
+transform:translateX(3px);
+}
+
+
+/* FESTIVAL CARD */
+
+.info-card.festival{
+background:
+linear-gradient(
+145deg,
+rgba(35,81,83,.96),
+rgba(11,39,48,.96)
+);
+
+border-color:rgba(112,199,140,.18);
+}
+
+.info-card.festival:hover{
+border-color:rgba(112,199,140,.42);
+}
+
+.info-card.festival .card-link{
+color:#9be2af;
+}
+
+
+/* FOOTBALL CARD */
+
+.info-card.football{
+background:
+linear-gradient(
+145deg,
+rgba(25,57,92,.96),
+rgba(9,28,49,.96)
+);
+}
+
+
+/* ESCAPE CARD */
+
+.info-card.escape{
+background:
+linear-gradient(
+145deg,
+rgba(45,67,75,.96),
+rgba(12,31,39,.96)
+);
+}
+
+
+/* =========================
+QUICK NAV
+========================= */
+
+.quick-nav{
 max-width:1200px;
 
-margin:50px auto 0;
+margin:55px auto 0;
 
-padding:40px;
+padding:34px;
 
-border-radius:30px;
+border-radius:28px;
 
 background:
 linear-gradient(
 135deg,
-rgba(37,99,235,0.22),
-rgba(96,165,250,0.16)
+rgba(91,184,232,.10),
+rgba(242,193,77,.06)
 );
 
-border:1px solid rgba(255,255,255,0.05);
+border:1px solid rgba(255,255,255,.07);
+
+text-align:center;
+}
+
+.quick-nav h2{
+font-size:1.7rem;
+
+margin-bottom:10px;
+}
+
+.quick-nav p{
+max-width:760px;
+
+margin:0 auto 24px;
+
+color:var(--muted);
+
+line-height:1.75;
+}
+
+.quick-links{
+display:flex;
+
+justify-content:center;
+
+flex-wrap:wrap;
+
+gap:12px;
+}
+
+.quick-link{
+display:inline-flex;
+
+align-items:center;
+
+justify-content:center;
+
+padding:12px 17px;
+
+border-radius:12px;
+
+background:rgba(255,255,255,.055);
+
+border:1px solid rgba(255,255,255,.09);
+
+color:white;
+
+font-size:.88rem;
+
+font-weight:600;
+
+transition:
+transform .25s ease,
+background .25s ease,
+border-color .25s ease;
+}
+
+.quick-link:hover{
+transform:translateY(-2px);
+
+background:rgba(91,184,232,.10);
+
+border-color:rgba(91,184,232,.35);
+}
+
+
+/* =========================
+BOTTOM CTA
+========================= */
+
+.bottom-cta{
+max-width:1200px;
+
+margin:28px auto 0;
+
+padding:44px 30px;
+
+border-radius:28px;
+
+background:
+linear-gradient(
+135deg,
+rgba(20,71,98,.94),
+rgba(11,43,59,.94)
+);
+
+border:1px solid rgba(139,211,245,.14);
+
+box-shadow:0 18px 45px rgba(0,0,0,.22);
 
 text-align:center;
 }
 
 .bottom-cta h2{
-font-size:2rem;
-margin-bottom:16px;
+font-size:clamp(1.7rem,4vw,2.25rem);
+
+margin-bottom:14px;
 }
 
 .bottom-cta p{
-max-width:800px;
-margin:auto auto 24px;
+max-width:760px;
+
+margin:0 auto 25px;
 
 line-height:1.8;
 
@@ -207,52 +611,117 @@ color:#dbe4f0;
 }
 
 .bottom-cta a{
-display:inline-block;
+display:inline-flex;
+
+align-items:center;
+
+justify-content:center;
 
 padding:14px 22px;
 
-background:white;
+background:var(--gold);
 
-color:#111827;
+color:#10202c;
 
-border-radius:14px;
+border-radius:13px;
 
-font-weight:700;
+font-weight:800;
 
-transition:0.3s;
+transition:
+transform .25s ease,
+box-shadow .25s ease;
 }
 
 .bottom-cta a:hover{
-transform:translateY(-2px);
+transform:translateY(-3px);
+
+box-shadow:0 10px 25px rgba(242,193,77,.16);
 }
 
-/* MOBILE */
 
-@media(max-width:900px){
+/* =========================
+MOBILE
+========================= */
+
+@media(max-width:1050px){
+
+.info-grid{
+grid-template-columns:repeat(2,1fr);
+}
+
+}
+
+
+@media(max-width:700px){
 
 body{
-padding:24px 16px;
+padding:0 14px 40px;
+}
+
+.map-header{
+padding:48px 8px 32px;
 }
 
 .map-header h1{
-font-size:2.5rem;
+letter-spacing:-2px;
 }
 
 .map-header p{
-font-size:0.96rem;
+font-size:.95rem;
+
 line-height:1.7;
 }
 
+.hero-links{
+gap:9px;
+}
+
+.hero-btn{
+width:100%;
+
+max-width:310px;
+}
+
 .map-card{
-border-radius:24px;
+border-radius:20px;
+}
+
+.map-caption{
+font-size:.8rem;
+
+padding:0 8px;
+}
+
+.explore-section{
+margin-top:42px;
+}
+
+.info-grid{
+grid-template-columns:1fr;
+}
+
+.info-card{
+min-height:auto;
+}
+
+.quick-nav{
+padding:28px 18px;
+}
+
+.quick-links{
+flex-direction:column;
+
+align-items:center;
+}
+
+.quick-link{
+width:100%;
+
+max-width:320px;
 }
 
 .bottom-cta{
-padding:28px;
-}
-
-.bottom-cta h2{
-font-size:1.6rem;
+padding:34px 20px;
 }
 
 }
@@ -261,120 +730,283 @@ font-size:1.6rem;
 
 </head>
 
+
 <body>
 
-<!-- HEADER -->
 
-<section class="map-header">
+<!-- =========================
+HERO
+========================= -->
+
+<header class="map-header">
+
+<div class="map-eyebrow">
+🗺️ Munich Travel Map
+</div>
 
 <h1>
-Map of <span>Munich</span>
+Explore <span>Munich</span>
 </h1>
 
 <p>
-Find Marienplatz,
-Allianz Arena,
-the English Garden,
-BMW Museum,
-U-Bahn and S-Bahn lines,
-and Munich's essential landmarks.
+From Marienplatz and the English Garden to the Allianz Arena,
+BMW Museum and Theresienwiese, use this map to discover Munich's
+essential landmarks, transport connections and festival districts.
 </p>
 
-</section>
+<div class="hero-links">
 
-<!-- MAP -->
+<a
+href="munich-en.html"
+class="hero-btn hero-btn-primary">
+🏙️ Munich Guide
+</a>
 
-<section class="map-container">
+<a
+href="guide-munich-en.html"
+class="hero-btn hero-btn-secondary">
+📅 Munich Events
+</a>
+
+<a
+href="fruhlingsfest-munich-en.html"
+class="hero-btn hero-btn-secondary">
+🎡 Frühlingsfest 2027
+</a>
+
+</div>
+
+</header>
+
+
+<!-- =========================
+MAP
+========================= -->
+
+<main>
+
+<section
+class="map-container"
+aria-label="Munich tourist map">
 
 <div class="map-card">
 
 <img
 src="images/munich-map-en.webp"
-alt="Munich Map">
+alt="Munich tourist map showing landmarks, transport lines and Theresienwiese, home of Oktoberfest and Frühlingsfest">
+
+</div>
+
+<p class="map-caption">
+A visual guide to central Munich, its main attractions, transport connections
+and Theresienwiese festival grounds.
+</p>
+
+</section>
+
+
+<!-- =========================
+EXPLORE MUNICH
+========================= -->
+
+<section class="explore-section">
+
+<div class="section-heading">
+
+<h2>
+Explore Munich from the Map
+</h2>
+
+<p>
+Use the map as a starting point, then discover the places, events
+and experiences that make Munich one of Bavaria's most fascinating cities.
+</p>
+
+</div>
+
+
+<div class="info-grid">
+
+
+<!-- TRANSPORT -->
+
+<div class="info-card">
+
+<div class="card-icon">
+🚆
+</div>
+
+<h3>
+Getting Around Munich
+</h3>
+
+<p>
+Munich's U-Bahn and S-Bahn network connects the historic centre,
+main railway station, airport and many of the city's major attractions.
+</p>
+
+<a
+href="munich-en.html"
+class="card-link">
+Explore the Munich Guide →
+</a>
+
+</div>
+
+
+<!-- FESTIVALS -->
+
+<div class="info-card festival">
+
+<div class="card-icon">
+🎡
+</div>
+
+<h3>
+Theresienwiese & Festivals
+</h3>
+
+<p>
+Theresienwiese is Munich's legendary festival ground, home to
+Oktoberfest in autumn and Frühlingsfest, the city's traditional
+spring festival.
+</p>
+
+<a
+href="fruhlingsfest-munich-en.html"
+class="card-link">
+Discover Frühlingsfest 2027 →
+</a>
+
+</div>
+
+
+<!-- FOOTBALL -->
+
+<div class="info-card football">
+
+<div class="card-icon">
+⚽
+</div>
+
+<h3>
+Football & Allianz Arena
+</h3>
+
+<p>
+The Allianz Arena is one of Munich's modern landmarks and the home
+of Bayern Munich, drawing football fans from around the world.
+</p>
+
+<a
+href="guide-munich-en.html"
+class="card-link">
+See Munich Events →
+</a>
+
+</div>
+
+
+<!-- ESCAPES -->
+
+<div class="info-card escape">
+
+<div class="card-icon">
+🏔️
+</div>
+
+<h3>
+Beyond Munich
+</h3>
+
+<p>
+Munich is an ideal base for discovering Bavaria, from alpine landscapes
+and lakes to Neuschwanstein Castle and unforgettable day trips.
+</p>
+
+<a
+href="travel-tools.html"
+class="card-link">
+Explore Travel Tools →
+</a>
+
+</div>
+
 
 </div>
 
 </section>
 
-<!-- INFORMATION -->
 
-<section class="info-grid">
+<!-- =========================
+QUICK NAVIGATION
+========================= -->
 
-<div class="info-card">
+<section class="quick-nav">
 
-<h3>
-🚆 U-Bahn & S-Bahn
-</h3>
-
-<p>
-Munich's transport network makes it easy to reach the city's main districts and attractions.
-</p>
-
-</div>
-
-<div class="info-card">
-
-<h3>
-⚽ German Football
-</h3>
+<h2>
+Continue Exploring Munich
+</h2>
 
 <p>
-The Allianz Arena and Bayern Munich are among the city's most iconic symbols.
+Planning more than just your route? Explore our Munich guides,
+events and practical travel resources.
 </p>
 
-</div>
+<div class="quick-links">
 
-<div class="info-card">
+<a
+href="munich-en.html"
+class="quick-link">
+🏙️ Munich Guide
+</a>
 
-<h3>
-🍺 Bavarian Culture
-</h3>
+<a
+href="guide-munich-en.html"
+class="quick-link">
+📅 Events Calendar
+</a>
 
-<p>
-Biergartens,
-traditional markets
-and Oktoberfest make Munich one of Europe's most distinctive destinations.
-</p>
+<a
+href="fruhlingsfest-munich-en.html"
+class="quick-link">
+🎡 Frühlingsfest 2027
+</a>
 
-</div>
-
-<div class="info-card">
-
-<h3>
-🏔️ Nearby Escapes
-</h3>
-
-<p>
-Munich is also the perfect gateway to the Alps,
-Bavarian lakes
-and Neuschwanstein Castle.
-</p>
+<a
+href="travel-tools.html"
+class="quick-link">
+🛠️ Travel Tools
+</a>
 
 </div>
 
 </section>
 
-<!-- CTA -->
+
+<!-- =========================
+CTA
+========================= -->
 
 <section class="bottom-cta">
 
 <h2>
-Explore Munich with Vidolta
+Experience Munich Beyond the Map
 </h2>
 
 <p>
-Discover the best activities,
-biergartens,
-neighborhoods,
-transportation options
-and must-see experiences in Munich.
+Explore Munich's neighborhoods, Bavarian traditions, festivals,
+landmarks and experiences with the complete Vidolta Munich guide.
 </p>
 
 <a href="munich-en.html">
-Back to the Munich Guide →
+Discover the Munich Guide →
 </a>
 
 </section>
+
+</main>
+
 
 </body>
 
