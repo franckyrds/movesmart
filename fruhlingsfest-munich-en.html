@@ -1335,7 +1335,18 @@ color:#ffffff !important;
 max-width:1050px;
 margin:0 auto;
 
-border-top:1px solid rgba(255,255,255,.14);
+padding:8px 24px;
+
+border:1px solid rgba(242,193,77,.22);
+border-radius:22px;
+
+background:linear-gradient(
+135deg,
+rgba(242,193,77,.16),
+rgba(196,145,35,.09)
+);
+
+box-shadow:0 12px 30px rgba(5,28,40,.14);
 }
 
 .tips-row{
@@ -1347,9 +1358,13 @@ gap:30px;
 
 align-items:center;
 
-padding:22px 10px;
+padding:22px 4px;
 
-border-bottom:1px solid rgba(255,255,255,.14);
+border-bottom:1px solid rgba(255,225,140,.18);
+}
+
+.tips-row:last-child{
+border-bottom:none;
 }
 
 .tips-heading{
@@ -1368,7 +1383,7 @@ margin:0;
 
 font-size:1.05rem;
 
-color:#ffffff;
+color:#ffe59a;
 }
 
 .tips-text p{
@@ -1377,7 +1392,7 @@ margin:0;
 font-size:.94rem;
 line-height:1.7;
 
-color:var(--muted);
+color:#edf3f4;
 }
 
 .tips-text strong{
@@ -1629,6 +1644,12 @@ margin:10px 0 0;
 }
 
 /* PRACTICAL TIPS */
+
+.tips-list{
+padding:6px 16px;
+
+border-radius:18px;
+}
 
 .tips-row{
 grid-template-columns:1fr;
