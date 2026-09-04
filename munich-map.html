@@ -6,10 +6,10 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Carte de Munich — Vidolta</title>
+<title>Carte de Munich : attractions, transports et lieux | Vidolta</title>
 
 <meta name="description"
-content="Explore Munich avec la carte Vidolta : Marienplatz, Allianz Arena, English Garden, BMW Museum, Résidence de Munich et les lieux incontournables de la capitale bavaroise.">
+content="Explorez Munich avec la carte touristique Vidolta : Marienplatz, Jardin anglais, Allianz Arena, musée BMW, Theresienwiese, lignes U-Bahn et S-Bahn et lieux incontournables.">
 
 <link rel="canonical" href="https://www.vidolta.com/munich-map.html">
 
@@ -17,14 +17,11 @@ content="Explore Munich avec la carte Vidolta : Marienplatz, Allianz Arena, Engl
 <link rel="alternate" hreflang="en" href="https://www.vidolta.com/munich-map-en.html">
 <link rel="alternate" hreflang="x-default" href="https://www.vidolta.com/munich-map.html">
 
-<meta name="theme-color" content="#060b1f">
+<meta name="theme-color" content="#071522">
 
 <link rel="icon" type="image/png" href="favicon-96x96.png" sizes="96x96">
-
 <link rel="icon" type="image/svg+xml" href="favicon.svg">
-
 <link rel="shortcut icon" href="favicon.ico">
-
 <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
 
 <meta name="apple-mobile-web-app-title" content="Vidolta">
@@ -32,12 +29,26 @@ content="Explore Munich avec la carte Vidolta : Marienplatz, Allianz Arena, Engl
 <link rel="manifest" href="site.webmanifest">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
-
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<link
+href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800etdisplay=swap"
+rel="stylesheet">
 
 <style>
+
+:root{
+--blue:#5bb8e8;
+--blue-light:#8bd3f5;
+
+--gold:#f2c14d;
+--gold-light:#ffe08a;
+
+--text:#ffffff;
+--muted:#cbd5e1;
+
+--border:rgba(255,255,255,.08);
+}
 
 *{
 margin:0;
@@ -45,59 +56,104 @@ padding:0;
 box-sizing:border-box;
 }
 
+html{
+scroll-behavior:smooth;
+}
+
 body{
 font-family:'Poppins',sans-serif;
 
 background:
-radial-gradient(circle at top right,rgba(37,99,235,0.18),transparent 30%),
-radial-gradient(circle at top left,rgba(96,165,250,0.14),transparent 25%),
-linear-gradient(to bottom,#081120 0%,#050816 100%);
+radial-gradient(
+circle at 85% 8%,
+rgba(91,184,232,.18),
+transparent 28%
+),
+radial-gradient(
+circle at 10% 30%,
+rgba(242,193,77,.07),
+transparent 26%
+),
+linear-gradient(
+180deg,
+#0a1d2c 0%,
+#071522 48%,
+#040b12 100%
+);
 
-color:white;
+color:var(--text);
 
 min-height:100vh;
 
-padding:40px 20px;
+padding:0 20px 55px;
 }
 
-/* HEADER */
+a{
+text-decoration:none;
+}
+
+
+/* =========================
+HERO
+========================= */
 
 .map-header{
-max-width:1200px;
-margin:auto auto 40px;
+max-width:1400px;
+
+margin:0 auto 38px;
+
+padding:70px 25px 46px;
 
 text-align:center;
+
+position:relative;
 }
 
 .map-header h1{
-font-size:3.6rem;
-margin-bottom:16px;
+font-size:clamp(2.8rem,7vw,5.4rem);
 
-letter-spacing:-2px;
+line-height:1.02;
+
+letter-spacing:-3px;
+
+margin-bottom:20px;
 }
 
 .map-header h1 span{
-background:linear-gradient(90deg,#60a5fa,#2563eb);
+background:
+linear-gradient(
+90deg,
+var(--blue-light),
+var(--blue),
+var(--gold)
+);
 
 -webkit-background-clip:text;
 -webkit-text-fill-color:transparent;
+background-clip:text;
+color:transparent;
 }
 
 .map-header p{
-max-width:850px;
+max-width:820px;
+
 margin:auto;
 
-line-height:1.8;
+line-height:1.85;
 
-color:#cbd5e1;
+color:var(--muted);
 
 font-size:1.05rem;
 }
 
-/* MAP */
+
+/* =========================
+MAP
+========================= */
 
 .map-container{
 max-width:1400px;
+
 margin:auto;
 }
 
@@ -106,153 +162,263 @@ position:relative;
 
 overflow:hidden;
 
-border-radius:34px;
+border-radius:32px;
 
-border:1px solid rgba(255,255,255,0.06);
+border:1px solid rgba(139,211,245,.15);
 
-box-shadow:0 20px 45px rgba(0,0,0,0.35);
+box-shadow:
+0 25px 65px rgba(0,0,0,.42),
+0 0 45px rgba(91,184,232,.06);
 
 background:#0f172a;
 }
 
+.map-card::after{
+content:"";
+
+position:absolute;
+
+inset:0;
+
+pointer-events:none;
+
+box-shadow:
+inset 0 0 50px rgba(0,0,0,.12);
+}
+
 .map-card img{
 width:100%;
+
+height:auto;
+
 display:block;
 }
 
-/* GRID */
+/* =========================
+EXPLORE
+========================= */
+
+.explore-section{
+max-width:1400px;
+margin:55px auto 0;
+}
+
+.section-heading{
+text-align:center;
+margin-bottom:28px;
+}
+
+.section-heading h2{
+font-size:clamp(1.8rem,4vw,2.5rem);
+margin-bottom:10px;
+}
+
+.section-heading p{
+max-width:760px;
+margin:auto;
+color:var(--muted);
+line-height:1.75;
+}
+
+
+/* =========================
+GRID
+========================= */
 
 .info-grid{
-max-width:1400px;
-
-margin:40px auto 0;
-
 display:grid;
-grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
-
+grid-template-columns:repeat(4,1fr);
 gap:20px;
 }
 
 .info-card{
+display:flex;
+flex-direction:column;
+min-height:255px;
+padding:28px;
+border-radius:24px;
+
 background:
 linear-gradient(
-135deg,
-rgba(18,26,52,0.92),
-rgba(12,18,38,0.88)
+145deg,
+rgba(17,48,66,.96),
+rgba(8,24,36,.96)
 );
 
-padding:26px;
+border:1px solid var(--border);
 
-border-radius:26px;
+box-shadow:
+0 14px 35px rgba(0,0,0,.22);
 
-border:1px solid rgba(255,255,255,0.05);
+color:inherit;
+cursor:pointer;
 
-box-shadow:0 12px 35px rgba(0,0,0,0.24);
-
-transition:0.35s;
+transition:
+transform .3s ease,
+border-color .3s ease,
+box-shadow .3s ease;
 }
 
 .info-card:hover{
 transform:translateY(-6px);
 
-border-color:rgba(96,165,250,0.4);
+border-color:rgba(91,184,232,.38);
+
+box-shadow:
+0 18px 40px rgba(0,0,0,.28),
+0 0 24px rgba(91,184,232,.06);
+}
+
+.info-card:focus-visible{
+outline:2px solid var(--gold);
+outline-offset:4px;
+}
+
+.card-icon{
+font-size:2rem;
+margin-bottom:18px;
 }
 
 .info-card h3{
-font-size:1.2rem;
-margin-bottom:14px;
+font-size:1.15rem;
+margin-bottom:12px;
 }
 
 .info-card p{
-line-height:1.7;
-color:#cbd5e1;
-font-size:0.96rem;
+line-height:1.72;
+color:var(--muted);
+font-size:.94rem;
+margin-bottom:20px;
 }
 
-/* CTA */
+.card-link{
+margin-top:auto;
 
-.bottom-cta{
-max-width:1200px;
+display:inline-flex;
+align-items:center;
 
-margin:50px auto 0;
-
-padding:40px;
-
-border-radius:30px;
-
-background:
-linear-gradient(
-135deg,
-rgba(37,99,235,0.22),
-rgba(96,165,250,0.16)
-);
-
-border:1px solid rgba(255,255,255,0.05);
-
-text-align:center;
-}
-
-.bottom-cta h2{
-font-size:2rem;
-margin-bottom:16px;
-}
-
-.bottom-cta p{
-max-width:800px;
-margin:auto auto 24px;
-
-line-height:1.8;
-
-color:#dbe4f0;
-}
-
-.bottom-cta a{
-display:inline-block;
-
-padding:14px 22px;
-
-background:white;
-
-color:#111827;
-
-border-radius:14px;
+color:var(--blue-light);
 
 font-weight:700;
+font-size:.9rem;
 
-transition:0.3s;
+transition:
+color .25s ease,
+transform .25s ease;
 }
 
-.bottom-cta a:hover{
-transform:translateY(-2px);
+.info-card:hover .card-link{
+color:var(--gold-light);
+transform:translateX(3px);
 }
 
-/* MOBILE */
 
-@media(max-width:900px){
+/* =========================
+FESTIVAL CARD
+========================= */
+
+.info-card.festival{
+background:
+linear-gradient(
+145deg,
+rgba(35,81,83,.96),
+rgba(11,39,48,.96)
+);
+
+border-color:rgba(112,199,140,.18);
+}
+
+.info-card.festival:hover{
+border-color:rgba(112,199,140,.42);
+}
+
+.info-card.festival .card-link{
+color:#9be2af;
+}
+
+.info-card.festival:hover .card-link{
+color:var(--gold-light);
+}
+
+
+/* =========================
+FOOTBALL CARD
+========================= */
+
+.info-card.football{
+background:
+linear-gradient(
+145deg,
+rgba(25,57,92,.96),
+rgba(9,28,49,.96)
+);
+}
+
+
+/* =========================
+BAVARIA CARD
+========================= */
+
+.info-card.escape{
+background:
+linear-gradient(
+145deg,
+rgba(45,67,75,.96),
+rgba(12,31,39,.96)
+);
+}
+
+
+/* =========================
+TABLET
+========================= */
+
+@media(max-width:1050px){
+
+.info-grid{
+grid-template-columns:repeat(2,1fr);
+}
+
+}
+
+
+/* =========================
+MOBILE
+========================= */
+
+@media(max-width:700px){
 
 body{
-padding:24px 16px;
+padding:0 14px 40px;
+}
+
+.map-header{
+padding:48px 8px 32px;
 }
 
 .map-header h1{
-font-size:2.5rem;
+letter-spacing:-2px;
 }
 
 .map-header p{
-font-size:0.96rem;
+font-size:.95rem;
 line-height:1.7;
 }
 
 .map-card{
-border-radius:24px;
+border-radius:20px;
 }
 
-.bottom-cta{
-padding:28px;
+.explore-section{
+margin-top:42px;
 }
 
-.bottom-cta h2{
-font-size:1.6rem;
+.info-grid{
+grid-template-columns:1fr;
+}
+
+.info-card{
+min-height:auto;
 }
 
 }
@@ -271,120 +437,180 @@ line-height:1.6;
 
 </head>
 
+
 <body>
 
-<!-- HEADER -->
+<!-- =========================
+HERO
+========================= -->
 
-<section class="map-header">
+<header class="map-header">
 
 <h1>
-Carte de <span>Munich</span>
+Explorez <span>Munich</span>
 </h1>
 
 <p>
-Retrouve Marienplatz,
-Allianz Arena,
-English Garden,
-BMW Museum,
-les lignes U-Bahn,
-S-Bahn
-et les lieux incontournables de Munich.
+Utilisez notre carte de Munich pour repérer les principaux monuments, quartiers, transports et lieux d'événements de la ville, de Marienplatz et du Jardin anglais à l'Allianz Arena et à la Theresienwiese.
 </p>
 
-</section>
+</header>
 
-<!-- MAP -->
 
-<section class="map-container">
+<!-- =========================
+MAP
+========================= -->
+
+<main>
+
+<section
+class="map-container"
+aria-label="Carte touristique de Munich">
 
 <div class="map-card">
 
 <img
 src="images/munich-map.webp"
-alt="Carte Munich">
+alt="Carte touristique de Munich avec les principaux monuments, lignes de transport et la Theresienwiese, où se déroulent l'Oktoberfest et le Frühlingsfest">
 
 </div>
 
 </section>
 
-<!-- INFORMATIONS -->
 
-<section class="info-grid">
+<!-- =========================
+EXPLORE MUNICH
+========================= -->
 
-<div class="info-card">
+<section class="explore-section">
 
-<h3>
-🚆 Métro & S-Bahn
-</h3>
-
-<p>
-Le réseau allemand permet de rejoindre rapidement les quartiers principaux de Munich.
-</p>
-
-</div>
-
-<div class="info-card">
-
-<h3>
-⚽ Football allemand
-</h3>
-
-<p>
-L’Allianz Arena et le Bayern Munich font partie des symboles majeurs de la ville.
-</p>
-
-</div>
-
-<div class="info-card">
-
-<h3>
-🍺 Culture bavaroise
-</h3>
-
-<p>
-Biergartens,
-marchés traditionnels
-et Oktoberfest rendent Munich unique en Europe.
-</p>
-
-</div>
-
-<div class="info-card">
-
-<h3>
-🏔️ Escapades proches
-</h3>
-
-<p>
-Munich permet aussi de rejoindre facilement les Alpes,
-les lacs bavarois
-et Neuschwanstein.
-</p>
-
-</div>
-
-</section>
-
-<!-- CTA -->
-
-<section class="bottom-cta">
+<div class="section-heading">
 
 <h2>
-Explorer Munich avec Vidolta
+Explorez Munich à partir de la carte
 </h2>
 
 <p>
-Découvre les meilleures activités,
-biergartens,
-quartiers,
-transports et expériences incontournables à Munich.
+Utilisez la carte comme point de départ, puis découvrez les lieux,
+événements et expériences qui font de Munich l'une des villes les plus fascinantes de Bavière.
 </p>
 
-<a href="munich.html">
-Retour au guide Munich →
+</div>
+
+
+<div class="info-grid">
+
+
+<!-- MUNICH GUIDE -->
+
+<a
+href="munich.html"
+class="info-card">
+
+<div class="card-icon">
+🚆
+</div>
+
+<h3>
+Se déplacer à Munich
+</h3>
+
+<p>
+Le réseau U-Bahn et S-Bahn de Munich permet de rejoindre facilement le centre historique,
+la gare centrale, l'aéroport et de nombreuses attractions majeures de la ville.
+</p>
+
+<span class="card-link">
+Explorer le guide de Munich →
+</span>
+
 </a>
 
+
+<!-- FESTIVALS -->
+
+<a
+href="fruhlingsfest-munich.html"
+class="info-card festival">
+
+<div class="card-icon">
+🎡
+</div>
+
+<h3>
+Theresienwiese et festivals
+</h3>
+
+<p>
+La Theresienwiese est le célèbre site des grandes fêtes populaires de Munich,
+avec l'Oktoberfest en automne et le Frühlingsfest, la traditionnelle fête du printemps.
+</p>
+
+<span class="card-link">
+Découvrir le Frühlingsfest 2027 →
+</span>
+
+</a>
+
+
+<!-- EVENTS -->
+
+<a
+href="guide-munich.html"
+class="info-card football">
+
+<div class="card-icon">
+⚽
+</div>
+
+<h3>
+Football et événements à Munich
+</h3>
+
+<p>
+Des matchs du Bayern Munich à l'Allianz Arena aux festivals,
+concerts et célébrations saisonnières, Munich propose des événements tout au long de l'année.
+</p>
+
+<span class="card-link">
+Explorer les événements à Munich →
+</span>
+
+</a>
+
+
+<!-- BAVARIA -->
+
+<a
+href="outils-voyage.html"
+class="info-card escape">
+
+<div class="card-icon">
+🏔️
+</div>
+
+<h3>
+Autour de Munich
+</h3>
+
+<p>
+Munich est un point de départ idéal pour explorer la Bavière, entre paysages alpins,
+lacs, château de Neuschwanstein et excursions inoubliables à la journée.
+</p>
+
+<span class="card-link">
+Explorer les outils voyage →
+</span>
+
+</a>
+
+
+</div>
+
 </section>
+
+</main>
+
 
 </body>
 
