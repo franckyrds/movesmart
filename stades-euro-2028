@@ -1,0 +1,1153 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Stades Euro 2028 : les 9 stades, capacités et accès | Vidolta</title>
+<meta name="description" content="Découvrez les 9 stades de l'Euro 2028 dans les 8 villes hôtes : capacités, matchs, transports, conseils supporters et hébergements.">
+<meta name="robots" content="index,follow,max-image-preview:large">
+<meta name="theme-color" content="#060b1f">
+<link rel="canonical" href="https://www.vidolta.com/stades-euro-2028.html">
+
+<meta property="og:type" content="article">
+<meta property="og:locale" content="fr_FR">
+<meta property="og:site_name" content="Vidolta">
+<meta property="og:title" content="Stades de l'Euro 2028 : les 9 enceintes et les 8 villes hôtes">
+<meta property="og:description" content="Capacités, rencontres, accès et conseils de voyage pour les 9 stades de l'Euro 2028.">
+<meta property="og:url" content="https://www.vidolta.com/stades-euro-2028.html">
+<meta property="og:image" content="https://www.vidolta.com/images/event-euro-2028.webp">
+<meta name="twitter:card" content="summary_large_image">
+
+<link rel="icon" href="favicon.ico">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="icon" href="favicon-96x96.png" type="image/png" sizes="96x96">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<link rel="manifest" href="site.webmanifest">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+<style>
+:root {
+  --bg: #050816;
+  --primary: #7c5cff;
+  --primary2: #5b8cff;
+  --text: #ffffff;
+  --muted: #94a3b8;
+}
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; scroll-padding-top: 90px; }
+body {
+  font-family: 'Poppins',sans-serif;
+  color: var(--text);
+  background:
+    radial-gradient(circle at top right,rgba(124,92,255,.18),transparent 30%),
+    radial-gradient(circle at top left,rgba(91,140,255,.14),transparent 25%),
+    linear-gradient(to bottom,#0b1426,#09111f);
+  overflow-x: hidden;
+}
+a { color: inherit; text-decoration: none; }
+a:focus-visible,button:focus-visible,summary:focus-visible {
+  outline: 3px solid #f4e96b;
+  outline-offset: 3px;
+}
+img { display: block; max-width: 100%; }
+p { line-height: 1.8; }
+
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  padding: 12px 18px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: rgba(5,8,22,.84);
+  backdrop-filter: blur(18px);
+  border-bottom: 1px solid rgba(255,255,255,.07);
+}
+.logo { font-size: 1.65rem; font-weight: 800; white-space: nowrap; }
+.nav-links { display: flex; gap: 22px; align-items: center; }
+.nav-links a { color: #cbd5e1; font-size: .8rem; transition: .25s; }
+.nav-links a:hover,.nav-links a.active { color: #f4e96b; }
+.mobile-btn {
+  display: none;
+  cursor: pointer;
+  color: white;
+  background: #172039;
+  border: 1px solid #455170;
+  border-radius: 12px;
+  padding: 6px 12px;
+  font-size: 1.6rem;
+}
+
+.hero {
+  position: relative;
+  min-height: 570px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  overflow: hidden;
+  isolation: isolate;
+}
+.hero img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(.65);
+  z-index: -2;
+}
+.hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background: linear-gradient(to bottom,rgba(5,8,22,.10),rgba(5,8,22,.48) 60%,#09111f);
+}
+.hero-content { max-width: 980px; padding: 65px 20px 85px; }
+.eyebrow {
+  display: inline-block;
+  padding: 8px 15px;
+  border-radius: 30px;
+  background: rgba(124,92,255,.24);
+  border: 1px solid rgba(190,171,255,.35);
+  font-size: .8rem;
+  font-weight: 600;
+}
+.hero h1 {
+  margin: 20px 0;
+  font-size: clamp(2.15rem,5vw,4.5rem);
+  line-height: 1.13;
+  letter-spacing: -.045em;
+}
+.hero h1 span {
+  background: linear-gradient(90deg,#a78bfa,#60a5fa);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+.hero p {
+  max-width: 760px;
+  margin: 0 auto 27px;
+  font-size: 1.1rem;
+  color: #e2e8f0;
+}
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+  justify-content: center;
+}
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 13px 21px;
+  border-radius: 13px;
+  background: #6366f1;
+  color: white;
+  font-weight: 700;
+  font-size: .91rem;
+  transition: .25s;
+  text-align: center;
+}
+.btn:hover { background: #4f46e5; transform: translateY(-2px); }
+.btn-white { background: white; color: #111827; }
+.btn-white:hover { background: #e2e8f0; }
+.btn-gold { background: #f59e0b; color: #111827; }
+.btn-gold:hover { background: #fbbf24; }
+.btn-outline {
+  background: rgba(255,255,255,.07);
+  border: 1px solid rgba(255,255,255,.23);
+}
+.btn-outline:hover { background: rgba(255,255,255,.16); }
+
+.quick-guide {
+  position: relative;
+  z-index: 5;
+  max-width: 1200px;
+  margin: -33px auto 0;
+  padding: 0 20px;
+  display: grid;
+  grid-template-columns: repeat(4,minmax(0,1fr));
+  gap: 18px;
+}
+.quick-card,.card,.venue {
+  background: linear-gradient(135deg,rgba(18,26,52,.94),rgba(12,18,38,.91));
+  border: 1px solid rgba(255,255,255,.08);
+  box-shadow: 0 12px 35px rgba(0,0,0,.24);
+  border-radius: 25px;
+}
+.quick-card {
+  padding: 24px 17px;
+  text-align: center;
+  transition: .3s;
+}
+.quick-card:hover { transform: translateY(-5px); border-color: #7272ca; }
+.quick-card strong { display: block; margin-bottom: 9px; font-size: 1.08rem; }
+.quick-card span { color: #cbd5e1; font-size: .88rem; line-height: 1.7; }
+
+.section { max-width: 1250px; padding: 60px 20px; margin: auto; }
+.section h2 {
+  text-align: center;
+  font-size: clamp(1.8rem,3vw,2.8rem);
+  margin-bottom: 25px;
+  line-height: 1.3;
+}
+.section-lead {
+  color: #cbd5e1;
+  text-align: center;
+  max-width: 960px;
+  margin: 0 auto 30px;
+}
+.section-lead a,.source-link {
+  color: #b3ccff;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+.card { padding: 27px; }
+.card h3 { margin-bottom: 15px; font-size: 1.18rem; }
+.card p { color: #cbd5e1; }
+.notice {
+  background: #121d38;
+  border-left: 3px solid #818cf8;
+  padding: 20px 24px;
+  border-radius: 0 17px 17px 0;
+  color: #dbe4f0;
+  line-height: 1.8;
+}
+
+.comparison-wrap {
+  overflow-x: auto;
+  border-radius: 23px;
+  border: 1px solid rgba(255,255,255,.12);
+  background: linear-gradient(135deg,rgba(15,35,75,.95),rgba(10,25,55,.95));
+  box-shadow: 0 18px 40px rgba(0,0,0,.28);
+}
+.comparison { min-width: 760px; width: 100%; border-collapse: collapse; text-align: left; }
+.comparison th {
+  padding: 17px;
+  font-size: .82rem;
+  text-transform: uppercase;
+  background: linear-gradient(90deg,rgba(30,64,175,.75),rgba(16,185,129,.50));
+}
+.comparison td {
+  padding: 16px 17px;
+  font-size: .9rem;
+  border-bottom: 1px solid rgba(255,255,255,.08);
+}
+.comparison tr:last-child td { border: 0; }
+.comparison tbody tr:hover { background: rgba(255,255,255,.05); }
+.comparison a { color: #b3ccff; font-weight: 600; text-decoration: underline; }
+.num { white-space: nowrap; font-weight: 700; }
+.micro { color: #9facbf; font-size: .8rem; margin-top: 15px; }
+
+.venue-nav {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 9px;
+  margin: 25px 0 38px;
+}
+.venue-nav a {
+  border: 1px solid rgba(153,164,206,.3);
+  background: rgba(255,255,255,.05);
+  border-radius: 30px;
+  padding: 10px 14px;
+  font-size: .8rem;
+  color: #dbeafe;
+}
+.venue-nav a:hover { background: #37327f; }
+.venues { display: grid; gap: 26px; }
+.venue { padding: 31px; scroll-margin-top: 100px; }
+.venue-head { display: flex; gap: 20px; align-items: center; margin-bottom: 20px; }
+.venue-index {
+  flex: 0 0 57px;
+  height: 57px;
+  display: grid;
+  place-items: center;
+  background: linear-gradient(135deg,#3b2f83,#164477);
+  color: #d6d0ff;
+  border-radius: 18px;
+  font-weight: 800;
+  font-size: 1.3rem;
+}
+.venue-city { color: #a5b4fc; font-size: .9rem; font-weight: 600; }
+.venue h3 { font-size: clamp(1.45rem,2.5vw,2rem); line-height: 1.35; }
+.venue-metrics { display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 24px; }
+.venue-metrics span {
+  padding: 9px 13px;
+  border-radius: 12px;
+  background: rgba(255,255,255,.07);
+  border: 1px solid rgba(255,255,255,.07);
+  font-size: .82rem;
+}
+.venue-body { display: grid; grid-template-columns: 1.15fr 1fr; gap: 30px; }
+.venue p { color: #cbd5e1; margin-bottom: 14px; }
+.venue h4 { margin: 18px 0 10px; font-size: 1rem; }
+.small-label { color: #93c5fd; font-size: .8rem; font-weight: 700; }
+.match-box {
+  padding: 20px;
+  border-radius: 18px;
+  border: 1px solid rgba(129,140,248,.25);
+  background: rgba(66,71,150,.17);
+}
+.match-box p { margin-top: 10px; }
+.venue-footer {
+  border-top: 1px solid rgba(255,255,255,.09);
+  padding-top: 20px;
+  margin-top: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 15px;
+}
+.source-link { font-size: .85rem; }
+
+.cards-grid {
+  display: grid;
+  grid-template-columns: repeat(3,minmax(0,1fr));
+  gap: 19px;
+}
+.cards-grid p { font-size: .91rem; }
+
+.accom {
+  background: linear-gradient(135deg,rgba(31,47,87,.90),rgba(22,25,65,.90));
+  border: 1px solid rgba(145,155,230,.2);
+  border-radius: 28px;
+  padding: 36px;
+}
+.accom h3 { font-size: 1.4rem; margin-bottom: 15px; }
+.accom p { margin-bottom: 18px; color: #dae2ef; }
+.accom .actions { margin-top: 25px; }
+
+.faq { max-width: 1000px; margin: 28px auto 0; display: grid; gap: 14px; }
+.faq details {
+  background: #1e293b;
+  border: 1px solid rgba(255,255,255,.07);
+  border-radius: 20px;
+}
+.faq summary {
+  padding: 20px 24px;
+  cursor: pointer;
+  font-weight: 600;
+}
+.faq details p { padding: 0 24px 23px; color: #cbd5e1; }
+
+.closing {
+  position: relative;
+  overflow: hidden;
+  isolation: isolate;
+  padding: 65px 25px;
+  text-align: center;
+  border-radius: 30px;
+}
+.closing img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(.36);
+  z-index: -2;
+}
+.closing::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(10,14,33,.25);
+  z-index: -1;
+}
+.closing p { max-width: 700px; margin: 0 auto 26px; color: #e2e8f0; }
+.sources { color: #abb7cb; font-size: .83rem; }
+.sources a { color: #c8d8ff; text-decoration: underline; }
+
+footer {
+  padding: 60px 20px;
+  text-align: center;
+  color: #94a3b8;
+  line-height: 2;
+  font-size: .88rem;
+}
+.footer-links {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 18px;
+  margin-top: 15px;
+}
+.footer-links a { color: #cbd5e1; }
+.footer-affiliate-note {
+  text-align: center;
+  font-size: .78rem;
+  max-width: 850px;
+  margin: 0 auto 15px;
+  line-height: 1.7;
+}
+.back-to-top {
+  position: fixed;
+  bottom: 22px;
+  right: 22px;
+  width: 50px;
+  height: 50px;
+  border: none;
+  border-radius: 50%;
+  background: #6366f1;
+  color: white;
+  font-size: 1.35rem;
+  cursor: pointer;
+  opacity: 0;
+  pointer-events: none;
+  transition: .3s;
+  z-index: 999;
+}
+.back-to-top.show { opacity: 1; pointer-events: auto; }
+
+@media(max-width:1050px) {
+  .nav-links { gap: 12px; }
+  .nav-links a { font-size: .72rem; }
+  .cards-grid { grid-template-columns: repeat(2,1fr); }
+}
+@media(max-width:780px) {
+  .mobile-btn { display: block; }
+  .nav-links {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 12px;
+    right: 12px;
+    background: #111827;
+    border: 1px solid #303b55;
+    border-radius: 22px;
+    padding: 12px;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0;
+    box-shadow: 0 20px 40px rgba(0,0,0,.3);
+  }
+  .nav-links.active { display: flex; }
+  .nav-links a { padding: 12px; font-size: .9rem; }
+  .hero { min-height: 530px; }
+  .hero-content { padding: 60px 20px 85px; }
+  .hero p { font-size: .96rem; }
+  .quick-guide { grid-template-columns: repeat(2,minmax(0,1fr)); gap: 12px; }
+  .quick-card { padding: 19px 12px; }
+  .quick-card strong { font-size: 1rem; }
+  .quick-card span { font-size: .8rem; }
+  .section { padding: 45px 17px; }
+  .venue { padding: 23px; }
+  .venue-body { grid-template-columns: 1fr; gap: 8px; }
+  .venue-head { gap: 13px; }
+  .venue-index { flex-basis: 46px; height: 46px; }
+  .venue-metrics span { font-size: .76rem; }
+  .cards-grid { grid-template-columns: 1fr; }
+  .accom { padding: 25px; }
+}
+@media(max-width:390px) {
+  .quick-guide { grid-template-columns: 1fr; }
+  .logo { font-size: 1.4rem; }
+}
+@media(prefers-reduced-motion:reduce) {
+  html { scroll-behavior: auto; }
+  * { transition: none!important; }
+}
+</style>
+
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"Article",
+  "headline":"Stades de l'Euro 2028 : les 9 enceintes et les 8 villes hôtes",
+  "description":"Guide des capacités, rencontres, accès et conseils pratiques des stades Euro 2028.",
+  "inLanguage":"fr-FR",
+  "dateModified":"2026-11-03",
+  "author":{"@type":"Organization","name":"Vidolta"},
+  "publisher":{"@type":"Organization","name":"Vidolta"},
+  "mainEntityOfPage":"https://www.vidolta.com/stades-euro-2028.html"
+}
+</script>
+</head>
+
+<body>
+
+<nav class="navbar" aria-label="Navigation principale">
+  <a href="index.html" class="logo">🌍 Vidolta</a>
+  <button type="button" class="mobile-btn" id="menuBtn"
+          aria-label="Ouvrir le menu" aria-expanded="false"
+          aria-controls="navLinks">☰</button>
+  <div class="nav-links" id="navLinks">
+    <a href="#comparatif">📊 Comparatif</a>
+    <a href="#stades">🏟️ 9 stades</a>
+    <a href="#sejour">🧭 Séjour</a>
+    <a href="#hebergements">🏨 Hébergements</a>
+    <a href="#faq">❓ FAQ</a>
+    <a href="euro-2028.html">📅 Euro 2028</a>
+    <a href="events.html" class="active">🎉 Événements</a>
+    <a href="destinations.html">🌍 Destinations</a>
+  </div>
+</nav>
+
+<header class="hero">
+  <img src="images/event-euro-2028.webp"
+       alt="Grand stade de football illuminé lors d'une rencontre européenne"
+       width="1600" height="900" fetchpriority="high">
+  <div class="hero-content">
+    <span class="eyebrow">⚽ Guide des enceintes · Euro 2028</span>
+    <h1>Stades de l'<span>Euro 2028</span> : les 9 enceintes et les 8 villes hôtes</h1>
+    <p>Capacités, matchs accueillis, transports, accès et conseils pratiques pour préparer votre déplacement dans chaque stade de la compétition.</p>
+    <div class="actions">
+      <a class="btn btn-white" href="#comparatif">Comparer les 9 stades ↓</a>
+      <a class="btn btn-outline" href="euro-2028.html">Calendrier complet →</a>
+    </div>
+  </div>
+</header>
+
+<div class="quick-guide">
+  <a href="#stades" class="quick-card">
+    <strong>🏟️ 9 stades</strong>
+    <span>Du mythique Wembley au nouveau stade d'Everton</span>
+  </a>
+  <a href="#comparatif" class="quick-card">
+    <strong>🌍 8 villes hôtes</strong>
+    <span>Deux enceintes à Londres et sept autres destinations</span>
+  </a>
+  <a href="euro-2028.html#schedule" class="quick-card">
+    <strong>📅 Calendrier</strong>
+    <span>Les dates et rencontres sur notre guide principal</span>
+  </a>
+  <a href="#hebergements" class="quick-card">
+    <strong>🏨 Hébergements</strong>
+    <span>Choisir un hôtel adapté aux accès du stade</span>
+  </a>
+</div>
+
+<main>
+
+<section class="section" id="intro">
+  <h2>🌍 Où se trouvent les stades de l'Euro 2028 ?</h2>
+  <p class="section-lead">
+    Du <strong>9 juin au 9 juillet 2028</strong>, l'Euro se déroulera dans
+    <strong>9 stades répartis entre 8 villes hôtes</strong> :
+    Londres, Manchester, Liverpool, Newcastle, Birmingham, Cardiff,
+    Glasgow et Dublin. Londres est la seule ville disposant de deux enceintes.
+    Découvrez ici leurs capacités, leurs particularités et les meilleurs accès
+    pour organiser votre séjour. Pour toutes les rencontres, consultez
+    <a href="euro-2028.html">notre calendrier Euro 2028</a>.
+  </p>
+  <div class="notice">
+    <strong>À savoir :</strong> les capacités présentées ci-dessous correspondent
+    aux chiffres publiés dans le guide UEFA des stades en septembre 2026.
+    Elles peuvent différer des capacités habituelles des clubs.
+    Le nombre de billets effectivement commercialisés peut être inférieur.
+  </div>
+</section>
+
+<section class="section" id="comparatif">
+  <h2>📊 Tableau comparatif des 9 stades de l'Euro 2028</h2>
+  <p class="section-lead">
+    Retrouvez la ville, la capacité annoncée par l'UEFA,
+    le nombre de rencontres et les phases accueillies par chaque stade.
+  </p>
+  <div class="comparison-wrap">
+    <table class="comparison">
+      <thead>
+        <tr>
+          <th>Stade</th><th>Ville</th><th>Capacité UEFA</th>
+          <th>Matchs</th><th>Phases accueillies</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><a href="#wembley">Wembley Stadium</a></td>
+          <td>Londres</td><td class="num">88 000</td><td class="num">8</td>
+          <td>4 groupes · 1 quart · 2 demies · finale</td>
+        </tr>
+        <tr>
+          <td><a href="#tottenham">Tottenham Hotspur Stadium</a></td>
+          <td>Londres</td><td class="num">60 000</td><td class="num">5</td>
+          <td>4 groupes · 1 huitième</td>
+        </tr>
+        <tr>
+          <td><a href="#manchester">Manchester City Stadium</a></td>
+          <td>Manchester</td><td class="num">58 000</td><td class="num">5</td>
+          <td>4 groupes · 1 huitième</td>
+        </tr>
+        <tr>
+          <td><a href="#everton">Everton Stadium</a></td>
+          <td>Liverpool</td><td class="num">50 000</td><td class="num">5</td>
+          <td>4 groupes · 1 huitième</td>
+        </tr>
+        <tr>
+          <td><a href="#newcastle">St James' Park</a></td>
+          <td>Newcastle</td><td class="num">50 000</td><td class="num">5</td>
+          <td>4 groupes · 1 huitième</td>
+        </tr>
+        <tr>
+          <td><a href="#villa">Villa Park</a></td>
+          <td>Birmingham</td><td class="num">48 000</td><td class="num">4</td>
+          <td>3 groupes · 1 huitième</td>
+        </tr>
+        <tr>
+          <td><a href="#cardiff">National Stadium of Wales</a></td>
+          <td>Cardiff</td><td class="num">73 000</td><td class="num">6</td>
+          <td>4 groupes · 1 huitième · 1 quart</td>
+        </tr>
+        <tr>
+          <td><a href="#hampden">Hampden Park</a></td>
+          <td>Glasgow</td><td class="num">51 000</td><td class="num">6</td>
+          <td>4 groupes · 1 huitième · 1 quart</td>
+        </tr>
+        <tr>
+          <td><a href="#dublin">Dublin Arena</a></td>
+          <td>Dublin</td><td class="num">50 000</td><td class="num">7</td>
+          <td>5 groupes · 1 huitième · 1 quart</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <p class="micro">
+    Source : UEFA, guide des villes et des stades ainsi que programmation
+    des rencontres par enceinte, publiés le 17 septembre 2026.
+  </p>
+</section>
+
+<section class="section" id="stades">
+  <h2>🏟️ Les 9 stades de l'Euro 2028 en détail</h2>
+  <p class="section-lead">
+    Découvrez les particularités de chaque enceinte, les matchs prévus,
+    les gares et stations utiles et nos conseils pour assister aux rencontres.
+  </p>
+
+  <nav class="venue-nav" aria-label="Choisir un stade">
+    <a href="#wembley">Wembley</a>
+    <a href="#tottenham">Tottenham</a>
+    <a href="#manchester">Manchester City</a>
+    <a href="#everton">Everton</a>
+    <a href="#newcastle">St James' Park</a>
+    <a href="#villa">Villa Park</a>
+    <a href="#cardiff">Cardiff</a>
+    <a href="#hampden">Hampden Park</a>
+    <a href="#dublin">Dublin Arena</a>
+  </nav>
+
+  <div class="venues">
+
+    <article id="wembley" class="venue">
+      <div class="venue-head">
+        <div class="venue-index">01</div>
+        <div><div class="venue-city">📍 Londres</div><h3>Wembley Stadium</h3></div>
+      </div>
+      <div class="venue-metrics">
+        <span>👥 <strong>88 000 places</strong></span>
+        <span>⚽ <strong>8 rencontres</strong></span>
+        <span>🏆 Finale : 9 juillet 2028</span>
+      </div>
+      <div class="venue-body">
+        <div>
+          <p>Avec sa célèbre arche visible depuis une grande partie du nord-ouest londonien, Wembley est l'un des stades les plus emblématiques du football mondial. Reconstruit et inauguré en 2007, il accueillera les deux demi-finales ainsi que la finale de l'Euro 2028.</p>
+          <h4>🚉 Transports et accès</h4>
+          <p>Les stations Wembley Park (lignes Jubilee et Metropolitan), Wembley Stadium (Chiltern Railways) et Wembley Central (Bakerloo et trains) permettent de rejoindre l'enceinte. Depuis Wembley Park, l'accès s'effectue par la grande avenue piétonne Olympic Way.</p>
+          <p class="small-label">Stations : Wembley Park · Wembley Stadium · Wembley Central</p>
+        </div>
+        <div>
+          <div class="match-box">
+            <span class="small-label">📅 Matchs de l'Euro 2028</span>
+            <p><strong>4 matchs de groupes, 1 quart de finale, 2 demi-finales et la finale.</strong></p>
+            <p>Dates : 11, 14, 16 et 19 juin ; 30 juin ; 4, 5 et 9 juillet 2028.</p>
+          </div>
+          <h4>💡 Conseil aux supporters</h4>
+          <p>Pour la finale, un hôtel proche d'une ligne de métro directe peut être plus pratique qu'un logement immédiatement voisin du stade. Prévoyez une marge importante après le match pour les files d'attente.</p>
+        </div>
+      </div>
+      <div class="venue-footer">
+        <a class="source-link" href="https://www.wembleystadium.com/plan-your-visit/getting-to-wembley" target="_blank" rel="noopener noreferrer">Accès officiels à Wembley ↗</a>
+        <a class="btn btn-outline" href="#hebergements">Préparer mon séjour ↓</a>
+      </div>
+    </article>
+
+    <article id="tottenham" class="venue">
+      <div class="venue-head">
+        <div class="venue-index">02</div>
+        <div><div class="venue-city">📍 Londres</div><h3>Tottenham Hotspur Stadium</h3></div>
+      </div>
+      <div class="venue-metrics">
+        <span>👥 <strong>60 000 places</strong></span>
+        <span>⚽ <strong>5 rencontres</strong></span>
+        <span>🏆 Huitième : 26 juin 2028</span>
+      </div>
+      <div class="venue-body">
+        <div>
+          <p>Ouvert en 2019 dans le nord de Londres, le Tottenham Hotspur Stadium figure parmi les enceintes les plus modernes d'Europe. Son architecture et sa conception polyvalente permettent d'accueillir de grands événements sportifs internationaux.</p>
+          <h4>🚉 Transports et accès</h4>
+          <p>Les gares White Hart Lane et Northumberland Park constituent les principaux accès ferroviaires. Tottenham Hale et Seven Sisters sont également des possibilités, avec une marche plus longue ou une correspondance.</p>
+          <p class="small-label">Stations : White Hart Lane · Northumberland Park</p>
+        </div>
+        <div>
+          <div class="match-box">
+            <span class="small-label">📅 Matchs de l'Euro 2028</span>
+            <p><strong>4 matchs de groupes et 1 huitième de finale.</strong></p>
+            <p>Dates : 12, 15, 18 et 21 juin ; 26 juin 2028.</p>
+          </div>
+          <h4>💡 Conseil aux supporters</h4>
+          <p>Wembley et Tottenham se trouvent dans des secteurs très différents de Londres. Choisissez votre hébergement selon le stade indiqué sur votre billet et la gare la plus pratique.</p>
+        </div>
+      </div>
+      <div class="venue-footer">
+        <a class="source-link" href="https://www.tottenhamhotspur.com/the-stadium/attending-matches/getting-here/" target="_blank" rel="noopener noreferrer">Accès officiels à Tottenham ↗</a>
+        <a class="btn btn-outline" href="#hebergements">Préparer mon séjour ↓</a>
+      </div>
+    </article>
+
+    <article id="manchester" class="venue">
+      <div class="venue-head">
+        <div class="venue-index">03</div>
+        <div><div class="venue-city">📍 Manchester</div><h3>Manchester City Stadium</h3></div>
+      </div>
+      <div class="venue-metrics">
+        <span>👥 <strong>58 000 places</strong></span>
+        <span>⚽ <strong>5 rencontres</strong></span>
+        <span>🏆 Huitième : 25 juin 2028</span>
+      </div>
+      <div class="venue-body">
+        <div>
+          <p>Connu sous le nom d'Etihad Stadium dans les compétitions de clubs, le Manchester City Stadium accueille de grandes rencontres depuis 2003. Situé à l'est du centre-ville, il a notamment reçu la finale de la Coupe UEFA 2008.</p>
+          <h4>🚉 Transports et accès</h4>
+          <p>Le tram Metrolink dessert l'arrêt Etihad Campus, situé à proximité immédiate du stade. Des correspondances sont possibles depuis le centre de Manchester, notamment via Piccadilly.</p>
+          <p class="small-label">Transport : Metrolink · Etihad Campus</p>
+        </div>
+        <div>
+          <div class="match-box">
+            <span class="small-label">📅 Matchs de l'Euro 2028</span>
+            <p><strong>4 matchs de groupes et 1 huitième de finale.</strong></p>
+            <p>Dates : 10, 13, 16 et 20 juin ; 25 juin 2028.</p>
+          </div>
+          <h4>💡 Conseil aux supporters</h4>
+          <p>Privilégiez le centre-ville ou un hôtel proche d'une ligne de tram. Vérifiez les services prévus après le coup de sifflet final et évitez de dépendre exclusivement de la voiture.</p>
+        </div>
+      </div>
+      <div class="venue-footer">
+        <a class="source-link" href="https://www.mancity.com/club/travel-and-transport/travelling-by-tram" target="_blank" rel="noopener noreferrer">Transports officiels Manchester City ↗</a>
+        <a class="btn btn-outline" href="#hebergements">Préparer mon séjour ↓</a>
+      </div>
+    </article>
+
+    <article id="everton" class="venue">
+      <div class="venue-head">
+        <div class="venue-index">04</div>
+        <div><div class="venue-city">📍 Liverpool</div><h3>Everton Stadium</h3></div>
+      </div>
+      <div class="venue-metrics">
+        <span>👥 <strong>50 000 places</strong></span>
+        <span>⚽ <strong>5 rencontres</strong></span>
+        <span>🏆 Huitième : 24 juin 2028</span>
+      </div>
+      <div class="venue-body">
+        <div>
+          <p>Inauguré pour la saison 2025-2026, le nouveau stade d'Everton se trouve à Bramley-Moore Dock, sur le front d'eau de Liverpool. Cette enceinte moderne permet de découvrir une partie de l'héritage portuaire de la ville.</p>
+          <h4>🚉 Transports et accès</h4>
+          <p>La gare Merseyrail de Sandhills constitue un point d'accès conseillé. Les derniers déplacements s'effectuent à pied ou selon les dispositifs de transport prévus les jours de grand événement.</p>
+          <p class="small-label">Transport : Merseyrail · Sandhills</p>
+        </div>
+        <div>
+          <div class="match-box">
+            <span class="small-label">📅 Matchs de l'Euro 2028</span>
+            <p><strong>4 matchs de groupes et 1 huitième de finale.</strong></p>
+            <p>Dates : 11, 14, 17 et 20 juin ; 24 juin 2028.</p>
+          </div>
+          <h4>💡 Conseil aux supporters</h4>
+          <p>Ne confondez pas cette enceinte avec l'ancien Goodison Park. Un hôtel dans le centre de Liverpool peut convenir, à condition de repérer votre itinéraire de retour après la rencontre.</p>
+        </div>
+      </div>
+      <div class="venue-footer">
+        <a class="source-link" href="https://www.merseytravel.gov.uk/timetables/travelling-to/efc-travel/" target="_blank" rel="noopener noreferrer">Accès et transports Everton ↗</a>
+        <a class="btn btn-outline" href="#hebergements">Préparer mon séjour ↓</a>
+      </div>
+    </article>
+
+    <article id="newcastle" class="venue">
+      <div class="venue-head">
+        <div class="venue-index">05</div>
+        <div><div class="venue-city">📍 Newcastle</div><h3>St James' Park</h3></div>
+      </div>
+      <div class="venue-metrics">
+        <span>👥 <strong>50 000 places</strong></span>
+        <span>⚽ <strong>5 rencontres</strong></span>
+        <span>🏆 Huitième : 25 juin 2028</span>
+      </div>
+      <div class="venue-body">
+        <div>
+          <p>Situé au cœur de Newcastle, St James' Park est l'une des enceintes historiques du football anglais. Ses tribunes dominent le paysage urbain. Le stade a notamment accueilli des rencontres de l'Euro 1996 et des Jeux olympiques de Londres 2012.</p>
+          <h4>🚉 Transports et accès</h4>
+          <p>Le stade est voisin de la station de métro St James. Les stations Monument et Newcastle Central se trouvent également à distance de marche, ce qui facilite les déplacements sans voiture.</p>
+          <p class="small-label">Stations : St James · Monument · Newcastle Central</p>
+        </div>
+        <div>
+          <div class="match-box">
+            <span class="small-label">📅 Matchs de l'Euro 2028</span>
+            <p><strong>4 matchs de groupes et 1 huitième de finale.</strong></p>
+            <p>Dates : 12, 15, 17 et 20 juin ; 25 juin 2028.</p>
+          </div>
+          <h4>💡 Conseil aux supporters</h4>
+          <p>St James' Park fait partie des stades les plus faciles à rejoindre depuis un centre-ville. Un hébergement près de Newcastle Central permet de profiter du séjour et de rejoindre le stade à pied.</p>
+        </div>
+      </div>
+      <div class="venue-footer">
+        <a class="source-link" href="https://www.newcastleunited.com/en/matchday-information-hub/travelling-to-st-james-park" target="_blank" rel="noopener noreferrer">Transports officiels St James' Park ↗</a>
+        <a class="btn btn-outline" href="#hebergements">Préparer mon séjour ↓</a>
+      </div>
+    </article>
+
+    <article id="villa" class="venue">
+      <div class="venue-head">
+        <div class="venue-index">06</div>
+        <div><div class="venue-city">📍 Birmingham</div><h3>Villa Park</h3></div>
+      </div>
+      <div class="venue-metrics">
+        <span>👥 <strong>48 000 places</strong></span>
+        <span>⚽ <strong>4 rencontres</strong></span>
+        <span>🏆 Huitième : 27 juin 2028</span>
+      </div>
+      <div class="venue-body">
+        <div>
+          <p>Villa Park est l'un des stades historiques du football anglais. Utilisé par Aston Villa depuis 1897, il est étroitement lié aux grandes rencontres de coupes nationales et à l'histoire du football de Birmingham.</p>
+          <h4>🚉 Transports et accès</h4>
+          <p>La gare de Witton se trouve à environ cinq minutes à pied du stade. Aston est une autre possibilité, à environ quinze minutes de marche. Ces deux gares sont connectées au réseau ferroviaire de Birmingham.</p>
+          <p class="small-label">Transport : Train · Witton ou Aston</p>
+        </div>
+        <div>
+          <div class="match-box">
+            <span class="small-label">📅 Matchs de l'Euro 2028</span>
+            <p><strong>3 matchs de groupes et 1 huitième de finale.</strong></p>
+            <p>Dates : 11, 15 et 20 juin ; 27 juin 2028.</p>
+          </div>
+          <h4>💡 Conseil aux supporters</h4>
+          <p>Un hébergement à proximité de Birmingham New Street facilite l'arrivée en train et la découverte du centre-ville. Les gares proches de Villa Park peuvent être très fréquentées après les matchs.</p>
+        </div>
+      </div>
+      <div class="venue-footer">
+        <a class="source-link" href="https://www.tfwm.org.uk/plan-your-journey/travel-information/how-to-get-to-event-venues/how-to-get-to-villa-park/" target="_blank" rel="noopener noreferrer">Accès et transports Villa Park ↗</a>
+        <a class="btn btn-outline" href="#hebergements">Préparer mon séjour ↓</a>
+      </div>
+    </article>
+
+    <article id="cardiff" class="venue">
+      <div class="venue-head">
+        <div class="venue-index">07</div>
+        <div><div class="venue-city">📍 Cardiff</div><h3>National Stadium of Wales</h3></div>
+      </div>
+      <div class="venue-metrics">
+        <span>👥 <strong>73 000 places</strong></span>
+        <span>⚽ <strong>6 rencontres</strong></span>
+        <span>🏆 Ouverture : 9 juin 2028</span>
+      </div>
+      <div class="venue-body">
+        <div>
+          <p>Également connu sous le nom de Principality Stadium, le National Stadium of Wales se situe en plein centre de Cardiff. Doté d'un toit rétractable, il accueillera le match d'ouverture de l'Euro 2028 ainsi qu'un quart de finale.</p>
+          <h4>🚉 Transports et accès</h4>
+          <p>Cardiff Central, la principale gare ferroviaire de la ville, se trouve à quelques minutes de marche. Des restrictions de circulation et des cheminements spécifiques peuvent être mis en place les jours de match.</p>
+          <p class="small-label">Transport : Train · Cardiff Central</p>
+        </div>
+        <div>
+          <div class="match-box">
+            <span class="small-label">📅 Matchs de l'Euro 2028</span>
+            <p><strong>4 matchs de groupes, 1 huitième et 1 quart de finale.</strong></p>
+            <p>Dates : 9, 14, 18 et 21 juin ; 24 juin ; 1er juillet 2028.</p>
+          </div>
+          <h4>💡 Conseil aux supporters</h4>
+          <p>Le centre de Cardiff est pratique pour un séjour sans voiture. Les hôtels proches de la gare permettent de rejoindre le stade à pied, mais la demande risque d'être importante autour du match d'ouverture.</p>
+        </div>
+      </div>
+      <div class="venue-footer">
+        <a class="source-link" href="https://www.principalitystadium.wales/information/getting-here" target="_blank" rel="noopener noreferrer">Accès officiels au stade de Cardiff ↗</a>
+        <a class="btn btn-outline" href="#hebergements">Préparer mon séjour ↓</a>
+      </div>
+    </article>
+
+    <article id="hampden" class="venue">
+      <div class="venue-head">
+        <div class="venue-index">08</div>
+        <div><div class="venue-city">📍 Glasgow</div><h3>Hampden Park</h3></div>
+      </div>
+      <div class="venue-metrics">
+        <span>👥 <strong>51 000 places</strong></span>
+        <span>⚽ <strong>6 rencontres</strong></span>
+        <span>🏆 Quart : 1er juillet 2028</span>
+      </div>
+      <div class="venue-body">
+        <div>
+          <p>Stade national de l'Écosse, Hampden Park est associé à de nombreuses grandes soirées du football européen. Il a notamment accueilli la finale de la Ligue des champions 2002 et plusieurs matchs de l'Euro 2020.</p>
+          <h4>🚉 Transports et accès</h4>
+          <p>Les gares Mount Florida et King's Park constituent les principaux accès ferroviaires. Elles sont desservies depuis Glasgow Central et se trouvent à courte distance à pied du stade.</p>
+          <p class="small-label">Transport : Train · Mount Florida ou King's Park</p>
+        </div>
+        <div>
+          <div class="match-box">
+            <span class="small-label">📅 Matchs de l'Euro 2028</span>
+            <p><strong>4 matchs de groupes, 1 huitième et 1 quart de finale.</strong></p>
+            <p>Dates : 10, 13, 17 et 21 juin ; 26 juin ; 1er juillet 2028.</p>
+          </div>
+          <h4>💡 Conseil aux supporters</h4>
+          <p>Un hôtel à proximité de Glasgow Central facilite l'accès aux trains et permet de découvrir la ville. Vérifiez les restrictions de circulation et prévoyez une marge pour quitter les environs du stade après la rencontre.</p>
+        </div>
+      </div>
+      <div class="venue-footer">
+        <a class="source-link" href="https://www.hampdenpark.co.uk/visitor-information/getting-here/" target="_blank" rel="noopener noreferrer">Accès officiels à Hampden Park ↗</a>
+        <a class="btn btn-outline" href="#hebergements">Préparer mon séjour ↓</a>
+      </div>
+    </article>
+
+    <article id="dublin" class="venue">
+      <div class="venue-head">
+        <div class="venue-index">09</div>
+        <div><div class="venue-city">📍 Dublin</div><h3>Dublin Arena</h3></div>
+      </div>
+      <div class="venue-metrics">
+        <span>👥 <strong>50 000 places</strong></span>
+        <span>⚽ <strong>7 rencontres</strong></span>
+        <span>🏆 Quart : 30 juin 2028</span>
+      </div>
+      <div class="venue-body">
+        <div>
+          <p>Connue localement sous le nom d'Aviva Stadium, la Dublin Arena se situe dans le quartier de Lansdowne Road. Cette enceinte moderne a accueilli les finales de Ligue Europa 2011 et 2024.</p>
+          <h4>🚉 Transports et accès</h4>
+          <p>Les stations DART Lansdowne Road et Grand Canal Dock permettent de rejoindre les différentes entrées. L'itinéraire conseillé dépend de la porte indiquée sur le billet et des dispositifs de circulation.</p>
+          <p class="small-label">Transport : DART · Lansdowne Road ou Grand Canal Dock</p>
+        </div>
+        <div>
+          <div class="match-box">
+            <span class="small-label">📅 Matchs de l'Euro 2028</span>
+            <p><strong>5 matchs de groupes, 1 huitième et 1 quart de finale.</strong></p>
+            <p>Dates : 10, 12, 16, 19 et 21 juin ; 27 et 30 juin 2028.</p>
+          </div>
+          <h4>💡 Conseil aux supporters</h4>
+          <p>Choisissez un hébergement proche d'une station DART ou dans le sud-est du centre-ville. Vérifiez bien votre porte d'entrée avant de choisir la station de descente le jour du match.</p>
+        </div>
+      </div>
+      <div class="venue-footer">
+        <a class="source-link" href="https://www.avivastadium.ie/getting-here/getting-to-the-gate" target="_blank" rel="noopener noreferrer">Accès officiels Dublin Arena ↗</a>
+        <a class="btn btn-outline" href="#hebergements">Préparer mon séjour ↓</a>
+      </div>
+    </article>
+
+  </div>
+</section>
+
+<section class="section" id="sejour">
+  <h2>🧭 Organiser son voyage pour l'Euro 2028</h2>
+  <p class="section-lead">
+    Pour profiter pleinement des rencontres, le bon hébergement n'est pas
+    toujours celui situé au pied du stade. La proximité d'une gare,
+    d'un métro ou d'un tramway peut être déterminante.
+  </p>
+  <div class="cards-grid">
+    <div class="card">
+      <h3>🚆 Privilégier les transports en commun</h3>
+      <p>Les accès routiers peuvent être modifiés les jours de match. Consultez les horaires de retour et privilégiez les transports collectifs. Prévoyez une marge après la rencontre.</p>
+    </div>
+    <div class="card">
+      <h3>📍 Choisir la bonne ville de base</h3>
+      <p>À Londres, Wembley et Tottenham ne disposent pas des mêmes accès. À Cardiff et Newcastle, les stades se trouvent proches du centre. À Manchester, Birmingham et Glasgow, les gares et tramways facilitent le séjour.</p>
+    </div>
+    <div class="card">
+      <h3>🛂 Vérifier les formalités d'entrée</h3>
+      <p>Pour un ressortissant français, le Royaume-Uni exige en principe un passeport valide et une autorisation ETA, sauf exemption. Pour la République d'Irlande, une carte d'identité ou un passeport valide suffit aux citoyens de l'Union européenne.</p>
+      <p><a class="source-link" href="https://www.gov.uk/eta" target="_blank" rel="noopener noreferrer">ETA britannique ↗</a></p>
+    </div>
+    <div class="card">
+      <h3>🎟️ Billets et réservations</h3>
+      <p>Les matchs sont attribués aux stades, mais les équipes qualifiées ne sont pas encore définitivement connues. Si vous réservez un hôtel tôt, vérifiez les conditions d'annulation.</p>
+    </div>
+    <div class="card">
+      <h3>🕒 Prévoir le retour après le match</h3>
+      <p>Les files d'attente aux gares, les contrôles et les itinéraires piétons peuvent allonger les temps de trajet. Évitez les correspondances trop serrées après une rencontre.</p>
+    </div>
+    <div class="card">
+      <h3>♿ Accessibilité des stades</h3>
+      <p>Les supporters ayant des besoins particuliers doivent consulter les informations officielles du stade et des transporteurs. Les modalités propres à l'Euro 2028 seront à vérifier avant le départ.</p>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="hebergements">
+  <h2>🏨 Hôtels et hébergements pour l'Euro 2028</h2>
+  <div class="accom">
+    <h3>Où dormir pour rejoindre facilement les stades ?</h3>
+    <p>
+      Vous préparez un déplacement pour assister à un match de
+      <strong>l'Euro 2028</strong> ? Choisissez votre hôtel selon les
+      transports desservant le stade, vos dates et les possibilités
+      de retour après la rencontre.
+    </p>
+    <p>
+      À <strong>Londres</strong>, les lignes Jubilee et Metropolitan sont
+      pratiques pour Wembley, tandis que White Hart Lane et Northumberland
+      Park desservent Tottenham. À <strong>Manchester</strong>, privilégiez
+      un emplacement accessible par le Metrolink. À <strong>Liverpool</strong>,
+      repérez les liaisons vers Sandhills.
+    </p>
+    <p>
+      Pour <strong>Cardiff, Glasgow, Newcastle, Birmingham et Dublin</strong>,
+      un hébergement central ou proche d'une gare bien connectée peut être
+      particulièrement pratique. Vérifiez les conditions d'annulation et
+      évitez les réservations non remboursables avant d'avoir confirmé
+      votre programme.
+    </p>
+    <div class="actions">
+      <a class="btn btn-gold"
+         href="https://www.tkqlhce.com/click-101766856-12319490?url=https%3A%2F%2Fwww.booking.com%2Fsearchresults.fr.html%3Fss%3DLONDRES%26label%3Dgen173nr-10CAEoggI46AdIM1gEaE2IAQGYATO4ARfIAQ_YAQPoAQH4AQGIAgGoAgG4Arb83tMGwAIB0gIkNTU1ZmFkN2UtMjAwOC00ZmFlLWE3ZTYtYzI3Y2RlMTIyMDZh2AIB4AIB%26aid%3D304142%26lang%3Dfr%26sb%3D1%26src_elem%3Dsb%26src%3Dindex%26dest_id%3D-1456928%26dest_type%3Dcity%26group_adults%3D2%26no_rooms%3D1%26group_children%3D0%26chal_t%3D1786232385633%26force_referer%3Dhttps%253A%252F%252Fwww.booking.com%252Findex.fr.html%253Faid%253D304142%2526label%253Dgen173nr-10CAEoggI46AdIM1gEaE2IAQGYATO4ARfIAQ_YAQPoAQH4AQGIAgGoAgG4Arb83tMGwAIB0gIkNTU1ZmFkN2UtMjAwOC00ZmFlLWE3ZTYtYzI3Y2RlMTIyMDZh2AIB4AIB%2526chal_t%253D1786232373740%2526force_referer%253D"
+         target="_blank"
+         rel="nofollow sponsored noopener">
+         🏨 Rechercher avec Booking.com →
+      </a>
+      <a class="btn btn-gold"
+         href="https://www.tkqlhce.com/click-101766856-13831003"
+         target="_blank"
+         rel="nofollow sponsored noopener">
+         🏨 Rechercher avec Hotels.com →
+      </a>
+    </div>
+    <p class="micro" style="text-align:center;margin-top:20px">
+      Le lien Booking.com actuel cible Londres. Vous pouvez modifier la destination et les dates sur le site partenaire.
+    </p>
+  </div>
+</section>
+
+<section class="section" id="faq">
+  <h2>❓ FAQ : les stades de l'Euro 2028</h2>
+  <div class="faq">
+    <details>
+      <summary>Combien de stades accueilleront l'Euro 2028 ?</summary>
+      <p>Neuf stades répartis dans huit villes accueilleront les matchs de l'Euro 2028. Londres est la seule ville disposant de deux enceintes : Wembley Stadium et Tottenham Hotspur Stadium.</p>
+    </details>
+    <details>
+      <summary>Quel sera le plus grand stade de l'Euro 2028 ?</summary>
+      <p>Wembley Stadium, à Londres, est le plus grand des neuf stades, avec une capacité annoncée de 88 000 places dans le guide UEFA de septembre 2026.</p>
+    </details>
+    <details>
+      <summary>Où aura lieu la finale de l'Euro 2028 ?</summary>
+      <p>La finale aura lieu à Wembley Stadium, à Londres, le 9 juillet 2028. Les deux demi-finales y seront également disputées les 4 et 5 juillet.</p>
+    </details>
+    <details>
+      <summary>Quel stade accueillera le match d'ouverture ?</summary>
+      <p>Le National Stadium of Wales, également appelé Principality Stadium, à Cardiff, accueillera le match d'ouverture le 9 juin 2028.</p>
+    </details>
+    <details>
+      <summary>Quels stades accueilleront les quarts de finale ?</summary>
+      <p>Les quarts de finale sont programmés à Wembley Stadium, Dublin Arena, Hampden Park à Glasgow et au National Stadium of Wales à Cardiff.</p>
+    </details>
+    <details>
+      <summary>Quels stades sont proches d'une gare ?</summary>
+      <p>Le stade de Cardiff est proche de Cardiff Central, St James' Park est voisin du métro St James, Villa Park est proche de Witton et Wembley dispose de plusieurs stations. Chaque stade bénéficie de dessertes spécifiques.</p>
+    </details>
+    <details>
+      <summary>Peut-on connaître les équipes qui joueront dans chaque stade ?</summary>
+      <p>Pas encore définitivement. La programmation des rencontres par stade est annoncée, mais les équipes qui y joueront dépendront des qualifications et du tirage au sort de la phase finale.</p>
+    </details>
+    <details>
+      <summary>Les capacités des stades correspondent-elles aux billets disponibles ?</summary>
+      <p>Non. Les capacités annoncées représentent les chiffres de référence de l'UEFA. Le nombre de billets effectivement proposés peut varier selon la configuration, les installations techniques et les allocations.</p>
+    </details>
+    <details>
+      <summary>Faut-il une ETA pour assister à un match au Royaume-Uni ?</summary>
+      <p>En principe, les citoyens français voyageant au Royaume-Uni doivent posséder un passeport valide et une ETA, sauf situation particulière ou exemption. Les règles devront être vérifiées avant le voyage en 2028.</p>
+    </details>
+    <details>
+      <summary>Où consulter le calendrier complet de l'Euro 2028 ?</summary>
+      <p>Retrouvez les dates, les rencontres, les phases de compétition et les informations de billetterie sur la page principale <a class="source-link" href="euro-2028.html">Euro 2028 de Vidolta</a>.</p>
+    </details>
+  </div>
+</section>
+
+<section class="section">
+  <div class="closing">
+    <img src="images/euro-2028-panorama.webp"
+         alt="Vue panoramique d'un stade de football pour l'Euro 2028"
+         width="1600" height="900" loading="lazy" decoding="async">
+    <h2>⚽ Prêt à vivre l'Euro 2028 ?</h2>
+    <p>Maintenant que vous connaissez les stades, découvrez le calendrier complet de la compétition, les dates des rencontres et les informations sur la billetterie.</p>
+    <div class="actions">
+      <a class="btn btn-white" href="euro-2028.html">📅 Calendrier et billets Euro 2028 →</a>
+      <a class="btn btn-outline" href="events.html">🎉 Autres événements →</a>
+    </div>
+  </div>
+</section>
+
+<section class="section sources">
+  <p>
+    <strong>Sources officielles :</strong>
+    <a href="https://www.uefa.com/euro2028/news/029f-1f2ffa63f511-1e265da34302-1000--euro-2028-host-cities-and-stadiums-venue-guide/" target="_blank" rel="noopener noreferrer">UEFA — guide des villes et stades</a>
+    et
+    <a href="https://www.uefa.com/euro2028/news/029f-1f316a6367f1-98285072ea82-1000--euro-2028-fixtures-by-venue-which-games-take-place-where/" target="_blank" rel="noopener noreferrer">UEFA — rencontres par stade</a>.
+  </p>
+  <p>
+    Informations vérifiées le <time datetime="2026-11-03">3 novembre 2026</time>.
+    Les accès, les transports et les formalités peuvent évoluer d'ici la compétition.
+  </p>
+</section>
+
+</main>
+
+<button id="backToTop" class="back-to-top" type="button" aria-label="Retour en haut">↑</button>
+
+<footer>
+  <p class="footer-affiliate-note">
+    Liens affiliés : Vidolta peut recevoir une commission sur certaines réservations, sans frais supplémentaires pour vous.
+  </p>
+  <p>© 2026 Vidolta — Stades de l'Euro 2028</p>
+  <div class="footer-links">
+    <a href="index.html">Accueil</a>
+    <a href="about.html">À propos</a>
+    <a href="our-story.html">Notre histoire</a>
+    <a href="legal-notice.html">Mentions légales</a>
+    <a href="privacy-policy.html">Politique de confidentialité</a>
+    <a href="contact.html">Contact</a>
+  </div>
+</footer>
+
+<script>
+const menuBtn = document.getElementById('menuBtn');
+const navLinks = document.getElementById('navLinks');
+
+function closeMenu() {
+  navLinks.classList.remove('active');
+  menuBtn.setAttribute('aria-expanded','false');
+  menuBtn.setAttribute('aria-label','Ouvrir le menu');
+}
+
+menuBtn.addEventListener('click', () => {
+  const isOpen = navLinks.classList.toggle('active');
+  menuBtn.setAttribute('aria-expanded',String(isOpen));
+  menuBtn.setAttribute('aria-label',isOpen ? 'Fermer le menu' : 'Ouvrir le menu');
+});
+
+navLinks.querySelectorAll('a').forEach(a => {
+  a.addEventListener('click',closeMenu);
+});
+
+document.addEventListener('keydown',e => {
+  if(e.key === 'Escape') closeMenu();
+});
+
+document.addEventListener('click',e => {
+  if(!e.target.closest('.navbar')) closeMenu();
+});
+
+const backToTop = document.getElementById('backToTop');
+
+window.addEventListener('scroll',() => {
+  backToTop.classList.toggle('show',window.scrollY > 400);
+},{passive:true});
+
+backToTop.addEventListener('click',() => {
+  window.scrollTo({top:0,behavior:'smooth'});
+});
+</script>
+
+</body>
+</html>
