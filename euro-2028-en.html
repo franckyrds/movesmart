@@ -1,25 +1,47 @@
+
 <!DOCTYPE html>
-
 <html lang="en">
-
 <head>
 
-<meta charset="UTF-8"/>
-<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Euro 2028 Fixtures, Schedule, Host Cities & Tickets | Vidolta</title>
+<!-- SEO -->
+<title>Euro 2028: Fixtures, Match Schedule, Host Cities & Tickets | Vidolta</title>
 
 <meta name="description"
-content="Euro 2028 fixtures and full match schedule: dates, host cities, stadiums, tickets, accommodation and travel information for the UK and Ireland.">
+content="Explore UEFA Euro 2028 fixtures, the full match schedule, host cities, stadiums, tickets, accommodation and travel tips for the UK and Ireland.">
 
+<meta name="robots" content="index,follow,max-image-preview:large">
+<meta name="theme-color" content="#060b1f">
+
+<!-- Canonical -->
 <link rel="canonical"
 href="https://www.vidolta.com/euro-2028-en.html">
 
+<!-- Multilingual SEO -->
+<link rel="alternate"
+hreflang="en"
+href="https://www.vidolta.com/euro-2028-en.html">
+
+<link rel="alternate"
+hreflang="fr"
+href="https://www.vidolta.com/euro-2028.html">
+
+<link rel="alternate"
+hreflang="x-default"
+href="https://www.vidolta.com/euro-2028.html">
+
+<!-- Open Graph / Facebook -->
+<meta property="og:type" content="website">
+<meta property="og:locale" content="en_GB">
+<meta property="og:site_name" content="Vidolta">
+
 <meta property="og:title"
-content="Euro 2028 Fixtures, Schedule, Host Cities & Tickets">
+content="Euro 2028: Fixtures, Match Schedule, Host Cities & Tickets">
 
 <meta property="og:description"
-content="Explore the Euro 2028 fixtures, match schedule, host cities, stadiums, tickets and travel information for the UK and Ireland.">
+content="Discover the UEFA Euro 2028 match schedule, stadiums, host cities, ticket information and travel tips for the UK and Ireland.">
 
 <meta property="og:url"
 content="https://www.vidolta.com/euro-2028-en.html">
@@ -27,56 +49,31 @@ content="https://www.vidolta.com/euro-2028-en.html">
 <meta property="og:image"
 content="https://www.vidolta.com/images/euro-2028.webp">
 
-<meta property="og:site_name"
-content="Vidolta">
+<meta property="og:image:alt"
+content="Football stadium representing UEFA Euro 2028">
 
-<meta property="og:type"
-content="website">
+<!-- Twitter / X -->
+<meta name="twitter:card" content="summary_large_image">
 
-<meta property="og:locale"
-content="en_GB">
+<meta name="twitter:title"
+content="Euro 2028: Fixtures, Host Cities & Tickets | Vidolta">
 
-<meta name="theme-color"
-content="#060b1f">
+<meta name="twitter:description"
+content="Explore Euro 2028 fixtures, match dates, stadiums, host cities and ticket information.">
 
-<link rel="alternate"
-hreflang="fr"
-href="https://www.vidolta.com/euro-2028.html">
+<meta name="twitter:image"
+content="https://www.vidolta.com/images/euro-2028.webp">
 
-<link rel="alternate"
-hreflang="en"
-href="https://www.vidolta.com/euro-2028-en.html">
+<!-- Favicons -->
+<link rel="icon" type="image/x-icon" href="favicon.ico">
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
+<link rel="icon" type="image/png" sizes="96x96" href="favicon-96x96.png">
+<link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+<link rel="manifest" href="site.webmanifest">
 
-<link rel="alternate"
-hreflang="x-default"
-href="https://www.vidolta.com/euro-2028.html">
-
-<link rel="icon"
-type="image/x-icon"
-href="favicon.ico">
-
-<link rel="icon"
-type="image/svg+xml"
-href="favicon.svg">
-
-<link rel="icon"
-type="image/png"
-sizes="96x96"
-href="favicon-96x96.png">
-
-<link rel="apple-touch-icon"
-sizes="180x180"
-href="apple-touch-icon.png">
-
-<link rel="manifest"
-href="site.webmanifest">
-
-<link rel="preconnect"
-href="https://fonts.googleapis.com">
-
-<link rel="preconnect"
-href="https://fonts.gstatic.com"
-crossorigin>
+<!-- Google Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
 rel="stylesheet">
@@ -1002,7 +999,198 @@ padding:0 20px;
 line-height:1.6;
 }
 
+
+/* VILLES HOTES EURO 2028 */
+
+.cities-intro{
+  max-width:850px;
+  text-align:center;
+  margin:0 auto 35px;
+  color:#cbd5e1;
+  line-height:1.8;
+}
+
+.cities-grid{
+  display:grid;
+  grid-template-columns:repeat(3,minmax(0,1fr));
+  gap:24px;
+}
+
+.city-card{
+  padding:0;
+  overflow:hidden;
+  display:flex;
+  flex-direction:column;
+}
+
+.city-card img{
+  width:100%;
+  height:205px;
+  object-fit:cover;
+  transition:transform .4s ease;
+}
+
+.city-card:hover img{
+  transform:scale(1.04);
+}
+
+.city-content{
+  padding:24px;
+  flex:1;
+  display:flex;
+  flex-direction:column;
+}
+
+.city-content h3{
+  margin-bottom:12px;
+}
+
+.city-content p{
+  margin-bottom:18px;
+}
+
+.city-links{
+  margin-top:auto;
+  display:flex;
+  flex-direction:column;
+  align-items:flex-start;
+  gap:10px;
+}
+
+.city-links a{
+  font-size:.85rem;
+  padding:11px 14px;
+}
+
+@media(max-width:950px){
+  .cities-grid{
+    grid-template-columns:repeat(2,minmax(0,1fr));
+  }
+}
+
+@media(max-width:600px){
+  .cities-grid{
+    grid-template-columns:1fr;
+  }
+
+  .city-card img{
+    height:220px;
+  }
+}
+
+
+/* LISTE DES STADES EURO 2028 */
+
+.stadiums-list{
+  max-width:1050px;
+  margin:0 auto;
+  background:linear-gradient(
+    135deg,
+    rgba(18,26,52,0.92),
+    rgba(12,18,38,0.88)
+  );
+  border:1px solid rgba(255,255,255,0.08);
+  border-radius:24px;
+  overflow:hidden;
+  box-shadow:0 15px 40px rgba(0,0,0,0.2);
+}
+
+.stadium-row{
+  display:flex;
+  align-items:center;
+  gap:24px;
+  padding:22px 28px;
+  border-bottom:1px solid rgba(255,255,255,0.08);
+  transition:background .3s ease;
+}
+
+.stadium-row:last-child{
+  border-bottom:none;
+}
+
+.stadium-row:hover{
+  background:rgba(99,102,241,0.1);
+}
+
+.stadium-number{
+  flex-shrink:0;
+  width:52px;
+  height:52px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  background:rgba(99,102,241,0.15);
+  border:1px solid rgba(129,140,248,0.25);
+  color:#a5b4fc;
+  border-radius:14px;
+  font-size:1.1rem;
+  font-weight:700;
+}
+
+.stadium-info h3{
+  color:#ffffff;
+  font-size:1.1rem;
+  margin-bottom:6px;
+}
+
+.stadium-info p{
+  color:#cbd5e1;
+  font-size:.9rem;
+  line-height:1.6;
+  margin:0;
+}
+
+.stadiums-cta{
+  display:flex;
+  justify-content:center;
+  margin-top:35px;
+}
+
+.stadiums-cta a{
+  display:inline-block;
+  padding:16px 28px;
+  background:linear-gradient(90deg,#6366f1,#8b5cf6);
+  color:#ffffff;
+  border-radius:16px;
+  font-weight:700;
+  text-align:center;
+  box-shadow:0 10px 25px rgba(99,102,241,0.25);
+  transition:.3s;
+}
+
+.stadiums-cta a:hover{
+  transform:translateY(-3px);
+  box-shadow:0 14px 30px rgba(99,102,241,0.35);
+}
+
+@media(max-width:600px){
+  .stadium-row{
+    gap:15px;
+    padding:18px 15px;
+  }
+
+  .stadium-number{
+    width:42px;
+    height:42px;
+    font-size:.95rem;
+  }
+
+  .stadium-info h3{
+    font-size:1rem;
+  }
+
+  .stadium-info p{
+    font-size:.82rem;
+  }
+
+  .stadiums-cta a{
+    padding:14px 18px;
+    font-size:.9rem;
+  }
+}
+  
 </style>
+
 
 </head>
 
@@ -1022,6 +1210,10 @@ line-height:1.6;
 
 <a href="#cities">🏙️ Host Cities</a>
 
+<a href="#stadiums">🏟️ Stadiums</a>
+
+<a href="#flights">✈️ Flights</a>
+
 <a href="#accommodation">🏨 Accommodation</a>
 
 <a href="events-en.html" class="active">🎉 Events</a>
@@ -1036,15 +1228,15 @@ line-height:1.6;
 
 <img
 src="images/event-euro-2028.webp"
-alt="Euro 2028 fixtures and matches in the United Kingdom and Ireland">
+alt="UEFA Euro 2028 football tournament in the United Kingdom and Ireland">
 
 <div class="hero-overlay">
 
 <h1>⚽ Euro <span>2028</span></h1>
 
 <p>
-Plan your Euro 2028 journey across the United Kingdom and Ireland<br>
-Explore fixtures, host cities, stadiums and travel tips.
+Plan your trip to UEFA Euro 2028 in the United Kingdom and Ireland<br>
+Explore the match schedule, host cities, stadiums and travel tips for your stay.
 </p>
 
 </div>
@@ -1054,23 +1246,23 @@ Explore fixtures, host cities, stadiums and travel tips.
 <section class="quick-guide">
 
 <a href="#schedule" class="quick-card">
-<h3>📅 Euro 2028 fixtures</h3>
-<p>See the complete match schedule, dates, stages and venues.</p>
+<h3>📅 Euro 2028 Fixtures</h3>
+<p>Explore the full match schedule, tournament dates, stages and venues.</p>
 </a>
 
 <a href="#cities" class="quick-card">
-<h3>🌍 8 host cities</h3>
-<p>Discover London, Dublin, Glasgow, Cardiff and the other host cities.</p>
+<h3>🌍 8 Host Cities</h3>
+<p>Discover London, Dublin, Glasgow, Cardiff and the other Euro 2028 host cities.</p>
 </a>
 
 <a href="#tickets" class="quick-card">
-<h3>🎟️ Tickets</h3>
-<p>Find official UEFA ticket information and sales updates.</p>
+<h3>🎟️ Euro 2028 Tickets</h3>
+<p>Find official UEFA information about ticket sales and availability.</p>
 </a>
 
-<a href="#stadiums" class="quick-card">
-<h3>🏟️ 9 stadiums</h3>
-<p>Explore the nine stadiums hosting Euro 2028 matches across the UK and Ireland.</p>
+<a href="#flights" class="quick-card">
+<h3>✈️ Flights</h3>
+<p>Compare flights to Euro 2028 host cities across the United Kingdom and Ireland.</p>
 </a>
 
 </section>
@@ -1079,30 +1271,39 @@ Explore fixtures, host cities, stadiums and travel tips.
 
 <div class="info-box">
 
-<h2>🌍 Where is Euro 2028 being held?</h2>
+<h2>🌍 Where Will UEFA Euro 2028 Take Place?</h2>
 
 <p>
 Get ready to experience one of Europe's biggest sporting events
-in some of the most iconic destinations across the United Kingdom and Ireland.
-Euro 2028 will combine world-class football, legendary stadiums
-and unforgettable city experiences.
+across some of the most iconic destinations in the United Kingdom and Ireland.
+UEFA Euro 2028 will bring together world-class football, legendary stadiums
+and exciting cities for an unforgettable tournament.
 </p>
 
 <p>
-UEFA Euro 2028 will take place from <strong>9 June to 9 July 2028</strong>
+<strong>UEFA Euro 2028</strong> will take place from
+<strong>9 June to 9 July 2028</strong>
 across <strong>England, Scotland, Wales and the Republic of Ireland</strong>.
-The tournament will feature <strong>24 teams and 51 matches</strong>
-played across <strong>9 stadiums in 8 host cities</strong>.
+The tournament will feature <strong>24 teams playing 51 matches</strong>
+at <strong>9 stadiums across 8 host cities</strong>.
 </p>
 
 <p>
 From the energy of <strong>London</strong> and <strong>Manchester</strong>
 to the atmosphere of <strong>Glasgow, Cardiff and Dublin</strong>,
-each host city offers a unique way to experience Euro 2028.
-The opening match will be played at the National Stadium of Wales in Cardiff
-on <strong>9 June 2028</strong>, while the semi-finals and final will take place
-at Wembley Stadium in London, with the final scheduled for
-<strong>9 July 2028</strong>.
+each host city will offer a unique experience for football fans.
+The opening match will take place at the National Stadium of Wales
+in Cardiff on <strong>9 June 2028</strong>, while both semi-finals
+and the final will be played at Wembley Stadium in London.
+The final is scheduled for <strong>9 July 2028</strong>.
+</p>
+
+<p>
+Want to explore the venues in more detail?
+Discover our complete guide to the
+<a href="stades-euro-2028-en.html"><strong>9 Euro 2028 stadiums</strong></a>,
+including capacities, match allocations, transport connections
+and accommodation tips.
 </p>
 
 </div>
@@ -1112,13 +1313,12 @@ at Wembley Stadium in London, with the final scheduled for
 <section id="schedule" class="section">
 
 <h2 class="section-title">
-📅 Euro 2028 Fixtures & Full Match Schedule
+📅 Full UEFA Euro 2028 Match Schedule
 </h2>
-
 
 <img
 src="images/calendrier-euro-2028-en.webp"
-alt="Euro 2028 fixtures calendar and full match schedule"
+alt="Complete UEFA Euro 2028 match schedule showing tournament dates and fixtures"
 style="
 width:100%;
 max-width:1400px;
@@ -1129,29 +1329,28 @@ border:1px solid rgba(255,255,255,0.08);
 box-shadow:0 20px 50px rgba(0,0,0,0.35);
 ">
 
-
 <div class="card"
 style="max-width:1100px;margin:0 auto 30px;text-align:center;">
 
 <p>
-The official <strong>Euro 2028 fixtures and match schedule</strong> have been announced.
-A total of <strong>51 matches</strong> will take place from
-<strong>9 June to 9 July 2028</strong> across nine stadiums in eight host cities
-in the United Kingdom and Ireland.
+The <strong>official UEFA Euro 2028 match schedule</strong> has been announced.
+A total of <strong>51 matches</strong> will be played from
+<strong>9 June to 9 July 2028</strong> across nine stadiums
+in eight host cities in the United Kingdom and Ireland.
 </p>
 
 <p>
-Teams are currently shown by their group positions
+Teams are currently identified by their group positions
 (<strong>A1, A2, B1, B2...</strong>).
-The team names and individual kick-off times will be added after
+Team names and confirmed kick-off times will be updated following
 the final tournament draw in 2027.
 </p>
 
 </div>
 
 <p style="text-align:center;margin-bottom:25px;color:#cbd5e1;">
-Browse the complete <strong>Euro 2028 match schedule</strong> with all fixtures,
-dates, tournament stages and host stadiums.
+Explore the <strong>complete Euro 2028 fixtures and schedule</strong> below,
+including match dates, tournament stages and stadium venues.
 </p>
 
 <div class="fixtures-table-wrap">
@@ -1160,11 +1359,12 @@ dates, tournament stages and host stadiums.
 
 <thead>
 
+
 <tr>
 <th>Date</th>
 <th>Stage</th>
-<th>Fixture</th>
-<th>Venue</th>
+<th>Match</th>
+<th>Stadium</th>
 </tr>
 
 </thead>
@@ -1173,360 +1373,366 @@ dates, tournament stages and host stadiums.
 
 <tr>
 <td><time datetime="2028-06-09">9 June</time></td>
-<td>Group stage</td>
+<td>Group Stage</td>
 <td><strong>A1 vs A2</strong></td>
 <td>Cardiff – National Stadium of Wales</td>
 </tr>
 
 <tr>
 <td><time datetime="2028-06-10">10 June</time></td>
-<td>Group stage</td>
+<td>Group Stage</td>
 <td><strong>A3 vs A4</strong></td>
 <td>Glasgow – Hampden Park</td>
 </tr>
 
 <tr>
 <td><time datetime="2028-06-10">10 June</time></td>
-<td>Group stage</td>
+<td>Group Stage</td>
 <td><strong>B1 vs B2</strong></td>
 <td>Manchester – Manchester City Stadium</td>
 </tr>
 
 <tr>
 <td><time datetime="2028-06-10">10 June</time></td>
-<td>Group stage</td>
+<td>Group Stage</td>
 <td><strong>B3 vs B4</strong></td>
 <td>Dublin – Dublin Arena</td>
 </tr>
 
 <tr>
 <td><time datetime="2028-06-11">11 June</time></td>
-<td>Group stage</td>
+<td>Group Stage</td>
 <td><strong>C1 vs C2</strong></td>
 <td>London – Wembley Stadium</td>
 </tr>
 
 <tr>
 <td><time datetime="2028-06-11">11 June</time></td>
-<td>Group stage</td>
+<td>Group Stage</td>
 <td><strong>C3 vs C4</strong></td>
 <td>Birmingham – Villa Park</td>
 </tr>
 
 <tr>
 <td><time datetime="2028-06-11">11 June</time></td>
-<td>Group stage</td>
+<td>Group Stage</td>
 <td><strong>D3 vs D4</strong></td>
 <td>Liverpool – Everton Stadium</td>
 </tr>
 
 <tr>
 <td><time datetime="2028-06-12">12 June</time></td>
-<td>Group stage</td>
+<td>Group Stage</td>
 <td><strong>D1 vs D2</strong></td>
 <td>London – Tottenham Hotspur Stadium</td>
 </tr>
 
 <tr>
 <td><time datetime="2028-06-12">12 June</time></td>
-<td>Group stage</td>
+<td>Group Stage</td>
 <td><strong>E1 vs E2</strong></td>
 <td>Dublin – Dublin Arena</td>
 </tr>
 
 <tr>
 <td><time datetime="2028-06-12">12 June</time></td>
-<td>Group stage</td>
+<td>Group Stage</td>
 <td><strong>E3 vs E4</strong></td>
 <td>Newcastle – St James' Park</td>
 </tr>
 
 <tr>
 <td><time datetime="2028-06-13">13 June</time></td>
-<td>Group stage</td>
+<td>Group Stage</td>
 <td><strong>F1 vs F2</strong></td>
 <td>Glasgow – Hampden Park</td>
 </tr>
 
 <tr>
 <td><time datetime="2028-06-13">13 June</time></td>
-<td>Group stage</td>
+<td>Group Stage</td>
 <td><strong>F3 vs F4</strong></td>
 <td>Manchester – Manchester City Stadium</td>
 </tr>
 
 <tr>
 <td><time datetime="2028-06-14">14 June</time></td>
-<td>Group stage</td>
+<td>Group Stage</td>
 <td><strong>A1 vs A3</strong></td>
 <td>Cardiff – National Stadium of Wales</td>
 </tr>
 
 <tr>
 <td><time datetime="2028-06-14">14 June</time></td>
-<td>Group stage</td>
+<td>Group Stage</td>
 <td><strong>A2 vs A4</strong></td>
 <td>Liverpool – Everton Stadium</td>
 </tr>
 
 <tr>
 <td><time datetime="2028-06-14">14 June</time></td>
-<td>Group stage</td>
+<td>Group Stage</td>
 <td><strong>B1 vs B3</strong></td>
 <td>London – Wembley Stadium</td>
 </tr>
 
 <tr>
 <td><time datetime="2028-06-15">15 June</time></td>
-<td>Group stage</td>
+<td>Group Stage</td>
 <td><strong>B2 vs B4</strong></td>
 <td>Birmingham – Villa Park</td>
 </tr>
 
 <tr>
 <td><time datetime="2028-06-15">15 June</time></td>
-<td>Group stage</td>
+<td>Group Stage</td>
 <td><strong>C1 vs C3</strong></td>
 <td>London – Tottenham Hotspur Stadium</td>
 </tr>
 
 <tr>
 <td><time datetime="2028-06-15">15 June</time></td>
-<td>Group stage</td>
+<td>Group Stage</td>
 <td><strong>C2 vs C4</strong></td>
 <td>Newcastle – St James' Park</td>
 </tr>
 
 <tr>
 <td><time datetime="2028-06-16">16 June</time></td>
-<td>Group stage</td>
+<td>Group Stage</td>
 <td><strong>D1 vs D3</strong></td>
 <td>London – Wembley Stadium</td>
 </tr>
 
 <tr>
 <td><time datetime="2028-06-16">16 June</time></td>
-<td>Group stage</td>
+<td>Group Stage</td>
 <td><strong>D2 vs D4</strong></td>
 <td>Manchester – Manchester City Stadium</td>
 </tr>
 
 <tr>
 <td><time datetime="2028-06-16">16 June</time></td>
-<td>Group stage</td>
+<td>Group Stage</td>
 <td><strong>E1 vs E3</strong></td>
 <td>Dublin – Dublin Arena</td>
 </tr>
 
 <tr>
 <td><time datetime="2028-06-17">17 June</time></td>
-<td>Group stage</td>
+<td>Group Stage</td>
 <td><strong>E2 vs E4</strong></td>
 <td>Liverpool – Everton Stadium</td>
 </tr>
 
 <tr>
 <td><time datetime="2028-06-17">17 June</time></td>
-<td>Group stage</td>
+<td>Group Stage</td>
 <td><strong>F1 vs F3</strong></td>
 <td>Glasgow – Hampden Park</td>
 </tr>
 
 <tr>
 <td><time datetime="2028-06-17">17 June</time></td>
-<td>Group stage</td>
+<td>Group Stage</td>
 <td><strong>F2 vs F4</strong></td>
 <td>Newcastle – St James' Park</td>
 </tr>
 
 <tr>
 <td><time datetime="2028-06-18">18 June</time></td>
-<td>Group stage</td>
+<td>Group Stage</td>
 <td><strong>A4 vs A1</strong></td>
 <td>Cardiff – National Stadium of Wales</td>
 </tr>
 
 <tr>
 <td><time datetime="2028-06-18">18 June</time></td>
-<td>Group stage</td>
+<td>Group Stage</td>
 <td><strong>A2 vs A3</strong></td>
 <td>London – Tottenham Hotspur Stadium</td>
 </tr>
 
 <tr>
 <td><time datetime="2028-06-19">19 June</time></td>
-<td>Group stage</td>
+<td>Group Stage</td>
 <td><strong>B2 vs B3</strong></td>
 <td>Dublin – Dublin Arena</td>
 </tr>
 
 <tr>
 <td><time datetime="2028-06-19">19 June</time></td>
-<td>Group stage</td>
+<td>Group Stage</td>
 <td><strong>B4 vs B1</strong></td>
 <td>London – Wembley Stadium</td>
 </tr>
 
 <tr>
 <td><time datetime="2028-06-20">20 June</time></td>
-<td>Group stage</td>
+<td>Group Stage</td>
 <td><strong>C4 vs C1</strong></td>
 <td>Manchester – Manchester City Stadium</td>
 </tr>
 
 <tr>
 <td><time datetime="2028-06-20">20 June</time></td>
-<td>Group stage</td>
+<td>Group Stage</td>
 <td><strong>C2 vs C3</strong></td>
 <td>Liverpool – Everton Stadium</td>
 </tr>
 
 <tr>
 <td><time datetime="2028-06-20">20 June</time></td>
-<td>Group stage</td>
+<td>Group Stage</td>
 <td><strong>D4 vs D1</strong></td>
 <td>Birmingham – Villa Park</td>
 </tr>
 
 <tr>
 <td><time datetime="2028-06-20">20 June</time></td>
-<td>Group stage</td>
+<td>Group Stage</td>
 <td><strong>D2 vs D3</strong></td>
 <td>Newcastle – St James' Park</td>
 </tr>
 
 <tr>
 <td><time datetime="2028-06-21">21 June</time></td>
-<td>Group stage</td>
+<td>Group Stage</td>
 <td><strong>E4 vs E1</strong></td>
 <td>Dublin – Dublin Arena</td>
 </tr>
 
 <tr>
 <td><time datetime="2028-06-21">21 June</time></td>
-<td>Group stage</td>
+<td>Group Stage</td>
 <td><strong>E2 vs E3</strong></td>
 <td>London – Tottenham Hotspur Stadium</td>
 </tr>
 
 <tr>
 <td><time datetime="2028-06-21">21 June</time></td>
-<td>Group stage</td>
+<td>Group Stage</td>
 <td><strong>F4 vs F1</strong></td>
 <td>Glasgow – Hampden Park</td>
 </tr>
 
 <tr>
 <td><time datetime="2028-06-21">21 June</time></td>
-<td>Group stage</td>
+<td>Group Stage</td>
 <td><strong>F2 vs F3</strong></td>
 <td>Cardiff – National Stadium of Wales</td>
 </tr>
 
+<!-- ROUND OF 16 -->
 
 <tr class="knockout-row">
 <td><time datetime="2028-06-24">24 June</time></td>
 <td><strong>Round of 16</strong></td>
-<td>Group A winners vs Group C runners-up</td>
+<td>Group A winner vs Group C runner-up</td>
 <td>Cardiff – National Stadium of Wales</td>
 </tr>
 
 <tr class="knockout-row">
 <td><time datetime="2028-06-24">24 June</time></td>
 <td><strong>Round of 16</strong></td>
-<td>Group A runners-up vs Group B runners-up</td>
+<td>Group A runner-up vs Group B runner-up</td>
 <td>Liverpool – Everton Stadium</td>
 </tr>
 
 <tr class="knockout-row">
 <td><time datetime="2028-06-25">25 June</time></td>
 <td><strong>Round of 16</strong></td>
-<td>Group C winners vs third-placed team D/E/F</td>
+<td>Group C winner vs third-placed team from Group D/E/F</td>
 <td>Manchester – Manchester City Stadium</td>
 </tr>
 
 <tr class="knockout-row">
 <td><time datetime="2028-06-25">25 June</time></td>
 <td><strong>Round of 16</strong></td>
-<td>Group B winners vs third-placed team A/D/E/F</td>
+<td>Group B winner vs third-placed team from Group A/D/E/F</td>
 <td>Newcastle – St James' Park</td>
 </tr>
 
 <tr class="knockout-row">
 <td><time datetime="2028-06-26">26 June</time></td>
 <td><strong>Round of 16</strong></td>
-<td>Group F winners vs third-placed team A/B/C</td>
+<td>Group F winner vs third-placed team from Group A/B/C</td>
 <td>Glasgow – Hampden Park</td>
 </tr>
 
 <tr class="knockout-row">
 <td><time datetime="2028-06-26">26 June</time></td>
 <td><strong>Round of 16</strong></td>
-<td>Group D runners-up vs Group E runners-up</td>
+<td>Group D runner-up vs Group E runner-up</td>
 <td>London – Tottenham Hotspur Stadium</td>
 </tr>
 
 <tr class="knockout-row">
 <td><time datetime="2028-06-27">27 June</time></td>
 <td><strong>Round of 16</strong></td>
-<td>Group D winners vs Group F runners-up</td>
+<td>Group D winner vs Group F runner-up</td>
 <td>Birmingham – Villa Park</td>
 </tr>
 
 <tr class="knockout-row">
 <td><time datetime="2028-06-27">27 June</time></td>
 <td><strong>Round of 16</strong></td>
-<td>Group E winners vs third-placed team A/B/C/D</td>
+<td>Group E winner vs third-placed team from Group A/B/C/D</td>
+<td>Dublin – Dublin Arena</td>
+</tr>
+
+<!-- QUARTER-FINALS -->
+
+<tr class="knockout-row">
+<td><time datetime="2028-06-30">30 June</time></td>
+<td><strong>Quarter-final</strong></td>
+<td>Winner of Glasgow Round of 16 vs winner of Tottenham Round of 16</td>
 <td>Dublin – Dublin Arena</td>
 </tr>
 
 <tr class="knockout-row">
 <td><time datetime="2028-06-30">30 June</time></td>
 <td><strong>Quarter-final</strong></td>
-<td>Glasgow R16 winners vs Tottenham R16 winners</td>
-<td>Dublin – Dublin Arena</td>
-</tr>
-
-<tr class="knockout-row">
-<td><time datetime="2028-06-30">30 June</time></td>
-<td><strong>Quarter-final</strong></td>
-<td>Newcastle R16 winners vs Cardiff R16 winners</td>
+<td>Winner of Newcastle Round of 16 vs winner of Cardiff Round of 16</td>
 <td>London – Wembley Stadium</td>
 </tr>
 
 <tr class="knockout-row">
 <td><time datetime="2028-07-01">1 July</time></td>
 <td><strong>Quarter-final</strong></td>
-<td>Manchester R16 winners vs Liverpool R16 winners</td>
+<td>Winner of Manchester Round of 16 vs winner of Liverpool Round of 16</td>
 <td>Cardiff – National Stadium of Wales</td>
 </tr>
 
 <tr class="knockout-row">
 <td><time datetime="2028-07-01">1 July</time></td>
 <td><strong>Quarter-final</strong></td>
-<td>Dublin R16 winners vs Birmingham R16 winners</td>
+<td>Winner of Dublin Round of 16 vs winner of Birmingham Round of 16</td>
 <td>Glasgow – Hampden Park</td>
 </tr>
 
+<!-- SEMI-FINALS -->
 
 <tr class="knockout-row">
 <td><time datetime="2028-07-04">4 July</time></td>
 <td><strong>Semi-final</strong></td>
-<td>Winner of Quarter-final 1 vs Winner of Quarter-final 2</td>
+<td>Winner of quarter-final 1 vs winner of quarter-final 2</td>
 <td>London – Wembley Stadium</td>
 </tr>
 
 <tr class="knockout-row">
 <td><time datetime="2028-07-05">5 July</time></td>
 <td><strong>Semi-final</strong></td>
-<td>Winner of Quarter-final 3 vs Winner of Quarter-final 4</td>
+<td>Winner of quarter-final 3 vs winner of quarter-final 4</td>
 <td>London – Wembley Stadium</td>
 </tr>
+
+<!-- FINAL -->
 
 <tr class="final-row">
 <td><time datetime="2028-07-09">9 July</time></td>
 <td><strong>Final</strong></td>
-<td><strong>Euro 2028 Final - Wembley Stadium</strong></td>
+<td><strong>UEFA Euro 2028 Final – Wembley Stadium</strong></td>
 <td>London – Wembley Stadium</td>
 </tr>
 
@@ -1534,22 +1740,23 @@ dates, tournament stages and host stadiums.
 
 </table>
 
+
 </div>
 
 <div class="info-box" style="margin-bottom:35px;">
 
-<h3>🕒 Euro 2028 kick-off times</h3>
+<h3>🕒 Euro 2028 Match Kick-off Times</h3>
 
 <p>
-Three kick-off slots have been announced for Euro 2028:
+Three kick-off time slots have been announced for UEFA Euro 2028:
 <strong>15:00, 18:00 and 21:00 CEST</strong>.
 The exact kick-off time for each fixture will be confirmed
-after the final tournament draw in 2027.
+following the final tournament draw in 2027.
 </p>
 
 <p>
-The <strong>Euro 2028 final</strong> at Wembley Stadium
-on 9 July 2028 will kick off at
+The <strong>UEFA Euro 2028 final</strong>, taking place at
+Wembley Stadium on 9 July 2028, is scheduled to kick off at
 <strong>18:00 CEST (17:00 local time)</strong>.
 </p>
 
@@ -1563,17 +1770,18 @@ style="text-align:center;max-width:900px;margin:0 auto 35px;">
 <h3>🎟️ Euro 2028 Tickets</h3>
 
 <p>
-General ticket sales for Euro 2028 have not started yet.
+General ticket sales for UEFA Euro 2028 have not yet begun.
 UEFA has announced that tickets will go on sale
 <strong>after the final tournament draw in December 2027</strong>,
-when supporters will know which teams are playing in each group-stage fixture.
+when supporters will know which teams are scheduled
+to face each other in the group stage.
 </p>
 
 <a
 href="https://www.uefa.com/tickets/"
 target="_blank"
-rel="noopener">
-🎟️ Official UEFA ticket information →
+rel="noopener noreferrer">
+🎟️ Official UEFA Ticket Information →
 </a>
 
 </div>
@@ -1584,12 +1792,12 @@ style="margin:0 auto 35px;max-width:1100px;">
 
 <div class="card">
 
-<h3>🎲 Qualifying draw</h3>
+<h3>🎲 Euro 2028 Qualifying Draw</h3>
 
 <p>
-The <strong>Euro 2028 qualifying draw</strong>
+The <strong>UEFA Euro 2028 qualifying draw</strong>
 will take place in <strong>Belfast on 6 December 2026</strong>.
-It will determine the 12 qualifying groups.
+It will determine the composition of the 12 qualifying groups.
 </p>
 
 </div>
@@ -1597,13 +1805,13 @@ It will determine the 12 qualifying groups.
 
 <div class="card">
 
-<h3>⚽ Euro 2028 qualifiers</h3>
+<h3>⚽ Euro 2028 Qualifiers</h3>
 
 <p>
-The qualifying group stage will run from
-<strong>March to November 2027</strong>,
-with European national teams competing for a place
-at the final tournament.
+The qualifying group stage will take place from
+<strong>March to November 2027</strong>.
+European national teams will compete for a place
+in the final tournament.
 </p>
 
 </div>
@@ -1611,13 +1819,13 @@ at the final tournament.
 
 <div class="card">
 
-<h3>🏆 Final tournament</h3>
+<h3>🏆 Euro 2028 Final Tournament</h3>
 
 <p>
-Euro 2028 will take place from
+UEFA Euro 2028 will take place from
 <strong>9 June to 9 July 2028</strong>,
-with 24 teams competing across
-eight host cities and nine stadiums.
+featuring 24 national teams competing
+across eight host cities and nine stadiums.
 </p>
 
 </div>
@@ -1628,22 +1836,23 @@ eight host cities and nine stadiums.
 <div class="info-box">
 
 <p>
-The opening fixture will be played in
+The opening match will take place in
 <strong>Cardiff on 9 June 2028</strong>.
-The quarter-finals will take place in Dublin, London,
+The quarter-finals will be held in Dublin, London,
 Cardiff and Glasgow, while both semi-finals
-and the <strong>Euro 2028 final</strong>
-will be played at Wembley Stadium in London.
+and the <strong>UEFA Euro 2028 final</strong>
+will take place at Wembley Stadium in London.
 </p>
 
 </div>
 
 </section>
 
+
 <section class="section france-section">
 
 <h2 class="section-title">
-🇫🇷 Follow the France national team
+🇫🇷 Follow the France National Team
 </h2>
 
 <div class="card">
@@ -1653,9 +1862,11 @@ Les Bleus at Euro 2028
 </h3>
 
 <p>
-Find France's matches here,
-the cities where Les Bleus will play and ticket information
-as soon as qualification and the tournament schedule make their route known.
+Follow the French national team at UEFA Euro 2028.
+Find out where France will play, explore their potential
+match schedule and discover official ticket information
+once qualification and the final tournament draw
+have confirmed their fixtures.
 </p>
 
 <span
@@ -1668,148 +1879,236 @@ border:1px solid rgba(129,140,248,0.35);
 border-radius:12px;
 font-weight:600;
 ">
-🇫🇷 Schedule and tickets coming soon </span>
+🇫🇷 Fixtures & Tickets Coming Soon
+</span>
 
 </div>
 
 </section>
 
-<section id="cities" class="section">
 
-<h2 class="section-title">🌍 Host cities</h2>
+<section id="cities" class="section cities-section">
 
-<div class="grid">
+<h2 class="section-title">🌍 Euro 2028 Host Cities</h2>
 
-<div class="card">
+<p class="cities-intro">
+Explore the eight cities hosting UEFA Euro 2028
+across the United Kingdom and Ireland,
+where football, culture and unforgettable travel experiences come together.
+</p>
+
+<div class="grid cities-grid">
+
+<div class="card city-card">
+<img src="images/londres.webp"
+     alt="London skyline featuring some of the city's most iconic landmarks"
+     loading="lazy" width="600" height="360">
+<div class="city-content">
 <h3>🇬🇧 London</h3>
-<p>Wembley will host both semifinals and the Euro 2028 final.</p>
-<a href="londres-en.html">Visit London during Euro 2028 →</a>
-<a href="londres-map-en.html" style="margin-top:10px;">
-Explore the London map →
-</a>
+<p>Wembley Stadium will host both semi-finals and the UEFA Euro 2028 final.</p>
+<div class="city-links">
+<a href="londres-en.html">Explore London During Euro 2028 →</a>
+<a href="londres-map-en.html">Explore the London Map →</a>
+</div>
+</div>
 </div>
 
-<div class="card">
+<div class="card city-card">
+<img src="images/manchester.webp"
+     alt="Panoramic view of Manchester city centre"
+     loading="lazy" width="600" height="360">
+<div class="city-content">
 <h3>🏴 Manchester</h3>
-<p>A city deeply connected to the history and culture of English football.</p>
+<p>A city with a rich footballing heritage, famous for its clubs, passionate supporters and sporting culture.</p>
+</div>
 </div>
 
-<div class="card">
+<div class="card city-card">
+<img src="images/liverpool.webp"
+     alt="Liverpool waterfront and its historic docks"
+     loading="lazy" width="600" height="360">
+<div class="city-content">
 <h3>🎸 Liverpool</h3>
-<p>Football, music and a lively atmosphere on the banks of the Mersey.</p>
+<p>Discover a vibrant city where football, music and maritime heritage meet along the River Mersey.</p>
+</div>
 </div>
 
-<div class="card">
+<div class="card city-card">
+<img src="images/newcastle.webp"
+     alt="Newcastle skyline and bridges crossing the River Tyne"
+     loading="lazy" width="600" height="360">
+<div class="city-content">
 <h3>🏰 Newcastle</h3>
-<p>A football-mad city that will host matches at St James' Park.</p>
+<p>A football-loving city where passionate supporters will gather for Euro 2028 matches at St James' Park.</p>
+</div>
 </div>
 
-<div class="card">
+<div class="card city-card">
+<img src="images/birmingham.webp"
+     alt="View of Birmingham city centre in England"
+     loading="lazy" width="600" height="360">
+<div class="city-content">
 <h3>🏙️ Birmingham</h3>
-<p>England's second-largest city will host matches at Villa Park.</p>
+<p>England's second-largest city will welcome Euro 2028 matches at the historic Villa Park stadium.</p>
+</div>
 </div>
 
-<div class="card">
+<div class="card city-card">
+<img src="images/cardiff.webp"
+     alt="Cardiff, the capital of Wales"
+     loading="lazy" width="600" height="360">
+<div class="city-content">
 <h3>🏴 Cardiff</h3>
-<p>The Welsh capital will host the opening match of Euro 2028.</p>
+<p>The Welsh capital will host the opening match of UEFA Euro 2028 at the National Stadium of Wales.</p>
+</div>
 </div>
 
-<div class="card">
+<div class="card city-card">
+<img src="images/glasgow.webp"
+     alt="Glasgow cityscape featuring its historic architecture"
+     loading="lazy" width="600" height="360">
+<div class="city-content">
 <h3>🏴 Glasgow</h3>
-<p>Scotland's largest city will host tournament matches at the iconic Hampden Park.</p>
+<p>Scotland's largest city will host Euro 2028 matches at the iconic Hampden Park, the country's national football stadium.</p>
+</div>
 </div>
 
-<div class="card">
+<div class="card city-card">
+<img src="images/dublin.webp"
+     alt="Dublin city centre with its lively streets and traditional architecture"
+     loading="lazy" width="600" height="360">
+<div class="city-content">
 <h3>🇮🇪 Dublin</h3>
-<p>The Irish capital will combine football, pubs and a festive atmosphere throughout the tournament.</p>
+<p>Ireland's capital will combine exciting football, traditional pubs and a lively atmosphere throughout the tournament.</p>
+</div>
 </div>
 
 </div>
-
 </section>
+
 
 <section id="stadiums" class="section">
 
-<h2 class="section-title">🏟️ Euro 2028 stadiums</h2>
+<h2 class="section-title">🏟️ Euro 2028 Stadiums</h2>
 
-<div class="grid">
+<p style="
+  text-align:center;
+  max-width:850px;
+  margin:0 auto 30px;
+  color:#cbd5e1;
+  line-height:1.8;
+">
+  Explore all <strong>9 UEFA Euro 2028 stadiums</strong>
+  across 8 host cities, including venue capacities,
+  scheduled matches, transport connections and practical
+  tips to help you plan your football trip.
+</p>
 
-<div class="card">
-<h3>🏟️ Wembley Stadium</h3>
-<p>London — host of both semifinals and the Euro 2028 final.</p>
+<div class="stadiums-list">
+
+  <div class="stadium-row">
+    <span class="stadium-number">01</span>
+    <div class="stadium-info">
+      <h3>Wembley Stadium</h3>
+      <p>London — will host both semi-finals and the UEFA Euro 2028 final.</p>
+    </div>
+  </div>
+
+  <div class="stadium-row">
+    <span class="stadium-number">02</span>
+    <div class="stadium-info">
+      <h3>Tottenham Hotspur Stadium</h3>
+      <p>London — one of Europe's most modern football stadiums.</p>
+    </div>
+  </div>
+
+  <div class="stadium-row">
+    <span class="stadium-number">03</span>
+    <div class="stadium-info">
+      <h3>Manchester City Stadium</h3>
+      <p>Manchester — one of the major English venues hosting Euro 2028 matches.</p>
+    </div>
+  </div>
+
+  <div class="stadium-row">
+    <span class="stadium-number">04</span>
+    <div class="stadium-info">
+      <h3>Everton Stadium</h3>
+      <p>Liverpool — the city's new waterfront stadium at Bramley-Moore Dock.</p>
+    </div>
+  </div>
+
+  <div class="stadium-row">
+    <span class="stadium-number">05</span>
+    <div class="stadium-info">
+      <h3>St James' Park</h3>
+      <p>Newcastle — an iconic football ground located in the heart of the city.</p>
+    </div>
+  </div>
+
+  <div class="stadium-row">
+    <span class="stadium-number">06</span>
+    <div class="stadium-info">
+      <h3>Villa Park</h3>
+      <p>Birmingham — one of the most historic stadiums in English football.</p>
+    </div>
+  </div>
+
+  <div class="stadium-row">
+    <span class="stadium-number">07</span>
+    <div class="stadium-info">
+      <h3>National Stadium of Wales</h3>
+      <p>Cardiff — will host the opening match of UEFA Euro 2028.</p>
+    </div>
+  </div>
+
+  <div class="stadium-row">
+    <span class="stadium-number">08</span>
+    <div class="stadium-info">
+      <h3>Hampden Park</h3>
+      <p>Glasgow — Scotland's historic national football stadium.</p>
+    </div>
+  </div>
+
+  <div class="stadium-row">
+    <span class="stadium-number">09</span>
+    <div class="stadium-info">
+      <h3>Dublin Arena</h3>
+      <p>Dublin — one of Ireland's leading sporting venues and a key Euro 2028 stadium.</p>
+    </div>
+  </div>
+
 </div>
 
-<div class="card">
-<h3>🏟️ Tottenham Hotspur Stadium</h3>
-<p>London — one of Europe's most modern stadiums.</p>
-</div>
-
-<div class="card">
-<h3>🏟️ Manchester City Stadium</h3>
-<p>Manchester — one of the major English venues of the tournament.</p>
-</div>
-
-<div class="card">
-<h3>🏟️ Everton Stadium</h3>
-<p>Liverpool — the new stadium located at Bramley-Moore Dock.</p>
-</div>
-
-<div class="card">
-<h3>🏟️ St James' Park</h3>
-<p>Newcastle — an iconic stadium located in the heart of the city.</p>
-</div>
-
-<div class="card">
-<h3>🏟️ Villa Park</h3>
-<p>Birmingham — one of the historic stadiums of English football.</p>
-</div>
-
-<div class="card">
-<h3>🏟️ National Stadium of Wales</h3>
-<p>Cardiff — venue for the opening match of Euro 2028.</p>
-</div>
-
-<div class="card">
-<h3>🏟️ Hampden Park</h3>
-<p>Glasgow — the historic home of the Scotland national team.</p>
-</div>
-
-<div class="card">
-<h3>🏟️ Dublin Arena</h3>
-<p>Dublin — the main Irish stadium used for the competition.</p>
-</div>
-
+<div class="stadiums-cta">
+  <a href="stades-euro-2028-en.html">
+    🏟️ Explore All 9 Euro 2028 Stadiums in Our Complete Guide →
+  </a>
 </div>
 
 </section>
 
-<section id="accommodation" class="section">
 
-<h2 class="section-title">🏨 Euro 2028 Accommodation & Hotels</h2>
+<section id="flights" class="section">
 
-<div class="info-box">
+<h2 class="section-title">✈️ Flights to Euro 2028 Host Cities</h2>
 
-<h3>Where to stay during Euro 2028</h3>
+<div class="card"
+style="text-align:center;max-width:900px;margin:0 auto 35px;">
+
+<h3>✈️ Plan Your Trip to UEFA Euro 2028</h3>
 
 <p>
-Looking for <strong>accommodation for Euro 2028</strong>?
-With thousands of supporters travelling across the United Kingdom and Ireland,
-booking your hotel or accommodation early can help you find more options
-close to stadiums, city centres and public transport.
+Travelling to <strong>UEFA Euro 2028</strong>?
+Compare flights to airports serving the tournament's
+host cities, including London, Manchester, Liverpool,
+Birmingham, Newcastle, Cardiff, Glasgow and Dublin.
 </p>
 
 <p>
-Euro 2028 matches will be played in
-<strong>London, Manchester, Liverpool, Newcastle, Birmingham, Cardiff, Glasgow and Dublin</strong>.
-Each host city offers a wide range of hotels, apartments and other places to stay,
-whether you are travelling for a single match or planning a longer Euro 2028 trip.
-</p>
-
-<p>
-If you are attending matches in London, consider staying near convenient public transport
-connections to <strong>Wembley Stadium</strong> or <strong>Tottenham Hotspur Stadium</strong>.
-Demand is expected to be high around match dates, particularly for the knockout stages
-and the Euro 2028 final at Wembley.
+Check nearby airports, compare travel dates and allow
+enough time to reach your stadium by train, tram
+or other public transport.
 </p>
 
 <div style="
@@ -1821,25 +2120,79 @@ margin-top:25px;
 ">
 
 <a
-href="https://www.tkqlhce.com/click-101766856-13831003"
+href="https://www.google.com/travel/flights/"
 target="_blank"
-rel="nofollow sponsored noopener"
-style="
-display:inline-block;
-padding:14px 22px;
-background:#f59e0b;
-color:#ffffff;
-border-radius:14px;
-font-weight:700;
-transition:0.3s;
-">
-🏨 Search hotels with Hotels.com →
+rel="noopener noreferrer">
+✈️ Compare Flights on Google Flights →
 </a>
+
+<a
+href="https://www.skyscanner.net/"
+target="_blank"
+rel="noopener noreferrer">
+✈️ Search Flights on Skyscanner →
+</a>
+
+</div>
+
+</div>
+
+</section>
+
+
+<section id="accommodation" class="section">
+
+<h2 class="section-title">🏨 Euro 2028 Hotels & Accommodation</h2>
+
+<div class="info-box">
+
+<h3>Where to Stay During UEFA Euro 2028</h3>
+
+<p>
+Looking for <strong>Euro 2028 hotels and accommodation</strong>?
+With football fans expected across several cities in the
+United Kingdom and Ireland, booking early may give you
+a wider choice of hotels near stadiums, public transport
+connections and city centres.
+</p>
+
+<p>
+UEFA Euro 2028 matches will take place in
+<strong>London, Manchester, Liverpool, Newcastle, Birmingham,
+Cardiff, Glasgow and Dublin</strong>.
+Each host city offers a range of hotels, apartments and other
+accommodation options, whether you're attending a single match
+or planning a longer stay during the tournament.
+</p>
+
+<p>
+In London, consider staying near convenient public transport
+connections to reach <strong>Wembley Stadium</strong> or
+<strong>Tottenham Hotspur Stadium</strong>.
+Accommodation demand is likely to be particularly high
+during the knockout stages and around the
+<strong>UEFA Euro 2028 final at Wembley</strong>.
+</p>
+
+<p>
+Before booking, compare cancellation policies and check
+transport options for your matchday. Flexible accommodation
+can be particularly useful while team allocations and
+your travel plans are still being finalised.
+</p>
+
+<div style="
+display:flex;
+gap:20px;
+justify-content:center;
+flex-wrap:wrap;
+margin-top:25px;
+">
 
 <a
 href="https://www.tkqlhce.com/click-101766856-12319490?url=https%3A%2F%2Fwww.booking.com%2Fsearchresults.fr.html%3Fss%3DLONDRES%26label%3Dgen173nr-10CAEoggI46AdIM1gEaE2IAQGYATO4ARfIAQ_YAQPoAQH4AQGIAgGoAgG4Arb83tMGwAIB0gIkNTU1ZmFkN2UtMjAwOC00ZmFlLWE3ZTYtYzI3Y2RlMTIyMDZh2AIB4AIB%26aid%3D304142%26lang%3Dfr%26sb%3D1%26src_elem%3Dsb%26src%3Dindex%26dest_id%3D-1456928%26dest_type%3Dcity%26group_adults%3D2%26no_rooms%3D1%26group_children%3D0%26chal_t%3D1786232385633%26force_referer%3Dhttps%253A%252F%252Fwww.booking.com%252Findex.fr.html%253Faid%253D304142%2526label%253Dgen173nr-10CAEoggI46AdIM1gEaE2IAQGYATO4ARfIAQ_YAQPoAQH4AQGIAgGoAgG4Arb83tMGwAIB0gIkNTU1ZmFkN2UtMjAwOC00ZmFlLWE3ZTYtYzI3Y2RlMTIyMDZh2AIB4AIB%2526chal_t%253D1786232373740%2526force_referer%253D"
 target="_blank"
-rel="nofollow sponsored noopener"
+rel="nofollow sponsored noopener noreferrer"
 style="
 display:inline-block;
 padding:14px 22px;
@@ -1849,7 +2202,23 @@ border-radius:14px;
 font-weight:700;
 transition:0.3s;
 ">
-🏨 Search hotels with Booking.com →
+🏨 Find Hotels on Booking.com →
+</a>
+
+<a
+href="https://www.tkqlhce.com/click-101766856-13831003"
+target="_blank"
+rel="nofollow sponsored noopener noreferrer"
+style="
+display:inline-block;
+padding:14px 22px;
+background:#f59e0b;
+color:#ffffff;
+border-radius:14px;
+font-weight:700;
+transition:0.3s;
+">
+🏨 Find Hotels on Hotels.com →
 </a>
 
 </div>
@@ -1858,13 +2227,13 @@ transition:0.3s;
 src="https://www.ftjcfx.com/image-101766856-13831003"
 width="1"
 height="1"
-border="0"
 alt=""
 style="display:none;">
 
 </div>
 
 </section>
+
 
 <section id="faq" class="section">
 
@@ -1873,94 +2242,96 @@ style="display:none;">
 <div class="faq">
 
 <div class="faq-item">
-<h3>🌍 Where will Euro 2028 take place?</h3>
+<h3>🌍 Where Will UEFA Euro 2028 Take Place?</h3>
 <p>
-Euro 2028 will be held in England, Scotland, Wales
+UEFA Euro 2028 will be held across England, Scotland, Wales
 and the Republic of Ireland. Matches will take place
-across 9 stadiums in 8 host cities.
+at 9 stadiums in 8 host cities.
 </p>
 </div>
 
 
 <div class="faq-item">
-<h3>📅 When will Euro 2028 take place?</h3>
+<h3>📅 When Is UEFA Euro 2028?</h3>
 <p>
-Euro 2028 will run from <strong>9 June to 9 July 2028</strong>.
-The opening match will take place in Cardiff,
-while the final will be played at Wembley Stadium in London.
+UEFA Euro 2028 will take place from
+<strong>9 June to 9 July 2028</strong>.
+The opening match will be held in Cardiff,
+while the final will take place at Wembley Stadium in London.
 </p>
 </div>
 
 
 <div class="faq-item">
-<h3>⚽ When will Euro 2028 fixtures be released?</h3>
+<h3>⚽ When Will the Full Euro 2028 Match Schedule Be Available?</h3>
 <p>
-The Euro 2028 fixture schedule has already been announced,
-with the dates, host cities and stadiums confirmed.
-The teams and final match details will be updated after
-the final tournament draw in 2027.
+The Euro 2028 match schedule has already been announced,
+including match dates, host cities and stadium allocations.
+The participating teams and remaining match details will be
+confirmed following the final tournament draw in 2027.
 </p>
 </div>
 
 
 <div class="faq-item">
-<h3>🕒 Are Euro 2028 kick-off times confirmed?</h3>
+<h3>🕒 Have the Euro 2028 Kick-off Times Been Confirmed?</h3>
 <p>
-The exact kick-off time for each Euro 2028 match will be confirmed
-after the final tournament draw in 2027.
+The exact kick-off time for each UEFA Euro 2028 match
+will be confirmed following the final tournament draw in 2027.
 UEFA has announced three possible kick-off slots:
-15:00, 18:00 and 21:00 CEST.
+<strong>15:00, 18:00 and 21:00 CEST</strong>.
 </p>
 </div>
 
 
 <div class="faq-item">
-<h3>🏙️ Which cities will host Euro 2028?</h3>
+<h3>🏙️ Which Cities Will Host UEFA Euro 2028?</h3>
 <p>
 The 8 host cities are London, Manchester, Liverpool,
 Newcastle, Birmingham, Cardiff, Glasgow and Dublin.
-London will host matches at two venues:
+London is the only city hosting matches at two stadiums:
 Wembley Stadium and Tottenham Hotspur Stadium.
 </p>
 </div>
 
 
 <div class="faq-item">
-<h3>🏟️ Where will the Euro 2028 final be played?</h3>
+<h3>🏟️ Where Will the Euro 2028 Final Be Played?</h3>
 <p>
-The final will take place at Wembley Stadium in London
-on <strong>9 July 2028</strong>.
+The UEFA Euro 2028 final will take place at Wembley Stadium
+in London on <strong>9 July 2028</strong>.
 Wembley will also host both semi-finals.
 </p>
 </div>
 
 
 <div class="faq-item">
-<h3>⚽ How many teams will take part in Euro 2028?</h3>
+<h3>⚽ How Many Teams Will Compete at Euro 2028?</h3>
 <p>
 <strong>24 national teams</strong> will compete in the final tournament,
-with <strong>51 matches</strong> played in total.
+with a total of <strong>51 matches</strong>.
 </p>
 </div>
 
 
 <div class="faq-item">
-<h3>🎟️ Where can I find information about Euro 2028 tickets?</h3>
+<h3>🎟️ Where Can I Find Official Euro 2028 Ticket Information?</h3>
 <p>
 Visit the
 <a href="https://www.uefa.com/tickets/"
    target="_blank"
-   rel="noopener"
+   rel="noopener noreferrer"
    style="color:#a5b4fc;text-decoration:underline;">
-official UEFA ticketing website</a>
-for announcements about sale dates, prices
-and how to buy tickets.
+official UEFA ticket website</a>
+for information about ticket sales, prices
+and purchasing procedures.
 </p>
 </div>
 
 </div>
 
 </section>
+
 
 <section class="section">
 
@@ -1968,17 +2339,18 @@ and how to buy tickets.
 
 <img
 src="images/euro-2028-panorama.webp"
-alt="Euro 2028 in the United Kingdom and Ireland">
+alt="Football stadium panorama representing UEFA Euro 2028 in the United Kingdom and Ireland">
 
 <div class="cta-content">
 
 <h2>
-⚽ Ready to experience Euro 2028?
+⚽ Ready to Experience Euro 2028?
 </h2>
 
 <p>
-Plan your trip, discover the host cities
-and experience the atmosphere of Euro 2028 across the United Kingdom and Ireland.
+Plan your football trip, explore the host cities
+and experience the unique atmosphere of UEFA Euro 2028
+across the United Kingdom and Ireland.
 </p>
 
 </div>
@@ -1987,53 +2359,57 @@ and experience the atmosphere of Euro 2028 across the United Kingdom and Ireland
 
 </section>
 
+
 <button
 class="back-to-top"
 id="backToTop"
+type="button"
 aria-label="Back to top">
-↑ </button>
-  
+↑
+</button>
+
+
 <footer>
 
 <p class="footer-affiliate-note">
-Affiliate links: Vidolta may earn a commission at no extra cost to you.
+Affiliate disclosure: Vidolta may earn a commission on certain bookings, at no additional cost to you.
 </p>
-
 
 <p>© 2026 Vidolta — Euro 2028</p>
 
 <div class="footer-links">
 
 <a href="index-en.html">Home</a>
-<a href="about-en.html">About</a>
+<a href="about.html">About</a>
 <a href="our-story.html">Our Story</a>
 <a href="legal-notice.html">Legal Notice</a>
 <a href="privacy-policy.html">Privacy Policy</a>
-<a href="contact-en.html">Contact</a>
+<a href="contact.html">Contact</a>
 
 </div>
-  
+
 </footer>
+
 
 <script>
 
-function toggleMenu(){
+function toggleMenu() {
 
-const nav = document.querySelector('.nav-links');
+  const nav = document.querySelector('.nav-links');
 
-nav.classList.toggle('active');
+  nav.classList.toggle('active');
 
 }
 
 document.querySelectorAll('.nav-links a').forEach(link => {
 
-link.addEventListener('click', () => {
+  link.addEventListener('click', () => {
 
-const nav = document.querySelector('.nav-links');
+    const nav = document.querySelector('.nav-links');
 
-nav.classList.remove('active');
+    nav.classList.remove('active');
 
-});
+  });
 
 });
 
@@ -2041,26 +2417,24 @@ const backToTop = document.getElementById('backToTop');
 
 window.addEventListener('scroll', () => {
 
-if(window.scrollY > 400){
+  if (window.scrollY > 400) {
 
-backToTop.classList.add('show');
+    backToTop.classList.add('show');
 
-}else{
+  } else {
 
-backToTop.classList.remove('show');
+    backToTop.classList.remove('show');
 
-}
+  }
 
-});
+}, { passive: true });
 
 backToTop.addEventListener('click', () => {
 
-window.scrollTo({
-
-top:0,
-behavior:'smooth'
-
-});
+  window.scrollTo({
+    top: 0,
+    behavior: 'smooth'
+  });
 
 });
 
