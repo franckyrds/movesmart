@@ -332,22 +332,21 @@ p { line-height: 1.8; }
   text-align: center;
   border-radius: 30px;
 }
+
 .closing img {
   position: absolute;
   inset: 0;
   width: 100%;
   height: 100%;
   object-fit: cover;
-  filter: brightness(.36);
   z-index: -2;
 }
+
+
 .closing::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: rgba(10,14,33,.25);
-  z-index: -1;
+  display: none;
 }
+
 .closing p { max-width: 700px; margin: 0 auto 26px; color: #e2e8f0; }
 .sources { color: #abb7cb; font-size: .83rem; }
 .sources a { color: #c8d8ff; text-decoration: underline; }
@@ -500,12 +499,6 @@ footer {
     pour organiser votre séjour. Pour toutes les rencontres, consultez
     <a href="euro-2028.html">notre calendrier Euro 2028</a>.
   </p>
-  <div class="notice">
-    <strong>À savoir :</strong> les capacités présentées ci-dessous correspondent
-    aux chiffres publiés dans le guide UEFA des stades en septembre 2026.
-    Elles peuvent différer des capacités habituelles des clubs.
-    Le nombre de billets effectivement commercialisés peut être inférieur.
-  </div>
 </section>
 
 <section class="section" id="comparatif">
