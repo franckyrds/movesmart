@@ -1002,6 +1002,85 @@ padding:0 20px;
 line-height:1.6;
 }
 
+
+/* VILLES HOTES EURO 2028 */
+
+.cities-intro{
+  max-width:850px;
+  text-align:center;
+  margin:0 auto 35px;
+  color:#cbd5e1;
+  line-height:1.8;
+}
+
+.cities-grid{
+  display:grid;
+  grid-template-columns:repeat(3,minmax(0,1fr));
+  gap:24px;
+}
+
+.city-card{
+  padding:0;
+  overflow:hidden;
+  display:flex;
+  flex-direction:column;
+}
+
+.city-card img{
+  width:100%;
+  height:205px;
+  object-fit:cover;
+  transition:transform .4s ease;
+}
+
+.city-card:hover img{
+  transform:scale(1.04);
+}
+
+.city-content{
+  padding:24px;
+  flex:1;
+  display:flex;
+  flex-direction:column;
+}
+
+.city-content h3{
+  margin-bottom:12px;
+}
+
+.city-content p{
+  margin-bottom:18px;
+}
+
+.city-links{
+  margin-top:auto;
+  display:flex;
+  flex-direction:column;
+  align-items:flex-start;
+  gap:10px;
+}
+
+.city-links a{
+  font-size:.85rem;
+  padding:11px 14px;
+}
+
+@media(max-width:950px){
+  .cities-grid{
+    grid-template-columns:repeat(2,minmax(0,1fr));
+  }
+}
+
+@media(max-width:600px){
+  .cities-grid{
+    grid-template-columns:1fr;
+  }
+
+  .city-card img{
+    height:220px;
+  }
+}
+
 </style>
 
 </head>
@@ -1679,58 +1758,103 @@ font-weight:600;
 
 </section>
 
-<section id="cities" class="section">
+
+<section id="cities" class="section cities-section">
 
 <h2 class="section-title">🌍 Villes hôtes de l'Euro 2028</h2>
 
-<div class="grid">
+<p class="cities-intro">
+Découvrez les 8 villes qui accueilleront l'Euro 2028 au Royaume-Uni
+et en Irlande, entre football, culture et découvertes.
+</p>
 
-<div class="card">
+<div class="grid cities-grid">
+
+<div class="card city-card">
+<img src="images/euro-2028-londres.webp"
+     alt="Londres et ses monuments emblématiques"
+     loading="lazy" width="600" height="360">
+<div class="city-content">
 <h3>🇬🇧 Londres</h3>
 <p>Wembley accueillera les deux demi-finales ainsi que la finale de l'Euro 2028.</p>
+<div class="city-links">
 <a href="londres.html">Visiter Londres pendant l'Euro 2028 →</a>
-<a href="londres-map.html" style="margin-top:10px;">
-Explorer la carte de Londres →
-</a>
+<a href="londres-map.html">Explorer la carte de Londres →</a>
+</div>
+</div>
 </div>
 
-<div class="card">
+<div class="card city-card">
+<img src="images/euro-2028-manchester.webp"
+     alt="Vue panoramique de Manchester"
+     loading="lazy" width="600" height="360">
+<div class="city-content">
 <h3>🏴 Manchester</h3>
 <p>Une ville profondément liée à l'histoire et à la culture du football anglais.</p>
 </div>
+</div>
 
-<div class="card">
+<div class="card city-card">
+<img src="images/euro-2028-liverpool.webp"
+     alt="Liverpool et ses quais historiques"
+     loading="lazy" width="600" height="360">
+<div class="city-content">
 <h3>🎸 Liverpool</h3>
 <p>Football, musique et ambiance animée sur les rives de la Mersey.</p>
 </div>
+</div>
 
-<div class="card">
+<div class="card city-card">
+<img src="images/euro-2028-newcastle.webp"
+     alt="Newcastle et ses ponts sur la rivière Tyne"
+     loading="lazy" width="600" height="360">
+<div class="city-content">
 <h3>🏰 Newcastle</h3>
 <p>Une ville passionnée de football qui accueillera des matchs à St James' Park.</p>
 </div>
+</div>
 
-<div class="card">
+<div class="card city-card">
+<img src="images/euro-2028-birmingham.webp"
+     alt="Vue de Birmingham au Royaume-Uni"
+     loading="lazy" width="600" height="360">
+<div class="city-content">
 <h3>🏙️ Birmingham</h3>
 <p>La deuxième plus grande ville d'Angleterre accueillera des matchs à Villa Park.</p>
 </div>
+</div>
 
-<div class="card">
+<div class="card city-card">
+<img src="images/euro-2028-cardiff.webp"
+     alt="Cardiff, capitale du Pays de Galles"
+     loading="lazy" width="600" height="360">
+<div class="city-content">
 <h3>🏴 Cardiff</h3>
 <p>La capitale galloise accueillera le match d'ouverture de l'Euro 2028.</p>
 </div>
+</div>
 
-<div class="card">
+<div class="card city-card">
+<img src="images/euro-2028-glasgow.webp"
+     alt="Glasgow et son architecture historique"
+     loading="lazy" width="600" height="360">
+<div class="city-content">
 <h3>🏴 Glasgow</h3>
 <p>La plus grande ville d'Écosse accueillera des matchs de l'Euro 2028 dans l'emblématique Hampden Park.</p>
 </div>
+</div>
 
-<div class="card">
+<div class="card city-card">
+<img src="images/euro-2028-dublin.webp"
+     alt="Dublin et ses rues animées"
+     loading="lazy" width="600" height="360">
+<div class="city-content">
 <h3>🇮🇪 Dublin</h3>
 <p>La capitale irlandaise mêlera football, pubs et ambiance festive tout au long de la compétition.</p>
 </div>
-
 </div>
 
+</div>
 </section>
 
 <section id="stadiums" class="section">
