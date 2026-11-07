@@ -1081,6 +1081,117 @@ line-height:1.6;
   }
 }
 
+
+/* LISTE DES STADES EURO 2028 */
+
+.stadiums-list{
+  max-width:1050px;
+  margin:0 auto;
+  background:linear-gradient(
+    135deg,
+    rgba(18,26,52,0.92),
+    rgba(12,18,38,0.88)
+  );
+  border:1px solid rgba(255,255,255,0.08);
+  border-radius:24px;
+  overflow:hidden;
+  box-shadow:0 15px 40px rgba(0,0,0,0.2);
+}
+
+.stadium-row{
+  display:flex;
+  align-items:center;
+  gap:24px;
+  padding:22px 28px;
+  border-bottom:1px solid rgba(255,255,255,0.08);
+  transition:background .3s ease;
+}
+
+.stadium-row:last-child{
+  border-bottom:none;
+}
+
+.stadium-row:hover{
+  background:rgba(99,102,241,0.1);
+}
+
+.stadium-number{
+  flex-shrink:0;
+  width:52px;
+  height:52px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  background:rgba(99,102,241,0.15);
+  border:1px solid rgba(129,140,248,0.25);
+  color:#a5b4fc;
+  border-radius:14px;
+  font-size:1.1rem;
+  font-weight:700;
+}
+
+.stadium-info h3{
+  color:#ffffff;
+  font-size:1.1rem;
+  margin-bottom:6px;
+}
+
+.stadium-info p{
+  color:#cbd5e1;
+  font-size:.9rem;
+  line-height:1.6;
+  margin:0;
+}
+
+.stadiums-cta{
+  display:flex;
+  justify-content:center;
+  margin-top:35px;
+}
+
+.stadiums-cta a{
+  display:inline-block;
+  padding:16px 28px;
+  background:linear-gradient(90deg,#6366f1,#8b5cf6);
+  color:#ffffff;
+  border-radius:16px;
+  font-weight:700;
+  text-align:center;
+  box-shadow:0 10px 25px rgba(99,102,241,0.25);
+  transition:.3s;
+}
+
+.stadiums-cta a:hover{
+  transform:translateY(-3px);
+  box-shadow:0 14px 30px rgba(99,102,241,0.35);
+}
+
+@media(max-width:600px){
+  .stadium-row{
+    gap:15px;
+    padding:18px 15px;
+  }
+
+  .stadium-number{
+    width:42px;
+    height:42px;
+    font-size:.95rem;
+  }
+
+  .stadium-info h3{
+    font-size:1rem;
+  }
+
+  .stadium-info p{
+    font-size:.82rem;
+  }
+
+  .stadiums-cta a{
+    padding:14px 18px;
+    font-size:.9rem;
+  }
+}
+  
 </style>
 
 </head>
@@ -1857,6 +1968,7 @@ et en Irlande, entre football, culture et découvertes.
 </div>
 </section>
 
+
 <section id="stadiums" class="section">
 
 <h2 class="section-title">🏟️ Stades de l'Euro 2028</h2>
@@ -1864,7 +1976,7 @@ et en Irlande, entre football, culture et découvertes.
 <p style="
   text-align:center;
   max-width:850px;
-  margin:0 auto 25px;
+  margin:0 auto 30px;
   color:#cbd5e1;
   line-height:1.8;
 ">
@@ -1874,78 +1986,86 @@ et en Irlande, entre football, culture et découvertes.
   pour préparer votre déplacement.
 </p>
 
-<div style="
-  display:flex;
-  justify-content:center;
-  margin-bottom:35px;
-">
+<div class="stadiums-list">
 
-  <a href="stades-euro-2028.html"
-     style="
-       display:inline-block;
-       padding:16px 28px;
-       background:linear-gradient(90deg,#6366f1,#8b5cf6);
-       color:#ffffff;
-       border-radius:16px;
-       font-weight:700;
-       font-size:1rem;
-       text-align:center;
-       box-shadow:0 10px 25px rgba(99,102,241,0.25);
-       transition:0.3s;
-     ">
-    🏟️ Découvrir les 9 stades de l'Euro 2028 →
+  <div class="stadium-row">
+    <span class="stadium-number">01</span>
+    <div class="stadium-info">
+      <h3>Wembley Stadium</h3>
+      <p>Londres — accueillera les deux demi-finales ainsi que la finale de l'Euro 2028.</p>
+    </div>
+  </div>
+
+  <div class="stadium-row">
+    <span class="stadium-number">02</span>
+    <div class="stadium-info">
+      <h3>Tottenham Hotspur Stadium</h3>
+      <p>Londres — l'un des stades les plus modernes d'Europe.</p>
+    </div>
+  </div>
+
+  <div class="stadium-row">
+    <span class="stadium-number">03</span>
+    <div class="stadium-info">
+      <h3>Manchester City Stadium</h3>
+      <p>Manchester — l'un des principaux stades anglais de la compétition.</p>
+    </div>
+  </div>
+
+  <div class="stadium-row">
+    <span class="stadium-number">04</span>
+    <div class="stadium-info">
+      <h3>Everton Stadium</h3>
+      <p>Liverpool — le nouveau stade situé à Bramley-Moore Dock.</p>
+    </div>
+  </div>
+
+  <div class="stadium-row">
+    <span class="stadium-number">05</span>
+    <div class="stadium-info">
+      <h3>St James' Park</h3>
+      <p>Newcastle — un stade emblématique situé au cœur de la ville.</p>
+    </div>
+  </div>
+
+  <div class="stadium-row">
+    <span class="stadium-number">06</span>
+    <div class="stadium-info">
+      <h3>Villa Park</h3>
+      <p>Birmingham — l'un des stades historiques du football anglais.</p>
+    </div>
+  </div>
+
+  <div class="stadium-row">
+    <span class="stadium-number">07</span>
+    <div class="stadium-info">
+      <h3>National Stadium of Wales</h3>
+      <p>Cardiff — accueillera le match d'ouverture de l'Euro 2028.</p>
+    </div>
+  </div>
+
+  <div class="stadium-row">
+    <span class="stadium-number">08</span>
+    <div class="stadium-info">
+      <h3>Hampden Park</h3>
+      <p>Glasgow — le stade historique de l'équipe nationale d'Écosse.</p>
+    </div>
+  </div>
+
+  <div class="stadium-row">
+    <span class="stadium-number">09</span>
+    <div class="stadium-info">
+      <h3>Dublin Arena</h3>
+      <p>Dublin — le principal stade irlandais utilisé pour la compétition.</p>
+    </div>
+  </div>
+
+</div>
+
+<div class="stadiums-cta">
+  <a href="stades-euro-2028.html">
+    🏟️ Découvrir les 9 stades sur notre page dédiée →
   </a>
-
-</div>
-
-<div class="grid">
-
-
-<div class="card">
-<h3>🏟️ Wembley Stadium</h3>
-<p>Londres — accueillera les deux demi-finales ainsi que la finale de l'Euro 2028.</p>
-</div>
-
-<div class="card">
-<h3>🏟️ Tottenham Hotspur Stadium</h3>
-<p>Londres — l'un des stades les plus modernes d'Europe.</p>
-</div>
-
-<div class="card">
-<h3>🏟️ Manchester City Stadium</h3>
-<p>Manchester — l'un des principaux stades anglais de la compétition.</p>
-</div>
-
-<div class="card">
-<h3>🏟️ Everton Stadium</h3>
-<p>Liverpool — le nouveau stade situé à Bramley-Moore Dock.</p>
-</div>
-
-<div class="card">
-<h3>🏟️ St James' Park</h3>
-<p>Newcastle — un stade emblématique situé au cœur de la ville.</p>
-</div>
-
-<div class="card">
-<h3>🏟️ Villa Park</h3>
-<p>Birmingham — l'un des stades historiques du football anglais.</p>
-</div>
-
-<div class="card">
-<h3>🏟️ National Stadium of Wales</h3>
-<p>Cardiff — accueillera le match d'ouverture de l'Euro 2028.</p>
-</div>
-
-<div class="card">
-<h3>🏟️ Hampden Park</h3>
-<p>Glasgow — le stade historique de l'équipe nationale d'Écosse.</p>
-</div>
-
-<div class="card">
-<h3>🏟️ Dublin Arena</h3>
-<p>Dublin — le principal stade irlandais utilisé pour la compétition.</p>
-</div>
-
 </div>
 
 </section>
